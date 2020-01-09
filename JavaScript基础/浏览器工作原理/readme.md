@@ -263,5 +263,5 @@ Firefox 布局的输出为“metrics”对象 (nsHTMLReflowMetrics)，其包含�
 
 ## doc
 
-- [浏览器的工作原理：新式网络浏览器幕后揭秘](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/#context_free_grammar)
+- [浏览器的工作原理：新式网络浏览器幕后揭秘](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
 - [深入理解浏览器工作原理](https://www.cnblogs.com/xiaohuochai/p/9174471.html)

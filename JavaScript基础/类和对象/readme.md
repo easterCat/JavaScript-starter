@@ -443,15 +443,9 @@ hasOwnProperty 和 Object.keys() 是 JavaScript 中处理属性并且不会遍�
 
 prototype 是用于类的,而 Object.getPrototypeOf() 是用于实例的（instances）,两者功能一致.
 
-#### 总共
+## 对象
 
-- 类-->instanceof 运算符
-- 类-->isPrototypeOf 方法
-- 类-->toString 方法
-
-#### 对象
-
-###### 一切引用类型都是对象
+#### 一切引用类型都是对象
 
 ```
 console.log(typeof x);    // undefined
@@ -472,7 +466,7 @@ console.log(typeof new Number(10));  //object
 
 > 判断值类型的用 typeof,判断引用类型的用 instanceof
 
-###### 对象就是一些属性集合
+#### 对象就是一些属性集合
 
 ```
 var obj = {
@@ -484,7 +478,7 @@ var obj = {
 
 对象里面一切都是属性,方法也是属性,以键值对的形式表现出来
 
-###### 函数定义属性
+#### 函数定义属性
 
 ```
 var func = function () {
@@ -500,7 +494,7 @@ func.c = {
 }
 ```
 
-###### 对象都是通过函数创建的
+#### 对象都是通过函数创建的
 
 ```
 function Func(){
@@ -526,16 +520,16 @@ arr[2] = 3;
 
 > 对象是函数创建的,函数是一种对象
 
-#### 函数和对象的关系
+## 函数和对象的关系
 
-###### 函数就是对象的一种
+#### 函数就是对象的一种
 
 ```
 var func = function (){};
 console.log(func instanceof Object); // true
 ```
 
-###### 对象都是通过函数进行创建的
+#### 对象都是通过函数进行创建的
 
 ```
 //var obj = { a: 10, b: 20 };
@@ -552,14 +546,14 @@ arr[1] = 'x';
 arr[2] = true;
 ```
 
-###### isPrototypeOf 判断一个对象象是否为一个实例的原型
+#### isPrototypeOf 判断一个对象象是否为一个实例的原型
 
 ```
   console.log(a.prototype.isPrototypeOf(b));
   console.log(b.prototype.isPrototypeOf(b));
 ```
 
-###### propertyIsEnumerable 方法返回一个布尔值,表明指定的属性名是否是当前对象可枚举的自身属性
+#### propertyIsEnumerable 方法返回一个布尔值,表明指定的属性名是否是当前对象可枚举的自身属性
 
 ```
 for(var key in obj) {
@@ -574,14 +568,14 @@ for(var key in obj) {
 > - for...in 可以枚举对象本身的属性和原型上的属性,而 propertyIsEnumerable 只能判断本身的属性是否可以枚举
 > - 预定义的属性不是可列举的,而用户定义的属性总是可列举的.所以如果你只想遍历对象本身的属性
 
-#### 原型链
+## 原型链
 
 - 访问一个对象的属性时,先在基本属性中查找,如果没有,再沿着**proto**这条链向上找,这就是原型链.
 - 当我们用 obj.xxx 访问一个对象的属性时,JavaScript 引擎先在当前对象上查找该属性,如果没有找到,就到其原型对象上找,如果还没有找到,就一直上溯到 Object.prototype 对象,最后,如果还没有找到,就只能返回 undefined.
 
-#### 隐式原型**proto**
+## 隐式原型**proto**
 
-###### 每个对象都已一个**proto**,指向创建这个对象的函数的 prototype
+#### 每个对象都已一个**proto**,指向创建这个对象的函数的 prototype
 
 ```
 function Phone() {
@@ -648,7 +642,7 @@ Array.prototype-->|__proto__| Object.prototype
 - Phone,Function 和 Object 是由 function Function 创建的,所以指向 Function 的原型对象
 - Object 是由 Fucntion 创建,而 Function 的原型对象是由 Object 创建
 
-### constructor 属性
+## constructor 属性
 
 - constructor 属性的值是一个函数对象
 - 任意函数的 fuc.prototype.constructor === fuc
@@ -698,7 +692,7 @@ instance_b.constructor-->|实例的构造函数| Ba
 Ba.prototype.constructor-->|原型对象的构造函数| Ba
 ```
 
-###### 修改
+#### 修改
 
 ```
 Ba.prototype = {
@@ -713,7 +707,7 @@ Ba.prototype = {
 <!--这样就可正确指向构造函数Ba了-->
 ```
 
-##### 方法 2,直接在预定义的原型对象上扩展
+#### 方法 2,直接在预定义的原型对象上扩展
 
 ```
 function Ba(str) {
@@ -812,7 +806,7 @@ Cat.prototype = new Animal();
 Cat.prototype.constructor = Cat;
 ```
 
-##### call 方法
+#### call 方法
 
 - 调用 call 的对象必须是个函数
 - 语法：call([thisObj[,arg1[, arg2[, [,.argN]]]]])
@@ -820,7 +814,7 @@ Cat.prototype.constructor = Cat;
 - 说明：call 方法可以用来代替另一个对象调用一个方法.call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象.
   如果没有提供 thisObj 参数,那么 Global 对象被用作 thisObj
 
-##### apply 方法
+#### apply 方法
 
 - 语法：apply([thisObj[,argArray]])
 - 定义：应用某一对象的一个方法,用另一个对象替换当前对象.
@@ -829,7 +823,7 @@ Cat.prototype.constructor = Cat;
 
 > 实现继承除了用 call 和 apply 还可以使用原型链实现
 
-###### 案例一
+##### 案例一
 
 ```
 function add(a+b){
@@ -846,7 +840,7 @@ add.call(sub,3,1);
 注意 : js中的函数是对象,函数名是对Function对象的引用
 ```
 
-###### 案例二
+##### 案例二
 
 ```
 function Animal(){
@@ -867,7 +861,7 @@ animal.showName.call(cat,"","");
 //animal.showName.apply(cat,[]);
 ```
 
-###### 案例三：实现继承
+##### 案例三：实现继承
 
 ```
 function Animal(name) {
@@ -898,7 +892,7 @@ this指向Animal,Cat就有了Animal对象中的方法和属性,Cat对
 call第二个参数开始会映射到Animal相应的参数位置
 ```
 
-###### 案例四：多重继承
+##### 案例四：多重继承
 
 ```
 function Animal() {

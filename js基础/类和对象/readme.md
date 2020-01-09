@@ -243,6 +243,9 @@ loser.eat() // 落魄者依旧需要吃饭
 
 ## 原型链
 
+- 访问一个对象的属性时,先在基本属性中查找,如果没有,再沿着**proto**这条链向上找,这就是原型链.
+- 当我们用 obj.xxx 访问一个对象的属性时,JavaScript 引擎先在当前对象上查找该属性,如果没有找到,就到其原型对象上找,如果还没有找到,就一直上溯到 Object.prototype 对象,最后,如果还没有找到,就只能返回 undefined.
+
 原型链的经典图:
 
 ![](https://raw.githubusercontent.com/easterCat/img-package/master/img/1.jpg)
@@ -250,6 +253,75 @@ loser.eat() // 落魄者依旧需要吃饭
 每个实例对象（ object ）都有一个私有属性（称之为 `__proto__` ）指向它的构造函数的原型对象（prototype ）.该原型对象也有一个自己的原型对象( `__proto__`) ,层层向上直到一个对象的原型对象为 null.根据定义,null 没有原型,并作为这个原型链中的最后一个环节.
 
 几乎所有 JavaScript 中的对象都是位于原型链顶端的 Object 的实例.
+
+## 隐式原型**proto**
+
+#### 每个对象都已一个**proto**,指向创建这个对象的函数的 prototype
+
+```
+function Phone() {
+
+}
+
+var mi = new Phone();
+
+console.log(mi instanceof Object); //true
+console.log(mi instanceof Array); //false
+console.log(mi instanceof Function); //false
+console.log(mi instanceof Phone); //true
+
+// 实例对象的隐式原型链
+console.log('实例对象指向Phone.prototype:',mi.__proto__);
+console.log('Phone.prototype指向Object.prototype:',mi.__proto__.__proto__);
+console.log('Objec.prototype指向null:',mi.__proto__.__proto__.__proto__);
+
+// 构造函数的隐式原型链
+console.log('Phone.__proto__指向Function.prototype',Phone.__proto__);
+console.log('Function.prototype指向Object.prototype',Phone.__proto__.__proto__);
+console.log('Object.prototype指向null',Phone.__proto__.__proto__.__proto__);
+```
+
+```
+var obj = new Object();
+// 一般创建对象的原型链
+console.log('创建对象的__proto__',obj.__proto__);
+console.log('Object.prototype指向null',obj.__proto__.__proto__);
+
+function Object(){
+
+}
+console.log('指向Function.prototype',Object.__proto__);
+console.log('Object.prototype',Object.__proto__.__proto__);
+function Function(){
+
+}
+console.log(Function.__proto__);
+ console.log('Object.prototype',Function.__proto__.__proto__);
+```
+
+上面例子可以知道
+
+- Object.prototype 对象的**proto**指向的是 null,特例
+- xxx.prototype 是一个对象
+- Function 和 Object 是由 Function 创建的,**proto**指向 Fcuntion.prototype
+
+```
+graph BT
+Object.prototype-->|__proto__| null
+Function.prototype-->|__proto__| Object.prototype
+Phone.prototype-->|__proto__| Object.prototype
+mi-->|__proto__| Phone.prototype
+Phone-->|__proto__| Function.prototype
+obj-->|__proto__| Object.prototype
+Function-->|__proto__| Function.prototype
+Object-->|__proto__| Function.prototype
+arr-->|__proto__| Array.prototype
+Array.prototype-->|__proto__| Object.prototype
+```
+
+- Function.prototype/Phone.prototype/obj/Array.prototype 原型对象都是由 function Object 创建的,所以指向 Object 的原型对象
+- Phone,Function 和 Object 是由 function Function 创建的,所以指向 Function 的原型对象
+- Object 是由 Fucntion 创建,而 Function 的原型对象是由 Object 创建
 
 #### 继承
 
@@ -568,80 +640,6 @@ for(var key in obj) {
 > - for...in 可以枚举对象本身的属性和原型上的属性,而 propertyIsEnumerable 只能判断本身的属性是否可以枚举
 > - 预定义的属性不是可列举的,而用户定义的属性总是可列举的.所以如果你只想遍历对象本身的属性
 
-## 原型链
-
-- 访问一个对象的属性时,先在基本属性中查找,如果没有,再沿着**proto**这条链向上找,这就是原型链.
-- 当我们用 obj.xxx 访问一个对象的属性时,JavaScript 引擎先在当前对象上查找该属性,如果没有找到,就到其原型对象上找,如果还没有找到,就一直上溯到 Object.prototype 对象,最后,如果还没有找到,就只能返回 undefined.
-
-## 隐式原型**proto**
-
-#### 每个对象都已一个**proto**,指向创建这个对象的函数的 prototype
-
-```
-function Phone() {
-
-}
-
-var mi = new Phone();
-
-console.log(mi instanceof Object); //true
-console.log(mi instanceof Array); //false
-console.log(mi instanceof Function); //false
-console.log(mi instanceof Phone); //true
-
-// 实例对象的隐式原型链
-console.log('实例对象指向Phone.prototype:',mi.__proto__);
-console.log('Phone.prototype指向Object.prototype:',mi.__proto__.__proto__);
-console.log('Objec.prototype指向null:',mi.__proto__.__proto__.__proto__);
-
-// 构造函数的隐式原型链
-console.log('Phone.__proto__指向Function.prototype',Phone.__proto__);
-console.log('Function.prototype指向Object.prototype',Phone.__proto__.__proto__);
-console.log('Object.prototype指向null',Phone.__proto__.__proto__.__proto__);
-```
-
-```
-var obj = new Object();
-// 一般创建对象的原型链
-console.log('创建对象的__proto__',obj.__proto__);
-console.log('Object.prototype指向null',obj.__proto__.__proto__);
-
-function Object(){
-
-}
-console.log('指向Function.prototype',Object.__proto__);
-console.log('Object.prototype',Object.__proto__.__proto__);
-function Function(){
-
-}
-console.log(Function.__proto__);
- console.log('Object.prototype',Function.__proto__.__proto__);
-```
-
-上面例子可以知道
-
-- Object.prototype 对象的**proto**指向的是 null,特例
-- xxx.prototype 是一个对象
-- Function 和 Object 是由 Function 创建的,**proto**指向 Fcuntion.prototype
-
-```
-graph BT
-Object.prototype-->|__proto__| null
-Function.prototype-->|__proto__| Object.prototype
-Phone.prototype-->|__proto__| Object.prototype
-mi-->|__proto__| Phone.prototype
-Phone-->|__proto__| Function.prototype
-obj-->|__proto__| Object.prototype
-Function-->|__proto__| Function.prototype
-Object-->|__proto__| Function.prototype
-arr-->|__proto__| Array.prototype
-Array.prototype-->|__proto__| Object.prototype
-```
-
-- Function.prototype/Phone.prototype/obj/Array.prototype 原型对象都是由 function Object 创建的,所以指向 Object 的原型对象
-- Phone,Function 和 Object 是由 function Function 创建的,所以指向 Function 的原型对象
-- Object 是由 Fucntion 创建,而 Function 的原型对象是由 Object 创建
-
 ## constructor 属性
 
 - constructor 属性的值是一个函数对象
@@ -922,7 +920,7 @@ call和apply这两个方法差不多,区别在于call的第二个参数是任意
 
 ## 实现一些常见方法
 
-#### 实现 func.call(this,arg1,arg2...)
+#### 实现 call(this,arg1,arg2...)
 
 ```
 Function.prototype.call2 = function(context) {
@@ -964,7 +962,7 @@ func.call2(null);
 console.log(func.call2(foo, 23, '男'))
 ```
 
-#### 实现 func.apply(this,[])
+#### 实现 apply(this,[])
 
 1. 修改 func 函数的 this 指向
 2. 执行 func 函数
@@ -1062,6 +1060,24 @@ new_showA(); //1
     new_showA(23); //相当于执行obj.showA.apply(obj);
 ```
 
+## new 运算符
+
+创建新实例，必须使用 new 操作符。
+
+#### new 干了什么
+
+1. 获取构造函数
+2. 通过 Object.create 生成新对象
+3. 将 this 修改为新对象 obj,执行构造函数
+4. 将新对象返回
+
+```
+<!--Object.create类似于-->
+function Func(){};
+Func.prototype = Constructor.prototype;
+return new Func();
+```
+
 #### new 运算符的简易实现
 
 ```
@@ -1099,21 +1115,6 @@ new_showA(); //1
         return typeof result === 'object' ? result : obj;
     }
 ```
-
-#### new 干了什么
-
-1. 获取构造函数
-2. 通过 Object.create 生成新对象
-
-```
-<!--Object.create类似于-->
-function Func(){};
-Func.prototype = Constructor.prototype;
-return new Func();
-```
-
-3. 将 this 修改为新对象 obj,执行构造函数
-4. 将新对象返回
 
 ## Docs
 

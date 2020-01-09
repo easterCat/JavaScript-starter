@@ -1,0 +1,24 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>原型应用-数组通过下标获取索引值</title>
+<script>
+Array.prototype.indexOf=Array.prototype.indexOf||function (n)
+{
+	for(var i=0;i<this.length;i++)
+	{
+		if(this[i]==n)return i;
+	}
+	return -1;
+};
+
+var arr=[12, 5, 8, 9];
+alert(arr.indexOf(8));
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

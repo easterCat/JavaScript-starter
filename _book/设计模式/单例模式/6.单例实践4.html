@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Un() {
+        var instance;
+        Un = function () {
+            return instance;
+        };
+        Un.prototype = this;
+        instance = new Un();
+        instance.constructor = Un;
+
+        instance.num = 10;
+        instance.bang = 'big';
+
+        return instance;
+    }
+
+    var u = new Un();
+    var n = new Un();
+    console.log(u === n);
+
+    Un.prototype.hello = 'hello';
+    console.log(u.hello);
+    console.log(n.hello);
+
+    console.log(u);
+</script>
+</html>

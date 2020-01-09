@@ -1,0 +1,20 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>unshift 头部推入数据</title>
+    <script>
+        var arr = [456, 611, 844, 131, 156];
+        var result = arr.unshift(213, 234);	//头部推入数据,
+        console.log(result);
+        console.log(arr);//[213, 456, 611, 844, 131, 156]
+
+        var arr2 = [456, 611, 844, 131, 156];
+        var res = arr2.shift(131);
+        console.log(res); //456
+        console.log(arr2); // [611, 844, 131, 156]
+    </script>
+</head>
+<body>
+</body>
+</html>

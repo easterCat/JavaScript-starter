@@ -1,0 +1,305 @@
+
+<script
+  src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"
+  defer
+></script>
+<script>
+  (function($) {
+    addFirstSide($);
+    addTimeToHead();
+    addSideToLeft();
+  })(window.jQuery);
+
+  window.onload = function() {
+    addChart();
+  };
+
+  var noNode = true;
+
+  function addChart() {
+    var node = document.getElementsByTagName("liuchengtu")[0];
+    if (!node) {
+      return;
+    }
+    var text = node.innerText;
+    var first = JSON.parse(text);
+    var myChart = echarts.init(document.getElementsByTagName("liuchengtu")[0]);
+    myChart.showLoading();
+    var data = first;
+    myChart.hideLoading();
+    echarts.util.each(data.children, function(datum, index) {
+      index % 2 === 0 && (datum.collapsed = true);
+    });
+
+    setTimeout(function() {
+      var style = node.getAttribute("style") + "opacity:100";
+      node.setAttribute("style", style);
+    }, 0);
+
+    myChart.setOption(
+      (option = {
+        tooltip: {
+          trigger: "item",
+          triggerOn: "mousemove"
+        },
+        legend: {
+          top: "2%",
+          left: "3%",
+          orient: "vertical",
+          data: [
+            {
+              name: "tree1",
+              icon: "rectangle"
+            },
+            {
+              name: "tree2",
+              icon: "rectangle"
+            }
+          ],
+          borderColor: "#c23531"
+        },
+        series: [
+          {
+            type: "tree",
+            data: [data],
+            top: "1%",
+            left: "7%",
+            bottom: "1%",
+            right: "20%",
+            symbolSize: 7,
+            label: {
+              normal: {
+                position: "left",
+                verticalAlign: "middle",
+                align: "right",
+                fontSize: 14
+              }
+            },
+            leaves: {
+              label: {
+                normal: {
+                  position: "right",
+                  verticalAlign: "middle",
+                  align: "left"
+                }
+              }
+            },
+            expandAndCollapse: true,
+            animationDuration: 550,
+            animationDurationUpdate: 750
+          }
+        ]
+      })
+    );
+  }
+
+  function addFirstSide($) {
+    function Catalog(element, options) {
+      this.$parentEle = $(element);
+      this.$catalog_container = $("<div>");
+      this.$catalog_title = $("<h1>");
+      this.$ul_container = $("<ul>");
+      this.$control_a = $("<button>");
+      this.titleReg = /^h[1-6]$/;
+      this.static = true;
+      this.init(this);
+    }
+    Catalog.prototype = {
+      init: function(self) {
+        // 组合目录容器和标题等
+        self.$catalog_title.text("快速目录");
+        self.$catalog_container
+          .attr("id", "catalog")
+          .append(self.$catalog_title);
+        //.append(self.$control_a.attr("class", "control_btn").text("-"));
+        // 查找文章中所有的h1、h2、h3标签
+        // 生成目录列表插入目录容器中
+        self.$parentEle.children().each(function() {
+          if (self.titleReg.test(this.tagName.toLowerCase())) {
+            var num = this.tagName.toLowerCase().split("")[1];
+            num = Number(num) - 2;
+            $(this).append("<a href='#catalog' class='title_back'></a>");
+            self.$ul_container.append(self.list(this, num));
+          }
+        });
+        // 替换[TOC]为目录
+        $("#cnblogs_post_body").prepend(
+          "<p class='mulu'>我是将要替换的目录</p>"
+        );
+        $("#cnblogs_post_body .mulu").replaceWith(
+          self.$catalog_container.append(self.$ul_container)
+        );
+        // 添加目录收缩功能
+        $("#catalog > button").on("click", function() {
+          $("#catalog ul").toggle();
+          $(event.target).text(self.static ? "+" : "-");
+          self.static = !self.static;
+        });
+      },
+      // 生成目录列表函数
+      list: function(element, num) {
+        var aEle = $("<a></a>"),
+          hEle = $("<li></li>");
+        var per = 1 - 0.08 * num;
+        var style = "margin-left:" + 10 * num + "px";
+        var style2 = "color:rgba(85,85,85," + per + ")";
+        aEle
+          .attr("href", "#" + element.id)
+          .text(element.childNodes[0].nodeValue);
+        aEle.attr("style", style2);
+        hEle
+          .attr("class", element.nodeName.toLowerCase() + "_list")
+          .append(aEle);
+        hEle.attr("style", style);
+        return hEle;
+      }
+    };
+    $.fn.catalog = function(options) {
+      return this.each(function() {
+        if (!$.data(this, "catalog")) {
+          $.data(this, "catalog", new Catalog(this, options));
+        }
+      });
+    };
+    // 使用插件
+    $("#cnblogs_post_body").catalog();
+  }
+
+  function addSideToLeft() {
+    var sideBar = document.getElementById("sideBarMain");
+    var show = 0;
+    sideBar && addCatalogToSidebar(sideBar);
+    $(".cloneMenu").click(function() {
+      if (show === 1) {
+        $("#cateLog").fadeOut();
+        show = 0;
+      } else if (show === 2) {
+        $("#cateLog2").fadeOut();
+        $("#cateLog").fadeIn();
+        show = 1;
+      } else {
+        $("#cateLog").fadeIn();
+        show = 1;
+      }
+    });
+    $(".cloneMenu2").click(function() {
+      if (show === 2) {
+        $("#cateLog2").fadeOut();
+        show = 0;
+      } else if (show === 1) {
+        $("#cateLog").fadeOut();
+        $("#cateLog2").fadeIn();
+        show = 2;
+      } else {
+        $("#cateLog2").fadeIn();
+        show = 2;
+      }
+    });
+  }
+
+  function addCatalogToSidebar(parentNode) {
+    addCloseBtn(parentNode);
+    addCloseBtn2(parentNode);
+  }
+
+  function addCloseBtn2(parentNode) {
+    var cateLog2 = document.createElement("ul");
+    var closeBtn2 = document.createElement("button");
+    var sideBar = document.getElementById("sidebar_postcategory");
+    var sideBar_clone = sideBar.cloneNode(true);
+    var childs = sideBar_clone.childNodes[3];
+    childs.style.border = "none";
+    for (var i = 0; i < childs.children.length; i++) {
+      childs.children[i].style.border = "none";
+    }
+    cateLog2.setAttribute("id", "cateLog2");
+    setStyle2(cateLog2, {
+      display: "none"
+    });
+    setStyle(closeBtn2, {
+      left: "180px"
+    });
+    closeBtn2.innerText = "随笔分类";
+    closeBtn2.setAttribute("class", "cloneMenu2");
+    parentNode.appendChild(closeBtn2);
+    parentNode.appendChild(cateLog2);
+    cateLog2.appendChild(sideBar_clone);
+  }
+
+  function addCloseBtn(parentNode) {
+    var cateLog = document.createElement("ul");
+    var closeBtn = document.createElement("button");
+    var mainCateLog = document.getElementById("catalog");
+    if (!mainCateLog) {
+      return;
+    }
+    var mainCateLog_clone = mainCateLog.cloneNode(true);
+    cateLog.setAttribute("id", "cateLog");
+    setStyle2(cateLog, {
+      display: "none"
+    });
+    setStyle(closeBtn, {
+      left: "90px"
+    });
+    closeBtn.innerText = "快速目录";
+    closeBtn.setAttribute("class", "cloneMenu");
+    parentNode.appendChild(closeBtn);
+    parentNode.appendChild(cateLog);
+    cateLog.appendChild(mainCateLog_clone);
+  }
+
+  function setStyle2(context, option) {
+    var cateLog = context;
+    cateLog.style.width = 290 + "px";
+    cateLog.style.zIndex = "999";
+    cateLog.style.background = "#fff";
+    cateLog.style.overflow = "auto";
+    cateLog.style.position = "fixed";
+    cateLog.style.top = "400px";
+    cateLog.style.bottom = "20px";
+    cateLog.style.left = "20px";
+    cateLog.style.padding = "10px 10px 45px 10px";
+    for (var item in option) {
+      cateLog.style[item] = option[item];
+    }
+  }
+
+  function setStyle(context, option) {
+    var closeBtn = context;
+    closeBtn.style.zIndex = "1000";
+    closeBtn.style.border = "none";
+    closeBtn.style.position = "fixed";
+    closeBtn.style.bottom = "35px";
+    closeBtn.style.width = "80px";
+    closeBtn.style.marginLeft = "-40px";
+    closeBtn.style.height = "30px";
+    closeBtn.style.lineHeight = "30px";
+    closeBtn.style.textAlign = "center";
+    closeBtn.style.color = "#fff";
+    closeBtn.style.display = "block";
+    closeBtn.style.fontSize = "14px";
+    closeBtn.style.background = "#2daebf";
+    for (var item in option) {
+      closeBtn.style[item] = option[item];
+    }
+  }
+
+  function addTimeToHead() {
+    var div = document.createElement("div");
+    var body = document.getElementById("navList");
+    var time = new Date("2016-8-15").getTime();
+    var today = new Date().getTime();
+    var minus = today - time;
+    // 1天 = 24 * 60 * 60 * 1000
+    var days = parseInt(minus / (24 * 60 * 60 * 1000));
+    div.style.width = "300px";
+    div.style.height = "30px";
+    div.style.lineHeight = "30px";
+    div.style.fontSize = "14px";
+    div.style.color = "#666";
+    div.style.display = "inline-block";
+    div.style.margin = "15px 0px 0px 100px";
+    div.innerHTML = "开始距今已经:" + days + "天";
+    body.appendChild(div);
+  }
+</script>

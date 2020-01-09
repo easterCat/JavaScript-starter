@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>封装getByClass方法</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "微软雅黑", "张海山锐线体简"
+        }
+
+        div {
+            height: 50px;
+            margin: 10px;
+            background: #ccc;
+        }
+
+        p {
+            height: 50px;
+            background: #ccc;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            var aCurDiv = getByClass(oDiv, 'cur');
+            for (var i = 0; i < aCurDiv.length; i++) {
+                aCurDiv[i].style.background = 'red';
+            }
+            //封装获取class
+            function getByClass(oParent, sClass) {
+                var aEle = oParent.getElementsByTagName('*'); //*抓取所有元素
+                var result = [];
+                for (var i = 0; i < aEle.length; i++) {
+                    //aEle[i].className	=	cur box
+                    var arr = aEle[i].className.split(' '); //['cur','box','a','b','c']
+                    for (var j = 0; j < arr.length; j++) {
+                        if (arr[j] == sClass) {
+                            result.push(aEle[i]);
+                            break;
+                        }
+                    }
+                }
+                return result;
+            }
+        };
+    </script>
+</head>
+
+<body>
+<hr>
+<div id="div1">
+    <div><span></span>
+    </div>
+    <div class="cur-c box a b c">cur-c box a b c</div>
+    <div></div>
+    <div></div>
+    <div class="a cur">a cur</div>
+    <div></div>
+    <div class="a c_cur_c b">a c_cur_c b</div>
+    <div></div>
+    <p class="a b c d e f cur">p_a b c d e f cur</p>
+</div>
+<hr>
+</body>
+
+</html>

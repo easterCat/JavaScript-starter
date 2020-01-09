@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>作用域</title>
+</head>
+
+<body>
+</body>
+<script>
+    var value = 1;
+
+    function foo() {
+        console.log(value);
+    }
+
+    function bar() {
+        var value = 2;
+        foo();
+    }
+
+    bar();
+
+    var scope = 'global scope';
+
+    function checkScope() {
+        var scope = 'local scope';
+
+        function f() {
+            console.log(scope);
+            return scope;
+        }
+
+        return f();
+    }
+
+    checkScope();
+
+    var scope = 'global scope';
+
+    function checkScope2() {
+        var scope = 'local scope';
+
+        function f() {
+            console.log(scope);
+            return scope;
+        }
+
+        return f;
+    }
+
+    checkScope2()();
+
+    var scope = 'global scope';
+
+    function checkScope3() {
+        var scope = 'local scope';
+
+        function f() {
+            console.log(scope);
+            return scope;
+        }
+
+        return f();
+    }
+
+    function otherScope() {
+        var scope = 'other scope';
+        checkScope3();
+    }
+
+    otherScope()
+</script>
+
+</html>

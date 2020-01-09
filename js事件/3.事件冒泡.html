@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>事件冒泡</title>
+    <style></style>
+    <script>
+      window.onload = function() {
+        _id("div1").addEventListener(
+          "click",
+          function() {
+            alert(_id("div1").style.background);
+          },
+          false
+        );
+
+        _id("div2").addEventListener(
+          "click",
+          function() {
+            alert(_id("div2").style.background);
+          },
+          false
+        );
+
+        _id("div3").addEventListener(
+          "click",
+          function() {
+            alert(_id("div3").style.background);
+          },
+          false
+        );
+
+        function _id(id) {
+          return document.getElementById(id);
+        }
+      };
+    </script>
+  </head>
+
+  <body>
+    <div id="div1" style="width:500px; height:500px; background:red;">
+      <div id="div2" style="height:300px; width:300px; background:yellow">
+        <div id="div3" style="width:100px; height:100px; background:blue"></div>
+      </div>
+    </div>
+  </body>
+</html>

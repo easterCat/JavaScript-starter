@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>事件捕获</title>
+    <style></style>
+    <script>
+      window.onload = function() {
+        var oDiv1 = document.getElementById("div1");
+        var oDiv2 = document.getElementById("div2");
+        var oDiv3 = document.getElementById("div3");
+
+        oDiv1.addEventListener(
+          "click",
+          function() {
+            alert(oDiv1.style.background);
+          },
+          true
+        );
+
+        oDiv2.addEventListener(
+          "click",
+          function() {
+            alert(oDiv2.style.background);
+          },
+          true
+        );
+
+        oDiv3.addEventListener(
+          "click",
+          function() {
+            alert(oDiv3.style.background);
+          },
+          true
+        );
+      };
+    </script>
+  </head>
+
+  <body>
+    <div id="div1" style="width:500px; height:500px; background:red;">
+      <div id="div2" style="height:300px; width:300px; background:yellow">
+        <div id="div3" style="width:100px; height:100px; background:blue"></div>
+      </div>
+    </div>
+  </body>
+</html>

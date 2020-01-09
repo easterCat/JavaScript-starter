@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>克隆节点</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: "微软雅黑", "张海山锐线体简";
+      }
+
+      .div1 {
+        width: 200px;
+        height: 200px;
+        background: red;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        var dd = _id("div1");
+        var bb = _id("btn1");
+        bb.onclick = function() {
+          alert("ok");
+        };
+        //克隆
+        var newdd = dd.cloneNode(true); //深度克隆
+        //newDiv.setAttribute('id','');
+        newdd.removeAttribute("id"); //删除属性
+        console.log(newdd.children);
+        newdd.children[1].removeAttribute("id"); //btn删除属性
+        newdd.children[1].onclick = function() {
+          alert("ok");
+        };
+        document.body.appendChild(newdd);
+        function _id(id) {
+          return document.getElementById(id);
+        }
+      };
+    </script>
+  </head>
+
+  <body>
+    <div id="div1" class="div1">
+      asdfasdf
+      <img src="m1.jpg" width="50" />
+      <input type="button" value="按钮" id="btn1" />
+    </div>
+  </body>
+</html>

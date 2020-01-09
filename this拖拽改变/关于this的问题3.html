@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>attachEvent中this问题解决</title>
+    <style>
+    </style>
+    <script>
+        function addEvent(obj, sEv, fn) {
+            if (obj.addEventListener) {
+                obj.addEventListener(sEv, fn, false);
+            } else {
+                obj.attachEvent('on' + sEv, fn);
+            }
+        }
+        window.onload = function () {
+            var oBtn = document.getElementById('btn1');
+            addEvent(oBtn, 'click', function () {
+                alert(this); // HtmlInputElement 对象
+            });
+        }
+    </script>
+</head>
+
+<body>
+<input type="button" value="点击" id="btn1">
+</body>
+
+</html>

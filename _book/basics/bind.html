@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现bind函数</title>
+</head>
+<body>
+
+</body>
+<script>
+    Function.prototype.newBind = function (context) {
+        //this是该函数的调用者
+        var self = this;
+        //arguments.slice(1),从1开始截取数组
+        var args = Array.prototype.slice.call(arguments, 1);
+
+        var fnop = function () {
+        };
+
+        var fBound = function () {
+            // 第二个arguments是返回的函数的参数
+            var bindargs = Array.prototype.slice.call(arguments);
+            // return self.apply(context, args.concat(bindargs));
+            return self.apply(this instanceof fBound ? this : context, args.concat(bindargs));
+        };
+
+        //fBound.prototype = this.prototype;废除，引用类型的赋值，修改其中一个时候两个都会修改
+        fnop.prototype = self.prototype;
+        fBound.prototype = new fnop();
+
+        return fBound;
+    };
+
+    var a = 9;
+
+    var obj = {
+        a: 99,
+        showA: function (name, age) {
+            this.habit = 'games';
+            console.log(this.a);
+            console.log(name);
+            console.log(age);
+        }
+    };
+    obj.showA('alice', 12);
+    var new_showA = obj.showA.newBind(obj, 'lilith');
+
+
+    new_showA(23); //相当于执行obj.showA.apply(obj);
+
+    var func = new new_showA('aliks', 15);
+    console.log(func.habit);
+</script>
+</html>

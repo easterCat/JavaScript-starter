@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>resolve</title>
+    </head>
+    <body></body>
+    <script>
+        "use strict";
+
+        // console.log(
+        //     new Promise((resolve, reject) => {
+        //         resolve("今日是个好日子");
+        //     })
+        // ); //Promise {<resolved>: "今日是个好日子"}
+
+        // console.log(
+        //     Promise.resolve(
+        //         new Promise((resolve, reject) => {
+        //             resolve("今日是个好日子");
+        //         })
+        //     )
+        // ); //Promise {<resolved>: "今日是个好日子"}
+
+        // var thenable = {
+        //     then: function(resolve, reject) {
+        //         resolve("今天是个好日子");
+        //     }
+        // };
+
+        // var p = Promise.resolve(thenable);
+        // p.then(value => console.log(value)); //今天是个好日子
+
+        // var p = Promise.resolve([1, 2, 3, 4, 5]);
+
+        // p.then(value => console.log(value)); //[1,2,3,4,5]
+
+        // console.log(123);
+
+        var p = Promise.resolve();
+
+        p.then(value => console.log(value));
+
+        console.log(123);
+    </script>
+</html>

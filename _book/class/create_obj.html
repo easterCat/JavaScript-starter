@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>`${this.x * this.y}`</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Circle(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    Circle.prototype = {
+        constructor: function () {
+            console.log('con');
+        },
+        toString: function () {
+            console.log('Circle', `${this.x * this.y}`);
+        },
+        toValue: function () {
+            console.log('value');
+        }
+    };
+
+    console.log(Circle.prototype);
+    let c = new Circle(3, 5);
+    c.toString();
+</script>
+<script>
+    class Point {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+
+        }
+
+        toString() {
+            console.log(`${this.x * this.y}`);
+        }
+
+        toValue() {
+            console.log('value');
+        }
+    }
+    console.log(Point.prototype);
+    let p = new Point(1, 2);
+    p.toString();
+</script>
+</html>

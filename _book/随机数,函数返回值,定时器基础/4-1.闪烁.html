@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>点击灰掉的部分时,弹窗左右晃动</title>
+
+<style>
+*{margin:0; padding:0;}
+li{list-style:none;}
+.clearfix:after{content:""; display:block; clear:both;}
+.clearfix{zoom:1;}
+input{border:none; background:none;}
+
+#shadow {width:100%; height:100%; background:black; position:absolute; left:0; top:0; display:none; opacity:.5; filter:alpha(opacity=50);}
+#btn1{width:120px; font:20px/2 "Microsoft YaHei"; background:#0099FF; color:#FFF; margin:200px auto; display:block;}
+.warp{width:600px; height:310px; position:absolute; top:50%; left:50%; margin-left:-301px; margin-top:-156px; border:#09F solid 1px; display:none; background-color:#FFF;}
+.title{overflow:hidden;}
+.title h3{font:14px/40px "Microsoft YaHei"; padding-left:10px; float:left;}
+.flicker_01{background:#09F;}
+.flicker_02{background:#7D7DFF;}
+.close{float:right; width:40px; height:40px;background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVDhPtZNpTsMwEIV9CxaJXYAEQpwAcQDOwRLH41j9D6hn4w4sUssOEhwCeJPMSHbillSCJ82Pznvva+vE5l9Uen9SEl157+dkNVVFCOvW+xHmXFaNCu8tYF+YbwCvrbXzYmVVg4ie6jwGwEuxjMGHNzXEvDkOYUHsRG1QPURjsY1xzu0D8BkHcsAJoGfeS6RRWZZ7bSCCt9gvst8bpMoB8fkOv/xgJpDKhrCL8EdSbE8fkIqIdlDKA2cBqQrnjnKwguhQIv2EM1rrnJEOXoNiMFiS6HQxCKXHDiQeAHFTlqWSVxbEZ8R/meg93uMp3+OmrEg11SQQHsYG+2dVtQ1AclPgP3SAp1W1CjMBofiiIBXewy0AXuMcA7kvkfpujuJADqTKAbkvdg0b9gGpcPibnIs6Q7Ea4dsuMOPfQCrOcZ57svpLGfMDkId0qOuuLNYAAAAASUVORK5CYII=") center center no-repeat;}
+.content{font:14px/1.5 "Microsoft YaHei"; padding:10px;}
+.content h3{font-size:14px;}
+</style>
+<script>
+window.onload=function(){
+	var oBtn=document.getElementById('btn1');
+	var oShadow=document.getElementById('shadow');
+	var oDiv=document.getElementById('div1');
+	var oClose=document.getElementById('btn_close');	
+	oBtn.onclick=function(){
+		oShadow.style.display=oDiv.style.display='block';	
+	};
+	oClose.onclick=function(){
+		oShadow.style.display=oDiv.style.display='none';	
+	};
+	oShadow.onclick=function(){
+		var oFlash=	oDiv.children[0];
+		var i=0;
+		var timer=setInterval(function(){
+			i++;
+			//...
+			oFlash.className= i%2==0 ? 'title flicker_01' : 'title flicker_02';
+			
+			if(i==8){
+				clearInterval(timer);	
+			}
+		},30);
+	};
+};
+</script>
+</head>
+
+<body>
+<input type="button" value="打开" id="btn1" />
+<div id="shadow"></div>
+<div class="warp" id="div1">
+	<div class="title flicker_01">
+		<h3>请选择...</h3>
+		<a href="javascript:;" id="btn_close" class="close" title="关闭"></a>
+	</div>
+	<div class="content">
+		<h3>地址：</h3>
+		<p>北京市 朝阳区 立水桥 旭辉奥都 2号楼4单元502室</p>
+		<p>&nbsp;</p>
+		<h3>交通方式：</h3>
+		<p>城铁：立水桥南站 C口出站 向北150米(大中电器立水桥新店即到)<br>公交：城铁立水桥南站下车</p>
+		<p>&nbsp;</p>
+		<h3>电话：</h3>
+		<p>15810802847(联系人：blue)<br>
+		15810802954(联系人：busy)<br>
+		15810802914(联系人：雪娜)</p>
+	</div>
+</div>
+</body>
+</html>

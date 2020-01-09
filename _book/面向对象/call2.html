@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>call2</title>
+    <script>
+    function Animal(name) {
+        this.name = name;
+        this.showName = function(name, a, b) {
+            console.log('this是：' + this.name + '\na是：' + a + '\nb是：' + b);
+        }
+    }
+
+    function Cat() {
+        Animal.call(this, 'hello world');
+        this.showLog = function() {
+            console.log('hello');
+        }
+    }
+
+    Cat.prototype.showAge = function() {
+        console.log('world');
+    }
+
+    var cat = new Cat();
+
+    cat.showName('abc', 12, 5); //可以直接调用showName()方法
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

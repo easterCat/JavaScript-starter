@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            /*opacity:0.3;filter:alpha(opcity:30)*/
+        }
+    </style>
+    <script>
+        function getStyle(obj, name) {
+            if (obj.currentStyle) {
+                return obj.currentStyle[name];
+            } else {
+                return getComputedStyle(obj, false)[name];
+            }
+        }
+
+        function move(obj, json, optional) {
+            optional = optional || {};
+            optional.time = optional.time || 800;
+            optional.fn = optional.fn || null;
+            var start = {};
+            var dis = {};
+            for (var key in json) {
+                start[key] = parseFloat(getStyle(obj, key));
+                dis[key] = json[key] - start[key]
+            }
+            var count = Math.round(optional.time / 30);
+            var n = 0;
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                n++;
+                for (var key in json) {
+                    var cur = start[key] + dis[key] * n / count;
+                    if (key == 'opacity') {
+                        obj.style.opacity = cur;
+                        obj.style.filter = 'alpha(opacity:' + cur * 100 + ')';
+                    } else {
+                        obj.style[key] = cur + 'px';
+                    }
+                }
+                optional.fn && optional.fn();
+                if (n == count) {
+                    clearInterval(obj.timer);
+                }
+            }, 30);
+        }
+        window.onload = function () {
+            var oDiv = document.getElementById("div1");
+            var oBtn = document.getElementById("btn");
+            oBtn.onclick = function () {
+                move(oDiv, {
+                    width: 800
+                })
+            };
+        };
+    </script>
+</head>
+
+<body>
+<input id="btn" type="button" value="按钮"/>
+<div id="div1"></div>
+</body>
+
+</html>

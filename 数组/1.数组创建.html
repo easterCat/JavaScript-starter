@@ -1,0 +1,23 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>数组创建</title>
+    <script>
+        //var arr = new Array();一般不用
+        var arr = [12, 5, 'bmw'];
+        arr.length = 2;	//数组的长度是可以修改的，伪数组就不可以
+        for (var i = 0, len = arr.length; i < len; i++) {
+            console.log(arr[i]);
+        }
+        console.log(arr[2]);
+        console.log(arr);
+        //伪数组也可以遍历，也获取index，也有length，但是没有方法，终究不是数组
+    </script>
+</head>
+
+<body>
+
+
+</body>
+</html>

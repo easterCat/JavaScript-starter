@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var SingelInsTest = (function () {
+        function SingleTon(args) {
+            //设置args变量为接收的参数或者为空（如果没有提供的话）
+            var arg = args || {};
+            this.name = 'hello world';
+            this.pointX = arg.pointX || 6;
+            this.pointY = arg.pointY || 6;
+        }
+
+        //实例容器
+        var instance;
+
+        var _init = {
+            name: 'hi,girl',
+            getInstance: function (args) {
+                //获取实例的方法
+                //返回Singleton的实例
+                if (!instance) {
+                    instance = new SingleTon(args);
+
+                }
+                return instance;
+            }
+        };
+
+        return _init;
+    })();
+
+    var a = SingelInsTest.getInstance({pointX: 2});
+    console.log(a.pointX);
+    console.log(a.name);
+    console.log(SingelInsTest.name);
+</script>
+</body>
+</html>

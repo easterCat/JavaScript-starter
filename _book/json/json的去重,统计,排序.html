@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>json的去重,统计,排序</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    </style>
+    <script>
+    var s = '冬新品 韩版 韩版 韩版 韩版 韩版 冬新品 长袖 韩版 冬新品 裤子 冬新品 长袖 套装 半身裙 长袖';
+    var arr = s.split(' ');
+    //现在有的数据arr=[冬新品 韩版 冬新品 长袖 韩版 冬新] 
+    //1.去重: 要的{冬新品:4,韩版:2,长袖:3}
+    var json = {};
+    for (var i = 0; i < arr.length; i++) {
+        if (json[arr[i]]) {
+            json[arr[i]]++;
+        } else {
+            json[arr[i]] = 1;
+        }
+    }
+    //2.数据整理
+    //我有的数据 json={冬新品:4,韩版:2,长袖:3}
+    //数据整理  json--->arr2    [{name:冬新品,count:4},{}]
+    var arr2 = [];
+    for (var key in json) {
+        arr2.push({
+            name: key,
+            count: json[key]
+        });
+    }
+    //3.排序
+    //我有的数据 json={冬新品:4,韩版:2,长袖:3}  [{name:冬新品,count:4},{2},{3}]
+    //要的数据  [{name:冬新品,count:4},{..,count:3},{...2}]
+    arr2.sort(function(j1, j2) {
+        return j2.count - j1.count
+    });
+    //4.数据再整理   要的  冬新品(4) 长袖(3) 韩版(2)...
+    //我有的数据 json={冬新品:4,韩版:2,长袖:3}  
+    //          arr2=[{name:冬新品,count:4},{..,count:3},{...2}]
+    //          arr=[冬新品 韩版 冬新品 长袖 韩版 冬新] 
+    //arr2--->arr3--->string
+    var arr3 = [];
+    for (var i = 0; i < arr2.length; i++) {
+        arr3.push(arr2[i].name + '(' + arr2[i].count + ')');
+    }
+    document.write(arr3.join(' '));
+    </script>
+</head>
+
+<body></body>
+
+</html>

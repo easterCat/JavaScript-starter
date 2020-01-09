@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    let AppClass = class App {
+        getClassName() {
+            console.log(App.name);
+        }
+    };
+
+    let app = new AppClass();
+    app.getClassName();//App
+    App.name;//Uncaught ReferenceError: App is not defined
+</script>
+</html>

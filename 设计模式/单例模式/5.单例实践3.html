@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    function Un() {
+        // 缓存的实例
+
+        var instance = this;
+        this.name = 'lili';
+        this.num = 10;
+
+        Un = function () {
+            return instance;
+        }
+    }
+
+    var u = new Un();
+    var n = new Un();
+    console.log(u === n);
+    u.name = 'alice';
+    console.log(u.name);
+    console.log(n.name);
+
+</script>
+</html>

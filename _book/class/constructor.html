@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>constructor</title>
+</head>
+<body>
+
+</body>
+<script>
+    class App {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        toString() {
+            console.log(`${this.x * this.y}`);
+        }
+    }
+
+    let p = new App();
+
+    console.log(p.hasOwnProperty('x'));
+    console.log(p.hasOwnProperty('y'));
+    console.log(p.hasOwnProperty('toString'));
+</script>
+</html>

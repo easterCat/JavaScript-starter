@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+'
+<script>
+    //https://github.com/hanzichi/underscore-analysis/issues/23
+    //http://scriptoj.mangojuice.top/topic/209/102-%E8%AE%B0%E5%BF%86%E5%8C%96%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E5%87%BD%E6%95%B0-memoization/43
+
+    // let array = [];
+
+    // for (let n = 0; n < 1000; n++) {
+    //     if (n < 2) {
+    //         array[n] = n;
+    //     } else {
+    //         array[n] = array[n - 2] + array[n - 1];
+    //     }
+    // }
+
+
+    //简单实现
+    // function fabonaci(n) {
+    //     return n < 2 ?
+    //         n :
+    //         fabonaci(n - 1) + fabonaci(n - 2)
+    // }
+
+    //优化,通过对象缓存中间计算结果,大大提高效率
+    // let fabonaci = function (n) {
+    //     let cache = {};
+    //     return function (n) {
+    //         if (!cache[n]) {
+    //             return cache[n] = n < 2 ?
+    //                 n :
+    //                 fabonaci(n - 1) + fabonaci(n - 2);
+    //         }
+    //         return cache[n];
+    //     }
+    // }()
+
+
+    //memoize函数
+    let _memoize = function (func) {
+        let cache = {};
+
+        return function (key) {
+            if (!cache[key]) {
+                cache[key] = func.apply(this, arguments);
+            }
+            return cache[key];
+
+        }
+    }
+
+    let fabonaci = _memoize(function (n) {
+        return n < 2 ?
+            n :
+            fabonaci(n - 1) + fabonaci(n - 2);
+    })
+
+    console.log(fabonaci(10))
+</script>
+
+</html>

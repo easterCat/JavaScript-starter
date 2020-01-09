@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var myEx = function () {
+        /* 这里声明私有变量和方法 */
+        var a = 'hello world';
+
+        function showA() {
+            console.log(a);
+        }
+        
+        /* 公有变量和方法（可以访问私有变量和方法） */
+        return {
+            publicShowA: function () {
+                showA();
+            },
+            publicA: 'hi,girl',
+        }
+    };
+
+    var b = myEx();
+    console.log(b);
+    b.publicShowA();
+</script>
+</html>

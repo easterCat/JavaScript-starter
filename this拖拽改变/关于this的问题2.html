@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>套了一层函数this 问题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "微软雅黑", "张海山锐线体简"
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById('btn1');
+            oBtn.onclick = function () {
+                //alert(this);
+                (function (_this) {
+                    alert(_this); // HtmlInputElement 对象
+                })(this) //匿名函数自执行，传递参数
+            };
+        };
+    </script>
+</head>
+
+<body>
+<input type="button" value="按钮" id="btn1">
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id='list'>
+        <li data-name="Jerry" class="item">
+            <span>1</span>
+        </li>
+        <li data-name="Lucy" class="item">
+            <span>2</span>
+        </li>
+        <li data-name="Tomy">
+            <span>3</span>
+        </li>
+    </ul>
+</body>
+<script>
+    let div = document.getElementById('list')
+    console.log(getChildrenAttribute(div, 'data-name'))
+
+    function getChildrenAttribute(element, attr) {
+        let nodes = element.children,
+            attrs = []
+
+        console.log(nodes)
+        //for...of
+        for (let item of nodes) {
+            attrs.push(item.getAttribute(attr));
+        }
+        return attrs;
+
+        //map
+        // return Array.from(nodes).map(item => {
+        //     return item.getAttribute(attr);
+        // })
+    }
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //- 1.传统遍历
+    // var result = [];
+    //
+    // for (var i = 0; i < arr.length; i++) {
+    //     if (Array.isArray(arr[i])) {
+    //         result = result.concat(_.flatten(arr[i]));
+    //     } else {
+    //         result.push(arr[i]);
+    //     }
+    // }
+    // return result;
+
+    //- 2.toString转字符串
+    // return arr.toString().split(',').map(function (item) {
+    //     return Number(item);
+    // })
+
+    //- 3.reduce
+    // return arr.reduce(function (prev, next) {
+    //     return prev.concat(Array.isArray(next) ? _.flatten(next) : next)
+    // }, [])
+
+    //- 4.es6扩展运算符 ...
+    // while (arr.some(item => Array.isArray(item))) {
+    //     arr = [].concat(...arr)
+    // }
+    // return arr;
+</script>
+</html>

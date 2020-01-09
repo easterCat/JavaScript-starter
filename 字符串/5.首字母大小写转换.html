@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+<script type="text/javascript">
+    var str = 'I LOve yOu LOve yoU EVer oOo';
+    var arr1 = str.split(' ');
+    console.log('arr1:::' + arr1);
+    for (var i = 0; i < arr1.length; i++) {
+        var arr2 = arr1[i].charAt(0).toUpperCase() + arr1[i].slice(1, 4).toLowerCase();
+        console.log(arr2);
+    }
+</script>
+</body>
+
+</html>

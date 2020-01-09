@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="eval() 函数"/>
+    <meta name="copyright" content="eval() 函数"/>
+    <title>eval() 函数</title>
+    <script>
+        //'3+5';
+        //alert('3+5');
+        //var str='3+5';
+        //alert(eval('3+5'));
+        var str = '3+5';
+        var num = eval(str);
+        alert(num);  // 8
+
+
+        var str2 = 'function show(){alert("abc")}';
+        eval(str2);  // abc
+        show();
+
+        eval("2+3")
+        var myeval = eval;
+        alert(myeval);	// 会抛出 EvalError 异常 .如果试图覆盖 eval 属性或把 eval() 方法赋予另一个属性，并通过该属性调用它，则 ECMAScript 实现允许抛出一个 EvalError 异常
+    </script>
+</head>
+<body>
+</body>
+</html>

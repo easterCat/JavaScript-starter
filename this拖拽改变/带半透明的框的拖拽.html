@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>带半透明的框的拖拽</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "微软雅黑", "张海山锐线体简"
+        }
+
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .alphaDiv {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: .5;
+        }
+    </style>
+    <script>
+        //window.onload=function(){
+        //	var oDiv=document.getElementById('div1');
+        //	oDiv.onmousedown=function(ev){
+        //		var oEvt=ev||event;
+        //		var disX=oEvt.clientX-oDiv.offsetLeft;
+        //		var disY=oEvt.clientY-oDiv.offsetTop;
+        //
+        //		//2.按下down时，创建框/透明div,规定其样式，位置，并丢到页面上
+        //		var oAlphaDiv=document.createElement('div');
+        //		oAlphaDiv.className='alphaDiv';//创建一个新的类，给他透明度
+        //		oAlphaDiv.style.left=oDiv.offsetLeft+'px';
+        //		oAlphaDiv.style.top=oDiv.offsetTop+'px';
+        //		document.body.appendChild(oAlphaDiv);
+        //
+        //		document.onmousemove=function(ev){
+        //			var oEvt=ev||event;
+        //			//3.移动move时，移动框/透明div
+        //			oAlphaDiv.style.left=oEvt.clientX-disX+'px';
+        //			oAlphaDiv.style.top=oEvt.clientY-disY+'px';
+        //		};
+        //		document.onmouseup=function(){
+        //			//4.抬起up时，设置oDiv的位置等于框/透明div，并删除框/透明div
+        //			oDiv.style.left=oAlphaDiv.offsetLeft+'px';
+        //			oDiv.style.top=oAlphaDiv.offsetTop+'px';
+        //			document.body.removeChild(oAlphaDiv);
+        //
+        //			document.onmouseup=	document.onmousemove=null;
+        //			oDiv.releaseCapture && oDiv.releaseCapture();
+        //		};
+        //		oDiv.setCapture && oDiv.setCapture();//兼容写法
+        //		return false;
+        //	};
+        //};
+    </script>
+</head>
+
+<body>
+<div id="div1"></div>
+<script type="text/javascript">
+    var oDiv = document.getElementById("div1");
+    oDiv.onmousedown = function (ev) {
+        var oEve = ev || event;
+        var oldX = oEve.clientX - oDiv.offsetLeft;
+        var oldY = oEve.clientY - oDiv.offsetTop;
+        //2.按下down时，创建框/透明div,规定其样式，位置，并丢到页面上
+        var alphaDiv = document.createElement("div");
+        alphaDiv.className = 'alphaDiv';
+        alphaDiv.style.left = oDiv.offsetLeft + 'px';
+        alphaDiv.style.top = oDiv.offsetTop + 'px';
+        document.body.appendChild(alphaDiv);
+        //第二种写法使用cloneNode来克隆节点
+        //              var alphaDiv=oDiv.cloneNode();
+        //			  alphaDiv.style.opacity='0.5';
+        //			  document.body.appendChild(alphaDiv);//跟上面的创建效果一样
+        document.onmousemove = function (ev) {
+            var oEve = ev || event;
+            //3.移动move时，移动框/透明div
+            var newX = oEve.clientX - oldX;
+            var newY = oEve.clientY - oldY;
+            alphaDiv.style.left = newX + 'px';
+            alphaDiv.style.top = newY + 'px';
+        };
+        //4.抬起up时，设置oDiv的位置等于框/透明div，并删除框/透明div
+        document.onmouseup = function () {
+            oDiv.style.left = alphaDiv.offsetLeft + 'px';
+            oDiv.style.top = alphaDiv.offsetTop + 'px';
+            document.body.removeChild(alphaDiv);
+            document.onmousemove = null;
+            document.onmouseup = null;
+            oDiv.releaseCapture && oDiv.releaseCapture();
+        };
+        oDiv.setCapture && oDiv.setCapture();
+        return false;
+    }
+</script>
+</body>
+
+</html>

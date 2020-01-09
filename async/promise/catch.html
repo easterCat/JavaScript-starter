@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body></body>
+    <script>
+        "use strict";
+
+        const createPromise = function(bool) {
+            return new Promise((resolve, reject) => {
+                if (bool) {
+                    resolve("我们成功了");
+                } else {
+                    reject("还是失败了");
+                }
+            });
+        };
+
+        // createPromise(false)
+        //     .then(result => {
+        //         console.log(result);
+        //     })
+        //     .catch(error => {
+        //         console.log(error); //还是失败了
+        //     });
+
+        // createPromise(true).then(
+        //     result => {
+        //         console.log(result); //我们成功了
+        //         throw new Error("我在then里面出错了,怎么办");
+        //     },
+        //     error => {
+        //         console.log(error); //Uncaught (in promise) Error: 我在then里面出错了,怎么办
+        //     }
+        // );
+
+        new Promise((resolve, reject) => {
+            resolve("我将走在错误的前面");
+        })
+            .then(result => {
+                console.log(result); //我将走在错误的前面
+                throw new Error("我在then里面出错了,怎么办");
+                return "走后面的菜";
+            })
+            .then(result => {
+                console.log(result);
+                return "比我还菜";
+            })
+            .then(result => {
+                console.log(result);
+                return "菜中菜";
+            });
+
+        // createPromise(false)
+        //     .then(
+        //         result => {
+        //             console.log(result);
+        //         },
+        //         error => {
+        //             console.log("callback", error);
+        //             throw new Error("我就是错了");
+        //         }
+        //     )
+        //     .catch(error => {
+        //         console.log("catch", error); //还是失败了
+        //     });
+
+        // createPromise(false)
+        //     .then(result => {
+        //         console.log(result);
+        //         throw "断吧";
+        //     })
+        //     .catch(reason => {
+        //         console.log(reason);
+        //     })
+        //     .then(
+        //         () => {
+        //             console.log("接着链");
+        //         },
+        //         () => {
+        //             console.log("没链了");
+        //         }
+        //     );
+
+        // p.then(result => {
+        //     console.log(result);
+        //     return Promise.reject("断吧");
+        // })
+        //     .catch(reason => {
+        //         console.log(reason);
+        //     })
+        //     .then(
+        //         () => {
+        //             console.log("接着链");
+        //         },
+        //         () => {
+        //             console.log("没链了");
+        //         }
+        //     );
+    </script>
+</html>

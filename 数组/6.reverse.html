@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>数组反转</title>
+    <script>
+        var arr = ['i', 'love', 'you'];
+        var new_arr = arr.reverse();
+        console.log(arr);   // ["you", "love", "i"] 会修改原数组
+        console.log(new_arr);	//["you", "love", "i"]
+
+
+        //       用pop实现一下
+        var arr2 = ['i', 'love', 'you'];
+        var null_arr = [];
+        for (var i = 0, len = arr2.length; i < len; i++) {
+            var a = arr2.pop();
+            null_arr.push(a);
+        }
+        console.log(null_arr);//["you", "love", "i"]
+
+        //        用shift实现一下
+        var arr3 = ['i', 'love', 'you'];
+        var null_arr2 = [];
+        for (var i = 0, len = arr3.length; i < len; i++) {
+            var a = arr3.shift();
+            null_arr2.unshift(a);
+        }
+        console.log(null_arr2);//["you", "love", "i"]
+
+        //        for循环实现一下
+        var arr4 = ['i', 'love', 'you'];
+        var null_arr3 = [];
+        for (var i = arr4.length - 1; i >= 0; i--) {
+            null_arr3.push(arr4[i]);
+        }
+        console.log(null_arr3);//["you", "love", "i"]
+    </script>
+</head>
+<body>
+</body>
+</html>

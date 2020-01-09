@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>JS原型链</title>
+
+		<script>
+			//原型链的作用是用来实现继承,比如我们新建一个数组,数组的方法就是从数组的原型上继承而来的.
+			//在JavaScript中,一共有两种类型的值,原始值和对象值.每个对象都有一个内部属性[[prototype]],我们通常称之为原型.原型的值可以是一个对象,也可以是null.如果它的值是一个对象,则这个对象也一定有自己的原型.这样就形成了一条线性的链,我们称之为原型链.
+			//JavaScript对象是一个属性的集合，另外有一个隐式的对象：原型对象。原型的值可以是一个对象或者null。
+			//var arr = [];
+			//arr.map === Array.prototype.map //方法继承   
+			//arr.map是从arr.__proto__上继承下来的,arr.__proto__也就是Array.prototype  
+			// 访问一个对象的原型 ES5中的Object.getPrototypeOf方法,  ES6中的__proto__属性.
+			//syntax error 语法错误
+			window.onload = function() {
+				function Person() { //代码非常简单，Person原型对象定义了公共的say方法，
+					this.name = 'John';
+				}
+				var person = new Person(); //因为原型方法在调用之前已经声明，因此之后的每个实例将都拥有该方法。
+				Person.prototype.say = function() {
+					console.log('Hello,' + this.name);
+				};
+				person.say(); //Hello,John  得到person.say == new Person().say
+				//建立一棵原型树,通过使用Object.create方法
+				//var foo = Object.create(null);        //foo是一个对象,但它是游离的,不属于已有的那棵原型树
+				//var bar = Object.create(foo);         //bar的原型是foo
+				//var baz = Object.create(foo);         //baz的原型是foo 
+
+				//我们没有办法遍历到所有以某个对象为原型的对象,但我们可以向上遍历,获取到一个对象所有的上层原型,这个原型链必定是线性的,尽头是null.	
+				function getPrototypeChain(object) {
+					var protoChain = [];
+					while(object = object.__proto__) {
+						protoChain.push(object);
+					}
+					protoChain.push(null);
+					return protoChain;
+				}
+
+				function Foo() {}
+
+				for(var i = 0; i < 100; i++) {
+					Foo.prototype["foo" + i] = i;
+					Foo.prototype = new Foo;
+				}
+				console.log(getPrototypeChain(new Foo)); // //依次是Foo.prototype,......Object.prototype,null
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<img src="1.png" alt="一" />
+		<img src="2.png" alt="二" />
+
+	</body>
+
+</html>

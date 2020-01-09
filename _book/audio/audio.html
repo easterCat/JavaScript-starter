@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>audio</title>
+  </head>
+  <body></body>
+  <!-- <script>
+      var src = "./award.wav";
+      var body = document.getElementsByTagName("body")[0];
+  
+      if (body.getElementsByTagName("audio").length <= 0) {
+        var audio = document.createElement("audio");
+        audio.setAttribute("id", "awardAudio");
+        audio.setAttribute("src", src);
+        audio.setAttribute("autoplay", "autoplay");
+        body.appendChild(audio);
+  
+        setTimeout(function() {
+          body.removeChild(audio);
+        }, 2300);
+      }
+    </script> -->
+  <script>
+    var src = "./award.wav";
+    var body = document.getElementsByTagName("body")[0];
+
+    if (body.getElementsByTagName("audio").length <= 0) {
+      var audio = document.createElement("audio");
+      audio.setAttribute("id", "awardAudio");
+      audio.setAttribute("src", src);
+      body.appendChild(audio);
+
+      audio.addEventListener(
+        "canplaythrough",
+        function() {
+          audio.play();
+          setTimeout(function() {
+            body.removeChild(audio);
+          }, audio.duration * 1000 + 100);
+        },
+        false
+      );
+    }
+  </script>
+</html>

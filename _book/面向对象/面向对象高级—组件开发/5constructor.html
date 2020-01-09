@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>查看对象的构造函数</title>
+    <script>
+    function Ba(str) {
+        this.name = str ? str : 'baobo';
+        this.sayHello = function() {
+            alert('hello');
+        }
+    }
+
+    Ba.prototype.alertA = function() {
+        alert(this.name + '-A');
+    }
+
+
+    Ba.prototype.alertB = function() {
+        alert(this.name + 'B');
+    }
+
+    var instance_b = new Ba('haha');
+
+    console.log(instance_b);
+
+    // constructor
+    console.log('原型的构造函数', Ba.prototype.constructor);
+    console.log('实例的构造函数', instance_b.constructor);
+
+
+    function Ca() {
+        this.name = 'alikes';
+    }
+
+    Ca.prototype = {
+        alertA: function() {
+            alert('Ca');
+        }
+    }
+
+    var instance_c = new Ca();
+    console.log(Ca.prototype.constructor);
+
+
+
+    function F() {
+
+    }
+    F.prototype = {};
+
+    var o = new F();
+
+    console.log(o.constructor);
+
+    function inhernit(o) {
+        if (o == null) return null;
+
+        function f() {};
+        f.prototype = o;
+        return new f();
+
+    }
+
+    var t = inhernit(o);
+
+    console.log(t.constructor);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

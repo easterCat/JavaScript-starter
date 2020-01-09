@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>数组的排序</title>
+    <script>
+        var arr1 = ['width', 'height', 'alpha', 'opacity'];
+        var arr2 = [123, 563, 3511, 634, 455];
+        arr1.sort();
+        arr2.sort();
+        console.log(arr1);// ["alpha", "height", "opacity", "width"]
+        console.log(arr2); // [123,563,351,634,455]按照字符编码的顺序进行排序
+
+        arr2.sort(function (a, b) {
+            return a - b;
+        });
+        console.log(arr2);//[123, 455, 563, 634, 3511]
+
+        arr2.sort(function (a, b) {
+            return b - a;
+        });
+        console.log(arr2);//[3511, 634, 563, 455, 123]
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

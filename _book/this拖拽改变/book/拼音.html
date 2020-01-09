@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>拼音查找</title>
+    <style>
+        ul, li, em {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #ul1 li {
+            padding: 6px 4px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oT1 = document.getElementById('txt1');
+            var oT2 = document.getElementById('txt2');
+            var oUl = document.getElementById('ul1');
+            var arr = eval('(' + oT1.value + ')'); //[{name:'..',pin:'..'},{},{}]
+            //console.log(arr);
+            //要的{name:'..',jp:'..',qp:'..',kqp}
+            var arr2 = [];
+            for (var i = 0; i < arr.length; i++) {
+                var jpValue = '';
+                var qpValue = arr[i].pin.split(' ').join('');
+                var tmpArr = arr[i].pin.split(' ');
+                for (var j = 0; j < tmpArr.length; j++) {
+                    jpValue += tmpArr[j].charAt(0);
+                }
+                arr2.push({
+                    name: arr[i].name,
+                    jp: jpValue,
+                    qp: qpValue,
+                    kqp: arr[i].pin
+                });
+            }
+            //需要arr3=[{},{}],用户输入时
+            oT2.onkeyup = function () {
+                var arr3 = []; //{name:'..',jp:'..',qp:'wangbaoping'}
+                for (var i = 0; i < arr2.length; i++) {
+                    if (arr2[i].name.indexOf(oT2.value) != -1 || arr2[i].jp.indexOf(oT2.value) != -1 || arr2[i].qp.indexOf(oT2.value) != -1) {
+                        arr3.push(arr2[i]);
+                    }
+                }
+                console.log(arr3);
+                oUl.innerHTML = '';
+                for (var i = 0; i < arr3.length; i++) {
+                    var oLi = document.createElement('li');
+                    oLi.innerHTML = arr3[i].name + '<span>(' + arr3[i].kqp + ')</span>';
+                    oUl.appendChild(oLi);
+                }
+            };
+        };
+    </script>
+</head>
+
+<body>输入原始文本(json格式)：
+<br>
+<textarea style="width:500px; height:200px;" id="txt1">[ {name: '张三', pin: 'zhang san'}, {name: '王斌', pin: 'wang bin'}, {name: '张春桥', pin: 'zhang chun qiao'}, {name: '帕多瓦', pin: 'pa duo wa'}, {name: '王彬', pin: 'wang bin'}, {name: '张超群', pin: 'zhang chao qun'}, {name: '王保平', pin: 'wang bao ping'}, {name:
+        '钟伟强', pin: 'zhong wei qiang'} ]</textarea>
+<br>
+<br>
+<input type="text" id="txt2"/>
+<br>
+<ul id="ul1">
+    <!--<li>张三<span>(zhang san)</span></li>-->
+</ul>
+</body>
+
+</html>

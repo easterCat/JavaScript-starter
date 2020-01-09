@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Json对象与字符串互转</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "微软雅黑", "张海山锐线体简"
+        }
+    </style>
+    <script>
+        console.log('helloworld');
+        var str = '{"a":12,"b":5,"c":"bmw"}';
+        //字符---》转换成 json对象   使用JSON.parse需严格遵守JSON规范，如属性都需用引号引起来
+        JSON.parse(str)
+        console.log(JSON.parse(str)); //Object {a: 12, b: 5, c: "bmw"} for  高    从后台拿到数据，用这方法转成对象，不然用不了
+        var json = {
+            "a": 12,
+            "b": 5,
+            "c": "bmw"
+        };
+        //JSON.stringify(json)	JSON对象--->转换成  字符
+        console.log(JSON.stringify(json)); //{"a":12,"b":5,"c":"bmw"}  for  高
+    </script>
+</head>
+
+<body></body>
+
+</html>

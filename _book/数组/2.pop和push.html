@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>数组增删数据</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "微软雅黑", "张海山锐线体简"
+        }
+
+    </style>
+    <script>
+        var arr = ['猫', '狗', '老鼠'];
+        //        arrObj.push(数据);	push 尾部推入  修改原数组	返回数组长度 数据可以有多个
+        var length = arr.push('龙');
+        console.log(length); // 4
+        arr.push('猴', '蛇');
+        arr.push(['牛', '鸡']);
+        console.log(arr.push(['猪', '兔'])); // 8
+
+
+        var arr2 = [123, 234, 534, 456, 989];
+        var result = arr2.pop(); //pop 尾部删除一条数据 返回被删除的数据,无参数，硬传忽略
+        console.log(result); //989
+        console.log(arr2); //[123, 234, 534, 456]
+        console.log(arr2.pop(123)); //456
+    </script>
+</head>
+<body>
+</body>
+</html>

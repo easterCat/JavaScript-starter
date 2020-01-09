@@ -1,0 +1,176 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>幻灯自动播放</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 12px;
+        color: black;
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    #div1 {
+        width: 236px;
+        height: 166px;
+        border: 1px solid #d9e0ee;
+        border-top: 3px solid #ff8400;
+        position: relative;
+        margin: 10px auto;
+    }
+    
+    #div1 h2 {
+        border-bottom: 1px solid #e3e6ed;
+        height: 35px;
+        line-height: 35px;
+        font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+        font-size: 16px;
+        text-indent: 12px;
+    }
+    
+    #div1 a {
+        text-indent: -9999em;
+        position: absolute;
+        width: 11px;
+        height: 26px;
+        background: url(img/history_arr.png) no-repeat;
+        top: 50%;
+    }
+    
+    #div1 a.prev {
+        background-position: 0 0;
+        left: 4px;
+    }
+    
+    #div1 a.next {
+        background-position: -20px 0;
+        right: 4px;
+    }
+    
+    #div1 a.prev:hover {
+        background-position: 0 -41px;
+        left: 4px;
+    }
+    
+    #div1 a.next:hover {
+        background-position: -20px -41px;
+        right: 4px;
+    }
+    
+    #div1 .content {
+        width: 180px;
+        height: 108px;
+        position: absolute;
+        left: 50%;
+        margin-left: -90px;
+        bottom: 12px;
+        position: absolute;
+        overflow: hidden;
+    }
+    
+    #div1 .content ul {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 720px;
+    }
+    
+    #div1 .content ul li {
+        width: 180px;
+        height: 108px;
+        float: left;
+    }
+    
+    #div1 .content ul li img {
+        width: 180px;
+        height: 87px;
+        display: block;
+    }
+    
+    #div1 .content ul li span {
+        display: block;
+        width: 180px;
+        height: 21px;
+        background: black;
+        color: white;
+        text-align: center;
+        line-height: 21px;
+        cursor: pointer;
+    }
+    
+    #div1 .content ul li span:hover {
+        color: #ff8400;
+    }
+    </style>
+    <script>
+    window.onload = function() {
+        var oDiv = document.getElementById('div1');
+        var oPrev = oDiv.getElementsByTagName('a')[0];
+        var oNext = oDiv.getElementsByTagName('a')[1];
+        var oUl = oDiv.getElementsByTagName('div')[0].getElementsByTagName('ul')[0];
+        var aLi = oUl.getElementsByTagName('li');
+        var now = 0;
+
+        function tab() { //切换
+            oUl.style.left = now * -180 + 'px';
+        }
+        //下一张
+        oNext.onclick = function() {
+            //限定
+            now++;
+            if (now == aLi.length) now = 0;
+            //切换
+            tab();
+        };
+        //上一张
+        oPrev.onclick = function() {
+            now--;
+            if (now == -1) now = aLi.length - 1;
+            tab();
+        };
+        //自动播放
+        var timer = setInterval(function() {
+            oNext.click();
+        }, 1000);
+        oDiv.onmouseover = function() {
+            clearInterval(timer);
+        };
+        oDiv.onmouseout = function() {
+            timer = setInterval(function() {
+                oNext.click();
+            }, 1000);
+        };
+    };
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <h2>历史图库</h2>
+        <a href="javascript:;" class="prev">上一个</a>
+        <a href="javascript:;" class="next">下一个</a>
+        <div class="content">
+            <ul>
+                <li>
+                    <img src="img/1.jpg" /> <span>林彪的三个子女今何在</span>
+                </li>
+                <li>
+                    <img src="img/2.jpg" /> <span>历届军委主席及阅兵照</span>
+                </li>
+                <li>
+                    <img src="img/3.jpg" /> <span>30年前美丽的封面女星</span>
+                </li>
+                <li>
+                    <img src="img/4.jpg" /> <span>朝鲜历史上六位元帅谁最年轻</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

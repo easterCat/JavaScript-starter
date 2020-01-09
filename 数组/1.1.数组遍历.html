@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>访问数组</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    //遍历数组
+    var arr = [15, 38, 27, 57];
+    for (var i = 0, len = arr.length; i < len; i++) {
+        console.log(arr[i]);
+    }
+    //倒序(循环体中有删除数组元素操作一定要用倒序)
+    for (var j = arr.length - 1; j >= 0; j--) {
+        console.log(arr[j]);
+    }
+
+    //for...in:拿出的是索引
+    for (var a in arr) {
+        console.log(a + '==>' + arr[a]);
+    }
+
+    //forEach()
+    arr.forEach(function (value, key) {
+        console.log(key + '==>' + value);
+    })
+
+    //map()
+    arr.map(function (item, index, own) {
+        //own是数组本身
+        console.log(index + '==>' + item)
+    })
+
+</script>
+</body>
+</html>

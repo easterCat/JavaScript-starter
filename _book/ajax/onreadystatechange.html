@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>ajax</title>
+    </head>
+    <body></body>
+    <script>
+        // var xhr = new XMLHttpRequest();
+
+        // xhr.open("GET", "http://127.0.0.1:3333/get_money", true);
+
+        // xhr.onreadystatechange = function() {
+        //     console.log("readyState=>", xhr.readyState);
+        //     console.log("status=>", xhr.status);
+        //     console.log(xhr.response);
+        //     console.log(xhr.responseText);
+        // };
+
+        // xhr.send();
+    </script>
+
+    <script>
+        // var xhr = new XMLHttpRequest();
+
+        // console.log("open调用前的status", xhr.status); // open调用前的status 0
+        // console.log("open调用前的readyState", xhr.readyState); //open调用前的readyState 0
+
+        // xhr.open("GET", "http://127.0.0.1:3333/get_money", true);
+
+        // console.log("open调用后的status", xhr.status); //open调用后的status 0
+        // console.log("open调用后的readyState", xhr.readyState); //open调用后的readyState 1
+
+        // xhr.send();
+
+        // console.log("send调用后的status", xhr.status); //send调用后的status 0
+        // console.log("send调用后的readyState", xhr.readyState); //send调用后的readyState 1
+
+        // xhr.onreadystatechange = function() {
+        //     console.log(xhr.status); //2,3,4
+        //     console.log(xhr.readyState); //200,200,200
+        //     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        //     }
+        // };
+    </script>
+
+    <script>
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("POST", "http://127.0.0.1:3333/add", true);
+
+        var body = new FormData();
+
+        body.append("oid", 8029794);
+        body.append("type", 1);
+        body.append("message", "本大王来巡山了");
+        body.append("plat", 1);
+        body.append("jsonp", "jsonp");
+        body.append("csrf", "af15b2a3a0e64a2ea304f885bea6bfd1");
+
+        xhr.send(body);
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                console.log(xhr.response);
+            }
+        };
+    </script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <table id="my-table">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>22</td>
+        <td>33</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td>55</td>
+        <td>66</td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    var myTable = document.getElementById("my-table");
+
+    myTable.onclick = function(e) {
+      // 处理浏览器兼容
+      e = e || window.event;
+      var targetNode = e.target || e.srcElement;
+
+      if (targetNode.nodeName.toLowerCase() === "td") {
+        alert("You clicked a table row!");
+      }
+    };
+  </script>
+</html>

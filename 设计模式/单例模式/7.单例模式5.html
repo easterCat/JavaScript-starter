@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var Un;
+    (function () {
+        var instance;
+
+        Un = function Un() {
+            if (instance) {
+                return instance;
+            }
+
+            instance = this;
+            instance.num = 10;
+            instance.name = 'lilisi';
+        }
+
+
+    })();
+
+    var a = new Un();
+    var b = new Un();
+    console.log(a === b);
+</script>
+</html>

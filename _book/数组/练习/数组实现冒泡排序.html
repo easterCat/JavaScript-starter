@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>数组实现冒泡排序</title>
+
+</head>
+<body>
+<script type="text/javascript">
+
+    //3.用数组知识实现一个冒泡排序
+    //[4,2,3,1] => [1,2,3,4]
+    //1)[4,2,3,1]=>[2,4,3,1]=>[2,3,4,1]=>[2,3,1,4]
+    //2)[2,1,3,4]
+    //3)[1,2,3,4]
+    //要对arr进行排序操作，而不是返回新数组
+    function bubbleSort(arr) {
+        //循环变量i从1开始
+        for (var i = 1; i < arr.length; i++) {//控制循环趟数
+            //循环条件是arr.length-i，因为外循环完成一次，代表最大值确定了一个，循环次数减一次
+            for (var j = 0; j < arr.length - i; j++) {//交换最大值到数组尾部
+                //只有前面比后面大才执行冒泡
+                var temp;
+                if (arr[j] > arr[j + 1]) {
+                    temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+    }
+    var arr = [4, 2, 3, 1, 0, -1, 11];
+    bubbleSort(arr);
+    console.log(arr);
+</script>
+</body>
+</html>

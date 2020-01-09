@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    var n = 123; // 给数值变量分配内存
+    var s = "azerty"; // 给字符串分配内存
+
+    var o = {
+      a: 1,
+      b: null
+    }; // 给对象及其包含的值分配内存
+
+    // 给数组及其包含的值分配内存（就像对象一样）
+    var a = [1, null, "abra"];
+
+    function f(a) {
+      return a + 2;
+    } // 给函数（可调用的对象）分配内存
+
+    // 函数表达式也能分配一个对象
+    someElement.addEventListener(
+      "click",
+      function() {
+        someElement.style.backgroundColor = "blue";
+      },
+      false
+    );
+  </script>
+</html>

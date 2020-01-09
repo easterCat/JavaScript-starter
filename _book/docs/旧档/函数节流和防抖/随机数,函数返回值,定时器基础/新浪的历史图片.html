@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8"/><!---->
+    <title>新浪的历史图片</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 12px;
+            color: black;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #div1 {
+            width: 236px;
+            height: 186px;
+            border: 1px solid #d9e0ee;
+            border-top: 3px solid #ff8400;
+            position: relative;
+            margin: 10px auto;
+        }
+
+        #div1 h2 {
+            border-bottom: 1px solid #e3e6ed;
+            height: 35px;
+            line-height: 35px;
+            font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+            font-size: 16px;
+            text-indent: 12px;
+        }
+
+        #div1 a {
+            text-indent: -9999em;
+            position: absolute;
+            width: 11px;
+            height: 26px;
+            background: url(img/history_arr.png) no-repeat;
+            top: 50%;
+        }
+
+        #div1 p {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            width: 26px;
+            height: 11px;
+        }
+
+        #div1 a.prev {
+            background-position: 0 0;
+            left: 4px;
+        }
+
+        #div1 a.next {
+            background-position: -20px 0;
+            right: 4px;
+        }
+
+        #div1 a.prev:hover {
+            background-position: 0 -41px;
+            left: 4px;
+        }
+
+        #div1 a.next:hover {
+            background-position: -20px -41px;
+            right: 4px;
+        }
+
+        #div1 .content {
+            width: 180px;
+            height: 108px;
+            position: absolute;
+            left: 50%;
+            margin-left: -90px;
+            bottom: 12px;
+            position: absolute;
+
+        }
+
+        #div1 .content ul {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 720px;
+        }
+
+        #div1 .content ul li {
+            width: 180px;
+            height: 108px;
+            float: left;
+        }
+
+        #div1 .content ul li img {
+            width: 180px;
+            height: 87px;
+            display: block;
+        }
+
+        #div1 .content ul li span {
+            display: block;
+            width: 180px;
+            height: 21px;
+            background: black;
+            color: white;
+            text-align: center;
+            line-height: 21px;
+            cursor: pointer;
+        }
+
+        #div1 .content ul li span:hover {
+            color: #ff8400;
+        }
+    </style>
+</head>
+
+<body>
+<div id="div1">
+    <h2>历史图库</h2>
+    <a href="javascript:;" class="prev">上一个</a>
+    <a href="javascript:;" class="next">下一个</a>
+    <div class="content">
+        <ul>
+            <li>
+                <img src="img/1.jpg"/> <span>林彪的三个子女今何在</span>
+            </li>
+            <li>
+                <img src="img/2.jpg"/> <span>历届军委主席及阅兵照</span>
+            </li>
+            <li>
+                <img src="img/3.jpg"/> <span>30年前美丽的封面女星</span>
+            </li>
+            <li>
+                <img src="img/4.jpg"/> <span>朝鲜历史上六位元帅谁最年轻</span>
+            </li>
+        </ul>
+    </div>
+    <p>1/4</p>
+</div>
+<script type="text/javascript">
+    var oDiv = document.getElementById('div1');
+    var oShang = oDiv.getElementsByTagName('a')[0];
+    var oXia = oDiv.getElementsByTagName('a')[1];
+    var oP = oDiv.getElementsByTagName('p')[0];
+    var oUl = oDiv.getElementsByTagName('div')[0].getElementsByTagName('ul')[0];
+    var oLi = oUl.getElementsByTagName('li');
+    var sum = 0;
+
+    function tab() {
+        oUl.style.left = sum * -180 + 'px';
+        oP.innerHTML = 1 + sum + '/' + '4';
+    }
+    oXia.onclick = function () {
+        sum++;
+        console.log(sum / 4);
+        if (sum == oLi.length) {
+            sum = 0;
+        }
+        tab();
+    }
+    oShang.onclick = function () {
+        sum--;
+        console.log(sum / 4);
+        if (sum == -1) {
+            sum = 0
+        }
+        tab();
+    }
+    var timer = setInterval(function () {
+        oXia.click();
+    }, 1000)
+    oDiv.onmouseover = function () {
+        clearInterval(timer);
+    }
+    oDiv.onmouseout = function () {
+        timer = setInterval(function () {
+            oXia.click();
+        }, 1000)
+    }
+    //	function $(id){
+    //	    return document.getElementById(id);
+    //	}
+</script>
+</body>
+
+</html>

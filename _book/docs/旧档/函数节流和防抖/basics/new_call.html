@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>实现call</title>
+  </head>
+
+  <body></body>
+  <script>
+    Function.prototype.call2 = function(context) {
+      // 如果传入的为null，则指向window
+      context = context || window;
+      // 函数调用的时候，this指向调用的函数
+      context.fn = this;
+
+      var args = [];
+      for (var i = 1, len = arguments.length; i < len; i++) {
+        args.push("arguments[" + i + "]");
+      }
+      // 解析字符串，执行其中的js代码
+      // 获取返回值
+      var result = eval("context.fn(" + args + ")");
+      // 执行完后将添加的属性删除
+      delete context.fn;
+      return result;
+    };
+
+    var heo = "hello world";
+
+    var foo = {
+      name: "lili"
+    };
+
+    function func(age, sex) {
+      return {
+        name: this.name,
+        age: age,
+        sex: sex
+      };
+    }
+    func.call2(null);
+    console.log(func.call2(foo, 23, "男"));
+  </script>
+</html>

@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>数组的去重</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "微软雅黑", "张海山锐线体简"
+        }
+    </style>
+    <script>
+        //     var s = '冬新品 韩版 冬新品 长袖 韩版 冬新品 裤子 冬新品 长袖 套装 半身裙 长袖';
+        //     //要的数据  '冬新品 韩版  长袖 裤子 套装 半身裙';
+        //     var arr = s.split(' '); //[冬新品 韩版 冬新品 长袖 韩版 冬新品 裤子 冬新品 长袖 套装 半身裙 长袖]
+        //     var arr2 = [];
+        //     var find = false;
+        //     for (var i = 0; i < arr.length; i++) {
+        //         for (var j = 0; j <= arr2.length; j++) {
+        //             //根据条件修改find值
+        //             if (arr[i] != arr2[j]) {
+        //                 find = false;
+        //             } else {
+        //                 find = true;
+        //                 break; //找到一样的，就没必要再找（再for）
+        //             }
+        //         }
+        //         if (!find) { //没找到，就推入arr2,找到了啥都不做
+        //             arr2.push(arr[i]);
+        //             console.log(arr2);
+        //         }
+        //     }
+        //     console.log(arr2);
+        //     //整理    arr-->string
+        //     /*var s='';
+        // for(var i=0;i<arr2.length;i++){
+        //     s = s + arr2[i] + ' ';
+        // }*/
+        //     document.write(arr2.join(' '));
+
+
+        //方法2 可以用哈希算法
+        //方法3
+        //var arr=[1,1,2,3,3,2,1];
+        //     var arr2=[];
+        //     for(var i=0;i<arr.length;i++){
+        //         indexOf()方法返回在该数组中第一个找到的元素位置，如果它不存在则返回-1。
+        //         if(arr2.indexOf(arr[i])==-1){
+        //             arr2.push(arr[i]);
+        //         }
+        //     }
+        //     document.write(arr2);
+
+        //方法4
+
+
+    </script>
+</head>
+
+<body>
+<div id="div1"></div>
+</body>
+
+</html>

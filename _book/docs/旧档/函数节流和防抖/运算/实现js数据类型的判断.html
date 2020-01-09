@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function getType(context) {
+        return Object.prototype.toString.call(context).slice(8, -1).toLowerCase()
+    }
+
+    console.log(getType([1, 2, 3]))
+    console.log(getType(new Error('123')))
+    console.log(getType({ a: 1, b: 2 }))
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            $('btn1').onclick = function () {
+                alert($('div1').innerHTML);
+            };
+        };
+        //这里面$依然只是一个函数，将返回值封装
+        function $(id) {
+            return document.getElementById(id);
+        }
+    </script>
+</head>
+
+<body>
+
+<input id="btn1" type="button" value="按钮"/>
+<div id="div1">123</div>
+
+</body>
+</html>

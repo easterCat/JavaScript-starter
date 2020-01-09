@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    (function($) {
+      var sideBar = document.getElementById("sideBarMain");
+      sideBar && addCatalogToSidebar(sideBar);
+      $(".cloneMenu").click(function() {
+        $("#cateLog").fadeToggle();
+      });
+
+      $(".cloneMenu2").click(function() {
+        $("#cateLog2").fadeToggle();
+      });
+    })(window.jQuery);
+    var noNode = true;
+
+    function addCatalogToSidebar(parentNode) {
+      var cateLog = document.createElement("ul");
+      var cateLog2 = document.createElement("ul");
+      var closeBtn = document.createElement("button");
+      var closeBtn2 = document.createElement("button");
+      var mainCateLog = document.getElementById("catalog");
+      var mainCateLog_clone = mainCateLog.cloneNode(true);
+      var sideBar = document.getElementById("sidebar_postcategory");
+      var sideBar_clone = sideBar.cloneNode(true);
+
+      cateLog.setAttribute("id", "cateLog");
+      setStyle2(cateLog);
+
+      cateLog2.setAttribute("id", "cateLog2");
+      setStyle2(cateLog2);
+
+      setStyle(closeBtn, {
+        left: "90px"
+      });
+      closeBtn.innerText = "快速目录";
+      closeBtn.setAttribute("class", "cloneMenu");
+
+      setStyle(closeBtn2, {
+        left: "180px"
+      });
+      closeBtn2.innerText = "随笔分类";
+      closeBtn2.setAttribute("class", "cloneMenu2");
+
+      parentNode.appendChild(closeBtn);
+      parentNode.appendChild(cateLog);
+      cateLog.appendChild(mainCateLog_clone);
+
+      parentNode.appendChild(closeBtn2);
+      parentNode.appendChild(cateLog2);
+      cateLog2.appendChild(sideBar_clone);
+    }
+
+    function setStyle2(context) {
+      var cateLog = context;
+      cateLog.style.width = 290 + "px";
+      cateLog.style.zIndex = "999";
+      cateLog.style.background = "#fff";
+      cateLog.style.display = "none";
+      cateLog.style.overflow = "auto";
+      cateLog.style.position = "fixed";
+      cateLog.style.top = "400px";
+      cateLog.style.bottom = "20px";
+      cateLog.style.left = "20px";
+      cateLog.style.padding = "10px 10px 45px 10px";
+    }
+
+    function setStyle(context, option) {
+      var closeBtn = context;
+      closeBtn.style.zIndex = "1000";
+      closeBtn.style.border = "none";
+      closeBtn.style.position = "fixed";
+      closeBtn.style.bottom = "35px";
+      closeBtn.style.width = "80px";
+      closeBtn.style.marginLeft = "-40px";
+      closeBtn.style.height = "30px";
+      closeBtn.style.lineHeight = "30px";
+      closeBtn.style.textAlign = "center";
+      closeBtn.style.border = "none";
+      closeBtn.style.color = "#fff";
+      closeBtn.style.fontSize = "14px";
+      closeBtn.style.background = "#2daebf";
+
+      for (var item in option) {
+        closeBtn.style[item] = option[item];
+      }
+    }
+  </script>
+</html>

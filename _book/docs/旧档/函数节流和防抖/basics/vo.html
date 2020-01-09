@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>变量对象</title>
+</head>
+
+<body>
+</body>
+<script>
+    console.log(func);
+    var func = function () {
+        console.log('1');
+    }
+    console.log(func);
+
+    function func() {
+        console.log('2');
+    }
+
+    func();
+
+
+    // function test() {
+    //     console.log(a);
+    //     console.log(foo());
+
+    //     var a = 1;
+
+    //     function foo() {
+    //         return 2;
+    //     }
+    // }
+
+    // test();
+
+    // function func(){
+    // 	console.log('1');
+    // }
+
+    // function func(){
+    // 	console.log('2');
+    // }
+
+    // func(); //2
+
+</script>
+
+</html>

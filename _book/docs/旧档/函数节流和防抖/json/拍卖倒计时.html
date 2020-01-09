@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <style>
+        .box {
+            position: relative;
+            width: 1048px;
+            height: 388px;
+            background: url(bg.png) no-repeat;
+            margin: 30px auto;
+        }
+
+        .box a {
+            width: 94px;
+            height: 24px;
+            background: url(str.png) no-repeat;
+            text-indent: -9999px;
+        }
+
+        #btn1 {
+            position: absolute;
+            top: 60px;
+            left: 142px;
+        }
+
+        #btn2 {
+            position: absolute;
+            top: 60px;
+            left: 391px;
+        }
+
+        #btn3 {
+            position: absolute;
+            top: 60px;
+            left: 641px;
+        }
+
+        #btn4 {
+            position: absolute;
+            top: 60px;
+            right: 62px;
+        }
+
+        .box span {
+            width: 80px;
+            height: 16px;
+            color: #f76300
+        }
+
+        #span1 {
+            position: absolute;
+            top: 266px;
+            left: 102px;
+        }
+
+        #span2 {
+            position: absolute;
+            top: 266px;
+            left: 352px;
+        }
+
+        #span3 {
+            position: absolute;
+            top: 266px;
+            left: 602px;
+        }
+
+        #span4 {
+            position: absolute;
+            top: 266px;
+            left: 851px;
+        }
+
+        .box a.active {
+            background: url(pic.png)
+        }
+
+        .box a.end {
+            background: url(end.png)
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oBtn1 = document.getElementById("btn1");
+            var oSpan1 = document.getElementById("span1");
+
+            var i = 5;
+            var timer = null;
+            timer = setInterval(function () {
+                if (i > 0) {
+                    i--;
+                    oSpan1.innerHTML = "" + fillZero(i) + "秒"
+                } else if (i === 0 && oBtn1.className === "") {
+                    i = 10;
+                    oBtn1.className = "active";
+                    oSpan1.innerHTML = "" + fillZero(i) + "秒"
+                } else if (i > 0 && oBtn1.className === "active") {
+                    i--;
+                    oSpan1.innerHTML = "" + fillZero(i) + "秒"
+
+                } else {
+                    oBtn1.className = "end";
+                }
+            }, 1000);
+
+            function fillZero(n) {
+                return n < 10 ? "0" + n : "" + n
+
+            }
+        };
+    </script>
+</head>
+
+<body>
+<div class="box">
+    <div>
+        <a id="btn1" href="javascript:;">定时器</a>
+        <span id="span1">05秒</span>
+    </div>
+    <div>
+        <a id="btn2" href="javascript:;">定时器</a>
+        <span id="span2">00秒</span>
+    </div>
+    <div>
+        <a id="btn3" href="javascript:;">定时器</a>
+        <span id="span3">00秒</span>
+    </div>
+    <div>
+        <a id="btn4" href="javascript:;">定时器</a>
+        <span id="span4">00秒</span>
+    </div>
+</div>
+</body>
+
+</html>

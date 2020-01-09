@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>事件绑定</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: "微软雅黑", "张海山锐线体简";
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="button" value="按钮" id="btn1" />
+    <script type="text/javascript">
+      //封装写法
+      var oBtn = document.getElementById("btn1");
+      addEvent(oBtn, "click", function() {
+        alert("弹出1");
+        //arguments对象包含了所有传递进来的参数以及该函数自身(callee)
+        console.log(arguments);
+        removeEvent(oBtn, "click", arguments.callee);
+      });
+
+      //对象.addEventListener(事件名,函数,false);	for 高
+      //事件名	onclick	over/out/down/up.........不带on
+      //函数	obj.onclick=show	show==函数
+      function addEvent(obj, eve, fn) {
+        if (obj.addEventListener) {
+          obj.addEventListener(eve, fn, false); //由于事件参数不带on
+        } else {
+          obj.attachEvent("on" + eve, fn); //所以这里的绑定事件要将on补上
+        }
+      }
+
+      //解绑
+      //对象.removeEventListener(事件名,函数,false);  chrome FF IE 9 10
+      //对象.detachEvent(事件名,函数);        IE 6 7 8
+      // oBtn.detachEvent('onclick',show2);
+      //移除函数
+      function removeEvent(obj, eve, fn) {
+        if (obj.removeEventListener) {
+          obj.removeEventListener(eve, fn, false);
+        } else {
+          obj.detachEvent("on" + eve, fn);
+        }
+      }
+    </script>
+  </body>
+</html>
+/** * Created by easterCat on 2017/12/8. */

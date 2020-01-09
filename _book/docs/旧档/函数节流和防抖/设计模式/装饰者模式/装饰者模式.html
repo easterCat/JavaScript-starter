@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Num() {
+        this.cost = function () {
+            console.log(1)
+            return 1000;
+        }
+    }
+
+    function Num2(arg) {
+        this.cost = function () {
+            console.log(2)
+            return arg.cost() + 75;
+        }
+    }
+
+    function Num3(arg) {
+        this.cost = function () {
+            console.log(3)
+            return arg.cost() + 300;
+        }
+    }
+
+    function Num4(arg) {
+        this.cost = function () {
+            console.log(4)
+            return arg.cost() + 500;
+        }
+    }
+
+    //实际上是Num4的实例
+    var instance = new Num4(new Num3(new Num2(new Num())));
+
+    console.log(instance)
+    console.log(instance.cost());
+</script>
+</html>

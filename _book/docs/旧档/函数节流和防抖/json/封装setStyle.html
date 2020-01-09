@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>单个与多个样式修改</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "微软雅黑", "张海山锐线体简"
+        }
+
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            //jqObj.css()
+            //setStyle(oDiv)...
+            //alert(css(oDiv,'width'));	//获取
+            //css(oDiv,'width','300px');	//修改
+            //css(oDiv,{width:'300px',height:'500px',background:'green'});//批量修改
+            //模拟jquery里面css方法的一个方法，批量修改css样式，输出已经计算过的值
+            function css() {
+                //arguments	if	for in
+                if (arguments.length === 2) {
+                    if (typeof arguments[1] === 'string') {
+                        //获取
+                        var obj = arguments[0];
+                        var attr = arguments[1];
+                        if (obj.currentStyle) {
+                            return obj.currentStyle[attr];
+                        } else {
+                            return getComputedStyle(obj, false)[attr];
+                        }
+                    } else if (typeof arguments[1] === 'object') {
+                        //批量修改
+                        var json = arguments[1];
+                        var obj = arguments[0];
+                        for (var key in json) {
+                            var attr = key;
+                            var value = json[key];
+                            obj.style[attr] = value;
+                        }
+                    }
+                } else if (arguments.length === 3) {
+                    //修改
+                    var attr = arguments[1];
+                    var value = arguments[2];
+                    oDiv.style[attr] = value;
+                }
+            }
+        };
+        /*$(function(){
+         var oDiv=$('#div1');
+         oDiv.css('width');
+         oDiv.css('width','300px');
+         oDiv.css({'width':'300px','height':'500px'});
+         });*/
+    </script>
+</head>
+
+<body>
+<div id="div1"></div>
+</body>
+
+</html>

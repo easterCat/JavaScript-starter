@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域链</title>
+</head>
+<body>
+
+</body>
+<script>
+    //    var a = 20;
+    //
+    //    function test() {
+    //        var b = a + 10;
+    //
+    //        function innerTest() {
+    //            var c = 10;
+    //            return b + c;
+    //        }
+    //
+    //        return innerTest();
+    //    }
+    //
+    //    test();
+
+    //    for (var i = 1; i <= 5; i++) {
+    //        (function (i) {
+    //            setTimeout(function timer() {
+    //                console.log(i);
+    //            }, i * 1000);
+    //        })(i)
+    //    }
+
+    //    var a = 1;
+    //    function out() {
+    //        var b = 6,
+    //            c = 3;
+    //
+    //        function inner() {
+    //            var d = 11;
+    //            console.log(a + b + c + d);
+    //        }
+    //
+    //        return inner;
+    //    }
+    //
+    //    out()();
+
+    //    var fn = null;
+    //    function foo() {
+    //        var a = 2;
+    //        function innnerFoo() {
+    //            console.log(c); // 在这里，试图访问函数bar中的c变量，会抛出错误
+    //            console.log(a);
+    //        }
+    //        fn = innnerFoo; // 将 innnerFoo的引用，赋值给全局变量中的fn
+    //    }
+    //
+    //    function bar() {
+    //        var c = 100;
+    //        fn(); // 此处的保留的innerFoo的引用
+    //    }
+    //
+    //    foo();
+    //    bar();
+
+
+    var value = 1;
+
+    function foo() {
+        console.log(value);
+    }
+
+    function bar() {
+        var value = 2;
+        foo();
+    }
+
+    bar();
+
+</script>
+</html>

@@ -1,0 +1,49 @@
+﻿<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>setTimeout新浪延时</title>
+    <style>
+        body {
+            background: url(img/bg.png) no-repeat top center black;
+        }
+
+        #img1 {
+            width: 980px;
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            margin-left: -490px;
+            opacity: 0.8;
+            filter: alpha(opacity:80);
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oImg = document.getElementById('img1');
+            var timer = null;
+            setTimeout(function () {
+                oImg.style.display = 'block';
+                timer = setTimeout(function () {
+                    oImg.style.display = 'none';
+                }, 2000);
+            }, 2000);
+
+            oImg.onmouseover = function () {
+                clearTimeout(timer);
+            };
+            oImg.onmouseout = function () {
+                timer = setTimeout(function () {
+                    oImg.style.display = 'none';
+                }, 2000);
+            };
+        };
+    </script>
+</head>
+
+<body>
+<img src="img/1.png" id="img1"/>
+</body>
+</html>

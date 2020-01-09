@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>取消默认事件</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: "微软雅黑", "张海山锐线体简";
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="button" value="按钮" id="btn1" />
+    <script type="text/javascript">
+      var oBtn = document.getElementById("btn1");
+      addEvent(oBtn, "click", myEventHandler);
+
+      //对象.addEventListener(事件名,函数,false);	for 高
+      //事件名	onclick	over/out/down/up.........不带on
+      //函数	obj.onclick=show	show==函数
+      function addEvent(obj, eve, fn) {
+        if (obj.addEventListener) {
+          obj.addEventListener(eve, fn, false); //由于事件参数不带on
+        } else {
+          obj.attachEvent("on" + eve, fn); //所以这里的绑定事件要将on补上
+        }
+      }
+
+      function myEventHandler(e) {
+        e = e || window.event;
+        // 防止默认行为
+        if (e.preventDefault) {
+          e.preventDefault();
+        } else {
+          e.returnValue = false;
+        }
+      }
+    </script>
+  </body>
+</html>

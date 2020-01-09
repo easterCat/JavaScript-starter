@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body></body>
+    <script>
+        // Promise.reject("我错了").then(reason => console.log("我是resolve,", reason), reason => console.log("我是reject,", reason));
+
+        // Promise.reject(new Error("wrong")).then(error => console.log("我是resolve,", error), error => console.log("我是reject,", error));
+
+        var p1 = Promise.reject("我错了");
+
+        var p2 = new Promise((resolve, reject) => {
+            reject("绝对错了");
+        });
+
+        p1.catch(error => console.log(error)); //我错了
+        p2.catch(error => console.log(error)); //绝对错了
+
+        // var thenable = {
+        //     then: function(resolve, reject) {
+        //         reject("出错了");
+        //     }
+        // };
+
+        // Promise.reject(thenable).catch(error => {
+        //     console.log(error); //{then: ƒ}
+        // });
+    </script>
+</html>

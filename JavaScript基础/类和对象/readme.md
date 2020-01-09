@@ -1125,3 +1125,6 @@ return new Func();
 - [JavaScript 也有了类（class）的概念](http://mp.weixin.qq.com/s?__biz=MzA3MDg1NzQyNA==&mid=2649654128&idx=1&sn=8db43d5df6ca2a55617160efee1774a4&scene=23&srcid=0804QTI712N1AF32lQ2Eu2jq#rd)
 - [ES6 为对象做了哪些扩展](http://mp.weixin.qq.com/s?__biz=MzA3MDg1NzQyNA==&mid=2649654084&idx=1&sn=e56effc319f448f5744970e767997461&scene=21#wechat_redirect)
 - [面向对象的讲解](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html)
+- [深入理解 javascript 原型和闭包系列](https://www.cnblogs.com/wangfupeng1988/p/4001284.html)
+- [JavaScript 面向对象框架 ease.js](https://www.oschina.net/p/ease-js)
+- [easejs 官网](https://www.gnu.org/software/easejs/)

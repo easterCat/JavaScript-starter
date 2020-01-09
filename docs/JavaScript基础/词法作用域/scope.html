@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    var name = "Chromium";
+    function init() {
+      var name = "Mozilla"; // name 是一个被 init 创建的局部变量
+      function displayName() {
+        // displayName() 是内部函数,一个闭包
+        alert(name); // 使用了父函数中声明的变量
+      }
+      return displayName;
+    }
+    init()(); // 弹出Mozilla
+  </script>
+</html>

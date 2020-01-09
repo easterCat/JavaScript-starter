@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      a {
+        display: block;
+        height: 30px;
+        background: rebeccapurple;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    // {
+    //   var today = "周3";
+    //   let yesterday = "周2";
+    // }
+    // console.log(today); //周3
+    // console.log(yesterday); //yesterday is not defined
+
+    // for (var j = 0; j < 10; j++) {
+    //   document
+    //     .getElementsByTagName("body")[0]
+    //     .appendChild(document.createElement("a"));
+    // }
+
+    // var a = document.getElementsByTagName("a");
+
+    // for (let i = 0; i < 10; i++) {
+    //   a[i].onclick = function() {
+    //     console.log(i); //1,2,3,4,5....
+    //   };
+    // }
+    // console.log(i); //i is not defined
+
+    // console.log(a); //undefined
+    // console.log(b); //b is not defined
+    // var a = 1;
+    // let b = 2;
+
+    // function abc() {
+    //   a = 1; // ReferenceError: a is not defined
+    //   typeof a; // ReferenceError: a is not defined
+    //   let a = 2;
+    // }
+
+    // function abc() {
+    //   let a = 1;
+    //   // var a = 1;
+    //   // const a = 1;
+    //   let a = 2; //SyntaxError: Identifier 'a' has already been declared
+    // }
+    // abc();
+
+    // {
+    //   let a = 1;
+    //   console.log(a);
+    //   {
+    //     let a = 2;
+    //     console.log(a);
+    //     {
+    //       let a = 3;
+    //       console.log(a);
+    //     }
+    //   }
+    // }
+
+    // function aaa() {
+    //   console.log("out");
+    // }
+
+    // (function() {
+    //   if (false) {
+    //     function aaa() {
+    //       console.log("inner");
+    //     }
+    //   }
+    //   // aaa(); //Uncaught TypeError: aaa is not a function
+    // })();
+    // aaa(); //out
+
+    // const a = 1;
+    // a = 3; //Uncaught TypeError: Assignment to constant variable.
+
+    // const a;
+    // a = 1;//Uncaught SyntaxError: Missing initializer in const declaration
+
+    // const ob = {};
+    // ob.name = "aaaa";
+    // console.log(ob); //Object {name: "aaaa"}
+
+    // const arr = [];
+    // arr.push("123123");
+    // console.log(arr); //["123123"]
+
+    // let [a, b, c] = [1, 2, 3];
+    // console.log(c); //3
+
+    //嵌套赋值
+    // let [a, [[b], c]] = [1, [[2], 3]];
+    // console.log(b);
+
+    // //其他类型
+    // let [, , c] = [1, 2, 3];
+    // let [a, , c] = [1, 2, 3];
+    // let [a, ...b] = [1, 2, 3, 4]; // b = [2,3,4]
+
+    // let [a,b,...c] = [1];
+    // console.log(a) //1
+    // console.log(b) //undefined
+    // console.log(c) //[]
+
+    // let [a, b = 2] = [1];
+    // console.log(a); //1
+    // console.log(b); //2
+    // let [a, b = 2] = [1, undefined];
+    // console.log(a); //1
+    // console.log(b); //2
+
+    // let { a, b } = { a: "123", b: "456" };
+    // console.log(a); //123
+
+    // let { a: d, b } = { a: "123", b: "456" };
+    // console.log(d); //123
+
+    // let {
+    //   p,
+    //   p: [x, { y }]
+    // } = { p: ["hello", { y: "world" }] };
+    // console.log(p);//["hello", Object]
+    // console.log(x);//hello
+    // console.log(y);//world
+
+    //     let {a=3} = {}
+    // console.log(a)//3
+    // let { a = 3 } = { a: null };
+    // console.log(a); //null
+
+    // const [a, b, c ] = "hello";
+    // console.log(a); //h
+    // console.log(b); //e
+    // console.log(c);//l
+
+    let { toString: s } = 123;
+    console.log(s === Number.prototype.toString); //true
+  </script>
+</html>

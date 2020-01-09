@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //如果将一个字符串翻转过来，能和原字符串完全相等，那么就可以称之为“回文”
+
+    // function isPalindrome(line) {
+    //     line += "";
+    //     // 转换成数值然后进行反转，之后拼接数组
+    //     return line === line.split('').reverse().join('');
+    // }
+
+    function isPalindrome(line) {
+        line += ""
+        // 下标是从0开始，长度是从1开始，
+        for (let i = 0, j = line.length - 1; i < j; i++ , j--) {
+            if (line.charAt(i) !== line.charAt(j)) {
+                return false
+            }
+        }
+        return true
+    }
+
+    console.log(isPalindrome('11011'));
+</script>
+
+</html>

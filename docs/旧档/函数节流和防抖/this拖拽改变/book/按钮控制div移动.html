@@ -1,0 +1,146 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>按钮控制div移动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #oper {
+            width: 240px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        #oper div {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 80px;
+            cursor: pointer;
+        }
+
+        #oper div.left {
+            left: 0;
+            top: 80px;
+        }
+
+        #oper div.right {
+            left: 160px;
+            top: 80px;
+        }
+
+        #oper div.top {
+            top: 0;
+            left: 80px;
+        }
+
+        #oper div.down {
+            top: 160px;
+            left: 80px;
+        }
+
+        #oper div:hover {
+            background: #039;
+            color: #f60;
+        }
+
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background: #F06;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oPer = document.getElementById("oper");
+            var oDiv = document.getElementById("div1");
+            var l = t = r = b = false;
+
+            for (var i = 0; i < oPer.children.length; i++) {
+                oPer.children[i].index = i;
+                oPer.children[i].onmouseover = function () {
+
+                    if (this.index == 0) l = true;
+                    if (this.index == 1) r = true;
+                    if (this.index == 2) t = true;
+                    if (this.index == 3) b = true;
+                };
+                oPer.children[i].onmouseout = function () {
+
+                    if (this.index == 0) l = false;
+                    if (this.index == 1) r = false;
+                    if (this.index == 2) t = false;
+                    if (this.index == 3) b = false;
+                };
+            }
+            document.onkeydown = function (ev) {
+                var oEvt = ev || event;
+                console.log(oEvt.keyCode) //左 上 右 下 37 38 39 40
+                switch (oEvt.keyCode) {
+                    case 37:
+                        l = true;
+                        break;
+                    case 38:
+                        t = true;
+                        break;
+                    case 39:
+                        r = true;
+                        break;
+                    case 40:
+                        b = true;
+                        break;
+                }
+            };
+            document.onkeyup = function (ev) {
+                var oEvt = ev || event;
+                switch (oEvt.keyCode) {
+                    case 37:
+                        l = false;
+                        break;
+                    case 38:
+                        t = false;
+                        break;
+                    case 39:
+                        r = false;
+                        break;
+                    case 40:
+                        b = false;
+                        break;
+                }
+            };
+            setInterval(function () {
+
+                if (l && oDiv.offsetLeft > 0) oDiv.style.left = oDiv.offsetLeft - 10 + "px";
+                if (t && oDiv.offsetTop > 0) oDiv.style.top = oDiv.offsetTop - 10 + "px";
+                if (r && oDiv.offsetLeft < document.documentElement.clientWidth - oDiv.offsetWidth) oDiv.style.left = oDiv.offsetLeft + 10 + "px";
+                if (b && oDiv.offsetTop < document.documentElement.clientHeight - oDiv.offsetHeight) oDiv.style.top = oDiv.offsetTop + 10 + "px";
+            }, 10)
+        };
+
+    </script>
+</head>
+
+<body>
+<div id="oper">
+    <div class="left">左</div>
+    <div class="right">右</div>
+    <div class="top">上</div>
+    <div class="down">下</div>
+</div>
+<div id="div1"></div>
+</body>
+</html>

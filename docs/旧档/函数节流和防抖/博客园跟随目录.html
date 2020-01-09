@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>博客园跟随目录</title>
+    <style>
+      #sideBarMain {
+        height: 100%;
+        width: 100px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sideBarMain"></div>
+  </body>
+  <script>
+    var noNode = true;
+
+    window.onload = function() {
+      var sideBar = document.getElementById("sideBarMain");
+      console.log("获取到的节点", sideBar);
+      sideBar && addCatalogToSidebar(sideBar);
+    };
+
+    window.onscroll = throttle(function(event) {
+      var sideBar = document.getElementById("sideBarMain");
+      var cateLog = document.getElementById("cateLog");
+      var mainCateLog = document.getElementById("catalog");
+
+      if (sideBar && cateLog && mainCateLog) {
+        var e = event || window.event;
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var sideBarTop = sideBar.offsetTop + 30;
+        var mainCateLog_clone = mainCateLog.cloneNode(true);
+
+        if (scrollTop > sideBarTop) {
+          cateLog.style.visibility = "visible";
+          noNode && cateLog.appendChild(mainCateLog_clone);
+          noNode = false;
+        } else {
+          cateLog.style.visibility = "hidden";
+          var removeNode = sideBar.querySelector("#catalog");
+          !noNode && cateLog.removeChild(removeNode);
+          noNode = true;
+        }
+      }
+      console.log("执行了1次");
+    }, 500);
+
+    function addCatalogToSidebar(parentNode) {
+      var cateLog = document.createElement("ul");
+      var closeBtn = document.createElement("button");
+      cateLog.setAttribute("id", "cateLog");
+      // cateLog.style.width = window.getComputedStyle(parentNode).width + "px";
+      cateLog.style.width = 290 + "px";
+      cateLog.style.height = document.documentElement.clientHeight + "px";
+      cateLog.style.zIndex = "999";
+      cateLog.style.background = "#fff";
+      cateLog.style.visibility = "hidden";
+      cateLog.style.overflow = "auto";
+      cateLog.style.position = "fixed";
+      cateLog.style.top = "0px";
+
+      closeBtn.style.border = "none";
+      closeBtn.style.position = "relative";
+      closeBtn.style.top = "0px";
+      closeBtn.style.right = "-50%";
+      closeBtn.style.width = "80px";
+      closeBtn.style.marginLeft = "-40px";
+      closeBtn.style.height = "30px";
+      closeBtn.style.lineHeight = "30px";
+      closeBtn.style.textAlign = "center";
+      closeBtn.style.border = "none";
+      closeBtn.style.color = "#7d8b8d";
+      closeBtn.style.fontSize = "14px";
+      closeBtn.innerText = "关喽";
+
+      closeBtn.addEventListener("click", function() {
+        cateLog.style.visibility = "hidden";
+      });
+
+      cateLog.appendChild(closeBtn);
+      parentNode.appendChild(cateLog);
+    }
+
+    function throttle(func, wait) {
+      let context,
+        args,
+        doSomething = true;
+
+      return function() {
+        context = this;
+        args = arguments;
+
+        if (!doSomething) return;
+
+        doSomething = false;
+
+        setTimeout(function() {
+          //执行的时候到了
+          func.apply(context, args);
+          doSomething = true;
+        }, wait);
+      };
+    }
+
+    function startMove(obj, json, delay, fn) {
+      clearInterval(obj.timer);
+      obj.timer = setInterval(function() {
+        var bBtn = true;
+        for (var attr in json) {
+          var iCur = 0;
+          if (attr == "opacity") {
+            iCur = Math.round(getStyle(obj, attr) * 100);
+          } else {
+            iCur = parseInt(getStyle(obj, attr));
+          }
+
+          var iSpeed = (json[attr] - iCur) / 7;
+          iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+
+          if (iCur != json[attr]) {
+            bBtn = false;
+          }
+
+          if (attr == "opacity") {
+            obj.style.filter = "alpha(opacity=" + (iCur + iSpeed) + ")";
+            obj.style.opacity = (iCur + iSpeed) / 100;
+          } else {
+            obj.style[attr] = iCur + iSpeed + "px";
+          }
+        }
+
+        if (bBtn) {
+          clearInterval(obj.timer);
+          if (fn) {
+            fn.call(obj);
+          }
+        }
+      }, delay);
+    }
+
+    function getStyle(obj, attr) {
+      if (obj.currentStyle) {
+        // IE获取不到简写的复合样式,单边写法可以获取到
+        return obj.currentStyle[attr];
+      } else {
+        return getComputedStyle(obj, false)[attr];
+      }
+    }
+  </script>
+</html>

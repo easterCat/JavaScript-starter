@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Log {
+//        constructor() {
+//            this.printName = this.printName.bind(this);
+//        }
+
+        constructor() {
+            this.printName = (name = 'world') => {
+                this.print(`hello  ${name}`);
+            }
+        }
+
+//        printName(name = 'hello') {
+//            this.print(`hello  ${name}`);
+//        }
+
+        print(text) {
+            console.log(text);
+        }
+    }
+</script>
+</html>

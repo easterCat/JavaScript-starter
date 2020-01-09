@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>拖拽改变div大小</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            background: #ccc;
+            position: relative;
+        }
+
+        #box .rb {
+            width: 11px;
+            height: 11px;
+            background: url(drag_ico.gif) no-repeat;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            cursor: nw-resize;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oBox = document.getElementById('box');
+            var oRb = oBox.children[0];
+
+            oRb.onmousedown = function (ev) {
+                var oEvent = ev || event;
+
+                //存东西
+                var oldX = oEvent.clientX;
+                var oldWidth = oBox.offsetWidth;
+                var oldY = oEvent.clientY;
+                var oldHeight = oBox.offsetHeight;
+
+
+                document.onmousemove = function (ev) {
+                    var oEvent = ev || event;
+
+                    var targetX = oEvent.clientX - oldX;
+                    var targetY = oEvent.clientY - oldY;
+
+                    var newWidth = oldWidth + targetX;
+                    var newHeight = oldHeight + targetY
+                    oBox.style.width = newWidth + 'px';
+                    oBox.style.height = newHeight + 'px';
+                }
+
+                document.onmouseup = function () {
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                }
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+<div id="box">
+    <div class="rb"></div>
+</div>
+</body>
+</html>

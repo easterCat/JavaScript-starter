@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>引用类型赋值问题</title>
+</head>
+<body>
+<script type="text/javascript">
+    // 值类型(基本类型)：number、bollean、null、undefined、string。
+    // 引用类型：object(对象)、数组、函数。
+
+    //引用类型赋值
+    var a = [1, 2, 3, 4, 5];
+    var b = a;
+    b[0] = 0;
+    alert(a);// [0,2,3,4,5];
+    alert(b); // [0,2,3,4,5];
+
+    //基本类型赋值
+    var store1 = 'Nike China';
+    var store2 = store1;
+    store1 = 'Nike USA';
+    alert(store2); //Nike China
+    alert(store1); //Nike USA
+
+    //基本类型store2传递给另一个变量（赋值）时，其实是分配了一块新的内存空间，因此改变store1的值对store2没有任何影响，因为它不像引用类型，变量的交换其实是交换了指像同一个内容的地址。
+
+</script>
+</body>
+</html>

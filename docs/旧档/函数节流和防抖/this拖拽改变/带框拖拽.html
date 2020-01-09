@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>带框拖拽</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "微软雅黑", "张海山锐线体简"
+        }
+
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .bd {
+            width: 190px;
+            height: 190px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: red dashed 5px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            oDiv.onmousedown = function (ev) {
+                var oEvt = ev || event;
+                var disX = oEvt.clientX - oDiv.offsetLeft;
+                var disY = oEvt.clientY - oDiv.offsetTop;
+
+                //创建一个框,放在div的位置，丟到body里
+                var divBorder = document.createElement('div');
+                divBorder.className = 'bd';
+                divBorder.style.left = oDiv.offsetLeft + 'px';
+                divBorder.style.top = oDiv.offsetTop + 'px';
+                document.body.appendChild(divBorder);
+
+                document.onmousemove = function (ev) {
+                    var oEvt = ev || event;
+                    divBorder.style.left = oEvt.clientX - disX + 'px';
+                    divBorder.style.top = oEvt.clientY - disY + 'px';
+                };
+                document.onmouseup = function () {
+                    //鼠标抬起时，移除虚线框，设定div的位置就等于框的位置
+                    oDiv.style.left = divBorder.offsetLeft + 'px';
+                    oDiv.style.top = divBorder.offsetTop + 'px';
+                    document.body.removeChild(divBorder);
+                    document.onmouseup = null;
+                    document.onmousemove = null;
+                    oDiv.releaseCapture && oDiv.releaseCapture();
+                };
+                oDiv.setCapture && oDiv.setCapture();
+                return false;
+            };
+        };
+    </script>
+</head>
+
+<body>
+
+<div id="div1"></div>
+
+</body>
+</html>

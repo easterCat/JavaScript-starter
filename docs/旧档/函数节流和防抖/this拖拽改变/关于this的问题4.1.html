@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="智能社 - zhinengshe.com"/>
+    <title>函数中this问题</title>
+    <style>
+    </style>
+    <script>
+
+        //        1、作为对象调用时，指向该对象 obj.b(); // 指向obj
+        //        2、作为函数调用, var b = obj.b; b(); // 指向全局window
+        //        3、作为构造函数调用 var b = new Fun(); // this指向当前实例对象
+        //        4、作为call与apply调用 obj.b.apply(object, []); // this指向当前的object
+
+        //函数内的this的指向，是被调用的时候确定，如果是通过对象内属性访问的方式，那么就指向这个对象，否则其他方式都是指向全局
+        window.onload = function () {
+            var oBtn = document.getElementById('btn1');
+            var _this = this;
+
+            function show(_this) {
+                console.log(_this);
+            }
+
+            oBtn.onclick = function () {
+                show(this);
+            };
+            show(_this);
+        }
+    </script>
+</head>
+
+<body>
+<input type="button" value="点击" id="btn1">
+</body>
+
+</html>

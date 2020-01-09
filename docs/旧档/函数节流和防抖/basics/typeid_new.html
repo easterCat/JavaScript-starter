@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>new运算符实现</title>
+  </head>
+
+  <body></body>
+  <script>
+    function Animal(name, age) {
+      this.name = name;
+      this.age = age;
+      this.voice = "miao";
+    }
+
+    Animal.prototype.type = "mao";
+
+    Animal.prototype.saying = function() {
+      console.log(this.voice);
+    };
+
+    var cat = _new(Animal, "mimi", 10);
+
+    console.log("instance =>", cat);
+    console.log({
+      name: cat.name,
+      age: cat.age,
+      type: cat.type
+    });
+
+    cat.saying();
+
+    //    function _new() {
+    //        // 将伪数组arguments从头部删除一个，并将其其返回,此处是为了获取传入的构造函数
+    //        var Constructor = Array.prototype.shift.call(arguments);
+    //        // obj.__proto__指向创建obj的函数的原型,也就是function Object(){}的原型,obj是一个实例对象，没有prototype属性
+    //        var obj = Object.create(Constructor.prototype);
+    //        var result = Constructor.apply(obj, arguments);
+    //        // 如果构造函数有返回值，做一下处理，如果返回的是对象，就返回对象，否则该是什么就是什么
+    //        return typeof result === 'object' ? result : obj;
+    //    }
+
+    //        function _new() {
+    //            var Constructor = Array.prototype.shift.call(arguments);
+    //            var obj = Object.create(Constructor.prototype);
+    //            Constructor.apply(obj, arguments);
+    //            return obj;
+    //        }
+
+    function _new() {
+      //console.log(this)//window
+      var fConstructor = Array.prototype.shift.call(arguments);
+      var oArgs = arguments;
+      var fNewConstr = function() {
+        //console.log(this);//fNewConstr
+        fConstructor.apply(this, oArgs);
+      };
+      fNewConstr.prototype = fConstructor.prototype;
+      return new fNewConstr();
+    }
+  </script>
+</html>

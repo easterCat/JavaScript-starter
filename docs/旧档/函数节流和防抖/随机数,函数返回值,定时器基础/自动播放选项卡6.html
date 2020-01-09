@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>自动播放选项卡</title>
+<style>
+*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑","张海山锐线体简"}
+#div1 input{background:#ccc;}
+#div1 input.active{background:red;}
+#div1 div{height:50px; display:none; background:red;}
+#div1 div.cur{display:block;}
+</style>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('div1');
+	var aIpt=oDiv.getElementsByTagName('input');
+	var aDiv=oDiv.getElementsByTagName('div');	
+	var now=0;	//当前索引
+	
+	//点卡头
+	for(var i=0;i<aIpt.length;i++){
+		aIpt[i].index=i;
+		aIpt[i].onclick=function(){
+			now=this.index;//准备now
+			tab()//切换
+		};	
+	}
+	//切换
+	function tab(){
+		//干掉所有
+		for(var i=0;i<aIpt.length;i++){
+			aIpt[i].className='';
+			aDiv[i].className='';	
+		}
+		//点亮自己
+		aIpt[now].className='active';
+		aDiv[now].className='cur';	
+	}
+	
+	//下一张
+	function next(){
+		//准备now,做一个限定
+		now++;
+		if(now==aIpt.length){
+			now=0;	
+		}
+		//切换
+		tab();	
+	};
+	
+	
+	var timer=setInterval(next,1000);
+	oDiv.onmouseover=function(){
+		clearInterval(timer);	
+	};
+	oDiv.onmouseout=function(){
+		timer=setInterval(next,1000);	
+	};
+};
+</script>
+</head>
+
+<body>
+
+<div id="div1">
+	<input type="button" value="aaaa" class="active">
+	<input type="button" value="bbbb">
+	<input type="button" value="cccc">
+    <div class="cur">aaaa</div>
+    <div>bbbb</div>
+    <div>cccc</div>
+</div>
+
+</body>
+</html>

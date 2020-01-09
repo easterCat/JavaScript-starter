@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>实现一下apply</title>
+  </head>
+
+  <body></body>
+  <script>
+    Function.prototype.newApply = function(context, arr) {
+      var result, i, len;
+      context = context || window;
+      context.fn = this;
+
+      if (!arr) {
+        result = context.fn;
+      } else {
+        var args = [];
+        for (i = 0, len = arr.length; i < len; i++) {
+          args.push("arr[" + i + "]");
+        }
+        result = eval("context.fn(" + args + ")");
+      }
+
+      //result = context.fn(...arr);
+      delete context.fn;
+      return result;
+    };
+
+    var obj = {
+      name: "alice"
+    };
+
+    function func(age, sex) {
+      console.log(age); //23
+      console.log(sex); //女
+      console.log(this.name); //alice
+      return {
+        name: this.name
+      };
+    }
+
+    console.log(func.apply(obj, [23, "女"])); // {name:'alice'}
+  </script>
+</html>

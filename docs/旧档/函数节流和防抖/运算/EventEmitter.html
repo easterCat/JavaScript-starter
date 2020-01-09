@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+  <script>
+    class EventEmitter {
+      constructor() {
+        this.handlers = {};
+      }
+
+      on(eventname, func) {
+        let callbacks = eventname in this.handlers ? this.handlers[eventname] : [];
+        //绑定的事件数组添加1
+        callbacks.push(func);
+        this.handlers[eventname] = callbacks;
+      }
+
+      emit(eventname, ...args) {
+        if (!(eventname in this.handlers)) {
+          return console.log("当前事件名称不存在");
+        } else {
+          let callbacks = this.handlers[eventname];
+          callbacks.map(cb => cb(...args));
+        }
+      }
+
+      off(eventname, func) {
+        if (!(eventname in this.handlers)) return;
+
+        if (func) {
+          let callbacks = this.handlers[eventname];
+          let index = callbacks.indexOf(func);
+          if (index) {
+            callbacks.splice(index, 1);
+          }
+        } else {
+          delete this.handlers[eventname];
+        }
+      }
+    }
+
+    let instance = new EventEmitter();
+
+    instance.on("hello", () => console.log(123));
+    instance.on("hello", () => console.log(456));
+    instance.on("hello", () => console.log(789));
+
+    instance.emit("hello");
+
+    instance.off("hello");
+
+    instance.emit("hello");
+  </script>
+</html>

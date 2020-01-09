@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>节流</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body></body>
+  <!-- <script>
+    let doSomething = true;
+    let body = document.getElementsByTagName("body")[0];
+    let index = 0;
+
+    window.onresize = function() {
+      if (!doSomething) return;
+      doSomething = false;
+      setTimeout(function() {
+        index++;
+        console.log("变色" + index + "次");
+        let num = [Math.ceil(Math.random() * 255), Math.ceil(Math.random() * 255), Math.ceil(Math.random() * 255)];
+        body.style.background = "rgb(" + num[0] + "," + num[1] + "," + num[2] + ")";
+        doSomething = true;
+      }, 1000);
+    };
+  </script> -->
+  <script>
+    let body = document.getElementsByTagName("body")[0];
+    let index = 0;
+    let lazyLayout = throttle(changeBgColor, 1000);
+    window.onresize = lazyLayout;
+
+    function changeBgColor() {
+      index++;
+      console.log("变色" + index + "次");
+      let num = [Math.ceil(Math.random() * 255), Math.ceil(Math.random() * 255), Math.ceil(Math.random() * 255)];
+      body.style.background = "rgb(" + num[0] + "," + num[1] + "," + num[2] + ")";
+    }
+
+    //函数去抖（连续事件触发结束后只触发一次）
+    function throttle(func, wait) {
+      let context,
+        args,
+        doSomething = true;
+
+      return function() {
+        context = this;
+        args = arguments;
+
+        if (!doSomething) return;
+
+        doSomething = false;
+
+        setTimeout(function() {
+          //执行的时候到了
+          func.apply(context, args);
+          doSomething = true;
+        }, wait);
+      };
+    }
+  </script>
+</html>

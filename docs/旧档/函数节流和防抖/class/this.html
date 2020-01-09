@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Log {
+        printName(name = 'hello') {
+            this.print(`hello  ${name}`);
+        }
+
+        print(text) {
+            console.log(text);
+        }
+    }
+    let l = new Log();
+    l.printName();
+</script>
+</html>

@@ -1,0 +1,110 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>面向对象-解决函数重名</title>
+		<script>
+			/*
+			 * Dec:创建一个对象，普通构建方式
+			 */
+			var box = new Object();
+			box.name = 'kangkang';
+			box.age = '12';
+			box.run = function() {
+				return this.name + this.age + 'success';
+			};
+			alert(box.run());
+
+			/*
+			 * Dec:工厂模式，集中实例化
+			 */
+			function createObject(name, age) {
+				var obj = new Object();
+				obj.name = name;
+				obj.age = age;
+				obj.run = function() {
+					return this.name + this.age + 'success';
+				};
+				return obj; //必须返回，不然得不到一个对象
+			}
+
+			function abc(name, age) {
+				var obj = new Object();
+				obj.name = name;
+				obj.age = age;
+				obj.run = function() {
+					return this.name + this.age + 'success';
+				};
+				return obj; //必须返回，不然得不到一个对象
+			}
+			var box1 = new createObject('ea', 12);
+			var box2 = new createObject('lilisi', 20);
+			var box3 = new abc('alisy', 30);
+			//			alert(box1.run());
+			//			alert(box2.run());
+			//			alert(typeof box1);
+			//			alert(typeof box2);
+			//			alert(box1 instanceof Object); //true
+			//			alert(box1 instanceof createObject); //false
+			//			alert(box2 instanceof Object); //true 都是object类型，就无法区分谁到底是谁的对象了
+			//			alert(box3 instanceof Object); //true
+
+			/*
+			 * Dec:构造函数创建
+			 */
+			function Box(user, age) {
+				this.user = user;
+				this.age = age;
+				this.run = function() {
+					return this.user + this.age + 'success';
+				};
+			};
+
+			function Desk(user, age) {
+				this.user = user;
+				this.age = age;
+				this.run = function() {
+					return this.user + this.age + 'success';
+				};
+			};
+
+			//构造函数和工厂模式的不同
+			//1.构造函数没有new Object(),但是后台会自动var obj=new Object()
+			//2.this就相当于obj
+			//3.构造函数不需要返回对象引用，会自动返回
+
+			var box1 = new Box('lee', 100); //实例化对象
+			var box2 = new Box('jack', 200);
+			var box3 = new Desk('desk', 300);
+			//			alert(box1.run());
+			//			alert(box2.run());
+			//			alert(box1 instanceof Object);
+			//			alert(box1 instanceof Box);
+			//			alert(box2 instanceof Box);
+			//			alert(box3 instanceof Desk); //可以识别，box3是desk的引用
+
+			function Person() {}
+
+			Person.prototype.show = function() {
+				alert('a');
+			};
+
+			function Code() {}
+
+			Code.prototype.show = function() {
+				alert('b');
+			};
+
+			var p = new Person();
+			var c = new Code();
+
+			p.show();
+			c.show();
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>；

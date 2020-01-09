@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function UN() {
+        // 判断是否存在实例
+        if (typeof UN.instance === 'object') {
+            return UN.instance;
+        }
+
+        // 其它内容
+        this.start_time = 0;
+        this.bang = 'hello world';
+
+        // 缓存，如果没有这一步，实例不全等
+        UN.instance = this;
+
+        // 构造函数隐式返回this
+    }
+    var u = new UN();
+    var u2 = new UN();
+    console.log(u === u2);
+</script>
+</html>

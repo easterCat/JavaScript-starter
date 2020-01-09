@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+  <script>
+    let xhr = new XMLHttpRequest();
+
+    if (xhr) {
+      xhr.onreadystatechange = function() {
+        if (xhr.readystate === 4) {
+          if ((xhr.status > 200 && xhr < 300) || xhr.status === 304) {
+            alert(xhr.responseText);
+          } else {
+            alert("link error");
+          }
+        }
+      };
+
+      xhr.open("get", "abc.php", true); // true是同步,false是异步
+
+      xhr.send(null);
+    }
+  </script>
+</html>

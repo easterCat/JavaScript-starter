@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var myEx = (function () {
+        var instance;
+
+        function init() {
+            return {
+                publicA: function () {
+                    console.log('hello world');
+                },
+                publicV: 'hi,girl'
+            }
+        }
+
+        return {
+            getInstance: function () {
+                if (!instance) {
+                    instance = init();
+                }
+                return instance;
+            }
+        }
+    })();
+
+    myEx.getInstance().publicA();
+</script>
+</html>

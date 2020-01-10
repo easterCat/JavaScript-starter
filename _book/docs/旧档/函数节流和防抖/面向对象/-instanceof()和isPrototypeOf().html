@@ -1,83 +1,60 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title></title>
-</head>
+  </head>
 
-<body>
-</body>
-<script type="text/javascript">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function a() {
-    this.name = 'alisy';
-}
-a.prototype.alertA = function() {
-    alert(this.name);
-}
-
-function b(str) {
-    this.name = str ? str : 'baobo';
-    this.sayHello = function() {
-        alert('hello');
+  <body></body>
+  <script type="text/javascript">
+    function a() {
+      this.name = "alisy";
     }
-}
-b.prototype.alertB = function() {
-    alert(this.name);
-}
+    a.prototype.alertA = function() {
+      alert(this.name);
+    };
 
-function c() {
-    this.name = 'cmen'
-}
-
-
-//instanceof
-console.log('b->a', b instanceof a);
-console.log('b->b', b instanceof b);
-
-
-
-c.prototype = a.prototype;
-//b得prototype对象指向一个c的实例，那么所有的b的实例就能继承c
-b.prototype = new c();
-b.prototype.constructor = b;
-
-var newc = new c();
-instance_b.alertA(); //执行baobo
-newc.alertA(); //执行cmen
-
-//inPrototypeOf
-console.log(a.prototype.isPrototypeOf(b));
-console.log(b.prototype.isPrototypeOf(b));
-//hasOwnProperty
-console.log(a.hasOwnProperty('name')); //true
-console.log(b.hasOwnProperty('name')); //true
-console.log(a.hasOwnProperty('alertA')); //false
-console.log(b.hasOwnProperty('alertB')); //false
-//propertyIsEnumerable
-for (var key in obj) {
-    //do something
-    if (obj.hasOwnProperty(key)) {
-        console.log('shisiyoushuxing');
+    function b(str) {
+      this.name = str ? str : "baobo";
+      this.sayHello = function() {
+        alert("hello");
+      };
     }
-};
-</script>
+    b.prototype.alertB = function() {
+      alert(this.name);
+    };
 
+    function c() {
+      this.name = "cmen";
+    }
+
+    //instanceof
+    console.log("b->a", b instanceof a);
+    console.log("b->b", b instanceof b);
+
+    c.prototype = a.prototype;
+    //b得prototype对象指向一个c的实例，那么所有的b的实例就能继承c
+    b.prototype = new c();
+    b.prototype.constructor = b;
+
+    var newc = new c();
+    instance_b.alertA(); //执行baobo
+    newc.alertA(); //执行cmen
+
+    //inPrototypeOf
+    console.log(a.prototype.isPrototypeOf(b));
+    console.log(b.prototype.isPrototypeOf(b));
+    //hasOwnProperty
+    console.log(a.hasOwnProperty("name")); //true
+    console.log(b.hasOwnProperty("name")); //true
+    console.log(a.hasOwnProperty("alertA")); //false
+    console.log(b.hasOwnProperty("alertB")); //false
+    //propertyIsEnumerable
+    for (var key in obj) {
+      //do something
+      if (obj.hasOwnProperty(key)) {
+        console.log("shisiyoushuxing");
+      }
+    }
+  </script>
 </html>

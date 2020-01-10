@@ -16,11 +16,11 @@
   ],
   "pluginsConfig": {
     "edit-link": {
-      "base": "https://github.com/easterCat/java-starter/edit/master/",
+      "base": "https://github.com/easterCat/javascript-starter/edit/master/",
       "label": "编辑此页面"
     },
     "prism": {
-      "css": ["prismjs/themes/prism-dark.css"]
+      "css": ["prismjs/themes/prism-twilight.css"]
     }
   }
 }

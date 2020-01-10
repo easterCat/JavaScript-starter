@@ -1,6 +1,45 @@
 ## 对象
 
-#### 一切引用类型都是对象
+对象 Object,是由 new Object(){}创建,它具有的原型 Object.prototype 是由浏览器底层创建的一个对象,位于所有原型链的顶层,Object.prototype.**proto**指向 null.
+
+#### 值类型是对象
+
+- undefined、number、string、boolean 是值类型 , 判断值类型的用 typeof
+
+```
+let str = "123";
+str.realname = '字符串'
+console.log(str)
+console.log(str.constructor)// ƒ String()
+console.log(str.__proto__) //String.prototype
+console.log(str.realname) // undefined
+```
+
+实际中在使用,值类型的表现不是对象,不能进行属性和方法的绑定.但是实际上也是一个对象,原型链如下
+
+- `str.__proto__ === String.prototype`
+- `String.prototype.__proto__ === Object.prototype`
+- `Object.prototype.__proto__ === null`
+
+#### 引用类型也是对象
+
+- 函数、对象、数组、null , 判断引用类型的用 instanceof
+
+```
+let arr = [1,2,3]
+arr.realname="数组"
+console.log(arr.constructor) // f Array
+console.log(arr.__proto__) // Array.prototype
+console.log(arr.realname) // 数组
+```
+
+数组实际中表现也是对象,原型链层级和 string 一致
+
+- `arr.__proto__ === Array.prototype`
+- `Array.prototype.__proto__ === Object.prototype`
+- `Object.prototype.__proto__ === null`
+
+#### 使用 typeof 判断类型
 
 ```
 console.log(typeof x);    // undefined
@@ -13,11 +52,6 @@ console.log(typeof { a: 10, b: 20 });  //object
 console.log(typeof null);  //object
 console.log(typeof new Number(10));  //object
 ```
-
-- undefined、number、string、boolean 是值类型
-- 函数、对象、数组、null
-
-> 判断值类型的用 typeof,判断引用类型的用 instanceof
 
 #### 对象就是一些属性集合
 
@@ -73,7 +107,7 @@ arr[2] = 3;
 
 > 对象是函数创建的,函数是一种对象
 
-## 函数和构造函数
+## 函数和构造函数关系
 
 [Function](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function) 构造函数创建一个新的 Function 对象.直接调用此构造函数可用动态创建函数,但会遭遇来自 eval 的安全问题和相对较小的性能问题.然而,与 eval 不同的是,Function 构造函数只在全局作用域中运行.每个 JavaScript 函数实际上都是一个 Function 对象 => `(function(){}).constructor === Function`
 
@@ -124,7 +158,7 @@ console.log(j.__proto__) // Jay.protytype
 console.log(j.__proto__ === Jay.prototype) // true
 ```
 
-**实例也是一个对象,每一个实例之间是独立的**
+**实例也是一个对象,多个实例之间相互独立**
 
 ```
 function Jay(){}

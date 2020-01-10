@@ -53,19 +53,22 @@ console.log(typeof null);  //object
 console.log(typeof new Number(10));  //object
 ```
 
-#### 对象就是一些属性集合
+## 函数和对象的关系
+
+- 一个对象创建是 Object 的实例, var obj = new Object()
+- Function.prototype 对象是一个函数（对象），其**proto**值内建对象 Object.prototype。
+- 而构造函数 function Object() ，其**proto**指向 Function.prototype
 
 ```
-var obj = {
-    a:10,
-    b:function (){},
-    c:function (){}
-}
+Object instanceof Function // true
+Function instanceof Object // true
+Object instanceof Object // true
+Function instanceof Function // true
 ```
 
-对象里面一切都是属性,方法也是属性,以键值对的形式表现出来
+Object 构造函数是函数,继承了 Function 的原型 Function.prototype，同时 Function 构造函数继承了 Object.prototype。浏览器底层将 Function.prototype 和 Function.**proto** 都指向了 Function.prototype。
 
-#### 函数定义属性
+**创建一个函数,能够绑定自己的属性和方法.**
 
 ```
 var func = function () {
@@ -81,31 +84,27 @@ func.c = {
 }
 ```
 
-#### 对象都是通过函数创建的
+#### 对象都是 Object 构造函数的实例
+
+function Function(){}实际已经有浏览器自己生成了,其他的 Object 和 Array 也是.
 
 ```
-function Func(){
-    this.name = 'lili';
-    this.year = 1988;
-}
-var fn1 = new Func();
-```
-
-```
-var obj = {a:20,b:30};
-var arr = [1,2,3];
+var obj = {realname:'lele'}
+var arr = [1,2,3]
 
 <!--等同于-->
+function Object(){};
 var obj = new Object();
-obj.a = 20;
-obj.b = 30;
+obj.realname = 'lele';
+
+function Array(){};
 var arr = new Array();
 arr[0] = 1;
 arr[1] = 2;
 arr[2] = 3;
 ```
 
-> 对象是函数创建的,函数是一种对象
+> 对象是函数创建的,函数是一种对象,他们最终都指向了 Object.prototype
 
 ## 函数和构造函数关系
 
@@ -169,33 +168,16 @@ a.num = 2
 console.log(a.num)
 ```
 
-## 函数和对象的关系
+#### isPrototypeOf
 
-#### 函数就是对象的一种
-
-```
-var func = function (){};
-console.log(func instanceof Object); // true
-```
-
-#### 对象都是通过函数进行创建的
+isPrototypeOf() 方法用于测试一个对象是否存在于另一个对象的原型链上
 
 ```
-//var obj = { a: 10, b: 20 };
-//var arr = [5, 'x', true];
-
-<!--以上代码的本质-->
-var obj = new Object();
-obj.a = 10;
-obj.b = 20;
-
-var arr = new Array();
-arr[0] = 5;
-arr[1] = 'x';
-arr[2] = true;
+prototypeObj.isPrototypeOf(object)
 ```
 
-#### isPrototypeOf 判断一个对象象是否为一个实例的原型
+- 在 object 的原型链上搜寻
+- 返回值 Boolean, 表示 prototypeObj 是否在另一个对象的原型链上
 
 ```
   console.log(a.prototype.isPrototypeOf(b));
@@ -212,10 +194,10 @@ for(var key in obj) {
 };
 ```
 
-> - 判断给定的属性是否可以用 for...in 语句进行枚举同时也是对象的自有属性.
-> - for ... in 枚举是包含原型链上的属性的,propertyIsEnumerable 作用于原型方法上时,始终是返回 false 的
-> - for...in 可以枚举对象本身的属性和原型上的属性,而 propertyIsEnumerable 只能判断本身的属性是否可以枚举
-> - 预定义的属性不是可列举的,而用户定义的属性总是可列举的.所以如果你只想遍历对象本身的属性
+- 判断给定的属性是否可以用 for...in 语句进行枚举同时也是对象的自有属性.
+- for ... in 枚举是包含原型链上的属性的,propertyIsEnumerable 作用于原型方法上时,始终是返回 false 的
+- for...in 可以枚举对象本身的属性和原型上的属性,而 propertyIsEnumerable 只能判断本身的属性是否可以枚举
+- 预定义的属性不是可列举的,而用户定义的属性总是可列举的.所以如果你只想遍历对象本身的属性
 
 ## js 类与原型
 

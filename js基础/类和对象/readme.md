@@ -73,7 +73,7 @@ arr[2] = 3;
 
 > 对象是函数创建的,函数是一种对象
 
-## 函数
+## 函数和构造函数
 
 [Function](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function) 构造函数创建一个新的 Function 对象.直接调用此构造函数可用动态创建函数,但会遭遇来自 eval 的安全问题和相对较小的性能问题.然而,与 eval 不同的是,Function 构造函数只在全局作用域中运行.每个 JavaScript 函数实际上都是一个 Function 对象 => `(function(){}).constructor === Function`
 
@@ -104,6 +104,35 @@ console.log(p.constructor===putong)
 function Gouzhao(){}
 let g = new Gouzhao()
 console.log(g.constructor===Gouzhao)
+```
+
+## 实例
+
+引用类型的值（对象）是引用类型的一个实例，也可以说对象是某个特定引用类型的实例。
+
+- 实例是通过构造函数和 new 运算符进行创建的
+- hasOwnProperty()方法是用来确定一个实例是否拥有自己的某个属性
+- 实例有且只有一个`__proto__`的属性,指向 构造函数.prototype
+
+```
+function Jay(){}
+let j = new Jay()
+console.log(j) // Jay
+console.log(j.prototype) // undefined
+console.log(j.constructor) // f Jay => 通过原型链向上访问的
+console.log(j.__proto__) // Jay.protytype
+console.log(j.__proto__ === Jay.prototype) // true
+```
+
+**实例也是一个对象,每一个实例之间是独立的**
+
+```
+function Jay(){}
+let j = new Jay()
+let a = new Jay()
+j.num = 1
+a.num = 2
+console.log(a.num)
 ```
 
 ## 函数和对象的关系

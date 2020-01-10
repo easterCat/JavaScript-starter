@@ -203,7 +203,7 @@ console.log(Object.prototype.isPrototypeOf(baz)); // true
 
 #### propertyIsEnumerable
 
-propertyIsEnumerable() 方法返回一个布尔值,表明指定的属性名是否是当前对象可枚举的自身属性
+propertyIsEnumerable() 方法返回一个布尔值,表明指定的属性名是否是当前对象可枚举的自身属性.
 
 - 判断给定的属性是否可以用 for...in 语句进行枚举同时也是对象的自有属性.
 - for ... in 枚举是包含原型链上的属性的,propertyIsEnumerable 作用于原型方法上时,始终是返回 false 的

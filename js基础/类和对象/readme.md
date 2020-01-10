@@ -1,4 +1,160 @@
-## 类与原型
+## 对象
+
+#### 一切引用类型都是对象
+
+```
+console.log(typeof x);    // undefined
+console.log(typeof 10);   // number
+console.log(typeof 'abc'); // string
+console.log(typeof true);  // boolean
+console.log(typeof function () {});  //function
+console.log(typeof [1, 'a', true]);  //object
+console.log(typeof { a: 10, b: 20 });  //object
+console.log(typeof null);  //object
+console.log(typeof new Number(10));  //object
+```
+
+- undefined、number、string、boolean 是值类型
+- 函数、对象、数组、null
+
+> 判断值类型的用 typeof,判断引用类型的用 instanceof
+
+#### 对象就是一些属性集合
+
+```
+var obj = {
+    a:10,
+    b:function (){},
+    c:function (){}
+}
+```
+
+对象里面一切都是属性,方法也是属性,以键值对的形式表现出来
+
+#### 函数定义属性
+
+```
+var func = function () {
+
+}
+func.a = 10;
+func.b = function () {
+    console.log('hello world');
+}
+func.c = {
+    name:'123',
+    year:1988
+}
+```
+
+#### 对象都是通过函数创建的
+
+```
+function Func(){
+    this.name = 'lili';
+    this.year = 1988;
+}
+var fn1 = new Func();
+```
+
+```
+var obj = {a:20,b:30};
+var arr = [1,2,3];
+
+<!--等同于-->
+var obj = new Object();
+obj.a = 20;
+obj.b = 30;
+var arr = new Array();
+arr[0] = 1;
+arr[1] = 2;
+arr[2] = 3;
+```
+
+> 对象是函数创建的,函数是一种对象
+
+## 函数
+
+[Function](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function) 构造函数创建一个新的 Function 对象.直接调用此构造函数可用动态创建函数,但会遭遇来自 eval 的安全问题和相对较小的性能问题.然而,与 eval 不同的是,Function 构造函数只在全局作用域中运行.每个 JavaScript 函数实际上都是一个 Function 对象 => `(function(){}).constructor === Function`
+
+- 每一个函数都有 prototype 属性 => func.prototype
+- func.prototype 默认有 constructor,func.prototype.constructor
+- 函数的 constructor 指向函数本身,func.prototype.constructor===func
+- constructor 是对函数的一种引用,函数也是对象,可以定义属性,可以通过 instance.constuctor.method 来获取属性
+
+```
+function putong(){}
+putong.realname = '普普通通'
+console.log(putong.prototype.constructor.realname)
+console.log(putong.prototype.constructor === putong) //true
+let p = new putong()
+console.log(p.constructor === putong) //rue
+console.log(p.constructor === putong.prototype.constructor) // true
+```
+
+**构造函数和函数怎么区分?**
+
+使用 new 关键字生成实例的就是构造函数,不然就是普通函数.
+
+```
+function putong(){}
+let p = new putong()
+console.log(p.constructor===putong)
+
+function Gouzhao(){}
+let g = new Gouzhao()
+console.log(g.constructor===Gouzhao)
+```
+
+## 函数和对象的关系
+
+#### 函数就是对象的一种
+
+```
+var func = function (){};
+console.log(func instanceof Object); // true
+```
+
+#### 对象都是通过函数进行创建的
+
+```
+//var obj = { a: 10, b: 20 };
+//var arr = [5, 'x', true];
+
+<!--以上代码的本质-->
+var obj = new Object();
+obj.a = 10;
+obj.b = 20;
+
+var arr = new Array();
+arr[0] = 5;
+arr[1] = 'x';
+arr[2] = true;
+```
+
+#### isPrototypeOf 判断一个对象象是否为一个实例的原型
+
+```
+  console.log(a.prototype.isPrototypeOf(b));
+  console.log(b.prototype.isPrototypeOf(b));
+```
+
+#### propertyIsEnumerable 方法返回一个布尔值,表明指定的属性名是否是当前对象可枚举的自身属性
+
+```
+for(var key in obj) {
+    f(obj.propertyIsEnumerable(key) {
+        <!--do somethings-->
+    };
+};
+```
+
+> - 判断给定的属性是否可以用 for...in 语句进行枚举同时也是对象的自有属性.
+> - for ... in 枚举是包含原型链上的属性的,propertyIsEnumerable 作用于原型方法上时,始终是返回 false 的
+> - for...in 可以枚举对象本身的属性和原型上的属性,而 propertyIsEnumerable 只能判断本身的属性是否可以枚举
+> - 预定义的属性不是可列举的,而用户定义的属性总是可列举的.所以如果你只想遍历对象本身的属性
+
+## js 类与原型
 
 通过原型这种机制,JavaScript 中的对象从其他对象继承功能特性；这种继承机制与经典的面向对象编程语言的继承机制不同.
 
@@ -201,14 +357,6 @@ prototype 让共用属性和方法在内存中只生成一次,然后所有实例
 
 > Javascript 规定,每一个构造函数都有一个 prototype 属性,指向原型对象.这个对象的所有属性和方法,都会被构造函数的实例继承
 
-#### 函数和构造函数
-
-[Function](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function) 构造函数创建一个新的 Function 对象.直接调用此构造函数可用动态创建函数,但会遭遇来自 eval 的安全问题和相对较小的性能问题.然而,与 eval 不同的是,Function 构造函数只在全局作用域中运行.每个 JavaScript 函数实际上都是一个 Function 对象 => `(function(){}).constructor === Function`
-
-- 每一个函数都有 prototype 属性 => func.prototype
-- func.prototype 默认有 constructor,func.prototype.constructor
-- 构造函数指向函数本身,func.prototype.constructor===func
-
 #### Object.create()
 
 ```
@@ -253,8 +401,6 @@ loser.eat() // 落魄者依旧需要吃饭
 每个实例对象（ object ）都有一个私有属性（称之为 `__proto__` ）指向它的构造函数的原型对象（prototype ）.该原型对象也有一个自己的原型对象( `__proto__`) ,层层向上直到一个对象的原型对象为 null.根据定义,null 没有原型,并作为这个原型链中的最后一个环节.
 
 几乎所有 JavaScript 中的对象都是位于原型链顶端的 Object 的实例.
-
-## 隐式原型**proto**
 
 #### 每个对象都已一个**proto**,指向创建这个对象的函数的 prototype
 
@@ -514,131 +660,6 @@ hasOwnProperty 和 Object.keys() 是 JavaScript 中处理属性并且不会遍�
 #### prototype 和 Object.getPrototypeOf
 
 prototype 是用于类的,而 Object.getPrototypeOf() 是用于实例的（instances）,两者功能一致.
-
-## 对象
-
-#### 一切引用类型都是对象
-
-```
-console.log(typeof x);    // undefined
-console.log(typeof 10);   // number
-console.log(typeof 'abc'); // string
-console.log(typeof true);  // boolean
-
-console.log(typeof function () {});  //function
-
-console.log(typeof [1, 'a', true]);  //object
-console.log(typeof { a: 10, b: 20 });  //object
-console.log(typeof null);  //object
-console.log(typeof new Number(10));  //object
-```
-
-- undefined、number、string、boolean 是值类型
-- 函数、对象、数组、null
-
-> 判断值类型的用 typeof,判断引用类型的用 instanceof
-
-#### 对象就是一些属性集合
-
-```
-var obj = {
-    a:10,
-    b:function (){},
-    c:function (){}
-}
-```
-
-对象里面一切都是属性,方法也是属性,以键值对的形式表现出来
-
-#### 函数定义属性
-
-```
-var func = function () {
-
-}
-func.a = 10;
-func.b = function () {
-    console.log('hello world');
-}
-func.c = {
-    name:'123',
-    year:1988
-}
-```
-
-#### 对象都是通过函数创建的
-
-```
-function Func(){
-    this.name = 'lili';
-    this.year = 1988;
-}
-var fn1 = new Func();
-```
-
-```
-var obj = {a:20,b:30};
-var arr = [1,2,3];
-
-<!--等同于-->
-var obj = new Object();
-obj.a = 20;
-obj.b = 30;
-var arr = new Array();
-arr[0] = 1;
-arr[1] = 2;
-arr[2] = 3;
-```
-
-> 对象是函数创建的,函数是一种对象
-
-## 函数和对象的关系
-
-#### 函数就是对象的一种
-
-```
-var func = function (){};
-console.log(func instanceof Object); // true
-```
-
-#### 对象都是通过函数进行创建的
-
-```
-//var obj = { a: 10, b: 20 };
-//var arr = [5, 'x', true];
-
-<!--以上代码的本质-->
-var obj = new Object();
-obj.a = 10;
-obj.b = 20;
-
-var arr = new Array();
-arr[0] = 5;
-arr[1] = 'x';
-arr[2] = true;
-```
-
-#### isPrototypeOf 判断一个对象象是否为一个实例的原型
-
-```
-  console.log(a.prototype.isPrototypeOf(b));
-  console.log(b.prototype.isPrototypeOf(b));
-```
-
-#### propertyIsEnumerable 方法返回一个布尔值,表明指定的属性名是否是当前对象可枚举的自身属性
-
-```
-for(var key in obj) {
-    f(obj.propertyIsEnumerable(key) {
-        <!--do somethings-->
-    };
-};
-```
-
-> - 判断给定的属性是否可以用 for...in 语句进行枚举同时也是对象的自有属性.
-> - for ... in 枚举是包含原型链上的属性的,propertyIsEnumerable 作用于原型方法上时,始终是返回 false 的
-> - for...in 可以枚举对象本身的属性和原型上的属性,而 propertyIsEnumerable 只能判断本身的属性是否可以枚举
-> - 预定义的属性不是可列举的,而用户定义的属性总是可列举的.所以如果你只想遍历对象本身的属性
 
 ## constructor 属性
 
@@ -918,9 +939,7 @@ a.showAdd(5,3);//8
 call和apply这两个方法差不多,区别在于call的第二个参数是任意类型,而apply的第二个参数必须是数组,也可以是arguments
 ```
 
-## 实现一些常见方法
-
-#### 实现 call(this,arg1,arg2...)
+## 实现 call(this,arg1,arg2...)
 
 ```
 Function.prototype.call2 = function(context) {
@@ -962,7 +981,7 @@ func.call2(null);
 console.log(func.call2(foo, 23, '男'))
 ```
 
-#### 实现 apply(this,[])
+## 实现 apply(this,[])
 
 1. 修改 func 函数的 this 指向
 2. 执行 func 函数
@@ -1003,7 +1022,7 @@ function func(age, sex) {
 console.log(func.newApply(obj, [23, '女']));
 ```
 
-#### 实现一个 bind => newBind
+## 实现一个 bind => newBind
 
 写程序的一个错误,this 丢失原先的对象,将对象的方法进行赋值之后再执行,于是变成 window.new_showA(),this 指向全局对象 window,
 

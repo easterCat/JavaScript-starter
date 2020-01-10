@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>242.有效的字符异位数 · javascript-starter</title>
+        <title>146.LRU 缓存机制 · javascript-starter</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../scripto/简单的模板引擎.html" />
+    <link rel="next" href="242.有效的字符异位数.html" />
     
     
-    <link rel="prev" href="146.LRU缓存机制.html" />
+    <link rel="prev" href="2.两数相加.html" />
     
 
     </head>
@@ -205,7 +205,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="146.LRU缓存机制.html">
+        <li class="chapter active" data-level="3.2" data-path="146.LRU缓存机制.html">
             
                 <a href="146.LRU缓存机制.html">
             
@@ -218,7 +218,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="242.有效的字符异位数.html">
+        <li class="chapter " data-level="3.3" data-path="242.有效的字符异位数.html">
             
                 <a href="242.有效的字符异位数.html">
             
@@ -307,7 +307,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >242.有效的字符异位数</a>
+        <a href=".." >146.LRU 缓存机制</a>
     </h1>
 </div>
 
@@ -322,68 +322,119 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x7D2F;&#x52A0;"><b>1.1. </b>&#x7D2F;&#x52A0;</a></li><li><span class="title-icon "></span><a href="#&#x6392;&#x5E8F;"><b>1.2. </b>&#x6392;&#x5E8F;</a></li><li><span class="title-icon "></span><a href="#&#x54C8;&#x5E0C;"><b>1.3. </b>&#x54C8;&#x5E0C;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x7D2F;&#x52A0;"><a name="&#x7D2F;&#x52A0;" class="anchor-navigation-ex-anchor" href="#&#x7D2F;&#x52A0;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x7D2F;&#x52A0;</h2>
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#js"><b>1.1. </b>js</a></li><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;-2"><b>1.2. </b>&#x65B9;&#x6CD5; 2</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="js"><a name="js" class="anchor-navigation-ex-anchor" href="#js"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. js</h2>
+<h4 id="&#x65B9;&#x6CD5;-1"><a name="&#x65B9;&#x6CD5;-1" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;-1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5; 1</h4>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot; /&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
     &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;
-    &lt;title&gt;242.&#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x6570;&lt;/title&gt;
+    &lt;title&gt;146.LRU&#x7F13;&#x5B58;&#x673A;&#x5236;&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;&lt;/body&gt;
   &lt;script&gt;
-    // &#x7D2F;&#x8BA1;
-    var isAnagram = function(s, t) {
-      if (s.length !== t.length) return false;
-      let obj = {};
-      let len = s.length;
-      let result = true;
-      for (let i = 0; i &lt; len; i++) {
-        obj[s.charAt(i)] ? obj[s.charAt(i)]++ : (obj[s.charAt(i)] = 1);
-      }
-      for (let i = 0; i &lt; len; i++) {
-        if (!obj[t.charAt(i)]) {
-          result = false;
-          break;
+    function LRUCache(capacity) {
+      this.cache = [];
+      this.capacity = capacity;
+    }
+
+    LRUCache.prototype.put = function(key, value) {
+      let index = this.cache.findIndex(item =&gt; item.key === key);
+      if (this.cache[index]) {
+        let remove = this.cache.splice(index, 1)[0];
+        remove.value = value;
+        this.cache.push(remove);
+      } else {
+        if (this.cache.length &gt;= this.capacity) {
+          this.cache.shift();
         }
-        obj[t.charAt(i)]--;
-        if (obj[t.charAt(i)] &lt; 0) {
-          result = false;
-          break;
-        }
+
+        this.cache.push({
+          key,
+          value
+        });
       }
-      return result ? Object.values(obj).every(i =&gt; i &gt;= 0) : result;
     };
-    console.log(isAnagram(&quot;anagram&quot;, &quot;nagaram&quot;));
+
+    LRUCache.prototype.get = function(key) {
+      let index = this.cache.findIndex(item =&gt; item.key === key);
+      if (this.cache[index]) {
+        let remove = this.cache.splice(index, 1)[0];
+        this.cache.push(remove);
+        return remove.value;
+      } else {
+        return -1;
+      }
+    };
+
+    let lru = new LRUCache(2);
+    lru.put(2, 1);
+    lru.put(2, 2);
+    console.log(&quot;lru.get(2) :&quot;, lru.get(2)); // need 2
+    lru.put(1, 1);
+    lru.put(4, 1);
+    console.log(&quot;lru.get(2) :&quot;, lru.get(2)); // need -1
   &lt;/script&gt;
 &lt;/html&gt;
-</code></pre><h2 id="&#x6392;&#x5E8F;"><a name="&#x6392;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x6392;&#x5E8F;</h2>
-<pre><code>    // &#x6570;&#x7EC4;&#x6392;&#x5E8F;
-    var isAnagram = function(s, t) {
-      if (s.length !== t.length) return false;
-      s = s
-        .split(&quot;&quot;)
-        .sort()
-        .join();
-      t = t
-        .split(&quot;&quot;)
-        .sort()
-        .join();
+</code></pre><h2 id="&#x65B9;&#x6CD5;-2"><a name="&#x65B9;&#x6CD5;-2" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;-2"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x65B9;&#x6CD5; 2</h2>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;
+    &lt;title&gt;146.LRU&#x7F13;&#x5B58;&#x673A;&#x5236;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+  &lt;script&gt;
+    // &#x6267;&#x884C;&#x7528;&#x65F6; :368 ms   &#x5185;&#x5B58;&#x6D88;&#x8017;:59.4m
+    // LRU&#xFF08;Least recently used&#xFF0C;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#xFF09;&#x7B97;&#x6CD5;&#x3002;&#x8BE5;&#x7B97;&#x6CD5;&#x7684;&#x89C2;&#x70B9;&#x662F;&#xFF0C;&#x6700;&#x8FD1;&#x88AB;&#x8BBF;&#x95EE;&#x7684;&#x6570;&#x636E;&#x90A3;&#x4E48;&#x5B83;&#x5C06;&#x6765;&#x8BBF;&#x95EE;&#x7684;&#x6982;&#x7387;&#x5C31;&#x5927;&#xFF0C;&#x7F13;&#x5B58;&#x6EE1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F18;&#x5148;&#x6DD8;&#x6C70;&#x6700;&#x65E0;&#x4EBA;&#x95EE;&#x6D25;&#x8005;&#x3002;
+    // &#x4E00;&#x4E2A;&#x4F18;&#x8D28;&#x89E3;&#x91CA;:&#x9996;&#x5148;&#x5F97;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;LRU,LRU&#x4E3E;&#x4F8B;&#x6765;&#x8BF4;,&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x76D2;&#x5B50;&#x53EA;&#x80FD;&#x653E;n(n&#x56FA;&#x5B9A;)&#x672C;&#x4E66;,&#x6BCF;&#x653E;&#x4E00;&#x672C;&#x4E66;,&#x540E;&#x653E;&#x7684;&#x80AF;&#x5B9A;&#x653E;&#x5728;&#x524D;&#x9762;&#x4E00;&#x672C;&#x7684;&#x4E0A;&#x9762;,&#x7136;&#x540E;&#x5982;&#x679C;&#x60F3;&#x8981;&#x62FF;&#x4E66;,&#x5982;&#x679C;&#x91CC;&#x9762;&#x6709;,&#x5C31;&#x628A;&#x4E66;&#x62FF;&#x51FA;&#x6765;,&#x653E;&#x5728;&#x5E95;&#x4E0B;&#x6240;&#x6709;&#x4E66;&#x7684;&#x6700;&#x4E0A;&#x9762;!&#x5F53;&#x4E66;&#x672C;&#x6570;&#x8D85;&#x51FA;n,&#x5C31;&#x628A;&#x6700;&#x5E95;&#x4E0B;&#x90A3;&#x672C;&#x4E66;&#x7ED9;&#x62FF;&#x51FA;&#x53BB;,&#x6700;&#x540E;&#x653E;&#x7684;&#x4F9D;&#x7136;&#x653E;&#x5728;&#x6700;&#x4E0A;&#x9762;!
+    function LRUCache(capacity) {
+      this.cache = [];
+      this.capacity = capacity;
+    }
 
-      return s === t;
-    };
-</code></pre><h2 id="&#x54C8;&#x5E0C;"><a name="&#x54C8;&#x5E0C;" class="anchor-navigation-ex-anchor" href="#&#x54C8;&#x5E0C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x54C8;&#x5E0C;</h2>
-<pre><code> // &#x54C8;&#x5E0C;
-    var isAnagram = function(s, t) {
-      if (s.length !== t.length) return false;
+    LRUCache.prototype.put = function(key, value) {
+      let index = this.cache.findIndex(item =&gt; item.key === key);
+      if (this.cache[index]) {
+        let remove = this.cache.splice(index, 1)[0];
+        remove.value = value;
+        this.cache.push(remove);
+      } else {
+        if (this.cache.length &gt;= this.capacity) {
+          this.cache.shift();
+        }
 
-      for (let i = 0; i &lt; s.length; i++) {
-        obj[s.charAt(i)] ? obj[s.charAt(i)]++ : (obj[s.charAt(i)] = 1);
-        obj[t.charAt(i)] ? obj[t.charAt(i)]-- : (obj[t.charAt(i)] = -1);
+        this.cache.push({
+          key,
+          value
+        });
       }
-      return Object.valyes(obj).every(i =&gt; i === 0);
     };
+
+    LRUCache.prototype.get = function(key) {
+      let index = this.cache.findIndex(item =&gt; item.key === key);
+      if (this.cache[index]) {
+        // &#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x5C06;&#x5F53;&#x524D;key&#x653E;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4F4D;
+        let remove = this.cache.splice(index, 1)[0];
+        this.cache.push(remove);
+        return remove.value;
+      } else {
+        return -1;
+      }
+    };
+
+    let lru = new LRUCache(2);
+    lru.put(2, 1);
+    lru.put(2, 2);
+    console.log(&quot;lru.get(2) :&quot;, lru.get(2)); // need 2
+    lru.put(1, 1);
+    lru.put(4, 1);
+    console.log(&quot;lru.get(2) :&quot;, lru.get(2)); // need -1
+  &lt;/script&gt;
+&lt;/html&gt;
 </code></pre></body></html>
                                 
                                 </section>
@@ -411,12 +462,12 @@
 
             
                 
-                <a href="146.LRU缓存机制.html" class="navigation navigation-prev " aria-label="Previous page: 146.LRU 缓存机制">
+                <a href="2.两数相加.html" class="navigation navigation-prev " aria-label="Previous page: 2.两数相加">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../scripto/简单的模板引擎.html" class="navigation navigation-next " aria-label="Next page: 简单的模板引擎">
+                <a href="242.有效的字符异位数.html" class="navigation navigation-next " aria-label="Next page: 242.有效的字符异位数">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -427,7 +478,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"242.有效的字符异位数","level":"3.3","depth":1,"next":{"title":"简单的模板引擎","level":"4.1","depth":1,"path":"scripto/简单的模板引擎.md","ref":"scripto/简单的模板引擎.md","articles":[]},"previous":{"title":"146.LRU 缓存机制","level":"3.2","depth":1,"path":"leetcode/146.LRU缓存机制.md","ref":"leetcode/146.LRU缓存机制.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/java-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"leetcode/242.有效的字符异位数.md","mtime":"2020-01-09T13:20:43.101Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-10T03:27:32.514Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"146.LRU 缓存机制","level":"3.2","depth":1,"next":{"title":"242.有效的字符异位数","level":"3.3","depth":1,"path":"leetcode/242.有效的字符异位数.md","ref":"leetcode/242.有效的字符异位数.md","articles":[]},"previous":{"title":"2.两数相加","level":"3.1","depth":1,"path":"leetcode/2.两数相加.md","ref":"leetcode/2.两数相加.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/java-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"leetcode/146.LRU缓存机制.md","mtime":"2020-01-09T13:19:38.253Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-09T13:37:57.808Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -11,9 +11,8 @@
     "lightbox",
     "copy-code-button",
     "anchor-navigation-ex",
-    "-highlight",
     "prism",
-    "prism-themes"
+    "-highlight"
   ],
   "pluginsConfig": {
     "edit-link": {
@@ -21,7 +20,7 @@
       "label": "编辑此页面"
     },
     "prism": {
-      "css": ["prism-themes/themes/prism-material-dark.css"]
+      "css": ["prismjs/themes/prism-solarizedlight.css"]
     }
   }
 }

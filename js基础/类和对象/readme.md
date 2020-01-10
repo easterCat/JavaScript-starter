@@ -56,7 +56,7 @@ console.log(typeof new Number(10));  //object
 ## 函数和对象的关系
 
 - 一个对象创建是 Object 的实例, var obj = new Object()
-- Function.prototype 对象是一个函数（对象），其**proto**值内建对象 Object.prototype。
+- Function.prototype 对象是一个函数（对象），其**proto**指向对象 Object.prototype。
 - 而构造函数 function Object() ，其**proto**指向 Function.prototype
 
 ```
@@ -175,18 +175,40 @@ console.log(a.num)
 isPrototypeOf() 方法用于测试一个对象是否存在于另一个对象的原型链上
 
 ```
-prototypeObj.isPrototypeOf(object)
+Obj.prototype.isPrototypeOf(object)
 ```
 
 - 在 object 的原型链上搜寻
 - 返回值 Boolean, 表示 prototypeObj 是否在另一个对象的原型链上
 
+看一下 MDN 的例子
+
 ```
-  console.log(a.prototype.isPrototypeOf(b));
-  console.log(b.prototype.isPrototypeOf(b));
+function Foo() {}
+function Bar() {}
+function Baz() {}
+
+Bar.prototype = Object.create(Foo.prototype);
+Baz.prototype = Object.create(Bar.prototype);
+
+var baz = new Baz();
+
+console.log(Baz.prototype.isPrototypeOf(baz)); // true
+console.log(Bar.prototype.isPrototypeOf(baz)); // true
+console.log(Foo.prototype.isPrototypeOf(baz)); // true
+console.log(Object.prototype.isPrototypeOf(baz)); // true
 ```
 
-#### propertyIsEnumerable 方法返回一个布尔值,表明指定的属性名是否是当前对象可枚举的自身属性
+> 用于检查 object 对象是否继承自 Obj.prototype
+
+#### propertyIsEnumerable
+
+propertyIsEnumerable() 方法返回一个布尔值,表明指定的属性名是否是当前对象可枚举的自身属性
+
+- 判断给定的属性是否可以用 for...in 语句进行枚举同时也是对象的自有属性.
+- for ... in 枚举是包含原型链上的属性的,propertyIsEnumerable 作用于原型方法上时,始终是返回 false 的
+- for...in 可以枚举对象本身的属性和原型上的属性,而 propertyIsEnumerable 只能判断本身的属性是否可以枚举
+- 预定义的属性不是可列举的,而用户定义的属性总是可列举的.所以如果你只想遍历对象本身的属性
 
 ```
 for(var key in obj) {
@@ -195,11 +217,6 @@ for(var key in obj) {
     };
 };
 ```
-
-- 判断给定的属性是否可以用 for...in 语句进行枚举同时也是对象的自有属性.
-- for ... in 枚举是包含原型链上的属性的,propertyIsEnumerable 作用于原型方法上时,始终是返回 false 的
-- for...in 可以枚举对象本身的属性和原型上的属性,而 propertyIsEnumerable 只能判断本身的属性是否可以枚举
-- 预定义的属性不是可列举的,而用户定义的属性总是可列举的.所以如果你只想遍历对象本身的属性
 
 ## js 类与原型
 

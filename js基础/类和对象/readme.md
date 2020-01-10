@@ -111,7 +111,7 @@ console.log(g.constructor===Gouzhao)
 引用类型的值（对象）是引用类型的一个实例，也可以说对象是某个特定引用类型的实例。
 
 - 实例是通过构造函数和 new 运算符进行创建的
-- hasOwnProperty()方法是用来确定一个实例是否拥有自己的某个属性
+- hasOwnProperty()方法是用来确定一个实例是否拥有自己的某个属性,但是 hasOwnProperty 不是实例本身拥有的
 - 实例有且只有一个`__proto__`的属性,指向 构造函数.prototype
 
 ```

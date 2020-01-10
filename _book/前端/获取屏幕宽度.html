@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>2.两数相加 · javascript-starter</title>
+        <title>获取屏幕宽度 · javascript-starter</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="146.LRU缓存机制.html" />
+    <link rel="next" href="../leetcode/2.两数相加.html" />
     
     
-    <link rel="prev" href="../前端/获取屏幕宽度.html" />
+    <link rel="prev" href="../js基础/类和对象/readme.html" />
     
 
     </head>
@@ -192,9 +192,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../前端/获取屏幕宽度.html">
+        <li class="chapter active" data-level="3.1" data-path="获取屏幕宽度.html">
             
-                <a href="../前端/获取屏幕宽度.html">
+                <a href="获取屏幕宽度.html">
             
                     
                     获取屏幕宽度
@@ -212,9 +212,9 @@
         
         
     
-        <li class="chapter active" data-level="4.1" data-path="2.两数相加.html">
+        <li class="chapter " data-level="4.1" data-path="../leetcode/2.两数相加.html">
             
-                <a href="2.两数相加.html">
+                <a href="../leetcode/2.两数相加.html">
             
                     
                     2.两数相加
@@ -225,9 +225,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="146.LRU缓存机制.html">
+        <li class="chapter " data-level="4.2" data-path="../leetcode/146.LRU缓存机制.html">
             
-                <a href="146.LRU缓存机制.html">
+                <a href="../leetcode/146.LRU缓存机制.html">
             
                     
                     146.LRU 缓存机制
@@ -238,9 +238,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="242.有效的字符异位数.html">
+        <li class="chapter " data-level="4.3" data-path="../leetcode/242.有效的字符异位数.html">
             
-                <a href="242.有效的字符异位数.html">
+                <a href="../leetcode/242.有效的字符异位数.html">
             
                     
                     242.有效的字符异位数
@@ -327,7 +327,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >2.两数相加</a>
+        <a href=".." >获取屏幕宽度</a>
     </h1>
 </div>
 
@@ -342,88 +342,61 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#js"><b>1.1. </b>js</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="js"><a name="js" class="anchor-navigation-ex-anchor" href="#js"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. js</h2>
-<h4 id="&#x7B2C;&#x4E00;&#x6B21;&#x901A;&#x8FC7;"><a name="&#x7B2C;&#x4E00;&#x6B21;&#x901A;&#x8FC7;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E00;&#x6B21;&#x901A;&#x8FC7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E00;&#x6B21;&#x901A;&#x8FC7;</h4>
-<pre class="language-"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>
-    function ListNode(val) {
-      this.val = val;
-      this.next = null;
-    }
+                                <html><head></head><body><pre class="language-"><code>&#x7F51;&#x9875;&#x53EF;&#x89C1;&#x533A;&#x57DF;&#x5BBD;&#xFF1A;document.body.clientWidth
 
-    let l1 = {
-      val: 2,
-      next: {
-        val: 4,
-        next: {
-          val: 3,
-          next: null
-        }
-      }
-    };
+&#x7F51;&#x9875;&#x53EF;&#x89C1;&#x533A;&#x57DF;&#x9AD8;&#xFF1A;document.body.clientHeight
 
-    let l2 = {
-      val: 5,
-      next: {
-        val: 6,
-        next: {
-          val: 4,
-          next: null
-        }
-      }
-    };
+&#x7F51;&#x9875;&#x53EF;&#x89C1;&#x533A;&#x57DF;&#x5BBD;&#xFF1A;document.body.offsetWidth (&#x5305;&#x62EC;&#x8FB9;&#x7EBF;&#x7684;&#x5BBD;)
 
-    console.log(&quot;result&quot;, addTwoNumbers(l1, l2));
+&#x7F51;&#x9875;&#x53EF;&#x89C1;&#x533A;&#x57DF;&#x9AD8;&#xFF1A;document.body.offsetHeight (&#x5305;&#x62EC;&#x8FB9;&#x7EBF;&#x7684;&#x5BBD;)
 
-    function addTwoNumbers(l1, l2) {
-      let prev = l1;
-      let next = l2;
-      let curr = new ListNode(0);
-      let center = curr;
-      let carry = 0;
+&#x7F51;&#x9875;&#x6B63;&#x6587;&#x5168;&#x6587;&#x5BBD;&#xFF1A;document.body.scrollWidth
 
-      while (prev || next) {
-        let x = 0;
-        let y = 0;
-        if (prev) {
-          x = prev.val;
-        }
-        if (next) {
-          y = next.val;
-        }
-        let total = carry + x + y;
-        if (total &gt; 9) {
-          center.next = new ListNode(total % 10);
-          carry = 1;
-        } else {
-          center.next = new ListNode(total);
-          carry = 0;
-        }
+&#x7F51;&#x9875;&#x6B63;&#x6587;&#x5168;&#x6587;&#x9AD8;&#xFF1A;document.body.scrollHeight
 
-        center = center.next;
+&#x7F51;&#x9875;&#x88AB;&#x5377;&#x53BB;&#x7684;&#x9AD8;&#xFF1A;document.body.scrollTop
 
-        if (prev) {
-          prev = prev.next;
-        }
-        if (next) {
-          next = next.next;
-        }
-      }
+&#x7F51;&#x9875;&#x88AB;&#x5377;&#x53BB;&#x7684;&#x5DE6;&#xFF1A;document.body.scrollLeft
 
-      if (carry &gt; 0) {
-        center.next = new ListNode(1);
-      }
+&#x7F51;&#x9875;&#x6B63;&#x6587;&#x90E8;&#x5206;&#x4E0A;&#xFF1A;window.screenTop
 
-      return curr.next;
-    }
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+&#x7F51;&#x9875;&#x6B63;&#x6587;&#x90E8;&#x5206;&#x5DE6;&#xFF1A;window.screenLeft
+
+&#x5C4F;&#x5E55;&#x5206;&#x8FA8;&#x7387;&#x7684;&#x9AD8;&#xFF1A;window.screen.height
+
+&#x5C4F;&#x5E55;&#x5206;&#x8FA8;&#x7387;&#x7684;&#x5BBD;&#xFF1A;window.screen.width
+
+&#x5C4F;&#x5E55;&#x53EF;&#x7528;&#x5DE5;&#x4F5C;&#x533A;&#x9AD8;&#x5EA6;&#xFF1A;window.screen.availHeight
+
+&#x5C4F;&#x5E55;&#x53EF;&#x7528;&#x5DE5;&#x4F5C;&#x533A;&#x5BBD;&#x5EA6;&#xFF1A;window.screen.availWidth
+
+HTML&#x7CBE;&#x786E;&#x5B9A;&#x4F4D;:scrollLeft,scrollWidth,clientWidth,offsetWidth
+
+scrollHeight: &#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6EDA;&#x52A8;&#x9AD8;&#x5EA6;&#x3002;
+
+scrollLeft:&#x8BBE;&#x7F6E;&#x6216;&#x83B7;&#x53D6;&#x4F4D;&#x4E8E;&#x5BF9;&#x8C61;&#x5DE6;&#x8FB9;&#x754C;&#x548C;&#x7A97;&#x53E3;&#x4E2D;&#x76EE;&#x524D;&#x53EF;&#x89C1;&#x5185;&#x5BB9;&#x7684;&#x6700;&#x5DE6;&#x7AEF;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;
+
+scrollTop:&#x8BBE;&#x7F6E;&#x6216;&#x83B7;&#x53D6;&#x4F4D;&#x4E8E;&#x5BF9;&#x8C61;&#x6700;&#x9876;&#x7AEF;&#x548C;&#x7A97;&#x53E3;&#x4E2D;&#x53EF;&#x89C1;&#x5185;&#x5BB9;&#x7684;&#x6700;&#x9876;&#x7AEF;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;
+
+scrollWidth:&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6EDA;&#x52A8;&#x5BBD;&#x5EA6;
+
+offsetHeight:&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x76F8;&#x5BF9;&#x4E8E;&#x7248;&#x9762;&#x6216;&#x7531;&#x7236;&#x5750;&#x6807; offsetParent &#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x7684;&#x7236;&#x5750;&#x6807;&#x7684;&#x9AD8;&#x5EA6;
+
+offsetLeft:&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x76F8;&#x5BF9;&#x4E8E;&#x7248;&#x9762;&#x6216;&#x7531; offsetParent &#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x7684;&#x7236;&#x5750;&#x6807;&#x7684;&#x8BA1;&#x7B97;&#x5DE6;&#x4FA7;&#x4F4D;&#x7F6E;
+
+offsetTop:&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x76F8;&#x5BF9;&#x4E8E;&#x7248;&#x9762;&#x6216;&#x7531; offsetTop &#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x7684;&#x7236;&#x5750;&#x6807;&#x7684;&#x8BA1;&#x7B97;&#x9876;&#x7AEF;&#x4F4D;&#x7F6E;
+
+event.clientX &#x76F8;&#x5BF9;&#x6587;&#x6863;&#x7684;&#x6C34;&#x5E73;&#x5EA7;&#x6807;
+
+event.clientY &#x76F8;&#x5BF9;&#x6587;&#x6863;&#x7684;&#x5782;&#x76F4;&#x5EA7;&#x6807;
+
+event.offsetX &#x76F8;&#x5BF9;&#x5BB9;&#x5668;&#x7684;&#x6C34;&#x5E73;&#x5750;&#x6807;
+
+event.offsetY &#x76F8;&#x5BF9;&#x5BB9;&#x5668;&#x7684;&#x5782;&#x76F4;&#x5750;&#x6807;
+
+document.documentElement.scrollTop &#x5782;&#x76F4;&#x65B9;&#x5411;&#x6EDA;&#x52A8;&#x7684;&#x503C;
+
+event.clientX+document.documentElement.scrollTop &#x76F8;&#x5BF9;&#x6587;&#x6863;&#x7684;&#x6C34;&#x5E73;&#x5EA7;&#x6807;+&#x5782;&#x76F4;&#x65B9;&#x5411;&#x6EDA;&#x52A8;&#x7684;&#x91CF;
 </code></pre></body></html>
                                 
                                 </section>
@@ -451,12 +424,12 @@
 
             
                 
-                <a href="../前端/获取屏幕宽度.html" class="navigation navigation-prev " aria-label="Previous page: 获取屏幕宽度">
+                <a href="../js基础/类和对象/readme.html" class="navigation navigation-prev " aria-label="Previous page: 类和对象">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="146.LRU缓存机制.html" class="navigation navigation-next " aria-label="Next page: 146.LRU 缓存机制">
+                <a href="../leetcode/2.两数相加.html" class="navigation navigation-next " aria-label="Next page: 2.两数相加">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -467,7 +440,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.两数相加","level":"4.1","depth":1,"next":{"title":"146.LRU 缓存机制","level":"4.2","depth":1,"path":"leetcode/146.LRU缓存机制.md","ref":"leetcode/146.LRU缓存机制.md","articles":[]},"previous":{"title":"获取屏幕宽度","level":"3.1","depth":1,"path":"前端/获取屏幕宽度.md","ref":"前端/获取屏幕宽度.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/java-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"leetcode/2.两数相加.md","mtime":"2020-01-09T13:20:09.324Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-10T10:17:12.104Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"获取屏幕宽度","level":"3.1","depth":1,"next":{"title":"2.两数相加","level":"4.1","depth":1,"path":"leetcode/2.两数相加.md","ref":"leetcode/2.两数相加.md","articles":[]},"previous":{"title":"类和对象","level":"2.4","depth":1,"path":"js基础/类和对象/readme.md","ref":"js基础/类和对象/readme.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/java-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"前端/获取屏幕宽度.md","mtime":"2020-01-10T10:16:09.886Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-10T10:17:12.104Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

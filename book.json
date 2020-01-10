@@ -20,7 +20,7 @@
       "label": "编辑此页面"
     },
     "prism": {
-      "css": ["prismjs/themes/prism-solarizedlight.css"]
+      "css": ["prismjs/themes/prism-dark.css"]
     }
   }
 }

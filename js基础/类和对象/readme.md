@@ -6,13 +6,13 @@
 
 - undefined、number、string、boolean 是值类型 , 判断值类型的用 typeof
 
-```
+```js
 let str = "123";
-str.realname = '字符串'
-console.log(str)
-console.log(str.constructor)// ƒ String()
-console.log(str.__proto__) //String.prototype
-console.log(str.realname) // undefined
+str.realname = "字符串";
+console.log(str);
+console.log(str.constructor); // ƒ String()
+console.log(str.__proto__); //String.prototype
+console.log(str.realname); // undefined
 ```
 
 实际中在使用,值类型的表现不是对象,不能进行属性和方法的绑定.但是实际上也是一个对象,原型链如下

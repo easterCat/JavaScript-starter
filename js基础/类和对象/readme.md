@@ -106,6 +106,8 @@ arr[2] = 3;
 
 > 对象是函数创建的,函数是一种对象,他们最终都指向了 Object.prototype
 
+prototype 们都是对象,原型指向了 Object.prototype.而 function 们都是函数,哪怕是构造函数也是一个函数,他们的原型都指向了 Function.prototype.
+
 ## 函数和构造函数关系
 
 [Function](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function) 构造函数创建一个新的 Function 对象.直接调用此构造函数可用动态创建函数,但会遭遇来自 eval 的安全问题和相对较小的性能问题.然而,与 eval 不同的是,Function 构造函数只在全局作用域中运行.每个 JavaScript 函数实际上都是一个 Function 对象 => `(function(){}).constructor === Function`

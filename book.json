@@ -10,12 +10,17 @@
     "edit-link",
     "lightbox",
     "copy-code-button",
-    "anchor-navigation-ex"
+    "anchor-navigation-ex",
+    "prism",
+    "-highlight"
   ],
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/easterCat/java-starter/edit/master/",
       "label": "编辑此页面"
+    },
+    "prism": {
+      "css": ["prismjs/themes/prism-solarizedlight.css"]
     }
   }
 }

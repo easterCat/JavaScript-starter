@@ -1,0 +1,860 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>js 事件机制 · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../前端/获取屏幕宽度.html" />
+    
+    
+    <link rel="prev" href="../数据类型/readme.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">js 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../词法作用域/readme.html">
+            
+                <a href="../词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../内存分配/readme.html">
+            
+                <a href="../内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../浏览器工作原理/readme.html">
+            
+                <a href="../浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../类和对象/readme.html">
+            
+                <a href="../类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../数据类型/readme.html">
+            
+                <a href="../数据类型/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../前端/获取屏幕宽度.html">
+            
+                <a href="../../前端/获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../前端/单元测试/readme.html">
+            
+                <a href="../../前端/单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">leetcode</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../leetcode/2.两数相加.html">
+            
+                <a href="../../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">scripto</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../scripto/简单的模板引擎.html">
+            
+                <a href="../../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../scripto/中间件模式.html">
+            
+                <a href="../../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../scripto/m长度的都是n的数组.html">
+            
+                <a href="../../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >js 事件机制</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9762;&#x8BD5;&#x9898;-event-&#x4E8B;&#x4EF6;"><b>1.1. </b>&#x9762;&#x8BD5;&#x9898; event &#x4E8B;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#event-&#x5BF9;&#x8C61;"><b>1.2. </b>Event &#x5BF9;&#x8C61;</a></li><li><span class="title-icon "></span><a href="#&#x4E8B;&#x4EF6;&#x6CE8;&#x518C;"><b>1.3. </b>&#x4E8B;&#x4EF6;&#x6CE8;&#x518C;</a></li><ul><li><span class="title-icon "></span><a href="#w3c"><b>1.3.1. </b>w3c</a></li><li><span class="title-icon "></span><a href="#ie"><b>1.3.2. </b>ie</a></li><li><span class="title-icon "></span><a href="#&#x517C;&#x5BB9;&#x5199;&#x6CD5;"><b>1.3.3. </b>&#x517C;&#x5BB9;&#x5199;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x533F;&#x540D;&#x51FD;&#x6570;&#x7684;&#x5F15;&#x7528;"><b>1.3.4. </b>&#x5220;&#x9664;&#x533F;&#x540D;&#x51FD;&#x6570;&#x7684;&#x5F15;&#x7528;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x548C;&#x6355;&#x83B7;"><b>1.4. </b>&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x548C;&#x6355;&#x83B7;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5192;&#x6CE1;"><b>1.4.1. </b>&#x5192;&#x6CE1;</a></li><li><span class="title-icon "></span><a href="#&#x6355;&#x83B7;"><b>1.4.2. </b>&#x6355;&#x83B7;</a></li><li><span class="title-icon "></span><a href="#&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;"><b>1.4.3. </b>&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;</a></li><li><span class="title-icon "></span><a href="#&#x963B;&#x6B62;&#x5192;&#x6CE1;"><b>1.4.4. </b>&#x963B;&#x6B62;&#x5192;&#x6CE1;</a></li><li><span class="title-icon "></span><a href="#&#x4E8B;&#x4EF6;&#x59D4;&#x6258;"><b>1.4.5. </b>&#x4E8B;&#x4EF6;&#x59D4;&#x6258;</a></li><li><span class="title-icon "></span><a href="#dom-&#x4E8B;&#x4EF6;&#x6D41;"><b>1.4.6. </b>DOM &#x4E8B;&#x4EF6;&#x6D41;</a></li></ul><li><span class="title-icon "></span><a href="#&#x9762;&#x8BD5;&#x9898;&#x7B54;&#x6848;"><b>1.5. </b>&#x9762;&#x8BD5;&#x9898;&#x7B54;&#x6848;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x89C1;&#x4E8B;&#x4EF6;"><b>1.6. </b>&#x5E38;&#x89C1;&#x4E8B;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b>1.7. </b>&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9762;&#x8BD5;&#x9898;-event-&#x4E8B;&#x4EF6;"><a name="&#x9762;&#x8BD5;&#x9898;-event-&#x4E8B;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x9762;&#x8BD5;&#x9898;-event-&#x4E8B;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x9762;&#x8BD5;&#x9898; event &#x4E8B;&#x4EF6;</h2>
+<ul>
+<li>&#x4E8B;&#x4EF6;&#x59D4;&#x6258;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</li>
+<li>&#x5982;&#x4F55;&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;,&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x4E8B;&#x4EF6;&#x5462;&#xFF1F;</li>
+<li>Javascript &#x7684;&#x4E8B;&#x4EF6;&#x6D41;&#x6A21;&#x578B;&#x90FD;&#x6709;&#x4EC0;&#x4E48;&#xFF1F;</li>
+<li>&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x548C;&#x666E;&#x901A;&#x4E8B;&#x4EF6;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF1F;</li>
+</ul>
+<p><a href="https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/03.png?raw=true" data-lightbox="d0ec462a-e88c-427d-8439-702469f22351" data-title="event" target="_blank"><img src="https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/03.png?raw=true" alt="event"></a></p>
+<h2 id="event-&#x5BF9;&#x8C61;"><a name="event-&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#event-&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Event &#x5BF9;&#x8C61;</h2>
+<p>Event &#x5BF9;&#x8C61;&#xFF0C;&#x5F53;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x7684;&#x65F6;&#x5019;&#x51FA;&#x53D1;&#x67D0;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8BE5; Event &#x5BF9;&#x8C61;&#x5C06;&#x81EA;&#x52A8;&#x5728;&#x51FD;&#x6570;&#x5185;&#x53EF;&#x7528;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x4E86;&#x5F88;&#x591A;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x65F6;&#x5019;&#x7684;&#x4FE1;&#x606F;&#xFF0C;
+&#x4F46; IE &#x5374;&#x6CA1;&#x6709;&#x8FD9;&#x4E48;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x662F;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;IE &#x6D4F;&#x89C8;&#x5668;&#x662F;&#x901A;&#x8FC7;&#x5168;&#x5C40;&#x5BF9;&#x8C61; window &#x4E0B;&#x7684; event &#x5C5E;&#x6027;&#x6765;&#x5305;&#x542B;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code>function myEventHandler(e) {
+    // &#x6CE8;&#x610F;&#x53C2;&#x6570;e
+    // &#x8BE5;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;e&#x662F;event&#x5BF9;&#x8C61;&#xFF08;W3C&#x5B9E;&#x73B0;&#xFF09;
+    // &#x517C;&#x5BB9;IE&#x7684;&#x4EE3;&#x7801;
+    e = e || window.event;
+    // &#x73B0;&#x5728;e&#x5C31;&#x53EF;&#x4EE5;&#x517C;&#x5BB9;&#x5404;&#x79CD;&#x6D4F;&#x89C8;&#x5668;&#x4E86;
+}
+</code></pre><h2 id="&#x4E8B;&#x4EF6;&#x6CE8;&#x518C;"><a name="&#x4E8B;&#x4EF6;&#x6CE8;&#x518C;" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x4EF6;&#x6CE8;&#x518C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x4E8B;&#x4EF6;&#x6CE8;&#x518C;</h2>
+<p>&#x8FD9;&#x91CC;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5C31;&#x662F; IE &#x7684; attachEvent &#x548C; W3C &#x6807;&#x51C6; addEventListener &#x5728;&#x6267;&#x884C;&#x4E0A;&#x7684;&#x4E00;&#x4E9B;&#x533A;&#x522B;</p>
+<ol>
+<li>attachEvent &#x53EA;&#x652F;&#x6301;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1; addEventListener &#x65E2;&#x652F;&#x6301;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#xFF0C;&#x4E5F;&#x652F;&#x6301;&#x4E8B;&#x4EF6;&#x6355;&#x83B7;</li>
+<li>&#x53C2;&#x6570;&#xFF1A;attachEvent &#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#x9700;&#x8981; on &#x524D;&#x7F00; addEventListener &#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#x4E0D;&#x9700;&#x8981; on &#x524D;&#x7F00;</li>
+<li>&#x5982;&#x679C;&#x4F7F;&#x7528; attachEvent &#x5BF9;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x76EE;&#x6807;&#x9636;&#x6BB5;&#x7ED1;&#x5B9A;&#x4E86;&#x591A;&#x6B21;&#x4E8B;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x6309;&#x7167;&#x7ED1;&#x5B9A;&#x987A;&#x5E8F;&#x7684;&#x76F8;&#x53CD;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x89E6;&#x53D1;&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528; addEventListener &#x5BF9;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x76EE;&#x6807;&#x9636;&#x6BB5;&#x7ED1;&#x5B9A;&#x4E86;&#x591A;&#x6B21;&#x4E8B;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x6309;&#x7167;&#x7ED1;&#x5B9A;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x89E6;&#x53D1;</li>
+</ol>
+<h3 id="w3c"><a name="w3c" class="anchor-navigation-ex-anchor" href="#w3c"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. w3c</h3>
+<pre class="language-"><code>var oBtn = document.getElementById(&quot;btn1&quot;);
+oBtn.addEventListener(&apos;click&apos;, introClick, false);
+</code></pre><h3 id="ie"><a name="ie" class="anchor-navigation-ex-anchor" href="#ie"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. ie</h3>
+<pre class="language-"><code>var oBtn = document.getElementById(&quot;btn1&quot;);
+oBtn.attachEvent(&apos;onclick&apos;, introClick);
+</code></pre><h3 id="&#x517C;&#x5BB9;&#x5199;&#x6CD5;"><a name="&#x517C;&#x5BB9;&#x5199;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x517C;&#x5BB9;&#x5199;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.3. &#x517C;&#x5BB9;&#x5199;&#x6CD5;</h3>
+<pre class="language-"><code>      var oBtn = document.getElementById(&quot;btn1&quot;);
+      addEvent(oBtn, &quot;click&quot;, show);
+      addEvent(oBtn, &quot;click&quot;, show2);
+      // removeEvent(oBtn, &quot;click&quot;, show);
+
+      //&#x5BF9;&#x8C61;.addEventListener(&#x4E8B;&#x4EF6;&#x540D;,&#x51FD;&#x6570;,false);    for &#x9AD8;
+      //&#x4E8B;&#x4EF6;&#x540D;    onclick    over/out/down/up.........&#x4E0D;&#x5E26;on
+      //&#x51FD;&#x6570;    obj.onclick=show    show==&#x51FD;&#x6570;
+      function addEvent(obj, eve, fn) {
+        if (obj.addEventListener) {
+          obj.addEventListener(eve, fn, false); //&#x7531;&#x4E8E;&#x4E8B;&#x4EF6;&#x53C2;&#x6570;&#x4E0D;&#x5E26;on
+        } else {
+          obj.attachEvent(&quot;on&quot; + eve, fn); //&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x7684;&#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;&#x8981;&#x5C06;on&#x8865;&#x4E0A;
+        }
+      }
+
+      //&#x89E3;&#x7ED1;
+      //&#x5BF9;&#x8C61;.removeEventListener(&#x4E8B;&#x4EF6;&#x540D;,&#x51FD;&#x6570;,false);  chrome FF IE 9 10
+      //&#x5BF9;&#x8C61;.detachEvent(&#x4E8B;&#x4EF6;&#x540D;,&#x51FD;&#x6570;);        IE 6 7 8
+      // oBtn.detachEvent(&apos;onclick&apos;,show2);
+      //&#x79FB;&#x9664;&#x51FD;&#x6570;
+      function removeEvent(obj, eve, fn) {
+        if (obj.removeEventListener) {
+          obj.removeEventListener(eve, fn, false);
+        } else {
+          obj.detachEvent(&quot;on&quot; + eve, fn);
+        }
+      }
+
+      function show() {
+        alert(&quot;&#x6211;&#x5C06;&#x5F39;&#x51FA;1&quot;);
+      }
+
+      function show2() {
+        alert(&quot;&#x6211;&#x5C06;&#x5F39;&#x51FA;2&quot;);
+      }
+</code></pre><h3 id="&#x5220;&#x9664;&#x533F;&#x540D;&#x51FD;&#x6570;&#x7684;&#x5F15;&#x7528;"><a name="&#x5220;&#x9664;&#x533F;&#x540D;&#x51FD;&#x6570;&#x7684;&#x5F15;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x533F;&#x540D;&#x51FD;&#x6570;&#x7684;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.4. &#x5220;&#x9664;&#x533F;&#x540D;&#x51FD;&#x6570;&#x7684;&#x5F15;&#x7528;</h3>
+<pre class="language-"><code>addEvent(oBtn, &apos;click&apos;, function(){
+    alert(&quot;&#x5F39;&#x51FA;1&quot;);
+    //arguments&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x4F20;&#x9012;&#x8FDB;&#x6765;&#x7684;&#x53C2;&#x6570;&#x4EE5;&#x53CA;&#x8BE5;&#x51FD;&#x6570;&#x81EA;&#x8EAB;(callee)
+    console.log(arguments);
+    removeEvent(oBtn, &apos;click&apos;, arguments.callee);
+});
+</code></pre><p><a href="https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/01.png?raw=true" data-lightbox="8a2d5aac-c9d2-4614-b7ee-62ff625f2870" data-title="arguments&#x5BF9;&#x8C61;" target="_blank"><img src="https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/01.png?raw=true" alt="arguments&#x5BF9;&#x8C61;"></a></p>
+<blockquote>
+<p>W3C &#x548C;&#x5FAE;&#x8F6F;&#x6A21;&#x578B;&#x8FD8;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x5C11;&#x8BB8;&#x5DEE;&#x5F02;&#xFF0C;callee &#x662F;&#x8FD4;&#x56DE;&#x6B63;&#x5728;&#x88AB;&#x6267;&#x884C;&#x7684; function &#x51FD;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6240;&#x6307;&#x5B9A;&#x7684; function &#x5BF9;&#x8C61;&#x7684;&#x6B63;&#x6587;&#x3002;arguments.callee &#x77E5;&#x9053;&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x522B;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x7528;&#x4E86;</p>
+</blockquote>
+<h2 id="&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x548C;&#x6355;&#x83B7;"><a name="&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x548C;&#x6355;&#x83B7;" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x548C;&#x6355;&#x83B7;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x548C;&#x6355;&#x83B7;</h2>
+<p>&#x5F53;&#x5E74;&#xFF0C;IE &#x662F;&#x5192;&#x6CE1;&#x6D41;&#xFF0C;&#x800C;&#x7F51;&#x666F;&#x662F;&#x6355;&#x83B7;&#x6D41;&#xFF0C;W3C &#x8D39;&#x4E9B;&#x529B;&#x4F7F; JS &#x652F;&#x6301;&#x4E86;&#x5192;&#x6CE1;&#x6D41;&#x548C;&#x6355;&#x83B7;&#x6D41;&#x3002;&#x4F46;&#x662F;&#x524D;&#x4E9B;&#x5E74;&#x6216;&#x8005;&#x66F4;&#x4E4B;&#x524D;&#x7684;&#x65F6;&#x5019;&#xFF0C;IE &#x8FD8;&#x662F;&#x8001;&#x5927;&#xFF0C;&#x4E8E;&#x662F;&#x65E9;&#x671F;&#x7684; IE &#x6D4F;&#x89C8;&#x5668;&#x5E76;&#x4E0D;&#x652F;&#x6301;&#x6355;&#x83B7;&#x3002;</p>
+<h3 id="&#x5192;&#x6CE1;"><a name="&#x5192;&#x6CE1;" class="anchor-navigation-ex-anchor" href="#&#x5192;&#x6CE1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. &#x5192;&#x6CE1;</h3>
+<pre class="language-"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>utf-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>
+      window.onload = function() {
+        _id(&quot;div1&quot;).addEventListener(
+          &quot;click&quot;,
+          function() {
+            alert(_id(&quot;div1&quot;).style.background);
+          },
+          false
+        );
+
+        _id(&quot;div2&quot;).addEventListener(
+          &quot;click&quot;,
+          function() {
+            alert(_id(&quot;div2&quot;).style.background);
+          },
+          false
+        );
+
+        _id(&quot;div3&quot;).addEventListener(
+          &quot;click&quot;,
+          function() {
+            alert(_id(&quot;div3&quot;).style.background);
+          },
+          false
+        );
+
+        function _id(id) {
+          return document.getElementById(id);
+        }
+      };
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>div1<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span>500px<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span>500px<span class="token punctuation">;</span> <span class="token property">background</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>div2<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span>300px<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span>300px<span class="token punctuation">;</span> <span class="token property">background</span><span class="token punctuation">:</span>yellow</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>div3<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span> <span class="token property">background</span><span class="token punctuation">:</span>blue</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h3 id="&#x6355;&#x83B7;"><a name="&#x6355;&#x83B7;" class="anchor-navigation-ex-anchor" href="#&#x6355;&#x83B7;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. &#x6355;&#x83B7;</h3>
+<pre class="language-"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>utf-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>&#x4E8B;&#x4EF6;&#x6355;&#x83B7;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>
+      window.onload = function() {
+        var oDiv1 = document.getElementById(&quot;div1&quot;);
+        var oDiv2 = document.getElementById(&quot;div2&quot;);
+        var oDiv3 = document.getElementById(&quot;div3&quot;);
+
+        oDiv1.addEventListener(
+          &quot;click&quot;,
+          function() {
+            alert(oDiv1.style.background);
+          },
+          true
+        );
+
+        oDiv2.addEventListener(
+          &quot;click&quot;,
+          function() {
+            alert(oDiv2.style.background);
+          },
+          true
+        );
+
+        oDiv3.addEventListener(
+          &quot;click&quot;,
+          function() {
+            alert(oDiv3.style.background);
+          },
+          true
+        );
+      };
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>div1<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span>500px<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span>500px<span class="token punctuation">;</span> <span class="token property">background</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>div2<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span>300px<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span>300px<span class="token punctuation">;</span> <span class="token property">background</span><span class="token punctuation">:</span>yellow</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>div3<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span> <span class="token property">background</span><span class="token punctuation">:</span>blue</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre><blockquote>
+<p>addEventListener &#x7684;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570; true &#x5C31;&#x662F;&#x6355;&#x83B7;&#xFF0C;false &#x5C31;&#x662F;&#x5192;&#x6CE1;</p>
+</blockquote>
+<h3 id="&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;"><a name="&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;" class="anchor-navigation-ex-anchor" href="#&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.3. &#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;</h3>
+<pre class="language-"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      var oBtn = document.getElementById(&quot;btn1&quot;);
+      addEvent(oBtn, &quot;click&quot;, myEventHandler);
+
+      //&#x5BF9;&#x8C61;.addEventListener(&#x4E8B;&#x4EF6;&#x540D;,&#x51FD;&#x6570;,false);    for &#x9AD8;
+      //&#x4E8B;&#x4EF6;&#x540D;    onclick    over/out/down/up.........&#x4E0D;&#x5E26;on
+      //&#x51FD;&#x6570;    obj.onclick=show    show==&#x51FD;&#x6570;
+      function addEvent(obj, eve, fn) {
+        if (obj.addEventListener) {
+          obj.addEventListener(eve, fn, false); //&#x7531;&#x4E8E;&#x4E8B;&#x4EF6;&#x53C2;&#x6570;&#x4E0D;&#x5E26;on
+        } else {
+          obj.attachEvent(&quot;on&quot; + eve, fn); //&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x7684;&#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;&#x8981;&#x5C06;on&#x8865;&#x4E0A;
+        }
+      }
+
+      function myEventHandler(e) {
+        e = e || window.event;
+        // &#x9632;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;
+        if (e.preventDefault) {
+          e.preventDefault();
+        } else {
+          e.returnValue = false;
+        }
+      }
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x7981;&#x6B62;&#x4E00;&#x4E0B;&#x9F20;&#x6807;&#x53F3;&#x952E;</p>
+<pre class="language-"><code>    document.getElementById(&quot;contextmenu&quot;).addEventListener(
+      &quot;contextmenu&quot;,
+      function(ev) {
+        var oEvt = ev || event;
+        oEvt.preventDefault(); //&#x963B;&#x6B62;&#x9ED8;&#x8BA4;
+      },
+      false
+    );
+</code></pre><h3 id="&#x963B;&#x6B62;&#x5192;&#x6CE1;"><a name="&#x963B;&#x6B62;&#x5192;&#x6CE1;" class="anchor-navigation-ex-anchor" href="#&#x963B;&#x6B62;&#x5192;&#x6CE1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.4. &#x963B;&#x6B62;&#x5192;&#x6CE1;</h3>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>
+      window.onload = function() {
+        _id(&quot;div1&quot;).addEventListener(
+          &quot;click&quot;,
+          function() {
+            alert(_id(&quot;div1&quot;).style.background);
+          },
+          false
+        );
+
+        _id(&quot;div2&quot;).addEventListener(
+          &quot;click&quot;,
+          function() {
+            alert(_id(&quot;div2&quot;).style.background);
+          },
+          false
+        );
+
+        _id(&quot;div3&quot;).addEventListener(&quot;click&quot;, myParagraphEventHandler, false);
+
+        function _id(id) {
+          return document.getElementById(id);
+        }
+
+        function myParagraphEventHandler(e) {
+          alert(this.style.background);
+          e = e || window.event;
+          // &#x505C;&#x6B62;&#x5411;&#x4E0A;&#x5192;&#x6CE1;
+          if (e.stopPropagation) {
+            // W3C&#x5B9E;&#x73B0;
+            e.stopPropagation();
+          } else {
+            // IE&#x5B9E;&#x73B0;
+            e.cancelBubble = true;
+          }
+        }
+      };
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4EEC;&#x8981;&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x4E8B;&#x4EF6;&#x5462;&#xFF1F;</p>
+<ol>
+<li>&#x5F02;&#x6B65;&#x64CD;&#x4F5C;</li>
+<li>&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x4E4B;&#x524D;&#x5BF9;&#x8868;&#x5355;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7684;&#x9A8C;&#x8BC1;&#xFF0C;&#x6BD4;&#x5982;&#x90AE;&#x7BB1;&#x662F;&#x5426;&#x5408;&#x6CD5;&#xFF0C;&#x7528;&#x6237;&#x540D;&#x662F;&#x4E0D;&#x662F;&#x6EE1;&#x8DB3;&#x6307;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x4E3A;&#x4E86;&#x4E0D;&#x8BA9; a &#x70B9;&#x51FB;&#x4E4B;&#x540E;&#x8DF3;&#x8F6C;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x8981;&#x7ED9;&#x4ED6;&#x7684;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x963B;&#x6B62;</li>
+<li>&#x6587;&#x672C;&#x6846;&#x83B7;&#x5F97;&#x7126;&#x70B9;</li>
+</ol>
+<h3 id="&#x4E8B;&#x4EF6;&#x59D4;&#x6258;"><a name="&#x4E8B;&#x4EF6;&#x59D4;&#x6258;" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x4EF6;&#x59D4;&#x6258;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.5. &#x4E8B;&#x4EF6;&#x59D4;&#x6258;</h3>
+<p>&#x4E8B;&#x4EF6;&#x59D4;&#x6258;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x5C06;&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x5728;&#x5BB9;&#x5668;&#x5143;&#x7D20;&#x4E0A;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x5224;&#x65AD;&#x70B9;&#x51FB;&#x7684; target &#x5B50;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#x6765;&#x89E6;&#x53D1;&#x76F8;&#x5E94;&#x7684;&#x4E8B;&#x4EF6;</p>
+<pre class="language-"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>my-table<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>7<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>9<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>11<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>22<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>33<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>44<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>55<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>66<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>
+    var myTable = document.getElementById(&quot;my-table&quot;);
+
+    myTable.onclick = function(e) {
+      // &#x5904;&#x7406;&#x6D4F;&#x89C8;&#x5668;&#x517C;&#x5BB9;
+      e = e || window.event;
+      var targetNode = e.target || e.srcElement;
+
+      if (targetNode.nodeName.toLowerCase() === &quot;td&quot;) {
+        alert(&quot;You clicked a table row!&quot;);
+      }
+    };
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h3 id="dom-&#x4E8B;&#x4EF6;&#x6D41;"><a name="dom-&#x4E8B;&#x4EF6;&#x6D41;" class="anchor-navigation-ex-anchor" href="#dom-&#x4E8B;&#x4EF6;&#x6D41;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.6. DOM &#x4E8B;&#x4EF6;&#x6D41;</h3>
+<p>&#x8FD9;&#x5C31;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x6355;&#x83B7;&#x4E8B;&#x4EF6;&#x4E2D;&#xFF0C;&#x76EE;&#x6807;&#x9636;&#x6BB5;&#x662F;&#x6700;&#x540E;&#x3002;&#x800C;&#x5728;&#x5192;&#x6CE1;&#x4E8B;&#x4EF6;&#x4E2D;&#xFF0C;&#x76EE;&#x6807;&#x9636;&#x6BB5;&#x662F;&#x6700;&#x5148;&#x4E86;</p>
+<p><a href="https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/02.png?raw=true" data-lightbox="024995c1-afa4-438e-8feb-d4afad1f4ece" data-title="DOM &#x4E8B;&#x4EF6;&#x6D41;" target="_blank"><img src="https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/02.png?raw=true" alt="DOM &#x4E8B;&#x4EF6;&#x6D41;"></a></p>
+<h2 id="&#x9762;&#x8BD5;&#x9898;&#x7B54;&#x6848;"><a name="&#x9762;&#x8BD5;&#x9898;&#x7B54;&#x6848;" class="anchor-navigation-ex-anchor" href="#&#x9762;&#x8BD5;&#x9898;&#x7B54;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x9762;&#x8BD5;&#x9898;&#x7B54;&#x6848;</h2>
+<ul>
+<li><p>&#x5229;&#x7528;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x7684;&#x539F;&#x7406;&#xFF0C;&#x8BA9;&#x81EA;&#x5DF1;&#x7684;&#x6240;&#x89E6;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x8BA9;&#x4ED6;&#x7684;&#x7236;&#x5143;&#x7D20;&#x4EE3;&#x66FF;&#x6267;&#x884C; 2.&#x963B;&#x6B62;&#x5192;&#x6CE1; ie &#x662F; ;&#x5176;&#x4ED6;&#x662F;;</p>
+</li>
+<li><p>| &#x6D4F;&#x89C8;&#x5668; |               &#x963B;&#x6B62;&#x5192;&#x6CE1; |            &#x963B;&#x6B62;&#x9ED8;&#x8BA4; |
+| :----- | ---------------------: | ------------------: |
+| ie     | ev.cancelBubble = true |        return false |
+| &#x5176;&#x4ED6;   |   ev.stopPropagation() | ev.preventDefault() |</p>
+</li>
+<li><p>&quot;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&quot;&#xFF1A;&#x4E8B;&#x4EF6;&#x5F00;&#x59CB;&#x7531;&#x6700;&#x5177;&#x4F53;&#x7684;&#x5143;&#x7D20;&#x63A5;&#x53D7;&#xFF0C;&#x7136;&#x540E;&#x9010;&#x7EA7;&#x5411;&#x4E0A;&#x4F20;&#x64AD;
+&quot;&#x4E8B;&#x4EF6;&#x6355;&#x6349;&quot;&#xFF1A;&#x4E8B;&#x4EF6;&#x7531;&#x6700;&#x4E0D;&#x5177;&#x4F53;&#x7684;&#x8282;&#x70B9;&#x5148;&#x63A5;&#x6536;&#xFF0C;&#x7136;&#x540E;&#x9010;&#x7EA7;&#x5411;&#x4E0B;&#xFF0C;&#x4E00;&#x76F4;&#x5230;&#x6700;&#x5177;&#x4F53;&#x7684;
+&quot;DOM &#x4E8B;&#x4EF6;&#x6D41;&quot;&#xFF1A;&#x4E09;&#x4E2A;&#x9636;&#x6BB5;&#xFF1A;&#x4E8B;&#x4EF6;&#x6355;&#x6349;&#xFF0C;&#x76EE;&#x6807;&#x9636;&#x6BB5;&#xFF0C;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;</p>
+</li>
+<li><p>xxx.onEvent = function(){}&#x5176;&#x5B9E;&#x662F;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#xFF0C;&#x4E0B;&#x9762;&#x53D6;&#x7F14;&#x4E0A;&#x9762;&#x7684;&#x3002;&#x800C;&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x53EF;&#x4EE5;&#x4E00;&#x53E3;&#x6C14;&#x7ED1;&#x5B9A;&#x591A;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF0C;&#x6309;&#x7ED1;&#x5B9A;&#x987A;&#x5E8F;&#x6267;&#x884C;</p>
+</li>
+</ul>
+<blockquote>
+<p>xxx.onEvent &#x5C31;&#x662F;&#x5BF9;&#x76D1;&#x542C;&#x5C5E;&#x6027;&#x8D4B;&#x503C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x53D6;&#x6D88;&#x7ED1;&#x5B9A;&#x8BBE;&#x7F6E;&#x4E3A;&#x7A7A;&#x5C31;&#x597D;&#x4E86; xxx.onEvent = null</p>
+</blockquote>
+<h2 id="&#x5E38;&#x89C1;&#x4E8B;&#x4EF6;"><a name="&#x5E38;&#x89C1;&#x4E8B;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x89C1;&#x4E8B;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x5E38;&#x89C1;&#x4E8B;&#x4EF6;</h2>
+<h4 id="&#x9F20;&#x6807;&#x4E8B;&#x4EF6;"><a name="&#x9F20;&#x6807;&#x4E8B;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x9F20;&#x6807;&#x4E8B;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9F20;&#x6807;&#x4E8B;&#x4EF6;</h4>
+<ul>
+<li>mousedown &#x9F20;&#x6807;&#x8BBE;&#x5907;&#x6309;&#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1; mousedown &#x4E8B;&#x4EF6;</li>
+<li>mouseup &#x9F20;&#x6807;&#x8BBE;&#x5907;&#x4ECE;&#x6309;&#x4E0B;&#x7684;&#x5143;&#x7D20;&#x4E0A;&#x5F39;&#x8D77;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1; mouseup &#x4E8B;&#x4EF6;</li>
+<li>click &#x9F20;&#x6807;&#x70B9;&#x51FB;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1; click &#x4E8B;&#x4EF6;</li>
+<li>dblclick &#x9F20;&#x6807;&#x53CC;&#x51FB;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1; dblclick &#x4E8B;&#x4EF6;</li>
+<li>mouseover &#x9F20;&#x6807;&#x79FB;&#x52A8;&#x5230;&#x67D0;&#x5143;&#x7D20;&#x4E0A;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1; mouseover &#x4E8B;&#x4EF6;</li>
+<li>mouseout &#x9F20;&#x6807;&#x4ECE;&#x67D0;&#x5143;&#x7D20;&#x79BB;&#x5F00;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1; mouseout &#x4E8B;&#x4EF6;</li>
+<li>mousemove &#x9F20;&#x6807;&#x5728;&#x67D0;&#x5143;&#x7D20;&#x4E0A;&#x79FB;&#x52A8;&#x4F46;&#x672A;&#x79BB;&#x5F00;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1; mousemove &#x4E8B;&#x4EF6;</li>
+</ul>
+<h4 id="&#x952E;&#x76D8;&#x4E8B;&#x4EF6;"><a name="&#x952E;&#x76D8;&#x4E8B;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x952E;&#x76D8;&#x4E8B;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x952E;&#x76D8;&#x4E8B;&#x4EF6;</h4>
+<ul>
+<li>keypress &#x6309;&#x952E;&#x6309;&#x4E0B;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;</li>
+<li>keydown &#x6309;&#x952E;&#x6309;&#x4E0B;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x5728; keypress &#x4E8B;&#x4EF6;&#x4E4B;&#x524D;</li>
+<li>keyup &#x6309;&#x952E;&#x677E;&#x5F00;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;&#xFF0C;&#x5728; keydown &#x548C; keypress &#x4E8B;&#x4EF6;&#x4E4B;&#x540E;</li>
+</ul>
+<h4 id="&#x8868;&#x5355;&#x4E8B;&#x4EF6;"><a name="&#x8868;&#x5355;&#x4E8B;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x8868;&#x5355;&#x4E8B;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8868;&#x5355;&#x4E8B;&#x4EF6;</h4>
+<ul>
+<li>select &#x6587;&#x672C;&#x5B57;&#x6BB5;&#xFF08;input, textarea &#x7B49;&#xFF09;&#x7684;&#x6587;&#x672C;&#x88AB;&#x9009;&#x62E9;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;</li>
+<li>change &#x63A7;&#x4EF6;&#x5931;&#x53BB; input &#x7126;&#x70B9;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;&#xFF08;&#x6216;&#x8005;&#x503C;&#x88AB;&#x6539;&#x53D8;&#x7684;&#x65F6;&#x5019;&#xFF09;</li>
+<li>submit &#x8868;&#x5355;&#x63D0;&#x4EA4;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;</li>
+<li>reset &#x8868;&#x5355;&#x91CD;&#x7F6E;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;</li>
+<li>focus &#x5143;&#x7D20;&#x83B7;&#x5F97;&#x7126;&#x70B9;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;&#xFF0C;&#x901A;&#x5E38;&#x6765;&#x81EA;&#x9F20;&#x6807;&#x8BBE;&#x5907;&#x6216; Tab &#x5BFC;&#x822A;</li>
+<li>blur &#x5143;&#x7D20;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;&#xFF0C;&#x901A;&#x5E38;&#x6765;&#x81EA;&#x9F20;&#x6807;&#x8BBE;&#x5907;&#x6216; Tab &#x5BFC;&#x822A;</li>
+</ul>
+<h4 id="&#x5176;&#x5B83;&#x4E8B;&#x4EF6;"><a name="&#x5176;&#x5B83;&#x4E8B;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x5B83;&#x4E8B;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5176;&#x5B83;&#x4E8B;&#x4EF6;</h4>
+<ul>
+<li>load &#x9875;&#x9762;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;&#xFF08;&#x5305;&#x62EC;&#x5185;&#x5BB9;&#x3001;&#x56FE;&#x7247;&#x3001;frame&#x3001;object&#xFF09;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;</li>
+<li>resize &#x9875;&#x9762;&#x5927;&#x5C0F;&#x6539;&#x53D8;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;&#xFF08;&#x4F8B;&#x5982;&#x6D4F;&#x89C8;&#x5668;&#x7F29;&#x653E;&#xFF09;</li>
+<li>scroll &#x9875;&#x9762;&#x6EDA;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;</li>
+<li>unload &#x4ECE;&#x9875;&#x9762;&#x6216; frame &#x5220;&#x9664;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;&#xFF08;&#x4F8B;&#x5982;&#x79BB;&#x5F00;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#xFF09;</li>
+</ul>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x53C2;&#x8003;</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener" target="_blank">MDN - addEventListener</a>
+<a href="https://book.douban.com/subject/1231579/" target="_blank">JavaScript &#x6743;&#x5A01;&#x6307;&#x5357;(&#x7B2C; 5 &#x7248;)</a></p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../数据类型/readme.html" class="navigation navigation-prev " aria-label="Previous page: 数据类型">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../前端/获取屏幕宽度.html" class="navigation navigation-next " aria-label="Next page: 获取屏幕宽度">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"js 事件机制","level":"2.6","depth":1,"next":{"title":"获取屏幕宽度","level":"3.1","depth":1,"path":"前端/获取屏幕宽度.md","ref":"前端/获取屏幕宽度.md","articles":[]},"previous":{"title":"数据类型","level":"2.5","depth":1,"path":"js基础/数据类型/readme.md","ref":"js基础/数据类型/readme.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/java-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"js基础/js事件机制/readme.md","mtime":"2020-01-10T10:22:05.079Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-10T10:23:00.101Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

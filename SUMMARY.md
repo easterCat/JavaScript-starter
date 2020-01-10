@@ -8,6 +8,8 @@
 - [内存分配](js基础/内存分配/readme.md)
 - [浏览器工作原理](js基础/浏览器工作原理/readme.md)
 - [类和对象](js基础/类和对象/readme.md)
+- [数据类型](js基础/数据类型/readme.md)
+- [js 事件机制](js基础/js事件机制/readme.md)
 
 ## 前端
 

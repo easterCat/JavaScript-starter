@@ -1,0 +1,673 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据类型 · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../js事件机制/readme.html" />
+    
+    
+    <link rel="prev" href="../类和对象/readme.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">js 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../词法作用域/readme.html">
+            
+                <a href="../词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../内存分配/readme.html">
+            
+                <a href="../内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../浏览器工作原理/readme.html">
+            
+                <a href="../浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../类和对象/readme.html">
+            
+                <a href="../类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../js事件机制/readme.html">
+            
+                <a href="../js事件机制/readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../前端/获取屏幕宽度.html">
+            
+                <a href="../../前端/获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../前端/单元测试/readme.html">
+            
+                <a href="../../前端/单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">leetcode</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../leetcode/2.两数相加.html">
+            
+                <a href="../../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">scripto</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../scripto/简单的模板引擎.html">
+            
+                <a href="../../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../scripto/中间件模式.html">
+            
+                <a href="../../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../scripto/m长度的都是n的数组.html">
+            
+                <a href="../../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >数据类型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x7C7B;&#x578B;"><b>1.1. </b>&#x6570;&#x636E;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x5224;&#x65AD;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;"><b>1.2. </b>&#x5224;&#x65AD;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><b>1.3. </b>&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x663E;&#x5F0F;&#x8F6C;&#x6362;"><b>1.3.1. </b>&#x5F3A;&#x5236;&#x8F6C;&#x6362;(&#x663E;&#x5F0F;&#x8F6C;&#x6362;)</a></li><li><span class="title-icon "></span><a href="#&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><b>1.3.2. </b>&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x6570;&#x636E;&#x7C7B;&#x578B;"><a name="&#x6570;&#x636E;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x6570;&#x636E;&#x7C7B;&#x578B;</h2>
+<ul>
+<li>&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;&#x6570;&#x636E;&#x5B58;&#x5728;&#x6808;&#x4E2D;&#x3002;</li>
+<li>&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5806;&#x4E2D;&#x3002;</li>
+</ul>
+<h4 id="&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;primitive-type"><a name="&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;primitive-type" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;primitive-type"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;(primitive type)</h4>
+<pre class="language-"><code>graph LR
+&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;--&gt;undefined&#x672A;&#x5B9A;&#x4E49;
+&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;--&gt;string&#x5B57;&#x7B26;
+&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;--&gt;number&#x6570;&#x5B57;
+&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;--&gt;boolean&#x5E03;&#x5C14;
+&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;--&gt;null&#x7A7A;
+</code></pre><ul>
+<li>&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;&#x6309;&#x503C;&#x8BBF;&#x95EE;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#x4FDD;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x4E2D;&#x7684;&#x503C;</li>
+<li>&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;&#x5C06;&#x503C;&#x4FDD;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x4E4B;&#x4E2D;</li>
+<li>&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x8D4B;&#x7684;&#x4E00;&#x4E2A;&#x65B0;&#x503C;&#xFF0C;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x4E92;&#x4E0D;&#x5E72;&#x6270;</li>
+</ul>
+<h4 id="&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;object-type"><a name="&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;object-type" class="anchor-navigation-ex-anchor" href="#&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;object-type"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;(object type)</h4>
+<pre class="language-"><code>graph LR
+&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;--&gt;Object
+&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;--&gt;Array
+&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;--&gt;Function
+&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;--&gt;Date
+&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;--&gt;Error
+</code></pre><ul>
+<li>&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x662F;&#x4FDD;&#x5B58;&#x5728;&#x5806;&#x5185;&#x5B58;&#x7684;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</li>
+<li>&#x5806;&#x5185;&#x5B58;&#x5E76;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#xFF0C;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#x64CD;&#x4F5C;&#x7684;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;</li>
+<li>&#x53EF;&#x4EE5;&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x6307;&#x5411;&#x540C;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x6539;&#x53D8;&#x503C;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x6307;&#x5411;&#x90FD;&#x6539;&#x53D8;</li>
+</ul>
+<h2 id="&#x5224;&#x65AD;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;"><a name="&#x5224;&#x65AD;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x5224;&#x65AD;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5224;&#x65AD;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</h2>
+<h4 id="typeof"><a name="typeof" class="anchor-navigation-ex-anchor" href="#typeof"><i class="fa fa-link" aria-hidden="true"></i></a>typeof</h4>
+<ul>
+<li>typeof &#x8FD4;&#x56DE;&#x7684;&#x7C7B;&#x578B;&#x90FD;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</li>
+<li>typeof &#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</li>
+<li>typeof &#x5728;&#x5224;&#x65AD;&#x975E; object &#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x65F6;&#x5341;&#x5206;&#x65B9;&#x4FBF;</li>
+</ul>
+<h4 id="instanceof"><a name="instanceof" class="anchor-navigation-ex-anchor" href="#instanceof"><i class="fa fa-link" aria-hidden="true"></i></a>instanceof</h4>
+<ul>
+<li>instanceof &#x5224;&#x65AD;&#x5DF2;&#x77E5;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>instanceof &#x5BF9;&#x7C7B;&#x578B;&#x7684;&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;</li>
+</ul>
+<h4 id="contrucetor"><a name="contrucetor" class="anchor-navigation-ex-anchor" href="#contrucetor"><i class="fa fa-link" aria-hidden="true"></i></a>contrucetor</h4>
+<ul>
+<li>construcetor &#x662F;&#x6839;&#x636E;&#x5BF9;&#x8C61;&#x7684; contructor &#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x5224;&#x65AD;</li>
+</ul>
+<h4 id="prototype"><a name="prototype" class="anchor-navigation-ex-anchor" href="#prototype"><i class="fa fa-link" aria-hidden="true"></i></a>prototype</h4>
+<ul>
+<li>prototype &#x662F;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x65B9;&#x6CD5;,&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;,&#x9664;&#x4E86; null&#x3001;undefined &#x4E4B;&#x5916;&#x4EFB;&#x4F55;&#x503C;&#x90FD;&#x6709; toString()&#x65B9;&#x6CD5;</li>
+</ul>
+<pre class="language-"><code>window.onload = function () {
+var a = &apos;abc&apos;;
+var b = 10;
+var c = true;
+var d = undefined;
+var e = null;
+var f = new Object();
+var g = function () { alert(&apos;123&apos;); };
+var h = new Error();
+var i = new Date();
+var j = [1,2,3];
+//typeof
+console.log(&quot;typeof&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x5224;&#x65AD;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&quot;);
+console.log(typeof a);//string
+console.log(typeof b);//number
+console.log(typeof c);//boolean
+console.log(typeof d);//undefined
+console.log(typeof e);//object
+console.log(typeof f);//object
+console.log(typeof g);//function
+console.log(typeof h);//object
+console.log(typeof i);//object
+console.log(typeof j);//object
+console.log(typeof a === &apos;string&apos;);//true
+//instanceof
+console.log(&quot;instanceof&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x5224;&#x65AD;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&quot;);
+console.log(e instanceof Object);//false???
+console.log(f instanceof Object);//true
+console.log(g instanceof Function);//true
+console.log(h instanceof Error);//true
+console.log(i instanceof Date);//true
+console.log(j instanceof Array);//true
+//contructor
+console.log(&quot;construetor&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x5224;&#x65AD;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&quot;);
+console.log(f.constructor === Object);//true
+console.log(g.constructor === Function);//true
+console.log(i.constructor === Date);//true
+console.log(j.constructor === Array);//true
+console.log(f.constructor);//function Object() {}
+console.log(g.constructor);//function Function() {}
+console.log(i.constructor);//function Date() {}
+console.log(j.constructor);//function Array() {}
+//prototype
+console.log(&quot;prototype&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x5224;&#x65AD;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&quot;);
+console.log(Object.prototype.toString.call(a) === &apos;[object String]&apos;);//true
+console.log(Object.prototype.toString.call(b));//[object Number]
+console.log(Object.prototype.toString.call(c));//[object Boolean]
+console.log(Object.prototype.toString.call(d));//[object Undefined]
+console.log(Object.prototype.toString.call(e));//[object Null]
+console.log(Object.prototype.toString.call(f));//[object Object]
+console.log(Object.prototype.toString.call(g));//[object Function]
+console.log(Object.prototype.toString.call(h));//[object Error]
+console.log(Object.prototype.toString.call(i));//[object Date]
+console.log(Object.prototype.toString.call(/a/g));//[object RegExp]
+console.log(Object.prototype.toString.call(j));//[object Array]
+console.log(Object.prototype.toString.call(Math)); // [object Math]
+console.log(Object.prototype.toString.call(JSON)); // [object JSON]
+console.log(Object.prototype.toString.call(arguments)); // [object Arguments]
+};
+</code></pre><h2 id="&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><a name="&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h2>
+<h3 id="&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x663E;&#x5F0F;&#x8F6C;&#x6362;"><a name="&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x663E;&#x5F0F;&#x8F6C;&#x6362;" class="anchor-navigation-ex-anchor" href="#&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x663E;&#x5F0F;&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x5F3A;&#x5236;&#x8F6C;&#x6362;(&#x663E;&#x5F0F;&#x8F6C;&#x6362;)</h3>
+<h4 id="parseint-&#x5B57;&#x7B26;&#x8F6C;&#x6574;&#x578B;"><a name="parseint-&#x5B57;&#x7B26;&#x8F6C;&#x6574;&#x578B;" class="anchor-navigation-ex-anchor" href="#parseint-&#x5B57;&#x7B26;&#x8F6C;&#x6574;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>parseInt &#x5B57;&#x7B26;&#x8F6C;&#x6574;&#x578B;</h4>
+<p>&#x8F6C;&#x6574;&#x6570;&#xFF0C;&#x5E72;&#x6389;&#x5C0F;&#x6570;
+&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x627E;&#x80FD;&#x8F6C;&#x7684;&#x8F6C;
+&#x8F6C;&#x6362;&#x5931;&#x8D25; &#x8FD4;&#x56DE; NaN
+.&#x5FFD;&#x7565;&#x5B57;&#x7B26;&#x524D;&#x5BFC; 0
+.&#x5FFD;&#x7565;&#x5B57;&#x7B26;&#x524D;&#x5BFC;&#x7A7A;&#x683C;
+8 &#x8FDB;&#x5236;&#x8F6C; 10</p>
+<h4 id="parsefloat-&#x6574;&#x578B;&#x8F6C;&#x5B57;&#x7B26;"><a name="parsefloat-&#x6574;&#x578B;&#x8F6C;&#x5B57;&#x7B26;" class="anchor-navigation-ex-anchor" href="#parsefloat-&#x6574;&#x578B;&#x8F6C;&#x5B57;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>parseFloat &#x6574;&#x578B;&#x8F6C;&#x5B57;&#x7B26;</h4>
+<p>&#x8F6C;&#x5C0F;&#x6570;
+&#x9047;&#x6574;&#x6570;&#xFF0C;&#x8F6C;&#x6574;&#x6570;
+&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x627E;&#x80FD;&#x8F6C;&#x7684;&#x8F6C;
+&#x8F6C;&#x6362;&#x5931;&#x8D25; &#x8FD4;&#x56DE; NaN
+&#x5FFD;&#x7565;&#x5B57;&#x7B26;&#x524D;&#x5BFC; 0
+&#x5FFD;&#x7565;&#x5B57;&#x7B26;&#x524D;&#x5BFC;&#x7A7A;&#x683C;
+8 &#x8FDB;&#x5236;&#x8F6C; 10</p>
+<h4 id="number"><a name="number" class="anchor-navigation-ex-anchor" href="#number"><i class="fa fa-link" aria-hidden="true"></i></a>Number</h4>
+<p>&#x4E25;&#x683C;&#x578B;&#x8F6C;&#x6362;&#xFF1A; &#x5148;&#x627E;&#x4E0D;&#x80FD;&#x8F6C;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x627E;&#x5230;&#x8FD4;&#x56DE; NaN
+&#x5176;&#x4ED6;&#x7279;&#x5F81;&#x540C; parseFloat</p>
+<h3 id="&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><a name="&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;" class="anchor-navigation-ex-anchor" href="#&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. &#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h3>
+<ul>
+<li>&quot;+&quot;&#x8FD0;&#x7B97;&#x7B26;&#x662F;&#x62FC;&#x63A5;,&#x5B57;&#x7B26;&#x62FC;&#x63A5;&#x4E0A;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x90FD;&#x662F;&#x5B57;&#x7B26; &#x5C06; &#x6570;&#x5B57; -&gt; &#x5B57;&#x7B26; 200 + &apos;3&apos;</li>
+<li>&quot; - &quot;, &quot; * &quot;, &quot; / &quot;, &quot; % &quot;, &quot;++&quot;, &quot; -- &quot; &#x5C06; &#x5B57;&#x7B26;-&gt; &#x6570;&#x5B57; &apos;200&apos; - 3</li>
+<li><blockquote>
+<p>&lt; &#x6570;&#x5B57;&#x7684;&#x6BD4;&#x8F83; &#x3001;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6BD4;&#x8F83;</p>
+</blockquote>
+</li>
+<li>&quot;!&quot;&#x5C06;&#x53F3;&#x8FB9;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6210;&#x5E03;&#x5C14;&#x503C;&#x5E76;&#x4E14;&#x53D6;&#x53CD;</li>
+<li>&quot;==&quot;&#x53EA;&#x8981;&#x5185;&#x5BB9;&#x76F8;&#x7B49;&#x5C31;&#x76F8;&#x7B49; &#x800C; &quot;===&quot;&#x5185;&#x5BB9;&#x76F8;&#x7B49;&#x5E76;&#x4E14;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8981;&#x76F8;&#x7B49;&#x624D;&#x7B97;&#x76F8;&#x7B49;</li>
+</ul>
+<pre class="language-"><code>window.onload = function () {
+//&#x5F3A;&#x5236;&#x8F6C;&#x6362;
+var a = &apos;+100.5&apos;;
+var b = true;
+var c = &apos; &apos;;
+var d = [1];
+var d2 = [1,2];
+var e = null;
+var f = 200;
+var g = &apos;12.34&#x5143;&apos;;
+var h = {};
+var i = undefined;
+var j = function() {alert(&quot;123&quot;);};
+console.log((a+100));//&apos;+100.5100&apos; string
+console.log(Number(a));//100.5 number
+console.log(Number(b));//1
+console.log(Number(c));//0
+console.log(Number(d));//1
+console.log(Number(d2));//NaN
+console.log(Number(e));//0
+console.log(Number(h));//NaN
+console.log(Number(i));//NaN
+console.log(Number(j));//NaN
+console.log(parseInt(a));//100 number
+console.log(parseFloat(a));//100.5 number
+console.log(parseFloat(f));//200 number
+console.log(parseFloat(g));//12.34 number
+//&#x9690;&#x5F0F;&#x8F6C;&#x6362;
+console.log(&quot;&#x5F00;&#x59CB;&#x9690;&#x5F0F;&#x8F6C;&#x6362;&quot;);
+var a = &apos;100&apos;;
+var b = 50;
+var c = &apos;200&apos;;
+var d = 100;
+console.log(typeof (a+b));//string 10050
+console.log(typeof (b-a));//number -50
+console.log(typeof (b*a));//number 5000
+console.log(typeof (b/a));//number 0.5
+console.log(typeof (b%a));//number 50
+console.log(typeof ++a);//number 101
+console.log(a&gt;b);
+console.log(typeof !b);
+console.log(typeof (a==b));
+};
+</code></pre></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../类和对象/readme.html" class="navigation navigation-prev " aria-label="Previous page: 类和对象">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../js事件机制/readme.html" class="navigation navigation-next " aria-label="Next page: js 事件机制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据类型","level":"2.5","depth":1,"next":{"title":"js 事件机制","level":"2.6","depth":1,"path":"js基础/js事件机制/readme.md","ref":"js基础/js事件机制/readme.md","articles":[]},"previous":{"title":"类和对象","level":"2.4","depth":1,"path":"js基础/类和对象/readme.md","ref":"js基础/类和对象/readme.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/java-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"js基础/数据类型/readme.md","mtime":"2020-01-10T10:19:34.494Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-10T10:23:00.101Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

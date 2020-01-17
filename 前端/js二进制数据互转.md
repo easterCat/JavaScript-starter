@@ -1,4 +1,6 @@
 
+## 
+
 *   `Blob`是现代浏览器中提供的能够装载二进制流（文件）的容器对象。
 *   `ArrayBuffer`是能够装载`Blob`（二进制流）数据的原始缓冲区，`ArrayBuffer`不能直接通过js读写。
 *   `TypeArray`是`ArrayBuffer`的一种类数组的视图对象，可以将`ArrayBuffer`按不同字节数读取成类似数组形式的数据类型，从而可以向读写数组元素一样，实现对`ArrayBuffer`数据的读写。常见的`TypeArray`包括`Uint8Array`,`Uint16Array`,`Uint32Array`等。[点这里查看所有的TypedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)

@@ -60,7 +60,7 @@ var ratio = getPixelRatio(context);
 
 2 倍屏幕下示例代码：
 
-```HTML
+```html
 <canvas width="640" height="800" style="width:320px; height:400px"></canvas>
 ```
 
@@ -68,7 +68,7 @@ canvas 的实际大小的 640px × 800px，但是实际渲染到页面的大小�
 
 那么在 3 倍屏幕下就是：
 
-```HTML
+```html
 <canvas width="960" height="1200" style="width:320px; height:400px"></canvas>
 ```
 

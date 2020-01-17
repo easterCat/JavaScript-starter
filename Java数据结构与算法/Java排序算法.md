@@ -4,7 +4,7 @@
 
 ## 冒泡排序
 
-````
+```
 // 冒泡排序
 public class BubbleSort {
     /**
@@ -178,4 +178,4 @@ public class main {
 ## doc
 
 - [avaScript 数据结构与算法之美 - 强烈推荐 GitHub 上值得前端学习的数据结构与算法项目](https://github.com/biaochenxuying/blog/issues/43)
-````
+```

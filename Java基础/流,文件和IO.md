@@ -20,7 +20,7 @@ Java 的控制台输入由 System.in 完成。
 
 下面是创建 BufferedReader 的基本语法：
 
-````
+```
 BufferedReader br = new BufferedReader(new
                       InputStreamReader(System.in));
 ```
@@ -523,4 +523,4 @@ public class DeleteFileDemo {
         folder.delete();
     }
 }
-````
+```

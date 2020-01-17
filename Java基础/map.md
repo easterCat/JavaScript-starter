@@ -16,7 +16,7 @@
 
 在 Java 中，如果一个 Java 对象可以在内部持有若干其他 Java 对象，并对外提供访问接口，我们把这种 Java 对象称为集合。很显然，Java 的数组可以看作是一种集合
 
-````
+```
 String[] ss = new String[10]; // 可以持有10个String对象
 ss[0] = "Hello"; // 可以放入String对象
 String first = ss[0]; // 可以获取String对象
@@ -57,4 +57,4 @@ List<String> list = new ArrayList<>(); // 只能放入String类型
 还有一小部分接口是遗留接口，也不应该继续使用：
 
 - Enumeration：已被 Iterator 取代。
-````
+```

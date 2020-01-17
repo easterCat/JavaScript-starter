@@ -6,7 +6,7 @@ switch case 语句判断一个变量与一系列值中某个值是否相等，�
 
 switch case 语句语法格式如下：
 
-````
+```
 switch(expression){
     case value :
        //语句
@@ -148,4 +148,4 @@ public class Test {
 1
 2
 3
-````
+```

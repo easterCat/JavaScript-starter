@@ -21,7 +21,7 @@ List 的行为和数组几乎完全相同：List 内部按照放入元素的先�
 
 使用 List 时，我们要关注 List 接口的规范。List 接口允许我们添加重复的元素，即 List 内部的元素可以重复,List 还允许添加 null.
 
-````
+```
 import java.util.ArrayList;
 import java.util.List;
 
@@ -171,4 +171,4 @@ public class Main {
         System.out.println(list.indexOf("555"));
     }
 }
-````
+```

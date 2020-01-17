@@ -814,291 +814,309 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7EBF;&#x6027;&#x8868;&#x6570;&#x7EC4;&#x961F;&#x5217;&#x6808;&#x94FE;&#x8868;"><b>1. </b>&#x7EBF;&#x6027;&#x8868;(&#x6570;&#x7EC4;,&#x961F;&#x5217;,&#x6808;,&#x94FE;&#x8868;)</a></li><ul><li><span class="title-icon "></span><a href="#&#x6570;&#x7EC4;"><b>1.1. </b>&#x6570;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#&#x6808;"><b>1.2. </b>&#x6808;</a></li><li><span class="title-icon "></span><a href="#doc"><b>1.3. </b>doc</a></li></ul></ul></div><a href="#&#x7EBF;&#x6027;&#x8868;&#x6570;&#x7EC4;&#x961F;&#x5217;&#x6808;&#x94FE;&#x8868;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7EBF;&#x6027;&#x8868;&#x6570;&#x7EC4;&#x961F;&#x5217;&#x6808;&#x94FE;&#x8868;"><a name="&#x7EBF;&#x6027;&#x8868;&#x6570;&#x7EC4;&#x961F;&#x5217;&#x6808;&#x94FE;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x7EBF;&#x6027;&#x8868;&#x6570;&#x7EC4;&#x961F;&#x5217;&#x6808;&#x94FE;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7EBF;&#x6027;&#x8868;(&#x6570;&#x7EC4;,&#x961F;&#x5217;,&#x6808;,&#x94FE;&#x8868;)</h1>
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7EBF;&#x6027;&#x8868;&#x6570;&#x7EC4;&#x961F;&#x5217;&#x6808;&#x94FE;&#x8868;"><b>1. </b>&#x7EBF;&#x6027;&#x8868;(&#x6570;&#x7EC4;,&#x961F;&#x5217;,&#x6808;,&#x94FE;&#x8868;)</a></li><ul><li><span class="title-icon "></span><a href="#&#x6570;&#x7EC4;"><b>1.1. </b>&#x6570;&#x7EC4;</a></li></ul></ul></div><a href="#&#x7EBF;&#x6027;&#x8868;&#x6570;&#x7EC4;&#x961F;&#x5217;&#x6808;&#x94FE;&#x8868;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7EBF;&#x6027;&#x8868;&#x6570;&#x7EC4;&#x961F;&#x5217;&#x6808;&#x94FE;&#x8868;"><a name="&#x7EBF;&#x6027;&#x8868;&#x6570;&#x7EC4;&#x961F;&#x5217;&#x6808;&#x94FE;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x7EBF;&#x6027;&#x8868;&#x6570;&#x7EC4;&#x961F;&#x5217;&#x6808;&#x94FE;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7EBF;&#x6027;&#x8868;(&#x6570;&#x7EC4;,&#x961F;&#x5217;,&#x6808;,&#x94FE;&#x8868;)</h1>
 <h2 id="&#x6570;&#x7EC4;"><a name="&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x6570;&#x7EC4;</h2>
 <p>&#x5728; Java &#x4E2D;&#xFF0C;&#x6570;&#x7EC4;&#x662F;&#x7528;&#x6765;&#x5B58;&#x653E;&#x540C;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x6CE8;&#x610F;&#x53EA;&#x80FD;&#x5B58;&#x653E;&#x540C;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
-<pre class="language-"><code>//&#x53EA;&#x58F0;&#x660E;&#x4E86;&#x7C7B;&#x578B;&#x548C;&#x957F;&#x5EA6;
-&#x6570;&#x636E;&#x7C7B;&#x578B; []  &#x6570;&#x7EC4;&#x540D;&#x79F0; = new &#x6570;&#x636E;&#x7C7B;&#x578B;[&#x6570;&#x7EC4;&#x957F;&#x5EA6;];
-//&#x58F0;&#x660E;&#x4E86;&#x7C7B;&#x578B;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x8D4B;&#x503C;&#xFF0C;&#x5927;&#x5C0F;&#x7531;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x51B3;&#x5B9A;
-&#x6570;&#x636E;&#x7C7B;&#x578B; [] &#x6570;&#x7EC4;&#x540D;&#x79F0; = {&#x6570;&#x7EC4;&#x5143;&#x7D20;1&#xFF0C;&#x6570;&#x7EC4;&#x5143;&#x7D20;2&#xFF0C;......}
-</code></pre><p>&#x6A21;&#x62DF; Array</p>
-<pre class="language-"><code>public class Array {
-    private int[] intArray;
-    private int index;
-    public int length;
+<pre class="language-"><code class="lang-java"><span class="token comment">//&#x53EA;&#x58F0;&#x660E;&#x4E86;&#x7C7B;&#x578B;&#x548C;&#x957F;&#x5EA6;</span>
+&#x6570;&#x636E;&#x7C7B;&#x578B; <span class="token punctuation">[</span><span class="token punctuation">]</span>  &#x6570;&#x7EC4;&#x540D;&#x79F0; <span class="token operator">=</span> <span class="token keyword">new</span> &#x6570;&#x636E;&#x7C7B;&#x578B;<span class="token punctuation">[</span>&#x6570;&#x7EC4;&#x957F;&#x5EA6;<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">//&#x58F0;&#x660E;&#x4E86;&#x7C7B;&#x578B;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x8D4B;&#x503C;&#xFF0C;&#x5927;&#x5C0F;&#x7531;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x51B3;&#x5B9A;</span>
+&#x6570;&#x636E;&#x7C7B;&#x578B; <span class="token punctuation">[</span><span class="token punctuation">]</span> &#x6570;&#x7EC4;&#x540D;&#x79F0; <span class="token operator">=</span> <span class="token punctuation">{</span>&#x6570;&#x7EC4;&#x5143;&#x7D20;<span class="token number">1</span>&#xFF0C;&#x6570;&#x7EC4;&#x5143;&#x7D20;<span class="token number">2</span>&#xFF0C;<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+```java
 
-    public Array(int max) {
-        this.length = max;
-        this.intArray = new int[max];
-        this.index = 0;
-    }
+&#x6A21;&#x62DF; <span class="token class-name">Array</span>
 
-    // &#x5411;&#x6700;&#x540E;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5143;&#x7D20;
-    public void push(int value) {
-        intArray[index] = value;
-        index++;
-    }
+```java
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Array</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> intArray<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> index<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> length<span class="token punctuation">;</span>
 
-    // &#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5220;&#x9664;
-    public boolean pop() {
-        // &#x540E;&#x9762;&#x7684;&#x6570;&#x636E;&#x5F80;&#x524D;&#x79FB;
-        index--;
-        return true;
-    }
+    <span class="token keyword">public</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token keyword">int</span> max<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>length <span class="token operator">=</span> max<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>intArray <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>max<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    // &#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5220;&#x9664;
-    public boolean shift() {
-        for (int i = 1; i &lt; index; i++) {
-            intArray[i - 1] = intArray[i];
-        }
-        index--;
-        return true;
-    }
+    <span class="token comment">// &#x5411;&#x6700;&#x540E;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">int</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        intArray<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+        index<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    // &#x5F00;&#x5934;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5143;&#x7D20;
-    public void unshift(int value) {
-        int[] newArray = new int[this.length + 1];
-        for (int i = 0; i &lt; index; i++) {
-            newArray[i] = intArray[i];
-        }
-        for (int k = 0; k &lt; index; k++) {
-            intArray[k + 1] = newArray[k];
-        }
-        intArray[0] = value;
-        index++;
-    }
+    <span class="token comment">// &#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5220;&#x9664;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x540E;&#x9762;&#x7684;&#x6570;&#x636E;&#x5F80;&#x524D;&#x79FB;</span>
+        index<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    // &#x67E5;&#x627E;&#x4E0B;&#x6807;&#x6240;&#x5728;&#x5185;&#x5BB9;
-    public int find(int key) {
-        int i;
-        for (i = 0; i &lt; index; i++) {
-            if (intArray[i] == key) {
-                break;
-            }
-        }
-        if (i == index) {
-            return -1;
-        }
-        return 1;
-    }
+    <span class="token comment">// &#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5220;&#x9664;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            intArray<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> intArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        index<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    // &#x5220;&#x9664;&#x5F53;&#x524D;&#x4E0B;&#x6807;&#x6240;&#x5728;&#x5185;&#x5BB9;
-    public boolean remove(int key) {
-        int i = this.find(key);
-        if (i == -1) {
-            return false;
-        }
+    <span class="token comment">// &#x5F00;&#x5934;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">unshift</span><span class="token punctuation">(</span><span class="token keyword">int</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> newArray <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            newArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> intArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            intArray<span class="token punctuation">[</span>k <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> newArray<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        intArray<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+        index<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-        for (int k = 0; k &lt; index; k++) {
-            intArray[k] = intArray[k - 1];
-        }
-        index--;
-        return true;
-    }
+    <span class="token comment">// &#x67E5;&#x627E;&#x4E0B;&#x6807;&#x6240;&#x5728;&#x5185;&#x5BB9;</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>intArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    // &#x66F4;&#x65B0;&#x4E0B;&#x6807;&#x6240;&#x5728;&#x5185;&#x5BB9;
-    public boolean update(int key, int value) {
-        intArray[key] = value;
-        return true;
-    }
+    <span class="token comment">// &#x5220;&#x9664;&#x5F53;&#x524D;&#x4E0B;&#x6807;&#x6240;&#x5728;&#x5185;&#x5BB9;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-    // &#x6253;&#x5370;&#x6570;&#x7EC4;
-    public void show() {
-        for (int i = 0; i &lt; index; i++) {
-            System.out.print(intArray[i] + &quot; &quot;);
-        }
-        System.out.print(&quot;\n&quot;);
-    }
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            intArray<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> intArray<span class="token punctuation">[</span>k <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        index<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    // &#x6570;&#x7EC4;&#x4E2D;&#x662F;&#x5426;&#x5305;&#x542B;&#x67D0;&#x4E2A;&#x503C;
-    public boolean include(int value) {
-        boolean result = false;
-        for (int i = 0; i &lt; index; i++) {
-            if (intArray[i] == value) {
-                result = true;
-            }
-        }
-        return result;
-    }
+    <span class="token comment">// &#x66F4;&#x65B0;&#x4E0B;&#x6807;&#x6240;&#x5728;&#x5185;&#x5BB9;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">,</span> <span class="token keyword">int</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        intArray<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    // &#x5192;&#x6CE1;&#x6392;&#x5E8F;
-    public void bubbleSort() {
-        for (int i = 0; i &lt; index; i++) {
-            for (int j = 0; j &lt; index; j++) {
-                if (intArray[i] &lt; intArray[j]) {
-                    int tmp = intArray[j];
-                    intArray[j] = intArray[i];
-                    intArray[i] = tmp;
-                }
-            }
-        }
-        this.show();
-    }
+    <span class="token comment">// &#x6253;&#x5370;&#x6570;&#x7EC4;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>intArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">&quot; &quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    // &#x9009;&#x62E9;&#x6392;&#x5E8F;
-    public void selectSort() {
-        for (int i = 0; i &lt; index; i++) {
-            for (int j = i; i &lt; index; i++) {
-                if (intArray[j] &gt; intArray[j + 1]) {
-                    int tmp = intArray[j];
-                    intArray[j] = intArray[j + 1];
-                    intArray[j + 1] = tmp;
-                }
-            }
-        }
-        this.show();
-    }
-}
-</code></pre><p>Array &#x7684;&#x4F7F;&#x7528;</p>
-<pre class="language-"><code>public class ArrayTest {
-    public static void main(String[] args) {
-        Array arr = new Array(20);
-        arr.push(32);
-        arr.push(122);
-        arr.push(25);
-        arr.push(53);
-        arr.push(3);
-        arr.push(61);
-        arr.push(152);
-        arr.push(31);
-        arr.push(68);
-        arr.push(88);
-        arr.push(1000); // &#x5C3E;&#x90E8;&#x63A8;&#x5165;1000
-        arr.unshift(0); // &#x5934;&#x90E8;&#x63A8;&#x5165;0
-        arr.pop(); // &#x5C3E;&#x90E8;&#x5220;&#x9664;
-        arr.shift(); // &#x5934;&#x90E8;&#x5220;&#x9664;
-        arr.show();
-        System.out.println(arr.find(152) == 1 ? &quot;&#x5B58;&#x5728;&quot; : &quot;&#x4E0D;&#x5B58;&#x5728;&quot;);
-        System.out.println(arr.length);
-        arr.update(6, 888);
-        arr.show();
-        System.out.println(arr.include(88) ? &quot;&#x5B58;&#x5728;&quot; : &quot;&#x4E0D;&#x5B58;&#x5728;&quot;);
-        System.out.println(&quot;&#x5192;&#x6CE1;&#x6392;&#x5E8F;&quot;);
-        arr.bubbleSort();
-    }
-}
-</code></pre><h2 id="&#x6808;"><a name="&#x6808;" class="anchor-navigation-ex-anchor" href="#&#x6808;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x6808;</h2>
-<ul>
-<li>&#x6808;&#xFF08;stack&#xFF09;&#x53C8;&#x79F0;&#x4E3A;&#x5806;&#x6808;&#x6216;&#x5806;&#x53E0;&#xFF0C;&#x6808;&#x4F5C;&#x4E3A;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5B83;&#x9075;&#x5FAA;&#x540E;&#x5165;&#x5148;&#x51FA;&#xFF08;LIFO&#xFF09;&#x539F;&#x5219;&#xFF0C;&#x5148;&#x8FDB;&#x5165;&#x7684;&#x6570;&#x636E;&#x88AB;&#x538B;&#x5165;&#x6808;&#x5E95;&#xFF0C;&#x6700;&#x540E;&#x7684;&#x6570;&#x636E;&#x5728;&#x6808;&#x9876;</li>
-<li>&#x6808;&#xFF08;stack&#xFF09;&#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x6216;&#x5F85;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x4FDD;&#x5B58;&#x5728;&#x6808;&#x7684;&#x672B;&#x5C3E;&#xFF0C;&#x79F0;&#x4F5C;&#x6808;&#x9876;&#xFF0C;&#x53E6;&#x4E00;&#x7AEF;&#x5C31;&#x53EB;&#x6808;&#x5E95;&#x3002;</li>
-<li>&#x6808;&#xFF08;stack&#xFF09;&#xFF0C;&#x65B0;&#x5143;&#x7D20;&#x90FD;&#x9760;&#x8FD1;&#x6808;&#x9876;&#xFF0C;&#x65E7;&#x5143;&#x7D20;&#x90FD;&#x63A5;&#x8FD1;&#x6808;&#x5E95;&#x3002;</li>
-<li>&#x4ECE;&#x6808;&#x7684;&#x64CD;&#x4F5C;&#x7279;&#x6027;&#x6765;&#x770B;&#xFF0C;&#x662F;&#x4E00;&#x79CD; &#x64CD;&#x4F5C;&#x53D7;&#x9650;&#x7684;&#x7EBF;&#x6027;&#x8868;&#xFF0C;&#x53EA;&#x5141;&#x8BB8;&#x5728;&#x4E00;&#x7AEF;&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;&#x6570;&#x636E;&#x3002;</li>
-<li>&#x4E0D;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x5143;&#x7D20;&#x7684;&#x6808;&#x79F0;&#x4E3A;&#x7A7A;&#x6808;&#x3002;</li>
-<li>java &#x4E2D; Stack &#x662F; Vector &#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x7C7B;&#xFF0C;&#x53EA;&#x5B9A;&#x4E49;&#x4E86;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x6808;&#x3002;</li>
-<li>&#x6808;&#x662F;&#x5143;&#x7D20;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x5176;&#x5305;&#x542B;&#x4E86;&#x4E24;&#x4E2A;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#xFF1A;push &#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5C06;&#x5143;&#x7D20;&#x538B;&#x5165;&#x6808;&#xFF0C;pop &#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x5C06;&#x6808;&#x9876;&#x5143;&#x7D20;&#x79FB;&#x9664;&#x3002;</li>
-<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;:</li>
-<li>&#x7D22;&#x5F15;: O(n)</li>
-<li>&#x641C;&#x7D22;: O(n)</li>
-<li>&#x63D2;&#x5165;: O(1)</li>
-<li>&#x79FB;&#x9664;: O(1)</li>
-</ul>
-<p>&#x6A21;&#x62DF;&#x6808;stack</p>
-<pre class="language-"><code>import java.util.Arrays;
+    <span class="token comment">// &#x6570;&#x7EC4;&#x4E2D;&#x662F;&#x5426;&#x5305;&#x542B;&#x67D0;&#x4E2A;&#x503C;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">include</span><span class="token punctuation">(</span><span class="token keyword">int</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">boolean</span> result <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>intArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                result <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-public class Stack {
-    private Object[] array;
-    private int size;
-    public int top;
+    <span class="token comment">// &#x5192;&#x6CE1;&#x6392;&#x5E8F;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">bubbleSort</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>intArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> intArray<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">int</span> tmp <span class="token operator">=</span> intArray<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    intArray<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> intArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    intArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    public Stack(int size) {
-        if (size &gt; 0) {
-            this.array = new Object[size];
-            this.size = size;
-            top = -1;
-        } else {
-            throw new RuntimeException(&quot;size=&quot; + size);
-        }
-    }
+    <span class="token comment">// &#x9009;&#x62E9;&#x6392;&#x5E8F;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">selectSort</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>intArray<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> intArray<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">int</span> tmp <span class="token operator">=</span> intArray<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    intArray<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> intArray<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    intArray<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+```java
 
-    public void push(Object value) {
-        grow();
-        array[++top] = value;
-    }
+<span class="token class-name">Array</span> &#x7684;&#x4F7F;&#x7528;
 
-    // &#x5220;&#x9664;&#x6808;&#x9876;&#x5143;&#x7D20;
-    public Object pop() {
-        Object result = peek();
-        array[top--] = null;
-        return result;
-    }
+```java
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArrayTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Array</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">122</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">53</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">61</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">152</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">31</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">68</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">88</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x5C3E;&#x90E8;&#x63A8;&#x5165;1000</span>
+        arr<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x5934;&#x90E8;&#x63A8;&#x5165;0</span>
+        arr<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x5C3E;&#x90E8;&#x5220;&#x9664;</span>
+        arr<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x5934;&#x90E8;&#x5220;&#x9664;</span>
+        arr<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token number">152</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token string">&quot;&#x5B58;&#x5728;&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;&#x4E0D;&#x5B58;&#x5728;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">888</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">include</span><span class="token punctuation">(</span><span class="token number">88</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&quot;&#x5B58;&#x5728;&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;&#x4E0D;&#x5B58;&#x5728;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5192;&#x6CE1;&#x6392;&#x5E8F;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">.</span><span class="token function">bubbleSort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+```java
 
-    // &#x67E5;&#x770B;&#x6808;&#x9876;&#x5143;&#x7D20;
-    public Object peek() {
-        if (top != -1) {
-            return array[top];
-        } else {
-            throw new RuntimeException(&quot;stack is null&quot;);
-        }
-    }
+## &#x6808;
 
-    public void grow() {
-        if (top == size - 1) {
-            size = size &lt;&lt; 1;
-            array = Arrays.copyOf(array, size);
-        }
-    }
+<span class="token operator">*</span> &#x6808;&#xFF08;stack&#xFF09;&#x53C8;&#x79F0;&#x4E3A;&#x5806;&#x6808;&#x6216;&#x5806;&#x53E0;&#xFF0C;&#x6808;&#x4F5C;&#x4E3A;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5B83;&#x9075;&#x5FAA;&#x540E;&#x5165;&#x5148;&#x51FA;&#xFF08;LIFO&#xFF09;&#x539F;&#x5219;&#xFF0C;&#x5148;&#x8FDB;&#x5165;&#x7684;&#x6570;&#x636E;&#x88AB;&#x538B;&#x5165;&#x6808;&#x5E95;&#xFF0C;&#x6700;&#x540E;&#x7684;&#x6570;&#x636E;&#x5728;&#x6808;&#x9876;
+<span class="token operator">*</span> &#x6808;&#xFF08;stack&#xFF09;&#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x6216;&#x5F85;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x4FDD;&#x5B58;&#x5728;&#x6808;&#x7684;&#x672B;&#x5C3E;&#xFF0C;&#x79F0;&#x4F5C;&#x6808;&#x9876;&#xFF0C;&#x53E6;&#x4E00;&#x7AEF;&#x5C31;&#x53EB;&#x6808;&#x5E95;&#x3002;
+<span class="token operator">*</span> &#x6808;&#xFF08;stack&#xFF09;&#xFF0C;&#x65B0;&#x5143;&#x7D20;&#x90FD;&#x9760;&#x8FD1;&#x6808;&#x9876;&#xFF0C;&#x65E7;&#x5143;&#x7D20;&#x90FD;&#x63A5;&#x8FD1;&#x6808;&#x5E95;&#x3002;
+<span class="token operator">*</span> &#x4ECE;&#x6808;&#x7684;&#x64CD;&#x4F5C;&#x7279;&#x6027;&#x6765;&#x770B;&#xFF0C;&#x662F;&#x4E00;&#x79CD; &#x64CD;&#x4F5C;&#x53D7;&#x9650;&#x7684;&#x7EBF;&#x6027;&#x8868;&#xFF0C;&#x53EA;&#x5141;&#x8BB8;&#x5728;&#x4E00;&#x7AEF;&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;&#x6570;&#x636E;&#x3002;
+<span class="token operator">*</span> &#x4E0D;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x5143;&#x7D20;&#x7684;&#x6808;&#x79F0;&#x4E3A;&#x7A7A;&#x6808;&#x3002;
+<span class="token operator">*</span> java &#x4E2D; <span class="token class-name">Stack</span> &#x662F; <span class="token class-name">Vector</span> &#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x7C7B;&#xFF0C;&#x53EA;&#x5B9A;&#x4E49;&#x4E86;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x6808;&#x3002;
+<span class="token operator">*</span> &#x6808;&#x662F;&#x5143;&#x7D20;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x5176;&#x5305;&#x542B;&#x4E86;&#x4E24;&#x4E2A;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#xFF1A;push &#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5C06;&#x5143;&#x7D20;&#x538B;&#x5165;&#x6808;&#xFF0C;pop &#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x5C06;&#x6808;&#x9876;&#x5143;&#x7D20;&#x79FB;&#x9664;&#x3002;
+<span class="token operator">*</span> &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;<span class="token operator">:</span>
+<span class="token operator">*</span> &#x7D22;&#x5F15;<span class="token operator">:</span> <span class="token class-name">O</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+<span class="token operator">*</span> &#x641C;&#x7D22;<span class="token operator">:</span> <span class="token class-name">O</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+<span class="token operator">*</span> &#x63D2;&#x5165;<span class="token operator">:</span> <span class="token class-name">O</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token operator">*</span> &#x79FB;&#x9664;<span class="token operator">:</span> <span class="token class-name">O</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
 
-    public boolean isEmpty() {
-        if (top != -1) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+&#x6A21;&#x62DF;&#x6808;stack
 
-    public void clear() {
-        this.array = new Object[0];
-        this.size = 0;
-        top = -1;
-    }
+```java
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Arrays</span><span class="token punctuation">;</span>
 
-    public int size() {
-        return this.size;
-    }
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Stack</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> size<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> top<span class="token punctuation">;</span>
 
-    public void show() {
-        for (int i = 0; i &lt; size; i++) {
-            System.out.print(array[i] + &quot; &quot;);
-        }
-        System.out.print(&quot;\n&quot;);
-    }
-}
-</code></pre><p>Stack&#x7684;&#x8C03;&#x7528;</p>
-<pre class="language-"><code>public class StackTest {
-    public static void main(String[] args) {
-        Stack stack = new Stack(10);
-        stack.push(&quot;abc&quot;);
-        stack.push(123);
-        stack.push(&quot;de&quot;);
-        stack.push(&quot;cd&quot;);
-        stack.push(&quot;er&quot;);
-        stack.push(&quot;hello&quot;);
-        stack.push(666);
-        stack.push(545);
-        stack.push(&quot;word&quot;);
-        stack.push(&quot;me&quot;);
-        stack.show();
-        System.out.println(stack.size());
-        // stack.clear();
-        // stack.show();
-        System.out.println(stack.isEmpty());
-        stack.pop();
-        stack.pop();
-        stack.pop();
-        stack.pop();
-        stack.show();
-        System.out.println(stack.peek());
-        // abc 123 de cd er hello 666 545 word me
-        // 10
-        // false
-        // abc 123 de cd er hello null null null null
-        // hello
-    }
-}
-</code></pre><h2 id="doc"><a name="doc" class="anchor-navigation-ex-anchor" href="#doc"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. doc</h2>
-<ul>
-<li><a href="https://juejin.im/post/5b3c30bde51d451964620710#heading-2" target="_blank">&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0E;&#x7B97;&#x6CD5;&#xFF08;java&#xFF09;</a></li>
-</ul>
+    <span class="token keyword">public</span> <span class="token class-name">Stack</span><span class="token punctuation">(</span><span class="token keyword">int</span> size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>size <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>array <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">[</span>size<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>size <span class="token operator">=</span> size<span class="token punctuation">;</span>
+            top <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">&quot;size=&quot;</span> <span class="token operator">+</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">push</span><span class="token punctuation">(</span><span class="token class-name">Object</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">grow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span><span class="token operator">++</span>top<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// &#x5220;&#x9664;&#x6808;&#x9876;&#x5143;&#x7D20;</span>
+    <span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Object</span> result <span class="token operator">=</span> <span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span>top<span class="token operator">--</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// &#x67E5;&#x770B;&#x6808;&#x9876;&#x5143;&#x7D20;</span>
+    <span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>top <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> array<span class="token punctuation">[</span>top<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">&quot;stack is null&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">grow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>top <span class="token operator">==</span> size <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            size <span class="token operator">=</span> size <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            array <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">copyOf</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>top <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>array <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>size <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        top <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">&quot; &quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+```java
+
+<span class="token class-name">Stack</span>&#x7684;&#x8C03;&#x7528;
+
+```java
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StackTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Stack</span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;abc&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;de&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;cd&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;er&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">666</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">545</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;word&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;me&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// stack.clear();</span>
+        <span class="token comment">// stack.show();</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// abc 123 de cd er hello 666 545 word me</span>
+        <span class="token comment">// 10</span>
+        <span class="token comment">// false</span>
+        <span class="token comment">// abc 123 de cd er hello null null null null</span>
+        <span class="token comment">// hello</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+```java
+
+## doc
+
+<span class="token operator">-</span> <span class="token punctuation">[</span>&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0E;&#x7B97;&#x6CD5;&#xFF08;java&#xFF09;<span class="token punctuation">]</span><span class="token punctuation">(</span>https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>juejin<span class="token punctuation">.</span>im<span class="token operator">/</span>post<span class="token operator">/</span><span class="token number">5</span>b3c30bde51d451964620710#heading<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre>
 </body></html>
                                 
                                 </section>
@@ -1142,7 +1160,7 @@ public class Stack {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"线性表(数组,队列,栈,链表)","level":"3.1.1","depth":2,"next":{"title":"Java 排序算法","level":"3.1.2","depth":2,"path":"Java数据结构与算法/Java排序算法.md","ref":"Java数据结构与算法/Java排序算法.md","articles":[]},"previous":{"title":"Java 数据结构与算法","level":"3.1","depth":1,"path":"Java数据结构与算法/README.md","ref":"Java数据结构与算法/README.md","articles":[{"title":"线性表(数组,队列,栈,链表)","level":"3.1.1","depth":2,"path":"Java数据结构与算法/线性表.md","ref":"Java数据结构与算法/线性表.md","articles":[]},{"title":"Java 排序算法","level":"3.1.2","depth":2,"path":"Java数据结构与算法/Java排序算法.md","ref":"Java数据结构与算法/Java排序算法.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"Java数据结构与算法/线性表.md","mtime":"2020-01-08T13:40:53.925Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-17T07:45:45.211Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"线性表(数组,队列,栈,链表)","level":"3.1.1","depth":2,"next":{"title":"Java 排序算法","level":"3.1.2","depth":2,"path":"Java数据结构与算法/Java排序算法.md","ref":"Java数据结构与算法/Java排序算法.md","articles":[]},"previous":{"title":"Java 数据结构与算法","level":"3.1","depth":1,"path":"Java数据结构与算法/README.md","ref":"Java数据结构与算法/README.md","articles":[{"title":"线性表(数组,队列,栈,链表)","level":"3.1.1","depth":2,"path":"Java数据结构与算法/线性表.md","ref":"Java数据结构与算法/线性表.md","articles":[]},{"title":"Java 排序算法","level":"3.1.2","depth":2,"path":"Java数据结构与算法/Java排序算法.md","ref":"Java数据结构与算法/Java排序算法.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"Java数据结构与算法/线性表.md","mtime":"2020-01-17T08:19:20.550Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-17T08:20:14.449Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

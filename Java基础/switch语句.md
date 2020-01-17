@@ -1,12 +1,12 @@
-# Java switch语句
+# Java switch 语句
 
 switch case 语句判断一个变量与一系列值中某个值是否相等，每个值称为一个分支。
 
 ### 语法
 
 switch case 语句语法格式如下：
- 
-```
+
+````java
 switch(expression){
     case value :
        //语句
@@ -18,7 +18,7 @@ switch(expression){
     default : //可选
        //语句
 }
-```
+```java
 
 switch case 语句有如下规则：
 
@@ -33,7 +33,7 @@ switch case 语句有如下规则：
 
 ### 实例
 
-```
+```java
 public class Test {
    public static void main(String[] args){
       char grade = 'C';
@@ -57,18 +57,18 @@ public class Test {
       System.out.println("你的等级是 " + grade);
    }
 }
-```
+```java
 
 以上代码编译运行结果如下：
 
-```
+```java
 良好
 你的等级是 C
-```
+```java
 
 如果 case 语句块中没有 break 语句时，JVM 并不会顺序输出每一个 case 对应的返回值，而是继续匹配，匹配不成功则返回默认 case。
 
-```
+```java
 public class Test {
    public static void main(String args[]){
       int i = 5;
@@ -84,17 +84,17 @@ public class Test {
       }
    }
 }
-```
+```java
 
 以上代码编译运行结果如下：
 
-```
+```java
 default
-```
+```java
 
 如果 case 语句块中没有 break 语句时，匹配成功后，从当前 case 开始，后续所有 case 的值都会输出。
 
-```
+```java
 public class Test {
    public static void main(String args[]){
       int i = 1;
@@ -110,19 +110,19 @@ public class Test {
       }
    }
 }
-```
+```java
 
 以上代码编译运行结果如下：
 
-```
+```java
 1
 2
 default
-```
+```java
 
 如果当前匹配成功的 case 语句块没有 break 语句，则从当前 case 开始，后续所有 case 的值都会输出，如果后续的 case 语句块有 break 语句则会跳出判断。
 
-```
+```java
 public class Test {
    public static void main(String args[]){
       int i = 1;
@@ -140,12 +140,12 @@ public class Test {
       }
    }
 }
-```
+```java
 
 以上代码编译运行结果如下：
 
-```
+```java
 1
 2
 3
-```
+````

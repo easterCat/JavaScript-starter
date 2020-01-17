@@ -9,9 +9,9 @@
 DPR = DP / DIP
 ```
 
-使用 canvas 绘制图片或者是文字在 Retina 屏中会非常模糊。如图：
+## 使用 canvas 绘制图片或者是文字在 Retina 屏中会非常模糊。如图：
 
-![](/newimg88/2018/05/98CB56B8-7983-427E-AFCE-15043A6D8F63.png)
+![](https://raw.githubusercontent.com/easterCat/img-package/master/img/98CB56B8-7983-427E-AFCE-15043A6D8F63.png)
 
 因为 canvas 不是矢量图，而是像图片一样是位图模式的。高 dpi 显示设备意味着每平方英寸有更多的像素。也就是说二倍屏，浏览器就会以 2 个像素点的宽度来渲染一个像素，该 canvas 在 Retina 屏幕下相当于占据了 2 倍的空间，相当于图片被放大了一倍，因此绘制出来的图片文字等会变模糊。
 

@@ -1,0 +1,4 @@
+- [Java 知识分享网-轻松学习从此开始!](http://www.java1234.com/)
+- [嘟嘟独立博客 spring-boot](http://tengj.top/)
+- [50 道 Java 基础编程练习题](https://juejin.im/post/58a4276f61ff4b006c899609#heading-0)
+- [java 牛客网](https://www.nowcoder.com/courses/cover/vod/1002)

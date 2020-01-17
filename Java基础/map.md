@@ -16,11 +16,11 @@
 
 在 Java 中，如果一个 Java 对象可以在内部持有若干其他 Java 对象，并对外提供访问接口，我们把这种 Java 对象称为集合。很显然，Java 的数组可以看作是一种集合
 
-````java
+````
 String[] ss = new String[10]; // 可以持有10个String对象
 ss[0] = "Hello"; // 可以放入String对象
 String first = ss[0]; // 可以获取String对象
-```java
+```
 
 既然 Java 提供了数组这种数据类型，可以充当集合，那么，我们为什么还需要其他集合类？这是因为数组有如下限制：
 
@@ -42,9 +42,9 @@ Java 标准库自带的 java.util 包提供了集合类：Collection，它是除
 
 Java 集合的设计有几个特点：一是实现了接口和实现类相分离，例如，有序表的接口是 List，具体的实现类有 ArrayList，LinkedList 等，二是支持泛型，我们可以限制在一个集合中只能放入同一种数据类型的元素，
 
-```java
+```
 List<String> list = new ArrayList<>(); // 只能放入String类型
-```java
+```
 
 最后，Java 访问集合总是通过统一的方式——迭代器（Iterator）来实现，它最明显的好处在于无需知道集合内部元素是按什么方式存储的。
 

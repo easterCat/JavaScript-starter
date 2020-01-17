@@ -21,7 +21,7 @@ List 的行为和数组几乎完全相同：List 内部按照放入元素的先�
 
 使用 List 时，我们要关注 List 接口的规范。List 接口允许我们添加重复的元素，即 List 内部的元素可以重复,List 还允许添加 null.
 
-````java
+````
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +36,7 @@ public class Main {
         System.out.println(list.get(3));
     }
 }
-```java
+```
 
 ## 创建/遍历 List
 
@@ -44,9 +44,9 @@ public class Main {
 
 创建
 
-```java
+```
 List<Integer> list = List.of(1, 2, 5);
-```java
+```
 
 遍历的两种方法
 
@@ -58,7 +58,7 @@ Iterator 对象有两个方法：boolean hasNext\(\)判断是否有下一个元�
 
 通过 Iterator 遍历 List 永远是最高效的方式。并且，由于 Iterator 遍历是如此常用，所以，Java 的 for each 循环本身就可以帮我们使用 Iterator 遍历。
 
-```java
+```
 import java.util.Iterator;
 import java.util.List;
 
@@ -93,13 +93,13 @@ public class Main {
         }
     }
 }
-```java
+```
 
 实际上，只要实现了 Iterable 接口的集合类都可以直接用 for each 循环来遍历，Java 编译器本身并不知道如何遍历集合对象，但它会自动把 for each 循环变成 Iterator 的调用，原因就在于 Iterable 接口定义了一个 Iterator iterator\(\)方法，强迫集合类必须返回一个 Iterator 实例
 
 ## List 和 Array 转换
 
-```java
+```
 import java.util.Iterator;
 import java.util.List;
 
@@ -149,11 +149,11 @@ public class Main {
         }
     }
 }
-```java
+```
 
 ## 判断 list 的元素存在和下标
 
-```java
+```
 import java.util.List;
 
 public class Main {

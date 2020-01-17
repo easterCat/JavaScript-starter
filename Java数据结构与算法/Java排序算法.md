@@ -4,7 +4,7 @@
 
 ## 冒泡排序
 
-````java
+````
 // 冒泡排序
 public class BubbleSort {
     /**
@@ -41,7 +41,7 @@ public class BubbleSort {
     }
 }
 
-```java
+```
 
 ## 选择排序
 
@@ -55,7 +55,7 @@ public class BubbleSort {
 - ......
 - 可以进行比较的数据只剩下最后一个,停止排序
 
-```java
+```
 // 选择排序
 // 执行顺序
 //
@@ -116,7 +116,7 @@ public class QuickSort {
         return arr;
     }
 }
-```java
+```
 
 ## 快速排序
 
@@ -126,7 +126,7 @@ public class QuickSort {
 - 分区过程,将比这个数大的数全放到它的右边,小于或等于它的数全放到它的左边
 - 再对左右区间重复第二步,直到各区间只有一个数
 
-```java
+```
 // 快速排序
 // 挖坑填数+分治法
 // 执行顺序
@@ -173,7 +173,7 @@ public class main {
         }
     }
 }
-```java
+```
 
 ## doc
 

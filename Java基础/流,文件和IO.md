@@ -20,10 +20,10 @@ Java 的控制台输入由 System.in 完成。
 
 下面是创建 BufferedReader 的基本语法：
 
-````java
+````
 BufferedReader br = new BufferedReader(new
                       InputStreamReader(System.in));
-```java
+```
 
 BufferedReader 对象创建后，我们便可以使用 read() 方法从控制台读取一个字符，或者用 readLine() 方法读取一个字符串。
 
@@ -33,9 +33,9 @@ BufferedReader 对象创建后，我们便可以使用 read() 方法从控制台
 
 从 BufferedReader 对象读取一个字符要使用 read() 方法，它的语法如下：
 
-```java
+```
 int read( ) throws IOException
-```java
+```
 
 每次调用 read() 方法，它从输入流读取一个字符并把该字符作为整数值返回。 当流结束的时候返回 -1。该方法抛出 IOException。
 
@@ -43,7 +43,7 @@ int read( ) throws IOException
 
 ## BRRead.java 文件代码：
 
-```java
+```
 //使用 BufferedReader 在控制台读取字符
 
  import java.io.BufferedReader;
@@ -74,11 +74,11 @@ public class Li {
         } while (c != 'q');
     }
 }
-```java
+```
 
 以上实例编译运行结果如下:
 
-```java
+```
 请输入一个字符
 a
 你输入的字符为a
@@ -93,7 +93,7 @@ aaaaaaq
 你输入的字符为a
 你输入的字符为a
 你输入的字符为q
-```java
+```
 
 * * *
 
@@ -103,15 +103,15 @@ aaaaaaq
 
 它的一般格式是：
 
-```java
+```
 String readLine( ) throws IOException
-```java
+```
 
 下面的程序读取和显示字符行直到你输入了单词"end"。
 
 ## BRReadLines.java 文件代码：
 
-```java
+```
 //使用 BufferedReader 在控制台读取字符
 
 import java.io.BufferedReader;
@@ -136,11 +136,11 @@ public class Li {
         System.out.println("你输入的字符为" + str);
     }
 }
-```java
+```
 
 以上实例编译运行结果如下:
 
-```java
+```
 请输入一行字符
 输入end退出
 aaaaaaaaaaa
@@ -150,7 +150,7 @@ ccccccccccc
 end
 输入的是=>end
 你输入的字符为end
-```java
+```
 
 > JDK 5 后的版本我们也可以使用 [Java Scanner](//www.runoob.com/java/java-scanner-class.html) 类来获取控制台的输入。
 
@@ -162,9 +162,9 @@ PrintStream 继承了 OutputStream类，并且实现了方法 write()。这样�
 
 PrintStream 定义 write() 的最简单格式如下所示：
 
-```java
+```
 void write(int byteval)
-```java
+```
 
 该方法将 byteval 的低八位字节写到流中。
 
@@ -174,7 +174,7 @@ void write(int byteval)
 
 ## WriteDemo.java 文件代码：
 
-```java
+```
 import java.io.*;
 
 //演示 System.out.write().
@@ -186,13 +186,13 @@ public class WriteDemo {
         System.out.write('\n');
     }
 }
-```java
+```
 
 运行以上实例在输出窗口输出 "A" 字符
 
-```java
+```
 A
-```java
+```
 
 **注意：**write() 方法不经常使用，因为 print() 和 println() 方法用起来更为方便。
 
@@ -218,16 +218,16 @@ A
 
 可以使用字符串类型的文件名来创建一个输入流对象来读取文件：
 
-```java
+```
 InputStream f = new FileInputStream("C:/java/hello");
-```java
+```
 
 也可以使用一个文件对象来创建一个输入流对象来读取文件。我们首先得使用 File() 方法来创建一个文件对象：
 
-```java
+```
 File f = new File("C:/java/hello");
 InputStream out = new FileInputStream(f);
-```java
+```
 
 创建了InputStream对象，就可以使用下面的方法来读取流或者进行其他的流操作。
 
@@ -250,16 +250,16 @@ InputStream out = new FileInputStream(f);
 
 使用字符串类型的文件名来创建一个输出流对象：
 
-```java
+```
 OutputStream f = new FileOutputStream("C:/java/hello")
-```java
+```
 
 也可以使用一个文件对象来创建一个输出流来写文件。我们首先得使用File()方法来创建一个文件对象：
 
-```java
+```
 File f = new File("C:/java/hello");
 OutputStream f = new FileOutputStream(f);
-```java
+```
 
 创建OutputStream 对象完成后，就可以使用下面的方法来写入流或者进行其他的流操作。
 
@@ -276,7 +276,7 @@ OutputStream f = new FileOutputStream(f);
 
 ## fileStreamTest.java 文件代码：
 
-```java
+```
 import java.io.*;
 
 public class fileStreamTest {
@@ -301,7 +301,7 @@ public class fileStreamTest {
         }
     }
 }
-```java
+```
 
 上面的程序首先创建文件test.txt，并把给定的数字以二进制形式写进该文件，同时输出到控制台上。
 
@@ -309,7 +309,7 @@ public class fileStreamTest {
 
 ## fileStreamTest2.java 文件代码：
 
-```java
+```
 //文件名 :fileStreamTest2.java
 import java.io.*;
 
@@ -358,7 +358,7 @@ public class fileStreamTest2 {
 
     }
 }
-```java
+```
 
 * * *
 
@@ -385,7 +385,7 @@ File类中有两个方法可以用来创建文件夹：
 
 ## CreateDir.java 文件代码：
 
-```java
+```
 import java.io.File;
 
 public class CreateDir {
@@ -396,7 +396,7 @@ public class CreateDir {
         d.mkdirs();
     }
 }
-```java
+```
 
 编译并执行上面代码来创建目录 "/tmp/user/java/bin"。
 
@@ -416,7 +416,7 @@ public class CreateDir {
 
 ## DirList.java 文件代码：
 
-```java
+```
 import java.io.File;
 
 public class DirList {
@@ -469,16 +469,16 @@ public class DirList {
         }
     }
 }
-```java
+```
 
 以上实例编译运行结果如下：
 
-```java
+```
 目录 ./bin
 test 是一个目录
 111.txt 是一个文件
 222.txt 是一个文件
-```java
+```
 
 * * *
 
@@ -490,15 +490,15 @@ test 是一个目录
 
 测试目录结构：
 
-```java
+```
 /tmp/java/
 |-- 1.log
 |-- test
-```java
+```
 
 ## DeleteFileDemo.java 文件代码：
 
-```java
+```
 import java.io.File;
 
 public class DeleteFileDemo {

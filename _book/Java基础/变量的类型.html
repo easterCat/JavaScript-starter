@@ -816,197 +816,196 @@
                                 
                                 <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#java-&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;"><b>1. </b>Java &#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;</a></li></ul></div><a href="#java-&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="java-&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;"><a name="java-&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#java-&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>1. Java &#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;</h1>
 <p>&#x5728; Java &#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x53D8;&#x91CF;&#x5728;&#x4F7F;&#x7528;&#x524D;&#x5FC5;&#x987B;&#x58F0;&#x660E;&#x3002;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x7684;&#x57FA;&#x672C;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre class="language-"><code class="lang-java">type identifier <span class="token punctuation">[</span> <span class="token operator">=</span> value<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">,</span> identifier <span class="token punctuation">[</span><span class="token operator">=</span> value<span class="token punctuation">]</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span> <span class="token punctuation">;</span>
-```java
+<pre class="language-"><code>type identifier [ = value][, identifier [= value] ...] ;
+```
 
-&#x683C;&#x5F0F;&#x8BF4;&#x660E;&#xFF1A;type &#x4E3A; <span class="token class-name">Java</span> &#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;identifier &#x662F;&#x53D8;&#x91CF;&#x540D;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x9694;&#x5F00;&#x6765;&#x58F0;&#x660E;&#x591A;&#x4E2A;&#x540C;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x3002;
+&#x683C;&#x5F0F;&#x8BF4;&#x660E;&#xFF1A;type &#x4E3A; Java &#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;identifier &#x662F;&#x53D8;&#x91CF;&#x540D;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x9694;&#x5F00;&#x6765;&#x58F0;&#x660E;&#x591A;&#x4E2A;&#x540C;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x3002;
 
 &#x4EE5;&#x4E0B;&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x5B9E;&#x4F8B;&#x3002;&#x6CE8;&#x610F;&#x6709;&#x4E9B;&#x5305;&#x542B;&#x4E86;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#x3002;
 
-```java
-<span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">;</span>         <span class="token comment">// &#x58F0;&#x660E;&#x4E09;&#x4E2A;int&#x578B;&#x6574;&#x6570;&#xFF1A;a&#x3001; b&#x3001;c</span>
-<span class="token keyword">int</span> d <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span> e <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">,</span> f <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment">// &#x58F0;&#x660E;&#x4E09;&#x4E2A;&#x6574;&#x6570;&#x5E76;&#x8D4B;&#x4E88;&#x521D;&#x503C;</span>
-<span class="token keyword">byte</span> z <span class="token operator">=</span> <span class="token number">22</span><span class="token punctuation">;</span>         <span class="token comment">// &#x58F0;&#x660E;&#x5E76;&#x521D;&#x59CB;&#x5316; z</span>
-<span class="token class-name">String</span> s <span class="token operator">=</span> <span class="token string">&quot;nowcoder&quot;</span><span class="token punctuation">;</span>  <span class="token comment">// &#x58F0;&#x660E;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x5B57;&#x7B26;&#x4E32; s</span>
-<span class="token keyword">double</span> pi <span class="token operator">=</span> <span class="token number">3.14159</span><span class="token punctuation">;</span> <span class="token comment">// &#x58F0;&#x660E;&#x4E86;&#x53CC;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x578B;&#x53D8;&#x91CF; pi</span>
-<span class="token keyword">char</span> x <span class="token operator">=</span> <span class="token string">&apos;x&apos;</span><span class="token punctuation">;</span>        <span class="token comment">// &#x58F0;&#x660E;&#x53D8;&#x91CF; x &#x7684;&#x503C;&#x662F;&#x5B57;&#x7B26; &apos;x&apos;&#x3002;</span>
-```java
+```
+int a, b, c;         // &#x58F0;&#x660E;&#x4E09;&#x4E2A;int&#x578B;&#x6574;&#x6570;&#xFF1A;a&#x3001; b&#x3001;c
+int d = 3, e = 4, f = 5; // &#x58F0;&#x660E;&#x4E09;&#x4E2A;&#x6574;&#x6570;&#x5E76;&#x8D4B;&#x4E88;&#x521D;&#x503C;
+byte z = 22;         // &#x58F0;&#x660E;&#x5E76;&#x521D;&#x59CB;&#x5316; z
+String s = &quot;nowcoder&quot;;  // &#x58F0;&#x660E;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x5B57;&#x7B26;&#x4E32; s
+double pi = 3.14159; // &#x58F0;&#x660E;&#x4E86;&#x53CC;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x578B;&#x53D8;&#x91CF; pi
+char x = &apos;x&apos;;        // &#x58F0;&#x660E;&#x53D8;&#x91CF; x &#x7684;&#x503C;&#x662F;&#x5B57;&#x7B26; &apos;x&apos;&#x3002;
+```
 
-<span class="token class-name">Java</span> &#x8BED;&#x8A00;&#x652F;&#x6301;&#x7684;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x6709;&#xFF1A;
+Java &#x8BED;&#x8A00;&#x652F;&#x6301;&#x7684;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x6709;&#xFF1A;
 
-<span class="token operator">-</span> &#x7C7B;&#x53D8;&#x91CF;&#xFF1A;&#x72EC;&#x7ACB;&#x4E8E;&#x65B9;&#x6CD5;&#x4E4B;&#x5916;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x7528; <span class="token keyword">static</span> &#x4FEE;&#x9970;&#x3002;
-<span class="token operator">-</span> &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#xFF1A;&#x72EC;&#x7ACB;&#x4E8E;&#x65B9;&#x6CD5;&#x4E4B;&#x5916;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x8FC7;&#x6CA1;&#x6709; <span class="token keyword">static</span> &#x4FEE;&#x9970;&#x3002;
-<span class="token operator">-</span> &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF1A;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x3002;
+- &#x7C7B;&#x53D8;&#x91CF;&#xFF1A;&#x72EC;&#x7ACB;&#x4E8E;&#x65B9;&#x6CD5;&#x4E4B;&#x5916;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x7528; static &#x4FEE;&#x9970;&#x3002;
+- &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#xFF1A;&#x72EC;&#x7ACB;&#x4E8E;&#x65B9;&#x6CD5;&#x4E4B;&#x5916;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x8FC7;&#x6CA1;&#x6709; static &#x4FEE;&#x9970;&#x3002;
+- &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF1A;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x3002;
 
-```java
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+```
+public class Test{
 
-    <span class="token keyword">static</span> <span class="token keyword">int</span> allClicks<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>    <span class="token comment">// &#x7C7B;&#x53D8;&#x91CF;</span>
+    static int allClicks=0;    // &#x7C7B;&#x53D8;&#x91CF;
 
-    <span class="token class-name">String</span> str <span class="token operator">=</span> <span class="token string">&quot;hello world&quot;</span><span class="token punctuation">;</span>  <span class="token comment">// &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;</span>
+    String str = &quot;hello world&quot;;  // &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  <span class="token comment">// &#x5C40;&#x90E8;&#x53D8;&#x91CF;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-```java
+    public void method() {
+        int i = 0;  // &#x5C40;&#x90E8;&#x53D8;&#x91CF;
+    }
+}
+```
 
-## <span class="token class-name">Java</span> &#x5C40;&#x90E8;&#x53D8;&#x91CF;
+## Java &#x5C40;&#x90E8;&#x53D8;&#x91CF;
 
-<span class="token operator">-</span> &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x5728;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x4E2D;&#xFF1B;
-<span class="token operator">-</span> &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x5728;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x3001;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x88AB;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x521B;&#x5EFA;&#xFF0C;&#x5F53;&#x5B83;&#x4EEC;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53D8;&#x91CF;&#x5C06;&#x4F1A;&#x88AB;&#x9500;&#x6BC1;&#xFF1B;
-<span class="token operator">-</span> &#x8BBF;&#x95EE;&#x4FEE;&#x9970;&#x7B26;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF1B;
-<span class="token operator">-</span> &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x53EA;&#x5728;&#x58F0;&#x660E;&#x5B83;&#x7684;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x4E2D;&#x53EF;&#x89C1;&#xFF1B;
-<span class="token operator">-</span> &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x662F;&#x5728;&#x6808;&#x4E0A;&#x5206;&#x914D;&#x7684;&#x3002;
-<span class="token operator">-</span> &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x88AB;&#x58F0;&#x660E;&#x540E;&#xFF0C;&#x5FC5;&#x987B;&#x7ECF;&#x8FC7;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002;
+- &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x5728;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x4E2D;&#xFF1B;
+- &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x5728;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x3001;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x88AB;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x521B;&#x5EFA;&#xFF0C;&#x5F53;&#x5B83;&#x4EEC;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53D8;&#x91CF;&#x5C06;&#x4F1A;&#x88AB;&#x9500;&#x6BC1;&#xFF1B;
+- &#x8BBF;&#x95EE;&#x4FEE;&#x9970;&#x7B26;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF1B;
+- &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x53EA;&#x5728;&#x58F0;&#x660E;&#x5B83;&#x7684;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x4E2D;&#x53EF;&#x89C1;&#xFF1B;
+- &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x662F;&#x5728;&#x6808;&#x4E0A;&#x5206;&#x914D;&#x7684;&#x3002;
+- &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x88AB;&#x58F0;&#x660E;&#x540E;&#xFF0C;&#x5FC5;&#x987B;&#x7ECF;&#x8FC7;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002;
 
-### &#x5B9E;&#x4F8B; <span class="token number">1</span>
+### &#x5B9E;&#x4F8B; 1
 
-&#x5728;&#x4EE5;&#x4E0B;&#x5B9E;&#x4F8B;&#x4E2D; age &#x662F;&#x4E00;&#x4E2A;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x3002;&#x5B9A;&#x4E49;&#x5728; <span class="token function">pupAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span>&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x5C31;&#x9650;&#x5236;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x3002;
+&#x5728;&#x4EE5;&#x4E0B;&#x5B9E;&#x4F8B;&#x4E2D; age &#x662F;&#x4E00;&#x4E2A;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x3002;&#x5B9A;&#x4E49;&#x5728; pupAge()&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x5C31;&#x9650;&#x5236;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x3002;
 
-```java
- <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+```
+ public class Test{
 
-   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-      age <span class="token operator">=</span> age <span class="token operator">+</span> <span class="token number">7</span><span class="token punctuation">;</span>
-      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5C0F;&#x72D7;&#x7684;&#x5E74;&#x9F84;&#x662F;: &quot;</span> <span class="token operator">+</span> age<span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
+   public void setAge(){
+      int age = 0;
+      age = age + 7;
+      System.out.println(&quot;&#x5C0F;&#x72D7;&#x7684;&#x5E74;&#x9F84;&#x662F;: &quot; + age);
+   }
 
-   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token class-name">Test</span> test <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      test<span class="token punctuation">.</span><span class="token function">setAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-```java
+   public static void main(String[] args){
+      Test test = new Test();
+      test.setAge();
+   }
+}
+```
 
-&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;<span class="token operator">:</span>
+&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:
 
-```java
-&#x5C0F;&#x72D7;&#x7684;&#x5E74;&#x9F84;&#x662F;<span class="token operator">:</span> <span class="token number">7</span>
-```java
+```
+&#x5C0F;&#x72D7;&#x7684;&#x5E74;&#x9F84;&#x662F;: 7
+```
 
-### &#x5B9E;&#x4F8B; <span class="token number">2</span>
+### &#x5B9E;&#x4F8B; 2
 
 &#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D; age &#x53D8;&#x91CF;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x4F1A;&#x51FA;&#x9519;&#xFF1A;
 
-```java
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+```
+public class Test{
 
-   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token keyword">int</span> age<span class="token punctuation">;</span>
-      age <span class="token operator">=</span> age <span class="token operator">+</span> <span class="token number">7</span><span class="token punctuation">;</span>
-      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5C0F;&#x72D7;&#x7684;&#x5E74;&#x9F84;&#x662F; : &quot;</span> <span class="token operator">+</span> age<span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
+   public void setAge(){
+      int age;
+      age = age + 7;
+      System.out.println(&quot;&#x5C0F;&#x72D7;&#x7684;&#x5E74;&#x9F84;&#x662F; : &quot; + age);
+   }
 
-   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token class-name">Test</span> test <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      test<span class="token punctuation">.</span><span class="token function">setAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
+   public static void main(String[] args){
+      Test test = new Test();
+      test.setAge();
+   }
 
-<span class="token punctuation">}</span>
-```java
+}
+```
 
-&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;<span class="token operator">:</span>
+&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:
 
-```java
-<span class="token class-name">Test</span><span class="token punctuation">.</span>java<span class="token operator">:</span><span class="token number">4</span><span class="token operator">:</span>variable number might not have been initialized
-age <span class="token operator">=</span> age <span class="token operator">+</span> <span class="token number">7</span><span class="token punctuation">;</span>
-         <span class="token operator">^</span>
-<span class="token number">1</span> error
-```java
+```
+Test.java:4:variable number might not have been initialized
+age = age + 7;
+         ^
+1 error
+```
 
 ## &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;
 
-<span class="token operator">-</span> &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x5728;&#x4E00;&#x4E2A;&#x7C7B;&#x4E2D;&#xFF0C;&#x4F46;&#x5728;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x548C;&#x8BED;&#x53E5;&#x5757;&#x4E4B;&#x5916;&#xFF1B;
-<span class="token operator">-</span> &#x5F53;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x88AB;&#x5B9E;&#x4F8B;&#x5316;&#x4E4B;&#x540E;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x5C31;&#x8DDF;&#x7740;&#x786E;&#x5B9A;&#xFF1B;
-<span class="token operator">-</span> &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5728;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x521B;&#x5EFA;&#xFF0C;&#x5728;&#x5BF9;&#x8C61;&#x88AB;&#x9500;&#x6BC1;&#x7684;&#x65F6;&#x5019;&#x9500;&#x6BC1;&#xFF1B;
-<span class="token operator">-</span> &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x5E94;&#x8BE5;&#x81F3;&#x5C11;&#x88AB;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x5F15;&#x7528;&#xFF0C;&#x4F7F;&#x5F97;&#x5916;&#x90E8;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x8FD9;&#x4E9B;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x4FE1;&#x606F;&#xFF1B;
-<span class="token operator">-</span> &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x58F0;&#x660E;&#x5728;&#x4F7F;&#x7528;&#x524D;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x540E;&#xFF1B;
-<span class="token operator">-</span> &#x8BBF;&#x95EE;&#x4FEE;&#x9970;&#x7B26;&#x53EF;&#x4EE5;&#x4FEE;&#x9970;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#xFF1B;
-<span class="token operator">-</span> &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5BF9;&#x4E8E;&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x662F;&#x53EF;&#x89C1;&#x7684;&#x3002;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x5E94;&#x8BE5;&#x628A;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x8BBE;&#x4E3A;&#x79C1;&#x6709;&#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x8BBF;&#x95EE;&#x4FEE;&#x9970;&#x7B26;&#x53EF;&#x4EE5;&#x4F7F;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5BF9;&#x5B50;&#x7C7B;&#x53EF;&#x89C1;&#xFF1B;
-<span class="token operator">-</span> &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5177;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x6570;&#x503C;&#x578B;&#x53D8;&#x91CF;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <span class="token number">0</span>&#xFF0C;&#x5E03;&#x5C14;&#x578B;&#x53D8;&#x91CF;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <span class="token boolean">false</span>&#xFF0C;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <span class="token keyword">null</span>&#x3002;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x5728;&#x58F0;&#x660E;&#x65F6;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x4E2D;&#x6307;&#x5B9A;&#xFF1B;
-<span class="token operator">-</span> &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x53D8;&#x91CF;&#x540D;&#x8BBF;&#x95EE;&#x3002;&#x4F46;&#x5728;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x7C7B;&#x4E2D;&#xFF0C;&#x5C31;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x5B8C;&#x5168;&#x9650;&#x5B9A;&#x540D;&#xFF1A;<span class="token class-name">ObejectReference</span><span class="token punctuation">.</span><span class="token class-name">VariableName</span>&#x3002;
+- &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x5728;&#x4E00;&#x4E2A;&#x7C7B;&#x4E2D;&#xFF0C;&#x4F46;&#x5728;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x548C;&#x8BED;&#x53E5;&#x5757;&#x4E4B;&#x5916;&#xFF1B;
+- &#x5F53;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x88AB;&#x5B9E;&#x4F8B;&#x5316;&#x4E4B;&#x540E;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x5C31;&#x8DDF;&#x7740;&#x786E;&#x5B9A;&#xFF1B;
+- &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5728;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x521B;&#x5EFA;&#xFF0C;&#x5728;&#x5BF9;&#x8C61;&#x88AB;&#x9500;&#x6BC1;&#x7684;&#x65F6;&#x5019;&#x9500;&#x6BC1;&#xFF1B;
+- &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x5E94;&#x8BE5;&#x81F3;&#x5C11;&#x88AB;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x5F15;&#x7528;&#xFF0C;&#x4F7F;&#x5F97;&#x5916;&#x90E8;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x8FD9;&#x4E9B;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x4FE1;&#x606F;&#xFF1B;
+- &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x58F0;&#x660E;&#x5728;&#x4F7F;&#x7528;&#x524D;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x540E;&#xFF1B;
+- &#x8BBF;&#x95EE;&#x4FEE;&#x9970;&#x7B26;&#x53EF;&#x4EE5;&#x4FEE;&#x9970;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#xFF1B;
+- &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5BF9;&#x4E8E;&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x662F;&#x53EF;&#x89C1;&#x7684;&#x3002;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x5E94;&#x8BE5;&#x628A;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x8BBE;&#x4E3A;&#x79C1;&#x6709;&#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x8BBF;&#x95EE;&#x4FEE;&#x9970;&#x7B26;&#x53EF;&#x4EE5;&#x4F7F;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5BF9;&#x5B50;&#x7C7B;&#x53EF;&#x89C1;&#xFF1B;
+- &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5177;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x6570;&#x503C;&#x578B;&#x53D8;&#x91CF;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F; 0&#xFF0C;&#x5E03;&#x5C14;&#x578B;&#x53D8;&#x91CF;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F; false&#xFF0C;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F; null&#x3002;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x5728;&#x58F0;&#x660E;&#x65F6;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x4E2D;&#x6307;&#x5B9A;&#xFF1B;
+- &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x53D8;&#x91CF;&#x540D;&#x8BBF;&#x95EE;&#x3002;&#x4F46;&#x5728;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x7C7B;&#x4E2D;&#xFF0C;&#x5C31;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x5B8C;&#x5168;&#x9650;&#x5B9A;&#x540D;&#xFF1A;ObejectReference.VariableName&#x3002;
 
 ### &#x5B9E;&#x4F8B;
 
-```java
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Employee</span><span class="token punctuation">{</span>
+```
+public class Employee{
 
-   <span class="token comment">// &#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5BF9;&#x5B50;&#x7C7B;&#x53EF;&#x89C1;</span>
-   <span class="token keyword">public</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
-   <span class="token comment">// &#x79C1;&#x6709;&#x53D8;&#x91CF;&#xFF0C;&#x4EC5;&#x5728;&#x8BE5;&#x7C7B;&#x53EF;&#x89C1;</span>
-   <span class="token keyword">private</span> <span class="token keyword">double</span> salary<span class="token punctuation">;</span>
+   // &#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5BF9;&#x5B50;&#x7C7B;&#x53EF;&#x89C1;
+   public String name;
+   // &#x79C1;&#x6709;&#x53D8;&#x91CF;&#xFF0C;&#x4EC5;&#x5728;&#x8BE5;&#x7C7B;&#x53EF;&#x89C1;
+   private double salary;
 
-   <span class="token comment">//&#x5728;&#x6784;&#x9020;&#x5668;&#x4E2D;&#x5BF9;name&#x8D4B;&#x503C;</span>
-   <span class="token keyword">public</span> <span class="token class-name">Employee</span> <span class="token punctuation">(</span><span class="token class-name">String</span> empName<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      name <span class="token operator">=</span> empName<span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
+   //&#x5728;&#x6784;&#x9020;&#x5668;&#x4E2D;&#x5BF9;name&#x8D4B;&#x503C;
+   public Employee (String empName){
+      name = empName;
+   }
 
-   <span class="token comment">//&#x8BBE;&#x5B9A;salary&#x7684;&#x503C;</span>
-   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setSalary</span><span class="token punctuation">(</span><span class="token keyword">double</span> empSal<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      salary <span class="token operator">=</span> empSal<span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
+   //&#x8BBE;&#x5B9A;salary&#x7684;&#x503C;
+   public void setSalary(double empSal){
+      salary = empSal;
+   }
 
-   <span class="token comment">// &#x6253;&#x5370;&#x4FE1;&#x606F;</span>
-   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printEmp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;&#x540D;&#x5B57; : &quot;</span> <span class="token operator">+</span> name <span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;&#x85AA;&#x6C34; : &quot;</span> <span class="token operator">+</span> salary<span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
+   // &#x6253;&#x5370;&#x4FE1;&#x606F;
+   public void printEmp(){
+      System.out.println(&quot;&#x540D;&#x5B57; : &quot; + name );
+      System.out.println(&quot;&#x85AA;&#x6C34; : &quot; + salary);
+   }
 
-   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token class-name">Employee</span> emp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token string">&quot;nowcoder&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      emp<span class="token punctuation">.</span><span class="token function">setSalary</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      emp<span class="token punctuation">.</span><span class="token function">printEmp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-```java
+   public static void main(String[] args){
+      Employee emp = new Employee(&quot;nowcoder&quot;);
+      emp.setSalary(1000);
+      emp.printEmp();
+   }
+}
+```
 
-&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;<span class="token operator">:</span>
+&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:
 
-```java
-&#x540D;&#x5B57; <span class="token operator">:</span> nowcoder
-&#x85AA;&#x6C34; <span class="token operator">:</span> <span class="token number">1000.0</span>
-```java
+```
+&#x540D;&#x5B57; : nowcoder
+&#x85AA;&#x6C34; : 1000.0
+```
 
 ## &#x7C7B;&#x53D8;&#x91CF;&#xFF08;&#x9759;&#x6001;&#x53D8;&#x91CF;&#xFF09;
 
-<span class="token operator">-</span> &#x7C7B;&#x53D8;&#x91CF;&#x4E5F;&#x79F0;&#x4E3A;&#x9759;&#x6001;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x7C7B;&#x4E2D;&#x4EE5; <span class="token keyword">static</span> &#x5173;&#x952E;&#x5B57;&#x58F0;&#x660E;&#xFF0C;&#x4F46;&#x5FC5;&#x987B;&#x5728;&#x65B9;&#x6CD5;&#x4E4B;&#x5916;&#x3002;
-<span class="token operator">-</span> &#x65E0;&#x8BBA;&#x4E00;&#x4E2A;&#x7C7B;&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x5C11;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x7C7B;&#x53EA;&#x62E5;&#x6709;&#x7C7B;&#x53D8;&#x91CF;&#x7684;&#x4E00;&#x4EFD;&#x62F7;&#x8D1D;&#x3002;
-<span class="token operator">-</span> &#x9759;&#x6001;&#x53D8;&#x91CF;&#x9664;&#x4E86;&#x88AB;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;&#x5916;&#x5F88;&#x5C11;&#x4F7F;&#x7528;&#x3002;&#x5E38;&#x91CF;&#x662F;&#x6307;&#x58F0;&#x660E;&#x4E3A; <span class="token keyword">public</span><span class="token operator">/</span><span class="token keyword">private</span>&#xFF0C;<span class="token keyword">final</span> &#x548C; <span class="token keyword">static</span> &#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x5E38;&#x91CF;&#x521D;&#x59CB;&#x5316;&#x540E;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x3002;
-<span class="token operator">-</span> &#x9759;&#x6001;&#x53D8;&#x91CF;&#x50A8;&#x5B58;&#x5728;&#x9759;&#x6001;&#x5B58;&#x50A8;&#x533A;&#x3002;&#x7ECF;&#x5E38;&#x88AB;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;&#xFF0C;&#x5F88;&#x5C11;&#x5355;&#x72EC;&#x4F7F;&#x7528; <span class="token keyword">static</span> &#x58F0;&#x660E;&#x53D8;&#x91CF;&#x3002;
-<span class="token operator">-</span> &#x9759;&#x6001;&#x53D8;&#x91CF;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x88AB;&#x8BBF;&#x95EE;&#x65F6;&#x521B;&#x5EFA;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x7ED3;&#x675F;&#x65F6;&#x9500;&#x6BC1;&#x3002;
-<span class="token operator">-</span> &#x4E0E;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5177;&#x6709;&#x76F8;&#x4F3C;&#x7684;&#x53EF;&#x89C1;&#x6027;&#x3002;&#x4F46;&#x4E3A;&#x4E86;&#x5BF9;&#x7C7B;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x53EF;&#x89C1;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x4E3A; <span class="token keyword">public</span> &#x7C7B;&#x578B;&#x3002;
-<span class="token operator">-</span> &#x9ED8;&#x8BA4;&#x503C;&#x548C;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x76F8;&#x4F3C;&#x3002;&#x6570;&#x503C;&#x578B;&#x53D8;&#x91CF;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <span class="token number">0</span>&#xFF0C;&#x5E03;&#x5C14;&#x578B;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <span class="token boolean">false</span>&#xFF0C;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <span class="token keyword">null</span>&#x3002;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x5728;&#x58F0;&#x660E;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x4E2D;&#x6307;&#x5B9A;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;&#x9759;&#x6001;&#x8BED;&#x53E5;&#x5757;&#x4E2D;&#x521D;&#x59CB;&#x5316;&#x3002;
-<span class="token operator">-</span> &#x9759;&#x6001;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#xFF1A;<span class="token class-name">ClassName</span><span class="token punctuation">.</span><span class="token class-name">VariableName</span> &#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x3002;
-<span class="token operator">-</span> &#x7C7B;&#x53D8;&#x91CF;&#x88AB;&#x58F0;&#x660E;&#x4E3A; <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> &#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x7C7B;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#x4E00;&#x822C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x3002;&#x5982;&#x679C;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x4E0D;&#x662F; <span class="token keyword">public</span> &#x548C; <span class="token keyword">final</span> &#x7C7B;&#x578B;&#xFF0C;&#x5176;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#x4E0E;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x4EE5;&#x53CA;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7684;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#x4E00;&#x81F4;&#x3002;
+- &#x7C7B;&#x53D8;&#x91CF;&#x4E5F;&#x79F0;&#x4E3A;&#x9759;&#x6001;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x7C7B;&#x4E2D;&#x4EE5; static &#x5173;&#x952E;&#x5B57;&#x58F0;&#x660E;&#xFF0C;&#x4F46;&#x5FC5;&#x987B;&#x5728;&#x65B9;&#x6CD5;&#x4E4B;&#x5916;&#x3002;
+- &#x65E0;&#x8BBA;&#x4E00;&#x4E2A;&#x7C7B;&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x5C11;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x7C7B;&#x53EA;&#x62E5;&#x6709;&#x7C7B;&#x53D8;&#x91CF;&#x7684;&#x4E00;&#x4EFD;&#x62F7;&#x8D1D;&#x3002;
+- &#x9759;&#x6001;&#x53D8;&#x91CF;&#x9664;&#x4E86;&#x88AB;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;&#x5916;&#x5F88;&#x5C11;&#x4F7F;&#x7528;&#x3002;&#x5E38;&#x91CF;&#x662F;&#x6307;&#x58F0;&#x660E;&#x4E3A; public/private&#xFF0C;final &#x548C; static &#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x5E38;&#x91CF;&#x521D;&#x59CB;&#x5316;&#x540E;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x3002;
+- &#x9759;&#x6001;&#x53D8;&#x91CF;&#x50A8;&#x5B58;&#x5728;&#x9759;&#x6001;&#x5B58;&#x50A8;&#x533A;&#x3002;&#x7ECF;&#x5E38;&#x88AB;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;&#xFF0C;&#x5F88;&#x5C11;&#x5355;&#x72EC;&#x4F7F;&#x7528; static &#x58F0;&#x660E;&#x53D8;&#x91CF;&#x3002;
+- &#x9759;&#x6001;&#x53D8;&#x91CF;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x88AB;&#x8BBF;&#x95EE;&#x65F6;&#x521B;&#x5EFA;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x7ED3;&#x675F;&#x65F6;&#x9500;&#x6BC1;&#x3002;
+- &#x4E0E;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5177;&#x6709;&#x76F8;&#x4F3C;&#x7684;&#x53EF;&#x89C1;&#x6027;&#x3002;&#x4F46;&#x4E3A;&#x4E86;&#x5BF9;&#x7C7B;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x53EF;&#x89C1;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x4E3A; public &#x7C7B;&#x578B;&#x3002;
+- &#x9ED8;&#x8BA4;&#x503C;&#x548C;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x76F8;&#x4F3C;&#x3002;&#x6570;&#x503C;&#x578B;&#x53D8;&#x91CF;&#x9ED8;&#x8BA4;&#x503C;&#x662F; 0&#xFF0C;&#x5E03;&#x5C14;&#x578B;&#x9ED8;&#x8BA4;&#x503C;&#x662F; false&#xFF0C;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x9ED8;&#x8BA4;&#x503C;&#x662F; null&#x3002;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x5728;&#x58F0;&#x660E;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x4E2D;&#x6307;&#x5B9A;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;&#x9759;&#x6001;&#x8BED;&#x53E5;&#x5757;&#x4E2D;&#x521D;&#x59CB;&#x5316;&#x3002;
+- &#x9759;&#x6001;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#xFF1A;ClassName.VariableName &#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x3002;
+- &#x7C7B;&#x53D8;&#x91CF;&#x88AB;&#x58F0;&#x660E;&#x4E3A; public static final &#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x7C7B;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#x4E00;&#x822C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x3002;&#x5982;&#x679C;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x4E0D;&#x662F; public &#x548C; final &#x7C7B;&#x578B;&#xFF0C;&#x5176;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#x4E0E;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x4EE5;&#x53CA;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7684;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#x4E00;&#x81F4;&#x3002;
 
 ### &#x5B9E;&#x4F8B;
 
-```java
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token punctuation">{</span>
+```
+public class Employee {
 
-    <span class="token comment">//salary&#x662F;&#x9759;&#x6001;&#x7684;&#x79C1;&#x6709;&#x53D8;&#x91CF;</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">double</span> salary<span class="token punctuation">;</span>
-    <span class="token comment">// DEPARTMENT&#x662F;&#x4E00;&#x4E2A;&#x5E38;&#x91CF;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> DEPARTMENT <span class="token operator">=</span> <span class="token string">&quot;&#x9AD8;&#x4E2D;&#x90E8;&quot;</span><span class="token punctuation">;</span>
+    //salary&#x662F;&#x9759;&#x6001;&#x7684;&#x79C1;&#x6709;&#x53D8;&#x91CF;
+    private static double salary;
+    // DEPARTMENT&#x662F;&#x4E00;&#x4E2A;&#x5E38;&#x91CF;
+    public static final String DEPARTMENT = &quot;&#x9AD8;&#x4E2D;&#x90E8;&quot;;
 
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-           salary <span class="token operator">=</span> <span class="token number">10000</span><span class="token punctuation">;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>DEPARTMENT<span class="token operator">+</span><span class="token string">&quot;&#x5E73;&#x5747;&#x5DE5;&#x8D44;:&quot;</span><span class="token operator">+</span>salary<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-```java
+    public static void main(String[] args){
+           salary = 10000;
+        System.out.println(DEPARTMENT+&quot;&#x5E73;&#x5747;&#x5DE5;&#x8D44;:&quot;+salary);
+    }
+}
+```
 
-&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;<span class="token operator">:</span>
+&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:
 
-```java
-&#x9AD8;&#x4E2D;&#x90E8;&#x5E73;&#x5747;&#x5DE5;&#x8D44;<span class="token operator">:</span><span class="token number">10000.0</span>
-```java
+```
+&#x9AD8;&#x4E2D;&#x90E8;&#x5E73;&#x5747;&#x5DE5;&#x8D44;:10000.0
+```
 
-<span class="token operator">*</span><span class="token operator">*</span>&#x6CE8;&#x610F;&#xFF1A;<span class="token operator">*</span><span class="token operator">*</span>&#x5982;&#x679C;&#x5176;&#x4ED6;&#x7C7B;&#x60F3;&#x8981;&#x8BBF;&#x95EE;&#x8BE5;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x8BBF;&#x95EE;&#xFF1A;<span class="token operator">*</span><span class="token operator">*</span><span class="token class-name">Employee</span><span class="token punctuation">.</span>DEPARTMENT<span class="token operator">*</span><span class="token operator">*</span>&#x3002;
-</code></pre>
-</body></html>
+**&#x6CE8;&#x610F;&#xFF1A;**&#x5982;&#x679C;&#x5176;&#x4ED6;&#x7C7B;&#x60F3;&#x8981;&#x8BBF;&#x95EE;&#x8BE5;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x8BBF;&#x95EE;&#xFF1A;**Employee.DEPARTMENT**&#x3002;
+</code></pre></body></html>
                                 
                                 </section>
                             
@@ -1049,7 +1048,7 @@ age <span class="token operator">=</span> age <span class="token operator">+</sp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"变量的类型","level":"2.1.1","depth":2,"next":{"title":"基本数据类型","level":"2.1.2","depth":2,"path":"Java基础/基本数据类型.md","ref":"Java基础/基本数据类型.md","articles":[]},"previous":{"title":"java 基础","level":"2.1","depth":1,"path":"Java基础/README.md","ref":"Java基础/README.md","articles":[{"title":"变量的类型","level":"2.1.1","depth":2,"path":"Java基础/变量的类型.md","ref":"Java基础/变量的类型.md","articles":[]},{"title":"基本数据类型","level":"2.1.2","depth":2,"path":"Java基础/基本数据类型.md","ref":"Java基础/基本数据类型.md","articles":[]},{"title":"修饰符","level":"2.1.3","depth":2,"path":"Java基础/修饰符.md","ref":"Java基础/修饰符.md","articles":[]},{"title":"运算符","level":"2.1.4","depth":2,"path":"Java基础/运算符.md","ref":"Java基础/运算符.md","articles":[]},{"title":"条件语句","level":"2.1.5","depth":2,"path":"Java基础/条件语句.md","ref":"Java基础/条件语句.md","articles":[]},{"title":"循环结构","level":"2.1.6","depth":2,"path":"Java基础/循环结构.md","ref":"Java基础/循环结构.md","articles":[]},{"title":"switch 语句","level":"2.1.7","depth":2,"path":"Java基础/switch语句.md","ref":"Java基础/switch语句.md","articles":[]},{"title":"数组","level":"2.1.8","depth":2,"path":"Java基础/数组.md","ref":"Java基础/数组.md","articles":[]},{"title":"字符串","level":"2.1.9","depth":2,"path":"Java基础/字符串.md","ref":"Java基础/字符串.md","articles":[]},{"title":"Character 类","level":"2.1.10","depth":2,"path":"Java基础/Character类.md","ref":"Java基础/Character类.md","articles":[]},{"title":"正则表达式","level":"2.1.11","depth":2,"path":"Java基础/正则表达式.md","ref":"Java基础/正则表达式.md","articles":[]},{"title":"流,文件和 IO","level":"2.1.12","depth":2,"path":"Java基础/流,文件和IO.md","ref":"Java基础/流,文件和IO.md","articles":[]},{"title":"StringBuffer 和 StringBuilder 类","level":"2.1.13","depth":2,"path":"Java基础/StringBuffer和StringBuilder类.md","ref":"Java基础/StringBuffer和StringBuilder类.md","articles":[]},{"title":"Collection","level":"2.1.14","depth":2,"path":"Java基础/Collection.md","ref":"Java基础/Collection.md","articles":[]},{"title":"Map","level":"2.1.15","depth":2,"path":"Java基础/map.md","ref":"Java基础/map.md","articles":[]},{"title":"List","level":"2.1.16","depth":2,"path":"Java基础/list.md","ref":"Java基础/list.md","articles":[]},{"title":"多线程编程","level":"2.1.17","depth":2,"path":"Java基础/多线程编程.md","ref":"Java基础/多线程编程.md","articles":[]},{"title":"泛型","level":"2.1.18","depth":2,"path":"Java基础/泛型.md","ref":"Java基础/泛型.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"Java基础/变量的类型.md","mtime":"2020-01-17T08:20:10.995Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-17T08:20:14.449Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"变量的类型","level":"2.1.1","depth":2,"next":{"title":"基本数据类型","level":"2.1.2","depth":2,"path":"Java基础/基本数据类型.md","ref":"Java基础/基本数据类型.md","articles":[]},"previous":{"title":"java 基础","level":"2.1","depth":1,"path":"Java基础/README.md","ref":"Java基础/README.md","articles":[{"title":"变量的类型","level":"2.1.1","depth":2,"path":"Java基础/变量的类型.md","ref":"Java基础/变量的类型.md","articles":[]},{"title":"基本数据类型","level":"2.1.2","depth":2,"path":"Java基础/基本数据类型.md","ref":"Java基础/基本数据类型.md","articles":[]},{"title":"修饰符","level":"2.1.3","depth":2,"path":"Java基础/修饰符.md","ref":"Java基础/修饰符.md","articles":[]},{"title":"运算符","level":"2.1.4","depth":2,"path":"Java基础/运算符.md","ref":"Java基础/运算符.md","articles":[]},{"title":"条件语句","level":"2.1.5","depth":2,"path":"Java基础/条件语句.md","ref":"Java基础/条件语句.md","articles":[]},{"title":"循环结构","level":"2.1.6","depth":2,"path":"Java基础/循环结构.md","ref":"Java基础/循环结构.md","articles":[]},{"title":"switch 语句","level":"2.1.7","depth":2,"path":"Java基础/switch语句.md","ref":"Java基础/switch语句.md","articles":[]},{"title":"数组","level":"2.1.8","depth":2,"path":"Java基础/数组.md","ref":"Java基础/数组.md","articles":[]},{"title":"字符串","level":"2.1.9","depth":2,"path":"Java基础/字符串.md","ref":"Java基础/字符串.md","articles":[]},{"title":"Character 类","level":"2.1.10","depth":2,"path":"Java基础/Character类.md","ref":"Java基础/Character类.md","articles":[]},{"title":"正则表达式","level":"2.1.11","depth":2,"path":"Java基础/正则表达式.md","ref":"Java基础/正则表达式.md","articles":[]},{"title":"流,文件和 IO","level":"2.1.12","depth":2,"path":"Java基础/流,文件和IO.md","ref":"Java基础/流,文件和IO.md","articles":[]},{"title":"StringBuffer 和 StringBuilder 类","level":"2.1.13","depth":2,"path":"Java基础/StringBuffer和StringBuilder类.md","ref":"Java基础/StringBuffer和StringBuilder类.md","articles":[]},{"title":"Collection","level":"2.1.14","depth":2,"path":"Java基础/Collection.md","ref":"Java基础/Collection.md","articles":[]},{"title":"Map","level":"2.1.15","depth":2,"path":"Java基础/map.md","ref":"Java基础/map.md","articles":[]},{"title":"List","level":"2.1.16","depth":2,"path":"Java基础/list.md","ref":"Java基础/list.md","articles":[]},{"title":"多线程编程","level":"2.1.17","depth":2,"path":"Java基础/多线程编程.md","ref":"Java基础/多线程编程.md","articles":[]},{"title":"泛型","level":"2.1.18","depth":2,"path":"Java基础/泛型.md","ref":"Java基础/泛型.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"Java基础/变量的类型.md","mtime":"2020-01-17T08:24:22.846Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-17T08:24:54.102Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

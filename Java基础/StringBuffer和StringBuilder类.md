@@ -8,7 +8,7 @@ StringBuilder 类在 Java 5 中被提出，它和 StringBuffer 之间的最大�
 
 由于 StringBuilder 相较于 StringBuffer 有速度优势，所以多数情况下建议使用 StringBuilder 类。然而在应用程序要求线程安全的情况下，则必须使用 StringBuffer 类。
 
-````java
+````
 public class Main {
     public static void main(String[] args) {
         method1();
@@ -23,7 +23,7 @@ public class Main {
         System.out.println(sBuf);
     }
 }
-```java
+```
 
 ## StringBuffer 方法
 

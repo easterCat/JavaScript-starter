@@ -1,0 +1,1028 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>变量的类型 · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="基本数据类型.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">js 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../js基础/内存分配/readme.html">
+            
+                <a href="../js基础/内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../js基础/浏览器工作原理/readme.html">
+            
+                <a href="../js基础/浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../js基础/类和对象/readme.html">
+            
+                <a href="../js基础/类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../js基础/数据类型/readme.html">
+            
+                <a href="../js基础/数据类型/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../js基础/js事件机制/readme.html">
+            
+                <a href="../js基础/js事件机制/readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../前端/解决canvas在高清屏中模糊.html">
+            
+                <a href="../前端/解决canvas在高清屏中模糊.html">
+            
+                    
+                    解决 canvas 在高清屏中模糊
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../前端/js二进制数据互转.html">
+            
+                <a href="../前端/js二进制数据互转.html">
+            
+                    
+                    js 二进制数据互转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../前端/单元测试/readme.html">
+            
+                <a href="../前端/单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">leetcode</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">scripto</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../scripto/中间件模式.html">
+            
+                <a href="../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../scripto/m长度的都是n的数组.html">
+            
+                <a href="../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">java 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    java 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="6.1.1" data-path="变量的类型.html">
+            
+                <a href="变量的类型.html">
+            
+                    
+                    变量的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="基本数据类型.html">
+            
+                <a href="基本数据类型.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="修饰符.html">
+            
+                <a href="修饰符.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="运算符.html">
+            
+                <a href="运算符.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="条件语句.html">
+            
+                <a href="条件语句.html">
+            
+                    
+                    条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="循环结构.html">
+            
+                <a href="循环结构.html">
+            
+                    
+                    循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.7" data-path="switch语句.html">
+            
+                <a href="switch语句.html">
+            
+                    
+                    switch 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.8" data-path="数组.html">
+            
+                <a href="数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.9" data-path="字符串.html">
+            
+                <a href="字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.10" data-path="Character类.html">
+            
+                <a href="Character类.html">
+            
+                    
+                    Character 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.11" data-path="正则表达式.html">
+            
+                <a href="正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.12" data-path="流,文件和IO.html">
+            
+                <a href="流,文件和IO.html">
+            
+                    
+                    流,文件和 IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.13" data-path="StringBuffer和StringBuilder类.html">
+            
+                <a href="StringBuffer和StringBuilder类.html">
+            
+                    
+                    StringBuffer 和 StringBuilder 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.14" data-path="Collection.html">
+            
+                <a href="Collection.html">
+            
+                    
+                    Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.15" data-path="map.html">
+            
+                <a href="map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.16" data-path="list.html">
+            
+                <a href="list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.17" data-path="多线程编程.html">
+            
+                <a href="多线程编程.html">
+            
+                    
+                    多线程编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.18" data-path="泛型.html">
+            
+                <a href="泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构与算法</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Java数据结构与算法/">
+            
+                <a href="../Java数据结构与算法/">
+            
+                    
+                    Java 数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../Java数据结构与算法/线性表.html">
+            
+                <a href="../Java数据结构与算法/线性表.html">
+            
+                    
+                    线性表(数组,队列,栈,链表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../Java数据结构与算法/Java排序算法.html">
+            
+                <a href="../Java数据结构与算法/Java排序算法.html">
+            
+                    
+                    Java 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Java 练习题</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../Java练习题/">
+            
+                <a href="../Java练习题/">
+            
+                    
+                    Java 练习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../Java练习题/指定范围包含的素数.html">
+            
+                <a href="../Java练习题/指定范围包含的素数.html">
+            
+                    
+                    指定范围包含的素数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../Java练习题/公约数和公倍数.html">
+            
+                <a href="../Java练习题/公约数和公倍数.html">
+            
+                    
+                    公约数和公倍数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >变量的类型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#java-&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;"><b>1. </b>Java &#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#java-&#x5C40;&#x90E8;&#x53D8;&#x91CF;"><b>1.1. </b>Java &#x5C40;&#x90E8;&#x53D8;&#x91CF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x4F8B;1"><b>1.1.1. </b>&#x5B9E;&#x4F8B;1</a></li><li><span class="title-icon "></span><a href="#&#x5B9E;&#x4F8B;-2"><b>1.1.2. </b>&#x5B9E;&#x4F8B; 2</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;"><b>1.2. </b>&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x4F8B;"><b>1.2.1. </b>&#x5B9E;&#x4F8B;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7C7B;&#x53D8;&#x91CF;&#xFF08;&#x9759;&#x6001;&#x53D8;&#x91CF;&#xFF09;"><b>1.3. </b>&#x7C7B;&#x53D8;&#x91CF;&#xFF08;&#x9759;&#x6001;&#x53D8;&#x91CF;&#xFF09;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x4F8B;_1"><b>1.3.1. </b>&#x5B9E;&#x4F8B;</a></li></ul></ul></ul></div><a href="#java-&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="java-&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;"><a name="java-&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#java-&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>1. Java &#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;</h1>
+<p>&#x5728;Java&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x53D8;&#x91CF;&#x5728;&#x4F7F;&#x7528;&#x524D;&#x5FC5;&#x987B;&#x58F0;&#x660E;&#x3002;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x7684;&#x57FA;&#x672C;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>type identifier [ = value][, identifier [= value] ...] ;
+</code></pre><p>&#x683C;&#x5F0F;&#x8BF4;&#x660E;&#xFF1A;type&#x4E3A;Java&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;identifier&#x662F;&#x53D8;&#x91CF;&#x540D;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x9694;&#x5F00;&#x6765;&#x58F0;&#x660E;&#x591A;&#x4E2A;&#x540C;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x5B9E;&#x4F8B;&#x3002;&#x6CE8;&#x610F;&#x6709;&#x4E9B;&#x5305;&#x542B;&#x4E86;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#x3002;</p>
+<pre class="language-"><code>int a, b, c;         // &#x58F0;&#x660E;&#x4E09;&#x4E2A;int&#x578B;&#x6574;&#x6570;&#xFF1A;a&#x3001; b&#x3001;c
+int d = 3, e = 4, f = 5; // &#x58F0;&#x660E;&#x4E09;&#x4E2A;&#x6574;&#x6570;&#x5E76;&#x8D4B;&#x4E88;&#x521D;&#x503C;
+byte z = 22;         // &#x58F0;&#x660E;&#x5E76;&#x521D;&#x59CB;&#x5316; z
+String s = &quot;nowcoder&quot;;  // &#x58F0;&#x660E;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x5B57;&#x7B26;&#x4E32; s
+double pi = 3.14159; // &#x58F0;&#x660E;&#x4E86;&#x53CC;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x578B;&#x53D8;&#x91CF; pi
+char x = &apos;x&apos;;        // &#x58F0;&#x660E;&#x53D8;&#x91CF; x &#x7684;&#x503C;&#x662F;&#x5B57;&#x7B26; &apos;x&apos;&#x3002;
+</code></pre><p>Java&#x8BED;&#x8A00;&#x652F;&#x6301;&#x7684;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x7C7B;&#x53D8;&#x91CF;&#xFF1A;&#x72EC;&#x7ACB;&#x4E8E;&#x65B9;&#x6CD5;&#x4E4B;&#x5916;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x7528; static &#x4FEE;&#x9970;&#x3002;</li>
+<li>&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#xFF1A;&#x72EC;&#x7ACB;&#x4E8E;&#x65B9;&#x6CD5;&#x4E4B;&#x5916;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x8FC7;&#x6CA1;&#x6709; static &#x4FEE;&#x9970;&#x3002;</li>
+<li>&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF1A;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x3002;</li>
+</ul>
+<pre class="language-"><code>public class Test{
+
+    static int allClicks=0;    // &#x7C7B;&#x53D8;&#x91CF;
+
+    String str = &quot;hello world&quot;;  // &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;
+
+    public void method() {
+        int i = 0;  // &#x5C40;&#x90E8;&#x53D8;&#x91CF;
+    }
+}
+</code></pre><h2 id="java-&#x5C40;&#x90E8;&#x53D8;&#x91CF;"><a name="java-&#x5C40;&#x90E8;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#java-&#x5C40;&#x90E8;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Java &#x5C40;&#x90E8;&#x53D8;&#x91CF;</h2>
+<ul>
+<li>&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x5728;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x4E2D;&#xFF1B;</li>
+<li>&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x5728;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x3001;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x88AB;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x521B;&#x5EFA;&#xFF0C;&#x5F53;&#x5B83;&#x4EEC;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53D8;&#x91CF;&#x5C06;&#x4F1A;&#x88AB;&#x9500;&#x6BC1;&#xFF1B;  </li>
+<li>&#x8BBF;&#x95EE;&#x4FEE;&#x9970;&#x7B26;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF1B; </li>
+<li>&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x53EA;&#x5728;&#x58F0;&#x660E;&#x5B83;&#x7684;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x4E2D;&#x53EF;&#x89C1;&#xFF1B;</li>
+<li>&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x662F;&#x5728;&#x6808;&#x4E0A;&#x5206;&#x914D;&#x7684;&#x3002;</li>
+<li>&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x88AB;&#x58F0;&#x660E;&#x540E;&#xFF0C;&#x5FC5;&#x987B;&#x7ECF;&#x8FC7;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002; </li>
+</ul>
+<h3 id="&#x5B9E;&#x4F8B;1"><a name="&#x5B9E;&#x4F8B;1" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;1"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x5B9E;&#x4F8B;1</h3>
+<p>&#x5728;&#x4EE5;&#x4E0B;&#x5B9E;&#x4F8B;&#x4E2D;age&#x662F;&#x4E00;&#x4E2A;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x3002;&#x5B9A;&#x4E49;&#x5728;pupAge()&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x5C31;&#x9650;&#x5236;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x3002;</p>
+<pre class="language-"><code> public class Test{
+
+   public void setAge(){
+      int age = 0;
+      age = age + 7;
+      System.out.println(&quot;&#x5C0F;&#x72D7;&#x7684;&#x5E74;&#x9F84;&#x662F;: &quot; + age);
+   }
+
+   public static void main(String[] args){
+      Test test = new Test();
+      test.setAge();
+   }
+}
+</code></pre><p>&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:</p>
+<pre class="language-"><code>&#x5C0F;&#x72D7;&#x7684;&#x5E74;&#x9F84;&#x662F;: 7
+</code></pre><h3 id="&#x5B9E;&#x4F8B;-2"><a name="&#x5B9E;&#x4F8B;-2" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;-2"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x5B9E;&#x4F8B; 2</h3>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D; age &#x53D8;&#x91CF;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x4F1A;&#x51FA;&#x9519;&#xFF1A;</p>
+<pre class="language-"><code>public class Test{
+
+   public void setAge(){
+      int age;
+      age = age + 7;
+      System.out.println(&quot;&#x5C0F;&#x72D7;&#x7684;&#x5E74;&#x9F84;&#x662F; : &quot; + age);
+   }
+
+   public static void main(String[] args){
+      Test test = new Test();
+      test.setAge();
+   }
+
+}
+</code></pre><p>&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:</p>
+<pre class="language-"><code>Test.java:4:variable number might not have been initialized
+age = age + 7;
+         ^
+1 error
+</code></pre><h2 id="&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;"><a name="&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;</h2>
+<ul>
+<li>&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x5728;&#x4E00;&#x4E2A;&#x7C7B;&#x4E2D;&#xFF0C;&#x4F46;&#x5728;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x548C;&#x8BED;&#x53E5;&#x5757;&#x4E4B;&#x5916;&#xFF1B;</li>
+<li>&#x5F53;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x88AB;&#x5B9E;&#x4F8B;&#x5316;&#x4E4B;&#x540E;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x5C31;&#x8DDF;&#x7740;&#x786E;&#x5B9A;&#xFF1B;</li>
+<li>&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5728;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x521B;&#x5EFA;&#xFF0C;&#x5728;&#x5BF9;&#x8C61;&#x88AB;&#x9500;&#x6BC1;&#x7684;&#x65F6;&#x5019;&#x9500;&#x6BC1;&#xFF1B;</li>
+<li>&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x5E94;&#x8BE5;&#x81F3;&#x5C11;&#x88AB;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x5F15;&#x7528;&#xFF0C;&#x4F7F;&#x5F97;&#x5916;&#x90E8;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x8FD9;&#x4E9B;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x4FE1;&#x606F;&#xFF1B;</li>
+<li>&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x58F0;&#x660E;&#x5728;&#x4F7F;&#x7528;&#x524D;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x540E;&#xFF1B;</li>
+<li>&#x8BBF;&#x95EE;&#x4FEE;&#x9970;&#x7B26;&#x53EF;&#x4EE5;&#x4FEE;&#x9970;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#xFF1B;</li>
+<li>&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5BF9;&#x4E8E;&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x3001;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x8BED;&#x53E5;&#x5757;&#x662F;&#x53EF;&#x89C1;&#x7684;&#x3002;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x5E94;&#x8BE5;&#x628A;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x8BBE;&#x4E3A;&#x79C1;&#x6709;&#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x8BBF;&#x95EE;&#x4FEE;&#x9970;&#x7B26;&#x53EF;&#x4EE5;&#x4F7F;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5BF9;&#x5B50;&#x7C7B;&#x53EF;&#x89C1;&#xFF1B;</li>
+<li>&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5177;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x6570;&#x503C;&#x578B;&#x53D8;&#x91CF;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F;0&#xFF0C;&#x5E03;&#x5C14;&#x578B;&#x53D8;&#x91CF;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F;false&#xFF0C;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F;null&#x3002;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x5728;&#x58F0;&#x660E;&#x65F6;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x4E2D;&#x6307;&#x5B9A;&#xFF1B;</li>
+<li>&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x53D8;&#x91CF;&#x540D;&#x8BBF;&#x95EE;&#x3002;&#x4F46;&#x5728;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x7C7B;&#x4E2D;&#xFF0C;&#x5C31;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x5B8C;&#x5168;&#x9650;&#x5B9A;&#x540D;&#xFF1A;ObejectReference.VariableName&#x3002;</li>
+</ul>
+<h3 id="&#x5B9E;&#x4F8B;"><a name="&#x5B9E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x5B9E;&#x4F8B;</h3>
+<pre class="language-"><code>public class Employee{
+
+   // &#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5BF9;&#x5B50;&#x7C7B;&#x53EF;&#x89C1;
+   public String name;
+   // &#x79C1;&#x6709;&#x53D8;&#x91CF;&#xFF0C;&#x4EC5;&#x5728;&#x8BE5;&#x7C7B;&#x53EF;&#x89C1;
+   private double salary;
+
+   //&#x5728;&#x6784;&#x9020;&#x5668;&#x4E2D;&#x5BF9;name&#x8D4B;&#x503C;
+   public Employee (String empName){
+      name = empName;
+   }
+
+   //&#x8BBE;&#x5B9A;salary&#x7684;&#x503C;
+   public void setSalary(double empSal){
+      salary = empSal;
+   } 
+
+   // &#x6253;&#x5370;&#x4FE1;&#x606F;
+   public void printEmp(){
+      System.out.println(&quot;&#x540D;&#x5B57; : &quot; + name );
+      System.out.println(&quot;&#x85AA;&#x6C34; : &quot; + salary);
+   }
+
+   public static void main(String[] args){
+      Employee emp = new Employee(&quot;nowcoder&quot;);
+      emp.setSalary(1000);
+      emp.printEmp();
+   }
+}
+</code></pre><p>&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:</p>
+<pre class="language-"><code>&#x540D;&#x5B57; : nowcoder
+&#x85AA;&#x6C34; : 1000.0
+</code></pre><h2 id="&#x7C7B;&#x53D8;&#x91CF;&#xFF08;&#x9759;&#x6001;&#x53D8;&#x91CF;&#xFF09;"><a name="&#x7C7B;&#x53D8;&#x91CF;&#xFF08;&#x9759;&#x6001;&#x53D8;&#x91CF;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x53D8;&#x91CF;&#xFF08;&#x9759;&#x6001;&#x53D8;&#x91CF;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x7C7B;&#x53D8;&#x91CF;&#xFF08;&#x9759;&#x6001;&#x53D8;&#x91CF;&#xFF09;</h2>
+<ul>
+<li>&#x7C7B;&#x53D8;&#x91CF;&#x4E5F;&#x79F0;&#x4E3A;&#x9759;&#x6001;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x7C7B;&#x4E2D;&#x4EE5; static &#x5173;&#x952E;&#x5B57;&#x58F0;&#x660E;&#xFF0C;&#x4F46;&#x5FC5;&#x987B;&#x5728;&#x65B9;&#x6CD5;&#x4E4B;&#x5916;&#x3002;</li>
+<li>&#x65E0;&#x8BBA;&#x4E00;&#x4E2A;&#x7C7B;&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x5C11;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x7C7B;&#x53EA;&#x62E5;&#x6709;&#x7C7B;&#x53D8;&#x91CF;&#x7684;&#x4E00;&#x4EFD;&#x62F7;&#x8D1D;&#x3002;</li>
+<li>&#x9759;&#x6001;&#x53D8;&#x91CF;&#x9664;&#x4E86;&#x88AB;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;&#x5916;&#x5F88;&#x5C11;&#x4F7F;&#x7528;&#x3002;&#x5E38;&#x91CF;&#x662F;&#x6307;&#x58F0;&#x660E;&#x4E3A;public/private&#xFF0C;final&#x548C;static&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x5E38;&#x91CF;&#x521D;&#x59CB;&#x5316;&#x540E;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x3002;</li>
+<li>&#x9759;&#x6001;&#x53D8;&#x91CF;&#x50A8;&#x5B58;&#x5728;&#x9759;&#x6001;&#x5B58;&#x50A8;&#x533A;&#x3002;&#x7ECF;&#x5E38;&#x88AB;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;&#xFF0C;&#x5F88;&#x5C11;&#x5355;&#x72EC;&#x4F7F;&#x7528;static&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x3002;</li>
+<li>&#x9759;&#x6001;&#x53D8;&#x91CF;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x88AB;&#x8BBF;&#x95EE;&#x65F6;&#x521B;&#x5EFA;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x7ED3;&#x675F;&#x65F6;&#x9500;&#x6BC1;&#x3002;</li>
+<li>&#x4E0E;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5177;&#x6709;&#x76F8;&#x4F3C;&#x7684;&#x53EF;&#x89C1;&#x6027;&#x3002;&#x4F46;&#x4E3A;&#x4E86;&#x5BF9;&#x7C7B;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x53EF;&#x89C1;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x4E3A;public&#x7C7B;&#x578B;&#x3002;</li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x548C;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x76F8;&#x4F3C;&#x3002;&#x6570;&#x503C;&#x578B;&#x53D8;&#x91CF;&#x9ED8;&#x8BA4;&#x503C;&#x662F;0&#xFF0C;&#x5E03;&#x5C14;&#x578B;&#x9ED8;&#x8BA4;&#x503C;&#x662F;false&#xFF0C;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x9ED8;&#x8BA4;&#x503C;&#x662F;null&#x3002;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x5728;&#x58F0;&#x660E;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x4E2D;&#x6307;&#x5B9A;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;&#x9759;&#x6001;&#x8BED;&#x53E5;&#x5757;&#x4E2D;&#x521D;&#x59CB;&#x5316;&#x3002;</li>
+<li>&#x9759;&#x6001;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#xFF1A;ClassName.VariableName&#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x3002;</li>
+<li>&#x7C7B;&#x53D8;&#x91CF;&#x88AB;&#x58F0;&#x660E;&#x4E3A;public static final&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x7C7B;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#x4E00;&#x822C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x3002;&#x5982;&#x679C;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x4E0D;&#x662F;public&#x548C;final&#x7C7B;&#x578B;&#xFF0C;&#x5176;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#x4E0E;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x4EE5;&#x53CA;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7684;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#x4E00;&#x81F4;&#x3002;</li>
+</ul>
+<h3 id="&#x5B9E;&#x4F8B;_1"><a name="&#x5B9E;&#x4F8B;_1" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;_1"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x5B9E;&#x4F8B;</h3>
+<pre class="language-"><code>public class Employee {
+
+    //salary&#x662F;&#x9759;&#x6001;&#x7684;&#x79C1;&#x6709;&#x53D8;&#x91CF;
+    private static double salary;
+    // DEPARTMENT&#x662F;&#x4E00;&#x4E2A;&#x5E38;&#x91CF;
+    public static final String DEPARTMENT = &quot;&#x9AD8;&#x4E2D;&#x90E8;&quot;;
+
+    public static void main(String[] args){
+           salary = 10000;
+        System.out.println(DEPARTMENT+&quot;&#x5E73;&#x5747;&#x5DE5;&#x8D44;:&quot;+salary);
+    }
+}
+</code></pre><p>&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:</p>
+<pre class="language-"><code>&#x9AD8;&#x4E2D;&#x90E8;&#x5E73;&#x5747;&#x5DE5;&#x8D44;:10000.0
+</code></pre><p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong>&#x5982;&#x679C;&#x5176;&#x4ED6;&#x7C7B;&#x60F3;&#x8981;&#x8BBF;&#x95EE;&#x8BE5;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x8BBF;&#x95EE;&#xFF1A;<strong>Employee.DEPARTMENT</strong>&#x3002;</p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: java 基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="基本数据类型.html" class="navigation navigation-next " aria-label="Next page: 基本数据类型">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"变量的类型","level":"6.1.1","depth":2,"next":{"title":"基本数据类型","level":"6.1.2","depth":2,"path":"Java基础/基本数据类型.md","ref":"Java基础/基本数据类型.md","articles":[]},"previous":{"title":"java 基础","level":"6.1","depth":1,"path":"Java基础/README.md","ref":"Java基础/README.md","articles":[{"title":"变量的类型","level":"6.1.1","depth":2,"path":"Java基础/变量的类型.md","ref":"Java基础/变量的类型.md","articles":[]},{"title":"基本数据类型","level":"6.1.2","depth":2,"path":"Java基础/基本数据类型.md","ref":"Java基础/基本数据类型.md","articles":[]},{"title":"修饰符","level":"6.1.3","depth":2,"path":"Java基础/修饰符.md","ref":"Java基础/修饰符.md","articles":[]},{"title":"运算符","level":"6.1.4","depth":2,"path":"Java基础/运算符.md","ref":"Java基础/运算符.md","articles":[]},{"title":"条件语句","level":"6.1.5","depth":2,"path":"Java基础/条件语句.md","ref":"Java基础/条件语句.md","articles":[]},{"title":"循环结构","level":"6.1.6","depth":2,"path":"Java基础/循环结构.md","ref":"Java基础/循环结构.md","articles":[]},{"title":"switch 语句","level":"6.1.7","depth":2,"path":"Java基础/switch语句.md","ref":"Java基础/switch语句.md","articles":[]},{"title":"数组","level":"6.1.8","depth":2,"path":"Java基础/数组.md","ref":"Java基础/数组.md","articles":[]},{"title":"字符串","level":"6.1.9","depth":2,"path":"Java基础/字符串.md","ref":"Java基础/字符串.md","articles":[]},{"title":"Character 类","level":"6.1.10","depth":2,"path":"Java基础/Character类.md","ref":"Java基础/Character类.md","articles":[]},{"title":"正则表达式","level":"6.1.11","depth":2,"path":"Java基础/正则表达式.md","ref":"Java基础/正则表达式.md","articles":[]},{"title":"流,文件和 IO","level":"6.1.12","depth":2,"path":"Java基础/流,文件和IO.md","ref":"Java基础/流,文件和IO.md","articles":[]},{"title":"StringBuffer 和 StringBuilder 类","level":"6.1.13","depth":2,"path":"Java基础/StringBuffer和StringBuilder类.md","ref":"Java基础/StringBuffer和StringBuilder类.md","articles":[]},{"title":"Collection","level":"6.1.14","depth":2,"path":"Java基础/Collection.md","ref":"Java基础/Collection.md","articles":[]},{"title":"Map","level":"6.1.15","depth":2,"path":"Java基础/map.md","ref":"Java基础/map.md","articles":[]},{"title":"List","level":"6.1.16","depth":2,"path":"Java基础/list.md","ref":"Java基础/list.md","articles":[]},{"title":"多线程编程","level":"6.1.17","depth":2,"path":"Java基础/多线程编程.md","ref":"Java基础/多线程编程.md","articles":[]},{"title":"泛型","level":"6.1.18","depth":2,"path":"Java基础/泛型.md","ref":"Java基础/泛型.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"Java基础/变量的类型.md","mtime":"2020-01-08T12:18:26.359Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-17T07:34:16.038Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

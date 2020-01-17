@@ -10,12 +10,6 @@
 DPR = DP / DIP
 ```
 
-<article class="article-content" id="article-content">
-<div class="thumbnail-image">
-<div class="thumbnail-image-con">![](/newimg88/2018/05/v2-d2f8ac919aa348850f002ed86ff327de_1200x500.jpg)</div>
-<div class="wechat-webfedev">![10年服务1亿前端开发工程师](/newimg88/2018/10/webfedev-qrcode.png)</div>
-</div>
-
 使用 canvas 绘制图片或者是文字在 Retina 屏中会非常模糊。如图：
 
 ![](/newimg88/2018/05/98CB56B8-7983-427E-AFCE-15043A6D8F63.png)

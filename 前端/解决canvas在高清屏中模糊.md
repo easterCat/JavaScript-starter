@@ -36,15 +36,17 @@ var context = myCanvas.getContext("2d");
 
 2.获取像素比，将 Canvas 宽高进行放大，放大比例为：`devicePixelRatio / webkitBackingStorePixelRatio` , 我们写了一个兼容的方法。
 
-```JS
-var getPixelRatio = function (context) {
-    var backingStore = context.backingStorePixelRatio ||
-        context.webkitBackingStorePixelRatio ||
-        context.mozBackingStorePixelRatio ||
-        context.msBackingStorePixelRatio ||
-        context.oBackingStorePixelRatio ||
-        context.backingStorePixelRatio || 1;
-    return (window.devicePixelRatio || 1) / backingStore;
+```js
+var getPixelRatio = function(context) {
+  var backingStore =
+    context.backingStorePixelRatio ||
+    context.webkitBackingStorePixelRatio ||
+    context.mozBackingStorePixelRatio ||
+    context.msBackingStorePixelRatio ||
+    context.oBackingStorePixelRatio ||
+    context.backingStorePixelRatio ||
+    1;
+  return (window.devicePixelRatio || 1) / backingStore;
 };
 var ratio = getPixelRatio(context);
 ```
@@ -70,9 +72,9 @@ canvas 的实际大小的 640px × 800px，但是实际渲染到页面的大小�
 <canvas width="960" height="1200" style="width:320px; height:400px"></canvas>
 ```
 
-```JS
-myCanvas.style.width = myCanvas.width + 'px';
-myCanvas.style.height = myCanvas.height + 'px';
+```js
+myCanvas.style.width = myCanvas.width + "px";
+myCanvas.style.height = myCanvas.height + "px";
 
 myCanvas.width = myCanvas.width * ratio;
 myCanvas.height = myCanvas.height * ratio;
@@ -86,17 +88,17 @@ myCanvas.height = myCanvas.height * ratio;
 
 第一种方法：每一个绘制相应的放大，比如我们绘制文字
 
-```JS
+```js
 ontext.font = "36px Georgia"; //一倍屏下18px字体
 context.fillStyle = "#999";
-context.fillText("我是清晰的文字", 50*ratio, 50*ratio);// 坐标位置乘以像素比
+context.fillText("我是清晰的文字", 50 * ratio, 50 * ratio); // 坐标位置乘以像素比
 ```
 
 相对来说这个方法非常繁琐麻烦。
 
 第二种方法：直接使用 `scale` 方法:
 
-```JS
+```js
 // 放大倍数
 context.scale(ratio, ratio);
 

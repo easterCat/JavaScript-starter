@@ -1,11 +1,11 @@
-# Java switch 语句
+# Java switch语句
 
 switch case 语句判断一个变量与一系列值中某个值是否相等，每个值称为一个分支。
 
 ### 语法
 
 switch case 语句语法格式如下：
-
+ 
 ```
 switch(expression){
     case value :

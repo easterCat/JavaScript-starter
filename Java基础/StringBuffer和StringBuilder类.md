@@ -60,5 +60,4 @@ public class Main {
 - StringBuffer 线程安全 StringBuilder 线程不安全
 - 多数情况下建议使用 StringBuilder 类
 - 单行用加号拼接字符串是没有性能损失的，java 编译器会隐式的替换成 stringbuilder
-- 用循环拼接字符串的时候，用 stringbuilder
-```
+- 用循环拼接字符串的时候，用 stringbuilder 

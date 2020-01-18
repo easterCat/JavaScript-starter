@@ -43,6 +43,7 @@ DOM2 级模块围绕这三种应用样式机制提供了一套 API。理解了�
 > 这些规则很少有必要通过脚本来访问，而最常用的就是 `CSSStyleRule` 类型。
 
 通过下图可以加深对`StyleSheet`，`CSSRule`关系的理解。
+
 ![](data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; width=&quot;500&quot; height=&quot;393&quot;></svg>)
 
 #### 1.3 `CSSStyleDeclaration` 应用在元素 style 属性的对象
@@ -92,7 +93,6 @@ DOM2 级模块围绕这三种应用样式机制提供了一套 API。理解了�
         sheet = document.styleSheets[i];
         console.log(sheet.href)
     }
-    复制代码
 
 以上代码可以输出文档中使用的每一个样式表的 href 属性(`style`元素包含的样式表没有 href 属性)。
 
@@ -110,8 +110,6 @@ DOM2 级模块围绕这三种应用样式机制提供了一套 API。理解了�
     if(typeof link === 'object' && link.rel === 'stylesheet') {
      const sheet = getStyleSheet(link);
     }
-
-    复制代码
 
 > 如果`link`标签不是引入的`css`样式，则`sheet`返回`null`。
 
@@ -152,7 +150,6 @@ DOM2 级模块围绕这三种应用样式机制提供了一套 API。理解了�
       //background-color: blue; width: 100px; height: 200px;
       console.log(rule.style.cssText);
     </script>
-    复制代码
 
 使用`rule.style`这种方式，可以像确定元素的行内样式信息一样，确定与规则相关的样式信息。与使用元素的方式一样，在这种方式下也可以修改样式信息，如下面的例子：
 
@@ -160,7 +157,6 @@ DOM2 级模块围绕这三种应用样式机制提供了一套 API。理解了�
     var rules = sheet.cssRules || sheet.rules;
     var rule = rules[0];
     rule.style.backgroundColor = "red";
-    复制代码
 
 以上面这种方式修改规则会影响页面中适用于该规则的所有元素。换句话说，如果有两个带有`demo`类的`div`元素，那么这两个元素都会应用修改后的样式。
 
@@ -172,12 +168,10 @@ DOM 规定，要向现有样式表中添加新规则，需要使用`insertRule()
 
     var sheet = document.styleSheets[0];
     sheet.insertRule("body { background-color: silver }", 0); //IE不支持
-    复制代码
 
 IE8 及更早版本支持一个类似的方法，名叫 `addRule()`
 
     sheet.addRule("body", "background-color: silver", 0); //仅对 IE 有效
-    复制代码
 
 以跨浏览器的方式向样式表中插入规则：
 
@@ -189,7 +183,6 @@ IE8 及更早版本支持一个类似的方法，名叫 `addRule()`
           sheet.addRule(selectorText, cssText, position);
       }
     }
-    复制代码
 
 > 上面这个例子插入的规则会改变元素的背景颜色。插入的规则将成为样式表中的第一条规则(插入到了 位置 0)——规则的次序在确定层叠之后应用到文档的规则时至关重要。
 
@@ -198,12 +191,10 @@ IE8 及更早版本支持一个类似的方法，名叫 `addRule()`
 从样式表中删除规则的方法是 deleteRule()，这个方法接受一个参数:要删除的规则的位置。例 如，要删除样式表中的第一条规则。
 
     sheet.deleteRule(0);
-    复制代码
 
 IE 支持的类似方法叫 `removeRule()`：
 
     sheet.removeRule(0); //仅对 IE 有效
-    复制代码
 
 以跨浏览器的方式向样式表中删除规则：
 
@@ -215,7 +206,6 @@ IE 支持的类似方法叫 `removeRule()`：
             sheet.removeRule(index);
         }
     }
-    复制代码
 
 > 添加规则和删除规则在实际 `Web` 开发中并不常用，慎重使用。
 
@@ -224,7 +214,6 @@ IE 支持的类似方法叫 `removeRule()`：
 任何支持 style 特性的 HTML 元素在 JavaScript 中都有一个对应的 style 属性。就是我们平常在 HTML 元素里写的样式：
 
     <div style="font-size:20px;color:red;">容器</div>
-    复制代码
 
 上面这个 `style` 对象 是 `CSSStyleDeclaration` 的实例。包含着通过 HTML 的 `style` 特性指定的所有样式信息，但不包含与外部样式表或嵌入样式表经层叠而来的样式。
 
@@ -234,7 +223,6 @@ var myDiv = document.getElementById("myDiv");
 myDiv.style.backgroundColor = "red";
 myDiv.style.width = "100px";
 myDiv.style.border = "1px solid black";
-复制代码
 
 其中一个不能直接转换的 `CSS`属性 就是 `float`。由于 `float` 是 `JavaScript` 中的保留字，因此不能用作属性名。DOM2 级样式”规范规定 样式对象上相应的属性名应该是 `cssFloat`。而 IE 支持的则是`styleFloat`。可以通过下面的方式来判断当前浏览器所支持的`float`：
 
@@ -247,18 +235,16 @@ myDiv.style.border = "1px solid black";
       return support;
     })()
     const floatReal = support.cssFloat ? 'cssFloat' : 'styleFloat';
-    复制代码
 
 还可以直接通过`document.documentMode`来判断：
 
-    const floatReal =  Number(document.documentMode) < 9 ? 'styleFloat' : 'cssFloat'复制代码
+    const floatReal =  Number(document.documentMode) < 9 ? 'styleFloat' : 'cssFloat'
 
 只要取得一个有效的 DOM 元素的引用，就可以随时使用 JavaScript 为其设置样式：
 
     var myDiv = document.getElementById("myDiv");
     myDiv.style.width = "100px";
     myDiv.style.border = "1px solid black";
-    复制代码
 
 所有度量值都必须指定一个度量单位。下面是一个设置元素`style`属性的例子：
 
@@ -275,7 +261,6 @@ myDiv.style.border = "1px solid black";
         });
     }
     setStyle(document.getElementById("myDiv"),{ position: 'absolute', top: 0 })
-    复制代码
 
 > `Element.style`返回的只是行内样式，并不是该元素的全部样式。通过样式表设置的样式，或者从父元素继承的样式，无法通过这个属性得到。元素的全部样式要通过`window.getComputedStyle()`得到。
 
@@ -300,7 +285,6 @@ myDiv.style.border = "1px solid black";
     var myDiv = document.getElementById("myDiv");
     myDiv.style.cssText = "background-color: green";
     console.log(myDiv.style.cssText) //background-color: green;
-    复制代码
 
 > 设置 `cssText` 是为元素应用多项变化最快捷的方式，因为可以一次性地应用所有变化。
 
@@ -315,7 +299,6 @@ myDiv.style.border = "1px solid black";
       //或者使用myDiv.style.item(i)
       console.log(myDiv.style[i])  //width font-size
     }
-    复制代码
 
 使用方括号语法或 item()方法，都可以取得 CSS 属性名("background-color"， 不是"backgroundColor")。然后，就可以在 getPropertyValue()中使用取得的属性名进一步取得 属性的值。
 
@@ -328,7 +311,6 @@ myDiv.style.border = "1px solid black";
       value = myDiv.style.getPropertyValue(prop);
       console.log(prop + ':' + value); //width:100px font-size:22px
     }
-    复制代码
 
 要从元素的样式中移除某个 CSS 属性，需要使用 removeProperty()方法。使用这个方法移除一 个属性，意味着将会为该属性应用默认的样式(从其他样式表经层叠而来)。例如，要移除通过 style 特性设置的 `font-size` 属性：
 
@@ -336,7 +318,6 @@ myDiv.style.border = "1px solid black";
 
     const myDiv = document.getElementById('demo');
     myDiv.style.removeProperty("font-size");
-    复制代码
 
 只要移除相应的属性，就可以为元素应用默认值。
 
@@ -367,7 +348,6 @@ myDiv.style.border = "1px solid black";
       console.log(computedStyle.height);          //200px
       console.log(computedStyle.border);          //5px solid rgb(0, 0, 0)
     </script>
-    复制代码
 
 上面打印出的背景颜色不是"blue"，因为这个样式在自身的 `style` 特性中已经被覆盖了。
 
@@ -381,7 +361,6 @@ IE 不支持`getComputedStyle()`方法，但它有一种类似的概念。在 IE
     }
     var myDemo = document.getElementById('demo');
     var computedStyle = getStyles(myDemo)
-    复制代码
 
 > 所有计算的样式都是只读的。不能修改计算后样式对象中的 CSS 属性。
 
@@ -427,8 +406,6 @@ IE 不支持`getComputedStyle()`方法，但它有一种类似的概念。在 IE
         }
       }
     };
-
-    复制代码
 
 #### 5.2 获得 style 样式
 
@@ -486,8 +463,6 @@ IE 不支持`getComputedStyle()`方法，但它有一种类似的概念。在 IE
         return element.style[styleName];
       }
     };
-
-    复制代码
 
 #### 5.3 增加和删除 class 样式
 
@@ -556,8 +531,6 @@ IE 不支持`getComputedStyle()`方法，但它有一种类似的概念。在 IE
         el.className = trim(curClass);
       }
     };
-
-    复制代码
 
 ### 参考链接
 

@@ -571,34 +571,226 @@ console.log(programmer.constructor.prototype)
 - `programmer.__proto__.__proto__`指向 Object.prototype
 - `programmer.__proto__.__proto__.__proto__`指向 null
 
+## 继承的方式
+
+我们先写个父类和子类
+
+```js
+function Parent() {
+  this.name = { name: "jicheng" };
+}
+Parent.prototype.pro = function() {
+  console.log("prototype");
+};
+function Child() {}
+```
+
+#### 一、原型链继承
+
+核心：把父类私有+公有的属性，都作为子类公有
+
+```js
+Child.prototype = new Parent(); //父类的实例作为子类的原型
+Child.prototype.constructor = Child; //手动指定constructor指向
+let c = new Child();
+console.log(c.name, c.pro());
+```
+
+子类的实例通过**proto** 找到所属类 Child 的原型 prototype，即父类的一个实例
+该实例拥有 Parent 的私有属性--实例上的属性，
+
+特点：
+
+- 简单、易实现
+- 实例既是子类的实例，也是父类的实例
+- 父类的公私属性都能拿到。
+- 无法实现多继承，不能向父类传参
+
+#### 二、call 继承 （构造继承）
+
+核心：把父类私有作为子类私有
+
+通过使用 call、apply 方法可以在新创建的对象上执行构造函数,用父类的构造函数来增加子类的实例，等于是复制父类的实例属性给子类（没用到原型）
+
+```js
+function Child() {
+  Parent.call(this);
+}
+```
+
+特点：
+
+- 简单明了
+- 实例只是子类的实例，并不是父类的实例
+- 可以实现多继承，可以传参
+- 不能继承原型上的属性
+- 每个子类都有父类函数的副本，影响性能
+
+#### 三、实例继承
+
+核心：把父类公有和私有属性作为子类私有
+在子类中返回父类的实例
+
+```js
+function Child(name) {
+  var p = new Parent();
+  return p;
+}
+```
+
+特点：
+
+- 实例是父类的实例，不是子类的实例
+- 不支持多继承
+
+#### 四、拷贝继承
+
+核心：把父类公有和私有属性作为子类公有
+
+在子类中遍历父类的实例，然后分别赋值给子类 prototype
+
+```js
+function Child(name) {
+  var p = new Parent();
+  for (let key in p) {
+    //for in 可以把p的__proto__上的属性也可以遍历到
+    Child.prototype[key] = p[key];
+  }
+}
+```
+
+特点：
+
+- 效率低，占内存高
+- 可以实现多继承
+- 无法继承父类不可枚举的方法（for in）
+
+#### 五、组合继承
+
+核心：原型继承+构造继承，把父类私有作为子类私有，父类公有作为子类公有
+
+在子类中添加父类的实例并改变 this 指向，然后把父类的实例赋值给子类的原型
+注意恢复子类 Child 的原型 prototype 的 constructor 指向
+
+```js
+function Child(name) {
+  Parent.call(this);
+}
+Child.prototype = new Parent(); //实际上把父类私有也带过来了，但是子类实例访问的时候首先访问子类的私有属性
+Child.prototype.constructor = Child;
+```
+
+特点：
+
+- 弥补了构造继承的缺陷，可以继承实例属性/方法，也可以继承原型属性/方法
+- 既是子类的实例，也是父类的实例
+- 不存在引用属性共享问题
+- 可传参 函数可复用
+- 调用了两次父类构造函数，生成了两份实例（子类实例将子类原型上的那份屏蔽了）
+
+#### 六、寄生组合继承
+
+核心：把父类私有作为子类私有，父类公有作为子类公有
+
+在子类中添加父类的实例并改变 this 指向
+
+```js
+//实例属性
+function Child(name){
+    Parent.call(this);
+}
+//公有属性
+(function(){
+    let M = function(){};
+    M.prototype = Parent.prototype;
+    Child.prototype = new M();
+    Child.prototype.constructor = Child;
+})()
+其实上述共有属性的继承方式也就是模仿Object.create()的原理
+所以也可以写成：
+Child.prototype = Object.create(Parent.prototype,{constructor:{value:Child}})
+```
+
+特点：完美
+
+#### 七、类的继承
+
+核心：父类公有作为子类公有，父类私有作为子类私有
+
+es6 方法 extends，以及属性 constructor super 等
+
+```js
+class Child extends Parent {
+  constructor() {
+    //子类必须在constructor方法中调用super方法，否则新建实例时会报错，
+    //因为子类没有自己的this对象，而是继承父类的this对象，然后对其进行加工。如果不调用super方法，子类就得不到this对象。
+    super();
+  }
+}
+```
+
+特点：
+
+- 内部 super()相当于 Parent.call(this)
+- 外部 extends 相当于 Object.create(Child.prototype,Parent.prototype,{constructor:{value:Child}})
+- 可以传参
+
+> **prpto**本质上是一个内部属性，而不是一个正式的对外的 API，目前，所有浏览器（包括 IE11 ）都部署了这个属性.Child.prototype=Object.create(Parent.prototype,{constructor:{value:Child}})是 es5 方法，原理是创建一个超类接收父类原型上的属性方法，最后返回实例，注意在第二个参数描述器中设置 constructor 指向 Object.setPrototypeOf(Child.prototype, Parent.prototype) 是 ES6 正式推荐的设置原型对象的方法。
+
+总结
+
+- 原型继承:父类公+私=>子类公有 子类的原型指向父类的实例
+
+Child.prorotype = new Parent()
+Child.prototype.constructor = Child
+
+- 实例继承：父类公+私=>子类私有
+
+function Child(){ return new Parent()} 子类函数内返回父类的实例
+
+- 构造继承：父类私有=>子类私有
+
+function Child(){ Parent.call(this)} 子类函数内执行父类函数
+
+- 拷贝继承：父类公+私=>子类公有 遍历父类函数，逐个赋值给子类原型
+
+for(let key in Parent){ Child.prototype[key] = Parent[key]}
+Child.prototype.constructor = Child
+
+组合继承 构造+原型
+寄生组合继承 构造+Object.create
+类的继承 extends + super
+
 #### 属性和方法的优先级
 
 在实例上有一个属性,在原型上也有属性,优先执行近的,javascript 中的两大链式 => 原型链和作用域链都是'就近原则'
 
 ```
+
 function Person(name, age, work) {
-  this.name = name;
-  this.age = age;
-  this.work = work;
-  this.study = function() {
-    console.log(this.name + "学习了" + this.work);
-  };
+this.name = name;
+this.age = age;
+this.work = work;
+this.study = function() {
+console.log(this.name + "学习了" + this.work);
+};
 }
 
 var programmer = new Person("称序员", 42, "coding");
 programmer.eat = function(){
-  console.log("干掉了Person的eat方法")
+console.log("干掉了 Person 的 eat 方法")
 }
 programmer.type="外星人"
 
 Person.prototype.name = "Person";
 Person.prototype.type= "地球人";
 Person.prototype.eat = function() {
-  console.log(this.name + "依旧需要吃饭");
+console.log(this.name + "依旧需要吃饭");
 };
 
-programmer.eat() // 干掉了Person的eat方法
+programmer.eat() // 干掉了 Person 的 eat 方法
 console.log(programmer.type) // 外星人
+
 ```
 
 > 上面特别更改了赋值的顺序,依旧是执行实例上的方法和属性,这种情况被称为"属性遮蔽 (property shadowing)",java 语言中这就是方法重写.
@@ -606,6 +798,7 @@ console.log(programmer.type) // 外星人
 #### 使用语法结构创建的对象
 
 ```
+
 var o = {a: 1};
 
 // o 这个对象继承了 Object.prototype 上面的所有属性
@@ -624,13 +817,14 @@ var a = ["yo", "whadup", "?"];
 // a ---> Array.prototype ---> Object.prototype ---> null
 
 function f(){
-  return 2;
+return 2;
 }
 
 // 函数都继承于 Function.prototype
-// (Function.prototype 中包含 call, bind等方法)
+// (Function.prototype 中包含 call, bind 等方法)
 // 原型链如下:
 // f ---> Function.prototype ---> Object.prototype ---> null
+
 ```
 
 #### 使用构造器创建的对象
@@ -638,20 +832,22 @@ function f(){
 在 JavaScript 中,构造器其实就是一个普通的函数.当使用 new 操作符 来作用这个函数时,它就可以被称为构造方法（构造函数）.
 
 ```
+
 function Graph() {
-  this.vertices = [];
-  this.edges = [];
+this.vertices = [];
+this.edges = [];
 }
 
 Graph.prototype = {
-  addVertex: function(v){
-    this.vertices.push(v);
-  }
+addVertex: function(v){
+this.vertices.push(v);
+}
 };
 
 var g = new Graph();
 // g 是生成的对象,他的自身属性有 'vertices' 和 'edges'.
 // 在 g 被实例化时,g.[[Prototype]] 指向了 Graph.prototype.
+
 ```
 
 #### 使用 Object.create 创建的对象
@@ -659,6 +855,7 @@ var g = new Graph();
 ECMAScript 5 中引入了一个新方法：Object.create().可以调用这个方法来创建一个新对象.新对象的原型就是调用 create 方法时传入的第一个参数：
 
 ```
+
 var a = {a: 1};
 // a ---> Object.prototype ---> null
 
@@ -671,7 +868,8 @@ var c = Object.create(b);
 
 var d = Object.create(null);
 // d ---> null
-console.log(d.hasOwnProperty); // undefined, 因为d没有继承Object.prototype
+console.log(d.hasOwnProperty); // undefined, 因为 d 没有继承 Object.prototype
+
 ```
 
 #### 使用 class 关键字创建的对象
@@ -679,29 +877,31 @@ console.log(d.hasOwnProperty); // undefined, 因为d没有继承Object.prototype
 ECMAScript6 引入了一套新的关键字用来实现 class.使用基于类语言的开发人员会对这些结构感到熟悉,但它们是不同的.JavaScript 仍然基于原型.这些新的关键字包括 class, constructor,static,extends 和 super.
 
 ```
+
 "use strict";
 
 class Polygon {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
+constructor(height, width) {
+this.height = height;
+this.width = width;
+}
 }
 
 class Square extends Polygon {
-  constructor(sideLength) {
-    super(sideLength, sideLength);
-  }
-  get area() {
-    return this.height * this.width;
-  }
-  set sideLength(newLength) {
-    this.height = newLength;
-    this.width = newLength;
-  }
+constructor(sideLength) {
+super(sideLength, sideLength);
+}
+get area() {
+return this.height \* this.width;
+}
+set sideLength(newLength) {
+this.height = newLength;
+this.width = newLength;
+}
 }
 
 var square = new Square(2);
+
 ```
 
 #### 查找原型链的性能
@@ -734,20 +934,21 @@ prototype 是用于类的,而 Object.getPrototypeOf() 是用于实例的（insta
 ##### 方法 1
 
 ```
+
 function Ba(str) {
-    this.name = str ? str : 'baobo';
-    this.sayHello = function() {
-        alert('hello');
-    }
+this.name = str ? str : 'baobo';
+this.sayHello = function() {
+alert('hello');
+}
 }
 
 Ba.prototype = {
-    alertA:function (){
-    	alert(this.name+'-A');
-    },
-    alertB: function() {
-        alert(this.name+'');
-    },
+alertA:function (){
+alert(this.name+'-A');
+},
+alertB: function() {
+alert(this.name+'');
+},
 }
 
 var instance_b = new Ba('haha');
@@ -756,8 +957,9 @@ var instance_b = new Ba('haha');
 console.log('原型的构造函数', Ba.prototype.constructor); //function Object(){}
 console.log('实例的构造函数', instance_b.constructor); //function Object(){}
 
-// 新定义的原型对象,并不具有constructor属性
+// 新定义的原型对象,并不具有 constructor 属性
 console.log(Ba.prototype.hasOwnProperty('constructor')); //false
+
 ```
 
 > 上面的方法相当于重写 Ba.prototype 对象,新定义的原型对象不包含 constructor,因此构造函数指向的 function Object(){},需要显式的给原型添加构造函数
@@ -765,47 +967,55 @@ console.log(Ba.prototype.hasOwnProperty('constructor')); //false
 > 虽然实例对象的 constructor 和构造函数原型的 constructor 都指向构造函数,但是实例对象并不具有 constructor 这个属性,是继承至 Ba.prototype
 
 ```
+
 console.log(ba.hasOwnProperty('constructor')); //false
 console.log(Ba.prototype.hasOwnProperty('constructor')); //true
+
 ```
 
 ```
+
 graph LR
 instance_b.constructor-->|实例的构造函数| Ba
 Ba.prototype.constructor-->|原型对象的构造函数| Ba
+
 ```
 
 #### 修改
 
 ```
+
 Ba.prototype = {
-    constructor: Ba,
-    alertA: function() {
-        alert(this.name + '-A');
-    },
-    alertB: function() {
-        alert(this.name + '');
-    },
+constructor: Ba,
+alertA: function() {
+alert(this.name + '-A');
+},
+alertB: function() {
+alert(this.name + '');
+},
 }
+
 <!--这样就可正确指向构造函数Ba了-->
+
 ```
 
 #### 方法 2,直接在预定义的原型对象上扩展
 
 ```
+
 function Ba(str) {
-    this.name = str ? str : 'baobo';
-    this.sayHello = function() {
-        alert('hello');
-    }
+this.name = str ? str : 'baobo';
+this.sayHello = function() {
+alert('hello');
+}
 }
 
 Ba.prototype.alertA = function() {
-    alert(this.name + '-A');
+alert(this.name + '-A');
 }
 
 Ba.prototype.alertB = function() {
-    alert(this.name + 'B');
+alert(this.name + 'B');
 }
 
 var instance_b = new Ba('haha');
@@ -813,17 +1023,20 @@ var instance_b = new Ba('haha');
 // constructor
 console.log('原型的构造函数', Ba.prototype.constructor); //f Ba(){}
 console.log('实例的构造函数', instance_b.constructor); //f Ba(){}
+
 ```
 
 ```
+
 graph TB
-声明构造函数Ba-->构造函数有prototype对象
-构造函数有prototype对象-->prototype对象自动有constructor属性
-prototype对象自动有constructor属性-->创建实例对象instance_b
-创建实例对象instance_b-->继承prototype,有instance_b.constructor
-继承prototype,有instance_b.constructor-->instance_b.constructor指向Ba
-instance_b.constructor指向Ba-->对象有__proto__
-对象有__proto__-->instance_b指向Ba.prototype
+声明构造函数 Ba-->构造函数有 prototype 对象
+构造函数有 prototype 对象-->prototype 对象自动有 constructor 属性
+prototype 对象自动有 constructor 属性-->创建实例对象 instance_b
+创建实例对象 instance_b-->继承 prototype,有 instance_b.constructor
+继承 prototype,有 instance_b.constructor-->instance_b.constructor 指向 Ba
+instance_b.constructor 指向 Ba-->对象有**proto**
+对象有**proto**-->instance_b 指向 Ba.prototype
+
 ```
 
 #### instanceof
@@ -834,26 +1047,27 @@ instance_b.constructor指向Ba-->对象有__proto__
 - instanceof 不光能找直接的父级,能找父级的父级的...constructor 只能找直接的父级
 
 ```
+
 function a() {
-    this.name = 'alisy';
+this.name = 'alisy';
 }
 
 a.prototype.alertA = function () {
-    alert(this.name);
+alert(this.name);
 }
 function b() {
-    this.name = 'baobo';
+this.name = 'baobo';
 }
 
 b.prototype.alertB = function () {
-    alert(this.name);
+alert(this.name);
 }
 function c() {
-    this.name = 'cmen'
+this.name = 'cmen'
 }
 c.prototype = a.prototype;
 
-//b得prototype对象指向一个c的实例,那么所有的b的实例就能继承c
+//b 得 prototype 对象指向一个 c 的实例,那么所有的 b 的实例就能继承 c
 
 b.prototype = new c();
 
@@ -863,14 +1077,15 @@ var newb = new b();
 
 var newc = new c();
 
-newb.alertA(); //执行baobo
+newb.alertA(); //执行 baobo
 
-newc.alertA(); //执行cmen
+newc.alertA(); //执行 cmen
 //instanceof
 
 console.log(b instanceof a);
 
 console.log(b instanceof b);
+
 ```
 
 #### 继承：父级有的,子级也有——给父级加东西,子级也有
@@ -878,15 +1093,19 @@ console.log(b instanceof b);
 - 第一种方法也是最简单的方法,使用 call 或 apply 方法,将父对象的构造函数绑定在子对象上,即在子对象构造函数中加一行
 
 ```
- Animal.apply(this, arguments);
-                   Animal.call(this, arguments);
+
+Animal.apply(this, arguments);
+Animal.call(this, arguments);
+
 ```
 
 - 第二种方法更常见,使用 prototype 属性.如果"猫"的 prototype 对象,指向一个 Animal 的实例,那么所有"猫"的实例,就能继承 Animal 了.
 
 ```
+
 Cat.prototype = new Animal();
 Cat.prototype.constructor = Cat;
+
 ```
 
 #### call 方法
@@ -909,140 +1128,149 @@ Cat.prototype.constructor = Cat;
 ##### 案例一
 
 ```
+
 function add(a+b){
-    alert(a+b);
+alert(a+b);
 }
 function sub(a,b){
-    alert(a-b);
+alert(a-b);
 }
 add.call(sub,3,1);
 
-//个人理解call和apply的作用就是切换函数的对象上下文
+//个人理解 call 和 apply 的作用就是切换函数的对象上下文
 
-解：用括号的第一个参数来代替this的指向,将add的执行的上下文由window切换为sub,相当于this指向由window换成sub,add.call(sub,3,1) == add(3,1),结果为alert(4);
-注意 : js中的函数是对象,函数名是对Function对象的引用
+解：用括号的第一个参数来代替 this 的指向,将 add 的执行的上下文由 window 切换为 sub,相当于 this 指向由 window 换成 sub,add.call(sub,3,1) == add(3,1),结果为 alert(4);
+注意 : js 中的函数是对象,函数名是对 Function 对象的引用
+
 ```
 
 ##### 案例二
 
 ```
+
 function Animal(){
-    this.name = "animal";
-    this.showName = function(){
-        alert(this.name);
-    }
+this.name = "animal";
+this.showName = function(){
+alert(this.name);
+}
 }
 function Cat(){
-    this.name = "cat";
+this.name = "cat";
 }
 var animal = new Animal();
 var cat = new Cat();
 
-//通过call()和apply(),将原本属于Animal对象的方法showName交给Cat对象使用了,也就是将this指向Animal动态更改为Cat
-//输出的结果是cat
+//通过 call()和 apply(),将原本属于 Animal 对象的方法 showName 交给 Cat 对象使用了,也就是将 this 指向 Animal 动态更改为 Cat
+//输出的结果是 cat
 animal.showName.call(cat,"","");
 //animal.showName.apply(cat,[]);
+
 ```
 
 ##### 案例三：实现继承
 
 ```
+
 function Animal(name) {
-    this.name = name;
-    this.showName = function(name, a, b) {
-        console.log('this是：' + this.name + '\na是：' + a + '\nb是：' + b);
-    }
+this.name = name;
+this.showName = function(name, a, b) {
+console.log('this 是：' + this.name + '\na 是：' + a + '\nb 是：' + b);
+}
 }
 
 function Cat(name) {
-    Animal.call(this, name);
-    this.showLog = function() {
-        console.log('hello');
-    }
+Animal.call(this, name);
+this.showLog = function() {
+console.log('hello');
+}
 }
 
 Cat.prototype.showAge = function() {
-    console.log('world');
+console.log('world');
 }
 
 var cat = new Cat('hello world');
 
-cat.showName('abc', 12, 5); //可以直接调用showName()方法
+cat.showName('abc', 12, 5); //可以直接调用 showName()方法
 
-注意：Animal.call(this);是使用Animal对象代替this对象,
-this指向Animal,Cat就有了Animal对象中的方法和属性,Cat对
-象就可以直接调用Animal对象的方法和属性
-call第二个参数开始会映射到Animal相应的参数位置
+注意：Animal.call(this);是使用 Animal 对象代替 this 对象,
+this 指向 Animal,Cat 就有了 Animal 对象中的方法和属性,Cat 对
+象就可以直接调用 Animal 对象的方法和属性
+call 第二个参数开始会映射到 Animal 相应的参数位置
+
 ```
 
 ##### 案例四：多重继承
 
 ```
+
 function Animal() {
-    this.showSub = function(a, b) {
-        console.log(a - b);
-    }
+this.showSub = function(a, b) {
+console.log(a - b);
+}
 }
 
 function Cat() {
-    this.showAdd = function(a, b) {
-        console.log(a + b);
-    }
+this.showAdd = function(a, b) {
+console.log(a + b);
+}
 }
 
 function Dog() {
-    Animal.call(this);
-    Cat.call(this);
+Animal.call(this);
+Cat.call(this);
 }
 
 var a = new Dog();
 a.showSub(5,3);//2
 a.showAdd(5,3);//8
 
-使用两个或者更多的call实现多重继承
-call和apply这两个方法差不多,区别在于call的第二个参数是任意类型,而apply的第二个参数必须是数组,也可以是arguments
+使用两个或者更多的 call 实现多重继承
+call 和 apply 这两个方法差不多,区别在于 call 的第二个参数是任意类型,而 apply 的第二个参数必须是数组,也可以是 arguments
+
 ```
 
 ## 实现 call(this,arg1,arg2...)
 
 ```
-Function.prototype.call2 = function(context) {
-    console.log(arguments);
-    // 如果传入的为null,则指向window
-    context = context || window;
-    // 函数调用的时候,this指向调用的函数
-    context.fn = this;
-    var args = [];
-    for (var i = 1, len = arguments.length; i < len; i++) {
-        args.push('arguments[' + i + ']');
-    }
-    // 解析字符串,执行其中的js代码
-    // 获取返回值
-    var result = eval('context.fn(' + args + ')');
-    // 执行完后将添加的属性删除
-    delete context.fn;
-    return result;
-};
 
+Function.prototype.call2 = function(context) {
+console.log(arguments);
+// 如果传入的为 null,则指向 window
+context = context || window;
+// 函数调用的时候,this 指向调用的函数
+context.fn = this;
+var args = [];
+for (var i = 1, len = arguments.length; i < len; i++) {
+args.push('arguments[' + i + ']');
+}
+// 解析字符串,执行其中的 js 代码
+// 获取返回值
+var result = eval('context.fn(' + args + ')');
+// 执行完后将添加的属性删除
+delete context.fn;
+return result;
+};
 
 var heo = 'hello world';
 
 var foo = {
-    name: 'lili'
+name: 'lili'
 }
 
 function func(age, sex) {
-    console.log(age);
-    console.log(sex);
-    console.log(this.name);
-    return {
-        name: this.name,
-        age: age,
-        sex: sex,
-    }
+console.log(age);
+console.log(sex);
+console.log(this.name);
+return {
+name: this.name,
+age: age,
+sex: sex,
+}
 }
 func.call2(null);
 console.log(func.call2(foo, 23, '男'))
+
 ```
 
 ## 实现 apply(this,[])
@@ -1051,10 +1279,11 @@ console.log(func.call2(foo, 23, '男'))
 2. 执行 func 函数
 
 ```
+
 Function.prototype.newApply = function(context, arr) {
-    var result, i, len;
-    context = context || window;
-    context.fn = this;
+var result, i, len;
+context = context || window;
+context.fn = this;
 
     if (!arr) {
         result = context.fn;
@@ -1068,22 +1297,24 @@ Function.prototype.newApply = function(context, arr) {
 
     delete context.fn;
     return result;
+
 }
 
 var obj = {
-    name: 'alice'
+name: 'alice'
 }
 
 function func(age, sex) {
-    console.log(age);
-    console.log(sex);
-    console.log(this.name);
-    return {
-        name: this.name
-    }
+console.log(age);
+console.log(sex);
+console.log(this.name);
+return {
+name: this.name
+}
 }
 
 console.log(func.newApply(obj, [23, '女']));
+
 ```
 
 ## 实现一个 bind => newBind
@@ -1091,6 +1322,7 @@ console.log(func.newApply(obj, [23, '女']));
 写程序的一个错误,this 丢失原先的对象,将对象的方法进行赋值之后再执行,于是变成 window.new_showA(),this 指向全局对象 window,
 
 ```
+
     var a = 1;
     var obj = {
         a: 11,
@@ -1102,19 +1334,23 @@ console.log(func.newApply(obj, [23, '女']));
     var new_showA = obj.showA;
 
     new_showA(); //1
+
 ```
 
 所以此时需要修改 this 指向
 
 ```
+
 var new_showA = obj.showA.bind(this);
 
 new_showA(); //1
+
 ```
 
 实现 bind 方法
 
 ```
+
     Function.prototype.newBind = function (context) {
         //this是该函数的调用者
         var self = this;
@@ -1141,6 +1377,7 @@ new_showA(); //1
     var new_showA = obj.showA.newBind(obj, 'lilith');
 
     new_showA(23); //相当于执行obj.showA.apply(obj);
+
 ```
 
 ## new 运算符
@@ -1155,15 +1392,19 @@ new_showA(); //1
 4. 将新对象返回
 
 ```
+
 <!--Object.create类似于-->
+
 function Func(){};
 Func.prototype = Constructor.prototype;
 return new Func();
+
 ```
 
 #### new 运算符的简易实现
 
 ```
+
     function Animal(name, age) {
         this.name = name;
         this.age = age;
@@ -1197,6 +1438,7 @@ return new Func();
         // 如果构造函数有返回值,做一下处理,如果返回的是对象,就返回对象,否则该是什么就是什么
         return typeof result === 'object' ? result : obj;
     }
+
 ```
 
 ## Docs
@@ -1212,3 +1454,7 @@ return new Func();
 - [深入理解 javascript 原型和闭包系列](https://www.cnblogs.com/wangfupeng1988/p/4001284.html)
 - [JavaScript 面向对象框架 ease.js](https://www.oschina.net/p/ease-js)
 - [easejs 官网](https://www.gnu.org/software/easejs/)
+
+```
+
+```

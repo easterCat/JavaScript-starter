@@ -1,0 +1,1433 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>学会使用 JavaScript 访问和修改 CSS 样式 · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="解决canvas在高清屏中模糊.html" />
+    
+    
+    <link rel="prev" href="获取屏幕宽度.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="获取屏幕宽度.html">
+            
+                <a href="获取屏幕宽度.html">
+            
+                    
+                    前端基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="获取屏幕宽度.html">
+            
+                <a href="获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="学会使用JavaScript访问和修改CSS样式.html">
+            
+                <a href="学会使用JavaScript访问和修改CSS样式.html">
+            
+                    
+                    学会使用 JavaScript 访问和修改 CSS 样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="解决canvas在高清屏中模糊.html">
+            
+                <a href="解决canvas在高清屏中模糊.html">
+            
+                    
+                    解决 canvas 在高清屏中模糊
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="js二进制数据互转.html">
+            
+                <a href="js二进制数据互转.html">
+            
+                    
+                    js 二进制数据互转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="单元测试/readme.html">
+            
+                <a href="单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    js 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../js基础/内存分配/readme.html">
+            
+                <a href="../js基础/内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../js基础/浏览器工作原理/readme.html">
+            
+                <a href="../js基础/浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../js基础/类和对象/readme.html">
+            
+                <a href="../js基础/类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../js基础/数据类型/readme.html">
+            
+                <a href="../js基础/数据类型/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../js基础/js事件机制/readme.html">
+            
+                <a href="../js基础/js事件机制/readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">java 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Java基础/">
+            
+                <a href="../Java基础/">
+            
+                    
+                    java 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Java基础/变量的类型.html">
+            
+                <a href="../Java基础/变量的类型.html">
+            
+                    
+                    变量的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Java基础/基本数据类型.html">
+            
+                <a href="../Java基础/基本数据类型.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Java基础/修饰符.html">
+            
+                <a href="../Java基础/修饰符.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Java基础/运算符.html">
+            
+                <a href="../Java基础/运算符.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Java基础/条件语句.html">
+            
+                <a href="../Java基础/条件语句.html">
+            
+                    
+                    条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Java基础/循环结构.html">
+            
+                <a href="../Java基础/循环结构.html">
+            
+                    
+                    循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Java基础/switch语句.html">
+            
+                <a href="../Java基础/switch语句.html">
+            
+                    
+                    switch 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Java基础/数组.html">
+            
+                <a href="../Java基础/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../Java基础/字符串.html">
+            
+                <a href="../Java基础/字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../Java基础/Character类.html">
+            
+                <a href="../Java基础/Character类.html">
+            
+                    
+                    Character 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../Java基础/正则表达式.html">
+            
+                <a href="../Java基础/正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../Java基础/流,文件和IO.html">
+            
+                <a href="../Java基础/流,文件和IO.html">
+            
+                    
+                    流,文件和 IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                <a href="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                    
+                    StringBuffer 和 StringBuilder 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="../Java基础/Collection.html">
+            
+                <a href="../Java基础/Collection.html">
+            
+                    
+                    Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.15" data-path="../Java基础/map.html">
+            
+                <a href="../Java基础/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="../Java基础/list.html">
+            
+                <a href="../Java基础/list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" data-path="../Java基础/多线程编程.html">
+            
+                <a href="../Java基础/多线程编程.html">
+            
+                    
+                    多线程编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.18" data-path="../Java基础/泛型.html">
+            
+                <a href="../Java基础/泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构与算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Java数据结构与算法/">
+            
+                <a href="../Java数据结构与算法/">
+            
+                    
+                    Java 数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../Java数据结构与算法/线性表.html">
+            
+                <a href="../Java数据结构与算法/线性表.html">
+            
+                    
+                    线性表(数组,队列,栈,链表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../Java数据结构与算法/Java排序算法.html">
+            
+                <a href="../Java数据结构与算法/Java排序算法.html">
+            
+                    
+                    Java 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Java练习题/">
+            
+                <a href="../Java练习题/">
+            
+                    
+                    Java 练习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../Java练习题/指定范围包含的素数.html">
+            
+                <a href="../Java练习题/指定范围包含的素数.html">
+            
+                    
+                    指定范围包含的素数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../Java练习题/公约数和公倍数.html">
+            
+                <a href="../Java练习题/公约数和公倍数.html">
+            
+                    
+                    公约数和公倍数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    leetcode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    scripto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../scripto/中间件模式.html">
+            
+                <a href="../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../scripto/m长度的都是n的数组.html">
+            
+                <a href="../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >学会使用 JavaScript 访问和修改 CSS 样式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5B66;&#x4F1A;&#x4F7F;&#x7528;-javascript-&#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539;-css-&#x6837;&#x5F0F;"><b>1. </b>&#x5B66;&#x4F1A;&#x4F7F;&#x7528; JavaScript &#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539; CSS &#x6837;&#x5F0F;</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#xFF1A;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;"><b>1.1.1. </b>&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#xFF1A;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#xFF1A;cssstylesheet&#x7C7B;&#x578B;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;"><b>1.1.2. </b>&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#xFF1A;CSSStyleSheet&#x7C7B;&#x578B;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E09;&#x90E8;&#x5206;&#xFF1A;cssrule&#x89C4;&#x5219;&#x7C7B;&#x578B;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;"><b>1.1.3. </b>&#x7B2C;&#x4E09;&#x90E8;&#x5206;&#xFF1A;CSSRule&#x89C4;&#x5219;&#x7C7B;&#x578B;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#&#x7B2C;&#x56DB;&#x90E8;&#x5206;&#xFF1A;cssstyledeclaration-&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;"><b>1.1.4. </b>&#x7B2C;&#x56DB;&#x90E8;&#x5206;&#xFF1A;CSSStyleDeclaration &#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E94;&#x90E8;&#x5206;&#xFF1A;&#x5B9E;&#x4F8B;"><b>1.1.5. </b>&#x7B2C;&#x4E94;&#x90E8;&#x5206;&#xFF1A;&#x5B9E;&#x4F8B;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;&#x94FE;&#x63A5;"><b>1.1.6. </b>&#x53C2;&#x8003;&#x94FE;&#x63A5;</a></li></ul></ul></ul></div><a href="#&#x5B66;&#x4F1A;&#x4F7F;&#x7528;-javascript-&#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539;-css-&#x6837;&#x5F0F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5B66;&#x4F1A;&#x4F7F;&#x7528;-javascript-&#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539;-css-&#x6837;&#x5F0F;"><a name="&#x5B66;&#x4F1A;&#x4F7F;&#x7528;-javascript-&#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539;-css-&#x6837;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5B66;&#x4F1A;&#x4F7F;&#x7528;-javascript-&#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539;-css-&#x6837;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5B66;&#x4F1A;&#x4F7F;&#x7528; JavaScript &#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539; CSS &#x6837;&#x5F0F;</h1>
+<h3 id="&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#xFF1A;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;"><a name="&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#xFF1A;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#xFF1A;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x7B2C;&#x4E00;&#x90E8;&#x5206;&#xFF1A;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;</h3>
+<p>&#x9996;&#x5148;&#x8BF4;&#x5728; HTML &#x4E2D;&#x5B9A;&#x4E49;&#x6837;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#x6709; 3 &#x79CD;&#xFF1A;</p>
+<ol>
+<li>&#x901A;&#x8FC7; <code>link</code> &#x5143;&#x7D20;&#x5305;&#x542B;&#x5916;&#x90E8;&#x6837;&#x5F0F;&#x8868;&#x6587;&#x4EF6;</li>
+<li>&#x4F7F;&#x7528; <code>style</code> &#x5143;&#x7D20;&#x5B9A;&#x4E49;&#x5D4C;&#x5165;&#x5F0F;&#x6837;&#x5F0F;</li>
+<li>&#x4F7F;&#x7528; <code>style</code> &#x7279;&#x6027;&#x5B9A;&#x4E49;&#x9488;&#x5BF9;&#x7279;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;</li>
+</ol>
+<p>DOM2 &#x7EA7;&#x6A21;&#x5757;&#x56F4;&#x7ED5;&#x8FD9;&#x4E09;&#x79CD;&#x5E94;&#x7528;&#x6837;&#x5F0F;&#x673A;&#x5236;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5957; API&#x3002;&#x7406;&#x89E3;&#x4E86;&#x8FD9;&#x5957; API &#x5C31;&#x7406;&#x89E3;&#x4E86;&#x5982;&#x4F55;&#x7528; JS &#x64CD;&#x4F5C; CSS &#x4E86;&#x3002;&#x8FD9;&#x5957;&#x63A5;&#x53E3;&#x79CD;&#x7C7B;&#x5F88;&#x591A;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;
+<a href="https://user-gold-cdn.xitu.io/2019/6/28/16b9b209cc1c7277?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-lightbox="c98a53a3-3fae-4fdd-b322-3f5fa955bd50" data-title="" target="_blank"><img src="https://user-gold-cdn.xitu.io/2019/6/28/16b9b209cc1c7277?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""></a>
+&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CSS_Object_Model" target="_blank">MDN</a>&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4E86;&#x89E3;&#x3002;
+&#x63A5;&#x53E3;&#x90FD;&#x662F;&#x6709;&#x89C4;&#x5F8B;&#x7684;&#xFF0C;&#x6B7B;&#x8BB0;&#x786C;&#x80CC;&#x4E0D;&#x597D;&#x8BB0;&#x4F4F;&#xFF0C;&#x6839;&#x636E; HTML &#x4E2D;&#x5B9A;&#x4E49;&#x6837;&#x5F0F;&#x7684; 3 &#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x770B;&#x63A5;&#x53E3;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x81EA;&#x7136;&#x5C31;&#x66F4;&#x597D;&#x7406;&#x89E3;&#x3002;</p>
+<h4 id="11-cssstylesheet&#x6837;&#x5F0F;&#x8868;&#x5BF9;&#x8C61;"><a name="11-cssstylesheet&#x6837;&#x5F0F;&#x8868;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#11-cssstylesheet&#x6837;&#x5F0F;&#x8868;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 <code>CSSStyleSheet</code>&#x6837;&#x5F0F;&#x8868;&#x5BF9;&#x8C61;</h4>
+<p>&#x540D;&#x5B57;&#x4E2D;&#x5E26;&#x6709;<code>StyleSheet</code>&#x7684;&#x63A5;&#x53E3;&#x5C31;&#x6837;&#x5F0F;&#x8868;&#x7684;&#x610F;&#x601D;&#x3002;<code>CSSStyleSheet</code>&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x8868;&#x793A;&#x7684;&#x662F;&#x6837;&#x5F0F;&#x8868;&#x3002;&#x5305;&#x62EC;&#x901A;&#x8FC7;<code>link</code>&#x5143;&#x7D20;&#x5305;&#x542B;&#x7684;&#x5916;&#x90E8;&#x6837;&#x5F0F;&#x8868;&#x548C;&#x5728;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text/css<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span></code>&#x5143;&#x7D20;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x6837;&#x5F0F;&#x8868;&#x3002;<code>CSSStyleSheet</code>&#x63A5;&#x53E3;&#x7EE7;&#x627F;<code>StyleSheet</code>&#x3002;<code>StyleSheet</code>&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x63A5;&#x53E3;&#x6765;&#x5B9A;&#x4E49;&#x975E; CSS &#x6837;&#x5F0F;&#x8868;&#x3002;</p>
+<h4 id="12-cssrule&#x6837;&#x5F0F;&#x8868;&#x89C4;&#x5219;&#x5BF9;&#x8C61;"><a name="12-cssrule&#x6837;&#x5F0F;&#x8868;&#x89C4;&#x5219;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#12-cssrule&#x6837;&#x5F0F;&#x8868;&#x89C4;&#x5219;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 <code>CSSRule</code>&#x6837;&#x5F0F;&#x8868;&#x89C4;&#x5219;&#x5BF9;&#x8C61;</h4>
+<p>&#x540D;&#x5B57;&#x4E2D;&#x5E26;&#x6709;<code>Rule</code>&#x7684;&#x63A5;&#x53E3;&#x5C31;&#x4EE3;&#x8868;&#x89C4;&#x5219;&#x7684;&#x610F;&#x601D;&#x3002;<code>CSSRule</code>&#x5BF9;&#x8C61;&#x8868;&#x793A;&#x6837;&#x5F0F;&#x8868;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x89C4;&#x5219;&#x3002;<code>CSSRule</code>&#x5176;&#x5B9E; &#x662F;&#x4E00;&#x4E2A;&#x4F9B;&#x5176;&#x4ED6;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7EE7;&#x627F;&#x7684;&#x57FA;&#x7C7B;&#x578B;&#x3002;&#x5176;&#x4E2D;&#x6700;&#x5E38;&#x7528;&#x7684;&#x5C31;&#x662F; <code>CSSStyleRule</code> &#x7C7B;&#x578B;&#xFF0C;&#x8868;&#x793A;&#x6837;&#x5F0F;&#x4FE1;&#x606F;&#x3002;</p>
+<p><code>CSSRule</code>&#x7684;&#x6240;&#x6709;&#x5B50;&#x7C7B;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li><code>CSSCharsetRule</code></li>
+<li><code>CSSConditionRule</code></li>
+<li><code>CSSCounterStyleRule</code></li>
+<li><code>CSSFontFeatureValuesRule</code></li>
+<li><code>CSSGroupingRule</code></li>
+<li><code>CSSImportRule</code></li>
+<li><code>CSSKeyframeRule</code></li>
+<li><code>CSSKeyframesRule</code></li>
+<li><code>CSSMarginRule</code></li>
+<li><code>CSSMediaRule</code></li>
+<li><code>CSSNamespaceRule</code></li>
+<li><code>CSSPageRule</code></li>
+<li><code>CSSSupportsRule</code></li>
+<li><code>CSSViewportRule</code></li>
+<li><code>CSSFontFaceRule</code></li>
+<li><code>CSSStyleRule</code></li>
+</ol>
+<blockquote>
+<p>&#x8FD9;&#x4E9B;&#x89C4;&#x5219;&#x5F88;&#x5C11;&#x6709;&#x5FC5;&#x8981;&#x901A;&#x8FC7;&#x811A;&#x672C;&#x6765;&#x8BBF;&#x95EE;&#xFF0C;&#x800C;&#x6700;&#x5E38;&#x7528;&#x7684;&#x5C31;&#x662F; <code>CSSStyleRule</code> &#x7C7B;&#x578B;&#x3002;</p>
+</blockquote>
+<p>&#x901A;&#x8FC7;&#x4E0B;&#x56FE;&#x53EF;&#x4EE5;&#x52A0;&#x6DF1;&#x5BF9;<code>StyleSheet</code>&#xFF0C;<code>CSSRule</code>&#x5173;&#x7CFB;&#x7684;&#x7406;&#x89E3;&#x3002;
+<a href="../svg+xml;utf8,%3C" 1.0"?=""><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="393"><img src="data:image/svg+xml;utf8,&lt;?xml version=" 1.0"?=""/><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="393"/></svg></a></p>
+<h4 id="13-cssstyledeclaration-&#x5E94;&#x7528;&#x5728;&#x5143;&#x7D20;-style-&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;"><a name="13-cssstyledeclaration-&#x5E94;&#x7528;&#x5728;&#x5143;&#x7D20;-style-&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#13-cssstyledeclaration-&#x5E94;&#x7528;&#x5728;&#x5143;&#x7D20;-style-&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 <code>CSSStyleDeclaration</code> &#x5E94;&#x7528;&#x5728;&#x5143;&#x7D20; style &#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;</h4>
+<p>&#x4EFB;&#x4F55;&#x652F;&#x6301;<code>style</code>&#x7279;&#x6027;&#x7684;<code>HTML</code>&#x5143;&#x7D20;&#x5728;<code>JavaScript</code>&#x4E2D;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;<code>style</code>&#x5C5E;&#x6027;&#x3002;&#x8FD9;&#x4E2A;<code>style</code>&#x5BF9;&#x8C61;&#x662F; <code>CSSStyleDeclaration</code>&#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x5305;&#x542B;&#x7740;&#x901A;&#x8FC7;<code>HTML</code>&#x7684;<code>style</code>&#x7279;&#x6027;&#x6307;&#x5B9A;&#x7684;&#x6240;&#x6709;&#x6837;&#x5F0F;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x4E0D;&#x5305;&#x542B; &#x4E0E;&#x5916;&#x90E8;&#x6837;&#x5F0F;&#x8868;&#x6216;&#x5D4C;&#x5165;&#x6837;&#x5F0F;&#x8868;&#x7ECF;&#x5C42;&#x53E0;&#x800C;&#x6765;&#x7684;&#x6837;&#x5F0F;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x7684;&#x901A;&#x8FC7;<code>HTMLElement.style</code>&#x5C5E;&#x6027;&#x5C31;&#x662F;&#x8FD4;&#x56DE;&#x6765;<code>CSSStyleDeclaration</code>&#x5BF9;&#x8C61;&#x3002;<code>CSSStyleDeclaration</code>&#x5BF9;&#x8C61;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;<code>style</code>&#x5C5E;&#x6027;&#x3002;</p>
+<h3 id="&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#xFF1A;cssstylesheet&#x7C7B;&#x578B;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;"><a name="&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#xFF1A;cssstylesheet&#x7C7B;&#x578B;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#xFF1A;cssstylesheet&#x7C7B;&#x578B;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#xFF1A;CSSStyleSheet&#x7C7B;&#x578B;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;</h3>
+<h4 id="21-stylesheet-&#x7C7B;&#x578B;&#x652F;&#x6301;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;"><a name="21-stylesheet-&#x7C7B;&#x578B;&#x652F;&#x6301;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#21-stylesheet-&#x7C7B;&#x578B;&#x652F;&#x6301;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 <code>StyleSheet</code> &#x7C7B;&#x578B;&#x652F;&#x6301;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;:</h4>
+<p><code>CSSStyleSheet</code> &#x7EE7;&#x627F;&#x81EA;<code>StyleSheet</code>&#xFF0C;<code>StyleSheet</code>&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x63A5;&#x53E3;&#x6765;&#x5B9A;&#x4E49;&#x975E; <code>CSS</code> &#x6837;&#x5F0F;&#x8868;&#x3002;&#x4ECE; &#xFF0C;<code>StyleSheet</code>&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x800C;&#x6765;&#x7684;&#x5C5E;&#x6027;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><code>disabled</code>&#xFF1A;&#x8868;&#x793A;&#x6837;&#x5F0F;&#x8868;&#x662F;&#x5426;&#x88AB;&#x7981;&#x7528;&#x7684;&#x5E03;&#x5C14;&#x503C;&#x3002;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x662F;&#x53EF;&#x8BFB;/&#x5199;&#x7684;&#xFF0C;&#x5C06;&#x8FD9;&#x4E2A;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A; true &#x53EF; &#x4EE5;&#x7981;&#x7528;&#x6837;&#x5F0F;&#x8868;&#x3002;</li>
+<li><code>href</code>&#xFF1A;&#x5982;&#x679C;&#x6837;&#x5F0F;&#x8868;&#x662F;&#x901A;&#x8FC7;&#x5305;&#x542B;&#x7684;&#xFF0C;&#x5219;&#x662F;&#x6837;&#x5F0F;&#x8868;&#x7684; URL;&#x5426;&#x5219;&#xFF0C;&#x662F; null&#x3002;</li>
+<li><code>media</code>&#xFF1A;</li>
+<li><code>ownerNode</code>&#xFF1A;&#x6307;&#x5411;&#x62E5;&#x6709;&#x5F53;&#x524D;&#x6837;&#x5F0F;&#x8868;&#x7684;&#x8282;&#x70B9;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x6837;&#x5F0F;&#x8868;&#x53EF;&#x80FD;&#x662F;&#x5728; HTML &#x4E2D;&#x901A;&#x8FC7;<code>link(HTMLLinkElement)</code>&#x6216;<code>style(HTMLStyleElement)</code>&#x5F15;&#x5165;&#x7684;&#x3002;&#x5982;&#x679C;&#x5F53;&#x524D;&#x6837;&#x5F0F;&#x8868;&#x662F;&#x5176;&#x4ED6;&#x6837;&#x5F0F;&#x8868;&#x901A;&#x8FC7;@import &#x5BFC;&#x5165;&#x7684;&#xFF0C;&#x5219;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x503C;&#x4E3A; null&#x3002;IE &#x4E0D;&#x652F;&#x6301;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x3002;</li>
+<li><code>parentStyleSheet</code>&#xFF1A;&#x5728;&#x5F53;&#x524D;&#x6837;&#x5F0F;&#x8868;&#x662F;&#x901A;&#x8FC7;<code>@import</code>&#x5BFC;&#x5165;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x5BFC;&#x5165;&#x5B83;&#x7684;&#x6837;&#x5F0F;&#x8868;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x5426;&#x5219;&#x4E3A; null&#x3002;</li>
+<li><code>title</code>&#xFF1A; ownerNode &#x4E2D; title &#x5C5E;&#x6027;&#x7684;&#x503C;&#xFF0C;&#x5426;&#x5219;&#x4E3A; null&#x3002;</li>
+<li><code>type</code>&#xFF1A;&#x8868;&#x793A;&#x6837;&#x5F0F;&#x8868;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5BF9; CSS &#x6837;&#x5F0F;&#x8868;&#x800C;&#x8A00;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&quot;type/css&quot;&#x3002;</li>
+</ul>
+<blockquote>
+<p><code>CSSStyleSheet</code> &#x5BF9;&#x8C61;&#x5219;&#x662F;&#x4E00; &#x5957;&#x53EA;&#x8BFB;&#x7684;&#x63A5;&#x53E3;&#x3002;&#x9664;&#x4E86; <code>disabled</code> &#x5C5E;&#x6027;&#x4E4B;&#x5916;&#x3002;</p>
+</blockquote>
+<h4 id="22-cssstylesheet-&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x652F;&#x6301;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;"><a name="22-cssstylesheet-&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x652F;&#x6301;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#22-cssstylesheet-&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x652F;&#x6301;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 <code>CSSStyleSheet</code> &#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x652F;&#x6301;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;:</h4>
+<p><code>CSSStyleSheet</code>&#x9664;&#x4E86;&#x7EE7;&#x627F;<code>StyleSheet</code>&#x63A5;&#x53E3;&#x7684;&#x5C5E;&#x6027;&#x4E4B;&#x5916;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x652F;&#x6301;&#x4E0B;&#x5217;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li><code>cssRules(rules)</code>&#xFF1A;&#x6837;&#x5F0F;&#x8868;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x6837;&#x5F0F;&#x89C4;&#x5219;&#x7684;&#x96C6;&#x5408;&#x3002;IE &#x4E0D;&#x652F;&#x6301;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x7684; <code>rules</code> &#x5C5E;&#x6027;&#x3002;</li>
+<li><code>ownerRule</code>&#xFF1A;&#x5982;&#x679C;&#x6837;&#x5F0F;&#x8868;&#x662F;&#x901A;&#x8FC7;<code>@import</code>&#x5BFC;&#x5165;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x6307;&#x5411;&#x8868;&#x793A;&#x5BFC;&#x5165;&#x7684;&#x89C4;
+&#x5219;;&#x5426;&#x5219;&#xFF0C;&#x503C;&#x4E3A; null&#x3002;IE &#x4E0D;&#x652F;&#x6301;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x3002;</li>
+<li><code>deleteRule(index)</code>&#xFF1A;&#x5220;&#x9664;<code>cssRules</code>&#x96C6;&#x5408;&#x4E2D;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x89C4;&#x5219;&#x3002;IE &#x4E0D;&#x652F;&#x6301;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x652F;&#x6301;
+&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x7684;<code>removeRule()</code>&#x65B9;&#x6CD5;&#x3002;</li>
+<li><code>insertRule(rule,index)</code>&#xFF1A;&#x5411;<code>cssRules</code>&#x96C6;&#x5408;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x4F4D;&#x7F6E;&#x63D2;&#x5165;<code>rule</code>&#x5B57;&#x7B26;&#x4E32;&#x3002;IE &#x4E0D;&#x652F;&#x6301;&#x8FD9;
+&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x652F;&#x6301;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x7684;<code>addRule()</code>&#x65B9;&#x6CD5;&#x3002;</li>
+<li><code>replace()</code>&#xFF1A;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x6837;&#x5F0F;&#x8868;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x5916;&#x90E8;&#x5F15;&#x7528;&#x3002;</li>
+<li><code>replaceSync()</code>&#xFF1A;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x6837;&#x5F0F;&#x8868;&#xFF0C;&#x5141;&#x8BB8;&#x5916;&#x90E8;&#x5F15;&#x7528;&#x3002;</li>
+</ul>
+<h4 id="23-&#x4F7F;&#x7528;javascript&#x8BBF;&#x95EE;&#x6837;&#x5F0F;&#x8868;"><a name="23-&#x4F7F;&#x7528;javascript&#x8BBF;&#x95EE;&#x6837;&#x5F0F;&#x8868;" class="anchor-navigation-ex-anchor" href="#23-&#x4F7F;&#x7528;javascript&#x8BBF;&#x95EE;&#x6837;&#x5F0F;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x4F7F;&#x7528;<code>JavaScript</code>&#x8BBF;&#x95EE;&#x6837;&#x5F0F;&#x8868;</h4>
+<h5 id="&#x8BBF;&#x95EE;&#x6837;&#x5F0F;&#x8868;&#x65B9;&#x5F0F;&#x4E00;"><a name="&#x8BBF;&#x95EE;&#x6837;&#x5F0F;&#x8868;&#x65B9;&#x5F0F;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x8BBF;&#x95EE;&#x6837;&#x5F0F;&#x8868;&#x65B9;&#x5F0F;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBF;&#x95EE;&#x6837;&#x5F0F;&#x8868;&#x65B9;&#x5F0F;&#x4E00;</h5>
+<p>&#x5E94;&#x7528;&#x4E8E;&#x6587;&#x6863;&#x7684;&#x6240;&#x6709;&#x6837;&#x5F0F;&#x8868;&#x662F;&#x901A;&#x8FC7;<code>document.styleSheets</code>&#x96C6;&#x5408;&#x6765;&#x8868;&#x793A;&#x7684;&#x3002;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x96C6;&#x5408;&#x7684; length &#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x83B7;&#x77E5;&#x6587;&#x6863;&#x4E2D;&#x6837;&#x5F0F;&#x8868;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x800C;&#x901A;&#x8FC7;&#x65B9;&#x62EC;&#x53F7;&#x8BED;&#x6CD5;&#x6216; item()&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x6BCF;&#x4E00;&#x4E2A;&#x6837;&#x5F0F;&#x8868;&#x3002;</p>
+<pre class="language-"><code>let sheet = null;
+for(let i = 0, len = document.styleSheets.length;i &lt; len; i++) {
+    sheet = document.styleSheets[i];
+    console.log(sheet.href)
+}
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x8F93;&#x51FA;&#x6587;&#x6863;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x6837;&#x5F0F;&#x8868;&#x7684; href &#x5C5E;&#x6027;(<code>style</code>&#x5143;&#x7D20;&#x5305;&#x542B;&#x7684;&#x6837;&#x5F0F;&#x8868;&#x6CA1;&#x6709; href &#x5C5E;&#x6027;)&#x3002;</p>
+<h5 id="&#x8BBF;&#x95EE;&#x6837;&#x5F0F;&#x8868;&#x65B9;&#x5F0F;&#x4E8C;"><a name="&#x8BBF;&#x95EE;&#x6837;&#x5F0F;&#x8868;&#x65B9;&#x5F0F;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x8BBF;&#x95EE;&#x6837;&#x5F0F;&#x8868;&#x65B9;&#x5F0F;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBF;&#x95EE;&#x6837;&#x5F0F;&#x8868;&#x65B9;&#x5F0F;&#x4E8C;</h5>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>link</code>&#x6216;<code>style</code>&#x5143;&#x7D20;&#x53D6;&#x5F97;<code>CSSStyleSheet</code>&#x5BF9;&#x8C61;&#x3002;DOM &#x89C4;&#x5B9A;&#x4E86;&#x4E00;&#x4E2A;&#x5305;&#x542B;<code>CSSStyleSheet</code> &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x540D;&#x53EB;<code>sheet</code>&#x3002;&#x9664;&#x4E86; IE&#xFF0C;&#x5176;&#x4ED6;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x652F;&#x6301;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x3002;IE &#x652F;&#x6301;&#x7684;&#x662F;<code>styleSheet</code>&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x5728;&#x4E0D;&#x540C;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x90FD;&#x80FD;&#x53D6;&#x5F97;&#x6837;&#x5F0F;&#x8868;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre class="language-"><code>function getStyleSheet(element){
+    return element.sheet || element.styleSheet;
+}
+//&#x53D6;&#x5F97;&#x7B2C;&#x4E00;&#x4E2A;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span><span class="token punctuation">/&gt;</span></span>&#x5143;&#x7D20;&#x5F15;&#x5165;&#x7684;&#x6837;&#x5F0F;&#x8868;,&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5219;&#x8FD4;&#x56DE;&#x7A7A;&#x7684;HTMLCollection&#x96C6;&#x5408;
+const link = document.getElementsByTagName(&quot;link&quot;)[0];
+if(typeof link === &apos;object&apos; &amp;&amp; link.rel === &apos;stylesheet&apos;) {
+ const sheet = getStyleSheet(link);
+}
+
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><blockquote>
+<p>&#x5982;&#x679C;<code>link</code>&#x6807;&#x7B7E;&#x4E0D;&#x662F;&#x5F15;&#x5165;&#x7684;<code>css</code>&#x6837;&#x5F0F;&#xFF0C;&#x5219;<code>sheet</code>&#x8FD4;&#x56DE;<code>null</code>&#x3002;</p>
+</blockquote>
+<h3 id="&#x7B2C;&#x4E09;&#x90E8;&#x5206;&#xFF1A;cssrule&#x89C4;&#x5219;&#x7C7B;&#x578B;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;"><a name="&#x7B2C;&#x4E09;&#x90E8;&#x5206;&#xFF1A;cssrule&#x89C4;&#x5219;&#x7C7B;&#x578B;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E09;&#x90E8;&#x5206;&#xFF1A;cssrule&#x89C4;&#x5219;&#x7C7B;&#x578B;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. &#x7B2C;&#x4E09;&#x90E8;&#x5206;&#xFF1A;CSSRule&#x89C4;&#x5219;&#x7C7B;&#x578B;&#x63A5;&#x53E3;&#x4ECB;&#x7ECD;</h3>
+<p><code>CSSRule</code>&#x5BF9;&#x8C61;&#x8868;&#x793A;&#x6837;&#x5F0F;&#x8868;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x89C4;&#x5219;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;<code>CSSRule</code>&#x662F;&#x4E00;&#x4E2A;&#x4F9B;&#x5176;&#x4ED6;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7EE7;&#x627F;&#x7684;&#x57FA;&#x7C7B; &#x578B;&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x5C31;&#x662F;<code>CSSStyleRule</code>&#x7C7B;&#x578B;&#xFF0C;&#x8868;&#x793A;&#x6837;&#x5F0F;&#x4FE1;&#x606F;(&#x5176;&#x4ED6;&#x89C4;&#x5219;&#x8FD8;&#x6709;<code>@import</code>&#x3001;<code>@font-face</code>&#x3001; <code>@page</code>&#x548C;<code>@charset</code>&#xFF0C;&#x4F46;&#x8FD9;&#x4E9B;&#x89C4;&#x5219;&#x5F88;&#x5C11;&#x6709;&#x5FC5;&#x8981;&#x901A;&#x8FC7;&#x811A;&#x672C;&#x6765;&#x8BBF;&#x95EE;)&#x3002;<code>CSSStyleRule</code> &#x5BF9;&#x8C61;&#x5305;&#x542B;&#x4E0B;&#x5217;&#x5C5E;&#x6027;&#x3002;</p>
+<ul>
+<li><code>cssText</code>&#xFF1A;&#x8FD4;&#x56DE;&#x6574;&#x6761;&#x89C4;&#x5219;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x672C;&#x3002;&#x7531;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x6837;&#x5F0F;&#x8868;&#x7684;&#x5185;&#x90E8;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x4E0D;&#x540C;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x6587;&#x672C; &#x53EF;&#x80FD;&#x4F1A;&#x4E0E;&#x6837;&#x5F0F;&#x8868;&#x4E2D;&#x5B9E;&#x9645;&#x7684;&#x6587;&#x672C;&#x4E0D;&#x4E00;&#x6837;;Safari &#x59CB;&#x7EC8;&#x90FD;&#x4F1A;&#x5C06;&#x6587;&#x672C;&#x8F6C;&#x6362;&#x6210;&#x5168;&#x90E8;&#x5C0F;&#x5199;&#x3002;IE &#x4E0D;&#x652F;&#x6301;&#x8FD9;&#x4E2A; &#x5C5E;&#x6027;&#x3002;</li>
+<li><code>parentRule</code>&#xFF1A;&#x5982;&#x679C;&#x5F53;&#x524D;&#x89C4;&#x5219;&#x662F;&#x5BFC;&#x5165;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x5F15;&#x7528;&#x7684;&#x5C31;&#x662F;&#x5BFC;&#x5165;&#x89C4;&#x5219;;&#x5426;&#x5219;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x4E3A; null&#x3002;IE &#x4E0D;&#x652F;&#x6301;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x3002;</li>
+<li><code>parentStyleSheet</code>&#xFF1A;&#x5F53;&#x524D;&#x89C4;&#x5219;&#x6240;&#x5C5E;&#x7684;&#x6837;&#x5F0F;&#x8868;&#x3002;IE &#x4E0D;&#x652F;&#x6301;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x3002;</li>
+<li><code>selectorText</code>&#xFF1A;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x89C4;&#x5219;&#x7684;&#x9009;&#x62E9;&#x7B26;&#x6587;&#x672C;&#x3002;</li>
+<li><code>style</code>&#xFF1A;&#x4E00;&#x4E2A;<code>CSSStyleDeclaration</code>&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B83;&#x8BBE;&#x7F6E;&#x548C;&#x53D6;&#x5F97;&#x89C4;&#x5219;&#x4E2D;&#x7279;&#x5B9A;&#x7684;&#x6837;&#x5F0F;&#x503C;&#x3002;</li>
+<li><code>type</code>&#xFF1A;&#x8868;&#x793A;&#x89C4;&#x5219;&#x7C7B;&#x578B;&#x7684;&#x5E38;&#x91CF;&#x503C;&#x3002;&#x5BF9;&#x4E8E;&#x6837;&#x5F0F;&#x89C4;&#x5219;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x662F; 1&#x3002;IE &#x4E0D;&#x652F;&#x6301;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x3002;</li>
+<li><code>styleMap</code>&#xFF1A;&#x4E00;&#x4E2A;<code>StylePropertyMap</code>&#x5BF9;&#x8C61;&#x3002;<code>StylePropertyMap</code>&#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x4E86; CSS &#x58F0;&#x660E;&#x5757;&#x7684;&#x8868;&#x793A;&#xFF0C;&#x8BE5;&#x58F0;&#x660E;&#x5757;&#x53EF;&#x4EE5;&#x66FF;&#x4EE3;<code>CSSStyleDeclaration</code>&#x3002;</li>
+</ul>
+<blockquote>
+<p><code>CSSStyleRule</code>&#x5BF9;&#x8C61;&#x7684;<code>cssText</code>&#x5C5E;&#x6027;&#x4E0E;<code>style.cssText</code>&#x5C5E;&#x6027;&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x76F8;&#x540C;&#x3002;&#x524D;&#x8005;&#x5305;&#x542B;&#x9009;&#x62E9;&#x7B26;&#x6587;&#x672C;&#x548C;&#x56F4;&#x7ED5;&#x6837;&#x5F0F;&#x4FE1;&#x606F;&#x7684;&#x82B1;&#x62EC;&#x53F7;&#xFF0C;&#x540E;&#x8005;&#x53EA;&#x5305;&#x542B;&#x6837;&#x5F0F;&#x4FE1;&#x606F;(&#x7C7B;&#x4F3C;&#x4E8E; &#x5143;&#x7D20;&#x7684; style.cssText)&#x3002;&#x6B64;&#x5916;&#xFF0C;cssText &#x662F;&#x53EA;&#x8BFB;&#x7684;&#xFF0C;&#x800C; <code>style.cssText</code> &#x4E5F;&#x53EF;&#x4EE5;&#x88AB;&#x91CD;&#x5199;&#x3002;</p>
+</blockquote>
+<p>&#x4E0B;&#x9762;&#x662F;&#x83B7;&#x53D6;&#x5404;&#x4E2A;&#x5C5E;&#x6027;&#x663E;&#x793A;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text/css<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.demo</span> <span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>
+  var sheet = document.styleSheets[0];
+  var rules = sheet.cssRules || sheet.rules;
+  var rule = rules[0];
+  console.log(rule.selectorText);           //.demo
+  console.log(rule.style.backgroundColor);  //blue
+  console.log(rule.style.width);            //100px
+  console.log(rule.style.height);           //200px
+  //.demo { background-color: blue; width: 100px; height: 200px; }
+  console.log(rule.cssText);
+  //background-color: blue; width: 100px; height: 200px;
+  console.log(rule.style.cssText);
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x4F7F;&#x7528;<code>rule.style</code>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x50CF;&#x786E;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x884C;&#x5185;&#x6837;&#x5F0F;&#x4FE1;&#x606F;&#x4E00;&#x6837;&#xFF0C;&#x786E;&#x5B9A;&#x4E0E;&#x89C4;&#x5219;&#x76F8;&#x5173;&#x7684;&#x6837;&#x5F0F;&#x4FE1;&#x606F;&#x3002;&#x4E0E;&#x4F7F;&#x7528;&#x5143;&#x7D20;&#x7684;&#x65B9;&#x5F0F;&#x4E00;&#x6837;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4E0B;&#x4E5F;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x6837;&#x5F0F;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre class="language-"><code>var sheet = document.styleSheets[0];
+var rules = sheet.cssRules || sheet.rules;
+var rule = rules[0];
+rule.style.backgroundColor = &quot;red&quot;;
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x4EE5;&#x4E0A;&#x9762;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4FEE;&#x6539;&#x89C4;&#x5219;&#x4F1A;&#x5F71;&#x54CD;&#x9875;&#x9762;&#x4E2D;&#x9002;&#x7528;&#x4E8E;&#x8BE5;&#x89C4;&#x5219;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x4E24;&#x4E2A;&#x5E26;&#x6709;<code>demo</code>&#x7C7B;&#x7684;<code>div</code>&#x5143;&#x7D20;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x4F1A;&#x5E94;&#x7528;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x6837;&#x5F0F;&#x3002;</p>
+<h4 id="31-&#x521B;&#x5EFA;&#x89C4;&#x5219;&#x548C;&#x5220;&#x9664;&#x89C4;&#x5219;cssstylesheet&#x63A5;&#x53E3;&#x7684;&#x65B9;&#x6CD5;"><a name="31-&#x521B;&#x5EFA;&#x89C4;&#x5219;&#x548C;&#x5220;&#x9664;&#x89C4;&#x5219;cssstylesheet&#x63A5;&#x53E3;&#x7684;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#31-&#x521B;&#x5EFA;&#x89C4;&#x5219;&#x548C;&#x5220;&#x9664;&#x89C4;&#x5219;cssstylesheet&#x63A5;&#x53E3;&#x7684;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 &#x521B;&#x5EFA;&#x89C4;&#x5219;&#x548C;&#x5220;&#x9664;&#x89C4;&#x5219;(<code>CSSStyleSheet</code>&#x63A5;&#x53E3;&#x7684;&#x65B9;&#x6CD5;)</h4>
+<h5 id="&#x521B;&#x5EFA;&#x89C4;&#x5219;"><a name="&#x521B;&#x5EFA;&#x89C4;&#x5219;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x89C4;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x89C4;&#x5219;</h5>
+<p>DOM &#x89C4;&#x5B9A;&#xFF0C;&#x8981;&#x5411;&#x73B0;&#x6709;&#x6837;&#x5F0F;&#x8868;&#x4E2D;&#x6DFB;&#x52A0;&#x65B0;&#x89C4;&#x5219;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>insertRule()</code>&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2; &#x6570;&#xFF1A;&#x89C4;&#x5219;&#x6587;&#x672C;&#x548C;&#x8868;&#x793A;&#x5728;&#x54EA;&#x91CC;&#x63D2;&#x5165;&#x89C4;&#x5219;&#x7684;&#x7D22;&#x5F15;&#x3002;</p>
+<pre class="language-"><code>var sheet = document.styleSheets[0];
+sheet.insertRule(&quot;body { background-color: silver }&quot;, 0); //IE&#x4E0D;&#x652F;&#x6301;
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>IE8 &#x53CA;&#x66F4;&#x65E9;&#x7248;&#x672C;&#x652F;&#x6301;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x540D;&#x53EB; <code>addRule()</code></p>
+<pre class="language-"><code>sheet.addRule(&quot;body&quot;, &quot;background-color: silver&quot;, 0); //&#x4EC5;&#x5BF9; IE &#x6709;&#x6548;
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x4EE5;&#x8DE8;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x65B9;&#x5F0F;&#x5411;&#x6837;&#x5F0F;&#x8868;&#x4E2D;&#x63D2;&#x5165;&#x89C4;&#x5219;&#xFF1A;</p>
+<pre class="language-"><code>//insertRule(document.styleSheets[0], &quot;body&quot;, &quot;background-color: silver&quot;, 0);
+function insertRule(sheet, selectorText, cssText, position){
+    if (sheet.insertRule){
+        sheet.insertRule(selectorText + &quot;{&quot; + cssText + &quot;}&quot;, position);
+    } elseif (sheet.addRule){
+      sheet.addRule(selectorText, cssText, position);
+  }
+}
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><blockquote>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x63D2;&#x5165;&#x7684;&#x89C4;&#x5219;&#x4F1A;&#x6539;&#x53D8;&#x5143;&#x7D20;&#x7684;&#x80CC;&#x666F;&#x989C;&#x8272;&#x3002;&#x63D2;&#x5165;&#x7684;&#x89C4;&#x5219;&#x5C06;&#x6210;&#x4E3A;&#x6837;&#x5F0F;&#x8868;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x89C4;&#x5219;(&#x63D2;&#x5165;&#x5230;&#x4E86; &#x4F4D;&#x7F6E; 0)&#x2014;&#x2014;&#x89C4;&#x5219;&#x7684;&#x6B21;&#x5E8F;&#x5728;&#x786E;&#x5B9A;&#x5C42;&#x53E0;&#x4E4B;&#x540E;&#x5E94;&#x7528;&#x5230;&#x6587;&#x6863;&#x7684;&#x89C4;&#x5219;&#x65F6;&#x81F3;&#x5173;&#x91CD;&#x8981;&#x3002;</p>
+</blockquote>
+<h5 id="&#x5220;&#x9664;&#x89C4;&#x5219;"><a name="&#x5220;&#x9664;&#x89C4;&#x5219;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x89C4;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x89C4;&#x5219;</h5>
+<p>&#x4ECE;&#x6837;&#x5F0F;&#x8868;&#x4E2D;&#x5220;&#x9664;&#x89C4;&#x5219;&#x7684;&#x65B9;&#x6CD5;&#x662F; deleteRule()&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570;:&#x8981;&#x5220;&#x9664;&#x7684;&#x89C4;&#x5219;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x4F8B; &#x5982;&#xFF0C;&#x8981;&#x5220;&#x9664;&#x6837;&#x5F0F;&#x8868;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x89C4;&#x5219;&#x3002;</p>
+<pre class="language-"><code>sheet.deleteRule(0);
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>IE &#x652F;&#x6301;&#x7684;&#x7C7B;&#x4F3C;&#x65B9;&#x6CD5;&#x53EB; <code>removeRule()</code>&#xFF1A;</p>
+<pre class="language-"><code>sheet.removeRule(0); //&#x4EC5;&#x5BF9; IE &#x6709;&#x6548;
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x4EE5;&#x8DE8;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x65B9;&#x5F0F;&#x5411;&#x6837;&#x5F0F;&#x8868;&#x4E2D;&#x5220;&#x9664;&#x89C4;&#x5219;&#xFF1A;</p>
+<pre class="language-"><code>//deleteRule(document.styleSheets[0], 0);
+function deleteRule(sheet, index){
+    if (sheet.deleteRule){
+        sheet.deleteRule(index);
+    } elseif (sheet.removeRule){
+        sheet.removeRule(index);
+    }
+}
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><blockquote>
+<p>&#x6DFB;&#x52A0;&#x89C4;&#x5219;&#x548C;&#x5220;&#x9664;&#x89C4;&#x5219;&#x5728;&#x5B9E;&#x9645; <code>Web</code> &#x5F00;&#x53D1;&#x4E2D;&#x5E76;&#x4E0D;&#x5E38;&#x7528;&#xFF0C;&#x614E;&#x91CD;&#x4F7F;&#x7528;&#x3002;</p>
+</blockquote>
+<h3 id="&#x7B2C;&#x56DB;&#x90E8;&#x5206;&#xFF1A;cssstyledeclaration-&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;"><a name="&#x7B2C;&#x56DB;&#x90E8;&#x5206;&#xFF1A;cssstyledeclaration-&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x56DB;&#x90E8;&#x5206;&#xFF1A;cssstyledeclaration-&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. &#x7B2C;&#x56DB;&#x90E8;&#x5206;&#xFF1A;CSSStyleDeclaration &#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;</h3>
+<p>&#x4EFB;&#x4F55;&#x652F;&#x6301; style &#x7279;&#x6027;&#x7684; HTML &#x5143;&#x7D20;&#x5728; JavaScript &#x4E2D;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684; style &#x5C5E;&#x6027;&#x3002;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x5E73;&#x5E38;&#x5728; HTML &#x5143;&#x7D20;&#x91CC;&#x5199;&#x7684;&#x6837;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">font-size</span><span class="token punctuation">:</span>20px<span class="token punctuation">;</span><span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x5BB9;&#x5668;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x4E0A;&#x9762;&#x8FD9;&#x4E2A; <code>style</code> &#x5BF9;&#x8C61; &#x662F; <code>CSSStyleDeclaration</code> &#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x5305;&#x542B;&#x7740;&#x901A;&#x8FC7; HTML &#x7684; <code>style</code> &#x7279;&#x6027;&#x6307;&#x5B9A;&#x7684;&#x6240;&#x6709;&#x6837;&#x5F0F;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x4E0D;&#x5305;&#x542B;&#x4E0E;&#x5916;&#x90E8;&#x6837;&#x5F0F;&#x8868;&#x6216;&#x5D4C;&#x5165;&#x6837;&#x5F0F;&#x8868;&#x7ECF;&#x5C42;&#x53E0;&#x800C;&#x6765;&#x7684;&#x6837;&#x5F0F;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4F7F;&#x7528;&#x77ED;&#x5212;&#x7EBF;(&#x5206;&#x9694;&#x4E0D;&#x540C;&#x7684;&#x8BCD;&#x6C47;&#xFF0C;&#x4F8B;&#x5982; background-image)&#x7684; CSS &#x5C5E;&#x6027; &#x540D;&#xFF0C;&#x5FC5;&#x987B;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x6210;&#x9A7C;&#x5CF0;&#x5927;&#x5C0F;&#x5199;&#x5F62;&#x5F0F;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x51E0;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;
+CSS &#x5C5E;&#x6027; JavaScript &#x5C5E;&#x6027;<code>background-image``style.backgroundImage``color``style.color``font-family``style.fontFamily</code>
+var myDiv = document.getElementById(&quot;myDiv&quot;);
+myDiv.style.backgroundColor = &quot;red&quot;;
+myDiv.style.width = &quot;100px&quot;;
+myDiv.style.border = &quot;1px solid black&quot;;
+&#x590D;&#x5236;&#x4EE3;&#x7801;</p>
+<p>&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8F6C;&#x6362;&#x7684; <code>CSS</code>&#x5C5E;&#x6027; &#x5C31;&#x662F; <code>float</code>&#x3002;&#x7531;&#x4E8E; <code>float</code> &#x662F; <code>JavaScript</code> &#x4E2D;&#x7684;&#x4FDD;&#x7559;&#x5B57;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x80FD;&#x7528;&#x4F5C;&#x5C5E;&#x6027;&#x540D;&#x3002;DOM2 &#x7EA7;&#x6837;&#x5F0F;&#x201D;&#x89C4;&#x8303;&#x89C4;&#x5B9A; &#x6837;&#x5F0F;&#x5BF9;&#x8C61;&#x4E0A;&#x76F8;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x5E94;&#x8BE5;&#x662F; <code>cssFloat</code>&#x3002;&#x800C; IE &#x652F;&#x6301;&#x7684;&#x5219;&#x662F;<code>styleFloat</code>&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x6D4F;&#x89C8;&#x5668;&#x6240;&#x652F;&#x6301;&#x7684;<code>float</code>&#xFF1A;</p>
+<pre class="language-"><code>const support = (function(){
+  const div = document.createElement(&quot;div&quot;);
+  div.style.cssText = &quot;float:left;&quot;;
+  let support = {
+    cssFloat: !!div.style.cssFloat
+  }
+  return support;
+})()
+const floatReal = support.cssFloat ? &apos;cssFloat&apos; : &apos;styleFloat&apos;;
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x8FD8;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;<code>document.documentMode</code>&#x6765;&#x5224;&#x65AD;&#xFF1A;</p>
+<pre class="language-"><code>const floatReal =  Number(document.documentMode) &lt; 9 ? &apos;styleFloat&apos; : &apos;cssFloat&apos;&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x53EA;&#x8981;&#x53D6;&#x5F97;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7684; DOM &#x5143;&#x7D20;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x4F7F;&#x7528; JavaScript &#x4E3A;&#x5176;&#x8BBE;&#x7F6E;&#x6837;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code>var myDiv = document.getElementById(&quot;myDiv&quot;);
+myDiv.style.width = &quot;100px&quot;;
+myDiv.style.border = &quot;1px solid black&quot;;
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x6240;&#x6709;&#x5EA6;&#x91CF;&#x503C;&#x90FD;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5EA6;&#x91CF;&#x5355;&#x4F4D;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x8BBE;&#x7F6E;&#x5143;&#x7D20;<code>style</code>&#x5C5E;&#x6027;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre class="language-"><code>functionsetStyle(element, styles) {
+    function is_numeric(n) {
+        return (n !== &apos;&apos; &amp;&amp; !isNaN(parseFloat(n)) &amp;&amp; isFinite(n));
+    }
+    Object.keys(styles).forEach(function(prop) {
+        var unit = &apos;&apos;;
+        if ([&apos;width&apos;, &apos;height&apos;, &apos;top&apos;, &apos;right&apos;, &apos;bottom&apos;, &apos;left&apos;].indexOf(prop) !== -1 &amp;&amp; is_numeric(styles[prop])) {
+            unit = &apos;px&apos;;
+        }
+        element.style[prop] = styles[prop] + unit;
+    });
+}
+setStyle(document.getElementById(&quot;myDiv&quot;),{ position: &apos;absolute&apos;, top: 0 })
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><blockquote>
+<p><code>Element.style</code>&#x8FD4;&#x56DE;&#x7684;&#x53EA;&#x662F;&#x884C;&#x5185;&#x6837;&#x5F0F;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x5168;&#x90E8;&#x6837;&#x5F0F;&#x3002;&#x901A;&#x8FC7;&#x6837;&#x5F0F;&#x8868;&#x8BBE;&#x7F6E;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x6216;&#x8005;&#x4ECE;&#x7236;&#x5143;&#x7D20;&#x7EE7;&#x627F;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x5F97;&#x5230;&#x3002;&#x5143;&#x7D20;&#x7684;&#x5168;&#x90E8;&#x6837;&#x5F0F;&#x8981;&#x901A;&#x8FC7;<code>window.getComputedStyle()</code>&#x5F97;&#x5230;&#x3002;</p>
+</blockquote>
+<h4 id="41-cssstyledeclaration-&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;"><a name="41-cssstyledeclaration-&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#41-cssstyledeclaration-&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1 <code>CSSStyleDeclaration</code> &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;</h4>
+<ul>
+<li><code>cssText</code>&#xFF1A;&#x901A;&#x8FC7;&#x5B83;&#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x5230; style &#x7279;&#x6027;&#x4E2D;&#x7684; CSS &#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x8BFB;&#x5199;&#x3002;</li>
+<li><code>length</code>&#xFF1A;&#x5E94;&#x7528;&#x7ED9;&#x5143;&#x7D20;&#x7684; CSS &#x5C5E;&#x6027;&#x7684;&#x6570;&#x91CF;&#x3002;</li>
+<li><code>parentRule</code>&#xFF1A;&#x8868;&#x793A; CSS &#x4FE1;&#x606F;&#x7684; CSSRule &#x5BF9;&#x8C61;&#x3002;</li>
+<li><code>getPropertyPriority(propertyName)</code>&#xFF1A;:&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x4F7F;&#x7528;&#x4E86;!important &#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;
+&quot;important&quot;;&#x5426;&#x5219;&#xFF0C;&#x8FD4;&#x56DE;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li><code>getPropertyValue(propertyName)</code>&#xFF1A;:&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x5C5E;&#x6027;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x3002;</li>
+<li><code>item(index)</code>&#xFF1A;&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684; CSS &#x5C5E;&#x6027;&#x7684;&#x540D;&#x79F0;&#x3002;</li>
+<li><code>removeProperty(propertyName)</code>&#xFF1A;&#x4ECE;&#x6837;&#x5F0F;&#x4E2D;&#x5220;&#x9664;&#x7ED9;&#x5B9A;&#x5C5E;&#x6027;&#x3002;</li>
+<li><code>setProperty(propertyName,value,priority)</code>&#xFF1A;&#x5C06;&#x7ED9;&#x5B9A;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x4E3A;&#x76F8;&#x5E94;&#x7684;&#x503C;&#xFF0C;&#x5E76;&#x52A0;&#x4E0A;&#x4F18;&#x5148;
+&#x6743;&#x6807;&#x5FD7;(&quot;important&quot;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;)&#x3002;</li>
+</ul>
+<h5 id="csstext&#x8BE6;&#x89E3;"><a name="csstext&#x8BE6;&#x89E3;" class="anchor-navigation-ex-anchor" href="#csstext&#x8BE6;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a><code>cssText</code>&#x8BE6;&#x89E3;</h5>
+<p>&#x901A;&#x8FC7;<code>cssText</code>&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE; <code>style</code> &#x7279;&#x6027;&#x4E2D;&#x7684; <code>CSS</code> &#x4EE3;&#x7801;&#x3002;&#x5728;&#x8BFB;&#x53D6;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;<code>cssText</code> &#x8FD4;&#x56DE;&#x6D4F;&#x89C8;&#x5668;&#x5BF9; <code>style</code>&#x7279;&#x6027;&#x4E2D; <code>CSS</code> &#x4EE3;&#x7801;&#x7684;&#x5185;&#x90E8;&#x8868;&#x793A;&#x3002;&#x5728;&#x5199;&#x5165;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x8D4B;&#x7ED9; <code>cssText</code> &#x7684;&#x503C;&#x4F1A;&#x91CD;&#x5199;&#x6574;&#x4E2A; <code>style</code> &#x7279;&#x6027;&#x7684;&#x503C;;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4EE5;&#x524D;&#x901A;&#x8FC7; <code>style</code> &#x7279;&#x6027;&#x6307;&#x5B9A;&#x7684;&#x6837;&#x5F0F;&#x4FE1;&#x606F;&#x90FD;&#x5C06;&#x4E22;&#x5931;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x901A;&#x8FC7; <code>style</code> &#x7279;&#x6027;&#x4E3A;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x4E86;&#x8FB9;&#x6846;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x4EE5;&#x4E0D;&#x5305;&#x542B;&#x8FB9;&#x6846;&#x7684;&#x89C4;&#x5219;&#x91CD;&#x5199; <code>cssText</code>&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x62B9;&#x53BB;&#x5143;&#x7D20;&#x4E0A;&#x7684;&#x8FB9;&#x6846;&#x3002;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>demo<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">border</span><span class="token punctuation">:</span>5px solid red<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x5BB9;&#x5668;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+var myDiv = document.getElementById(&quot;myDiv&quot;);
+myDiv.style.cssText = &quot;background-color: green&quot;;
+console.log(myDiv.style.cssText) //background-color: green;
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><blockquote>
+<p>&#x8BBE;&#x7F6E; <code>cssText</code> &#x662F;&#x4E3A;&#x5143;&#x7D20;&#x5E94;&#x7528;&#x591A;&#x9879;&#x53D8;&#x5316;&#x6700;&#x5FEB;&#x6377;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x6027;&#x5730;&#x5E94;&#x7528;&#x6240;&#x6709;&#x53D8;&#x5316;&#x3002;</p>
+</blockquote>
+<h5 id="length&#x5C5E;&#x6027;&#xFF0C;item&#x65B9;&#x6CD5;&#xFF0C;-getpropertyvalue&#x65B9;&#x6CD5;&#xFF0C;removeproperty&#x65B9;&#x6CD5;"><a name="length&#x5C5E;&#x6027;&#xFF0C;item&#x65B9;&#x6CD5;&#xFF0C;-getpropertyvalue&#x65B9;&#x6CD5;&#xFF0C;removeproperty&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#length&#x5C5E;&#x6027;&#xFF0C;item&#x65B9;&#x6CD5;&#xFF0C;-getpropertyvalue&#x65B9;&#x6CD5;&#xFF0C;removeproperty&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><code>length</code>&#x5C5E;&#x6027;&#xFF0C;<code>item()</code>&#x65B9;&#x6CD5;&#xFF0C; <code>getPropertyValue()</code>&#x65B9;&#x6CD5;&#xFF0C;<code>removeProperty()</code>&#x65B9;&#x6CD5;</h5>
+<p>&#x8BBE;&#x8BA1; length &#x5C5E;&#x6027;&#x7684;&#x76EE;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x5C06;&#x5176;&#x4E0E; item()&#x65B9;&#x6CD5;&#x914D;&#x5957;&#x4F7F;&#x7528;&#xFF0C;&#x4EE5;&#x4FBF;&#x8FED;&#x4EE3;&#x5728;&#x5143;&#x7D20;&#x4E2D;&#x5B9A;&#x4E49;&#x7684; CSS &#x5C5E;&#x6027;&#x3002; &#x5728;&#x4F7F;&#x7528; length &#x548C; item()&#x65F6;&#xFF0C;style &#x5BF9;&#x8C61;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>demo<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span><span class="token property">font-size</span><span class="token punctuation">:</span>22px<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x5BB9;&#x5668;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+const myDiv = document.getElementById(&apos;demo&apos;);
+for(let i = 0; i &lt; myDiv.style.length; i++) {
+  //&#x6216;&#x8005;&#x4F7F;&#x7528;myDiv.style.item(i)
+  console.log(myDiv.style[i])  //width font-size
+}
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x4F7F;&#x7528;&#x65B9;&#x62EC;&#x53F7;&#x8BED;&#x6CD5;&#x6216; item()&#x65B9;&#x6CD5;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x53D6;&#x5F97; CSS &#x5C5E;&#x6027;&#x540D;(&quot;background-color&quot;&#xFF0C; &#x4E0D;&#x662F;&quot;backgroundColor&quot;)&#x3002;&#x7136;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728; getPropertyValue()&#x4E2D;&#x4F7F;&#x7528;&#x53D6;&#x5F97;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x8FDB;&#x4E00;&#x6B65;&#x53D6;&#x5F97; &#x5C5E;&#x6027;&#x7684;&#x503C;&#x3002;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>demo<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span><span class="token property">font-size</span><span class="token punctuation">:</span>22px<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x5BB9;&#x5668;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+const myDiv = document.getElementById(&apos;demo&apos;);
+var prop, value, i, len;
+for (i=0, len= myDiv.style.length; i &lt; len; i++){
+  prop = myDiv.style[i];
+  value = myDiv.style.getPropertyValue(prop);
+  console.log(prop + &apos;:&apos; + value); //width:100px font-size:22px
+}
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x8981;&#x4ECE;&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;&#x4E2D;&#x79FB;&#x9664;&#x67D0;&#x4E2A; CSS &#x5C5E;&#x6027;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528; removeProperty()&#x65B9;&#x6CD5;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x79FB;&#x9664;&#x4E00; &#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x5C06;&#x4F1A;&#x4E3A;&#x8BE5;&#x5C5E;&#x6027;&#x5E94;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x6837;&#x5F0F;(&#x4ECE;&#x5176;&#x4ED6;&#x6837;&#x5F0F;&#x8868;&#x7ECF;&#x5C42;&#x53E0;&#x800C;&#x6765;)&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x79FB;&#x9664;&#x901A;&#x8FC7; style &#x7279;&#x6027;&#x8BBE;&#x7F6E;&#x7684; <code>font-size</code> &#x5C5E;&#x6027;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>demo<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span><span class="token property">font-size</span><span class="token punctuation">:</span>22px<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x5BB9;&#x5668;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+const myDiv = document.getElementById(&apos;demo&apos;);
+myDiv.style.removeProperty(&quot;font-size&quot;);
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x53EA;&#x8981;&#x79FB;&#x9664;&#x76F8;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4E3A;&#x5143;&#x7D20;&#x5E94;&#x7528;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</p>
+<h4 id="42-getcomputedstyle-&#x83B7;&#x5F97;&#x8BA1;&#x7B97;&#x7684;&#x6837;&#x5F0F;"><a name="42-getcomputedstyle-&#x83B7;&#x5F97;&#x8BA1;&#x7B97;&#x7684;&#x6837;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#42-getcomputedstyle-&#x83B7;&#x5F97;&#x8BA1;&#x7B97;&#x7684;&#x6837;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2 <code>getComputedStyle()</code> &#x83B7;&#x5F97;&#x8BA1;&#x7B97;&#x7684;&#x6837;&#x5F0F;</h4>
+<p>&#x867D;&#x7136; style &#x5BF9;&#x8C61;&#x80FD;&#x591F;&#x63D0;&#x4F9B;&#x652F;&#x6301; style &#x7279;&#x6027;&#x7684;&#x4EFB;&#x4F55;&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x5B83;&#x4E0D;&#x5305;&#x542B;&#x90A3;&#x4E9B;&#x4ECE;&#x5176;&#x4ED6;&#x6837;&#x5F0F;&#x8868; &#x5C42;&#x53E0;&#x800C;&#x6765;&#x5E76;&#x5F71;&#x54CD;&#x5230;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x201C;DOM2 &#x7EA7;&#x6837;&#x5F0F;&#x201D;&#x589E;&#x5F3A;&#x4E86; <code>document.defaultView</code>&#xFF0C;&#x63D0;&#x4F9B;&#x4E86; <code>getComputedStyle()</code>&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;:&#x8981;&#x53D6;&#x5F97;&#x8BA1;&#x7B97;&#x6837;&#x5F0F;&#x7684;&#x5143;&#x7D20;&#x548C;&#x4E00;&#x4E2A;&#x4F2A;&#x5143;&#x7D20;&#x5B57;&#x7B26;&#x4E32;(&#x4F8B; &#x5982;&quot;:after&quot;)&#x3002;&#x5982;&#x679C;&#x4E0D;&#x9700;&#x8981;&#x4F2A;&#x5143;&#x7D20;&#x4FE1;&#x606F;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x662F; null&#x3002;<code>getComputedStyle()</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; &#x5B9E;&#x65F6;&#x7684;<code>CSSStyleDeclaration</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5F53;&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;&#x66F4;&#x6539;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x672C;&#x8EAB;&#x3002;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;&#x6240;&#x6709;&#x8BA1;&#x7B97;&#x7684;&#x6837;&#x5F0F;&#x3002;</p>
+<blockquote>
+<p>&#x5176;&#x5B9E;<code>window.getComputedStyle()</code>&#x4E5F;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x5143;&#x7D20;&#x7684;<code>CSSStyleDeclaration</code>&#x5BF9;&#x8C61;&#x3002; <code>document.defaultView.getComputedStyle()</code>&#x548C;<code>window.getComputedStyle()</code>&#x533A;&#x522B;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;&#xFF1A; <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/getComputedStyle#defaultView" target="_blank">MDN &#x8FD9;&#x7BC7;&#x6587;&#x7AE0;</a>&#x3002;</p>
+</blockquote>
+<p>&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x901A;&#x8FC7; <code>window.getComputedStyle()</code>&#x83B7;&#x53D6;&#x5143;&#x7D20;&#x6837;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text/css<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.demo</span> <span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>demo<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token property">border</span><span class="token punctuation">:</span> 5px solid black<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x5BB9;&#x5668;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>
+  const myDemo = document.getElementById(&apos;demo&apos;);
+  const computedStyle = window.getComputedStyle(myDemo,null);
+  console.log(computedStyle.backgroundColor); //rgb(255, 0, 0)
+  console.log(computedStyle.width);           //100px
+  console.log(computedStyle.height);          //200px
+  console.log(computedStyle.border);          //5px solid rgb(0, 0, 0)
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><p>&#x4E0A;&#x9762;&#x6253;&#x5370;&#x51FA;&#x7684;&#x80CC;&#x666F;&#x989C;&#x8272;&#x4E0D;&#x662F;&quot;blue&quot;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x6837;&#x5F0F;&#x5728;&#x81EA;&#x8EAB;&#x7684; <code>style</code> &#x7279;&#x6027;&#x4E2D;&#x5DF2;&#x7ECF;&#x88AB;&#x8986;&#x76D6;&#x4E86;&#x3002;</p>
+<p>&#x8FB9;&#x6846;&#x5C5E;&#x6027;&#x53EF;&#x80FD; &#x4F1A;&#x4E5F;&#x53EF;&#x80FD;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;&#x6837;&#x5F0F;&#x8868;&#x4E2D;&#x5B9E;&#x9645;&#x7684; <code>border</code> &#x89C4;&#x5219;&#x3002;&#x56E0;&#x4E3A;&#x8BBE;&#x7F6E;&#x8FD9;&#x79CD;&#x5C5E;&#x6027;&#xFF08;&#x7EFC;&#x5408;&#x5C5E;&#x6027;&#xFF09;&#x5B9E;&#x9645;&#x4E0A;&#x4F1A;&#x6D89;&#x53CA; &#x5F88;&#x591A;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x3002;&#x5728;&#x8BBE;&#x7F6E; border &#x65F6;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x8BBE;&#x7F6E;&#x4E86;&#x56DB;&#x4E2A;&#x8FB9;&#x7684;&#x8FB9;&#x6846;&#x5BBD;&#x5EA6;&#x3001;&#x989C;&#x8272;&#x3001;&#x6837;&#x5F0F;&#x5C5E;&#x6027;
+( <code>border-left-width</code> &#x3001; <code>border-top-color</code> &#x3001; <code>border-bottom-style</code>&#x7B49;&#x7B49;)&#x3002; &#x56E0; &#x6B64;&#xFF0C;&#x5373;&#x4F7F; <code>computedStyle.border</code>&#x4E0D;&#x4F1A;&#x5728;&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x90FD;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x4F46;&#x5177;&#x4F53;&#x5230;<code>computedStyle.borderLeftWidth</code>&#x4F1A; &#x8FD4;&#x56DE;&#x503C;&#x3002;</p>
+<p>IE &#x4E0D;&#x652F;&#x6301;<code>getComputedStyle()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x5B83;&#x6709;&#x4E00;&#x79CD;&#x7C7B;&#x4F3C;&#x7684;&#x6982;&#x5FF5;&#x3002;&#x5728; IE &#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5177;&#x6709;<code>style</code>&#x5C5E;&#x6027; &#x7684;&#x5143;&#x7D20;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;<code>currentStyle</code>&#x5C5E;&#x6027;&#x3002;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x662F;<code>CSSStyleDeclaration</code>&#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x517C;&#x5BB9;&#x6A21;&#x5F0F;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre class="language-"><code>function getStyles(elem) {
+    window.getComputedStyle ?  window.getComputedStyle(elem,null) : elem.currentStyle;
+}
+var myDemo = document.getElementById(&apos;demo&apos;);
+var computedStyle = getStyles(myDemo)
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><blockquote>
+<p>&#x6240;&#x6709;&#x8BA1;&#x7B97;&#x7684;&#x6837;&#x5F0F;&#x90FD;&#x662F;&#x53EA;&#x8BFB;&#x7684;&#x3002;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;&#x8BA1;&#x7B97;&#x540E;&#x6837;&#x5F0F;&#x5BF9;&#x8C61;&#x4E2D;&#x7684; CSS &#x5C5E;&#x6027;&#x3002;</p>
+</blockquote>
+<h3 id="&#x7B2C;&#x4E94;&#x90E8;&#x5206;&#xFF1A;&#x5B9E;&#x4F8B;"><a name="&#x7B2C;&#x4E94;&#x90E8;&#x5206;&#xFF1A;&#x5B9E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E94;&#x90E8;&#x5206;&#xFF1A;&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. &#x7B2C;&#x4E94;&#x90E8;&#x5206;&#xFF1A;&#x5B9E;&#x4F8B;</h3>
+<h4 id="51-&#x8BBE;&#x7F6E;-style-&#x6837;&#x5F0F;"><a name="51-&#x8BBE;&#x7F6E;-style-&#x6837;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#51-&#x8BBE;&#x7F6E;-style-&#x6837;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1 &#x8BBE;&#x7F6E; style &#x6837;&#x5F0F;</h4>
+<pre class="language-"><code>const ieVersion =  Number(document.documentMode);
+/**
+ * &#x5C06;:-_&#x7B49;&#x53D8;&#x6210;&#x9A7C;&#x5CF0;&#x5F0F;&#xFF0C;&#x5982;foo-bar&#x53D8;&#x6210;fooBar
+ * @param name &#x8981;&#x5904;&#x7406;&#x7684;&#x5B57;&#x7B26;&#x4E32;
+ * @returns {*} &#x5904;&#x7406;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;
+ */
+const camelCase = function(name) {
+  return name.replace(/([\:\-\_]+(.))/g, function(_, separator, letter, offset) {
+    // &#x5F00;&#x5934;&#x7684;&#x4E0D;&#x5927;&#x5199;&#xFF0C;&#x5176;&#x4F59;&#x7684;&#x5927;&#x5199;
+    return offset ? letter.toUpperCase() : letter;
+  }).replace(/^moz([A-Z])/, &apos;Moz$1&apos;); // &#x5BF9;moz&#x8FDB;&#x884C;&#x7279;&#x6B8A;&#x5904;&#x7406;
+};
+
+/**
+ * &#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;
+ * @param element &#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x5143;&#x7D20;
+ * @param styleName &#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x6837;&#x5F0F;
+ * @param value &#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x503C;
+ */
+functionsetStyle(element, styleName, value) {
+  if (!element || !styleName) return;
+  // &#x5982;&#x679C;&#x662F;&#x5BF9;&#x8C61;&#x5219;&#x62C6;&#x5206;&#x540E;&#x4F9D;&#x6B21;&#x8BBE;&#x7F6E;
+  if (typeof styleName === &apos;object&apos;) {
+    for (var prop in styleName) {
+      if (styleName.hasOwnProperty(prop)) {
+        setStyle(element, prop, styleName[prop]);
+      }
+    }
+  } else {
+    styleName = camelCase(styleName);
+    // opacity&#x7279;&#x6B8A;&#x5904;&#x7406;
+    if (styleName === &apos;opacity&apos; &amp;&amp; ieVersion &lt; 9) {
+      element.style.filter = isNaN(value) ? &apos;&apos; : &apos;alpha(opacity=&apos; + value * 100 + &apos;)&apos;;
+    } else {
+      element.style[styleName] = value;
+    }
+  }
+};
+
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><h4 id="52-&#x83B7;&#x5F97;-style-&#x6837;&#x5F0F;"><a name="52-&#x83B7;&#x5F97;-style-&#x6837;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#52-&#x83B7;&#x5F97;-style-&#x6837;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2 &#x83B7;&#x5F97; style &#x6837;&#x5F0F;</h4>
+<pre class="language-"><code>var ieVersion =  Number(document.documentMode);
+/**
+ * &#x5C06;:-_&#x7B49;&#x53D8;&#x6210;&#x9A7C;&#x5CF0;&#x5F0F;&#xFF0C;&#x5982;foo-bar&#x53D8;&#x6210;fooBar
+ * @param name &#x8981;&#x5904;&#x7406;&#x7684;&#x5B57;&#x7B26;&#x4E32;
+ * @returns {*} &#x5904;&#x7406;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;
+ */
+const camelCase = function(name) {
+  return name.replace(/([\:\-\_]+(.))/g, function(_, separator, letter, offset) {
+    // &#x5F00;&#x5934;&#x7684;&#x4E0D;&#x5927;&#x5199;&#xFF0C;&#x5176;&#x4F59;&#x7684;&#x5927;&#x5199;
+    return offset ? letter.toUpperCase() : letter;
+  }).replace(/^moz([A-Z])/, &apos;Moz$1&apos;); // &#x5BF9;moz&#x8FDB;&#x884C;&#x7279;&#x6B8A;&#x5904;&#x7406;
+};
+/**
+ * &#x83B7;&#x53D6;&#x6837;&#x5F0F;&#xFF0C;&#x5206;IE9&#x4EE5;&#x4E0B;&#x548C;&#x5176;&#x4ED6;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x5904;&#x7406;
+ * @type {Function}
+ * @param element &#x8981;&#x83B7;&#x53D6;&#x6837;&#x5F0F;&#x7684;&#x5143;&#x7D20;
+ * @param styleName &#x8981;&#x83B7;&#x53D6;&#x7684;&#x6837;&#x5F0F;&#x540D;
+ */
+var getStyle = ieVersion &lt; 9 ? function(element, styleName) {
+  if (!element || !styleName) return null;
+  // &#x5C06;&#x6837;&#x5F0F;&#x540D;&#x8F6C;&#x6210;&#x9A7C;&#x5CF0;&#x5F0F;
+  styleName = camelCase(styleName);
+  // float&#x7279;&#x6B8A;&#x5904;&#x7406;
+  if (styleName === &apos;float&apos;) {
+    styleName = &apos;styleFloat&apos;;
+  }
+  try {
+    // opacity&#x7279;&#x6B8A;&#x5904;&#x7406;
+    switch (styleName) {
+      case&apos;opacity&apos;:
+        try {
+          return element.filters.item(&apos;alpha&apos;).opacity / 100;
+        } catch (e) {
+          return 1.0;
+        }
+      default:
+        return (element.style[styleName] || element.currentStyle ? element.currentStyle[styleName] : null);
+    }
+  } catch (e) {
+    return element.style[styleName];
+  }
+} : function(element, styleName) {
+  if (!element || !styleName) return null;
+  styleName = camelCase(styleName);
+  if (styleName === &apos;float&apos;) {
+    styleName = &apos;cssFloat&apos;;
+  }
+  try {
+    var computed = document.defaultView.getComputedStyle(element, &apos;&apos;);
+    return element.style[styleName] || computed ? computed[styleName] : null;
+  } catch (e) {
+    return element.style[styleName];
+  }
+};
+
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><h4 id="53-&#x589E;&#x52A0;&#x548C;&#x5220;&#x9664;-class-&#x6837;&#x5F0F;"><a name="53-&#x589E;&#x52A0;&#x548C;&#x5220;&#x9664;-class-&#x6837;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#53-&#x589E;&#x52A0;&#x548C;&#x5220;&#x9664;-class-&#x6837;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>5.3 &#x589E;&#x52A0;&#x548C;&#x5220;&#x9664; class &#x6837;&#x5F0F;</h4>
+<pre class="language-"><code>/**
+ * &#x5224;&#x65AD;&#x662F;&#x5426;&#x5305;&#x542B;&#x67D0;&#x7C7B;
+ * @param el &#x8981;&#x68C0;&#x6D4B;&#x7684;&#x5143;&#x7D20;
+ * @param cls &#x8981;&#x68C0;&#x6D4B;&#x7684;&#x7C7B;&#x540D;
+ * @returns {boolean}
+ */
+function hasClass(el, cls) {
+  if (!el || !cls) returnfalse;
+  if (cls.indexOf(&apos; &apos;) !== -1) throw new Error(&apos;className should not contain space.&apos;);
+  if (el.classList) {
+    return el.classList.contains(cls);
+  } else {
+    return (&apos; &apos; + el.className + &apos; &apos;).indexOf(&apos; &apos; + cls + &apos; &apos;) &gt; -1;
+  }
+};
+
+/**
+ * &#x7ED9;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x67D0;&#x4E9B;&#x7C7B;
+ * @param el &#x8981;&#x5904;&#x7406;&#x7684;&#x5143;&#x7D20;
+ * @param cls &#x8981;&#x6DFB;&#x52A0;&#x7684;&#x7C7B;
+ */
+function addClass(el, cls) {
+  if (!el) return;
+  var curClass = el.className;
+  var classes = (cls || &apos;&apos;).split(&apos; &apos;);
+
+  for (var i = 0, j = classes.length; i &lt; j; i++) {
+    var clsName = classes[i];
+    if (!clsName) continue;
+
+    if (el.classList) {
+      el.classList.add(clsName);
+    } elseif (!hasClass(el, clsName)) {
+      curClass += &apos; &apos; + clsName;
+    }
+  }
+  if (!el.classList) {
+    el.className = curClass;
+  }
+};
+
+/**
+ * &#x7ED9;&#x5143;&#x7D20;&#x79FB;&#x9664;&#x67D0;&#x4E9B;&#x7C7B;
+ * @param el &#x8981;&#x5904;&#x7406;&#x7684;&#x5143;&#x7D20;
+ * @param cls &#x8981;&#x79FB;&#x9664;&#x7684;&#x7C7B;
+ */
+function removeClass(el, cls) {
+  if (!el || !cls) return;
+  var classes = cls.split(&apos; &apos;);
+  var curClass = &apos; &apos; + el.className + &apos; &apos;;
+
+  for (var i = 0, j = classes.length; i &lt; j; i++) {
+    var clsName = classes[i];
+    if (!clsName) continue;
+
+    if (el.classList) {
+      el.classList.remove(clsName);
+    } elseif (hasClass(el, clsName)) {
+      curClass = curClass.replace(&apos; &apos; + clsName + &apos; &apos;, &apos; &apos;);
+    }
+  }
+  if (!el.classList) {
+    el.className = trim(curClass);
+  }
+};
+
+&#x590D;&#x5236;&#x4EE3;&#x7801;
+</code></pre><h3 id="&#x53C2;&#x8003;&#x94FE;&#x63A5;"><a name="&#x53C2;&#x8003;&#x94FE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;&#x94FE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.6. &#x53C2;&#x8003;&#x94FE;&#x63A5;</h3>
+<p><a href="https://www.douban.com/search?q=javascript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E6%B6%89%E5%8F%8A" target="_blank">JavaScript &#x9AD8;&#x7EA7;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#xFF08;&#x7B2C; 3 &#x7248;&#xFF09;</a></p>
+<p><a href="https://book.douban.com/subject/3082278/" target="_blank">JavaScript DOM &#x9AD8;&#x7EA7;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;</a></p>
+<p><a href="https://www.zhangxinxu.com/wordpress/2012/05/getcomputedstyle-js-getpropertyvalue-currentstyle/" target="_blank">&#x83B7;&#x53D6;&#x5143;&#x7D20; CSS &#x503C;&#x4E4B; getComputedStyle &#x65B9;&#x6CD5;&#x719F;&#x6089;</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model" target="_blank">CSS Object Model</a></p>
+<p><a href="https://www.wandouip.com/t5i72374/" target="_blank">&#x53EF;&#x6784;&#x9020;&#x6837;&#x5F0F;&#x8868;</a></p>
+<p><a href="https://www.zhangxinxu.com/wordpress/2012/05/getcomputedstyle-js-getpropertyvalue-currentstyle/" target="_blank">&#x83B7;&#x53D6;&#x5143;&#x7D20; CSS &#x503C;&#x4E4B; getComputedStyle &#x65B9;&#x6CD5;&#x719F;&#x6089;</a></p>
+<p><a href="http://javascript.ruanyifeng.com/dom/css.html" target="_blank">CSS &#x64CD;&#x4F5C;</a></p>
+<p><a href="https://github.com/ElemeFE/element/blob/dev/src/utils/dom.js" target="_blank">github.com/ElemeFE/ele&#x2026;</a></p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="获取屏幕宽度.html" class="navigation navigation-prev " aria-label="Previous page: 获取屏幕宽度">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="解决canvas在高清屏中模糊.html" class="navigation navigation-next " aria-label="Next page: 解决 canvas 在高清屏中模糊">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"学会使用 JavaScript 访问和修改 CSS 样式","level":"1.2.2","depth":2,"next":{"title":"解决 canvas 在高清屏中模糊","level":"1.2.3","depth":2,"path":"前端/解决canvas在高清屏中模糊.md","ref":"前端/解决canvas在高清屏中模糊.md","articles":[]},"previous":{"title":"获取屏幕宽度","level":"1.2.1","depth":2,"path":"前端/获取屏幕宽度.md","ref":"前端/获取屏幕宽度.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"前端/学会使用JavaScript访问和修改CSS样式.md","mtime":"2020-01-18T07:35:30.276Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-18T07:35:37.396Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

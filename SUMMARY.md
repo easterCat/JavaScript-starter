@@ -13,6 +13,8 @@
   - [类和对象](js基础/类和对象/readme.md)
   - [数据类型](js基础/数据类型/readme.md)
   - [js 事件机制](js基础/js事件机制/readme.md)
+- [vue](vue/vue路由与keep-alive.md)
+  - [vue 路由与 keep-alive](vue/vue路由与keep-alive.md)
 
 ## java 基础
 

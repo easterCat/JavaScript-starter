@@ -39,6 +39,7 @@
   - [泛型](Java基础/泛型.md)
 - [maven](maven/maven安装配置.md)
   - [maven 安装配置](maven/maven安装配置.md)
+  - [tomcat 安装配置](maven/tomcat安装配置.md)
 
 ## 数据结构与算法
 

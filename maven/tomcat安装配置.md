@@ -47,3 +47,15 @@ shutdown.sh // 关闭 tomcat
 <role rolename="admin-script"/>
 <user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-gui,admin-script"/>
 ```
+
+## 修改默认端口
+
+修改 conf/server.xml
+
+```xml
+<Connector port="8080" protocol="HTTP/1.1"
+               maxThreads="150" connectionTimeout="20000"
+               redirectPort="8443" />
+```
+
+将 8080 改为 8366

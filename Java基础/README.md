@@ -3,3 +3,4 @@
 - [50 道 Java 基础编程练习题](https://juejin.im/post/58a4276f61ff4b006c899609#heading-0)
 - [java 牛客网](https://www.nowcoder.com/courses/cover/vod/1002)
 - [java-liaoxuefeng](https://www.liaoxuefeng.com/wiki/1252599548343744)
+- [java-易百](https://www.yiibai.com/java/)

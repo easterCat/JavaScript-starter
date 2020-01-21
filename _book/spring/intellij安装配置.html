@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>tomcat 安装配置 · javascript-starter</title>
+        <title>intellij 安装配置 · javascript-starter</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -84,7 +84,7 @@
     <link rel="next" href="../Java数据结构与算法/" />
     
     
-    <link rel="prev" href="maven安装配置.html" />
+    <link rel="prev" href="tomcat安装配置.html" />
     
 
     </head>
@@ -606,7 +606,7 @@
                 <a href="maven安装配置.html">
             
                     
-                    maven
+                    spring
             
                 </a>
             
@@ -628,12 +628,25 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.2" data-path="tomcat安装配置.html">
+        <li class="chapter " data-level="2.2.2" data-path="tomcat安装配置.html">
             
                 <a href="tomcat安装配置.html">
             
                     
                     tomcat 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.3" data-path="intellij安装配置.html">
+            
+                <a href="intellij安装配置.html">
+            
+                    
+                    intellij 安装配置
             
                 </a>
             
@@ -889,7 +902,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >tomcat 安装配置</a>
+        <a href=".." >intellij 安装配置</a>
     </h1>
 </div>
 
@@ -904,44 +917,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x4E0B;&#x8F7D;"><b>1.1. </b>&#x4E0B;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x538B;&#x6587;&#x4EF6;"><b>1.2. </b>&#x89E3;&#x538B;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><b>1.3. </b>&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6743;&#x9650;"><b>1.4. </b>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6743;&#x9650;</a></li><li><span class="title-icon "></span><a href="#&#x542F;&#x52A8;-tomcat"><b>1.5. </b>&#x542F;&#x52A8; Tomcat</a></li><li><span class="title-icon "></span><a href="#&#x8BBE;&#x7F6E;&#x7BA1;&#x7406;&#x5458;&#x7684;&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;"><b>1.6. </b>&#x8BBE;&#x7F6E;&#x7BA1;&#x7406;&#x5458;&#x7684;&#x7528;&#x6237;&#x540D;/&#x5BC6;&#x7801;</a></li><li><span class="title-icon "></span><a href="#&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;"><b>1.7. </b>&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x4E0B;&#x8F7D;"><a name="&#x4E0B;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#&#x4E0B;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x4E0B;&#x8F7D;</h2>
-<p><a href="https://tomcat.apache.org/download-70.cgi" target="_blank">tomcat &#x4E0B;&#x8F7D;</a></p>
-<h2 id="&#x89E3;&#x538B;&#x6587;&#x4EF6;"><a name="&#x89E3;&#x538B;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x538B;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x89E3;&#x538B;&#x6587;&#x4EF6;</h2>
-<p>&#x590D;&#x5236;/usr/local &#x4E2D;,&#x6539;&#x540D;&#x4E3A; ApacheTomcat</p>
-<h2 id="&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><a name="&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
-<pre class="language-"><code>// &#x7F16;&#x8F91;
-vi ~/.bash_profile
-// &#x952E;&#x5165;&#x5185;&#x5BB9;
-# apache-tomcat
-export TOMCAT_HOME=/usr/local/ApacheTomcat
-export PATH=$PATH:$TOMCAT_HOME/bin
-// &#x91CD;&#x542F;
-source ~/.bash_profile
-</code></pre><h2 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6743;&#x9650;"><a name="&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6743;&#x9650;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6743;&#x9650;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6743;&#x9650;</h2>
-<pre class="language-"><code>cd /usr/local/ApacheTomcat/bin
-sudo chmod +x *.sh
-</code></pre><h2 id="&#x542F;&#x52A8;-tomcat"><a name="&#x542F;&#x52A8;-tomcat" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x52A8;-tomcat"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x542F;&#x52A8; Tomcat</h2>
-<pre class="language-"><code>startup.sh // &#x542F;&#x52A8; tomcat
-// &#x6267;&#x884C;&#x540E;&#x5373;&#x53EF;&#x8BBF;&#x95EE; http://localhost:8080/
-shutdown.sh // &#x5173;&#x95ED; tomcat
-</code></pre><h2 id="&#x8BBE;&#x7F6E;&#x7BA1;&#x7406;&#x5458;&#x7684;&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;"><a name="&#x8BBE;&#x7F6E;&#x7BA1;&#x7406;&#x5458;&#x7684;&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x7F6E;&#x7BA1;&#x7406;&#x5458;&#x7684;&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x8BBE;&#x7F6E;&#x7BA1;&#x7406;&#x5458;&#x7684;&#x7528;&#x6237;&#x540D;/&#x5BC6;&#x7801;</h2>
-<p>&#x4FEE;&#x6539; conf/tomcat-users.xml</p>
-<pre class="language-"><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>role</span> <span class="token attr-name">rolename</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>manager-gui<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>role</span> <span class="token attr-name">rolename</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>manager-script<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>role</span> <span class="token attr-name">rolename</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>manager-jmx<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>role</span> <span class="token attr-name">rolename</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>manager-status<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>role</span> <span class="token attr-name">rolename</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>admin-gui<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>role</span> <span class="token attr-name">rolename</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>admin-script<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>user</span> <span class="token attr-name">username</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>admin<span class="token punctuation">&quot;</span></span> <span class="token attr-name">password</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>admin<span class="token punctuation">&quot;</span></span> <span class="token attr-name">roles</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>manager-gui,manager-script,manager-jmx,manager-status,admin-gui,admin-script<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
-</code></pre>
-<h2 id="&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;"><a name="&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;</h2>
-<p>&#x4FEE;&#x6539; conf/server.xml</p>
-<pre class="language-"><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Connector</span> <span class="token attr-name">port</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>8080<span class="token punctuation">&quot;</span></span> <span class="token attr-name">protocol</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>HTTP/1.1<span class="token punctuation">&quot;</span></span>
-               <span class="token attr-name">maxThreads</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>150<span class="token punctuation">&quot;</span></span> <span class="token attr-name">connectionTimeout</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>20000<span class="token punctuation">&quot;</span></span>
-               <span class="token attr-name">redirectPort</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>8443<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
-</code></pre>
-<p>&#x5C06; 8080 &#x6539;&#x4E3A; 8366</p>
-</body></html>
+                                <html><head></head><body></body></html>
                                 
                                 </section>
                             
@@ -968,7 +944,7 @@ shutdown.sh // &#x5173;&#x95ED; tomcat
 
             
                 
-                <a href="maven安装配置.html" class="navigation navigation-prev " aria-label="Previous page: maven 安装配置">
+                <a href="tomcat安装配置.html" class="navigation navigation-prev " aria-label="Previous page: tomcat 安装配置">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -984,7 +960,7 @@ shutdown.sh // &#x5173;&#x95ED; tomcat
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"tomcat 安装配置","level":"2.2.2","depth":2,"next":{"title":"Java 数据结构与算法","level":"3.1","depth":1,"path":"Java数据结构与算法/README.md","ref":"Java数据结构与算法/README.md","articles":[{"title":"线性表(数组,队列,栈,链表)","level":"3.1.1","depth":2,"path":"Java数据结构与算法/线性表.md","ref":"Java数据结构与算法/线性表.md","articles":[]},{"title":"Java 排序算法","level":"3.1.2","depth":2,"path":"Java数据结构与算法/Java排序算法.md","ref":"Java数据结构与算法/Java排序算法.md","articles":[]}]},"previous":{"title":"maven 安装配置","level":"2.2.1","depth":2,"path":"maven/maven安装配置.md","ref":"maven/maven安装配置.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"maven/tomcat安装配置.md","mtime":"2020-01-20T09:09:47.272Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-21T08:04:55.045Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"intellij 安装配置","level":"2.2.3","depth":2,"next":{"title":"Java 数据结构与算法","level":"3.1","depth":1,"path":"Java数据结构与算法/README.md","ref":"Java数据结构与算法/README.md","articles":[{"title":"线性表(数组,队列,栈,链表)","level":"3.1.1","depth":2,"path":"Java数据结构与算法/线性表.md","ref":"Java数据结构与算法/线性表.md","articles":[]},{"title":"Java 排序算法","level":"3.1.2","depth":2,"path":"Java数据结构与算法/Java排序算法.md","ref":"Java数据结构与算法/Java排序算法.md","articles":[]}]},"previous":{"title":"tomcat 安装配置","level":"2.2.2","depth":2,"path":"spring/tomcat安装配置.md","ref":"spring/tomcat安装配置.md","articles":[]},"dir":"neutral"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"spring/intellij安装配置.md","mtime":"2020-01-21T12:56:55.099Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-21T12:57:41.835Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

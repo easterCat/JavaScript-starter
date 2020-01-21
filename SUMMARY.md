@@ -37,9 +37,10 @@
   - [List](Java基础/list.md)
   - [多线程编程](Java基础/多线程编程.md)
   - [泛型](Java基础/泛型.md)
-- [maven](maven/maven安装配置.md)
-  - [maven 安装配置](maven/maven安装配置.md)
-  - [tomcat 安装配置](maven/tomcat安装配置.md)
+- [spring](spring/maven安装配置.md)
+  - [maven 安装配置](spring/maven安装配置.md)
+  - [tomcat 安装配置](spring/tomcat安装配置.md)
+  - [intellij 安装配置](spring/intellij安装配置.md)
 
 ## 数据结构与算法
 

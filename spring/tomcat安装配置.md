@@ -1,3 +1,9 @@
+## tomcat
+
+- 作为 web 开发人员,开发完的网页肯定是想通过 ip 或域名在浏览器上访问.
+- 用户使用浏览器访问网页就是发送 http 请求,web 服务器响应请求的过程.所以解析 http 的工作就交给 web 服务器了.
+- web 服务器有很多,tomcat 是一款小巧灵活并使用最多的 Web 应用服务器
+
 ## 下载
 
 [tomcat 下载](https://tomcat.apache.org/download-70.cgi)

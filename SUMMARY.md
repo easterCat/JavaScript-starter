@@ -15,6 +15,11 @@
   - [js 事件机制](js基础/js事件机制/readme.md)
 - [vue](vue/vue路由与keep-alive.md)
   - [vue 路由与 keep-alive](vue/vue路由与keep-alive.md)
+  - [vue.use 的使用](vue/vue.use的使用.md)
+  - [vue 的基础](vue/vue的基础.md)
+  - [vue 的基础 2](vue/vue的基础2.md)
+  - [vue 的基础 3](vue/vue的基础3.md)
+  - [vue 的基础 4](vue/vue的基础4.md)
 
 ## java 基础
 

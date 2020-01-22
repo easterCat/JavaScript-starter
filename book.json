@@ -12,6 +12,7 @@
     "copy-code-button",
     "anchor-navigation-ex",
     "prism",
+    "pageview-count",
     "-highlight"
   ],
   "pluginsConfig": {
@@ -24,6 +25,6 @@
     }
   },
   "styles": {
-    "mycss": "./mycss.css"
+    "website": "styles/website.css"
   }
 }

@@ -22,5 +22,8 @@
     "prism": {
       "css": ["prismjs/themes/prism-okaidia.css"]
     }
+  },
+  "styles": {
+    "mycss": "./mycss.css"
   }
 }

@@ -6,6 +6,8 @@
   - [解决 canvas 在高清屏中模糊](前端/解决canvas在高清屏中模糊.md)
   - [js 二进制数据互转](前端/js二进制数据互转.md)
   - [单元测试](前端/单元测试/readme.md)
+  - [http 响应码](前端/网络/http响应码.md)
+  - [http 预览导图](前端/网络/http预览导图.md)
 - [js 基础](js基础/词法作用域/readme.md)
   - [词法作用域](js基础/词法作用域/readme.md)
   - [内存分配](js基础/内存分配/readme.md)

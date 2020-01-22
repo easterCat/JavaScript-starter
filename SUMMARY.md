@@ -49,6 +49,8 @@
   - [tomcat 安装配置](spring/tomcat安装配置.md)
   - [intellij 安装配置](spring/intellij安装配置.md)
   - [reids 安装配置](spring/reids安装配置.md)
+  - [Elasticsearch 安装配置](spring/Elasticsearch安装配置.md)
+  - [spring 创建 helloworld](spring/spring创建helloworld.md)
 
 ## 数据结构与算法
 

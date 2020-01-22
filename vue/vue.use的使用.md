@@ -23,6 +23,38 @@ import Router from "vue-router";
 Vue.use(Router);
 ```
 
+我们需要自定义一些组件方法放入其他文件,就定义 install:
+
+对象方式:
+
+```js
+const MyFilter = {
+  install: Vue => {
+    // 默认过滤函数,数据不存在或者为空时显示'-'
+    Vue.filter("filterValue", function(value) {
+      if (!val || val === "") return "-";
+      return val;
+    });
+  }
+};
+
+export default MyFilter;
+```
+
+函数方式:
+
+```js
+const install = Vue => {
+  // 默认过滤函数,数据不存在或者为空时显示'-'
+  Vue.filter("filterValue", function(value) {
+    if (!val || val === "") return "-";
+    return val;
+  });
+};
+
+export default install;
+```
+
 使用了 vue.use()注册插件之后就可以在所有的 vue 文件中使用路由：`this.$route`
 
 ## vue.use()源码

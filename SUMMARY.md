@@ -48,6 +48,7 @@
   - [maven 安装配置](spring/maven安装配置.md)
   - [tomcat 安装配置](spring/tomcat安装配置.md)
   - [intellij 安装配置](spring/intellij安装配置.md)
+  - [reids 安装配置](spring/reids安装配置.md)
 
 ## 数据结构与算法
 

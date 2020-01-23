@@ -1,0 +1,1268 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>nodejs 文件路径 · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Java基础/" />
+    
+    
+    <link rel="prev" href="node实现静态文件服务器.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    前端基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                <a href="../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                    
+                    学会使用 JavaScript 访问和修改 CSS 样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../前端/解决canvas在高清屏中模糊.html">
+            
+                <a href="../前端/解决canvas在高清屏中模糊.html">
+            
+                    
+                    解决 canvas 在高清屏中模糊
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../前端/js二进制数据互转.html">
+            
+                <a href="../前端/js二进制数据互转.html">
+            
+                    
+                    js 二进制数据互转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../前端/单元测试/readme.html">
+            
+                <a href="../前端/单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../前端/网络/http响应码.html">
+            
+                <a href="../前端/网络/http响应码.html">
+            
+                    
+                    http 响应码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../前端/网络/http预览导图.html">
+            
+                <a href="../前端/网络/http预览导图.html">
+            
+                    
+                    http 预览导图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    js 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../js基础/内存分配/readme.html">
+            
+                <a href="../js基础/内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../js基础/浏览器工作原理/readme.html">
+            
+                <a href="../js基础/浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../js基础/类和对象/readme.html">
+            
+                <a href="../js基础/类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../js基础/数据类型/readme.html">
+            
+                <a href="../js基础/数据类型/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../js基础/js事件机制/readme.html">
+            
+                <a href="../js基础/js事件机制/readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../vue/vue路由与keep-alive.html">
+            
+                <a href="../vue/vue路由与keep-alive.html">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue/vue路由与keep-alive.html">
+            
+                <a href="../vue/vue路由与keep-alive.html">
+            
+                    
+                    vue 路由与 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../vue/vue.use的使用.html">
+            
+                <a href="../vue/vue.use的使用.html">
+            
+                    
+                    vue.use 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../vue/vue的基础.html">
+            
+                <a href="../vue/vue的基础.html">
+            
+                    
+                    vue 的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../vue/vue的基础2.html">
+            
+                <a href="../vue/vue的基础2.html">
+            
+                    
+                    vue 的基础 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../vue/vue的基础3.html">
+            
+                <a href="../vue/vue的基础3.html">
+            
+                    
+                    vue 的基础 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../vue/vue的基础4.html">
+            
+                <a href="../vue/vue的基础4.html">
+            
+                    
+                    vue 的基础 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="node写个helloworld.html">
+            
+                <a href="node写个helloworld.html">
+            
+                    
+                    nodejs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="node写个helloworld.html">
+            
+                <a href="node写个helloworld.html">
+            
+                    
+                    node 写个 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="node的fs模块.html">
+            
+                <a href="node的fs模块.html">
+            
+                    
+                    node 的 fs 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="用node写个爬虫.html">
+            
+                <a href="用node写个爬虫.html">
+            
+                    
+                    用 node 写个爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="node实现静态文件服务器.html">
+            
+                <a href="node实现静态文件服务器.html">
+            
+                    
+                    node 实现静态文件服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5" data-path="nodejs文件路径.html">
+            
+                <a href="nodejs文件路径.html">
+            
+                    
+                    nodejs 文件路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">java 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Java基础/">
+            
+                <a href="../Java基础/">
+            
+                    
+                    java 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Java基础/变量的类型.html">
+            
+                <a href="../Java基础/变量的类型.html">
+            
+                    
+                    变量的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Java基础/基本数据类型.html">
+            
+                <a href="../Java基础/基本数据类型.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Java基础/修饰符.html">
+            
+                <a href="../Java基础/修饰符.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Java基础/运算符.html">
+            
+                <a href="../Java基础/运算符.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Java基础/条件语句.html">
+            
+                <a href="../Java基础/条件语句.html">
+            
+                    
+                    条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Java基础/循环结构.html">
+            
+                <a href="../Java基础/循环结构.html">
+            
+                    
+                    循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Java基础/switch语句.html">
+            
+                <a href="../Java基础/switch语句.html">
+            
+                    
+                    switch 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Java基础/数组.html">
+            
+                <a href="../Java基础/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../Java基础/字符串.html">
+            
+                <a href="../Java基础/字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../Java基础/Character类.html">
+            
+                <a href="../Java基础/Character类.html">
+            
+                    
+                    Character 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../Java基础/正则表达式.html">
+            
+                <a href="../Java基础/正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../Java基础/流,文件和IO.html">
+            
+                <a href="../Java基础/流,文件和IO.html">
+            
+                    
+                    流,文件和 IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                <a href="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                    
+                    StringBuffer 和 StringBuilder 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="../Java基础/Collection.html">
+            
+                <a href="../Java基础/Collection.html">
+            
+                    
+                    Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.15" data-path="../Java基础/map.html">
+            
+                <a href="../Java基础/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="../Java基础/list.html">
+            
+                <a href="../Java基础/list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" data-path="../Java基础/多线程编程.html">
+            
+                <a href="../Java基础/多线程编程.html">
+            
+                    
+                    多线程编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.18" data-path="../Java基础/泛型.html">
+            
+                <a href="../Java基础/泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    maven 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../spring/tomcat安装配置.html">
+            
+                <a href="../spring/tomcat安装配置.html">
+            
+                    
+                    tomcat 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../spring/intellij安装配置.html">
+            
+                <a href="../spring/intellij安装配置.html">
+            
+                    
+                    intellij 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../spring/reids安装配置.html">
+            
+                <a href="../spring/reids安装配置.html">
+            
+                    
+                    reids 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../spring/Elasticsearch安装配置.html">
+            
+                <a href="../spring/Elasticsearch安装配置.html">
+            
+                    
+                    Elasticsearch 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../spring/spring创建helloworld.html">
+            
+                <a href="../spring/spring创建helloworld.html">
+            
+                    
+                    spring 创建 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构与算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Java数据结构与算法/">
+            
+                <a href="../Java数据结构与算法/">
+            
+                    
+                    Java 数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../Java数据结构与算法/线性表.html">
+            
+                <a href="../Java数据结构与算法/线性表.html">
+            
+                    
+                    线性表(数组,队列,栈,链表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../Java数据结构与算法/Java排序算法.html">
+            
+                <a href="../Java数据结构与算法/Java排序算法.html">
+            
+                    
+                    Java 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Java练习题/">
+            
+                <a href="../Java练习题/">
+            
+                    
+                    Java 练习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../Java练习题/指定范围包含的素数.html">
+            
+                <a href="../Java练习题/指定范围包含的素数.html">
+            
+                    
+                    指定范围包含的素数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../Java练习题/公约数和公倍数.html">
+            
+                <a href="../Java练习题/公约数和公倍数.html">
+            
+                    
+                    公约数和公倍数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    leetcode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    scripto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../scripto/中间件模式.html">
+            
+                <a href="../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../scripto/m长度的都是n的数组.html">
+            
+                <a href="../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >nodejs 文件路径</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#node-&#x4E2D;&#x7684;&#x8DEF;&#x5F84;&#x5206;&#x7C7B;"><b>1.1. </b>node &#x4E2D;&#x7684;&#x8DEF;&#x5F84;&#x5206;&#x7C7B;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="node-&#x4E2D;&#x7684;&#x8DEF;&#x5F84;&#x5206;&#x7C7B;"><a name="node-&#x4E2D;&#x7684;&#x8DEF;&#x5F84;&#x5206;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#node-&#x4E2D;&#x7684;&#x8DEF;&#x5F84;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. node &#x4E2D;&#x7684;&#x8DEF;&#x5F84;&#x5206;&#x7C7B;</h2>
+<p>node &#x4E2D;&#x7684;&#x8DEF;&#x5F84;&#x5927;&#x81F4;&#x5206; 5 &#x7C7B;&#xFF0C;dirname,filename,process.cwd(),./,../,&#x5176;&#x4E2D;&#x524D;&#x4E09;&#x4E2A;&#x90FD;&#x662F;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</p>
+<pre class="language-"><code class="lang-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>__filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span><span class="token function">cwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&quot;./&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4F7F;&#x7528; node &#x4E0B;&#x8FD0;&#x884C; src/task.js</p>
+<pre class="language-"><code>/Users/mac/Porjects/demo/src
+/Users/mac/Porjects/demo/src/task.js
+/Users/mac/Porjects/demo/src
+/Users/mac/Porjects/demo/src
+</code></pre><p>&#x5F97;&#x5230;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#xFF1A;</p>
+<ul>
+<li>**dirname &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x6267;&#x884C;&#x7684; JavaScript &#x6587;&#x4EF6;&#x3002;</li>
+<li>**filename &#x4E0E;__dirname &#x4E00;&#x6837;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x6267;&#x884C;&#x7684;&#x76EE;&#x6807; JavaScript &#x6587;&#x4EF6;&#x3002;</li>
+<li>process.cwd()&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x9879;&#x76EE;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8FD0;&#x884C;&#x7684; JavaScript &#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x5B98;&#x65B9;&#x89E3;&#x91CA;&#x3002;</li>
+<li>path.resolve(&apos;./&apos;)&#x8C03;&#x7528;&#x540C; process.cwd()&#xFF0C;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x4E00;&#x7CFB;&#x5217;&#x8DEF;&#x5F84;&#x64CD;&#x4F5C;&#x540E;&#x8FD4;&#x56DE;&#x6700;&#x7EC8;&#x8DEF;&#x5F84;&#xFF0C;&#x5B98;&#x65B9;&#x8BF4;&#x660E;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<p>path.resolve(&apos;foo/bar&apos;, &apos;/tmp/file/&apos;, &apos;..&apos;, &apos;a/../subfile&apos;)</p>
+<p>&#x76F8;&#x5F53;&#x4E8E;&#xFF1A;</p>
+<pre class="language-"><code>cd foo/bar
+cd /tmp/file/
+cd ..
+cd a/../subfile
+pwd
+</code></pre><p>&#x533A;&#x522B;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x8DEF;&#x5F84;&#x53EF;&#x4EE5;&#x662F;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x4E0D;&#x5B58;&#x5728;&#x3002;</p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="node实现静态文件服务器.html" class="navigation navigation-prev " aria-label="Previous page: node 实现静态文件服务器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Java基础/" class="navigation navigation-next " aria-label="Next page: java 基础">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"nodejs 文件路径","level":"1.5.5","depth":2,"next":{"title":"java 基础","level":"2.1","depth":1,"path":"Java基础/README.md","ref":"Java基础/README.md","articles":[{"title":"变量的类型","level":"2.1.1","depth":2,"path":"Java基础/变量的类型.md","ref":"Java基础/变量的类型.md","articles":[]},{"title":"基本数据类型","level":"2.1.2","depth":2,"path":"Java基础/基本数据类型.md","ref":"Java基础/基本数据类型.md","articles":[]},{"title":"修饰符","level":"2.1.3","depth":2,"path":"Java基础/修饰符.md","ref":"Java基础/修饰符.md","articles":[]},{"title":"运算符","level":"2.1.4","depth":2,"path":"Java基础/运算符.md","ref":"Java基础/运算符.md","articles":[]},{"title":"条件语句","level":"2.1.5","depth":2,"path":"Java基础/条件语句.md","ref":"Java基础/条件语句.md","articles":[]},{"title":"循环结构","level":"2.1.6","depth":2,"path":"Java基础/循环结构.md","ref":"Java基础/循环结构.md","articles":[]},{"title":"switch 语句","level":"2.1.7","depth":2,"path":"Java基础/switch语句.md","ref":"Java基础/switch语句.md","articles":[]},{"title":"数组","level":"2.1.8","depth":2,"path":"Java基础/数组.md","ref":"Java基础/数组.md","articles":[]},{"title":"字符串","level":"2.1.9","depth":2,"path":"Java基础/字符串.md","ref":"Java基础/字符串.md","articles":[]},{"title":"Character 类","level":"2.1.10","depth":2,"path":"Java基础/Character类.md","ref":"Java基础/Character类.md","articles":[]},{"title":"正则表达式","level":"2.1.11","depth":2,"path":"Java基础/正则表达式.md","ref":"Java基础/正则表达式.md","articles":[]},{"title":"流,文件和 IO","level":"2.1.12","depth":2,"path":"Java基础/流,文件和IO.md","ref":"Java基础/流,文件和IO.md","articles":[]},{"title":"StringBuffer 和 StringBuilder 类","level":"2.1.13","depth":2,"path":"Java基础/StringBuffer和StringBuilder类.md","ref":"Java基础/StringBuffer和StringBuilder类.md","articles":[]},{"title":"Collection","level":"2.1.14","depth":2,"path":"Java基础/Collection.md","ref":"Java基础/Collection.md","articles":[]},{"title":"Map","level":"2.1.15","depth":2,"path":"Java基础/map.md","ref":"Java基础/map.md","articles":[]},{"title":"List","level":"2.1.16","depth":2,"path":"Java基础/list.md","ref":"Java基础/list.md","articles":[]},{"title":"多线程编程","level":"2.1.17","depth":2,"path":"Java基础/多线程编程.md","ref":"Java基础/多线程编程.md","articles":[]},{"title":"泛型","level":"2.1.18","depth":2,"path":"Java基础/泛型.md","ref":"Java基础/泛型.md","articles":[]}]},"previous":{"title":"node 实现静态文件服务器","level":"1.5.4","depth":2,"path":"nodejs/node实现静态文件服务器.md","ref":"nodejs/node实现静态文件服务器.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"nodejs/nodejs文件路径.md","mtime":"2020-01-23T03:28:12.755Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-23T03:31:07.057Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

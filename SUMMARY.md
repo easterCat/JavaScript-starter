@@ -22,6 +22,12 @@
   - [vue 的基础 2](vue/vue的基础2.md)
   - [vue 的基础 3](vue/vue的基础3.md)
   - [vue 的基础 4](vue/vue的基础4.md)
+- [nodejs](nodejs/node写个helloworld.md)
+  - [node 写个 helloworld](nodejs/node写个helloworld.md)
+  - [node 的 fs 模块](nodejs/node的fs模块.md)
+  - [用 node 写个爬虫](nodejs/用node写个爬虫.md)
+  - [node 实现静态文件服务器](nodejs/node实现静态文件服务器.md)
+  - [nodejs 文件路径](nodejs/nodejs文件路径.md)
 
 ## java 基础
 

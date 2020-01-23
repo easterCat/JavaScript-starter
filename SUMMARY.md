@@ -24,6 +24,7 @@
   - [vue 的基础 4](vue/vue的基础4.md)
 - [nodejs](nodejs/node写个helloworld.md)
   - [reids 安装配置](nodejs/reids安装配置.md)
+  - [mysql 安装配置](nodejs/mysql安装配置.md)
   - [Elasticsearch 安装配置](nodejs/Elasticsearch安装配置.md)
   - [node 写个 helloworld](nodejs/node写个helloworld.md)
   - [node 的 fs 模块](nodejs/node的fs模块.md)

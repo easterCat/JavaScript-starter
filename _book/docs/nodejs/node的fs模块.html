@@ -1,0 +1,1580 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>node 的 fs 模块 · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="用node写个爬虫.html" />
+    
+    
+    <link rel="prev" href="node写个helloworld.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    前端基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                <a href="../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                    
+                    学会使用 JavaScript 访问和修改 CSS 样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../前端/解决canvas在高清屏中模糊.html">
+            
+                <a href="../前端/解决canvas在高清屏中模糊.html">
+            
+                    
+                    解决 canvas 在高清屏中模糊
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../前端/js二进制数据互转.html">
+            
+                <a href="../前端/js二进制数据互转.html">
+            
+                    
+                    js 二进制数据互转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../前端/单元测试/readme.html">
+            
+                <a href="../前端/单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../前端/网络/http响应码.html">
+            
+                <a href="../前端/网络/http响应码.html">
+            
+                    
+                    http 响应码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../前端/网络/http预览导图.html">
+            
+                <a href="../前端/网络/http预览导图.html">
+            
+                    
+                    http 预览导图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    js 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../js基础/内存分配/readme.html">
+            
+                <a href="../js基础/内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../js基础/浏览器工作原理/readme.html">
+            
+                <a href="../js基础/浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../js基础/类和对象/readme.html">
+            
+                <a href="../js基础/类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../js基础/数据类型/readme.html">
+            
+                <a href="../js基础/数据类型/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../js基础/js事件机制/readme.html">
+            
+                <a href="../js基础/js事件机制/readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../vue/vue路由与keep-alive.html">
+            
+                <a href="../vue/vue路由与keep-alive.html">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue/vue路由与keep-alive.html">
+            
+                <a href="../vue/vue路由与keep-alive.html">
+            
+                    
+                    vue 路由与 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../vue/vue.use的使用.html">
+            
+                <a href="../vue/vue.use的使用.html">
+            
+                    
+                    vue.use 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../vue/vue的基础.html">
+            
+                <a href="../vue/vue的基础.html">
+            
+                    
+                    vue 的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../vue/vue的基础2.html">
+            
+                <a href="../vue/vue的基础2.html">
+            
+                    
+                    vue 的基础 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../vue/vue的基础3.html">
+            
+                <a href="../vue/vue的基础3.html">
+            
+                    
+                    vue 的基础 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../vue/vue的基础4.html">
+            
+                <a href="../vue/vue的基础4.html">
+            
+                    
+                    vue 的基础 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="node写个helloworld.html">
+            
+                <a href="node写个helloworld.html">
+            
+                    
+                    nodejs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="node写个helloworld.html">
+            
+                <a href="node写个helloworld.html">
+            
+                    
+                    node 写个 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="node的fs模块.html">
+            
+                <a href="node的fs模块.html">
+            
+                    
+                    node 的 fs 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="用node写个爬虫.html">
+            
+                <a href="用node写个爬虫.html">
+            
+                    
+                    用 node 写个爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="node实现静态文件服务器.html">
+            
+                <a href="node实现静态文件服务器.html">
+            
+                    
+                    node 实现静态文件服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="nodejs文件路径.html">
+            
+                <a href="nodejs文件路径.html">
+            
+                    
+                    nodejs 文件路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">java 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Java基础/">
+            
+                <a href="../Java基础/">
+            
+                    
+                    java 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Java基础/变量的类型.html">
+            
+                <a href="../Java基础/变量的类型.html">
+            
+                    
+                    变量的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Java基础/基本数据类型.html">
+            
+                <a href="../Java基础/基本数据类型.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Java基础/修饰符.html">
+            
+                <a href="../Java基础/修饰符.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Java基础/运算符.html">
+            
+                <a href="../Java基础/运算符.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Java基础/条件语句.html">
+            
+                <a href="../Java基础/条件语句.html">
+            
+                    
+                    条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Java基础/循环结构.html">
+            
+                <a href="../Java基础/循环结构.html">
+            
+                    
+                    循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Java基础/switch语句.html">
+            
+                <a href="../Java基础/switch语句.html">
+            
+                    
+                    switch 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Java基础/数组.html">
+            
+                <a href="../Java基础/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../Java基础/字符串.html">
+            
+                <a href="../Java基础/字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../Java基础/Character类.html">
+            
+                <a href="../Java基础/Character类.html">
+            
+                    
+                    Character 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../Java基础/正则表达式.html">
+            
+                <a href="../Java基础/正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../Java基础/流,文件和IO.html">
+            
+                <a href="../Java基础/流,文件和IO.html">
+            
+                    
+                    流,文件和 IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                <a href="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                    
+                    StringBuffer 和 StringBuilder 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="../Java基础/Collection.html">
+            
+                <a href="../Java基础/Collection.html">
+            
+                    
+                    Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.15" data-path="../Java基础/map.html">
+            
+                <a href="../Java基础/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="../Java基础/list.html">
+            
+                <a href="../Java基础/list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" data-path="../Java基础/多线程编程.html">
+            
+                <a href="../Java基础/多线程编程.html">
+            
+                    
+                    多线程编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.18" data-path="../Java基础/泛型.html">
+            
+                <a href="../Java基础/泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    maven 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../spring/tomcat安装配置.html">
+            
+                <a href="../spring/tomcat安装配置.html">
+            
+                    
+                    tomcat 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../spring/intellij安装配置.html">
+            
+                <a href="../spring/intellij安装配置.html">
+            
+                    
+                    intellij 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../spring/reids安装配置.html">
+            
+                <a href="../spring/reids安装配置.html">
+            
+                    
+                    reids 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../spring/Elasticsearch安装配置.html">
+            
+                <a href="../spring/Elasticsearch安装配置.html">
+            
+                    
+                    Elasticsearch 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../spring/spring创建helloworld.html">
+            
+                <a href="../spring/spring创建helloworld.html">
+            
+                    
+                    spring 创建 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构与算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Java数据结构与算法/">
+            
+                <a href="../Java数据结构与算法/">
+            
+                    
+                    Java 数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../Java数据结构与算法/线性表.html">
+            
+                <a href="../Java数据结构与算法/线性表.html">
+            
+                    
+                    线性表(数组,队列,栈,链表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../Java数据结构与算法/Java排序算法.html">
+            
+                <a href="../Java数据结构与算法/Java排序算法.html">
+            
+                    
+                    Java 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Java练习题/">
+            
+                <a href="../Java练习题/">
+            
+                    
+                    Java 练习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../Java练习题/指定范围包含的素数.html">
+            
+                <a href="../Java练习题/指定范围包含的素数.html">
+            
+                    
+                    指定范围包含的素数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../Java练习题/公约数和公倍数.html">
+            
+                <a href="../Java练习题/公约数和公倍数.html">
+            
+                    
+                    公约数和公倍数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    leetcode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    scripto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../scripto/中间件模式.html">
+            
+                <a href="../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../scripto/m长度的都是n的数组.html">
+            
+                <a href="../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >node 的 fs 模块</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#fs-&#x6A21;&#x5757;"><b>1.1. </b>fs &#x6A21;&#x5757;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><b>1.1.1. </b>&#x5E38;&#x7528;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#form-&#x4FE1;&#x606F;&#x521B;&#x5EFA;&#x6587;&#x4EF6;"><b>1.1.2. </b>form &#x4FE1;&#x606F;&#x521B;&#x5EFA;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x8FFD;&#x52A0;&#x5185;&#x5BB9;-appendfile-&#x548C;-appendfilesync"><b>1.1.3. </b>&#x8FFD;&#x52A0;&#x5185;&#x5BB9; appendFile &#x548C; appendFileSync</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x6587;&#x4EF6;-fsunlink-&#x548C;-fsunlinksync"><b>1.1.4. </b>&#x5220;&#x9664;&#x6587;&#x4EF6; fs.unlink &#x548C; fs.unlinkSync</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;-fsrename"><b>1.1.5. </b>&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D; fs.rename()</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;-mkdirrmdirreaddir"><b>1.1.6. </b>&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C; mkdir,rmdir,readdir</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;-readdir"><b>1.1.7. </b>&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C; readdir</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;-rmdir"><b>1.1.8. </b>&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C; rmdir</a></li></ul><li><span class="title-icon "></span><a href="#docs"><b>1.2. </b>Docs</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="fs-&#x6A21;&#x5757;"><a name="fs-&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#fs-&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. fs &#x6A21;&#x5757;</h2>
+<p>Node.js &#x63D0;&#x4F9B;&#x4E00;&#x7EC4;&#x7C7B;&#x4F3C; UNIX&#xFF08;POSIX&#xFF09;&#x6807;&#x51C6;&#x7684;&#x6587;&#x4EF6;&#x64CD;&#x4F5C; API&#x3002; Node &#x5BFC;&#x5165;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6A21;&#x5757;(fs)&#x3002;Node.js &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF08;fs &#x6A21;&#x5757;&#xFF09;&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x5747;&#x6709;&#x5F02;&#x6B65;&#x548C;&#x540C;&#x6B65;&#x7248;&#x672C;&#xFF0C;&#x4F8B;&#x5982;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x7684;&#x51FD;&#x6570;&#x6709;&#x5F02;&#x6B65;&#x7684; fs.readFile() &#x548C;&#x540C;&#x6B65;&#x7684; fs.readFileSync()&#x3002;&#x5F02;&#x6B65;&#x7684;&#x65B9;&#x6CD5;&#x51FD;&#x6570;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5305;&#x542B;&#x4E86;&#x9519;&#x8BEF;&#x4FE1;&#x606F;(error)&#x3002;&#x6700;&#x597D;&#x4F7F;&#x7528;&#x5F02;&#x6B65;&#x65B9;&#x6CD5;&#xFF0C;&#x6BD4;&#x8D77;&#x540C;&#x6B65;&#xFF0C;&#x5F02;&#x6B65;&#x65B9;&#x6CD5;&#x6027;&#x80FD;&#x66F4;&#x9AD8;&#xFF0C;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;&#xFF0C;&#x800C;&#x4E14;&#x6CA1;&#x6709;&#x963B;&#x585E;(&#x91CD;&#x70B9;)&#x3002;&#x5BF9;&#x4E8E;&#x6D41;&#x91CF;&#x8F83;&#x5927;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6700;&#x597D;&#x8FD8;&#x662F;&#x91C7;&#x7528;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#xFF0C;&#x540C;&#x6B65;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x53EA;&#x6709;&#x524D;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x7ED3;&#x675F;&#xFF0C;&#x624D;&#x4F1A;&#x5F00;&#x59CB;&#x540E;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x64CD;&#x4F5C;&#x7279;&#x522B;&#x8017;&#x65F6;&#xFF08;&#x5E38;&#x5E38;&#x53D1;&#x751F;&#x5728;&#x8BFB;&#x5199;&#x6570;&#x636E;&#x65F6;&#xFF09;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x505C;&#x987F;</p>
+<h3 id="&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><a name="&#x5E38;&#x7528;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x5E38;&#x7528;&#x65B9;&#x6CD5;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x64CD;&#x4F5C;</th>
+<th>&#x5F02;&#x6B65;&#x65B9;&#x6CD5;</th>
+<th>&#x540C;&#x6B65;&#x65B9;&#x6CD5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x6253;&#x5F00;&#x6587;&#x4EF6;</td>
+<td>fs.open(path, flags[, mode], callback)</td>
+<td>fs.openSync(path, flags[, mode])</td>
+</tr>
+<tr>
+<td>&#x6587;&#x4EF6;&#x4FE1;&#x606F;</td>
+<td>fs.stat(path[, options], callback)</td>
+<td>fs.statSync(path[, options])</td>
+</tr>
+<tr>
+<td>&#x65B0;&#x5EFA;&#x6587;&#x4EF6;</td>
+<td>fs.appendFile(path, data[, options], callback)</td>
+<td>fs.appendFileSync(path, data[, options])</td>
+</tr>
+<tr>
+<td>&#x5199;&#x5165;&#x6587;&#x4EF6;</td>
+<td>fs.writeFile(file, data[, options], callback)</td>
+<td>fs.writeFileSync(file, data[, options])</td>
+</tr>
+<tr>
+<td>&#x8BFB;&#x53D6;&#x6587;&#x4EF6;</td>
+<td>fs.read()</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x8BFB;&#x53D6;&#x6587;&#x4EF6;</td>
+<td>fs.readFile(path[, options], callback)</td>
+<td>fs.readFileSync(path[, options])</td>
+</tr>
+<tr>
+<td>&#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;</td>
+<td>fs.rename(oldPath, newPath, callback)</td>
+<td>fs.renameSync(oldPath, newPath)</td>
+</tr>
+<tr>
+<td>&#x5173;&#x95ED;&#x6587;&#x4EF6;</td>
+<td>fs.close(fd, callback)</td>
+<td>fs.closeSync(fd)</td>
+</tr>
+<tr>
+<td>&#x622A;&#x53D6;&#x6587;&#x4EF6;</td>
+<td>fs.ftruncate(fd[, len], callback)</td>
+<td>fs.ftruncateSync(fd[, len])</td>
+</tr>
+<tr>
+<td>&#x5220;&#x9664;&#x6587;&#x4EF6;</td>
+<td>fs.unlink(path, callback)</td>
+<td>fs.unlinkSync(path)</td>
+</tr>
+<tr>
+<td>&#x6587;&#x4EF6;&#x5B58;&#x5728;</td>
+<td>fs.stat() / fs.access()</td>
+<td>fs.existsSync(path)</td>
+</tr>
+<tr>
+<td>&#x76D1;&#x542C;&#x6587;&#x4EF6;</td>
+<td>fs.watchFile(filename[, options], listener)</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x505C;&#x6B62;&#x76D1;&#x542C;</td>
+<td>fs.unwatchFile(filename[, listener])</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x6253;&#x5F00;&#x5927;&#x6587;&#x4EF6;</td>
+<td>fs.createReadStream(path[, options])</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x5199;&#x5165;&#x5927;&#x6587;&#x4EF6;</td>
+<td>fs.createWriteStream(path[, options])</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x521B;&#x5EFA;&#x76EE;&#x5F55;</td>
+<td>fs.mkdir(path[, options], callback)</td>
+<td>fs.mkdirSync(path[, options])</td>
+</tr>
+<tr>
+<td>&#x8BFB;&#x53D6;&#x76EE;&#x5F55;</td>
+<td>fs.readdir(path[, options], callback)</td>
+<td>fs.readdirSync(path[, options])</td>
+</tr>
+<tr>
+<td>&#x5220;&#x9664;&#x76EE;&#x5F55;</td>
+<td>fs.rmdir(path, callback)</td>
+<td>fs.rmdirSync(path)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="form-&#x4FE1;&#x606F;&#x521B;&#x5EFA;&#x6587;&#x4EF6;"><a name="form-&#x4FE1;&#x606F;&#x521B;&#x5EFA;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#form-&#x4FE1;&#x606F;&#x521B;&#x5EFA;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. form &#x4FE1;&#x606F;&#x521B;&#x5EFA;&#x6587;&#x4EF6;</h3>
+<p>form &#x8868;&#x5355;&#x8FDB;&#x884C;&#x4E00;&#x4E2A; post &#x63D0;&#x4EA4;,&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00; 127.0.0.1:9527,&#x6B64;&#x65F6;&#x8F93;&#x5165;&#x8868;&#x5355;&#x4FE1;&#x606F;,&#x586B;&#x5199;&#x7528;&#x6237;&#x540D;/&#x5BC6;&#x7801;/&#x5907;&#x6CE8;&#x7B49;&#x4FE1;&#x606F;.&#x70B9;&#x51FB;&#x63D0;&#x4EA4;&#x4E4B;&#x540E;&#x4F1A;&#x76F4;&#x63A5;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; user.txt &#x7684;&#x6587;&#x4EF6;,&#x4F7F;&#x7528; writeFileSync()&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x521B;&#x5EFA;</p>
+<p>writeFileSync()&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code>
+function router(p) {
+  ......
+    &quot;/&quot;: (request, response) =&gt; {
+      response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
+      createForm(response);
+      response.end();
+    },
+    &quot;/login&quot;: (request, response) =&gt; {
+      let totalData = &quot;&quot;;
+      request.on(&quot;data&quot;, data =&gt; {
+        totalData += data;
+      });
+
+      request.on(&quot;end&quot;, () =&gt; {
+        response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
+        //username=liudehua&amp;password=123456&amp;remark=%E6%88%91%E6%98%AF%E5%88%98%E5%BE%B7%E5%8D%8E%2C%E6%88%91%E6%98%AF%E4%B8%80%E5%90%8D%E6%AD%8C%E6%89%8B
+        //username=liudehua&amp;password=123456&amp;remark=&#x6211;&#x662F;&#x5218;&#x5FB7;&#x534E;,&#x6211;&#x662F;&#x4E00;&#x540D;&#x6B4C;&#x624B;
+        let decodeData = decodeURIComponent(totalData); //&#x89E3;&#x51B3;&#x4E2D;&#x6587;&#x4E71;&#x7801;
+        fs.writeFileSync(path.join(__dirname, &quot;/user.txt&quot;), decodeData);
+        response.end();
+      });
+    },
+   ......
+}
+
+function createForm(response) {
+  response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>post<span class="token punctuation">&apos;</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>login<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>&quot;);
+  response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>&#x7528;&#x6237;&#x540D;:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>text<span class="token punctuation">&apos;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>username<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>&quot;);
+  response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>br</span><span class="token punctuation">&gt;</span></span>&quot;);
+  response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>&#x5BC6;&#x7801;:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>text<span class="token punctuation">&apos;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>password<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>&quot;);
+  response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>br</span><span class="token punctuation">&gt;</span></span>&quot;);
+  response.write(
+    &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>&#x5907;&#x6CE8;:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span> <span class="token attr-name">rows</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>10<span class="token punctuation">&apos;</span></span> <span class="token attr-name">cols</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>30<span class="token punctuation">&apos;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>remark<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>textarea</span><span class="token punctuation">&gt;</span></span>&quot;
+  );
+  response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>br</span><span class="token punctuation">&gt;</span></span>&quot;);
+  response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>submit<span class="token punctuation">&apos;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>&#x63D0;&#x4EA4;<span class="token punctuation">&apos;</span></span> <span class="token punctuation">/&gt;</span></span>&quot;);
+  response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>br</span><span class="token punctuation">&gt;</span></span>&quot;);
+}
+</code></pre><p>&#x4F46;&#x662F;&#x5728; node &#x5F00;&#x53D1;&#x4E2D;,&#x540C;&#x6B65;&#x7F16;&#x7A0B;&#x5728;&#x4F7F;&#x7528;&#x4E0A;&#x5E76;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x4F18;&#x52BF;,&#x5C24;&#x5176;&#x6587;&#x4EF6;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x4F7F;&#x7528;&#x5F02;&#x6B65;&#x66F4;&#x597D;&#x4E00;&#x4E9B;</p>
+<p>writeFile()&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x5199;&#x5165;</p>
+<pre class="language-"><code>let decodeData = decodeURIComponent(totalData); //&#x89E3;&#x51B3;&#x4E2D;&#x6587;&#x4E71;&#x7801;
+fs.writeFile(path.join(__dirname, &quot;/user.txt&quot;), decodeData, err =&gt; {
+    if (err) throw err;
+    response.end();
+});
+response.end();
+</code></pre><p>javascript &#x5728; es6 &#x7684;&#x4E4B;&#x540E;&#x7684;&#x5F02;&#x6B65;&#x7F16;&#x7A0B;&#x7684;&#x5F62;&#x5F0F;&#x53D1;&#x751F;&#x4E86;&#x4E00;&#x4E9B;&#x6539;&#x53D8;,promise &#x7684;&#x5F15;&#x5165;&#x8BA9;&#x5F02;&#x6B65;&#x7F16;&#x7A0B;&#x663E;&#x5F97;&#x66F4;&#x52A0;&#x4F18;&#x96C5;</p>
+<pre class="language-"><code>//&#x521B;&#x5EFA;file.js
+let fs = require(&quot;fs&quot;);
+
+module.exports = {
+  write: function(filename, data, options) {
+    return new Promise((resolve, reject) =&gt; {
+      fs.writeFile(filename, data, options, err =&gt;
+        err === null ? resolve(filename) : reject(err)
+      );
+    });
+  }
+};
+
+//app.js
+let decodeData = decodeURIComponent(totalData); //&#x89E3;&#x51B3;&#x4E2D;&#x6587;&#x4E71;&#x7801;
+write(path.join(__dirname, &quot;/user.txt&quot;), decodeData)
+    .then(res =&gt; {
+      response.end();
+    })
+    .catch(err =&gt; {
+      throw err;
+    });
+</code></pre><p>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; async/await &#x7684;&#x65B9;&#x6CD5;&#x5C06; promise &#x7684;&#x5F02;&#x6B65;&#x6267;&#x884C;&#x8F6C;&#x53D8;&#x4E3A;&#x540C;&#x6B65;&#x6267;&#x884C;</p>
+<pre class="language-"><code>      request.on(&quot;end&quot;, async () =&gt; {
+        response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
+        let decodeData = decodeURIComponent(totalData); //&#x89E3;&#x51B3;&#x4E2D;&#x6587;&#x4E71;&#x7801;
+        await write(path.join(__dirname, &quot;/user.txt&quot;), decodeData);
+        response.end();
+      });
+</code></pre><p>&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; try...catch &#x8FDB;&#x884C;&#x9519;&#x8BEF;&#x6355;&#x83B7;&#x4E86;</p>
+<pre class="language-"><code>try {
+  await write(path.join(__dirname, &quot;/user.txt&quot;), decodeData);
+  response.end();
+} catch (err) {
+  console.log(err);
+  response.end();
+}
+</code></pre><p>&#x4E3A;&#x4EC0;&#x4E48;&#x6709;&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#x4E86;,&#x8FD8;&#x662F;&#x8981;&#x5148;&#x5C06;&#x56DE;&#x8C03;&#x7528; promise &#x5305;&#x88C5;&#x540E;&#x518D;&#x7528; async/await &#x5C06;&#x5176;&#x8F6C;&#x4E3A;&#x540C;&#x6B65;&#x5462;?await &#x4F1A;&#x963B;&#x585E; async &#x5F02;&#x6B65;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x6CA1;&#x6709;&#x963B;&#x585E;&#x4E3B;&#x7EBF;&#x7A0B;,async &#x672C;&#x8D28;&#x4E0A;&#x8FD8;&#x662F;&#x5F02;&#x6B65;&#x6267;&#x884C;,&#x53EA;&#x662F;&#x770B;&#x8D77;&#x6765;&#x50CF;&#x662F;&#x4E00;&#x4E2A;&#x540C;&#x6B65;&#x6267;&#x884C;,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x5E76;&#x884C;&#x6267;&#x884C;,&#x800C;&#x540C;&#x6B65;&#x65B9;&#x6CD5; sync &#x5219;&#x4E0D;&#x80FD;&#x5E76;&#x884C;&#x6267;&#x884C;.</p>
+<h3 id="&#x8FFD;&#x52A0;&#x5185;&#x5BB9;-appendfile-&#x548C;-appendfilesync"><a name="&#x8FFD;&#x52A0;&#x5185;&#x5BB9;-appendfile-&#x548C;-appendfilesync" class="anchor-navigation-ex-anchor" href="#&#x8FFD;&#x52A0;&#x5185;&#x5BB9;-appendfile-&#x548C;-appendfilesync"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. &#x8FFD;&#x52A0;&#x5185;&#x5BB9; appendFile &#x548C; appendFileSync</h3>
+<p>&#x5C06;&#x6570;&#x636E;&#x8FFD;&#x52A0;(&#x5728;&#x6700;&#x540E;&#x63A5;&#x7740;&#x5199;&#x5165;)&#x5230;&#x6587;&#x4EF6;,&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5C1A;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x521B;&#x5EFA;&#x8BE5;&#x6587;&#x4EF6;.data &#x53EF;&#x4EE5;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x6216; Buffer.buffer &#x5185;&#x5BB9;&#x662F;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x4FE1;&#x606F;&#x7684; ASCII &#x7801;</p>
+<p>&#x548C; writeFile &#x4E0D;&#x540C;&#x662F;,writeFile &#x4E5F;&#x662F;&#x5C06;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x6587;&#x4EF6;,&#x4E5F;&#x662F;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x521B;&#x5EFA;,&#x4F46;&#x662F;&#x6587;&#x4EF6;&#x5B58;&#x5728;&#x7684;&#x8BDD;,writeFile &#x5199;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x76F4;&#x63A5;&#x8986;&#x76D6;&#x539F;&#x6709;&#x5185;&#x5BB9;,&#x800C; appendFile &#x662F;&#x8FFD;&#x52A0;&#x5185;&#x5BB9;.&#x6240;&#x4EE5;&#x65B0;&#x5EFA;&#x5185;&#x5BB9;&#x8FD8;&#x662F; writeFile &#x6BD4;&#x8F83;&#x597D;.</p>
+<p>&#x4FEE;&#x6539; file.js</p>
+<pre class="language-"><code>  append: function(filename, data, options) {
+    return new Promise((resolve, reject) =&gt; {
+      fs.appendFile(filename, data, options, err =&gt;
+        err === null ? resolve(filename) : reject(err)
+      );
+    });
+  }
+</code></pre><p>&#x4FEE;&#x6539; app.js</p>
+<pre class="language-"><code>let { write, append } = require(&quot;./file.js&quot;);
+
+......
+ &quot;/append&quot;: async (request, response) =&gt; {
+      response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
+      await append(
+        path.join(__dirname, &quot;/user.txt&quot;),
+        &quot;&#x6211;&#x8981;&#x5411;&#x4E16;&#x754C;&#x53D1;&#x51FA;hello world&quot;
+      );
+      response.end();
+    },
+</code></pre><p>&#x6253;&#x5F00; user.txt &#x5C31;&#x53D1;&#x73B0;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x662F; &quot;username=&#x6211;&#x662F;&#x597D;&#x4EBA;&amp;password=123456&amp;remark=&#x4ECA;&#x5929;&#x6211;&#x8981;&#x505A;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#x6211;&#x8981;&#x5411;&#x4E16;&#x754C;&#x53D1;&#x51FA; hello world&quot;</p>
+<h3 id="&#x5220;&#x9664;&#x6587;&#x4EF6;-fsunlink-&#x548C;-fsunlinksync"><a name="&#x5220;&#x9664;&#x6587;&#x4EF6;-fsunlink-&#x548C;-fsunlinksync" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x6587;&#x4EF6;-fsunlink-&#x548C;-fsunlinksync"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. &#x5220;&#x9664;&#x6587;&#x4EF6; fs.unlink &#x548C; fs.unlinkSync</h3>
+<p>&#x4FEE;&#x6539; file.js</p>
+<pre class="language-"><code>  remove: function(path) {
+    return new Promise((resolve, reject) =&gt; {
+      fs.unlink(path, err =&gt; (err === null ? resolve(path) : reject(err)));
+    });
+  }
+</code></pre><p>&#x4FEE;&#x6539; app.js</p>
+<pre class="language-"><code>    &quot;/append&quot;: async (request, response) =&gt; {
+      response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
+      await remove(path.join(__dirname, &quot;/user.txt&quot;));
+      await append(
+        path.join(__dirname, &quot;/user.txt&quot;),
+        &quot;&#x6211;&#x8981;&#x5411;&#x4E16;&#x754C;&#x53D1;&#x51FA;hello world&quot;
+      );
+      response.end();
+    },
+</code></pre><p>&#x8FD9;&#x6837; user.txt &#x4E2D;&#x5185;&#x5BB9;&#x53EA;&#x6709;&quot;&#x6211;&#x8981;&#x5411;&#x4E16;&#x754C;&#x53D1;&#x51FA; hello world&quot;&#x4E86;,&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x6765;&#x662F;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x540E;&#x91CD;&#x65B0;&#x5199;&#x5165;&#x7684;</p>
+<h3 id="&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;-fsrename"><a name="&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;-fsrename" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;-fsrename"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. &#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D; fs.rename()</h3>
+<p>&#x8FD8;&#x662F;&#x4FEE;&#x6539; file.js</p>
+<pre class="language-"><code>  rename: function(oldPath, newPath) {
+    return new Promise((resolve, reject) =&gt; {
+      fs.rename(oldPath, newPath, err =&gt;
+        err === null ? resolve([oldPath, newPath]) : reject(err)
+      );
+    });
+  }
+</code></pre><p>&#x7136;&#x540E;&#x518D; app.js &#x4E2D;&#x6267;&#x884C;</p>
+<pre class="language-"><code> await rename(
+        path.join(__dirname, &quot;/user.txt&quot;),
+        path.join(__dirname, &quot;/new_name.txt&quot;)
+      );
+</code></pre><h3 id="&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;-mkdirrmdirreaddir"><a name="&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;-mkdirrmdirreaddir" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;-mkdirrmdirreaddir"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.6. &#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C; mkdir,rmdir,readdir</h3>
+<p>mkdir &#x63A5;&#x53D7;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;&#x76EE;&#x5F55;&#x540D;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;&#x6743;&#x9650;&#x503C;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x662F;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+readdir &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x8BFB;&#x53D6;&#x76EE;&#x5F55;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6240;&#x5305;&#x542B;&#x7684;&#x6587;&#x4EF6;&#x548C;&#x5B50;&#x76EE;&#x5F55;&#x7684;&#x6570;&#x7EC4;
+rmdir &#x63A5;&#x6536;&#x4E00;&#x4E2A; path &#x53C2;&#x6570;&#x7528;&#x4E8E;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x5939;</p>
+<p>&#x65B0;&#x5EFA; dir.js</p>
+<pre class="language-"><code>let fs = require(&quot;fs&quot;);
+
+module.exports = {
+  mkdir: function(path, options) {
+    return new Promise((resolve, reject) =&gt; {
+      fs.mkdir(path, options, err =&gt;
+        err === null ? resolve(path) : reject(err)
+      );
+    });
+  },
+  readdir: function(path, options) {
+    return new Promise((resolve, reject) =&gt; {
+      fs.readdir(path, options, (err, files) =&gt;
+        err === null ? resolve(files) : reject(err)
+      );
+    });
+  },
+  rmdir: function(path) {
+    return new Promise((resolve, reject) =&gt; {
+      fs.rmdir(path, err =&gt; (err === null ? resolve(path) : reject(err)));
+    });
+  }
+</code></pre><p>&#x8FD8;&#x662F;&#x5728; app.js &#x4E2D;&#x8C03;&#x7528;</p>
+<pre class="language-"><code>    &quot;/dir&quot;: (request, response) =&gt; {
+      response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
+
+      [&quot;&#x56FE;&#x7247;&quot;, &quot;&#x6587;&#x4EF6;&quot;, &quot;&#x4E66;&#x7C4D;&quot;, &quot;&#x89C6;&#x9891;&quot;].forEach(async item =&gt; {
+        await mkdir(path.join(__dirname, `/${item}`));
+        await write(
+          path.join(__dirname, `/${item}/${item}.txt`),
+          &quot;&#x6211;&#x8FD8;&#x662F;&#x8981;&#x5411;&#x4E16;&#x754C;&#x53D1;&#x51FA;hello world&quot;
+        );
+        console.log(&quot;&#x6211;&#x5728;&#x91CC;&#x9762;&quot;);
+      });
+      console.log(&quot;&#x6211;&#x5728;&#x5916;&#x9762;&quot;);
+      response.end();
+    },
+</code></pre><p>&#x6587;&#x4EF6;&#x5939;&#x6B64;&#x65F6;&#x521B;&#x5EFA;&#x6210;&#x529F;&#x4E86;,&#x63A7;&#x5236;&#x53F0;&#x4E5F;&#x4F1A;&#x8F93;&#x5165;&quot;&#x6211;&#x5728;&#x5916;&#x9762;,&#x6211;&#x5728;&#x91CC;&#x9762;,&#x6211;&#x5728;&#x91CC;&#x9762;,&#x6211;&#x5728;&#x91CC;&#x9762;,&#x6211;&#x5728;&#x91CC;&#x9762;&quot;.</p>
+<p>&#x5728;&#x4F7F;&#x7528;&#x540C;&#x6B65;&#x5199;&#x4E00;&#x6B21;</p>
+<pre class="language-"><code>&quot;/dir&quot;: (request, response) =&gt; {
+      response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
+
+      [&quot;&#x56FE;&#x7247;&quot;, &quot;&#x6587;&#x4EF6;&quot;, &quot;&#x4E66;&#x7C4D;&quot;, &quot;&#x89C6;&#x9891;&quot;].forEach(async item =&gt; {
+        fs.mkdirSync(path.join(__dirname, `/${item}`));
+        fs.writeFileSync(
+          path.join(__dirname, `/${item}/${item}.txt`),
+          &quot;&#x6211;&#x8FD8;&#x662F;&#x8981;&#x5411;&#x4E16;&#x754C;&#x53D1;&#x51FA;hello world&quot;
+        );
+        console.log(&quot;&#x6211;&#x5728;&#x91CC;&#x9762;&quot;);
+      });
+      console.log(&quot;&#x6211;&#x5728;&#x5916;&#x9762;&quot;);
+      response.end();
+    },
+</code></pre><p>&#x7136;&#x540E;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;&#x662F;&quot;&#x6211;&#x5728;&#x91CC;&#x9762;,&#x6211;&#x5728;&#x91CC;&#x9762;,&#x6211;&#x5728;&#x91CC;&#x9762;,&#x6211;&#x5728;&#x91CC;&#x9762;,&#x6211;&#x5728;&#x5916;&#x9762;&quot;,async/await &#x7684;&#x540C;&#x6B65;&#x7EC8;&#x7A76;&#x662F;&#x4E2A;&#x5F02;&#x6B65;,&#x53EA;&#x662F;&#x5728;&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#x6267;&#x884C;&#x50CF;&#x540C;&#x6B65;</p>
+<p><a href="https://github.com/easterCat/node-utils/blob/master/02.fs%E5%86%99%E4%B8%AAhelloWorld/img/01.png?raw=true" data-lightbox="7df364b3-a6cc-4a0f-b618-9a49d73a6b8a" data-title="01" target="_blank"><img src="https://github.com/easterCat/node-utils/blob/master/02.fs%E5%86%99%E4%B8%AAhelloWorld/img/01.png?raw=true" alt="01"></a></p>
+<h3 id="&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;-readdir"><a name="&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;-readdir" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;-readdir"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.7. &#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C; readdir</h3>
+<pre class="language-"><code>    &quot;/file&quot;: async (request, response) =&gt; {
+      response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
+      let dir_path = process.cwd();
+      let files = await readdir(dir_path);
+
+      let str = `<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>${files
+        .map(item =&gt; {
+          return `<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/${item}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>${item}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>`;
+        })
+        .join(&quot;&quot;)}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>`;
+      response.write(str);
+      response.end();
+    },
+</code></pre><p><a href="https://github.com/easterCat/node-utils/blob/master/02.fs%E5%86%99%E4%B8%AAhelloWorld/img/02.png?raw=true" data-lightbox="ec12e279-46e9-4c5c-8bf6-fecdb3823944" data-title="02" target="_blank"><img src="https://github.com/easterCat/node-utils/blob/master/02.fs%E5%86%99%E4%B8%AAhelloWorld/img/02.png?raw=true" alt="02"></a></p>
+<h3 id="&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;-rmdir"><a name="&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;-rmdir" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;-rmdir"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.8. &#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C; rmdir</h3>
+<p>&#x7A7A;&#x6587;&#x4EF6;&#x5939;&#x76F4;&#x63A5;&#x5220;&#x9664;</p>
+<pre class="language-"><code>    &quot;/clear&quot;: async (request, response) =&gt; {
+      response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
+      [&quot;&#x56FE;&#x7247;&quot;, &quot;&#x6587;&#x4EF6;&quot;, &quot;&#x4E66;&#x7C4D;&quot;, &quot;&#x89C6;&#x9891;&quot;].forEach(async item =&gt; {
+        await rmdir(path.join(__dirname, `/${item}`));
+      });
+      response.end();
+    },
+</code></pre><p>&#x4E0D;&#x4E3A;&#x7A7A;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x662F;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x5220;&#x9664;&#x7684;,&#x5220;&#x9664;&#x7684;&#x662F;&#x6587;&#x4EF6;&#x800C;&#x4E0D;&#x662F;&#x6587;&#x4EF6;&#x5939;&#x4E5F;&#x4F1A;&#x62A5;&#x9519;.</p>
+<h2 id="docs"><a name="docs" class="anchor-navigation-ex-anchor" href="#docs"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Docs</h2>
+<p><a href="http://nodejs.cn/api/fs.html" target="_blank">Node.js fs &#x6587;&#x6863;</a>
+<a href="http://javascript.ruanyifeng.com/nodejs/fs.html#" target="_blank">fs &#x6A21;&#x5757;</a>
+<a href="http://www.runoob.com/nodejs/nodejs-fs.html" target="_blank">nodejs-fs</a>
+<a href="https://www.npmjs.com/package/fs-extra" target="_blank">fs-extra</a></p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="node写个helloworld.html" class="navigation navigation-prev " aria-label="Previous page: node 写个 helloworld">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="用node写个爬虫.html" class="navigation navigation-next " aria-label="Next page: 用 node 写个爬虫">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"node 的 fs 模块","level":"1.5.2","depth":2,"next":{"title":"用 node 写个爬虫","level":"1.5.3","depth":2,"path":"nodejs/用node写个爬虫.md","ref":"nodejs/用node写个爬虫.md","articles":[]},"previous":{"title":"node 写个 helloworld","level":"1.5.1","depth":2,"path":"nodejs/node写个helloworld.md","ref":"nodejs/node写个helloworld.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"nodejs/node的fs模块.md","mtime":"2020-01-23T03:20:58.667Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-23T03:31:17.215Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

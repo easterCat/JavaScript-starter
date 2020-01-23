@@ -23,6 +23,8 @@
   - [vue 的基础 3](vue/vue的基础3.md)
   - [vue 的基础 4](vue/vue的基础4.md)
 - [nodejs](nodejs/node写个helloworld.md)
+  - [reids 安装配置](nodejs/reids安装配置.md)
+  - [Elasticsearch 安装配置](nodejs/Elasticsearch安装配置.md)
   - [node 写个 helloworld](nodejs/node写个helloworld.md)
   - [node 的 fs 模块](nodejs/node的fs模块.md)
   - [用 node 写个爬虫](nodejs/用node写个爬虫.md)
@@ -54,8 +56,6 @@
   - [maven 安装配置](spring/maven安装配置.md)
   - [tomcat 安装配置](spring/tomcat安装配置.md)
   - [intellij 安装配置](spring/intellij安装配置.md)
-  - [reids 安装配置](spring/reids安装配置.md)
-  - [Elasticsearch 安装配置](spring/Elasticsearch安装配置.md)
   - [spring 创建 helloworld](spring/spring创建helloworld.md)
 
 ## 数据结构与算法

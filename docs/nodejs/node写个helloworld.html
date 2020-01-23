@@ -1129,21 +1129,22 @@
                                 
                                 <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#http-&#x6A21;&#x5757;-&#x4E0E;-hello-world"><b>1.1. </b>http &#x6A21;&#x5757; &#x4E0E; hello world</a></li><ul><li><span class="title-icon "></span><a href="#hello-world"><b>1.1.1. </b>hello world</a></li><li><span class="title-icon "></span><a href="#http"><b>1.1.2. </b>http</a></li><li><span class="title-icon "></span><a href="#httpcreateserver"><b>1.1.3. </b>http.createServer()</a></li><li><span class="title-icon "></span><a href="#listenport-host"><b>1.1.4. </b>listen(port, host)</a></li><li><span class="title-icon "></span><a href="#request-&#x5BF9;&#x8C61;"><b>1.1.5. </b>request &#x5BF9;&#x8C61;</a></li><li><span class="title-icon "></span><a href="#response-&#x5BF9;&#x8C61;"><b>1.1.6. </b>response &#x5BF9;&#x8C61;</a></li><li><span class="title-icon "></span><a href="#http-&#x7684;&#x54CD;&#x5E94;"><b>1.1.7. </b>http &#x7684;&#x54CD;&#x5E94;</a></li><li><span class="title-icon "></span><a href="#&#x5904;&#x7406;-get-&#x8BF7;&#x6C42;"><b>1.1.8. </b>&#x5904;&#x7406; get &#x8BF7;&#x6C42;</a></li><li><span class="title-icon "></span><a href="#&#x5904;&#x7406;-post-&#x8BF7;&#x6C42;"><b>1.1.9. </b>&#x5904;&#x7406; post &#x8BF7;&#x6C42;</a></li><li><span class="title-icon "></span><a href="#&#x8DEF;&#x7531;&#x7684;&#x7B80;&#x5355;&#x5E94;&#x7528;"><b>1.1.10. </b>&#x8DEF;&#x7531;&#x7684;&#x7B80;&#x5355;&#x5E94;&#x7528;</a></li><li><span class="title-icon "></span><a href="#urlparse-&#x65B9;&#x6CD5;"><b>1.1.11. </b>url.parse &#x65B9;&#x6CD5;</a></li></ul><li><span class="title-icon "></span><a href="#docs"><b>1.2. </b>Docs</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="http-&#x6A21;&#x5757;-&#x4E0E;-hello-world"><a name="http-&#x6A21;&#x5757;-&#x4E0E;-hello-world" class="anchor-navigation-ex-anchor" href="#http-&#x6A21;&#x5757;-&#x4E0E;-hello-world"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. http &#x6A21;&#x5757; &#x4E0E; hello world</h2>
 <h3 id="hello-world"><a name="hello-world" class="anchor-navigation-ex-anchor" href="#hello-world"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. hello world</h3>
-<pre class="language-"><code>let http = require(&quot;http&quot;);
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;http&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 http
-  .createServer((request, response) =&gt; {
-    response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
-    if (request.url !== &quot;/favicon.ico&quot;) {
-      response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">&gt;</span></span>hello world&lt;/&gt;&quot;);
-      response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>br</span><span class="token punctuation">&gt;</span></span>&quot;);
-      response.end(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">&gt;</span></span>&#x4F60;&#x597D;,&#x4E16;&#x754C;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>&quot;);
-    }
-  })
-  .listen(8888);
+  <span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">&quot;Content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/html;charset=utf-8&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>request<span class="token punctuation">.</span>url <span class="token operator">!==</span> <span class="token string">&quot;/favicon.ico&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      response<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&quot;&lt;b&gt;hello world&lt;/&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      response<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&quot;&lt;/br&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">&quot;&lt;i&gt;&#x4F60;&#x597D;,&#x4E16;&#x754C;&lt;/i&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8888</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-console.log(&quot;server running at http://127.0.0.1:8888/&quot;);
-</code></pre><p>&#x9996;&#x5148;&#x5F15;&#x5165; http &#x6A21;&#x5757;,&#x7136;&#x540E;&#x8C03;&#x7528; http &#x7684; createServer &#x65B9;&#x6CD5;,&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;,&#x6700;&#x540E;&#x8C03;&#x7528; listen &#x76D1;&#x542C;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;.createServer &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;,&#x51FD;&#x6570;&#x4E2D;&#x63A5;&#x6536; request &#x548C; response &#x4F5C;&#x4E3A;&#x4E24;&#x4E2A;&#x53C2;&#x6570;.
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;server running at http://127.0.0.1:8888/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x9996;&#x5148;&#x5F15;&#x5165; http &#x6A21;&#x5757;,&#x7136;&#x540E;&#x8C03;&#x7528; http &#x7684; createServer &#x65B9;&#x6CD5;,&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;,&#x6700;&#x540E;&#x8C03;&#x7528; listen &#x76D1;&#x542C;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;.createServer &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;,&#x51FD;&#x6570;&#x4E2D;&#x63A5;&#x6536; request &#x548C; response &#x4F5C;&#x4E3A;&#x4E24;&#x4E2A;&#x53C2;&#x6570;.
 &#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;<a href="http://127.0.0.1:8888/&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;hello" target="_blank">http://127.0.0.1:8888/&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;hello</a> world</p>
 <h3 id="http"><a name="http" class="anchor-navigation-ex-anchor" href="#http"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. http</h3>
 <p>&#x8981;&#x4F7F;&#x7528; HTTP &#x670D;&#x52A1;&#x5668;&#x548C;&#x5BA2;&#x6237;&#x7AEF;,&#x5FC5;&#x987B; require(&apos;http&apos;).http &#x6A21;&#x5757;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x642D;&#x5EFA; HTTP &#x670D;&#x52A1;.</p>
@@ -1164,52 +1165,53 @@ console.log(&quot;server running at http://127.0.0.1:8888/&quot;);
 <li>end &#x4E8B;&#x4EF6;&#xFF1A; &#x5F53;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x6570;&#x636E;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x65F6;&#x89E6;&#x53D1; end &#x4E8B;&#x4EF6;&#x3002;</li>
 </ul>
 <p>request &#x5BF9;&#x8C61;&#x5168;&#x90E8;&#x7684;&#x7ED1;&#x5B9A;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;,&#x76F4;&#x63A5; console.log(request)</p>
-<pre class="language-"><code>IncomingMessage {
-  _readableState:
-   ReadableState {
-     objectMode: false,
-     highWaterMark: 16384,
-     buffer: BufferList { head: null, tail: null, length: 0 },
-     length: 0,
-     pipes: null,
-     pipesCount: 0,
-     flowing: null,
-     ended: false,
-     endEmitted: false,
-     reading: false,
-     sync: true,
-     needReadable: false,
-     emittedReadable: false,
-     readableListening: false,
-     resumeScheduled: false,
-     paused: true,
-     emitClose: true,
-     destroyed: false,
-     defaultEncoding: &apos;utf8&apos;,
-     awaitDrain: 0,
-     readingMore: true,
-     decoder: null,
-     encoding: null },
-  readable: true,
-  .......
-      Timeout {
-        _called: false,
-        _idleTimeout: 120000,
-        _idlePrev: [Timeout],
-        _idleNext: [TimersList],
-        _idleStart: 108,
-        _onTimeout: [Function: bound ],
-        _timerArgs: undefined,
-        _repeat: null,
-        _destroyed: false,
-        [Symbol(unrefed)]: true,
-        [Symbol(asyncId)]: 9,
-        [Symbol(triggerId)]: 8 },
-     [Symbol(kBytesRead)]: 0,
-     [Symbol(kBytesWritten)]: 0 },
-  _consuming: false,
-  _dumped: false }
-</code></pre><blockquote>
+<pre class="language-"><code class="lang-js">IncomingMessage <span class="token punctuation">{</span>
+  _readableState<span class="token operator">:</span>
+   ReadableState <span class="token punctuation">{</span>
+     objectMode<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+     highWaterMark<span class="token operator">:</span> <span class="token number">16384</span><span class="token punctuation">,</span>
+     buffer<span class="token operator">:</span> BufferList <span class="token punctuation">{</span> head<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> tail<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> length<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     length<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+     pipes<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+     pipesCount<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+     flowing<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+     ended<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+     endEmitted<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+     reading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+     sync<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+     needReadable<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+     emittedReadable<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+     readableListening<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+     resumeScheduled<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+     paused<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+     emitClose<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+     destroyed<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+     defaultEncoding<span class="token operator">:</span> <span class="token string">&apos;utf8&apos;</span><span class="token punctuation">,</span>
+     awaitDrain<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+     readingMore<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+     decoder<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+     encoding<span class="token operator">:</span> <span class="token keyword">null</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  readable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span><span class="token operator">...</span><span class="token punctuation">.</span>
+      Timeout <span class="token punctuation">{</span>
+        _called<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        _idleTimeout<span class="token operator">:</span> <span class="token number">120000</span><span class="token punctuation">,</span>
+        _idlePrev<span class="token operator">:</span> <span class="token punctuation">[</span>Timeout<span class="token punctuation">]</span><span class="token punctuation">,</span>
+        _idleNext<span class="token operator">:</span> <span class="token punctuation">[</span>TimersList<span class="token punctuation">]</span><span class="token punctuation">,</span>
+        _idleStart<span class="token operator">:</span> <span class="token number">108</span><span class="token punctuation">,</span>
+        _onTimeout<span class="token operator">:</span> <span class="token punctuation">[</span>Function<span class="token operator">:</span> bound <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        _timerArgs<span class="token operator">:</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span>
+        _repeat<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        _destroyed<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token function">Symbol</span><span class="token punctuation">(</span>unrefed<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token function">Symbol</span><span class="token punctuation">(</span>asyncId<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token function">Symbol</span><span class="token punctuation">(</span>triggerId<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">8</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     <span class="token punctuation">[</span><span class="token function">Symbol</span><span class="token punctuation">(</span>kBytesRead<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+     <span class="token punctuation">[</span><span class="token function">Symbol</span><span class="token punctuation">(</span>kBytesWritten<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  _consuming<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  _dumped<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
 <p>request.url &#x5728;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x989D;&#x5916;&#x8BF7;&#x6C42;&#x4E00;&#x4E2A;/favicon.ico,&#x4E00;&#x822C;&#x6846;&#x67B6;&#x4F53;&#x7CFB;&#x90FD;&#x4F1A;&#x5BF9;&#x8FD9;&#x4E2A;&#x8FDB;&#x884C;&#x5904;&#x7406;</p>
 </blockquote>
 <h3 id="response-&#x5BF9;&#x8C61;"><a name="response-&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#response-&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.6. response &#x5BF9;&#x8C61;</h3>
@@ -1227,66 +1229,69 @@ console.log(&quot;server running at http://127.0.0.1:8888/&quot;);
 </ul>
 <h3 id="&#x5904;&#x7406;-get-&#x8BF7;&#x6C42;"><a name="&#x5904;&#x7406;-get-&#x8BF7;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x5904;&#x7406;-get-&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.8. &#x5904;&#x7406; get &#x8BF7;&#x6C42;</h3>
 <p>get &#x53C2;&#x6570;&#x5728; request &#x7684; url &#x5C5E;&#x6027;&#x4E0A;,&#x901A;&#x8FC7; url.parse &#x5C06; url &#x8F6C;&#x5316;&#x4E3A;&#x5BF9;&#x8C61;</p>
-<pre class="language-"><code>http
-  .createServer((request, response) =&gt; {
-    let pathname = url.parse(request.url).pathname;
-    if (pathname !== &quot;/favicon.ico&quot;) {
-      if(pathname===&quot;/login&quot;){
-         response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
-         response.write(&quot;&#x6211;&#x5C31;&#x662F;get&quot;);
-         response.end();
-      }
-    }
-  })
-  .listen(8888, &quot;localhost&quot;);
-</code></pre><h3 id="&#x5904;&#x7406;-post-&#x8BF7;&#x6C42;"><a name="&#x5904;&#x7406;-post-&#x8BF7;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x5904;&#x7406;-post-&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.9. &#x5904;&#x7406; post &#x8BF7;&#x6C42;</h3>
+<pre class="language-"><code class="lang-js">http
+  <span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> pathname <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span>pathname<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pathname <span class="token operator">!==</span> <span class="token string">&quot;/favicon.ico&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>pathname <span class="token operator">===</span> <span class="token string">&quot;/login&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">&quot;Content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/html;charset=utf-8&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6211;&#x5C31;&#x662F;get&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8888</span><span class="token punctuation">,</span> <span class="token string">&quot;localhost&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x5904;&#x7406;-post-&#x8BF7;&#x6C42;"><a name="&#x5904;&#x7406;-post-&#x8BF7;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x5904;&#x7406;-post-&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.9. &#x5904;&#x7406; post &#x8BF7;&#x6C42;</h3>
 <p>&#x5F53;&#x5BA2;&#x6237;&#x7AEF;&#x91C7;&#x7528; POST &#x65B9;&#x6CD5;&#x53D1;&#x9001;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53EF;&#x4EE5;&#x5BF9; data &#x548C; end &#x4E24;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF0C;&#x8BBE;&#x7ACB;&#x76D1;&#x542C;&#x51FD;&#x6570;,data &#x4E8B;&#x4EF6;&#x4F1A;&#x5728;&#x6570;&#x636E;&#x63A5;&#x6536;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6BCF;&#x6536;&#x5230;&#x4E00;&#x6BB5;&#x6570;&#x636E;&#x5C31;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#xFF0C;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;&#x88AB;&#x4F20;&#x5165;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;end &#x4E8B;&#x4EF6;&#x5219;&#x662F;&#x5728;&#x6240;&#x6709;&#x6570;&#x636E;&#x63A5;&#x6536;&#x5B8C;&#x6210;&#x540E;&#x89E6;&#x53D1;</p>
-<pre class="language-"><code>    &quot;/login&quot;: (request, response) =&gt; {
-      let totalData = &quot;&quot;;
-      request.on(&quot;data&quot;, data =&gt; {
-        totalData += data;
-      });
+<pre class="language-"><code class="lang-js">    <span class="token string">&quot;/login&quot;</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> totalData <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+      request<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;data&quot;</span><span class="token punctuation">,</span> <span class="token parameter">data</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        totalData <span class="token operator">+=</span> data<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      request.on(&quot;end&quot;, () =&gt; {
-        response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
-        response.write(totalData); //username=liudehua&amp;password=123456&amp;remark=%E6%88%91%E6%98%AF%E5%88%98%E5%BE%B7%E5%8D%8E%2C%E6%88%91%E6%98%AF%E4%B8%80%E5%90%8D%E6%AD%8C%E6%89%8B
-        response.end();
-      });
-    },
-</code></pre><h3 id="&#x8DEF;&#x7531;&#x7684;&#x7B80;&#x5355;&#x5E94;&#x7528;"><a name="&#x8DEF;&#x7531;&#x7684;&#x7B80;&#x5355;&#x5E94;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x7531;&#x7684;&#x7B80;&#x5355;&#x5E94;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.10. &#x8DEF;&#x7531;&#x7684;&#x7B80;&#x5355;&#x5E94;&#x7528;</h3>
-<pre class="language-"><code>let http = require(&quot;http&quot;);
+      request<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;end&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">&quot;Content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/html;charset=utf-8&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>totalData<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//username=liudehua&amp;password=123456&amp;remark=%E6%88%91%E6%98%AF%E5%88%98%E5%BE%B7%E5%8D%8E%2C%E6%88%91%E6%98%AF%E4%B8%80%E5%90%8D%E6%AD%8C%E6%89%8B</span>
+        response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre>
+<h3 id="&#x8DEF;&#x7531;&#x7684;&#x7B80;&#x5355;&#x5E94;&#x7528;"><a name="&#x8DEF;&#x7531;&#x7684;&#x7B80;&#x5355;&#x5E94;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x7531;&#x7684;&#x7B80;&#x5355;&#x5E94;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.10. &#x8DEF;&#x7531;&#x7684;&#x7B80;&#x5355;&#x5E94;&#x7528;</h3>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;http&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 http
-  .createServer((request, response) =&gt; {
-    if (request.url !== &quot;/favicon.ico&quot;) {
-      if (request.url === &quot;/&quot;) {
-        response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
-        response.end(&quot;&#x4F60;&#x597D;,&#x4E16;&#x754C;&quot;);
-      } else if (request.url === &quot;/login&quot;) {
-        response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
-        createForm(response);
-        response.end(&quot;&#x767B;&#x5F55;&quot;);
-      } else if (request.url === &quot;/register&quot;) {
-        response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
-        createForm(response);
-        response.end(&quot;&#x6CE8;&#x518C;&quot;);
-      } else {
-        response.writeHead(404, { &quot;Content-Type&quot;: &quot;text/plain;charset=utf-8&quot; });
-        response.end(&quot;404&#x627E;&#x4E0D;&#x5230;&#x76F8;&#x5173;&#x6587;&#x4EF6;&quot;);
-      }
-    }
-  })
-  .listen(8888);
+  <span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>request<span class="token punctuation">.</span>url <span class="token operator">!==</span> <span class="token string">&quot;/favicon.ico&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>request<span class="token punctuation">.</span>url <span class="token operator">===</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">&quot;Content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/html;charset=utf-8&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">&quot;&#x4F60;&#x597D;,&#x4E16;&#x754C;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>request<span class="token punctuation">.</span>url <span class="token operator">===</span> <span class="token string">&quot;/login&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">&quot;Content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/html;charset=utf-8&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">createForm</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">&quot;&#x767B;&#x5F55;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>request<span class="token punctuation">.</span>url <span class="token operator">===</span> <span class="token string">&quot;/register&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">&quot;Content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/html;charset=utf-8&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">createForm</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6CE8;&#x518C;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">&quot;Content-Type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/plain;charset=utf-8&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">&quot;404&#x627E;&#x4E0D;&#x5230;&#x76F8;&#x5173;&#x6587;&#x4EF6;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8888</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-console.log(&quot;server running at http://127.0.0.1:8888/&quot;);
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;server running at http://127.0.0.1:8888/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-function createForm(response) {
-  response.write(&quot;&#x7528;&#x6237;&#x540D;:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>text<span class="token punctuation">&apos;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>username<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>&quot;);
-  response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>br</span><span class="token punctuation">&gt;</span></span>&quot;);
-  response.write(&quot;&#x5BC6;&#x7801;:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>text<span class="token punctuation">&apos;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>password<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>&quot;);
-  response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>br</span><span class="token punctuation">&gt;</span></span>&quot;);
-}
-</code></pre><blockquote>
+<span class="token keyword">function</span> <span class="token function">createForm</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  response<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&quot;&#x7528;&#x6237;&#x540D;:&lt;input type=&apos;text&apos; name=&apos;username&apos;&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  response<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&quot;&lt;/br&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  response<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5BC6;&#x7801;:&lt;input type=&apos;text&apos; name=&apos;password&apos;&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  response<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&quot;&lt;/br&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
 <p>&#x8DEF;&#x7531;&#x5C31;&#x662F;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x9009;&#x62E9;&#x6267;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x51FD;&#x6570;&#x4EE3;&#x7801;</p>
 </blockquote>
 <h3 id="urlparse-&#x65B9;&#x6CD5;"><a name="urlparse-&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#urlparse-&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.11. url.parse &#x65B9;&#x6CD5;</h3>
@@ -1299,75 +1304,78 @@ function createForm(response) {
 <li>parseQueryString:&#x5982;&#x679C;&#x8BBE;&#x4E3A; true&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x7684; URL &#x5BF9;&#x8C61;&#x7684; query &#x5C5E;&#x6027;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528; querystring &#x6A21;&#x5757;&#x7684; parse() &#x751F;&#x6210;&#x7684;&#x5BF9;&#x8C61;&#x3002; &#x5982;&#x679C;&#x8BBE;&#x4E3A; false&#xFF0C;&#x5219; query &#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x672A;&#x89E3;&#x6790;&#x672A;&#x89E3;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002; &#x9ED8;&#x8BA4;&#x4E3A; false</li>
 <li>slashesDenoteHost:&#x5982;&#x679C;&#x8BBE;&#x4E3A; true&#xFF0C;&#x5219; // &#x4E4B;&#x540E;&#x81F3;&#x4E0B;&#x4E00;&#x4E2A; / &#x4E4B;&#x524D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4F1A;&#x89E3;&#x6790;&#x4F5C;&#x4E3A; host&#x3002; &#x4F8B;&#x5982;&#xFF0C; //foo/bar &#x4F1A;&#x89E3;&#x6790;&#x4E3A; {host: &apos;foo&apos;, pathname: &apos;/bar&apos;} &#x800C;&#x4E0D;&#x662F; {pathname: &apos;//foo/bar&apos;}&#x3002; &#x9ED8;&#x8BA4;&#x4E3A; false&#x3002;</li>
 </ul>
-<pre class="language-"><code>Url {
-  protocol: &apos;http:&apos;,
-  slashes: true,
-  auth: null,
-  host: &apos;localhost:8888&apos;,
-  port: &apos;8888&apos;,
-  hostname: &apos;localhost&apos;,
-  hash: null,
-  search: &apos;?username=liudehua&amp;password=123456&apos;,
-  query: &apos;username=liudehua&amp;password=123456&apos;,
-  pathname: &apos;/login&apos;,
-  path: &apos;/login?username=liudehua&amp;password=123456&apos;,
-  href:
-   &apos;http://localhost:8888/login?username=liudehua&amp;password=123456&apos; }
-</code></pre><h4 id="&#x7528;&#x5904;"><a name="&#x7528;&#x5904;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x5904;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x5904;</h4>
-<pre class="language-"><code>//&#x5F53;&#x8DEF;&#x5F84;&#x4E3A;http://127.0.0.1:8888/register
-console.log(pathname);// /register
-console.log(request.url);// /register
+<pre class="language-"><code class="lang-js">Url <span class="token punctuation">{</span>
+  protocol<span class="token operator">:</span> <span class="token string">&apos;http:&apos;</span><span class="token punctuation">,</span>
+  slashes<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  auth<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  host<span class="token operator">:</span> <span class="token string">&apos;localhost:8888&apos;</span><span class="token punctuation">,</span>
+  port<span class="token operator">:</span> <span class="token string">&apos;8888&apos;</span><span class="token punctuation">,</span>
+  hostname<span class="token operator">:</span> <span class="token string">&apos;localhost&apos;</span><span class="token punctuation">,</span>
+  hash<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  search<span class="token operator">:</span> <span class="token string">&apos;?username=liudehua&amp;password=123456&apos;</span><span class="token punctuation">,</span>
+  query<span class="token operator">:</span> <span class="token string">&apos;username=liudehua&amp;password=123456&apos;</span><span class="token punctuation">,</span>
+  pathname<span class="token operator">:</span> <span class="token string">&apos;/login&apos;</span><span class="token punctuation">,</span>
+  path<span class="token operator">:</span> <span class="token string">&apos;/login?username=liudehua&amp;password=123456&apos;</span><span class="token punctuation">,</span>
+  href<span class="token operator">:</span>
+   <span class="token string">&apos;http://localhost:8888/login?username=liudehua&amp;password=123456&apos;</span> <span class="token punctuation">}</span>
+</code></pre>
+<h4 id="&#x7528;&#x5904;"><a name="&#x7528;&#x5904;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x5904;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x5904;</h4>
+<pre class="language-"><code class="lang-js"><span class="token comment">//&#x5F53;&#x8DEF;&#x5F84;&#x4E3A;http://127.0.0.1:8888/register</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>pathname<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// /register</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// /register</span>
 
-//&#x5F53;&#x8DEF;&#x5F84;&#x4E3A;http://127.0.0.1:8888/register?username=liudehua&amp;password=123456
-console.log(pathname);// /register
-console.log(request.url);// /register?username=liudehua&amp;password=123456
-</code></pre><h4 id="&#x8DEF;&#x7531;&#x5339;&#x914D;"><a name="&#x8DEF;&#x7531;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x7531;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8DEF;&#x7531;&#x5339;&#x914D;</h4>
-<pre class="language-"><code>let http = require(&quot;http&quot;);
-let url = require(&quot;url&quot;);
+<span class="token comment">//&#x5F53;&#x8DEF;&#x5F84;&#x4E3A;http://127.0.0.1:8888/register?username=liudehua&amp;password=123456</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>pathname<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// /register</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// /register?username=liudehua&amp;password=123456</span>
+</code></pre>
+<h4 id="&#x8DEF;&#x7531;&#x5339;&#x914D;"><a name="&#x8DEF;&#x7531;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x7531;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8DEF;&#x7531;&#x5339;&#x914D;</h4>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;http&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;url&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 http
-  .createServer((request, response) =&gt; {
-    let pathname = url.parse(request.url).pathname;
-    if (pathname !== &quot;/favicon.ico&quot;) {
-      router(pathname)(request, response);
-    }
-  })
-  .listen(8888, &quot;localhost&quot;);
+  <span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> pathname <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span>pathname<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pathname <span class="token operator">!==</span> <span class="token string">&quot;/favicon.ico&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">router</span><span class="token punctuation">(</span>pathname<span class="token punctuation">)</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8888</span><span class="token punctuation">,</span> <span class="token string">&quot;localhost&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-function router(path) {
-  let router = {
-    &quot;/&quot;: (request, response) =&gt; {
-      response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
-      response.end(&quot;&#x4F60;&#x597D;,&#x4E16;&#x754C;&quot;);
-    },
-    &quot;/login&quot;: (request, response) =&gt; {
-      response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
-      createForm(response);
-      response.end(&quot;&#x767B;&#x5F55;&quot;);
-    },
-    &quot;/register&quot;: (request, response) =&gt; {
-      response.writeHead(200, { &quot;Content-type&quot;: &quot;text/html;charset=utf-8&quot; });
-      createForm(response);
-      response.end(&quot;&#x6CE8;&#x518C;&quot;);
-    },
-    &quot;/404&quot;: (request, response) =&gt; {
-      response.writeHead(404, { &quot;Content-Type&quot;: &quot;text/plain;charset=utf-8&quot; });
-      response.end(&quot;404&#x627E;&#x4E0D;&#x5230;&#x76F8;&#x5173;&#x6587;&#x4EF6;&quot;);
-    }
-  };
+<span class="token keyword">function</span> <span class="token function">router</span><span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> router <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;/&quot;</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">&quot;Content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/html;charset=utf-8&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">&quot;&#x4F60;&#x597D;,&#x4E16;&#x754C;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;/login&quot;</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">&quot;Content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/html;charset=utf-8&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">createForm</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">&quot;&#x767B;&#x5F55;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;/register&quot;</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">&quot;Content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/html;charset=utf-8&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">createForm</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6CE8;&#x518C;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;/404&quot;</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">&quot;Content-Type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/plain;charset=utf-8&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">&quot;404&#x627E;&#x4E0D;&#x5230;&#x76F8;&#x5173;&#x6587;&#x4EF6;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  !Object.keys(router).includes(path) &amp;&amp; (path = &quot;/404&quot;);
+  <span class="token operator">!</span>Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>router<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>path <span class="token operator">=</span> <span class="token string">&quot;/404&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  return router[path];
-}
+  <span class="token keyword">return</span> router<span class="token punctuation">[</span>path<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-function createForm(response) {
-  response.write(&quot;&#x7528;&#x6237;&#x540D;:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>text<span class="token punctuation">&apos;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>username<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>&quot;);
-  response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>br</span><span class="token punctuation">&gt;</span></span>&quot;);
-  response.write(&quot;&#x5BC6;&#x7801;:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>text<span class="token punctuation">&apos;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>password<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>&quot;);
-  response.write(&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>br</span><span class="token punctuation">&gt;</span></span>&quot;);
-}
-</code></pre><p>&#x4E4B;&#x540E;&#x5206;&#x522B;&#x8F93;&#x5165; localhost:8888,localhost:8888/haha,localhost:8888/login,localhost:8888/register</p>
+<span class="token keyword">function</span> <span class="token function">createForm</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  response<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&quot;&#x7528;&#x6237;&#x540D;:&lt;input type=&apos;text&apos; name=&apos;username&apos;&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  response<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&quot;&lt;/br&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  response<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5BC6;&#x7801;:&lt;input type=&apos;text&apos; name=&apos;password&apos;&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  response<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&quot;&lt;/br&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E4B;&#x540E;&#x5206;&#x522B;&#x8F93;&#x5165; localhost:8888,localhost:8888/haha,localhost:8888/login,localhost:8888/register</p>
 <h2 id="docs"><a name="docs" class="anchor-navigation-ex-anchor" href="#docs"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Docs</h2>
 <p><a href="http://nodejs.cn/api/http.html" target="_blank">Node.js http &#x6587;&#x6863;</a>
 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP" target="_blank">MDN HTTP</a>
@@ -1418,7 +1426,7 @@ function createForm(response) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"nodejs","level":"1.5","depth":1,"next":{"title":"reids 安装配置","level":"1.5.1","depth":2,"path":"nodejs/reids安装配置.md","ref":"nodejs/reids安装配置.md","articles":[]},"previous":{"title":"vue 的基础 4","level":"1.4.6","depth":2,"path":"vue/vue的基础4.md","ref":"vue/vue的基础4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"nodejs/node写个helloworld.md","mtime":"2020-01-23T03:20:24.718Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-23T03:46:42.188Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"nodejs","level":"1.5","depth":1,"next":{"title":"reids 安装配置","level":"1.5.1","depth":2,"path":"nodejs/reids安装配置.md","ref":"nodejs/reids安装配置.md","articles":[]},"previous":{"title":"vue 的基础 4","level":"1.4.6","depth":2,"path":"vue/vue的基础4.md","ref":"vue/vue的基础4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"nodejs/node写个helloworld.md","mtime":"2020-01-23T03:50:24.205Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-23T03:50:39.752Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

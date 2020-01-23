@@ -2,7 +2,7 @@
 
 ### hello world
 
-```
+```js
 let http = require("http");
 
 http
@@ -49,7 +49,7 @@ createServer 的文档是 http.createServer([options][, requestlistener]),reques
 
 request 对象全部的绑定属性和方法,直接 console.log(request)
 
-```
+```js
 IncomingMessage {
   _readableState:
    ReadableState {
@@ -117,15 +117,15 @@ response 对象由 HTTP 服务器在内部创建,表示服务器端的 HTTP 回�
 
 get 参数在 request 的 url 属性上,通过 url.parse 将 url 转化为对象
 
-```
+```js
 http
   .createServer((request, response) => {
     let pathname = url.parse(request.url).pathname;
     if (pathname !== "/favicon.ico") {
-      if(pathname==="/login"){
-         response.writeHead(200, { "Content-type": "text/html;charset=utf-8" });
-         response.write("我就是get");
-         response.end();
+      if (pathname === "/login") {
+        response.writeHead(200, { "Content-type": "text/html;charset=utf-8" });
+        response.write("我就是get");
+        response.end();
       }
     }
   })
@@ -136,7 +136,7 @@ http
 
 当客户端采用 POST 方法发送数据时，服务器端可以对 data 和 end 两个事件，设立监听函数,data 事件会在数据接收过程中，每收到一段数据就触发一次，接收到的数据被传入回调函数。end 事件则是在所有数据接收完成后触发
 
-```
+```js
     "/login": (request, response) => {
       let totalData = "";
       request.on("data", data => {
@@ -153,7 +153,7 @@ http
 
 ### 路由的简单应用
 
-```
+```js
 let http = require("http");
 
 http
@@ -204,7 +204,7 @@ url.parse(urlStr, [parseQueryString], [slashesDenoteHost])
 - parseQueryString:如果设为 true，则返回的 URL 对象的 query 属性会是一个使用 querystring 模块的 parse() 生成的对象。 如果设为 false，则 query 会是一个未解析未解码的字符串。 默认为 false
 - slashesDenoteHost:如果设为 true，则 // 之后至下一个 / 之前的字符串会解析作为 host。 例如， //foo/bar 会解析为 {host: 'foo', pathname: '/bar'} 而不是 {pathname: '//foo/bar'}。 默认为 false。
 
-```
+```js
 Url {
   protocol: 'http:',
   slashes: true,
@@ -223,19 +223,19 @@ Url {
 
 #### 用处
 
-```
+```js
 //当路径为http://127.0.0.1:8888/register
-console.log(pathname);// /register
-console.log(request.url);// /register
+console.log(pathname); // /register
+console.log(request.url); // /register
 
 //当路径为http://127.0.0.1:8888/register?username=liudehua&password=123456
-console.log(pathname);// /register
-console.log(request.url);// /register?username=liudehua&password=123456
+console.log(pathname); // /register
+console.log(request.url); // /register?username=liudehua&password=123456
 ```
 
 #### 路由匹配
 
-```
+```js
 let http = require("http");
 let url = require("url");
 

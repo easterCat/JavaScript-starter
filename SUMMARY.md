@@ -31,6 +31,10 @@
   - [用 node 写个爬虫](nodejs/用node写个爬虫.md)
   - [node 实现静态文件服务器](nodejs/node实现静态文件服务器.md)
   - [nodejs 文件路径](nodejs/nodejs文件路径.md)
+  - [node 工具之 http-proxy-middleware](nodejs/工具/node工具之http-proxy-middleware.md)
+  - [node 工具之 node-ip](nodejs/工具/node工具之node-ip.md)
+  - [node 工具之 nodemon](nodejs/工具/node工具之nodemon.md)
+  - [node 工具之 pm2](nodejs/工具/node工具之pm2.md)
 
 ## java 基础
 

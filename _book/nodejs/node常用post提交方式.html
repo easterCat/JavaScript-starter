@@ -1,0 +1,1421 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>node 常用 post 提交方式 · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="工具/node工具之http-proxy-middleware.html" />
+    
+    
+    <link rel="prev" href="node中的query,params,body.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    前端基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                <a href="../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                    
+                    学会使用 JavaScript 访问和修改 CSS 样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../前端/解决canvas在高清屏中模糊.html">
+            
+                <a href="../前端/解决canvas在高清屏中模糊.html">
+            
+                    
+                    解决 canvas 在高清屏中模糊
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../前端/js二进制数据互转.html">
+            
+                <a href="../前端/js二进制数据互转.html">
+            
+                    
+                    js 二进制数据互转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../前端/单元测试/readme.html">
+            
+                <a href="../前端/单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../前端/网络/http响应码.html">
+            
+                <a href="../前端/网络/http响应码.html">
+            
+                    
+                    http 响应码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../前端/网络/http预览导图.html">
+            
+                <a href="../前端/网络/http预览导图.html">
+            
+                    
+                    http 预览导图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    js 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../js基础/内存分配/readme.html">
+            
+                <a href="../js基础/内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../js基础/浏览器工作原理/readme.html">
+            
+                <a href="../js基础/浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../js基础/类和对象/readme.html">
+            
+                <a href="../js基础/类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../js基础/数据类型/readme.html">
+            
+                <a href="../js基础/数据类型/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../js基础/js事件机制/readme.html">
+            
+                <a href="../js基础/js事件机制/readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../vue/vue路由与keep-alive.html">
+            
+                <a href="../vue/vue路由与keep-alive.html">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue/vue路由与keep-alive.html">
+            
+                <a href="../vue/vue路由与keep-alive.html">
+            
+                    
+                    vue 路由与 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../vue/vue.use的使用.html">
+            
+                <a href="../vue/vue.use的使用.html">
+            
+                    
+                    vue.use 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../vue/vue的基础.html">
+            
+                <a href="../vue/vue的基础.html">
+            
+                    
+                    vue 的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../vue/vue的基础2.html">
+            
+                <a href="../vue/vue的基础2.html">
+            
+                    
+                    vue 的基础 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../vue/vue的基础3.html">
+            
+                <a href="../vue/vue的基础3.html">
+            
+                    
+                    vue 的基础 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../vue/vue的基础4.html">
+            
+                <a href="../vue/vue的基础4.html">
+            
+                    
+                    vue 的基础 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="node写个helloworld.html">
+            
+                <a href="node写个helloworld.html">
+            
+                    
+                    nodejs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="环境/reids安装配置.html">
+            
+                <a href="环境/reids安装配置.html">
+            
+                    
+                    reids 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="环境/mysql安装配置.html">
+            
+                <a href="环境/mysql安装配置.html">
+            
+                    
+                    mysql 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="环境/Elasticsearch安装配置.html">
+            
+                <a href="环境/Elasticsearch安装配置.html">
+            
+                    
+                    Elasticsearch 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="node写个helloworld.html">
+            
+                <a href="node写个helloworld.html">
+            
+                    
+                    node 写个 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="node的fs模块.html">
+            
+                <a href="node的fs模块.html">
+            
+                    
+                    node 的 fs 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="用node写个爬虫.html">
+            
+                <a href="用node写个爬虫.html">
+            
+                    
+                    用 node 写个爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="node实现静态文件服务器.html">
+            
+                <a href="node实现静态文件服务器.html">
+            
+                    
+                    node 实现静态文件服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="nodejs文件路径.html">
+            
+                <a href="nodejs文件路径.html">
+            
+                    
+                    nodejs 文件路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="node发起http请求.html">
+            
+                <a href="node发起http请求.html">
+            
+                    
+                    node 发起 http 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="node中的query,params,body.html">
+            
+                <a href="node中的query,params,body.html">
+            
+                    
+                    node 中的 query,params,body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.11" data-path="node常用post提交方式.html">
+            
+                <a href="node常用post提交方式.html">
+            
+                    
+                    node 常用 post 提交方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="工具/node工具之http-proxy-middleware.html">
+            
+                <a href="工具/node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具之 http-proxy-middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="工具/node工具之node-ip.html">
+            
+                <a href="工具/node工具之node-ip.html">
+            
+                    
+                    node 工具之 node-ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="工具/node工具之nodemon.html">
+            
+                <a href="工具/node工具之nodemon.html">
+            
+                    
+                    node 工具之 nodemon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="工具/node工具之pm2.html">
+            
+                <a href="工具/node工具之pm2.html">
+            
+                    
+                    node 工具之 pm2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">java 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Java基础/">
+            
+                <a href="../Java基础/">
+            
+                    
+                    java 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Java基础/变量的类型.html">
+            
+                <a href="../Java基础/变量的类型.html">
+            
+                    
+                    变量的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Java基础/基本数据类型.html">
+            
+                <a href="../Java基础/基本数据类型.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Java基础/修饰符.html">
+            
+                <a href="../Java基础/修饰符.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Java基础/运算符.html">
+            
+                <a href="../Java基础/运算符.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Java基础/条件语句.html">
+            
+                <a href="../Java基础/条件语句.html">
+            
+                    
+                    条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Java基础/循环结构.html">
+            
+                <a href="../Java基础/循环结构.html">
+            
+                    
+                    循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Java基础/switch语句.html">
+            
+                <a href="../Java基础/switch语句.html">
+            
+                    
+                    switch 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Java基础/数组.html">
+            
+                <a href="../Java基础/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../Java基础/字符串.html">
+            
+                <a href="../Java基础/字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../Java基础/Character类.html">
+            
+                <a href="../Java基础/Character类.html">
+            
+                    
+                    Character 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../Java基础/正则表达式.html">
+            
+                <a href="../Java基础/正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../Java基础/流,文件和IO.html">
+            
+                <a href="../Java基础/流,文件和IO.html">
+            
+                    
+                    流,文件和 IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                <a href="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                    
+                    StringBuffer 和 StringBuilder 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="../Java基础/Collection.html">
+            
+                <a href="../Java基础/Collection.html">
+            
+                    
+                    Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.15" data-path="../Java基础/map.html">
+            
+                <a href="../Java基础/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="../Java基础/list.html">
+            
+                <a href="../Java基础/list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" data-path="../Java基础/多线程编程.html">
+            
+                <a href="../Java基础/多线程编程.html">
+            
+                    
+                    多线程编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.18" data-path="../Java基础/泛型.html">
+            
+                <a href="../Java基础/泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    maven 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../spring/tomcat安装配置.html">
+            
+                <a href="../spring/tomcat安装配置.html">
+            
+                    
+                    tomcat 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../spring/intellij安装配置.html">
+            
+                <a href="../spring/intellij安装配置.html">
+            
+                    
+                    intellij 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../spring/spring创建helloworld.html">
+            
+                <a href="../spring/spring创建helloworld.html">
+            
+                    
+                    spring 创建 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构与算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Java数据结构与算法/">
+            
+                <a href="../Java数据结构与算法/">
+            
+                    
+                    Java 数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../Java数据结构与算法/线性表.html">
+            
+                <a href="../Java数据结构与算法/线性表.html">
+            
+                    
+                    线性表(数组,队列,栈,链表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../Java数据结构与算法/Java排序算法.html">
+            
+                <a href="../Java数据结构与算法/Java排序算法.html">
+            
+                    
+                    Java 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Java练习题/">
+            
+                <a href="../Java练习题/">
+            
+                    
+                    Java 练习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../Java练习题/指定范围包含的素数.html">
+            
+                <a href="../Java练习题/指定范围包含的素数.html">
+            
+                    
+                    指定范围包含的素数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../Java练习题/公约数和公倍数.html">
+            
+                <a href="../Java练习题/公约数和公倍数.html">
+            
+                    
+                    公约数和公倍数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    leetcode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    scripto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../scripto/中间件模式.html">
+            
+                <a href="../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../scripto/m长度的都是n的数组.html">
+            
+                <a href="../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >node 常用 post 提交方式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x8868;&#x5355;&#x63D0;&#x4EA4;"><b>1.1. </b>&#x8868;&#x5355;&#x63D0;&#x4EA4;</a></li><li><span class="title-icon "></span><a href="#doc"><b>1.2. </b>doc</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x8868;&#x5355;&#x63D0;&#x4EA4;"><a name="&#x8868;&#x5355;&#x63D0;&#x4EA4;" class="anchor-navigation-ex-anchor" href="#&#x8868;&#x5355;&#x63D0;&#x4EA4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x8868;&#x5355;&#x63D0;&#x4EA4;</h2>
+<p>HTTP/1.1 &#x534F;&#x8BAE;&#x89C4;&#x5B9A;&#x7684; HTTP &#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x6709; OPTIONS&#x3001;GET&#x3001;HEAD&#x3001;POST&#x3001;PUT&#x3001;DELETE&#x3001;TRACE&#x3001;CONNECT &#x8FD9;&#x51E0;&#x79CD;&#x3002;&#x5176;&#x4E2D; POST &#x4E00;&#x822C;&#x7528;&#x6765;&#x5411;&#x670D;&#x52A1;&#x7AEF;&#x63D0;&#x4EA4;&#x6570;&#x636E;&#xFF0C;&#x672C;&#x6587;&#x4E3B;&#x8981;&#x8BA8;&#x8BBA; POST &#x63D0;&#x4EA4;&#x6570;&#x636E;&#x7684;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;HTTP &#x534F;&#x8BAE;&#x662F;&#x4EE5; ASCII &#x7801;&#x4F20;&#x8F93;&#xFF0C;&#x5EFA;&#x7ACB;&#x5728; TCP/IP &#x534F;&#x8BAE;&#x4E4B;&#x4E0A;&#x7684;&#x5E94;&#x7528;&#x5C42;&#x89C4;&#x8303;&#x3002;&#x89C4;&#x8303;&#x628A; HTTP &#x8BF7;&#x6C42;&#x5206;&#x4E3A;&#x4E09;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;&#x72B6;&#x6001;&#x884C;&#x8BF7;&#x6C42;&#x884C;&#x3001;&#x8BF7;&#x6C42;&#x5934;&#x3001;&#x6D88;&#x606F;&#x4E3B;&#x4F53;&#x3002;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">
+<span class="token operator">&lt;</span>method<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>request-URL<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>version<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>headers<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>entity-body<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x534F;&#x8BAE;&#x89C4;&#x5B9A; POST &#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#x5FC5;&#x987B;&#x653E;&#x5728;&#x6D88;&#x606F;&#x4E3B;&#x4F53;&#xFF08;entity-body&#xFF09;&#x4E2D;&#xFF0C;&#x4F46;&#x534F;&#x8BAE;&#x5E76;&#x6CA1;&#x6709;&#x89C4;&#x5B9A;&#x6570;&#x636E;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x51B3;&#x5B9A;&#x6D88;&#x606F;&#x4E3B;&#x4F53;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x53EA;&#x8981;&#x6700;&#x540E;&#x53D1;&#x9001;&#x7684; HTTP &#x8BF7;&#x6C42;&#x6EE1;&#x8DB3;&#x4E0A;&#x9762;&#x7684;&#x683C;&#x5F0F;&#x5C31;&#x53EF;&#x4EE5;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x6570;&#x636E;&#x53D1;&#x9001;&#x51FA;&#x53BB;&#xFF0C;&#x8FD8;&#x8981;&#x670D;&#x52A1;&#x7AEF;&#x89E3;&#x6790;&#x6210;&#x529F;&#x624D;&#x6709;&#x610F;&#x4E49;&#x3002;&#x4E00;&#x822C;&#x670D;&#x52A1;&#x7AEF;&#x8BED;&#x8A00;&#x5982; php&#x3001;python &#x7B49;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684; framework&#xFF0C;&#x90FD;&#x5185;&#x7F6E;&#x4E86;&#x81EA;&#x52A8;&#x89E3;&#x6790;&#x5E38;&#x89C1;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x7684;&#x529F;&#x80FD;&#x3002;&#x670D;&#x52A1;&#x7AEF;&#x901A;&#x5E38;&#x662F;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x5934;&#xFF08;headers&#xFF09;&#x4E2D;&#x7684; Content-Type &#x5B57;&#x6BB5;&#x6765;&#x83B7;&#x77E5;&#x8BF7;&#x6C42;&#x4E2D;&#x7684;&#x6D88;&#x606F;&#x4E3B;&#x4F53;&#x662F;&#x7528;&#x4F55;&#x79CD;&#x65B9;&#x5F0F;&#x7F16;&#x7801;&#xFF0C;&#x518D;&#x5BF9;&#x4E3B;&#x4F53;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#x3002;&#x6240;&#x4EE5;&#x8BF4;&#x5230; POST &#x63D0;&#x4EA4;&#x6570;&#x636E;&#x65B9;&#x6848;&#xFF0C;&#x5305;&#x542B;&#x4E86; Content-Type &#x548C;&#x6D88;&#x606F;&#x4E3B;&#x4F53;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x4E24;&#x90E8;&#x5206;&#x3002;&#x4E0B;&#x9762;&#x5C31;&#x6B63;&#x5F0F;&#x5F00;&#x59CB;&#x4ECB;&#x7ECD;&#x5B83;&#x4EEC;&#x3002;</p>
+<h4 id="applicationx-www-form-urlencoded"><a name="applicationx-www-form-urlencoded" class="anchor-navigation-ex-anchor" href="#applicationx-www-form-urlencoded"><i class="fa fa-link" aria-hidden="true"></i></a>application/x-www-form-urlencoded</h4>
+<p>&#x8FD9;&#x5E94;&#x8BE5;&#x662F;&#x6700;&#x5E38;&#x89C1;&#x7684; POST &#x63D0;&#x4EA4;&#x6570;&#x636E;&#x7684;&#x65B9;&#x5F0F;&#x4E86;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x539F;&#x751F; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">&gt;</span></span></code> &#x8868;&#x5355;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x8BBE;&#x7F6E; enctype &#x5C5E;&#x6027;&#xFF0C;&#x90A3;&#x4E48;&#x6700;&#x7EC8;&#x5C31;&#x4F1A;&#x4EE5; application/x-www-form-urlencoded &#x65B9;&#x5F0F;&#x63D0;&#x4EA4;&#x6570;&#x636E;&#x3002;&#x8BF7;&#x6C42;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF08;&#x65E0;&#x5173;&#x7684;&#x8BF7;&#x6C42;&#x5934;&#x5728;&#x672C;&#x6587;&#x4E2D;&#x90FD;&#x7701;&#x7565;&#x6389;&#x4E86;&#xFF09;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">POST http://www.example.com HTTP/1.1
+Content-Type: application/x-www-form-urlencoded<span class="token punctuation">;</span><span class="token assign-left variable">charset</span><span class="token operator">=</span>utf-8
+
+<span class="token assign-left variable">title</span><span class="token operator">=</span>test<span class="token operator">&amp;</span>sub%5B%5D<span class="token operator">=</span><span class="token number">1</span><span class="token operator">&amp;</span>sub%5B%5D<span class="token operator">=</span><span class="token number">2</span><span class="token operator">&amp;</span>sub%5B%5D<span class="token operator">=</span><span class="token number">3</span>
+</code></pre>
+<p>&#x9996;&#x5148;&#xFF0C;Content-Type &#x88AB;&#x6307;&#x5B9A;&#x4E3A; application/x-www-form-urlencoded&#xFF1B;&#x5176;&#x6B21;&#xFF0C;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#x6309;&#x7167; key1=val1&amp;key2=val2 &#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#xFF0C;key &#x548C; val &#x90FD;&#x8FDB;&#x884C;&#x4E86; URL &#x8F6C;&#x7801;&#x3002;&#x5927;&#x90E8;&#x5206;&#x670D;&#x52A1;&#x7AEF;&#x8BED;&#x8A00;&#x90FD;&#x5BF9;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x6709;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#x3002;&#x4F8B;&#x5982; PHP &#x4E2D;&#xFF0C;$_POST[&apos;title&apos;] &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230; title &#x7684;&#x503C;&#xFF0C;$_POST[&apos;sub&apos;] &#x53EF;&#x4EE5;&#x5F97;&#x5230; sub &#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x5F88;&#x591A;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x7528; Ajax &#x63D0;&#x4EA4;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x4E5F;&#x662F;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x3002;&#x4F8B;&#x5982; JQuery &#x548C; QWrap &#x7684; Ajax&#xFF0C;Content-Type &#x9ED8;&#x8BA4;&#x503C;&#x90FD;&#x662F;&#x300C;application/x-www-form-urlencoded;charset=utf-8&#x300D;&#x3002;</p>
+<h4 id="multipartform-data"><a name="multipartform-data" class="anchor-navigation-ex-anchor" href="#multipartform-data"><i class="fa fa-link" aria-hidden="true"></i></a>multipart/form-data</h4>
+<p>&#x8FD9;&#x53C8;&#x662F;&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x7684; POST &#x6570;&#x636E;&#x63D0;&#x4EA4;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x8868;&#x5355;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x8BA9; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">&gt;</span></span></code> &#x8868;&#x5355;&#x7684; enctype &#x7B49;&#x4E8E; multipart/form-data&#x3002;&#x76F4;&#x63A5;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">POST http://www.example.com HTTP/1.1
+Content-Type:multipart/form-data<span class="token punctuation">;</span> <span class="token assign-left variable">boundary</span><span class="token operator">=</span>----WebKitFormBoundaryrGKCBY7qhFd3TrwA
+
+------WebKitFormBoundaryrGKCBY7qhFd3TrwA
+Content-Disposition: form-data<span class="token punctuation">;</span> <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">&quot;text&quot;</span>
+
+title
+------WebKitFormBoundaryrGKCBY7qhFd3TrwA
+Content-Disposition: form-data<span class="token punctuation">;</span> <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">&quot;file&quot;</span><span class="token punctuation">;</span> <span class="token assign-left variable">filename</span><span class="token operator">=</span><span class="token string">&quot;chrome.png&quot;</span>
+Content-Type: image/png
+
+PNG <span class="token punctuation">..</span>. content of chrome.png <span class="token punctuation">..</span>.
+------WebKitFormBoundaryrGKCBY7qhFd3TrwA--
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x7A0D;&#x5FAE;&#x590D;&#x6742;&#x70B9;&#x3002;&#x9996;&#x5148;&#x751F;&#x6210;&#x4E86;&#x4E00;&#x4E2A; boundary &#x7528;&#x4E8E;&#x5206;&#x5272;&#x4E0D;&#x540C;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x4E0E;&#x6B63;&#x6587;&#x5185;&#x5BB9;&#x91CD;&#x590D;&#xFF0C;boundary &#x5F88;&#x957F;&#x5F88;&#x590D;&#x6742;&#x3002;&#x7136;&#x540E; Content-Type &#x91CC;&#x6307;&#x660E;&#x4E86;&#x6570;&#x636E;&#x662F;&#x4EE5; multipart/form-data &#x6765;&#x7F16;&#x7801;&#xFF0C;&#x672C;&#x6B21;&#x8BF7;&#x6C42;&#x7684; boundary &#x662F;&#x4EC0;&#x4E48;&#x5185;&#x5BB9;&#x3002;&#x6D88;&#x606F;&#x4E3B;&#x4F53;&#x91CC;&#x6309;&#x7167;&#x5B57;&#x6BB5;&#x4E2A;&#x6570;&#x53C8;&#x5206;&#x4E3A;&#x591A;&#x4E2A;&#x7ED3;&#x6784;&#x7C7B;&#x4F3C;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x6BCF;&#x90E8;&#x5206;&#x90FD;&#x662F;&#x4EE5; --boundary &#x5F00;&#x59CB;&#xFF0C;&#x7D27;&#x63A5;&#x7740;&#x662F;&#x5185;&#x5BB9;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x662F;&#x56DE;&#x8F66;&#xFF0C;&#x6700;&#x540E;&#x662F;&#x5B57;&#x6BB5;&#x5177;&#x4F53;&#x5185;&#x5BB9;&#xFF08;&#x6587;&#x672C;&#x6216;&#x4E8C;&#x8FDB;&#x5236;&#xFF09;&#x3002;&#x5982;&#x679C;&#x4F20;&#x8F93;&#x7684;&#x662F;&#x6587;&#x4EF6;&#xFF0C;&#x8FD8;&#x8981;&#x5305;&#x542B;&#x6587;&#x4EF6;&#x540D;&#x548C;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#x3002;&#x6D88;&#x606F;&#x4E3B;&#x4F53;&#x6700;&#x540E;&#x4EE5; --boundary-- &#x6807;&#x793A;&#x7ED3;&#x675F;&#x3002;&#x5173;&#x4E8E; multipart/form-data &#x7684;&#x8BE6;&#x7EC6;&#x5B9A;&#x4E49;&#xFF0C;&#x8BF7;&#x524D;&#x5F80; rfc1867 &#x67E5;&#x770B;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4E00;&#x822C;&#x7528;&#x6765;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#xFF0C;&#x5404;&#x5927;&#x670D;&#x52A1;&#x7AEF;&#x8BED;&#x8A00;&#x5BF9;&#x5B83;&#x4E5F;&#x6709;&#x7740;&#x826F;&#x597D;&#x7684;&#x652F;&#x6301;&#x3002;</p>
+<p>&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;&#x8FD9;&#x4E24;&#x79CD; POST &#x6570;&#x636E;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x90FD;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x539F;&#x751F;&#x652F;&#x6301;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x73B0;&#x9636;&#x6BB5;&#x6807;&#x51C6;&#x4E2D;&#x539F;&#x751F; </p><form> &#x8868;&#x5355;&#x4E5F;&#x53EA;&#x652F;&#x6301;&#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF08;&#x901A;&#x8FC7;  &#x5143;&#x7D20;&#x7684; enctype &#x5C5E;&#x6027;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; application/x-www-form-urlencoded&#x3002;&#x5176;&#x5B9E; enctype &#x8FD8;&#x652F;&#x6301; text/plain&#xFF0C;&#x4E0D;&#x8FC7;&#x7528;&#x5F97;&#x975E;&#x5E38;&#x5C11;&#xFF09;&#x3002;<p></p>
+<p>&#x968F;&#x7740;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x7684; Web &#x7AD9;&#x70B9;&#xFF0C;&#x5C24;&#x5176;&#x662F; WebApp&#xFF0C;&#x5168;&#x90E8;&#x4F7F;&#x7528; Ajax &#x8FDB;&#x884C;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x65B0;&#x7684;&#x6570;&#x636E;&#x63D0;&#x4EA4;&#x65B9;&#x5F0F;&#xFF0C;&#x7ED9;&#x5F00;&#x53D1;&#x5E26;&#x6765;&#x66F4;&#x591A;&#x4FBF;&#x5229;&#x3002;</p>
+<h4 id="applicationjson"><a name="applicationjson" class="anchor-navigation-ex-anchor" href="#applicationjson"><i class="fa fa-link" aria-hidden="true"></i></a>application/json</h4>
+<p>application/json &#x8FD9;&#x4E2A; Content-Type &#x4F5C;&#x4E3A;&#x54CD;&#x5E94;&#x5934;&#x5927;&#x5BB6;&#x80AF;&#x5B9A;&#x4E0D;&#x964C;&#x751F;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x73B0;&#x5728;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x7684;&#x4EBA;&#x628A;&#x5B83;&#x4F5C;&#x4E3A;&#x8BF7;&#x6C42;&#x5934;&#xFF0C;&#x7528;&#x6765;&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x7AEF;&#x6D88;&#x606F;&#x4E3B;&#x4F53;&#x662F;&#x5E8F;&#x5217;&#x5316;&#x540E;&#x7684; JSON &#x5B57;&#x7B26;&#x4E32;&#x3002;&#x7531;&#x4E8E; JSON &#x89C4;&#x8303;&#x7684;&#x6D41;&#x884C;&#xFF0C;&#x9664;&#x4E86;&#x4F4E;&#x7248;&#x672C; IE &#x4E4B;&#x5916;&#x7684;&#x5404;&#x5927;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x539F;&#x751F;&#x652F;&#x6301; JSON.stringify&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x8BED;&#x8A00;&#x4E5F;&#x90FD;&#x6709;&#x5904;&#x7406; JSON &#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F7F;&#x7528; JSON &#x4E0D;&#x4F1A;&#x9047;&#x4E0A;&#x4EC0;&#x4E48;&#x9EBB;&#x70E6;&#x3002;</p>
+<p>JSON &#x683C;&#x5F0F;&#x652F;&#x6301;&#x6BD4;&#x952E;&#x503C;&#x5BF9;&#x590D;&#x6742;&#x5F97;&#x591A;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x4E00;&#x70B9;&#x4E5F;&#x5F88;&#x6709;&#x7528;&#x3002;&#x8BB0;&#x5F97;&#x6211;&#x51E0;&#x5E74;&#x524D;&#x505A;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#x5C42;&#x6B21;&#x975E;&#x5E38;&#x6DF1;&#xFF0C;&#x6211;&#x5C31;&#x662F;&#x628A;&#x6570;&#x636E; JSON &#x5E8F;&#x5217;&#x5316;&#x4E4B;&#x540E;&#x6765;&#x63D0;&#x4EA4;&#x7684;&#x3002;&#x4E0D;&#x8FC7;&#x5F53;&#x65F6;&#x6211;&#x662F;&#x628A; JSON &#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A; val&#xFF0C;&#x4ECD;&#x7136;&#x653E;&#x5728;&#x952E;&#x503C;&#x5BF9;&#x91CC;&#xFF0C;&#x4EE5; x-www-form-urlencoded &#x65B9;&#x5F0F;&#x63D0;&#x4EA4;&#x3002;</p>
+<p>Google &#x7684; AngularJS &#x4E2D;&#x7684; Ajax &#x529F;&#x80FD;&#xFF0C;&#x9ED8;&#x8BA4;&#x5C31;&#x662F;&#x63D0;&#x4EA4; JSON &#x5B57;&#x7B26;&#x4E32;&#x3002;&#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;title&apos;</span><span class="token operator">:</span><span class="token string">&apos;test&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;sub&apos;</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+\$http<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x6700;&#x7EC8;&#x53D1;&#x9001;&#x7684;&#x8BF7;&#x6C42;&#x662F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">POST http://www.example.com HTTP/1.1
+Content-Type: application/json<span class="token punctuation">;</span><span class="token assign-left variable">charset</span><span class="token operator">=</span>utf-8
+
+<span class="token punctuation">{</span><span class="token string">&quot;title&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;test&quot;</span>,<span class="token string">&quot;sub&quot;</span>:<span class="token punctuation">[</span><span class="token number">1,2</span>,3<span class="token punctuation">]</span><span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x6848;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x63D0;&#x4EA4;&#x590D;&#x6742;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#xFF0C;&#x7279;&#x522B;&#x9002;&#x5408; RESTful &#x7684;&#x63A5;&#x53E3;&#x3002;&#x5404;&#x5927;&#x6293;&#x5305;&#x5DE5;&#x5177;&#x5982; Chrome &#x81EA;&#x5E26;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x3001;Firebug&#x3001;Fiddler&#xFF0C;&#x90FD;&#x4F1A;&#x4EE5;&#x6811;&#x5F62;&#x7ED3;&#x6784;&#x5C55;&#x793A; JSON &#x6570;&#x636E;&#xFF0C;&#x975E;&#x5E38;&#x53CB;&#x597D;&#x3002;&#x4F46;&#x4E5F;&#x6709;&#x4E9B;&#x670D;&#x52A1;&#x7AEF;&#x8BED;&#x8A00;&#x8FD8;&#x6CA1;&#x6709;&#x652F;&#x6301;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982; php &#x5C31;&#x65E0;&#x6CD5;&#x901A;&#x8FC7; $_POST &#x5BF9;&#x8C61;&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x8BF7;&#x6C42;&#x4E2D;&#x83B7;&#x5F97;&#x5185;&#x5BB9;&#x3002;&#x8FD9;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x5904;&#x7406;&#x4E0B;&#xFF1A;&#x5728;&#x8BF7;&#x6C42;&#x5934;&#x4E2D; Content-Type &#x4E3A; application/json &#x65F6;&#xFF0C;&#x4ECE; php://input &#x91CC;&#x83B7;&#x5F97;&#x539F;&#x59CB;&#x8F93;&#x5165;&#x6D41;&#xFF0C;&#x518D; json_decode &#x6210;&#x5BF9;&#x8C61;&#x3002;&#x4E00;&#x4E9B; php &#x6846;&#x67B6;&#x5DF2;&#x7ECF;&#x5F00;&#x59CB;&#x8FD9;&#x4E48;&#x505A;&#x4E86;&#x3002;</p>
+<p>&#x5F53;&#x7136; AngularJS &#x4E5F;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x4E3A;&#x4F7F;&#x7528; x-www-form-urlencoded &#x65B9;&#x5F0F;&#x63D0;&#x4EA4;&#x6570;&#x636E;&#x3002;&#x5982;&#x6709;&#x9700;&#x8981;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x3002;</p>
+<h4 id="textxml"><a name="textxml" class="anchor-navigation-ex-anchor" href="#textxml"><i class="fa fa-link" aria-hidden="true"></i></a>text/xml</h4>
+<p>&#x6211;&#x7684;&#x535A;&#x5BA2;&#x4E4B;&#x524D;&#x63D0;&#x5230;&#x8FC7; XML-RPC&#xFF08;XML Remote Procedure Call&#xFF09;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x79CD;&#x4F7F;&#x7528; HTTP &#x4F5C;&#x4E3A;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#xFF0C;XML &#x4F5C;&#x4E3A;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x7684;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#x89C4;&#x8303;&#x3002;&#x5178;&#x578B;&#x7684; XML-RPC &#x8BF7;&#x6C42;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<pre class="language-"><code>POST http://www.example.com HTTP/1.1
+Content-Type: text/xml
+</code></pre><pre class="language-"><code class="lang-xml"><span class="token prolog">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>methodCall</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>methodName</span><span class="token punctuation">&gt;</span></span>examples.getStateName<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>methodName</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>params</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i4</span><span class="token punctuation">&gt;</span></span>41<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i4</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>params</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>methodCall</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>XML-RPC &#x534F;&#x8BAE;&#x7B80;&#x5355;&#x3001;&#x529F;&#x80FD;&#x591F;&#x7528;&#xFF0C;&#x5404;&#x79CD;&#x8BED;&#x8A00;&#x7684;&#x5B9E;&#x73B0;&#x90FD;&#x6709;&#x3002;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x4E5F;&#x5F88;&#x5E7F;&#x6CDB;&#xFF0C;&#x5982; WordPress &#x7684; XML-RPC Api&#xFF0C;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x7684; ping &#x670D;&#x52A1;&#x7B49;&#x7B49;&#x3002;JavaScript &#x4E2D;&#xFF0C;&#x4E5F;&#x6709;&#x73B0;&#x6210;&#x7684;&#x5E93;&#x652F;&#x6301;&#x4EE5;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#xFF0C;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#x5DF2;&#x6709;&#x7684; XML-RPC &#x670D;&#x52A1;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x6211;&#x4E2A;&#x4EBA;&#x89C9;&#x5F97; XML &#x7ED3;&#x6784;&#x8FD8;&#x662F;&#x8FC7;&#x4E8E;&#x81C3;&#x80BF;&#xFF0C;&#x4E00;&#x822C;&#x573A;&#x666F;&#x7528; JSON &#x4F1A;&#x66F4;&#x7075;&#x6D3B;&#x65B9;&#x4FBF;&#x3002;</p>
+<h2 id="doc"><a name="doc" class="anchor-navigation-ex-anchor" href="#doc"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. doc</h2>
+<ul>
+<li><a href="https://imququ.com/post/four-ways-to-post-data-in-http.html" target="_blank">&#x56DB;&#x79CD;&#x5E38;&#x89C1;&#x7684; POST &#x63D0;&#x4EA4;&#x6570;&#x636E;&#x65B9;&#x5F0F;</a></li>
+</ul>
+</form></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="node中的query,params,body.html" class="navigation navigation-prev " aria-label="Previous page: node 中的 query,params,body">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="工具/node工具之http-proxy-middleware.html" class="navigation navigation-next " aria-label="Next page: node 工具之 http-proxy-middleware">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"node 常用 post 提交方式","level":"1.5.11","depth":2,"next":{"title":"node 工具之 http-proxy-middleware","level":"1.5.12","depth":2,"path":"nodejs/工具/node工具之http-proxy-middleware.md","ref":"nodejs/工具/node工具之http-proxy-middleware.md","articles":[]},"previous":{"title":"node 中的 query,params,body","level":"1.5.10","depth":2,"path":"nodejs/node中的query,params,body.md","ref":"nodejs/node中的query,params,body.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"nodejs/node常用post提交方式.md","mtime":"2020-01-24T07:36:55.067Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-24T07:36:57.854Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

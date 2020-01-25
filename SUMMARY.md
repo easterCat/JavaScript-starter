@@ -8,6 +8,7 @@
   - [单元测试](前端/单元测试/readme.md)
   - [http 响应码](前端/网络/http响应码.md)
   - [http 预览导图](前端/网络/http预览导图.md)
+  - [npm 安装 github 包的方式](前端/网络/npm安装github包的方式.md)
 - [js 基础](js基础/词法作用域/readme.md)
   - [词法作用域](js基础/词法作用域/readme.md)
   - [内存分配](js基础/内存分配/readme.md)

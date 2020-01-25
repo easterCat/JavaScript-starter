@@ -17,3 +17,10 @@
 ## 或者以 ssh 的方式
 
 `npm install git+ssh://github.com/easterCat/kiana-js.git`
+
+## 根据分支 clone
+
+```
+npm install git+ssh://git@github.com/easterCat/kiana-js#dev
+npm install git+https://github.com/easterCat/kiana-js#master
+```

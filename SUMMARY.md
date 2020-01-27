@@ -17,6 +17,8 @@
   - [类和对象](js基础/类和对象/readme.md)
   - [数据类型](js基础/数据类型/readme.md)
   - [js 事件机制](js基础/js事件机制/readme.md)
+- [ES6](js基础/ES6/Map和Set.md)
+  - [Map 和 Set](js基础/ES6/Map和Set.md)
 - [vue](vue/vue路由与keep-alive.md)
   - [vue 路由与 keep-alive](vue/vue路由与keep-alive.md)
   - [vue.use 的使用](vue/vue.use的使用.md)

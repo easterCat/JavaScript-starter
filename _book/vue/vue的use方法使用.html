@@ -1,0 +1,1617 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>vue 的 use 方法使用 · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="vue的指令,插件,混合.html" />
+    
+    
+    <link rel="prev" href="vue的路由与keep-alive.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    前端基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                <a href="../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                    
+                    学会使用 JavaScript 访问和修改 CSS 样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../前端/解决canvas在高清屏中模糊.html">
+            
+                <a href="../前端/解决canvas在高清屏中模糊.html">
+            
+                    
+                    解决 canvas 在高清屏中模糊
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../前端/js二进制数据互转.html">
+            
+                <a href="../前端/js二进制数据互转.html">
+            
+                    
+                    js 二进制数据互转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../前端/单元测试/readme.html">
+            
+                <a href="../前端/单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../前端/网络/http响应码.html">
+            
+                <a href="../前端/网络/http响应码.html">
+            
+                    
+                    http 响应码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../前端/网络/http预览导图.html">
+            
+                <a href="../前端/网络/http预览导图.html">
+            
+                    
+                    http 预览导图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../前端/npm安装github包的方式.html">
+            
+                <a href="../前端/npm安装github包的方式.html">
+            
+                    
+                    npm 安装 github 包的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../前端/浏览器渲染进程Renderer.html">
+            
+                <a href="../前端/浏览器渲染进程Renderer.html">
+            
+                    
+                    浏览器渲染进程 Renderer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../前端/移动端的踩坑问题.html">
+            
+                <a href="../前端/移动端的踩坑问题.html">
+            
+                    
+                    移动端的踩坑问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../前端/常用正则.html">
+            
+                <a href="../前端/常用正则.html">
+            
+                    
+                    常用正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../前端/vscode配置eslint.html">
+            
+                <a href="../前端/vscode配置eslint.html">
+            
+                    
+                    vscode 配置 eslint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    js 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../js基础/内存分配/readme.html">
+            
+                <a href="../js基础/内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../js基础/浏览器工作原理/readme.html">
+            
+                <a href="../js基础/浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../js基础/类和对象/readme.html">
+            
+                <a href="../js基础/类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../js基础/数据类型/readme.html">
+            
+                <a href="../js基础/数据类型/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../js基础/js事件机制/readme.html">
+            
+                <a href="../js基础/js事件机制/readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../js基础/ES6/Map和Set.html">
+            
+                <a href="../js基础/ES6/Map和Set.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../js基础/ES6/Map和Set.html">
+            
+                <a href="../js基础/ES6/Map和Set.html">
+            
+                    
+                    Map 和 Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="vue路由与keep-alive.md">
+            
+                <span>
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="vue的路由与keep-alive.html">
+            
+                <a href="vue的路由与keep-alive.html">
+            
+                    
+                    vue 的路由与 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="vue的use方法使用.html">
+            
+                <a href="vue的use方法使用.html">
+            
+                    
+                    vue 的 use 方法使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="vue的指令,插件,混合.html">
+            
+                <a href="vue的指令,插件,混合.html">
+            
+                    
+                    vue 的指令,插件,混合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="vue的简单实现.html">
+            
+                <a href="vue的简单实现.html">
+            
+                    
+                    vue 的简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="vue的基础.html">
+            
+                <a href="vue的基础.html">
+            
+                    
+                    vue 的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="vue的基础2.html">
+            
+                <a href="vue的基础2.html">
+            
+                    
+                    vue 的基础 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="vue的基础3.html">
+            
+                <a href="vue的基础3.html">
+            
+                    
+                    vue 的基础 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="vue的基础4.html">
+            
+                <a href="vue的基础4.html">
+            
+                    
+                    vue 的基础 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../nodejs/node写个helloworld.html">
+            
+                <a href="../nodejs/node写个helloworld.html">
+            
+                    
+                    nodejs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../nodejs/环境/reids安装配置.html">
+            
+                <a href="../nodejs/环境/reids安装配置.html">
+            
+                    
+                    reids 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../nodejs/环境/mysql安装配置.html">
+            
+                <a href="../nodejs/环境/mysql安装配置.html">
+            
+                    
+                    mysql 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../nodejs/环境/Elasticsearch安装配置.html">
+            
+                <a href="../nodejs/环境/Elasticsearch安装配置.html">
+            
+                    
+                    Elasticsearch 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../nodejs/node写个helloworld.html">
+            
+                <a href="../nodejs/node写个helloworld.html">
+            
+                    
+                    node 写个 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../nodejs/node的fs模块.html">
+            
+                <a href="../nodejs/node的fs模块.html">
+            
+                    
+                    node 的 fs 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../nodejs/用node写个爬虫.html">
+            
+                <a href="../nodejs/用node写个爬虫.html">
+            
+                    
+                    用 node 写个爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../nodejs/node实现静态文件服务器.html">
+            
+                <a href="../nodejs/node实现静态文件服务器.html">
+            
+                    
+                    node 实现静态文件服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../nodejs/nodejs文件路径.html">
+            
+                <a href="../nodejs/nodejs文件路径.html">
+            
+                    
+                    nodejs 文件路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../nodejs/node发起http请求.html">
+            
+                <a href="../nodejs/node发起http请求.html">
+            
+                    
+                    node 发起 http 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../nodejs/node中的query,params,body.html">
+            
+                <a href="../nodejs/node中的query,params,body.html">
+            
+                    
+                    node 中的 query,params,body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../nodejs/node常用post提交方式.html">
+            
+                <a href="../nodejs/node常用post提交方式.html">
+            
+                    
+                    node 常用 post 提交方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../nodejs/node的进程和线程.html">
+            
+                <a href="../nodejs/node的进程和线程.html">
+            
+                    
+                    node 的进程和线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                <a href="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                <a href="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具之 http-proxy-middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../nodejs/工具/node工具之node-ip.html">
+            
+                <a href="../nodejs/工具/node工具之node-ip.html">
+            
+                    
+                    node 工具之 node-ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../nodejs/工具/node工具之nodemon.html">
+            
+                <a href="../nodejs/工具/node工具之nodemon.html">
+            
+                    
+                    node 工具之 nodemon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../nodejs/工具/node工具之pm2.html">
+            
+                <a href="../nodejs/工具/node工具之pm2.html">
+            
+                    
+                    node 工具之 pm2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../nodejs/工具/node工具之commander.html">
+            
+                <a href="../nodejs/工具/node工具之commander.html">
+            
+                    
+                    node 工具之 commander
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">java 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Java基础/">
+            
+                <a href="../Java基础/">
+            
+                    
+                    java 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Java基础/变量的类型.html">
+            
+                <a href="../Java基础/变量的类型.html">
+            
+                    
+                    变量的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Java基础/基本数据类型.html">
+            
+                <a href="../Java基础/基本数据类型.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Java基础/修饰符.html">
+            
+                <a href="../Java基础/修饰符.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Java基础/运算符.html">
+            
+                <a href="../Java基础/运算符.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Java基础/条件语句.html">
+            
+                <a href="../Java基础/条件语句.html">
+            
+                    
+                    条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Java基础/循环结构.html">
+            
+                <a href="../Java基础/循环结构.html">
+            
+                    
+                    循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Java基础/switch语句.html">
+            
+                <a href="../Java基础/switch语句.html">
+            
+                    
+                    switch 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Java基础/数组.html">
+            
+                <a href="../Java基础/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../Java基础/字符串.html">
+            
+                <a href="../Java基础/字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../Java基础/Character类.html">
+            
+                <a href="../Java基础/Character类.html">
+            
+                    
+                    Character 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../Java基础/正则表达式.html">
+            
+                <a href="../Java基础/正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../Java基础/流,文件和IO.html">
+            
+                <a href="../Java基础/流,文件和IO.html">
+            
+                    
+                    流,文件和 IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                <a href="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                    
+                    StringBuffer 和 StringBuilder 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="../Java基础/Collection.html">
+            
+                <a href="../Java基础/Collection.html">
+            
+                    
+                    Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.15" data-path="../Java基础/map.html">
+            
+                <a href="../Java基础/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="../Java基础/list.html">
+            
+                <a href="../Java基础/list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" data-path="../Java基础/多线程编程.html">
+            
+                <a href="../Java基础/多线程编程.html">
+            
+                    
+                    多线程编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.18" data-path="../Java基础/泛型.html">
+            
+                <a href="../Java基础/泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    maven 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../spring/tomcat安装配置.html">
+            
+                <a href="../spring/tomcat安装配置.html">
+            
+                    
+                    tomcat 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../spring/intellij安装配置.html">
+            
+                <a href="../spring/intellij安装配置.html">
+            
+                    
+                    intellij 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../spring/spring创建helloworld.html">
+            
+                <a href="../spring/spring创建helloworld.html">
+            
+                    
+                    spring 创建 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构与算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../数据结构与算法/">
+            
+                <a href="../数据结构与算法/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../数据结构与算法/线性表.html">
+            
+                <a href="../数据结构与算法/线性表.html">
+            
+                    
+                    线性表(数组,队列,栈,链表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../数据结构与算法/Java排序算法.html">
+            
+                <a href="../数据结构与算法/Java排序算法.html">
+            
+                    
+                    Java 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Java练习题/">
+            
+                <a href="../Java练习题/">
+            
+                    
+                    Java 练习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../Java练习题/指定范围包含的素数.html">
+            
+                <a href="../Java练习题/指定范围包含的素数.html">
+            
+                    
+                    指定范围包含的素数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../Java练习题/公约数和公倍数.html">
+            
+                <a href="../Java练习题/公约数和公倍数.html">
+            
+                    
+                    公约数和公倍数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    leetcode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    scripto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../scripto/中间件模式.html">
+            
+                <a href="../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../scripto/m长度的都是n的数组.html">
+            
+                <a href="../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >vue 的 use 方法使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#vueuse"><b>1.1. </b>Vue.use()</a></li><li><span class="title-icon "></span><a href="#vueuse&#x6E90;&#x7801;"><b>1.2. </b>vue.use()&#x6E90;&#x7801;</a></li><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>1.3. </b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="vueuse"><a name="vueuse" class="anchor-navigation-ex-anchor" href="#vueuse"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Vue.use()</h2>
+<p>vue.use()&#x7684;&#x4F5C;&#x7528;&#xFF1A;
+&#x5B98;&#x65B9;&#x6587;&#x6863;&#x7684;&#x89E3;&#x91CA;&#xFF1A;</p>
+<p>&#x5B89;&#x88C5; Vue.js &#x63D2;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x63D2;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5FC5;&#x987B;&#x63D0;&#x4F9B; install &#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x63D2;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x4F1A;&#x88AB;&#x4F5C;&#x4E3A; install &#x65B9;&#x6CD5;&#x3002;install &#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x4F1A;&#x5C06; Vue &#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x3002;
+vue.use()&#x4F7F;&#x7528;&#x60C5;&#x666F;:
+&#x53EF;&#x4EE5;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528; vue.use()&#x5168;&#x5C40;&#x6CE8;&#x5165;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#xFF0C;&#x4ECE;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#x6587;&#x4EF6;&#x4E2D; import &#x63D2;&#x4EF6;&#x3002;&#x4F8B;&#x5982;&#xFF1A;
+&#x4E0D;&#x4F7F;&#x7528; vue.use()&#x6CE8;&#x5165;&#x63D2;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> utils <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./utils&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x6216;&#x8005;</span>
+<span class="token keyword">import</span> utils <span class="token keyword">from</span> <span class="token string">&quot;./utils&quot;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4F7F;&#x7528; vue.use()&#x6CE8;&#x5165;&#x63D2;&#x4EF6;&#xFF0C;&#x6700;&#x5178;&#x578B;&#x7684;&#x6848;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Router <span class="token keyword">from</span> <span class="token string">&quot;vue-router&quot;</span><span class="token punctuation">;</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Router<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x7EC4;&#x4EF6;&#x65B9;&#x6CD5;&#x653E;&#x5165;&#x5176;&#x4ED6;&#x6587;&#x4EF6;,&#x5C31;&#x5B9A;&#x4E49; install:</p>
+<p>&#x5BF9;&#x8C61;&#x65B9;&#x5F0F;:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> MyFilter <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">install</span><span class="token operator">:</span> <span class="token parameter">Vue</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x9ED8;&#x8BA4;&#x8FC7;&#x6EE4;&#x51FD;&#x6570;,&#x6570;&#x636E;&#x4E0D;&#x5B58;&#x5728;&#x6216;&#x8005;&#x4E3A;&#x7A7A;&#x65F6;&#x663E;&#x793A;&apos;-&apos;</span>
+    Vue<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">&quot;filterValue&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>val <span class="token operator">||</span> val <span class="token operator">===</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">&quot;-&quot;</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> val<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> MyFilter<span class="token punctuation">;</span>
+</code></pre>
+<p>&#x51FD;&#x6570;&#x65B9;&#x5F0F;:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> <span class="token function-variable function">install</span> <span class="token operator">=</span> <span class="token parameter">Vue</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// &#x9ED8;&#x8BA4;&#x8FC7;&#x6EE4;&#x51FD;&#x6570;,&#x6570;&#x636E;&#x4E0D;&#x5B58;&#x5728;&#x6216;&#x8005;&#x4E3A;&#x7A7A;&#x65F6;&#x663E;&#x793A;&apos;-&apos;</span>
+  Vue<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">&quot;filterValue&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>val <span class="token operator">||</span> val <span class="token operator">===</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">&quot;-&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> val<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> install<span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x4E86; vue.use()&#x6CE8;&#x518C;&#x63D2;&#x4EF6;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x6240;&#x6709;&#x7684; vue &#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x8DEF;&#x7531;&#xFF1A;<code>this.$route</code></p>
+<h2 id="vueuse&#x6E90;&#x7801;"><a name="vueuse&#x6E90;&#x7801;" class="anchor-navigation-ex-anchor" href="#vueuse&#x6E90;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. vue.use()&#x6E90;&#x7801;</h2>
+<p>&#x4E0B;&#x9762;&#x5207;&#x5165;&#x672C;&#x6587;&#x7684;&#x4E3B;&#x9898;&#x3002;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x4E86; vue.use()&#x600E;&#x4E48;&#x7528;&#x8FD8;&#x4E0D;&#x591F;&#xFF0C;&#x8FD8;&#x8981;&#x77E5;&#x9053;&#x5B83;&#x7684;&#x5185;&#x90E8;&#x662F;&#x600E;&#x4E48;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x4E0B;&#x9762;&#x5C55;&#x793A;&#x6E90;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> toArray <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;../util/index&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">initUse</span><span class="token punctuation">(</span><span class="token parameter">Vue<span class="token operator">:</span> GlobalAPI</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Vue<span class="token punctuation">.</span><span class="token function-variable function">use</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">plugin<span class="token operator">:</span> Function <span class="token operator">|</span> Object</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> installedPlugins <span class="token operator">=</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>\_installedPlugins <span class="token operator">||</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>\_installedPlugins <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>installedPlugins<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>plugin<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// additional parameters</span>
+    <span class="token keyword">const</span> args <span class="token operator">=</span> <span class="token function">toArray</span><span class="token punctuation">(</span>arguments<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    args<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> plugin<span class="token punctuation">.</span>install <span class="token operator">===</span> <span class="token string">&quot;function&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      plugin<span class="token punctuation">.</span><span class="token function">install</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>plugin<span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> plugin <span class="token operator">===</span> <span class="token string">&quot;function&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">plugin</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    installedPlugins<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>plugin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>vue.use()&#x6E90;&#x7801;&#x4E2D;&#x91C7;&#x7528;&#x4E86; flow &#x7684;&#x8BED;&#x6CD5;&#x3002;flow &#x8BED;&#x6CD5;&#xFF0C;&#x5B98;&#x65B9;&#x89E3;&#x91CA;&#x662F;&#xFF1A;</p>
+<blockquote>
+<p>Flow is a static type checker for your JavaScript code. It does a lot of work to make you more productive. Making you code faster, smarter, more confidently, and to a bigger scale.&#x7B80;&#x5355;&#x7684;&#x610F;&#x601D;&#x5C31;&#x662F; flow &#x662F; JavaScript &#x4EE3;&#x7801;&#x7684;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x5DE5;&#x5177;&#x3002;&#x4F7F;&#x7528; flow &#x7684;&#x597D;&#x5904;&#x5C31;&#x662F;&#xFF1A;&#x5728;&#x7F16;&#x8BD1;&#x671F;&#x5BF9; js &#x4EE3;&#x7801;&#x53D8;&#x91CF;&#x505A;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#xFF0C;&#x7F29;&#x77ED;&#x8C03;&#x8BD5;&#x65F6;&#x95F4;&#xFF0C; &#x51CF;&#x5C11;&#x56E0;&#x7C7B;&#x578B;&#x9519;&#x8BEF;&#x5F15;&#x8D77;&#x7684; bug&#x3002;&#x6211;&#x4EEC;&#x90FD;&#x77E5;&#x9053; js &#x662F;&#x89E3;&#x91CA;&#x6267;&#x884C;&#x8BED;&#x8A00;&#xFF0C;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x624D;&#x68C0;&#x67E5;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#xFF0C;flow &#x53EF;&#x4EE5;&#x5728;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x5C31;&#x5BF9; js &#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x3002;</p>
+</blockquote>
+<p>&#x4E0B;&#x9762;&#x5C06;&#x5BF9; vue.use()&#x6E90;&#x7801;&#x8FDB;&#x884C;&#x89E3;&#x8BFB;&#xFF1A;</p>
+<p>1&#x3001;&#x9996;&#x5148;&#x5148;&#x5224;&#x65AD;&#x63D2;&#x4EF6; plugin &#x662F;&#x5426;&#x662F;&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x51FD;&#x6570;&#xFF1A;
+<code>Vue.use = function (plugin: Function | Object)</code></p>
+<p>2&#x3001;&#x5224;&#x65AD; vue &#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x6CE8;&#x518C;&#x8FC7;&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;
+<code>installedPlugins.indexOf(plugin) &gt; -1</code>
+&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x6CE8;&#x518C;&#x8FC7;&#xFF0C;&#x8DF3;&#x51FA;&#x65B9;&#x6CD5;</p>
+<p>3&#x3001;&#x53D6; vue.use &#x53C2;&#x6570;&#x3002;
+<code>const args = toArray(arguments, 1)</code></p>
+<p>4&#x3001;toArray()&#x53D6;&#x53C2;&#x6570;
+&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">toArray</span><span class="token punctuation">(</span><span class="token parameter">list<span class="token operator">:</span> any<span class="token punctuation">,</span> start<span class="token operator">?</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span><span class="token operator">:</span> Array<span class="token operator">&lt;</span>any<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  start <span class="token operator">=</span> start <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> i <span class="token operator">=</span> list<span class="token punctuation">.</span>length <span class="token operator">-</span> start<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> ret<span class="token operator">:</span> Array<span class="token operator">&lt;</span>any<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ret<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> list<span class="token punctuation">[</span>i <span class="token operator">+</span> start<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> ret<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><code>let i = list.length - start</code> &#x610F;&#x601D;&#x662F; vue.use()&#x65B9;&#x6CD5;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5916;&#xFF08;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x63D2;&#x4EF6; plugin&#xFF09;&#xFF0C;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x90FD;&#x5B58;&#x50A8;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x5C06; vue &#x5BF9;&#x8C61;&#x63D2;&#x5165;&#x5230;&#x53C2;&#x6570;&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x4F4D;&#x3002;&#x6700;&#x540E;&#x53C2;&#x6570;&#x6570;&#x7EC4;&#x5C31;&#x662F;[vue,arg1,arg2,...]&#x3002;</p>
+<p>5&#x3001;&#x5224;&#x65AD;&#x63D2;&#x4EF6;&#x662F;&#x5426;&#x6709; install &#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5C31;&#x6267;&#x884C; install()&#x65B9;&#x6CD5;&#x3002;&#x6CA1;&#x6709;&#x5C31;&#x76F4;&#x63A5;&#x628A; plugin &#x5F53; Install &#x6267;&#x884C;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> plugin<span class="token punctuation">.</span>install <span class="token operator">===</span> <span class="token string">&quot;function&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  plugin<span class="token punctuation">.</span><span class="token function">install</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>plugin<span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> plugin <span class="token operator">===</span> <span class="token string">&quot;function&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">plugin</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>plugin.install.apply(plugin, args)&#x5C06; install &#x65B9;&#x6CD5;&#x7ED1;&#x5B9A;&#x5728; plugin &#x73AF;&#x5883;&#x4E2D;&#x6267;&#x884C;&#xFF0C;&#x5E76;&#x4E14;&#x4F20;&#x5165; args &#x53C2;&#x6570;&#x6570;&#x7EC4;&#x8FDB; install &#x65B9;&#x6CD5;&#x3002;&#x6B64;&#x65F6; install &#x65B9;&#x6CD5;&#x5185;&#x7684; this &#x6307;&#x5411; plugin &#x5BF9;&#x8C61;&#x3002;plugin.apply(null, args) plugin &#x5185;&#x7684; this &#x6307;&#x5411; null.</p>
+<p>&#x6700;&#x540E;&#x544A;&#x77E5; vue &#x8BE5;&#x63D2;&#x4EF6;&#x5DF2;&#x7ECF;&#x6CE8;&#x518C;&#x8FC7; installedPlugins.push(plugin)&#x4FDD;&#x8BC1;&#x6BCF;&#x4E2A;&#x63D2;&#x4EF6;&#x53EA;&#x4F1A;&#x6CE8;&#x518C;&#x4E00;&#x6B21;&#x3002;</p>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x603B;&#x7ED3;</h2>
+<p>&#x4F7F;&#x7528; vue.use()&#x6CE8;&#x518C;&#x63D2;&#x4EF6;&#xFF0C;&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5E26;&#x6709; install &#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x4E0D;&#x7BA1;&#x662F;&#x51FD;&#x6570;&#x8FD8;&#x662F; install &#x65B9;&#x6CD5;,&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x603B;&#x662F; vue &#x5BF9;&#x8C61;&#x3002;&#x4E2A;&#x4EBA;&#x8FD8;&#x662F;&#x559C;&#x6B22;&#x4F7F;&#x7528;&#x5C06;&#x63D2;&#x4EF6;&#x7684;&#x529F;&#x80FD;&#x65B9;&#x6CD5;&#x5199;&#x5728; install &#x65B9;&#x6CD5;&#x91CC;&#x3002;&#x56E0;&#x4E3A; install &#x5185;&#x7684; this &#x6307;&#x5411;&#x7684;&#x662F; plugin &#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#xFF0C;&#x6269;&#x5C55;&#x6027;&#x66F4;&#x597D;&#x3002;</p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="vue的路由与keep-alive.html" class="navigation navigation-prev " aria-label="Previous page: vue 的路由与 keep-alive">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="vue的指令,插件,混合.html" class="navigation navigation-next " aria-label="Next page: vue 的指令,插件,混合">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"vue 的 use 方法使用","level":"1.5.2","depth":2,"next":{"title":"vue 的指令,插件,混合","level":"1.5.3","depth":2,"path":"vue/vue的指令,插件,混合.md","ref":"vue/vue的指令,插件,混合.md","articles":[]},"previous":{"title":"vue 的路由与 keep-alive","level":"1.5.1","depth":2,"path":"vue/vue的路由与keep-alive.md","ref":"vue/vue的路由与keep-alive.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"vue/vue的use方法使用.md","mtime":"2020-01-28T14:08:32.161Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-28T14:08:57.897Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

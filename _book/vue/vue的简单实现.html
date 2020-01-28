@@ -1,0 +1,1801 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>vue 的简单实现 · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="vue的基础.html" />
+    
+    
+    <link rel="prev" href="vue的指令,插件,混合.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    前端基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                <a href="../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                    
+                    学会使用 JavaScript 访问和修改 CSS 样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../前端/解决canvas在高清屏中模糊.html">
+            
+                <a href="../前端/解决canvas在高清屏中模糊.html">
+            
+                    
+                    解决 canvas 在高清屏中模糊
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../前端/js二进制数据互转.html">
+            
+                <a href="../前端/js二进制数据互转.html">
+            
+                    
+                    js 二进制数据互转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../前端/单元测试/readme.html">
+            
+                <a href="../前端/单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../前端/网络/http响应码.html">
+            
+                <a href="../前端/网络/http响应码.html">
+            
+                    
+                    http 响应码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../前端/网络/http预览导图.html">
+            
+                <a href="../前端/网络/http预览导图.html">
+            
+                    
+                    http 预览导图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../前端/npm安装github包的方式.html">
+            
+                <a href="../前端/npm安装github包的方式.html">
+            
+                    
+                    npm 安装 github 包的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../前端/浏览器渲染进程Renderer.html">
+            
+                <a href="../前端/浏览器渲染进程Renderer.html">
+            
+                    
+                    浏览器渲染进程 Renderer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../前端/移动端的踩坑问题.html">
+            
+                <a href="../前端/移动端的踩坑问题.html">
+            
+                    
+                    移动端的踩坑问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../前端/常用正则.html">
+            
+                <a href="../前端/常用正则.html">
+            
+                    
+                    常用正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../前端/vscode配置eslint.html">
+            
+                <a href="../前端/vscode配置eslint.html">
+            
+                    
+                    vscode 配置 eslint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    js 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../js基础/内存分配/readme.html">
+            
+                <a href="../js基础/内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../js基础/浏览器工作原理/readme.html">
+            
+                <a href="../js基础/浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../js基础/类和对象/readme.html">
+            
+                <a href="../js基础/类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../js基础/数据类型/readme.html">
+            
+                <a href="../js基础/数据类型/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../js基础/js事件机制/readme.html">
+            
+                <a href="../js基础/js事件机制/readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../js基础/ES6/Map和Set.html">
+            
+                <a href="../js基础/ES6/Map和Set.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../js基础/ES6/Map和Set.html">
+            
+                <a href="../js基础/ES6/Map和Set.html">
+            
+                    
+                    Map 和 Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="vue路由与keep-alive.md">
+            
+                <span>
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="vue的路由与keep-alive.html">
+            
+                <a href="vue的路由与keep-alive.html">
+            
+                    
+                    vue 的路由与 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="vue的use方法使用.html">
+            
+                <a href="vue的use方法使用.html">
+            
+                    
+                    vue 的 use 方法使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="vue的指令,插件,混合.html">
+            
+                <a href="vue的指令,插件,混合.html">
+            
+                    
+                    vue 的指令,插件,混合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.4" data-path="vue的简单实现.html">
+            
+                <a href="vue的简单实现.html">
+            
+                    
+                    vue 的简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="vue的基础.html">
+            
+                <a href="vue的基础.html">
+            
+                    
+                    vue 的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="vue的基础2.html">
+            
+                <a href="vue的基础2.html">
+            
+                    
+                    vue 的基础 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="vue的基础3.html">
+            
+                <a href="vue的基础3.html">
+            
+                    
+                    vue 的基础 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="vue的基础4.html">
+            
+                <a href="vue的基础4.html">
+            
+                    
+                    vue 的基础 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../nodejs/node写个helloworld.html">
+            
+                <a href="../nodejs/node写个helloworld.html">
+            
+                    
+                    nodejs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../nodejs/环境/reids安装配置.html">
+            
+                <a href="../nodejs/环境/reids安装配置.html">
+            
+                    
+                    reids 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../nodejs/环境/mysql安装配置.html">
+            
+                <a href="../nodejs/环境/mysql安装配置.html">
+            
+                    
+                    mysql 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../nodejs/环境/Elasticsearch安装配置.html">
+            
+                <a href="../nodejs/环境/Elasticsearch安装配置.html">
+            
+                    
+                    Elasticsearch 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../nodejs/node写个helloworld.html">
+            
+                <a href="../nodejs/node写个helloworld.html">
+            
+                    
+                    node 写个 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../nodejs/node的fs模块.html">
+            
+                <a href="../nodejs/node的fs模块.html">
+            
+                    
+                    node 的 fs 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../nodejs/用node写个爬虫.html">
+            
+                <a href="../nodejs/用node写个爬虫.html">
+            
+                    
+                    用 node 写个爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../nodejs/node实现静态文件服务器.html">
+            
+                <a href="../nodejs/node实现静态文件服务器.html">
+            
+                    
+                    node 实现静态文件服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../nodejs/nodejs文件路径.html">
+            
+                <a href="../nodejs/nodejs文件路径.html">
+            
+                    
+                    nodejs 文件路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../nodejs/node发起http请求.html">
+            
+                <a href="../nodejs/node发起http请求.html">
+            
+                    
+                    node 发起 http 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../nodejs/node中的query,params,body.html">
+            
+                <a href="../nodejs/node中的query,params,body.html">
+            
+                    
+                    node 中的 query,params,body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../nodejs/node常用post提交方式.html">
+            
+                <a href="../nodejs/node常用post提交方式.html">
+            
+                    
+                    node 常用 post 提交方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../nodejs/node的进程和线程.html">
+            
+                <a href="../nodejs/node的进程和线程.html">
+            
+                    
+                    node 的进程和线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                <a href="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                <a href="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具之 http-proxy-middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../nodejs/工具/node工具之node-ip.html">
+            
+                <a href="../nodejs/工具/node工具之node-ip.html">
+            
+                    
+                    node 工具之 node-ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../nodejs/工具/node工具之nodemon.html">
+            
+                <a href="../nodejs/工具/node工具之nodemon.html">
+            
+                    
+                    node 工具之 nodemon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../nodejs/工具/node工具之pm2.html">
+            
+                <a href="../nodejs/工具/node工具之pm2.html">
+            
+                    
+                    node 工具之 pm2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../nodejs/工具/node工具之commander.html">
+            
+                <a href="../nodejs/工具/node工具之commander.html">
+            
+                    
+                    node 工具之 commander
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">java 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Java基础/">
+            
+                <a href="../Java基础/">
+            
+                    
+                    java 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Java基础/变量的类型.html">
+            
+                <a href="../Java基础/变量的类型.html">
+            
+                    
+                    变量的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Java基础/基本数据类型.html">
+            
+                <a href="../Java基础/基本数据类型.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Java基础/修饰符.html">
+            
+                <a href="../Java基础/修饰符.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Java基础/运算符.html">
+            
+                <a href="../Java基础/运算符.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Java基础/条件语句.html">
+            
+                <a href="../Java基础/条件语句.html">
+            
+                    
+                    条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Java基础/循环结构.html">
+            
+                <a href="../Java基础/循环结构.html">
+            
+                    
+                    循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Java基础/switch语句.html">
+            
+                <a href="../Java基础/switch语句.html">
+            
+                    
+                    switch 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Java基础/数组.html">
+            
+                <a href="../Java基础/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../Java基础/字符串.html">
+            
+                <a href="../Java基础/字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../Java基础/Character类.html">
+            
+                <a href="../Java基础/Character类.html">
+            
+                    
+                    Character 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../Java基础/正则表达式.html">
+            
+                <a href="../Java基础/正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../Java基础/流,文件和IO.html">
+            
+                <a href="../Java基础/流,文件和IO.html">
+            
+                    
+                    流,文件和 IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                <a href="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                    
+                    StringBuffer 和 StringBuilder 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="../Java基础/Collection.html">
+            
+                <a href="../Java基础/Collection.html">
+            
+                    
+                    Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.15" data-path="../Java基础/map.html">
+            
+                <a href="../Java基础/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="../Java基础/list.html">
+            
+                <a href="../Java基础/list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" data-path="../Java基础/多线程编程.html">
+            
+                <a href="../Java基础/多线程编程.html">
+            
+                    
+                    多线程编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.18" data-path="../Java基础/泛型.html">
+            
+                <a href="../Java基础/泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    maven 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../spring/tomcat安装配置.html">
+            
+                <a href="../spring/tomcat安装配置.html">
+            
+                    
+                    tomcat 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../spring/intellij安装配置.html">
+            
+                <a href="../spring/intellij安装配置.html">
+            
+                    
+                    intellij 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../spring/spring创建helloworld.html">
+            
+                <a href="../spring/spring创建helloworld.html">
+            
+                    
+                    spring 创建 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构与算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../数据结构与算法/">
+            
+                <a href="../数据结构与算法/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../数据结构与算法/线性表.html">
+            
+                <a href="../数据结构与算法/线性表.html">
+            
+                    
+                    线性表(数组,队列,栈,链表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../数据结构与算法/Java排序算法.html">
+            
+                <a href="../数据结构与算法/Java排序算法.html">
+            
+                    
+                    Java 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Java练习题/">
+            
+                <a href="../Java练习题/">
+            
+                    
+                    Java 练习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../Java练习题/指定范围包含的素数.html">
+            
+                <a href="../Java练习题/指定范围包含的素数.html">
+            
+                    
+                    指定范围包含的素数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../Java练习题/公约数和公倍数.html">
+            
+                <a href="../Java练习题/公约数和公倍数.html">
+            
+                    
+                    公约数和公倍数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    leetcode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    scripto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../scripto/中间件模式.html">
+            
+                <a href="../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../scripto/m长度的都是n的数组.html">
+            
+                <a href="../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >vue 的简单实现</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x51E0;&#x79CD;&#x5B9E;&#x73B0;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x7684;&#x505A;&#x6CD5;"><b>1.1. </b>&#x51E0;&#x79CD;&#x5B9E;&#x73B0;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x7684;&#x505A;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#vue-&#x57FA;&#x672C;&#x6784;&#x6210;"><b>1.2. </b>vue &#x57FA;&#x672C;&#x6784;&#x6210;</a></li><li><span class="title-icon "></span><a href="#&#x76D1;&#x542C;&#x5668;-observer"><b>1.3. </b>&#x76D1;&#x542C;&#x5668; Observer</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6790;&#x5668;-compile"><b>1.4. </b>&#x89E3;&#x6790;&#x5668; Compile</a></li><li><span class="title-icon "></span><a href="#&#x8BA2;&#x9605;&#x8005;-watcher"><b>1.5. </b>&#x8BA2;&#x9605;&#x8005; Watcher</a></li><li><span class="title-icon "></span><a href="#&#x4F9D;&#x8D56;&#x6536;&#x96C6;-dep"><b>1.6. </b>&#x4F9D;&#x8D56;&#x6536;&#x96C6; Dep</a></li><li><span class="title-icon "></span><a href="#mvvm-&#x53CC;&#x5411;&#x7ED1;&#x5B9A;"><b>1.7. </b>mvvm &#x53CC;&#x5411;&#x7ED1;&#x5B9A;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x6863;"><b>1.8. </b>&#x6587;&#x6863;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x51E0;&#x79CD;&#x5B9E;&#x73B0;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x7684;&#x505A;&#x6CD5;"><a name="&#x51E0;&#x79CD;&#x5B9E;&#x73B0;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x7684;&#x505A;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x51E0;&#x79CD;&#x5B9E;&#x73B0;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x7684;&#x505A;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x51E0;&#x79CD;&#x5B9E;&#x73B0;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x7684;&#x505A;&#x6CD5;</h2>
+<p>&#x76EE;&#x524D;&#x51E0;&#x79CD;&#x4E3B;&#x6D41;&#x7684; mvc(vm)&#x6846;&#x67B6;&#x90FD;&#x5B9E;&#x73B0;&#x4E86;&#x5355;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF0C;&#x800C;&#x6211;&#x6240;&#x7406;&#x89E3;&#x7684;&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x65E0;&#x975E;&#x5C31;&#x662F;&#x5728;&#x5355;&#x5411;&#x7ED1;&#x5B9A;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x7ED9;&#x53EF;&#x8F93;&#x5165;&#x5143;&#x7D20;&#xFF08;input&#x3001;textare &#x7B49;&#xFF09;&#x6DFB;&#x52A0;&#x4E86; change(input)&#x4E8B;&#x4EF6;&#xFF0C;&#x6765;&#x52A8;&#x6001;&#x4FEE;&#x6539; model &#x548C; view&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x591A;&#x9AD8;&#x6DF1;&#x3002;&#x6240;&#x4EE5;&#x65E0;&#x9700;&#x592A;&#x8FC7;&#x4ECB;&#x6000;&#x662F;&#x5B9E;&#x73B0;&#x7684;&#x5355;&#x5411;&#x6216;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x3002;</p>
+<p>&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7684;&#x505A;&#x6CD5;&#x6709;&#x5927;&#x81F4;&#x5982;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>&#x53D1;&#x5E03;&#x8005;-&#x8BA2;&#x9605;&#x8005;&#x6A21;&#x5F0F;&#xFF08;backbone.js&#xFF09;</li>
+<li>&#x810F;&#x503C;&#x68C0;&#x67E5;&#xFF08;angular.js&#xFF09;</li>
+<li>&#x6570;&#x636E;&#x52AB;&#x6301;&#xFF08;vue.js&#xFF09;</li>
+</ul>
+<p>&#x53D1;&#x5E03;&#x8005;-&#x8BA2;&#x9605;&#x8005;&#x6A21;&#x5F0F;: &#x4E00;&#x822C;&#x901A;&#x8FC7; sub, pub &#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x548C;&#x89C6;&#x56FE;&#x7684;&#x7ED1;&#x5B9A;&#x76D1;&#x542C;&#xFF0C;&#x66F4;&#x65B0;&#x6570;&#x636E;&#x65B9;&#x5F0F;&#x901A;&#x5E38;&#x505A;&#x6CD5;&#x662F; vm.set(&apos;property&apos;, value)&#xFF0C;&#x8FD9;&#x91CC;&#x6709;&#x7BC7;&#x6587;&#x7AE0;&#x8BB2;&#x7684;&#x6BD4;&#x8F83;&#x8BE6;&#x7EC6;&#xFF0C;&#x6709;&#x5174;&#x8DA3;&#x53EF;&#x70B9;&#x8FD9;&#x91CC;</p>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x73B0;&#x5728;&#x6BD5;&#x7ADF;&#x592A; low &#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x66F4;&#x5E0C;&#x671B;&#x901A;&#x8FC7; vm.property = value &#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x66F4;&#x65B0;&#x6570;&#x636E;&#xFF0C;&#x540C;&#x65F6;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#xFF0C;&#x4E8E;&#x662F;&#x6709;&#x4E86;&#x4E0B;&#x9762;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;</p>
+<p>&#x810F;&#x503C;&#x68C0;&#x67E5;: angular.js &#x662F;&#x901A;&#x8FC7;&#x810F;&#x503C;&#x68C0;&#x6D4B;&#x7684;&#x65B9;&#x5F0F;&#x6BD4;&#x5BF9;&#x6570;&#x636E;&#x662F;&#x5426;&#x6709;&#x53D8;&#x66F4;&#xFF0C;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#xFF0C;&#x6700;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x901A;&#x8FC7; setInterval() &#x5B9A;&#x65F6;&#x8F6E;&#x8BE2;&#x68C0;&#x6D4B;&#x6570;&#x636E;&#x53D8;&#x52A8;&#xFF0C;&#x5F53;&#x7136; Google &#x4E0D;&#x4F1A;&#x8FD9;&#x4E48; low&#xFF0C;angular &#x53EA;&#x6709;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x65F6;&#x8FDB;&#x5165;&#x810F;&#x503C;&#x68C0;&#x6D4B;&#xFF0C;&#x5927;&#x81F4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>DOM &#x4E8B;&#x4EF6;&#xFF0C;&#x8B6C;&#x5982;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6587;&#x672C;&#xFF0C;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x7B49;&#x3002;( ng-click )</li>
+<li>XHR &#x54CD;&#x5E94;&#x4E8B;&#x4EF6; ( $http )</li>
+<li>&#x6D4F;&#x89C8;&#x5668; Location &#x53D8;&#x66F4;&#x4E8B;&#x4EF6; ( $location )</li>
+<li>Timer &#x4E8B;&#x4EF6;( $timeout , $interval )</li>
+<li>&#x6267;&#x884C; $digest() &#x6216; $apply()</li>
+</ul>
+<p>&#x6570;&#x636E;&#x52AB;&#x6301;: vue.js &#x5219;&#x662F;&#x91C7;&#x7528;&#x6570;&#x636E;&#x52AB;&#x6301;&#x7ED3;&#x5408;&#x53D1;&#x5E03;&#x8005;-&#x8BA2;&#x9605;&#x8005;&#x6A21;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7; Object.defineProperty()&#x6765;&#x52AB;&#x6301;&#x5404;&#x4E2A;&#x5C5E;&#x6027;&#x7684; setter&#xFF0C;getter&#xFF0C;&#x5728;&#x6570;&#x636E;&#x53D8;&#x52A8;&#x65F6;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#x7ED9;&#x8BA2;&#x9605;&#x8005;&#xFF0C;&#x89E6;&#x53D1;&#x76F8;&#x5E94;&#x7684;&#x76D1;&#x542C;&#x56DE;&#x8C03;&#x3002;</p>
+<h2 id="vue-&#x57FA;&#x672C;&#x6784;&#x6210;"><a name="vue-&#x57FA;&#x672C;&#x6784;&#x6210;" class="anchor-navigation-ex-anchor" href="#vue-&#x57FA;&#x672C;&#x6784;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. vue &#x57FA;&#x672C;&#x6784;&#x6210;</h2>
+<ul>
+<li>Observer &#x6570;&#x636E;&#x76D1;&#x542C;&#x5668;,&#x5BF9;&#x6570;&#x636E;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x76D1;&#x542C;,&#x6570;&#x636E;&#x53D8;&#x52A8;&#x65F6;&#x62FF;&#x5230;&#x53D8;&#x52A8;&#x503C;&#x5E76;&#x4E14;&#x901A;&#x77E5;&#x8BA2;&#x9605;&#x8005;</li>
+<li>Compiler &#x6307;&#x4EE4;&#x89E3;&#x6790;&#x5668;,&#x5BF9;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x7684;&#x6307;&#x4EE4;&#x8FDB;&#x884C;&#x626B;&#x63CF;&#x548C;&#x89E3;&#x6790;,&#x6839;&#x636E;&#x6307;&#x4EE4;&#x6A21;&#x677F;&#x66FF;&#x6362;&#x6570;&#x636E;,&#x5E76;&#x7ED1;&#x5B9A;&#x76F8;&#x5E94;&#x7684;&#x66F4;&#x65B0;&#x51FD;&#x6570;</li>
+<li>Watcher &#x94FE;&#x63A5; Observer &#x548C; Compiler,&#x80FD;&#x591F;&#x8BA2;&#x9605;&#x5E76;&#x4E14;&#x6536;&#x5230;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x53D8;&#x52A8;&#x7684;&#x901A;&#x77E5;,&#x6267;&#x884C;&#x6307;&#x4EE4;&#x7ED1;&#x5B9A;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>vue &#x5165;&#x95E8;&#x51FD;&#x6570;</li>
+</ul>
+<p><a href="https://raw.githubusercontent.com/easterCat/img-package/master/img/2.png" data-lightbox="60307ccd-8639-4905-8e72-a87f6637867f" data-title="" target="_blank"><img src="https://raw.githubusercontent.com/easterCat/img-package/master/img/2.png" alt=""></a></p>
+<h2 id="&#x76D1;&#x542C;&#x5668;-observer"><a name="&#x76D1;&#x542C;&#x5668;-observer" class="anchor-navigation-ex-anchor" href="#&#x76D1;&#x542C;&#x5668;-observer"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x76D1;&#x542C;&#x5668; Observer</h2>
+<ul>
+<li>&#x5229;&#x7528; Obeject.defineProperty()&#x6765;&#x5BF9;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x76D1;&#x542C;</li>
+<li>observer &#x5C06;&#x6570;&#x636E;&#x5BF9;&#x8C61; data &#x8FDB;&#x884C;&#x9012;&#x5F52;&#x904D;&#x5386;,&#x6DFB;&#x52A0;&#x4E0A; setter &#x548C; getter</li>
+<li>&#x5F53; data &#x8D4B;&#x503C;&#x6216;&#x8005;&#x53D6;&#x503C;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x80FD;&#x89E6;&#x53D1;&#x76F8;&#x5E94;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+</ul>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">observer</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>data <span class="token operator">!==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> data <span class="token operator">===</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Observer</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">Observer</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">walk</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Observer</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">walk</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Object<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span><span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">defineReactive</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Observer</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">defineReactive</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> key<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    enumerable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    configurable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">set</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">newValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">===</span> newValue<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+      value <span class="token operator">=</span> newValue<span class="token punctuation">;</span>
+      <span class="token function">observer</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x89E3;&#x6790;&#x5668;-compile"><a name="&#x89E3;&#x6790;&#x5668;-compile" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6790;&#x5668;-compile"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x89E3;&#x6790;&#x5668; Compile</h2>
+<ul>
+<li>&#x89E3;&#x6790;&#x6A21;&#x677F;&#x6307;&#x4EE4; v-xxxx</li>
+<li>&#x5C06;&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x66FF;&#x6362;&#x6210;&#x6570;&#x636E;</li>
+<li>&#x521D;&#x59CB;&#x5316;&#x6E32;&#x67D3;&#x9875;&#x9762;&#x89C6;&#x56FE;</li>
+<li>&#x5C06;&#x6307;&#x4EE4;&#x5BF9;&#x5E94;&#x7684;&#x8282;&#x70B9;&#x7ED1;&#x5B9A;&#x66F4;&#x65B0;&#x51FD;&#x6570;</li>
+<li>&#x6DFB;&#x52A0;&#x76D1;&#x542C;&#x6570;&#x636E;&#x7684;&#x8BA2;&#x9605;&#x8005;&#xFF0C;&#x4E00;&#x65E6;&#x6570;&#x636E;&#x6709;&#x53D8;&#x52A8;&#xFF0C;&#x6536;&#x5230;&#x901A;&#x77E5;&#xFF0C;&#x66F4;&#x65B0;&#x89C6;&#x56FE;</li>
+</ul>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">Compile</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token punctuation">,</span> vm</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>$vm <span class="token operator">=</span> vm<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>$el <span class="token operator">=</span> el<span class="token punctuation">.</span>nodeType <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">?</span> el <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$el<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$fragment <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">nodeToFragment</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$el<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$fragment<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$el<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$fragment<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Compile</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">nodeToFragment</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">el</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> fragment <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createDocumentFragment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> child<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>child <span class="token operator">=</span> el<span class="token punctuation">.</span>firstChild<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fragment<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>child<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> fragment<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Compile</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">compile</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">fragment</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> childNodes <span class="token operator">=</span> fragment<span class="token punctuation">.</span>childNodes<span class="token punctuation">;</span>
+  <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  <span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>childNodes<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">node</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> text <span class="token operator">=</span> node<span class="token punctuation">.</span>textContent<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> reg <span class="token operator">=</span> <span class="token regex">/\{\{(.*)\}\}/</span><span class="token punctuation">;</span> <span class="token comment">// &#x8868;&#x8FBE;&#x5F0F;&#x6587;&#x672C;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>nodeType <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      _this<span class="token punctuation">.</span><span class="token function">compileElement</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>nodeType <span class="token operator">===</span> <span class="token number">3</span> <span class="token operator">&amp;&amp;</span> reg<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      compileUtil<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span>node<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$vm<span class="token punctuation">,</span> RegExp<span class="token punctuation">.</span>$<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>childNodes <span class="token operator">&amp;&amp;</span> node<span class="token punctuation">.</span>childNodes<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      _this<span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Compile</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">compileElement</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> attrs <span class="token operator">=</span> element<span class="token punctuation">.</span>attributes<span class="token punctuation">;</span>
+  <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  <span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>attrs<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">attr</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> attrName <span class="token operator">=</span> attr<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> attrValue <span class="token operator">=</span> attr<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    <span class="token comment">// &#x5982; &lt;span v-text=&quot;content&quot;&gt;&lt;/span&gt; &#x4E2D;&#x6307;&#x4EE4;&#x4E3A; v-text</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>attrName<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">&quot;v-&quot;</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> dir <span class="token operator">=</span> attrName<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>dir<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">&quot;on&quot;</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        compileUtil<span class="token punctuation">.</span><span class="token function">eventHandler</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> _this<span class="token punctuation">.</span>$vm<span class="token punctuation">,</span> attrValue<span class="token punctuation">,</span> dir<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        compileUtil<span class="token punctuation">[</span>dir<span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> compileUtil<span class="token punctuation">[</span>dir<span class="token punctuation">]</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> _this<span class="token punctuation">.</span>$vm<span class="token punctuation">,</span> attrValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      element<span class="token punctuation">.</span><span class="token function">removeAttribute</span><span class="token punctuation">(</span>attrName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> compileUtil <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> updater <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x8BA2;&#x9605;&#x8005;-watcher"><a name="&#x8BA2;&#x9605;&#x8005;-watcher" class="anchor-navigation-ex-anchor" href="#&#x8BA2;&#x9605;&#x8005;-watcher"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x8BA2;&#x9605;&#x8005; Watcher</h2>
+<p>Watcher &#x8BA2;&#x9605;&#x8005;&#x4F5C;&#x4E3A; Observer &#x548C; Compile &#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#x6865;&#x6881;</p>
+<ul>
+<li>&#x81EA;&#x8EAB;&#x5B9E;&#x4F8B;&#x5316;&#x65F6;&#x5F80;&#x5C5E;&#x6027;&#x8BA2;&#x9605;&#x5668;(dep)&#x91CC;&#x9762;&#x6DFB;&#x52A0;&#x81EA;&#x5DF1;</li>
+<li>&#x81EA;&#x8EAB;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A; update()&#x65B9;&#x6CD5;</li>
+<li>&#x5C5E;&#x6027;&#x53D8;&#x52A8;&#x4E5F;&#x5C31;&#x662F; setter &#x89E6;&#x53D1;&#x65F6;&#xFF0C;&#x80FD;&#x8C03;&#x7528;&#x81EA;&#x8EAB;&#x7684; update()&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x89E6;&#x53D1; Compile &#x4E2D;&#x7ED1;&#x5B9A;&#x7684;&#x56DE;&#x8C03;&#x3002;</li>
+</ul>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">Watcher</span><span class="token punctuation">(</span><span class="token parameter">vm<span class="token punctuation">,</span> expOrFn<span class="token punctuation">,</span> cb</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>vm <span class="token operator">=</span> vm<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>expOrFn <span class="token operator">=</span> expOrFn<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>cb <span class="token operator">=</span> cb<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>depIds <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> expOrFn <span class="token operator">===</span> <span class="token string">&quot;function&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>getter <span class="token operator">=</span> expOrFn<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>getter <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">parseGetter</span><span class="token punctuation">(</span>expOrFn<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Watcher</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">update</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> value <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> oldValue <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">!==</span> oldValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">cb</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>vm<span class="token punctuation">,</span> value<span class="token punctuation">,</span> oldValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Watcher</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">addDep</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">dep</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>depIds<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>dep<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    dep<span class="token punctuation">.</span><span class="token function">addSub</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>depIds<span class="token punctuation">[</span>dep<span class="token punctuation">.</span>id<span class="token punctuation">]</span> <span class="token operator">=</span> dep<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Watcher</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">get</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Dep<span class="token punctuation">.</span>target <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getter</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>vm<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>vm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Dep<span class="token punctuation">.</span>target <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Watcher</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">parseGetter</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">exp</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token regex">/[^\w.$]/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>exp<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> exps <span class="token operator">=</span> exp<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> exps<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>obj<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+      obj <span class="token operator">=</span> obj<span class="token punctuation">[</span>exps<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x4F9D;&#x8D56;&#x6536;&#x96C6;-dep"><a name="&#x4F9D;&#x8D56;&#x6536;&#x96C6;-dep" class="anchor-navigation-ex-anchor" href="#&#x4F9D;&#x8D56;&#x6536;&#x96C6;-dep"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x4F9D;&#x8D56;&#x6536;&#x96C6; Dep</h2>
+<ul>
+<li>&#x9996;&#x5148; observer =&gt; walk =&gt; defineReactive</li>
+<li>&#x54CD;&#x5E94;&#x5F0F;&#x7684; getter =&gt; dep.depend</li>
+<li>&#x8BA2;&#x9605;&#x8005; watcher.addDep(new Dep()) =&gt; watcher.newDeps.push(dep)</li>
+<li>&#x6700;&#x540E;&#x641C;&#x96C6;&#x5230; Dep &#x4E2D; dep.addSub(new Watcher()) =&gt; dep.subs.push(watcher)</li>
+</ul>
+<p>&#x6700;&#x7EC8; watcher.newDeps &#x6570;&#x7EC4;&#x4E2D;&#x5B58;&#x653E; dep &#x5217;&#x8868;&#xFF0C;dep.subs &#x6570;&#x7EC4;&#x4E2D;&#x5B58;&#x653E; watcher &#x5217;&#x8868;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> depid <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">Dep</span><span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> depid<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>key <span class="token operator">=</span> options<span class="token punctuation">.</span>key <span class="token operator">?</span> options<span class="token punctuation">.</span>key <span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>subs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Dep</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">addSub</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">watchInstance</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>subs<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>watchInstance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Dep</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">removeSub</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">watchInstance</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>subs<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>watchInstance<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>subs<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Dep</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">depend</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Dep.target = watchInstance</span>
+  Dep<span class="token punctuation">.</span>target <span class="token operator">&amp;&amp;</span> Dep<span class="token punctuation">.</span>target<span class="token punctuation">.</span><span class="token function">addDep</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Dep</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">notify</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> subs <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>subs<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  subs<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">sub</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    sub<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Dep<span class="token punctuation">.</span>target <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="mvvm-&#x53CC;&#x5411;&#x7ED1;&#x5B9A;"><a name="mvvm-&#x53CC;&#x5411;&#x7ED1;&#x5B9A;" class="anchor-navigation-ex-anchor" href="#mvvm-&#x53CC;&#x5411;&#x7ED1;&#x5B9A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. mvvm &#x53CC;&#x5411;&#x7ED1;&#x5B9A;</h2>
+<ul>
+<li>&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7684;&#x5165;&#x53E3;,&#x6574;&#x5408; Observer&#x3001;Compile &#x548C; Watcher &#x4E09;&#x8005;</li>
+<li>&#x901A;&#x8FC7; Observer &#x6765;&#x76D1;&#x542C;&#x81EA;&#x5DF1;&#x7684; model &#x6570;&#x636E;&#x53D8;&#x52A8;</li>
+<li>&#x901A;&#x8FC7; Compile &#x6765;&#x89E3;&#x6790;&#x7F16;&#x8BD1;&#x6A21;&#x677F;&#x6307;&#x4EE4;</li>
+<li>&#x5229;&#x7528; Watcher &#x642D;&#x8D77; Observer &#x548C; Compile &#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x6865;&#x6881;</li>
+<li>&#x6570;&#x636E;&#x53D8;&#x5316; -&gt; &#x89C6;&#x56FE;&#x66F4;&#x65B0;</li>
+<li>&#x89C6;&#x56FE;&#x4EA4;&#x4E92;&#x53D8;&#x5316;(input) -&gt; &#x6570;&#x636E; model &#x53D8;&#x66F4;&#x7684;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;</li>
+</ul>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">Vue</span><span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>options <span class="token operator">=</span> options <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> options<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>el <span class="token operator">=</span> options<span class="token punctuation">.</span>el <span class="token operator">||</span> <span class="token string">&quot;body&quot;</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x901A;&#x8FC7;Object.defineProperty &#x5B9E;&#x73B0; vm.xxx -&gt; vm._data.xxx</span>
+  Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _this<span class="token punctuation">.</span><span class="token function">_proxyData</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">observer</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>$compile <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Compile</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>el<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">initState</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">$watch</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">key<span class="token punctuation">,</span> cb<span class="token punctuation">,</span> options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">new</span> <span class="token class-name">Watcher</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> key<span class="token punctuation">,</span> cb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">_proxyData</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>_this<span class="token punctuation">,</span> key<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    configurable<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    enumerable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> _this<span class="token punctuation">.</span>data<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">set</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">newVal</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      _this<span class="token punctuation">.</span>data<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> newVal<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x6587;&#x6863;"><a name="&#x6587;&#x6863;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x6863;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. &#x6587;&#x6863;</h2>
+<ul>
+<li><a href="https://github.com/DMQ/mvvm" target="_blank">&#x5256;&#x6790; Vue &#x5B9E;&#x73B0;&#x539F;&#x7406; - &#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x53CC;&#x5411;&#x7ED1;&#x5B9A; mvvm</a></li>
+<li><a href="https://github.com/answershuto/learnVue" target="_blank">Vue.js &#x6E90;&#x7801;&#x89E3;&#x6790;</a></li>
+<li><a href="https://segmentfault.com/a/1190000006866881" target="_blank">Vue.js &#x6E90;&#x7801;&#xFF08;1&#xFF09;&#xFF1A;Hello World &#x7684;&#x80CC;&#x540E;</a></li>
+<li><a href="https://github.com/DMQ/mvvm" target="_blank">Vue.js &#x5B98;&#x65B9;&#x5DE5;&#x7A0B;</a></li>
+<li><a href="https://ustbhuangyi.github.io/vue-analysis/" target="_blank">Vue.js &#x6280;&#x672F;&#x63ED;&#x79D8;</a></li>
+<li><a href="https://juejin.im/user/5a6fdcfc51882522b5529eb0/posts" target="_blank">&#x3010;Vue &#x539F;&#x7406;&#x3011;&#x767D;&#x8BDD;&#x7248;</a></li>
+<li><a href="https://github.com/fwing1987/MyVue" target="_blank">&#x4E00;&#x4E2A; Vue &#x6846;&#x67B6;&#x7684;&#x7B80;&#x5355;&#x5B9E;&#x73B0;</a></li>
+<li><a href="https://github.com/pf12345/vue-imitate" target="_blank">&#x6DF1;&#x5165;&#x89E3;&#x6790; vue 1 &#x5B9E;&#x73B0;&#x539F;&#x7406;&#xFF0C;&#x5E76;&#x4EFF; vue &#x751F;&#x6210;&#x7B80;&#x5355;&#x7684;&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x6A21;&#x578B;</a></li>
+<li><a href="https://github.com/wangweianger/myblog" target="_blank">vue.js &#x6E90;&#x7801; - &#x5256;&#x6790; observer,dep,watch &#x4E09;&#x8005;&#x5173;&#x7CFB; &#x5982;&#x4F55;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;</a></li>
+<li><a href="https://github.com/biaochenxuying/vue-family-mindmap" target="_blank">&#x7528;&#x4E00;&#x5F20;&#x601D;&#x7EF4;&#x5BFC;&#x56FE;&#x603B;&#x7ED3;&#x4E86; Vue | Vue-Router | Vuex &#x6E90;&#x7801;&#x4E0E;&#x67B6;&#x6784;&#x8981;&#x70B9;</a></li>
+</ul>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="vue的指令,插件,混合.html" class="navigation navigation-prev " aria-label="Previous page: vue 的指令,插件,混合">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="vue的基础.html" class="navigation navigation-next " aria-label="Next page: vue 的基础">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"vue 的简单实现","level":"1.5.4","depth":2,"next":{"title":"vue 的基础","level":"1.5.5","depth":2,"path":"vue/vue的基础.md","ref":"vue/vue的基础.md","articles":[]},"previous":{"title":"vue 的指令,插件,混合","level":"1.5.3","depth":2,"path":"vue/vue的指令,插件,混合.md","ref":"vue/vue的指令,插件,混合.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"vue/vue的简单实现.md","mtime":"2020-01-28T14:08:53.809Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-28T14:08:57.897Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

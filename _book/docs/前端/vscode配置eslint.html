@@ -1,0 +1,1783 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>vscode 配置 eslint · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../js基础/词法作用域/readme.html" />
+    
+    
+    <link rel="prev" href="常用正则.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="获取屏幕宽度.html">
+            
+                <a href="获取屏幕宽度.html">
+            
+                    
+                    前端基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="获取屏幕宽度.html">
+            
+                <a href="获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="学会使用JavaScript访问和修改CSS样式.html">
+            
+                <a href="学会使用JavaScript访问和修改CSS样式.html">
+            
+                    
+                    学会使用 JavaScript 访问和修改 CSS 样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="解决canvas在高清屏中模糊.html">
+            
+                <a href="解决canvas在高清屏中模糊.html">
+            
+                    
+                    解决 canvas 在高清屏中模糊
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="js二进制数据互转.html">
+            
+                <a href="js二进制数据互转.html">
+            
+                    
+                    js 二进制数据互转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="单元测试/readme.html">
+            
+                <a href="单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="网络/http响应码.html">
+            
+                <a href="网络/http响应码.html">
+            
+                    
+                    http 响应码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="网络/http预览导图.html">
+            
+                <a href="网络/http预览导图.html">
+            
+                    
+                    http 预览导图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="npm安装github包的方式.html">
+            
+                <a href="npm安装github包的方式.html">
+            
+                    
+                    npm 安装 github 包的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="浏览器渲染进程Renderer.html">
+            
+                <a href="浏览器渲染进程Renderer.html">
+            
+                    
+                    浏览器渲染进程 Renderer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="移动端的踩坑问题.html">
+            
+                <a href="移动端的踩坑问题.html">
+            
+                    
+                    移动端的踩坑问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="常用正则.html">
+            
+                <a href="常用正则.html">
+            
+                    
+                    常用正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.12" data-path="vscode配置eslint.html">
+            
+                <a href="vscode配置eslint.html">
+            
+                    
+                    vscode 配置 eslint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    js 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../js基础/内存分配/readme.html">
+            
+                <a href="../js基础/内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../js基础/浏览器工作原理/readme.html">
+            
+                <a href="../js基础/浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../js基础/类和对象/readme.html">
+            
+                <a href="../js基础/类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../js基础/数据类型/readme.html">
+            
+                <a href="../js基础/数据类型/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../js基础/js事件机制/readme.html">
+            
+                <a href="../js基础/js事件机制/readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../js基础/ES6/Map和Set.html">
+            
+                <a href="../js基础/ES6/Map和Set.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../js基础/ES6/Map和Set.html">
+            
+                <a href="../js基础/ES6/Map和Set.html">
+            
+                    
+                    Map 和 Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../vue/vue路由与keep-alive.html">
+            
+                <a href="../vue/vue路由与keep-alive.html">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../vue/vue路由与keep-alive.html">
+            
+                <a href="../vue/vue路由与keep-alive.html">
+            
+                    
+                    vue 路由与 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../vue/vue.use的使用.html">
+            
+                <a href="../vue/vue.use的使用.html">
+            
+                    
+                    vue.use 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../vue/vue的基础.html">
+            
+                <a href="../vue/vue的基础.html">
+            
+                    
+                    vue 的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../vue/vue的基础2.html">
+            
+                <a href="../vue/vue的基础2.html">
+            
+                    
+                    vue 的基础 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../vue/vue的基础3.html">
+            
+                <a href="../vue/vue的基础3.html">
+            
+                    
+                    vue 的基础 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../vue/vue的基础4.html">
+            
+                <a href="../vue/vue的基础4.html">
+            
+                    
+                    vue 的基础 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../nodejs/node写个helloworld.html">
+            
+                <a href="../nodejs/node写个helloworld.html">
+            
+                    
+                    nodejs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../nodejs/环境/reids安装配置.html">
+            
+                <a href="../nodejs/环境/reids安装配置.html">
+            
+                    
+                    reids 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../nodejs/环境/mysql安装配置.html">
+            
+                <a href="../nodejs/环境/mysql安装配置.html">
+            
+                    
+                    mysql 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../nodejs/环境/Elasticsearch安装配置.html">
+            
+                <a href="../nodejs/环境/Elasticsearch安装配置.html">
+            
+                    
+                    Elasticsearch 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../nodejs/node写个helloworld.html">
+            
+                <a href="../nodejs/node写个helloworld.html">
+            
+                    
+                    node 写个 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../nodejs/node的fs模块.html">
+            
+                <a href="../nodejs/node的fs模块.html">
+            
+                    
+                    node 的 fs 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../nodejs/用node写个爬虫.html">
+            
+                <a href="../nodejs/用node写个爬虫.html">
+            
+                    
+                    用 node 写个爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../nodejs/node实现静态文件服务器.html">
+            
+                <a href="../nodejs/node实现静态文件服务器.html">
+            
+                    
+                    node 实现静态文件服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../nodejs/nodejs文件路径.html">
+            
+                <a href="../nodejs/nodejs文件路径.html">
+            
+                    
+                    nodejs 文件路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../nodejs/node发起http请求.html">
+            
+                <a href="../nodejs/node发起http请求.html">
+            
+                    
+                    node 发起 http 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../nodejs/node中的query,params,body.html">
+            
+                <a href="../nodejs/node中的query,params,body.html">
+            
+                    
+                    node 中的 query,params,body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../nodejs/node常用post提交方式.html">
+            
+                <a href="../nodejs/node常用post提交方式.html">
+            
+                    
+                    node 常用 post 提交方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../nodejs/node的进程和线程.html">
+            
+                <a href="../nodejs/node的进程和线程.html">
+            
+                    
+                    node 的进程和线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                <a href="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                <a href="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具之 http-proxy-middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../nodejs/工具/node工具之node-ip.html">
+            
+                <a href="../nodejs/工具/node工具之node-ip.html">
+            
+                    
+                    node 工具之 node-ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../nodejs/工具/node工具之nodemon.html">
+            
+                <a href="../nodejs/工具/node工具之nodemon.html">
+            
+                    
+                    node 工具之 nodemon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../nodejs/工具/node工具之pm2.html">
+            
+                <a href="../nodejs/工具/node工具之pm2.html">
+            
+                    
+                    node 工具之 pm2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../nodejs/工具/node工具之commander.html">
+            
+                <a href="../nodejs/工具/node工具之commander.html">
+            
+                    
+                    node 工具之 commander
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">java 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Java基础/">
+            
+                <a href="../Java基础/">
+            
+                    
+                    java 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Java基础/变量的类型.html">
+            
+                <a href="../Java基础/变量的类型.html">
+            
+                    
+                    变量的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Java基础/基本数据类型.html">
+            
+                <a href="../Java基础/基本数据类型.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Java基础/修饰符.html">
+            
+                <a href="../Java基础/修饰符.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Java基础/运算符.html">
+            
+                <a href="../Java基础/运算符.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Java基础/条件语句.html">
+            
+                <a href="../Java基础/条件语句.html">
+            
+                    
+                    条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Java基础/循环结构.html">
+            
+                <a href="../Java基础/循环结构.html">
+            
+                    
+                    循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Java基础/switch语句.html">
+            
+                <a href="../Java基础/switch语句.html">
+            
+                    
+                    switch 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Java基础/数组.html">
+            
+                <a href="../Java基础/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../Java基础/字符串.html">
+            
+                <a href="../Java基础/字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../Java基础/Character类.html">
+            
+                <a href="../Java基础/Character类.html">
+            
+                    
+                    Character 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../Java基础/正则表达式.html">
+            
+                <a href="../Java基础/正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../Java基础/流,文件和IO.html">
+            
+                <a href="../Java基础/流,文件和IO.html">
+            
+                    
+                    流,文件和 IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                <a href="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                    
+                    StringBuffer 和 StringBuilder 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="../Java基础/Collection.html">
+            
+                <a href="../Java基础/Collection.html">
+            
+                    
+                    Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.15" data-path="../Java基础/map.html">
+            
+                <a href="../Java基础/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="../Java基础/list.html">
+            
+                <a href="../Java基础/list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" data-path="../Java基础/多线程编程.html">
+            
+                <a href="../Java基础/多线程编程.html">
+            
+                    
+                    多线程编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.18" data-path="../Java基础/泛型.html">
+            
+                <a href="../Java基础/泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    maven 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../spring/tomcat安装配置.html">
+            
+                <a href="../spring/tomcat安装配置.html">
+            
+                    
+                    tomcat 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../spring/intellij安装配置.html">
+            
+                <a href="../spring/intellij安装配置.html">
+            
+                    
+                    intellij 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../spring/spring创建helloworld.html">
+            
+                <a href="../spring/spring创建helloworld.html">
+            
+                    
+                    spring 创建 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构与算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../数据结构与算法/">
+            
+                <a href="../数据结构与算法/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../数据结构与算法/线性表.html">
+            
+                <a href="../数据结构与算法/线性表.html">
+            
+                    
+                    线性表(数组,队列,栈,链表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../数据结构与算法/Java排序算法.html">
+            
+                <a href="../数据结构与算法/Java排序算法.html">
+            
+                    
+                    Java 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Java练习题/">
+            
+                <a href="../Java练习题/">
+            
+                    
+                    Java 练习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../Java练习题/指定范围包含的素数.html">
+            
+                <a href="../Java练习题/指定范围包含的素数.html">
+            
+                    
+                    指定范围包含的素数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../Java练习题/公约数和公倍数.html">
+            
+                <a href="../Java练习题/公约数和公倍数.html">
+            
+                    
+                    公约数和公倍数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    leetcode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    scripto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../scripto/中间件模式.html">
+            
+                <a href="../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../scripto/m长度的都是n的数组.html">
+            
+                <a href="../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >vscode 配置 eslint</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x76EE;&#x6807;"><b>1.1. </b>&#x76EE;&#x6807;</a></li><li><span class="title-icon "></span><a href="#&#x5DE5;&#x5177;"><b>1.2. </b>&#x5DE5;&#x5177;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;&#x6B65;&#x5B9E;&#x73B0;"><b>1.3. </b>&#x4E8C;&#x6B65;&#x5B9E;&#x73B0;</a></li><ul><li><span class="title-icon "></span><a href="#1-&#x8BA9;-vscode-&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;-prettier"><b>1.3.1. </b>1. &#x8BA9; vscode &#x683C;&#x5F0F;&#x5316;&#x65F6;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; Prettier</a></li><li><span class="title-icon "></span><a href="#2-&#x8BA9;-prettier-&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x4F7F;&#x7528;-eslint"><b>1.3.2. </b>2. &#x8BA9; Prettier &#x683C;&#x5F0F;&#x5316;&#x65F6;&#x4F7F;&#x7528; Eslint</a></li></ul><li><span class="title-icon "></span><a href="#&#x62D3;&#x5C55;---&#x81EA;&#x5B9A;&#x4E49;-eslint-&#x914D;&#x7F6E;"><b>1.4. </b>&#x62D3;&#x5C55; - &#x81EA;&#x5B9A;&#x4E49; Eslint &#x914D;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5168;&#x5C40;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;"><b>1.4.1. </b>&#x5168;&#x5C40;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x589E;&#x52A0;&#x4FDD;&#x5B58;&#x81EA;&#x52A8;&#x4FEE;&#x590D;&#x3001;vue-&#x652F;&#x6301;"><b>1.4.2. </b>&#x589E;&#x52A0;&#x4FDD;&#x5B58;&#x81EA;&#x52A8;&#x4FEE;&#x590D;&#x3001;vue &#x652F;&#x6301;</a></li><li><span class="title-icon "></span><a href="#&#x9879;&#x76EE;&#x4E0B;&#x7684;-eslintrcjson-&#x53C2;&#x8003;"><b>1.4.3. </b>&#x9879;&#x76EE;&#x4E0B;&#x7684; .eslintrc.json &#x53C2;&#x8003;</a></li><li><span class="title-icon "></span><a href="#js-&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53C2;&#x8003;"><b>1.4.4. </b>js &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53C2;&#x8003;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x76EE;&#x6807;"><a name="&#x76EE;&#x6807;" class="anchor-navigation-ex-anchor" href="#&#x76EE;&#x6807;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x76EE;&#x6807;</h2>
+<ol>
+<li>&#x4F7F;&#x7528; Eslint &#x89C4;&#x8303;&#x4EE3;&#x7801;&#x3002;</li>
+<li>&#x683C;&#x5F0F;&#x5316;&#x4EE3;&#x7801;&#x65F6;&#x4F7F;&#x7528; Eslint &#x89C4;&#x8303;&#x3002;</li>
+</ol>
+<h2 id="&#x5DE5;&#x5177;"><a name="&#x5DE5;&#x5177;" class="anchor-navigation-ex-anchor" href="#&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5DE5;&#x5177;</h2>
+<ol>
+<li>VSCode</li>
+<li>Eslint</li>
+<li>Prettier</li>
+</ol>
+<h2 id="&#x4E8C;&#x6B65;&#x5B9E;&#x73B0;"><a name="&#x4E8C;&#x6B65;&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x6B65;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x4E8C;&#x6B65;&#x5B9E;&#x73B0;</h2>
+<h3 id="1-&#x8BA9;-vscode-&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;-prettier"><a name="1-&#x8BA9;-vscode-&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;-prettier" class="anchor-navigation-ex-anchor" href="#1-&#x8BA9;-vscode-&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;-prettier"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. 1. &#x8BA9; vscode &#x683C;&#x5F0F;&#x5316;&#x65F6;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; Prettier</h3>
+<p>&#x6253;&#x5F00; <code>settings.json</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json">    On Windows/Linux - File &gt; Preferences &gt; Settings
+    On macOS - Code &gt; Preferences &gt; Settings
+</code></pre>
+<p>&#x5FEB;&#x6377;&#x952E;&#x4E3A; <code>Ctrl/Command + ,</code></p>
+<p>&#x4FEE;&#x6539;&#x5982;&#x4E0B;&#xFF1A;&#xFF08;&#x8BB0;&#x5F97;&#x5B89;&#x88C5; Prettier &#x63D2;&#x4EF6;&#xFF09;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;[javascript]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="2-&#x8BA9;-prettier-&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x4F7F;&#x7528;-eslint"><a name="2-&#x8BA9;-prettier-&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x4F7F;&#x7528;-eslint" class="anchor-navigation-ex-anchor" href="#2-&#x8BA9;-prettier-&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x4F7F;&#x7528;-eslint"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. 2. &#x8BA9; Prettier &#x683C;&#x5F0F;&#x5316;&#x65F6;&#x4F7F;&#x7528; Eslint</h3>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;[javascript]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;prettier&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;eslintIntegration&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Prettier &#x7684;<a href="https://prettier.io/docs/en/options.html" target="_blank">&#x66F4;&#x591A;&#x914D;&#x7F6E;</a></p>
+<h2 id="&#x62D3;&#x5C55;---&#x81EA;&#x5B9A;&#x4E49;-eslint-&#x914D;&#x7F6E;"><a name="&#x62D3;&#x5C55;---&#x81EA;&#x5B9A;&#x4E49;-eslint-&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x62D3;&#x5C55;---&#x81EA;&#x5B9A;&#x4E49;-eslint-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x62D3;&#x5C55; - &#x81EA;&#x5B9A;&#x4E49; Eslint &#x914D;&#x7F6E;</h2>
+<p>&#x6BCF;&#x4E2A;&#x4EBA;&#x4E60;&#x60EF;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x6BD4;&#x5982;&#x7F29;&#x8FDB;&#x6709;&#x4EBA;&#x559C;&#x6B22; 2 &#x4E2A;&#x7A7A;&#x683C;&#xFF0C;&#x800C;&#x6211;&#x559C;&#x6B22; 4 &#x4E2A;&#xFF0C;&#x8FD8;&#x6709;&#x5355;&#x5F15;&#x53F7;&#x53CC;&#x5F15;&#x53F7;&#x7B49;&#x7B49;&#x3002;&#x4E0B;&#x9762;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4E0B;&#x5982;&#x4F55;&#x81EA;&#x5B9A;&#x4E49;&#x3002;</p>
+<h3 id="&#x5168;&#x5C40;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;"><a name="&#x5168;&#x5C40;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5168;&#x5C40;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. &#x5168;&#x5C40;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;</h3>
+<p>&#x4FEE;&#x6539; <code>settings.json</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5173;&#x8054;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;eslint&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;configFile&quot;</span><span class="token operator">:</span> <span class="token string">&quot;D:/ESLint/eslint.config.js&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x589E;&#x52A0;&#x4FDD;&#x5B58;&#x81EA;&#x52A8;&#x4FEE;&#x590D;&#x3001;vue-&#x652F;&#x6301;"><a name="&#x589E;&#x52A0;&#x4FDD;&#x5B58;&#x81EA;&#x52A8;&#x4FEE;&#x590D;&#x3001;vue-&#x652F;&#x6301;" class="anchor-navigation-ex-anchor" href="#&#x589E;&#x52A0;&#x4FDD;&#x5B58;&#x81EA;&#x52A8;&#x4FEE;&#x590D;&#x3001;vue-&#x652F;&#x6301;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. &#x589E;&#x52A0;&#x4FDD;&#x5B58;&#x81EA;&#x52A8;&#x4FEE;&#x590D;&#x3001;vue &#x652F;&#x6301;</h3>
+<pre class="language-"><code class="lang-json">  <span class="token punctuation">{</span>
+       <span class="token property">&quot;eslint&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+           <span class="token comment">// &#x6BCF;&#x6B21;&#x4FDD;&#x5B58;&#x7684;&#x65F6;&#x5019;&#x5C06;&#x4EE3;&#x7801;&#x6309; eslint &#x683C;&#x5F0F;&#x8FDB;&#x884C;&#x4FEE;&#x590D;</span><span class="token property">&quot;autoFixOnSave&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+           <span class="token comment">// &#x6DFB;&#x52A0; vue &#x652F;&#x6301;</span><span class="token property">&quot;validate&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+               <span class="token string">&quot;javascript&quot;</span><span class="token punctuation">,</span>
+               <span class="token string">&quot;javascriptreact&quot;</span><span class="token punctuation">,</span>
+               <span class="token punctuation">{</span>
+                   <span class="token property">&quot;language&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">,</span>
+                   <span class="token property">&quot;autoFix&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+               <span class="token punctuation">}</span>
+           <span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x9879;&#x76EE;&#x4E0B;&#x7684;-eslintrcjson-&#x53C2;&#x8003;"><a name="&#x9879;&#x76EE;&#x4E0B;&#x7684;-eslintrcjson-&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x9879;&#x76EE;&#x4E0B;&#x7684;-eslintrcjson-&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.3. &#x9879;&#x76EE;&#x4E0B;&#x7684; .eslintrc.json &#x53C2;&#x8003;</h3>
+<blockquote>
+<p>&#x5199;&#x4EE3;&#x7801;&#x662F;&#x4E00;&#x95E8;&#x624B;&#x827A;&#xFF0C;&#x5BF9;&#x4E8E;&#x624B;&#x827A;&#x4EBA;&#x6765;&#x8BF4;&#x4ECE;&#x8D44;&#x6DF1;&#x624B;&#x827A;&#x4EBA;&#x90A3;&#x91CC;&#x5B66;&#x6765;&#x7684;&#x7ECF;&#x9A8C;&#x5C31;&#x662F;&#x81EA;&#x5DF1;&#x6210;&#x957F;&#x8DEF;&#x4E0A;&#x6700;&#x5B9D;&#x8D35;&#x7684;&#x8D22;&#x5BCC;&#x3002;ESLint &#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x5E08;&#x4ECE;&#x54EA;&#x4E00;&#x4F4D;&#x6216;&#x54EA;&#x51E0;&#x4F4D;&#x4F18;&#x79C0;&#x7684;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x9075;&#x5B88;&#x4ED6;&#x4EEC;&#x5B9A;&#x4E0B;&#x7684;&#x4EE3;&#x7801;&#x89C4;&#x8303;&#x5C31;&#x53EF;&#x4EE5;&#x5199;&#x51FA;&#x548C;&#x4ED6;&#x4EEC;&#x4E00;&#x6837;&#x4F18;&#x79C0;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x73B0;&#x5728;&#x5E02;&#x9762;&#x4E0A;&#x6700;&#x6D41;&#x884C;&#x7684; ESLint &#x914D;&#x7F6E;&#x5C31;&#x662F;&#x7531; Airbnb &#x6240;&#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5728; <code>.eslintrc</code> &#x4E2D;&#x914D;&#x7F6E; <code>extends</code> &#x4E3A; <code>airbnb</code> &#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x542F; Airbnb &#x7684; JavaScript &#x7F16;&#x5199;&#x89C4;&#x8303;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4E3A;&#x4E86;&#x6EE1;&#x8DB3;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x5728; <code>.eslintrc</code> &#x7684; <code>rules</code> &#x4E2D;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x72EC;&#x7ACB;&#x5730;&#x5F00;&#x542F;&#x6216;&#x5173;&#x95ED;&#x4EFB;&#x610F;&#x4E00;&#x6761;&#x4EE3;&#x7801;&#x68C0;&#x67E5;&#x89C4;&#x5219;&#x3002;</p>
+</blockquote>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;parser&quot;</span><span class="token operator">:</span> <span class="token string">&quot;babel-eslint&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;extends&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;airbnb&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;plugins&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;react&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;jsx-a11y&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;import&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;semi&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;never&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;quotes&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;single&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;indent&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;arrow-parens&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;always&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;implicit-arrow-linebreak&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;function-paren-newline&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;react/jsx-filename-extension&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;extensions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;.js&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;.jsx&quot;</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;react/forbid-prop-types&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;import/resolver&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;babel-module&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;globals&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;document&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;window&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;env&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;es6&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;node&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;jest&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Eslint &#x7684;<a href="https://cn.eslint.org/docs/rules/" target="_blank">&#x914D;&#x7F6E;&#x53C2;&#x8003;</a></p>
+<h3 id="js-&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53C2;&#x8003;"><a name="js-&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#js-&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.4. js &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53C2;&#x8003;</h3>
+<pre class="language-"><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  env<span class="token operator">:</span> <span class="token punctuation">{</span>
+    browser<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    commonjs<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    es6<span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// &#x4F7F;&#x7528;&#x63A8;&#x8350;&#x7684;&#x89C4;&#x5219;</span>
+  <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token string">&quot;eslint:recommended&quot;</span><span class="token punctuation">,</span>
+  parserOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+    sourceType<span class="token operator">:</span> <span class="token string">&quot;module&quot;</span><span class="token punctuation">,</span>
+    ecmaVersion<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  rules<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;no-alert&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;alert confirm prompt</span>
+    <span class="token string">&quot;no-array-constructor&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x6784;&#x9020;&#x5668;</span>
+    <span class="token string">&quot;no-bitwise&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x6309;&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;</span>
+    <span class="token string">&quot;no-caller&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;arguments.caller&#x6216;arguments.callee</span>
+    <span class="token string">&quot;no-catch-shadow&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;catch&#x5B50;&#x53E5;&#x53C2;&#x6570;&#x4E0E;&#x5916;&#x90E8;&#x4F5C;&#x7528;&#x57DF;&#x53D8;&#x91CF;&#x540C;&#x540D;</span>
+    <span class="token string">&quot;no-class-assign&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x7ED9;&#x7C7B;&#x8D4B;&#x503C;</span>
+    <span class="token string">&quot;no-cond-assign&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x5728;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x4F7F;&#x7528;&#x8D4B;&#x503C;&#x8BED;&#x53E5;</span>
+    <span class="token string">&quot;no-console&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;console</span>
+    <span class="token string">&quot;no-const-assign&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4FEE;&#x6539;const&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;</span>
+    <span class="token string">&quot;no-constant-condition&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x5728;&#x6761;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F; if(true) if(1)</span>
+    <span class="token string">&quot;no-continue&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;continue</span>
+    <span class="token string">&quot;no-control-regex&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x5728;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x4F7F;&#x7528;&#x63A7;&#x5236;&#x5B57;&#x7B26;</span>
+    <span class="token string">&quot;no-debugger&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;debugger</span>
+    <span class="token string">&quot;no-delete-var&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x80FD;&#x5BF9;var&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x4F7F;&#x7528;delete&#x64CD;&#x4F5C;&#x7B26;</span>
+    <span class="token string">&quot;no-div-regex&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x770B;&#x8D77;&#x6765;&#x50CF;&#x9664;&#x6CD5;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;/=foo/</span>
+    <span class="token string">&quot;no-dupe-keys&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x5728;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;&#x65F6;&#x4E0D;&#x5141;&#x8BB8;&#x952E;&#x91CD;&#x590D; {a:1,a:1}</span>
+    <span class="token string">&quot;no-dupe-args&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x51FD;&#x6570;&#x53C2;&#x6570;&#x4E0D;&#x80FD;&#x91CD;&#x590D;</span>
+    <span class="token string">&quot;no-duplicate-case&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//switch&#x4E2D;&#x7684;case&#x6807;&#x7B7E;&#x4E0D;&#x80FD;&#x91CD;&#x590D;</span>
+    <span class="token string">&quot;no-else-return&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x5982;&#x679C;if&#x8BED;&#x53E5;&#x91CC;&#x9762;&#x6709;return,&#x540E;&#x9762;&#x4E0D;&#x80FD;&#x8DDF;else&#x8BED;&#x53E5;</span>
+    <span class="token string">&quot;no-empty&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x5757;&#x8BED;&#x53E5;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;</span>
+    <span class="token string">&quot;no-empty-character-class&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x7684;[]&#x5185;&#x5BB9;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;</span>
+    <span class="token string">&quot;no-eq-null&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x5BF9;null&#x4F7F;&#x7528;==&#x6216;!=&#x8FD0;&#x7B97;&#x7B26;</span>
+    <span class="token string">&quot;no-eval&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;eval</span>
+    <span class="token string">&quot;no-ex-assign&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x7ED9;catch&#x8BED;&#x53E5;&#x4E2D;&#x7684;&#x5F02;&#x5E38;&#x53C2;&#x6570;&#x8D4B;&#x503C;</span>
+    <span class="token string">&quot;no-extend-native&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x6269;&#x5C55;native&#x5BF9;&#x8C61;</span>
+    <span class="token string">&quot;no-extra-bind&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x51FD;&#x6570;&#x7ED1;&#x5B9A;</span>
+    <span class="token string">&quot;no-extra-boolean-cast&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4E0D;&#x5FC5;&#x8981;&#x7684;bool&#x8F6C;&#x6362;</span>
+    <span class="token string">&quot;no-extra-parens&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x975E;&#x5FC5;&#x8981;&#x7684;&#x62EC;&#x53F7;</span>
+    <span class="token string">&quot;no-extra-semi&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x591A;&#x4F59;&#x7684;&#x5192;&#x53F7;</span>
+    <span class="token string">&quot;no-fallthrough&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;switch&#x7A7F;&#x900F;</span>
+    <span class="token string">&quot;no-floating-decimal&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x7701;&#x7565;&#x6D6E;&#x70B9;&#x6570;&#x4E2D;&#x7684;0 .5 3.</span>
+    <span class="token string">&quot;no-func-assign&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x91CD;&#x590D;&#x7684;&#x51FD;&#x6570;&#x58F0;&#x660E;</span>
+    <span class="token string">&quot;no-implicit-coercion&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x9690;&#x5F0F;&#x8F6C;&#x6362;</span>
+    <span class="token string">&quot;no-implied-eval&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x9690;&#x5F0F;eval</span>
+    <span class="token string">&quot;no-inline-comments&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x884C;&#x5185;&#x5907;&#x6CE8;</span>
+    <span class="token string">&quot;no-inner-declarations&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;functions&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x5728;&#x5757;&#x8BED;&#x53E5;&#x4E2D;&#x4F7F;&#x7528;&#x58F0;&#x660E;&#xFF08;&#x53D8;&#x91CF;&#x6216;&#x51FD;&#x6570;&#xFF09;</span>
+    <span class="token string">&quot;no-invalid-regexp&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x65E0;&#x6548;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</span>
+    <span class="token string">&quot;no-invalid-this&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x65E0;&#x6548;&#x7684;this&#xFF0C;&#x53EA;&#x80FD;&#x7528;&#x5728;&#x6784;&#x9020;&#x5668;&#xFF0C;&#x7C7B;&#xFF0C;&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;</span>
+    <span class="token string">&quot;no-irregular-whitespace&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x80FD;&#x6709;&#x4E0D;&#x89C4;&#x5219;&#x7684;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;no-iterator&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;__iterator__ &#x5C5E;&#x6027;</span>
+    <span class="token string">&quot;no-label-var&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//label&#x540D;&#x4E0D;&#x80FD;&#x4E0E;var&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x540D;&#x76F8;&#x540C;</span>
+    <span class="token string">&quot;no-labels&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x6807;&#x7B7E;&#x58F0;&#x660E;</span>
+    <span class="token string">&quot;no-lone-blocks&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x5D4C;&#x5957;&#x5757;</span>
+    <span class="token string">&quot;no-lonely-if&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;else&#x8BED;&#x53E5;&#x5185;&#x53EA;&#x6709;if&#x8BED;&#x53E5;</span>
+    <span class="token string">&quot;no-loop-func&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x5728;&#x5FAA;&#x73AF;&#x4E2D;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#xFF08;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5F15;&#x7528;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#x4E0D;&#x5F62;&#x6210;&#x95ED;&#x5305;&#x5C31;&#x53EF;&#x4EE5;&#xFF09;</span>
+    <span class="token string">&quot;no-mixed-requires&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x58F0;&#x660E;&#x65F6;&#x4E0D;&#x80FD;&#x6DF7;&#x7528;&#x58F0;&#x660E;&#x7C7B;&#x578B;</span>
+    <span class="token string">&quot;no-mixed-spaces-and-tabs&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x6DF7;&#x7528;tab&#x548C;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;linebreak-style&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;windows&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x6362;&#x884C;&#x98CE;&#x683C;</span>
+    <span class="token string">&quot;no-multi-spaces&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x80FD;&#x7528;&#x591A;&#x4F59;&#x7684;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;no-multi-str&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x80FD;&#x7528;\&#x6362;&#x884C;</span>
+    <span class="token string">&quot;no-multiple-empty-lines&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> max<span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x7A7A;&#x884C;&#x6700;&#x591A;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;2&#x884C;</span>
+    <span class="token string">&quot;no-native-reassign&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x80FD;&#x91CD;&#x5199;native&#x5BF9;&#x8C61;</span>
+    <span class="token string">&quot;no-negated-in-lhs&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//in &#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x5DE6;&#x8FB9;&#x4E0D;&#x80FD;&#x6709;!</span>
+    <span class="token string">&quot;no-nested-ternary&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x5D4C;&#x5957;&#x7684;&#x4E09;&#x76EE;&#x8FD0;&#x7B97;</span>
+    <span class="token string">&quot;no-new&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x5728;&#x4F7F;&#x7528;new&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x540E;&#x4E0D;&#x8D4B;&#x503C;</span>
+    <span class="token string">&quot;no-new-func&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;new Function</span>
+    <span class="token string">&quot;no-new-object&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;new Object()</span>
+    <span class="token string">&quot;no-new-require&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;new require</span>
+    <span class="token string">&quot;no-new-wrappers&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;new&#x521B;&#x5EFA;&#x5305;&#x88C5;&#x5B9E;&#x4F8B;&#xFF0C;new String new Boolean new Number</span>
+    <span class="token string">&quot;no-obj-calls&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x80FD;&#x8C03;&#x7528;&#x5185;&#x7F6E;&#x7684;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#xFF0C;&#x6BD4;&#x5982;Math() JSON()</span>
+    <span class="token string">&quot;no-octal&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x516B;&#x8FDB;&#x5236;&#x6570;&#x5B57;</span>
+    <span class="token string">&quot;no-octal-escape&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x516B;&#x8FDB;&#x5236;&#x8F6C;&#x4E49;&#x5E8F;&#x5217;</span>
+    <span class="token string">&quot;no-param-reassign&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x7ED9;&#x53C2;&#x6570;&#x91CD;&#x65B0;&#x8D4B;&#x503C;</span>
+    <span class="token string">&quot;no-path-concat&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//node&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;__dirname&#x6216;__filename&#x505A;&#x8DEF;&#x5F84;&#x62FC;&#x63A5;</span>
+    <span class="token string">&quot;no-plusplus&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;++&#xFF0C;--</span>
+    <span class="token string">&quot;no-process-env&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;process.env</span>
+    <span class="token string">&quot;no-process-exit&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;process.exit()</span>
+    <span class="token string">&quot;no-proto&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;__proto__&#x5C5E;&#x6027;</span>
+    <span class="token string">&quot;no-redeclare&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x91CD;&#x590D;&#x58F0;&#x660E;&#x53D8;&#x91CF;</span>
+    <span class="token string">&quot;no-regex-spaces&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x5728;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x9762;&#x91CF;&#x4E2D;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x7A7A;&#x683C; /foo bar/</span>
+    <span class="token string">&quot;no-restricted-modules&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x5982;&#x679C;&#x7981;&#x7528;&#x4E86;&#x6307;&#x5B9A;&#x6A21;&#x5757;&#xFF0C;&#x4F7F;&#x7528;&#x5C31;&#x4F1A;&#x62A5;&#x9519;</span>
+    <span class="token string">&quot;no-return-assign&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//return &#x8BED;&#x53E5;&#x4E2D;&#x4E0D;&#x80FD;&#x6709;&#x8D4B;&#x503C;&#x8868;&#x8FBE;&#x5F0F;</span>
+    <span class="token string">&quot;no-script-url&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;javascript:void(0)</span>
+    <span class="token string">&quot;no-self-compare&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x80FD;&#x6BD4;&#x8F83;&#x81EA;&#x8EAB;</span>
+    <span class="token string">&quot;no-sequences&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x8FD0;&#x7B97;&#x7B26;</span>
+    <span class="token string">&quot;no-shadow&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x5916;&#x90E8;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4E0D;&#x80FD;&#x4E0E;&#x5B83;&#x6240;&#x5305;&#x542B;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x6216;&#x53C2;&#x6570;&#x540C;&#x540D;</span>
+    <span class="token string">&quot;no-shadow-restricted-names&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E2D;&#x89C4;&#x5B9A;&#x7684;&#x9650;&#x5236;&#x6807;&#x8BC6;&#x7B26;&#x4E0D;&#x80FD;&#x4F5C;&#x4E3A;&#x58F0;&#x660E;&#x65F6;&#x7684;&#x53D8;&#x91CF;&#x540D;&#x4F7F;&#x7528;</span>
+    <span class="token string">&quot;no-spaced-func&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x51FD;&#x6570;&#x8C03;&#x7528;&#x65F6; &#x51FD;&#x6570;&#x540D;&#x4E0E;()&#x4E4B;&#x95F4;&#x4E0D;&#x80FD;&#x6709;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;no-sparse-arrays&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x7A00;&#x758F;&#x6570;&#x7EC4;&#xFF0C; [1,,2]</span>
+    <span class="token string">&quot;no-sync&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//nodejs &#x7981;&#x6B62;&#x540C;&#x6B65;&#x65B9;&#x6CD5;</span>
+    <span class="token string">&quot;no-ternary&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;</span>
+    <span class="token string">&quot;no-trailing-spaces&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E00;&#x884C;&#x7ED3;&#x675F;&#x540E;&#x9762;&#x4E0D;&#x8981;&#x6709;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;no-this-before-super&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x5728;&#x8C03;&#x7528;super()&#x4E4B;&#x524D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;this&#x6216;super</span>
+    <span class="token string">&quot;no-throw-literal&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x629B;&#x51FA;&#x5B57;&#x9762;&#x91CF;&#x9519;&#x8BEF; throw &quot;error&quot;;</span>
+    <span class="token string">&quot;no-undef&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x80FD;&#x6709;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;</span>
+    <span class="token string">&quot;no-undef-init&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x53D8;&#x91CF;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x7ED9;&#x5B83;&#x8D4B;&#x503C;&#x4E3A;undefined</span>
+    <span class="token string">&quot;no-undefined&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x80FD;&#x4F7F;&#x7528;undefined</span>
+    <span class="token string">&quot;no-unexpected-multiline&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x907F;&#x514D;&#x591A;&#x884C;&#x8868;&#x8FBE;&#x5F0F;</span>
+    <span class="token string">&quot;no-underscore-dangle&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x6807;&#x8BC6;&#x7B26;&#x4E0D;&#x80FD;&#x4EE5;_&#x5F00;&#x5934;&#x6216;&#x7ED3;&#x5C3E;</span>
+    <span class="token string">&quot;no-unneeded-ternary&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x5D4C;&#x5957; var isYes = answer === 1 ? true : false;</span>
+    <span class="token string">&quot;no-unreachable&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x80FD;&#x6709;&#x65E0;&#x6CD5;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;</span>
+    <span class="token string">&quot;no-unused-expressions&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x65E0;&#x7528;&#x7684;&#x8868;&#x8FBE;&#x5F0F;</span>
+    <span class="token string">&quot;no-unused-vars&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> vars<span class="token operator">:</span> <span class="token string">&quot;all&quot;</span><span class="token punctuation">,</span> args<span class="token operator">:</span> <span class="token string">&quot;after-used&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x80FD;&#x6709;&#x58F0;&#x660E;&#x540E;&#x672A;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x53D8;&#x91CF;&#x6216;&#x53C2;&#x6570;</span>
+    <span class="token string">&quot;no-use-before-define&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x672A;&#x5B9A;&#x4E49;&#x524D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;</span>
+    <span class="token string">&quot;no-useless-call&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x4E0D;&#x5FC5;&#x8981;&#x7684;call&#x548C;apply</span>
+    <span class="token string">&quot;no-void&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x7528;void&#x64CD;&#x4F5C;&#x7B26;</span>
+    <span class="token string">&quot;no-var&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x7528;var&#xFF0C;&#x7528;let&#x548C;const&#x4EE3;&#x66FF;</span>
+    <span class="token string">&quot;no-warning-comments&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> terms<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;todo&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;fixme&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;xxx&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> location<span class="token operator">:</span> <span class="token string">&quot;start&quot;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x80FD;&#x6709;&#x8B66;&#x544A;&#x5907;&#x6CE8;</span>
+    <span class="token string">&quot;no-with&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x7528;with</span>
+
+    <span class="token string">&quot;array-bracket-spacing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;never&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x662F;&#x5426;&#x5141;&#x8BB8;&#x975E;&#x7A7A;&#x6570;&#x7EC4;&#x91CC;&#x9762;&#x6709;&#x591A;&#x4F59;&#x7684;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;arrow-parens&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#x62EC;&#x8D77;&#x6765;</span>
+    <span class="token string">&quot;arrow-spacing&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//=&gt;&#x7684;&#x524D;/&#x540E;&#x62EC;&#x53F7;</span>
+    <span class="token string">&quot;accessor-pairs&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x5728;&#x5BF9;&#x8C61;&#x4E2D;&#x4F7F;&#x7528;getter/setter</span>
+    <span class="token string">&quot;block-scoped-var&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x5757;&#x8BED;&#x53E5;&#x4E2D;&#x4F7F;&#x7528;var</span>
+    <span class="token string">&quot;brace-style&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&quot;1tbs&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5927;&#x62EC;&#x53F7;&#x98CE;&#x683C;</span>
+    <span class="token string">&quot;callback-return&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x907F;&#x514D;&#x591A;&#x6B21;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x4EC0;&#x4E48;&#x7684;</span>
+    camelcase<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x5F3A;&#x5236;&#x9A7C;&#x5CF0;&#x6CD5;&#x547D;&#x540D;</span>
+    <span class="token string">&quot;comma-dangle&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;never&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;&#x9879;&#x5C3E;&#x4E0D;&#x80FD;&#x6709;&#x9017;&#x53F7;</span>
+    <span class="token string">&quot;comma-spacing&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x9017;&#x53F7;&#x524D;&#x540E;&#x7684;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;comma-style&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;last&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x9017;&#x53F7;&#x98CE;&#x683C;&#xFF0C;&#x6362;&#x884C;&#x65F6;&#x5728;&#x884C;&#x9996;&#x8FD8;&#x662F;&#x884C;&#x5C3E;</span>
+    complexity<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5FAA;&#x73AF;&#x590D;&#x6742;&#x5EA6;</span>
+    <span class="token string">&quot;computed-property-spacing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;never&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x662F;&#x5426;&#x5141;&#x8BB8;&#x8BA1;&#x7B97;&#x540E;&#x7684;&#x952E;&#x540D;&#x4EC0;&#x4E48;&#x7684;</span>
+    <span class="token string">&quot;consistent-return&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//return &#x540E;&#x9762;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x7701;&#x7565;</span>
+    <span class="token string">&quot;consistent-this&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;that&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//this&#x522B;&#x540D;</span>
+    <span class="token string">&quot;constructor-super&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x975E;&#x6D3E;&#x751F;&#x7C7B;&#x4E0D;&#x80FD;&#x8C03;&#x7528;super&#xFF0C;&#x6D3E;&#x751F;&#x7C7B;&#x5FC5;&#x987B;&#x8C03;&#x7528;super</span>
+    curly<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;all&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5FC5;&#x987B;&#x4F7F;&#x7528; if(){} &#x4E2D;&#x7684;{}</span>
+    <span class="token string">&quot;default-case&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//switch&#x8BED;&#x53E5;&#x6700;&#x540E;&#x5FC5;&#x987B;&#x6709;default</span>
+    <span class="token string">&quot;dot-location&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x5BF9;&#x8C61;&#x8BBF;&#x95EE;&#x7B26;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x6362;&#x884C;&#x7684;&#x65F6;&#x5019;&#x5728;&#x884C;&#x9996;&#x8FD8;&#x662F;&#x884C;&#x5C3E;</span>
+    <span class="token string">&quot;dot-notation&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> allowKeywords<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x65B9;&#x62EC;&#x53F7;</span>
+    <span class="token string">&quot;eol-last&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x6587;&#x4EF6;&#x4EE5;&#x5355;&#x4E00;&#x7684;&#x6362;&#x884C;&#x7B26;&#x7ED3;&#x675F;</span>
+    eqeqeq<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x5168;&#x7B49;</span>
+    <span class="token string">&quot;func-names&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#x5FC5;&#x987B;&#x6709;&#x540D;&#x5B57;</span>
+    <span class="token string">&quot;func-style&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;declaration&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x51FD;&#x6570;&#x98CE;&#x683C;&#xFF0C;&#x89C4;&#x5B9A;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x58F0;&#x660E;/&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;</span>
+    <span class="token string">&quot;generator-star-spacing&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;*&#x7684;&#x524D;&#x540E;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;guard-for-in&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//for in&#x5FAA;&#x73AF;&#x8981;&#x7528;if&#x8BED;&#x53E5;&#x8FC7;&#x6EE4;</span>
+    <span class="token string">&quot;handle-callback-err&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//nodejs &#x5904;&#x7406;&#x9519;&#x8BEF;</span>
+    <span class="token string">&quot;id-length&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x53D8;&#x91CF;&#x540D;&#x957F;&#x5EA6;</span>
+    indent<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x7F29;&#x8FDB;&#x98CE;&#x683C;</span>
+    <span class="token string">&quot;init-declarations&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x58F0;&#x660E;&#x65F6;&#x5FC5;&#x987B;&#x8D4B;&#x521D;&#x503C;</span>
+    <span class="token string">&quot;key-spacing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> beforeColon<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> afterColon<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;&#x4E2D;&#x5192;&#x53F7;&#x7684;&#x524D;&#x540E;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;lines-around-comment&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x884C;&#x524D;/&#x884C;&#x540E;&#x5907;&#x6CE8;</span>
+    <span class="token string">&quot;max-depth&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5D4C;&#x5957;&#x5757;&#x6DF1;&#x5EA6;</span>
+    <span class="token string">&quot;max-len&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5B57;&#x7B26;&#x4E32;&#x6700;&#x5927;&#x957F;&#x5EA6;</span>
+    <span class="token string">&quot;max-nested-callbacks&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x56DE;&#x8C03;&#x5D4C;&#x5957;&#x6DF1;&#x5EA6;</span>
+    <span class="token string">&quot;max-params&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x51FD;&#x6570;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x6709;3&#x4E2A;&#x53C2;&#x6570;</span>
+    <span class="token string">&quot;max-statements&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x51FD;&#x6570;&#x5185;&#x6700;&#x591A;&#x6709;&#x51E0;&#x4E2A;&#x58F0;&#x660E;</span>
+    <span class="token string">&quot;new-cap&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x51FD;&#x6570;&#x540D;&#x9996;&#x884C;&#x5927;&#x5199;&#x5FC5;&#x987B;&#x4F7F;&#x7528;new&#x65B9;&#x5F0F;&#x8C03;&#x7528;&#xFF0C;&#x9996;&#x884C;&#x5C0F;&#x5199;&#x5FC5;&#x987B;&#x7528;&#x4E0D;&#x5E26;new&#x65B9;&#x5F0F;&#x8C03;&#x7528;</span>
+    <span class="token string">&quot;new-parens&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//new&#x65F6;&#x5FC5;&#x987B;&#x52A0;&#x5C0F;&#x62EC;&#x53F7;</span>
+    <span class="token string">&quot;newline-after-var&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x540E;&#x662F;&#x5426;&#x9700;&#x8981;&#x7A7A;&#x4E00;&#x884C;</span>
+    <span class="token string">&quot;object-curly-spacing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;never&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5927;&#x62EC;&#x53F7;&#x5185;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;object-shorthand&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x5F3A;&#x5236;&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;&#x7F29;&#x5199;&#x8BED;&#x6CD5;</span>
+    <span class="token string">&quot;one-var&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x8FDE;&#x7EED;&#x58F0;&#x660E;</span>
+    <span class="token string">&quot;operator-assignment&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;always&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26; += -=&#x4EC0;&#x4E48;&#x7684;</span>
+    <span class="token string">&quot;operator-linebreak&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;after&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x6362;&#x884C;&#x65F6;&#x8FD0;&#x7B97;&#x7B26;&#x5728;&#x884C;&#x5C3E;&#x8FD8;&#x662F;&#x884C;&#x9996;</span>
+    <span class="token string">&quot;padded-blocks&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x5757;&#x8BED;&#x53E5;&#x5185;&#x884C;&#x9996;&#x884C;&#x5C3E;&#x662F;&#x5426;&#x8981;&#x7A7A;&#x884C;</span>
+    <span class="token string">&quot;prefer-const&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x9996;&#x9009;const</span>
+    <span class="token string">&quot;prefer-spread&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x9996;&#x9009;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;</span>
+    <span class="token string">&quot;prefer-reflect&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x9996;&#x9009;Reflect&#x7684;&#x65B9;&#x6CD5;</span>
+    quotes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&quot;single&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5F15;&#x53F7;&#x7C7B;&#x578B; `` &quot;&quot; &apos;&apos;</span>
+    <span class="token string">&quot;quote-props&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;always&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x662F;&#x5426;&#x5F3A;&#x5236;&#x53CC;&#x5F15;&#x53F7;</span>
+    radix<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//parseInt&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;</span>
+    <span class="token string">&quot;id-match&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x547D;&#x540D;&#x68C0;&#x6D4B;</span>
+    <span class="token string">&quot;require-yield&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x6709;yield</span>
+    semi<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;always&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x8BED;&#x53E5;&#x5F3A;&#x5236;&#x5206;&#x53F7;&#x7ED3;&#x5C3E;</span>
+    <span class="token string">&quot;semi-spacing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> before<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> after<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5206;&#x53F7;&#x524D;&#x540E;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;sort-vars&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x65F6;&#x6392;&#x5E8F;</span>
+    <span class="token string">&quot;space-after-keywords&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;always&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5173;&#x952E;&#x5B57;&#x540E;&#x9762;&#x662F;&#x5426;&#x8981;&#x7A7A;&#x4E00;&#x683C;</span>
+    <span class="token string">&quot;space-before-blocks&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;always&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E0D;&#x4EE5;&#x65B0;&#x884C;&#x5F00;&#x59CB;&#x7684;&#x5757;{&#x524D;&#x9762;&#x8981;&#x4E0D;&#x8981;&#x6709;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;space-before-function-paren&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;always&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x65F6;&#x62EC;&#x53F7;&#x524D;&#x9762;&#x8981;&#x4E0D;&#x8981;&#x6709;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;space-in-parens&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;never&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x5C0F;&#x62EC;&#x53F7;&#x91CC;&#x9762;&#x8981;&#x4E0D;&#x8981;&#x6709;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;space-infix-ops&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E2D;&#x7F00;&#x64CD;&#x4F5C;&#x7B26;&#x5468;&#x56F4;&#x8981;&#x4E0D;&#x8981;&#x6709;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;keyword-spacing&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//return throw case&#x540E;&#x9762;&#x8981;&#x4E0D;&#x8981;&#x52A0;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;space-unary-ops&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> words<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> nonwords<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x4E00;&#x5143;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x524D;/&#x540E;&#x8981;&#x4E0D;&#x8981;&#x52A0;&#x7A7A;&#x683C;</span>
+    <span class="token string">&quot;spaced-comment&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x6CE8;&#x91CA;&#x98CE;&#x683C;&#x8981;&#x4E0D;&#x8981;&#x6709;&#x7A7A;&#x683C;&#x4EC0;&#x4E48;&#x7684;</span>
+    strict<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x4F7F;&#x7528;&#x4E25;&#x683C;&#x6A21;&#x5F0F;</span>
+    <span class="token string">&quot;use-isnan&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x7981;&#x6B62;&#x6BD4;&#x8F83;&#x65F6;&#x4F7F;&#x7528;NaN&#xFF0C;&#x53EA;&#x80FD;&#x7528;isNaN()</span>
+    <span class="token string">&quot;valid-jsdoc&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//jsdoc&#x89C4;&#x5219;</span>
+    <span class="token string">&quot;valid-typeof&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x5408;&#x6CD5;&#x7684;typeof&#x7684;&#x503C;</span>
+    <span class="token string">&quot;vars-on-top&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">//var&#x5FC5;&#x987B;&#x653E;&#x5728;&#x4F5C;&#x7528;&#x57DF;&#x9876;&#x90E8;</span>
+    <span class="token string">&quot;wrap-iife&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;inside&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//&#x7ACB;&#x5373;&#x6267;&#x884C;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5C0F;&#x62EC;&#x53F7;&#x98CE;&#x683C;</span>
+    <span class="token string">&quot;wrap-regex&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x9762;&#x91CF;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#x5305;&#x8D77;&#x6765;</span>
+    yoda<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;never&quot;</span><span class="token punctuation">]</span> <span class="token comment">//&#x7981;&#x6B62;&#x5C24;&#x8FBE;&#x6761;&#x4EF6;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="常用正则.html" class="navigation navigation-prev " aria-label="Previous page: 常用正则">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../js基础/词法作用域/readme.html" class="navigation navigation-next " aria-label="Next page: js 基础">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"vscode 配置 eslint","level":"1.2.12","depth":2,"next":{"title":"js 基础","level":"1.3","depth":1,"path":"js基础/词法作用域/readme.md","ref":"js基础/词法作用域/readme.md","articles":[{"title":"词法作用域","level":"1.3.1","depth":2,"path":"js基础/词法作用域/readme.md","ref":"js基础/词法作用域/readme.md","articles":[]},{"title":"内存分配","level":"1.3.2","depth":2,"path":"js基础/内存分配/readme.md","ref":"js基础/内存分配/readme.md","articles":[]},{"title":"浏览器工作原理","level":"1.3.3","depth":2,"path":"js基础/浏览器工作原理/readme.md","ref":"js基础/浏览器工作原理/readme.md","articles":[]},{"title":"类和对象","level":"1.3.4","depth":2,"path":"js基础/类和对象/readme.md","ref":"js基础/类和对象/readme.md","articles":[]},{"title":"数据类型","level":"1.3.5","depth":2,"path":"js基础/数据类型/readme.md","ref":"js基础/数据类型/readme.md","articles":[]},{"title":"js 事件机制","level":"1.3.6","depth":2,"path":"js基础/js事件机制/readme.md","ref":"js基础/js事件机制/readme.md","articles":[]}]},"previous":{"title":"常用正则","level":"1.2.11","depth":2,"path":"前端/常用正则.md","ref":"前端/常用正则.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"前端/vscode配置eslint.md","mtime":"2020-01-28T05:39:00.554Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-28T05:39:38.349Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

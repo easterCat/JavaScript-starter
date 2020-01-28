@@ -1,0 +1,1750 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>vue 的指令,插件,混合 · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="vue的基础.html" />
+    
+    
+    <link rel="prev" href="vue.use的使用.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    前端基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../前端/获取屏幕宽度.html">
+            
+                <a href="../前端/获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                <a href="../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                    
+                    学会使用 JavaScript 访问和修改 CSS 样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../前端/解决canvas在高清屏中模糊.html">
+            
+                <a href="../前端/解决canvas在高清屏中模糊.html">
+            
+                    
+                    解决 canvas 在高清屏中模糊
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../前端/js二进制数据互转.html">
+            
+                <a href="../前端/js二进制数据互转.html">
+            
+                    
+                    js 二进制数据互转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../前端/单元测试/readme.html">
+            
+                <a href="../前端/单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../前端/网络/http响应码.html">
+            
+                <a href="../前端/网络/http响应码.html">
+            
+                    
+                    http 响应码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../前端/网络/http预览导图.html">
+            
+                <a href="../前端/网络/http预览导图.html">
+            
+                    
+                    http 预览导图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../前端/npm安装github包的方式.html">
+            
+                <a href="../前端/npm安装github包的方式.html">
+            
+                    
+                    npm 安装 github 包的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../前端/浏览器渲染进程Renderer.html">
+            
+                <a href="../前端/浏览器渲染进程Renderer.html">
+            
+                    
+                    浏览器渲染进程 Renderer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../前端/移动端的踩坑问题.html">
+            
+                <a href="../前端/移动端的踩坑问题.html">
+            
+                    
+                    移动端的踩坑问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../前端/常用正则.html">
+            
+                <a href="../前端/常用正则.html">
+            
+                    
+                    常用正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../前端/vscode配置eslint.html">
+            
+                <a href="../前端/vscode配置eslint.html">
+            
+                    
+                    vscode 配置 eslint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    js 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../js基础/内存分配/readme.html">
+            
+                <a href="../js基础/内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../js基础/浏览器工作原理/readme.html">
+            
+                <a href="../js基础/浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../js基础/类和对象/readme.html">
+            
+                <a href="../js基础/类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../js基础/数据类型/readme.html">
+            
+                <a href="../js基础/数据类型/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../js基础/js事件机制/readme.html">
+            
+                <a href="../js基础/js事件机制/readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../js基础/ES6/Map和Set.html">
+            
+                <a href="../js基础/ES6/Map和Set.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../js基础/ES6/Map和Set.html">
+            
+                <a href="../js基础/ES6/Map和Set.html">
+            
+                    
+                    Map 和 Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="vue路由与keep-alive.html">
+            
+                <a href="vue路由与keep-alive.html">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="vue路由与keep-alive.html">
+            
+                <a href="vue路由与keep-alive.html">
+            
+                    
+                    vue 路由与 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="vue.use的使用.html">
+            
+                <a href="vue.use的使用.html">
+            
+                    
+                    vue.use 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="vue的指令,插件,混合.html">
+            
+                <a href="vue的指令,插件,混合.html">
+            
+                    
+                    vue 的指令,插件,混合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="vue的基础.html">
+            
+                <a href="vue的基础.html">
+            
+                    
+                    vue 的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="vue的基础2.html">
+            
+                <a href="vue的基础2.html">
+            
+                    
+                    vue 的基础 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="vue的基础3.html">
+            
+                <a href="vue的基础3.html">
+            
+                    
+                    vue 的基础 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="vue的基础4.html">
+            
+                <a href="vue的基础4.html">
+            
+                    
+                    vue 的基础 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../nodejs/node写个helloworld.html">
+            
+                <a href="../nodejs/node写个helloworld.html">
+            
+                    
+                    nodejs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../nodejs/环境/reids安装配置.html">
+            
+                <a href="../nodejs/环境/reids安装配置.html">
+            
+                    
+                    reids 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../nodejs/环境/mysql安装配置.html">
+            
+                <a href="../nodejs/环境/mysql安装配置.html">
+            
+                    
+                    mysql 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../nodejs/环境/Elasticsearch安装配置.html">
+            
+                <a href="../nodejs/环境/Elasticsearch安装配置.html">
+            
+                    
+                    Elasticsearch 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../nodejs/node写个helloworld.html">
+            
+                <a href="../nodejs/node写个helloworld.html">
+            
+                    
+                    node 写个 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../nodejs/node的fs模块.html">
+            
+                <a href="../nodejs/node的fs模块.html">
+            
+                    
+                    node 的 fs 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../nodejs/用node写个爬虫.html">
+            
+                <a href="../nodejs/用node写个爬虫.html">
+            
+                    
+                    用 node 写个爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../nodejs/node实现静态文件服务器.html">
+            
+                <a href="../nodejs/node实现静态文件服务器.html">
+            
+                    
+                    node 实现静态文件服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../nodejs/nodejs文件路径.html">
+            
+                <a href="../nodejs/nodejs文件路径.html">
+            
+                    
+                    nodejs 文件路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../nodejs/node发起http请求.html">
+            
+                <a href="../nodejs/node发起http请求.html">
+            
+                    
+                    node 发起 http 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../nodejs/node中的query,params,body.html">
+            
+                <a href="../nodejs/node中的query,params,body.html">
+            
+                    
+                    node 中的 query,params,body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../nodejs/node常用post提交方式.html">
+            
+                <a href="../nodejs/node常用post提交方式.html">
+            
+                    
+                    node 常用 post 提交方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../nodejs/node的进程和线程.html">
+            
+                <a href="../nodejs/node的进程和线程.html">
+            
+                    
+                    node 的进程和线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                <a href="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                <a href="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具之 http-proxy-middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../nodejs/工具/node工具之node-ip.html">
+            
+                <a href="../nodejs/工具/node工具之node-ip.html">
+            
+                    
+                    node 工具之 node-ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../nodejs/工具/node工具之nodemon.html">
+            
+                <a href="../nodejs/工具/node工具之nodemon.html">
+            
+                    
+                    node 工具之 nodemon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../nodejs/工具/node工具之pm2.html">
+            
+                <a href="../nodejs/工具/node工具之pm2.html">
+            
+                    
+                    node 工具之 pm2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../nodejs/工具/node工具之commander.html">
+            
+                <a href="../nodejs/工具/node工具之commander.html">
+            
+                    
+                    node 工具之 commander
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">java 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Java基础/">
+            
+                <a href="../Java基础/">
+            
+                    
+                    java 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Java基础/变量的类型.html">
+            
+                <a href="../Java基础/变量的类型.html">
+            
+                    
+                    变量的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Java基础/基本数据类型.html">
+            
+                <a href="../Java基础/基本数据类型.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Java基础/修饰符.html">
+            
+                <a href="../Java基础/修饰符.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Java基础/运算符.html">
+            
+                <a href="../Java基础/运算符.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Java基础/条件语句.html">
+            
+                <a href="../Java基础/条件语句.html">
+            
+                    
+                    条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Java基础/循环结构.html">
+            
+                <a href="../Java基础/循环结构.html">
+            
+                    
+                    循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Java基础/switch语句.html">
+            
+                <a href="../Java基础/switch语句.html">
+            
+                    
+                    switch 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Java基础/数组.html">
+            
+                <a href="../Java基础/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../Java基础/字符串.html">
+            
+                <a href="../Java基础/字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../Java基础/Character类.html">
+            
+                <a href="../Java基础/Character类.html">
+            
+                    
+                    Character 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../Java基础/正则表达式.html">
+            
+                <a href="../Java基础/正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../Java基础/流,文件和IO.html">
+            
+                <a href="../Java基础/流,文件和IO.html">
+            
+                    
+                    流,文件和 IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                <a href="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                    
+                    StringBuffer 和 StringBuilder 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="../Java基础/Collection.html">
+            
+                <a href="../Java基础/Collection.html">
+            
+                    
+                    Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.15" data-path="../Java基础/map.html">
+            
+                <a href="../Java基础/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="../Java基础/list.html">
+            
+                <a href="../Java基础/list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" data-path="../Java基础/多线程编程.html">
+            
+                <a href="../Java基础/多线程编程.html">
+            
+                    
+                    多线程编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.18" data-path="../Java基础/泛型.html">
+            
+                <a href="../Java基础/泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    maven 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../spring/tomcat安装配置.html">
+            
+                <a href="../spring/tomcat安装配置.html">
+            
+                    
+                    tomcat 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../spring/intellij安装配置.html">
+            
+                <a href="../spring/intellij安装配置.html">
+            
+                    
+                    intellij 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../spring/spring创建helloworld.html">
+            
+                <a href="../spring/spring创建helloworld.html">
+            
+                    
+                    spring 创建 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构与算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../数据结构与算法/">
+            
+                <a href="../数据结构与算法/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../数据结构与算法/线性表.html">
+            
+                <a href="../数据结构与算法/线性表.html">
+            
+                    
+                    线性表(数组,队列,栈,链表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../数据结构与算法/Java排序算法.html">
+            
+                <a href="../数据结构与算法/Java排序算法.html">
+            
+                    
+                    Java 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Java练习题/">
+            
+                <a href="../Java练习题/">
+            
+                    
+                    Java 练习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../Java练习题/指定范围包含的素数.html">
+            
+                <a href="../Java练习题/指定范围包含的素数.html">
+            
+                    
+                    指定范围包含的素数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../Java练习题/公约数和公倍数.html">
+            
+                <a href="../Java练习题/公约数和公倍数.html">
+            
+                    
+                    公约数和公倍数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    leetcode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    scripto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../scripto/中间件模式.html">
+            
+                <a href="../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../scripto/m长度的都是n的数组.html">
+            
+                <a href="../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >vue 的指令,插件,混合</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4E00;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;-directive"><b>1. </b>&#x4E00;.&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4; directive</a></li><ul><li><span class="title-icon "></span><a href="#&#x94A9;&#x5B50;&#x51FD;&#x6570;"><b>1.1. </b>&#x94A9;&#x5B50;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x53C2;&#x6570;"><b>1.2. </b>&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x53C2;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;"><b>1.3. </b>&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E8C;&#x63D2;&#x4EF6;"><b>2. </b>&#x4E8C;.&#x63D2;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x600E;&#x6837;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;"><b>2.1. </b>&#x600E;&#x6837;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x7B80;&#x5355;&#x4F8B;&#x5B50;"><b>2.2. </b>&#x7B80;&#x5355;&#x4F8B;&#x5B50;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E09;&#x6DF7;&#x5408;-mixins"><b>3. </b>&#x4E09;.&#x6DF7;&#x5408; mixins</a></li><ul><li><span class="title-icon "></span><a href="#&#x9009;&#x9879;&#x5408;&#x5E76;"><b>3.1. </b>&#x9009;&#x9879;&#x5408;&#x5E76;</a></li><li><span class="title-icon "></span><a href="#&#x5168;&#x5C40;&#x6DF7;&#x5408;"><b>3.2. </b>&#x5168;&#x5C40;&#x6DF7;&#x5408;</a></li><li><span class="title-icon "></span><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x9009;&#x9879;&#x5408;&#x5E76;&#x7B56;&#x7565;"><b>3.3. </b>&#x81EA;&#x5B9A;&#x4E49;&#x9009;&#x9879;&#x5408;&#x5E76;&#x7B56;&#x7565;</a></li></ul></ul></div><a href="#&#x4E00;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;-directive" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4E00;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;-directive"><a name="&#x4E00;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;-directive" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;-directive"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4E00;.&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4; directive</h1>
+<p>&#x9664;&#x4E86;&#x6838;&#x5FC3;&#x529F;&#x80FD;&#x9ED8;&#x8BA4;&#x5185;&#x7F6E;&#x7684;&#x6307;&#x4EE4; (<code>v-model</code> &#x548C;<code>v-show</code>)&#xFF0C;Vue &#x4E5F;&#x5141;&#x8BB8;&#x6CE8;&#x518C;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x5728; <code>Vue2.0</code> &#x4E2D;&#xFF0C;&#x4EE3;&#x7801;&#x590D;&#x7528;&#x548C;&#x62BD;&#x8C61;&#x7684;&#x4E3B;&#x8981;&#x5F62;&#x5F0F;&#x662F;&#x7EC4;&#x4EF6;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x6709;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x5BF9;&#x666E;&#x901A; DOM &#x5143;&#x7D20;&#x8FDB;&#x884C;&#x5E95;&#x5C42;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x7528;&#x5230;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;&#x3002;</p>
+<p>&#x6765;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x5F53;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x65F6;&#xFF0C;&#x8BE5; input &#x5143;&#x7D20;&#x5C06;&#x83B7;&#x5F97;&#x7126;&#x70B9;&#xFF1A;</p>
+<pre class="language-"><code>// &#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4; `v-focus`
+Vue.directive(&apos;focus&apos;, {
+  // &#x5F53;&#x88AB;&#x7ED1;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#x63D2;&#x5165;&#x5230; DOM &#x4E2D;&#x65F6;&#x2026;&#x2026;
+  inserted: function(el){
+    // &#x805A;&#x7126;&#x5143;&#x7D20;
+    el.focus()
+  }
+})
+</code></pre><p>&#x5982;&#x679C;&#x60F3;&#x6CE8;&#x518C;&#x5C40;&#x90E8;&#x6307;&#x4EE4;&#xFF0C;&#x7EC4;&#x4EF6;&#x4E2D;&#x4E5F;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;<code>directives</code> &#x7684;&#x9009;&#x9879;&#xFF1A;</p>
+<pre class="language-"><code>directives: {
+  focus: {
+    // &#x6307;&#x4EE4;&#x7684;&#x5B9A;&#x4E49;
+    inserted: function (el) {
+      el.focus()
+    }
+  }
+}
+</code></pre><p>&#x7136;&#x540E;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x4EFB;&#x4F55;&#x5143;&#x7D20;&#x4E0A;&#x4F7F;&#x7528;&#x65B0;&#x7684; v-focus &#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">v-focus</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h2 id="&#x94A9;&#x5B50;&#x51FD;&#x6570;"><a name="&#x94A9;&#x5B50;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x94A9;&#x5B50;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x94A9;&#x5B50;&#x51FD;&#x6570;</h2>
+<p>&#x4E00;&#x4E2A;&#x6307;&#x4EE4;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x5982;&#x4E0B;&#x51E0;&#x4E2A;&#x94A9;&#x5B50;&#x51FD;&#x6570; (&#x5747;&#x4E3A;&#x53EF;&#x9009;)&#xFF1A;</p>
+<ul>
+<li><code>bind</code>&#xFF1A;&#x53EA;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#xFF0C;&#x6307;&#x4EE4;&#x7B2C;&#x4E00;&#x6B21;&#x7ED1;&#x5B9A;&#x5230;&#x5143;&#x7D20;&#x65F6;&#x8C03;&#x7528;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x6027;&#x7684;&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x7F6E;&#x3002;</li>
+<li><code>inserted</code>&#xFF1A;&#x88AB;&#x7ED1;&#x5B9A;&#x5143;&#x7D20;&#x63D2;&#x5165;&#x7236;&#x8282;&#x70B9;&#x65F6;&#x8C03;&#x7528; (&#x4EC5;&#x4FDD;&#x8BC1;&#x7236;&#x8282;&#x70B9;&#x5B58;&#x5728;&#xFF0C;&#x4F46;&#x4E0D;&#x4E00;&#x5B9A;&#x5DF2;&#x88AB;&#x63D2;&#x5165;&#x6587;&#x6863;&#x4E2D;)&#x3002;</li>
+<li><code>update</code>&#xFF1A;&#x6240;&#x5728;&#x7EC4;&#x4EF6;&#x7684; VNode &#x66F4;&#x65B0;&#x65F6;&#x8C03;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x80FD;&#x53D1;&#x751F;&#x5728;&#x5176;&#x5B50; VNode &#x66F4;&#x65B0;&#x4E4B;&#x524D;&#x3002;&#x6307;&#x4EE4;&#x7684;&#x503C;&#x53EF;&#x80FD;&#x53D1;&#x751F;&#x4E86;&#x6539;&#x53D8;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x6CA1;&#x6709;&#x3002;&#x4F46;&#x662F;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6BD4;&#x8F83;&#x66F4;&#x65B0;&#x524D;&#x540E;&#x7684;&#x503C;&#x6765;&#x5FFD;&#x7565;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x6A21;&#x677F;&#x66F4;&#x65B0; (&#x8BE6;&#x7EC6;&#x7684;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x89C1;&#x4E0B;)&#x3002;</li>
+<li><code>componentUpdated</code>&#xFF1A;&#x6307;&#x4EE4;&#x6240;&#x5728;&#x7EC4;&#x4EF6;&#x7684; VNode &#x53CA;&#x5176;&#x5B50; VNode &#x5168;&#x90E8;&#x66F4;&#x65B0;&#x540E;&#x8C03;&#x7528;&#x3002;</li>
+<li><code>unbind</code>&#xFF1A;&#x53EA;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#xFF0C;&#x6307;&#x4EE4;&#x4E0E;&#x5143;&#x7D20;&#x89E3;&#x7ED1;&#x65F6;&#x8C03;&#x7528;&#x3002;</li>
+</ul>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570; (&#x5373; <code>el</code>&#x3001;<code>binding</code>&#x3001;<code>vnode</code>&#x548C; <code>oldVnode</code>)&#x3002;</p>
+<h2 id="&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x53C2;&#x6570;"><a name="&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x94A9;&#x5B50;&#x51FD;&#x6570;&#x53C2;&#x6570;</h2>
+<p>&#x6307;&#x4EE4;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x4F1A;&#x88AB;&#x4F20;&#x5165;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li><code>el</code>&#xFF1A;&#x6307;&#x4EE4;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x76F4;&#x63A5;&#x64CD;&#x4F5C; DOM &#x3002;
+-</li>
+</ul>
+<p><code>binding</code>&#xFF1A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#xFF1A;</p>
+<ul>
+<li><code>name</code>&#xFF1A;&#x6307;&#x4EE4;&#x540D;&#xFF0C;&#x4E0D;&#x5305;&#x62EC; v- &#x524D;&#x7F00;&#x3002;</li>
+<li><code>value</code>&#xFF1A;&#x6307;&#x4EE4;&#x7684;&#x7ED1;&#x5B9A;&#x503C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<code>v-my-directive=&quot;1 + 1&quot;</code>&#x4E2D;&#xFF0C;&#x7ED1;&#x5B9A;&#x503C;&#x4E3A;<code>2</code>&#x3002;</li>
+<li><code>oldValue</code>&#xFF1A;&#x6307;&#x4EE4;&#x7ED1;&#x5B9A;&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x4EC5;&#x5728; <code>update</code> &#x548C; <code>componentUpdated</code>&#x94A9;&#x5B50;&#x4E2D;&#x53EF;&#x7528;&#x3002;&#x65E0;&#x8BBA;&#x503C;&#x662F;&#x5426;&#x6539;&#x53D8;&#x90FD;&#x53EF;&#x7528;&#x3002;</li>
+<li><code>expression</code>&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x7684;&#x6307;&#x4EE4;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x4F8B;&#x5982; <code>v-my-directive=&quot;1 + 1&quot;</code> &#x4E2D;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;<code>&quot;1 + 1&quot;</code>&#x3002;</li>
+<li><code>arg</code>&#xFF1A;&#x4F20;&#x7ED9;&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x9009;&#x3002;&#x4F8B;&#x5982; <code>v-my-directive:foo</code>&#x4E2D;&#xFF0C;&#x53C2;&#x6570;&#x4E3A;<code>&quot;foo&quot;</code>&#x3002;</li>
+<li><p><code>modifiers</code>&#xFF1A;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4FEE;&#x9970;&#x7B26;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x4F8B;&#x5982;&#xFF1A;<code>v-my-directive.foo.bar</code> &#x4E2D;&#xFF0C;&#x4FEE;&#x9970;&#x7B26;&#x5BF9;&#x8C61;&#x4E3A; <code>{ foo: true, bar: true }</code>&#x3002;</p>
+</li>
+<li><p><code>vnode</code>&#xFF1A;<code>Vue</code> &#x7F16;&#x8BD1;&#x751F;&#x6210;&#x7684;&#x865A;&#x62DF;&#x8282;&#x70B9;&#x3002;&#x79FB;&#x6B65; VNode API &#x6765;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x8BE6;&#x60C5;&#x3002;</p>
+</li>
+<li><code>oldVnode</code>&#xFF1A;&#x4E0A;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x8282;&#x70B9;&#xFF0C;&#x4EC5;&#x5728;<code>update</code> &#x548C; <code>componentUpdated</code> &#x94A9;&#x5B50;&#x4E2D;&#x53EF;&#x7528;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x9664;&#x4E86; <code>el</code>&#x4E4B;&#x5916;&#xFF0C;&#x5176;&#x5B83;&#x53C2;&#x6570;&#x90FD;&#x5E94;&#x8BE5;&#x662F;&#x53EA;&#x8BFB;&#x7684;&#xFF0C;&#x5207;&#x52FF;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x94A9;&#x5B50;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x6570;&#x636E;&#xFF0C;&#x5EFA;&#x8BAE;&#x901A;&#x8FC7;&#x5143;&#x7D20;&#x7684; <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/dataset" target="_blank">dataset</a> &#x6765;&#x8FDB;&#x884C;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x4E86;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x94A9;&#x5B50;&#x6837;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>hook-arguments-example<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">v-demo:</span>foo.a.b</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>message<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+Vue.directive(&apos;demo&apos;, {
+  bind: function(el, binding, vnode) {
+    var s = JSON.stringify
+    el.innerHTML =
+      &apos;name: &apos;       + s(binding.name) + &apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>&apos; +
+      &apos;value: &apos;      + s(binding.value) + &apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>&apos; +
+      &apos;expression: &apos; + s(binding.expression) + &apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>&apos; +
+      &apos;argument: &apos;   + s(binding.arg) + &apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>&apos; +
+      &apos;modifiers: &apos;  + s(binding.modifiers) + &apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>&apos; +
+      &apos;vnode keys: &apos; + Object.keys(vnode).join(&apos;, &apos;)
+  }
+})
+
+new Vue({
+  el:&apos;#hook-arguments-example&apos;,
+  data: {
+    message: &apos;hello!&apos;
+  }
+})
+</code></pre><p>&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>name:&quot;demo&quot;value:&quot;hello!&quot;expression:&quot;message&quot;argument:&quot;foo&quot;modifiers: {&quot;a&quot;:true,&quot;b&quot;:true}
+vnode keys: tag, data, children, text, elm, ns, context, fnContext, fnOptions, fnScopeId, key, componentOptions, componentInstance, parent, raw, isStatic, isRootInsert, isComment, isCloned, isOnce, asyncFactory, asyncMeta, isAsyncPlaceholder
+</code></pre><p>&#x5728;&#x5F88;&#x591A;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x60F3;&#x5728; bind &#x548C; update &#x65F6;&#x89E6;&#x53D1;&#x76F8;&#x540C;&#x884C;&#x4E3A;&#xFF0C;&#x800C;&#x4E0D;&#x5173;&#x5FC3;&#x5176;&#x5B83;&#x7684;&#x94A9;&#x5B50;&#x3002;&#x6BD4;&#x5982;&#x8FD9;&#x6837;&#x5199;:</p>
+<pre class="language-"><code>Vue.directive(&apos;color-swatch&apos;, function (el, binding) {
+  el.style.backgroundColor = binding.value
+})
+</code></pre><h2 id="&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;"><a name="&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;</h2>
+<p>&#x5982;&#x679C;&#x6307;&#x4EE4;&#x9700;&#x8981;&#x591A;&#x4E2A;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A; JavaScript &#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;&#x3002;&#x8BB0;&#x4F4F;&#xFF0C;&#x6307;&#x4EE4;&#x51FD;&#x6570;&#x80FD;&#x591F;&#x63A5;&#x53D7;&#x6240;&#x6709;&#x5408;&#x6CD5;&#x7684; JavaScript &#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
+<pre class="language-"><code>&lt;divv-demo=&quot;{ color: &apos;white&apos;, text: &apos;hello!&apos; }&quot;&gt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+Vue.directive(&apos;demo&apos;, function (el, binding) {
+  console.log(binding.value.color) // =&gt; &quot;white&quot;
+  console.log(binding.value.text)  // =&gt; &quot;hello!&quot;
+})
+</code></pre><h1 id="&#x4E8C;&#x63D2;&#x4EF6;"><a name="&#x4E8C;&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x4E8C;.&#x63D2;&#x4EF6;</h1>
+<p>&#x63D2;&#x4EF6;&#x901A;&#x5E38;&#x4F1A;&#x4E3A; Vue &#x6DFB;&#x52A0;&#x5168;&#x5C40;&#x529F;&#x80FD;&#x3002;&#x63D2;&#x4EF6;&#x7684;&#x8303;&#x56F4;&#x6CA1;&#x6709;&#x9650;&#x5236;&#x2014;&#x2014;&#x4E00;&#x822C;&#x6709;&#x4E0B;&#x9762;&#x51E0;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>1.&#x6DFB;&#x52A0;&#x5168;&#x5C40;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x5C5E;&#x6027;&#xFF0C;&#x5982;: <a href="https://github.com/karol-f/vue-custom-element" target="_blank">vue-custom-element</a></li>
+<li>2.&#x6DFB;&#x52A0;&#x5168;&#x5C40;&#x8D44;&#x6E90;&#xFF1A;&#x6307;&#x4EE4;/&#x8FC7;&#x6EE4;&#x5668;/&#x8FC7;&#x6E21;&#x7B49;&#xFF0C;&#x5982; <a href="https://github.com/vuejs/vue-touch" target="_blank">vue-touch</a></li>
+<li>3.&#x901A;&#x8FC7;&#x5168;&#x5C40; mixin &#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x7EC4;&#x4EF6;&#x9009;&#x9879;&#xFF0C;&#x5982;: <a href="https://github.com/vuejs/vue-router" target="_blank">vue-router</a></li>
+<li>4.&#x6DFB;&#x52A0; Vue &#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#xFF0C;&#x901A;&#x8FC7;&#x628A;&#x5B83;&#x4EEC;&#x6DFB;&#x52A0;&#x5230; Vue.prototype &#x4E0A;&#x5B9E;&#x73B0;&#x3002;</li>
+<li>5.&#x4E00;&#x4E2A;&#x5E93;&#xFF0C;&#x63D0;&#x4F9B;&#x81EA;&#x5DF1;&#x7684; API&#xFF0C;&#x540C;&#x65F6;&#x63D0;&#x4F9B;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x5982; <a href="https://github.com/vuejs/vue-router" target="_blank">vue-router</a></li>
+</ul>
+<p>Vue.js &#x7684;&#x63D2;&#x4EF6;&#x5E94;&#x5F53;&#x6709;&#x4E00;&#x4E2A;&#x516C;&#x5F00;&#x65B9;&#x6CD5;<code>install</code> &#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F; <code>Vue</code> &#x6784;&#x9020;&#x5668;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x9009;&#x9879;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre class="language-"><code>MyPlugin.install = function(Vue, options){
+  // 1. &#x6DFB;&#x52A0;&#x5168;&#x5C40;&#x65B9;&#x6CD5;&#x6216;&#x5C5E;&#x6027;
+  Vue.myGlobalMethod = function(){
+    // &#x903B;&#x8F91;...
+  }
+
+  // 2. &#x6DFB;&#x52A0;&#x5168;&#x5C40;&#x8D44;&#x6E90;
+  Vue.directive(&apos;my-directive&apos;, {
+    bind (el, binding, vnode, oldVnode) {
+      // &#x903B;&#x8F91;...
+    }
+    ...
+  })
+
+  // 3. &#x6CE8;&#x5165;&#x7EC4;&#x4EF6;
+  Vue.mixin({
+    created: function(){
+      // &#x903B;&#x8F91;...
+    }
+    ...
+  })
+
+  // 4. &#x6DFB;&#x52A0;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;
+  Vue.prototype.$myMethod = function(methodOptions){
+    // &#x903B;&#x8F91;...
+  }
+}
+</code></pre><h2 id="&#x600E;&#x6837;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;"><a name="&#x600E;&#x6837;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x600E;&#x6837;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x600E;&#x6837;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;</h2>
+<p>&#x901A;&#x8FC7;&#x5168;&#x5C40;&#x65B9;&#x6CD5;<code>Vue.use()</code>&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code>// &#x8C03;&#x7528; `MyPlugin.install(Vue)`
+Vue.use(MyPlugin)
+</code></pre><p>&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x9009;&#x9879;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre class="language-"><code>Vue.use(MyPlugin, { someOption: true })
+</code></pre><p><code>Vue.use</code> &#x4F1A;&#x81EA;&#x52A8;&#x963B;&#x6B62;&#x591A;&#x6B21;&#x6CE8;&#x518C;&#x76F8;&#x540C;&#x63D2;&#x4EF6;&#xFF0C;&#x5C4A;&#x65F6;&#x53EA;&#x4F1A;&#x6CE8;&#x518C;&#x4E00;&#x6B21;&#x8BE5;&#x63D2;&#x4EF6;&#x3002;</p>
+<p><code>Vue.js</code> &#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E9B;&#x63D2;&#x4EF6; (&#x4F8B;&#x5982; vue-router) &#x5728;&#x68C0;&#x6D4B;&#x5230; Vue &#x662F;&#x53EF;&#x8BBF;&#x95EE;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x65F6;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x7528;<code>Vue.use()</code>&#x3002;&#x7136;&#x800C;&#x5728;&#x4F8B;&#x5982; CommonJS &#x7684;&#x6A21;&#x5757;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x59CB;&#x7EC8;&#x663E;&#x5F0F;&#x5730;&#x8C03;&#x7528; <code>Vue.use()</code>&#xFF1A;</p>
+<pre class="language-"><code>// &#x7528; Browserify &#x6216; webpack &#x63D0;&#x4F9B;&#x7684; CommonJS &#x6A21;&#x5757;&#x73AF;&#x5883;&#x65F6;var Vue = require(&apos;vue&apos;)
+var VueRouter = require(&apos;vue-router&apos;)
+
+// &#x4E0D;&#x8981;&#x5FD8;&#x4E86;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;
+Vue.use(VueRouter)
+</code></pre><h2 id="&#x7B80;&#x5355;&#x4F8B;&#x5B50;"><a name="&#x7B80;&#x5355;&#x4F8B;&#x5B50;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x5355;&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x7B80;&#x5355;&#x4F8B;&#x5B50;</h2>
+<p>&#x5C01;&#x88C5;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;
+&#x5728; src &#x4E0B;&#x7684; components &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A; countdown &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A; countdown.vue &#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>&#x5C01;&#x88C5;&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684;&#x63D2;&#x4EF6;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>exportdefault{
+    name:&apos;count-down&apos;
+}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x5728;&#x653E; countdown.vue &#x7684;&#x540C;&#x7EA7;&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A; index.js&#xFF1A;</p>
+<pre class="language-"><code>import countDown from&apos;./countdown&apos;;
+
+countDown.install = function(Vue){
+    Vue.component(countDown.name,countDown)
+};
+
+exportdefault countDown;
+</code></pre><p>&#x5728; main.js &#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code>import countDown from&apos;./components/countdown/index.js&apos;
+Vue.use(countDown)
+</code></pre><p>&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x5C31;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#x4E86;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>count-down</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>count-down</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h1 id="&#x4E09;&#x6DF7;&#x5408;-mixins"><a name="&#x4E09;&#x6DF7;&#x5408;-mixins" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x6DF7;&#x5408;-mixins"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4E09;.&#x6DF7;&#x5408; mixins</h1>
+<p>&#x6DF7;&#x5408; (<code>mixins</code>) &#x662F;&#x4E00;&#x79CD;&#x5206;&#x53D1; Vue &#x7EC4;&#x4EF6;&#x4E2D;&#x53EF;&#x590D;&#x7528;&#x529F;&#x80FD;&#x7684;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4EFB;&#x610F;&#x7EC4;&#x4EF6;&#x9009;&#x9879;&#x3002;&#x5F53;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;&#x7684;&#x9009;&#x9879;&#x5C06;&#x88AB;&#x6DF7;&#x5165;&#x8BE5;&#x7EC4;&#x4EF6;&#x672C;&#x8EAB;&#x7684;&#x9009;&#x9879;&#x3002;</p>
+<pre class="language-"><code>// &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;var myMixin = {
+  created: function () {
+    this.hello()
+  },
+  methods: {
+    hello: function () {
+      console.log(&apos;hello from mixin!&apos;)
+    }
+  }
+}
+
+// &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;&#x7684;&#x7EC4;&#x4EF6;var Component = Vue.extend({
+  mixins: [myMixin]
+})
+
+var component = new Component() // =&gt; &quot;hello from mixin!&quot;
+</code></pre><h2 id="&#x9009;&#x9879;&#x5408;&#x5E76;"><a name="&#x9009;&#x9879;&#x5408;&#x5E76;" class="anchor-navigation-ex-anchor" href="#&#x9009;&#x9879;&#x5408;&#x5E76;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x9009;&#x9879;&#x5408;&#x5E76;</h2>
+<p>&#x5F53;&#x7EC4;&#x4EF6;&#x548C;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;&#x542B;&#x6709;&#x540C;&#x540D;&#x9009;&#x9879;&#x65F6;&#xFF0C;&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x5C06;&#x4EE5;&#x6070;&#x5F53;&#x7684;&#x65B9;&#x5F0F;&#x6DF7;&#x5408;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x540C;&#x540D;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x5C06;&#x6DF7;&#x5408;&#x4E3A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x56E0;&#x6B64;&#x90FD;&#x5C06;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;&#x7684; &#x94A9;&#x5B50;&#x5C06;&#x5728;&#x7EC4;&#x4EF6;&#x81EA;&#x8EAB;&#x94A9;&#x5B50; &#x4E4B;&#x524D; &#x8C03;&#x7528; &#xFF1A;</p>
+<pre class="language-"><code>var mixin = {
+  created: function () {
+    console.log(&apos;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;&#x7684;&#x94A9;&#x5B50;&#x88AB;&#x8C03;&#x7528;&apos;)
+  }
+}
+
+new Vue({
+  mixins: [mixin],
+  created: function () {
+    console.log(&apos;&#x7EC4;&#x4EF6;&#x94A9;&#x5B50;&#x88AB;&#x8C03;&#x7528;&apos;)
+  }
+})
+
+// =&gt; &quot;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;&#x7684;&#x94A9;&#x5B50;&#x88AB;&#x8C03;&#x7528;&quot;// =&gt; &quot;&#x7EC4;&#x4EF6;&#x94A9;&#x5B50;&#x88AB;&#x8C03;&#x7528;&quot;
+</code></pre><p>&#x503C;&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x9009;&#x9879;&#xFF0C;&#x4F8B;&#x5982;<code>methods</code>, <code>components</code> &#x548C; <code>directives</code>&#xFF0C;&#x5C06;&#x88AB;&#x6DF7;&#x5408;&#x4E3A;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x952E;&#x540D;&#x51B2;&#x7A81;&#x65F6;&#xFF0C;&#x53D6;&#x7EC4;&#x4EF6;&#x5BF9;&#x8C61;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x3002;</p>
+<pre class="language-"><code>var mixin = {
+  methods: {
+    foo: function() {
+      console.log(&apos;foo&apos;)
+    },
+    conflicting:function() {
+      console.log(&apos;from mixin&apos;)
+    }
+  }
+}
+
+var vm = new Vue({
+  mixins: [mixin],
+  methods: {
+    bar: function() {
+      console.log(&apos;bar&apos;)
+    },
+    conflicting:function() {
+      console.log(&apos;from self&apos;)
+    }
+  }
+})
+
+vm.foo() // =&gt; &quot;foo&quot;vm.bar() // =&gt; &quot;bar&quot;vm.conflicting() // =&gt; &quot;from self&quot;
+</code></pre><blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;<code>Vue.extend()</code>&#x4E5F;&#x4F7F;&#x7528;&#x540C;&#x6837;&#x7684;&#x7B56;&#x7565;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x3002;</p>
+</blockquote>
+<h2 id="&#x5168;&#x5C40;&#x6DF7;&#x5408;"><a name="&#x5168;&#x5C40;&#x6DF7;&#x5408;" class="anchor-navigation-ex-anchor" href="#&#x5168;&#x5C40;&#x6DF7;&#x5408;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x5168;&#x5C40;&#x6DF7;&#x5408;</h2>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5168;&#x5C40;&#x6CE8;&#x518C;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;&#x3002;&#x6CE8;&#x610F;&#x4F7F;&#x7528;&#xFF01; &#x4E00;&#x65E6;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;&#xFF0C;&#x5C06;&#x4F1A;&#x5F71;&#x54CD;&#x5230; &#x6240;&#x6709; &#x4E4B;&#x540E;&#x521B;&#x5EFA;&#x7684; Vue &#x5B9E;&#x4F8B;&#x3002;&#x4F7F;&#x7528;&#x6070;&#x5F53;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x6CE8;&#x5165;&#x5904;&#x7406;&#x903B;&#x8F91;&#x3002;</p>
+<pre class="language-"><code>// &#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x9009;&#x9879; &apos;myOption&apos; &#x6CE8;&#x5165;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x5668;&#x3002;
+Vue.mixin({
+  created: function () {
+    var myOption = this.$options.myOption
+    if (myOption) {
+      console.log(myOption)
+    }
+  }
+})
+
+new Vue({
+  myOption: &apos;hello!&apos;
+})
+// =&gt; &quot;hello!&quot;
+</code></pre><blockquote>
+<p><code>&#x8C28;&#x614E;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;</code>&#xFF0C;&#x56E0;&#x4E3A;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x6BCF;&#x4E2A;&#x5355;&#x72EC;&#x521B;&#x5EFA;&#x7684; Vue &#x5B9E;&#x4F8B; (&#x5305;&#x62EC;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x677F;)&#x3002;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EA;&#x5E94;&#x5F53;&#x5E94;&#x7528;&#x4E8E;&#x81EA;&#x5B9A;&#x4E49;&#x9009;&#x9879;&#xFF0C;&#x5C31;&#x50CF;&#x4E0A;&#x9762;&#x793A;&#x4F8B;&#x4E00;&#x6837;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x7528;&#x4F5C; Plugins &#x4EE5;&#x907F;&#x514D;&#x4EA7;&#x751F;&#x91CD;&#x590D;&#x5E94;&#x7528;</p>
+</blockquote>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x9009;&#x9879;&#x5408;&#x5E76;&#x7B56;&#x7565;"><a name="&#x81EA;&#x5B9A;&#x4E49;&#x9009;&#x9879;&#x5408;&#x5E76;&#x7B56;&#x7565;" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x5B9A;&#x4E49;&#x9009;&#x9879;&#x5408;&#x5E76;&#x7B56;&#x7565;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. &#x81EA;&#x5B9A;&#x4E49;&#x9009;&#x9879;&#x5408;&#x5E76;&#x7B56;&#x7565;</h2>
+<p>&#x81EA;&#x5B9A;&#x4E49;&#x9009;&#x9879;&#x5C06;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7B56;&#x7565;&#xFF0C;&#x5373;&#x7B80;&#x5355;&#x5730;&#x8986;&#x76D6;&#x5DF2;&#x6709;&#x503C;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8BA9;&#x81EA;&#x5B9A;&#x4E49;&#x9009;&#x9879;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x903B;&#x8F91;&#x5408;&#x5E76;&#xFF0C;&#x53EF;&#x4EE5;&#x5411; <code>Vue.config.optionMergeStrategies</code> &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code>Vue.config.optionMergeStrategies.myOption = function(toVal, fromVal) {
+  // returnmergedVal
+}
+</code></pre><p>&#x5BF9;&#x4E8E;&#x5927;&#x591A;&#x6570;&#x5BF9;&#x8C61;&#x9009;&#x9879;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; methods &#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;&#xFF1A;</p>
+<pre class="language-"><code>var strategies = Vue.config.optionMergeStrategies
+strategies.myOption = strategies.methods
+</code></pre></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="vue.use的使用.html" class="navigation navigation-prev " aria-label="Previous page: vue.use 的使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="vue的基础.html" class="navigation navigation-next " aria-label="Next page: vue 的基础">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"vue 的指令,插件,混合","level":"1.5.3","depth":2,"next":{"title":"vue 的基础","level":"1.5.4","depth":2,"path":"vue/vue的基础.md","ref":"vue/vue的基础.md","articles":[]},"previous":{"title":"vue.use 的使用","level":"1.5.2","depth":2,"path":"vue/vue.use的使用.md","ref":"vue/vue.use的使用.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"vue/vue的指令,插件,混合.md","mtime":"2020-01-28T06:01:59.437Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-28T06:02:22.805Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

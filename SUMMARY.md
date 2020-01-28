@@ -25,6 +25,7 @@
 - [vue](vue/vue路由与keep-alive.md)
   - [vue 路由与 keep-alive](vue/vue路由与keep-alive.md)
   - [vue.use 的使用](vue/vue.use的使用.md)
+  - [vue 的指令,插件,混合](vue/vue的指令,插件,混合.md)
   - [vue 的基础](vue/vue的基础.md)
   - [vue 的基础 2](vue/vue的基础2.md)
   - [vue 的基础 3](vue/vue的基础3.md)

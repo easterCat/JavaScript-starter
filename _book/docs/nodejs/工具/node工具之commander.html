@@ -1,0 +1,1755 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>node 工具之 commander · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../Java基础/" />
+    
+    
+    <link rel="prev" href="node工具之pm2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../前端/获取屏幕宽度.html">
+            
+                <a href="../../前端/获取屏幕宽度.html">
+            
+                    
+                    前端基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../前端/获取屏幕宽度.html">
+            
+                <a href="../../前端/获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                <a href="../../前端/学会使用JavaScript访问和修改CSS样式.html">
+            
+                    
+                    学会使用 JavaScript 访问和修改 CSS 样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../前端/解决canvas在高清屏中模糊.html">
+            
+                <a href="../../前端/解决canvas在高清屏中模糊.html">
+            
+                    
+                    解决 canvas 在高清屏中模糊
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../前端/js二进制数据互转.html">
+            
+                <a href="../../前端/js二进制数据互转.html">
+            
+                    
+                    js 二进制数据互转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../前端/单元测试/readme.html">
+            
+                <a href="../../前端/单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../前端/网络/http响应码.html">
+            
+                <a href="../../前端/网络/http响应码.html">
+            
+                    
+                    http 响应码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../前端/网络/http预览导图.html">
+            
+                <a href="../../前端/网络/http预览导图.html">
+            
+                    
+                    http 预览导图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../前端/npm安装github包的方式.html">
+            
+                <a href="../../前端/npm安装github包的方式.html">
+            
+                    
+                    npm 安装 github 包的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../前端/浏览器渲染进程Renderer.html">
+            
+                <a href="../../前端/浏览器渲染进程Renderer.html">
+            
+                    
+                    浏览器渲染进程 Renderer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../../前端/移动端的踩坑问题.html">
+            
+                <a href="../../前端/移动端的踩坑问题.html">
+            
+                    
+                    移动端的踩坑问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../../前端/常用正则.html">
+            
+                <a href="../../前端/常用正则.html">
+            
+                    
+                    常用正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../js基础/词法作用域/readme.html">
+            
+                <a href="../../js基础/词法作用域/readme.html">
+            
+                    
+                    js 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../js基础/词法作用域/readme.html">
+            
+                <a href="../../js基础/词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../js基础/内存分配/readme.html">
+            
+                <a href="../../js基础/内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../js基础/浏览器工作原理/readme.html">
+            
+                <a href="../../js基础/浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../js基础/类和对象/readme.html">
+            
+                <a href="../../js基础/类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../js基础/数据类型/readme.html">
+            
+                <a href="../../js基础/数据类型/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../js基础/js事件机制/readme.html">
+            
+                <a href="../../js基础/js事件机制/readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../js基础/ES6/Map和Set.html">
+            
+                <a href="../../js基础/ES6/Map和Set.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../js基础/ES6/Map和Set.html">
+            
+                <a href="../../js基础/ES6/Map和Set.html">
+            
+                    
+                    Map 和 Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../vue/vue路由与keep-alive.html">
+            
+                <a href="../../vue/vue路由与keep-alive.html">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../vue/vue路由与keep-alive.html">
+            
+                <a href="../../vue/vue路由与keep-alive.html">
+            
+                    
+                    vue 路由与 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../vue/vue.use的使用.html">
+            
+                <a href="../../vue/vue.use的使用.html">
+            
+                    
+                    vue.use 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../vue/vue的基础.html">
+            
+                <a href="../../vue/vue的基础.html">
+            
+                    
+                    vue 的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../vue/vue的基础2.html">
+            
+                <a href="../../vue/vue的基础2.html">
+            
+                    
+                    vue 的基础 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../vue/vue的基础3.html">
+            
+                <a href="../../vue/vue的基础3.html">
+            
+                    
+                    vue 的基础 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../vue/vue的基础4.html">
+            
+                <a href="../../vue/vue的基础4.html">
+            
+                    
+                    vue 的基础 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../node写个helloworld.html">
+            
+                <a href="../node写个helloworld.html">
+            
+                    
+                    nodejs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../环境/reids安装配置.html">
+            
+                <a href="../环境/reids安装配置.html">
+            
+                    
+                    reids 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../环境/mysql安装配置.html">
+            
+                <a href="../环境/mysql安装配置.html">
+            
+                    
+                    mysql 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../环境/Elasticsearch安装配置.html">
+            
+                <a href="../环境/Elasticsearch安装配置.html">
+            
+                    
+                    Elasticsearch 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../node写个helloworld.html">
+            
+                <a href="../node写个helloworld.html">
+            
+                    
+                    node 写个 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../node的fs模块.html">
+            
+                <a href="../node的fs模块.html">
+            
+                    
+                    node 的 fs 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../用node写个爬虫.html">
+            
+                <a href="../用node写个爬虫.html">
+            
+                    
+                    用 node 写个爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../node实现静态文件服务器.html">
+            
+                <a href="../node实现静态文件服务器.html">
+            
+                    
+                    node 实现静态文件服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../nodejs文件路径.html">
+            
+                <a href="../nodejs文件路径.html">
+            
+                    
+                    nodejs 文件路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../node发起http请求.html">
+            
+                <a href="../node发起http请求.html">
+            
+                    
+                    node 发起 http 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../node中的query,params,body.html">
+            
+                <a href="../node中的query,params,body.html">
+            
+                    
+                    node 中的 query,params,body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../node常用post提交方式.html">
+            
+                <a href="../node常用post提交方式.html">
+            
+                    
+                    node 常用 post 提交方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../node的进程和线程.html">
+            
+                <a href="../node的进程和线程.html">
+            
+                    
+                    node 的进程和线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="node工具之http-proxy-middleware.html">
+            
+                <a href="node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="node工具之http-proxy-middleware.html">
+            
+                <a href="node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具之 http-proxy-middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="node工具之node-ip.html">
+            
+                <a href="node工具之node-ip.html">
+            
+                    
+                    node 工具之 node-ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="node工具之nodemon.html">
+            
+                <a href="node工具之nodemon.html">
+            
+                    
+                    node 工具之 nodemon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="node工具之pm2.html">
+            
+                <a href="node工具之pm2.html">
+            
+                    
+                    node 工具之 pm2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.5" data-path="node工具之commander.html">
+            
+                <a href="node工具之commander.html">
+            
+                    
+                    node 工具之 commander
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">java 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../Java基础/">
+            
+                <a href="../../Java基础/">
+            
+                    
+                    java 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../Java基础/变量的类型.html">
+            
+                <a href="../../Java基础/变量的类型.html">
+            
+                    
+                    变量的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../Java基础/基本数据类型.html">
+            
+                <a href="../../Java基础/基本数据类型.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../Java基础/修饰符.html">
+            
+                <a href="../../Java基础/修饰符.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../Java基础/运算符.html">
+            
+                <a href="../../Java基础/运算符.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../../Java基础/条件语句.html">
+            
+                <a href="../../Java基础/条件语句.html">
+            
+                    
+                    条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../../Java基础/循环结构.html">
+            
+                <a href="../../Java基础/循环结构.html">
+            
+                    
+                    循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../../Java基础/switch语句.html">
+            
+                <a href="../../Java基础/switch语句.html">
+            
+                    
+                    switch 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../../Java基础/数组.html">
+            
+                <a href="../../Java基础/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../../Java基础/字符串.html">
+            
+                <a href="../../Java基础/字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../../Java基础/Character类.html">
+            
+                <a href="../../Java基础/Character类.html">
+            
+                    
+                    Character 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../../Java基础/正则表达式.html">
+            
+                <a href="../../Java基础/正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../../Java基础/流,文件和IO.html">
+            
+                <a href="../../Java基础/流,文件和IO.html">
+            
+                    
+                    流,文件和 IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="../../Java基础/StringBuffer和StringBuilder类.html">
+            
+                <a href="../../Java基础/StringBuffer和StringBuilder类.html">
+            
+                    
+                    StringBuffer 和 StringBuilder 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="../../Java基础/Collection.html">
+            
+                <a href="../../Java基础/Collection.html">
+            
+                    
+                    Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.15" data-path="../../Java基础/map.html">
+            
+                <a href="../../Java基础/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="../../Java基础/list.html">
+            
+                <a href="../../Java基础/list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" data-path="../../Java基础/多线程编程.html">
+            
+                <a href="../../Java基础/多线程编程.html">
+            
+                    
+                    多线程编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.18" data-path="../../Java基础/泛型.html">
+            
+                <a href="../../Java基础/泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../spring/maven安装配置.html">
+            
+                <a href="../../spring/maven安装配置.html">
+            
+                    
+                    spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../spring/maven安装配置.html">
+            
+                <a href="../../spring/maven安装配置.html">
+            
+                    
+                    maven 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../spring/tomcat安装配置.html">
+            
+                <a href="../../spring/tomcat安装配置.html">
+            
+                    
+                    tomcat 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../../spring/intellij安装配置.html">
+            
+                <a href="../../spring/intellij安装配置.html">
+            
+                    
+                    intellij 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../../spring/spring创建helloworld.html">
+            
+                <a href="../../spring/spring创建helloworld.html">
+            
+                    
+                    spring 创建 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构与算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../数据结构与算法/">
+            
+                <a href="../../数据结构与算法/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../数据结构与算法/线性表.html">
+            
+                <a href="../../数据结构与算法/线性表.html">
+            
+                    
+                    线性表(数组,队列,栈,链表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../数据结构与算法/Java排序算法.html">
+            
+                <a href="../../数据结构与算法/Java排序算法.html">
+            
+                    
+                    Java 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../Java练习题/">
+            
+                <a href="../../Java练习题/">
+            
+                    
+                    Java 练习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../Java练习题/指定范围包含的素数.html">
+            
+                <a href="../../Java练习题/指定范围包含的素数.html">
+            
+                    
+                    指定范围包含的素数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../Java练习题/公约数和公倍数.html">
+            
+                <a href="../../Java练习题/公约数和公倍数.html">
+            
+                    
+                    公约数和公倍数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../leetcode/2.两数相加.html">
+            
+                <a href="../../leetcode/2.两数相加.html">
+            
+                    
+                    leetcode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../leetcode/2.两数相加.html">
+            
+                <a href="../../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../scripto/简单的模板引擎.html">
+            
+                <a href="../../scripto/简单的模板引擎.html">
+            
+                    
+                    scripto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../../scripto/简单的模板引擎.html">
+            
+                <a href="../../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../../scripto/中间件模式.html">
+            
+                <a href="../../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../../scripto/m长度的都是n的数组.html">
+            
+                <a href="../../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >node 工具之 commander</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x524D;&#x8A00;"><b>1. </b>&#x524D;&#x8A00;</a></li><li><span class="title-icon "></span><a href="#&#x571F;&#x8457;&#x505A;&#x6CD5;"><b>2. </b>&#x571F;&#x8457;&#x505A;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;-commanderjs"><b>3. </b>&#x4F7F;&#x7528; commander.js</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;&#x53CA;&#x4F7F;&#x7528;"><b>3.1. </b>&#x5B89;&#x88C5;&#x53CA;&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;-api"><b>3.2. </b>&#x5E38;&#x7528; api</a></li><ul><li><span class="title-icon "></span><a href="#version"><b>3.2.1. </b>version</a></li><li><span class="title-icon "></span><a href="#option"><b>3.2.2. </b>option</a></li><li><span class="title-icon "></span><a href="#command"><b>3.2.3. </b>command</a></li><li><span class="title-icon "></span><a href="#descriptiondescription"><b>3.2.4. </b>#descriptiondescription</a></li><li><span class="title-icon "></span><a href="#action"><b>3.2.5. </b>action</a></li><li><span class="title-icon "></span><a href="#parseparse"><b>3.2.6. </b>#parseparse</a></li><li><span class="title-icon "></span><a href="#outputhelpoutputhelp"><b>3.2.7. </b>#outputHelpoutputHelp</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x8DF5;"><b>4. </b>&#x5B9E;&#x8DF5;</a></li></ul></div><a href="#&#x524D;&#x8A00;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x524D;&#x8A00;"><a name="&#x524D;&#x8A00;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x524D;&#x8A00;</h1>
+<p>&#x5728;&#x5F53;&#x4E0B;&#xFF0C;&#x4F5C;&#x4E3A;&#x4E00;&#x540D;&#x524D;&#x7AEF;&#x7801;&#x519C;&#xFF0C;&#x4E0D;&#x77E5;&#x9053; Nodejs &#x662F;&#x4E0D;&#x53EF;&#x539F;&#x8C05;&#x7684;&#x3002;&#x53EF;&#x4EE5;&#x8BF4;&#xFF0C;&#x9664;&#x4E86;&#x4E00;&#x4E9B;&#x7279;&#x522B;&#x8981;&#x6C42;&#x7684;&#x4E1A;&#x52A1;&#x8303;&#x7574;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x540E;&#x7AEF;&#x4E1A;&#x52A1; Nodejs &#x90FD;&#x80FD; handle &#x4F4F;&#x3002;</p>
+<p>Nodejs &#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x5E38;&#x7528;&#x573A;&#x666F;&#x662F;&#xFF0C;&#x9020;&#x51FA;&#x4E00;&#x4E9B;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#xFF0C;&#x800C;&#x8FD9;&#x4E9B;&#x5DE5;&#x5177;&#x5927;&#x90E8;&#x5206;&#x90FD;&#x662F;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;&#x884C;&#x7A0B;&#x5E8F;&#x3002;&#x4ECA;&#x5929;&#x6211;&#x4EEC;&#x5C31;&#x6765;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x5199;&#x51FA;&#x4E00;&#x4E2A; Nodejs &#x7684;&#x547D;&#x4EE4;&#x884C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</p>
+<h1 id="&#x571F;&#x8457;&#x505A;&#x6CD5;"><a name="&#x571F;&#x8457;&#x505A;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x571F;&#x8457;&#x505A;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x571F;&#x8457;&#x505A;&#x6CD5;</h1>
+<p>&#x5F53;&#x4E00;&#x4E2A; Nodejs &#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x4F1A;&#x6709;&#x8BB8;&#x591A;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x5176;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x53EB;&#x505A;<code>process</code>&#xFF0C;&#x610F;&#x4E3A;&#x8FDB;&#x7A0B;&#x5BF9;&#x8C61;&#x3002;<code>process</code>&#x5BF9;&#x8C61;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x53EB;&#x505A;<code>argv</code>&#x7684;&#x5C5E;&#x6027;&#x3002;&#x547D;&#x4EE4;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x91CD;&#x5934;&#x620F;&#x5C31;&#x662F;&#x89E3;&#x6790;&#x8FD9;&#x4E2A;<code>process.argv</code>&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5148;&#x968F;&#x4FBF;&#x5199;&#x4E00;&#x4E2A; node &#x7A0B;&#x5E8F;&#xFF0C;&#x628A;<code>process.argv</code>&#x6253;&#x5370;&#x51FA;&#x6765;&#x770B;&#x770B;&#xFF0C;</p>
+<pre class="language-"><code class="lang-js">node test1<span class="token punctuation">.</span>js <span class="token operator">--</span>name gk
+
+<span class="token punctuation">[</span>
+  <span class="token string">&apos;/usr/local/Cellar/node/6.6.0/bin/node&apos;</span><span class="token punctuation">,</span>
+  <span class="token string">&apos;/Users/gejiawen/code/20160921/test1.js&apos;</span><span class="token punctuation">,</span>
+  <span class="token string">&apos;--name&apos;</span><span class="token punctuation">,</span>
+  <span class="token string">&apos;gk&apos;</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<p>&#x770B;&#x8D77;&#x6765;<code>process.argv</code>&#x597D;&#x50CF;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5176;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x662F; node &#x7684;&#x6267;&#x884C;&#x8DEF;&#x5F84;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x5F53;&#x524D;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x4ECE;&#x7B2C;&#x4E09;&#x4E2A;&#x5143;&#x7D20;&#x5F00;&#x59CB;&#xFF0C;&#x662F;&#x6267;&#x884C;&#x65F6;&#x5E26;&#x5165;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x89C4;&#x5F8B;&#x5F88;&#x7B80;&#x5355;&#x3002;&#x6211;&#x4EEC;&#x5728;&#x5199;&#x547D;&#x4EE4;&#x884C;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5BF9;<code>process.argv</code>&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E09;&#x4E2A;&#x5143;&#x7D20;&#x53CA;&#x5176;&#x4E4B;&#x540E;&#x7684;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x5ACC;&#x9EBB;&#x70E6;&#xFF0C;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x5199;&#x51FA;&#x5F88;&#x591A;&#x5224;&#x65AD;&#x5206;&#x652F;&#x6765;&#x505A;&#x3002;&#x4F46;&#x662F;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6709;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<h1 id="&#x4F7F;&#x7528;-commanderjs"><a name="&#x4F7F;&#x7528;-commanderjs" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;-commanderjs"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4F7F;&#x7528; commander.js</h1>
+<p><a href="https://github.com/tj/commander.js" target="_blank">commander.js</a>&#x662F;<a href="https://github.com/tj" target="_blank">TJ</a>&#x6240;&#x5199;&#x7684;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#x5305;&#xFF0C;&#x5176;&#x4F5C;&#x7528;&#x662F;&#x8BA9; node &#x547D;&#x4EE4;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x5236;&#x4F5C;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#x3002;</p>
+<h2 id="&#x5B89;&#x88C5;&#x53CA;&#x4F7F;&#x7528;"><a name="&#x5B89;&#x88C5;&#x53CA;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;&#x53CA;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x5B89;&#x88C5;&#x53CA;&#x4F7F;&#x7528;</h2>
+<p>&#x5B89;&#x88C5;&#x5F88;&#x7B80;&#x5355;&#xFF0C;</p>
+<pre class="language-"><code class="lang-js">npm install commander
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x5305;&#x540D;&#x662F;<strong>commander</strong>&#x800C;&#x4E0D;&#x662F;<strong>commander.js</strong>&#x3002;</p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5728;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A; js &#x6587;&#x4EF6;&#xFF0C;&#x53EB;&#x505A; index.js&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> program <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;commander&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+program
+  <span class="token punctuation">.</span><span class="token function">version</span><span class="token punctuation">(</span><span class="token string">&quot;0.0.1&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">description</span><span class="token punctuation">(</span><span class="token string">&quot;a test cli program&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">&quot;-n, --name &lt;name&gt;&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;your name&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;GK&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">&quot;-a, --age &lt;age&gt;&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;your age&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;22&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">&quot;-e, --enjoy [enjoy]&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+program<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x6B64;&#x65F6;&#xFF0C;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x7A0B;&#x5E8F;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x3002;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x7684;&#x547D;&#x4EE4;&#x6765;&#x6267;&#x884C;&#x5B83;&#xFF0C;</p>
+<pre class="language-"><code class="lang-js">node index<span class="token punctuation">.</span>js <span class="token operator">-</span>h
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF0C;</p>
+<pre class="language-"><code class="lang-js"><span class="token punctuation">.</span><span class="token operator">/</span>test <span class="token operator">-</span>h
+
+  Usage<span class="token operator">:</span> test <span class="token punctuation">[</span>options<span class="token punctuation">]</span>
+
+  a test cli program
+
+  Options<span class="token operator">:</span>
+
+    <span class="token operator">-</span>h<span class="token punctuation">,</span> <span class="token operator">--</span>help           output usage information
+    <span class="token operator">-</span><span class="token constant">V</span><span class="token punctuation">,</span> <span class="token operator">--</span>version        output the version number
+    <span class="token operator">-</span>n<span class="token punctuation">,</span> <span class="token operator">--</span>name <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>    your name
+    <span class="token operator">-</span>a<span class="token punctuation">,</span> <span class="token operator">--</span>age <span class="token operator">&lt;</span>age<span class="token operator">&gt;</span>      your age
+    <span class="token operator">-</span>e<span class="token punctuation">,</span> <span class="token operator">--</span>enjoy <span class="token punctuation">[</span>enjoy<span class="token punctuation">]</span>
+</code></pre>
+<p>commander.js &#x7B2C;&#x4E00;&#x4E2A;&#x4F18;&#x52BF;&#x5C31;&#x662F;&#x63D0;&#x4F9B;&#x4E86;&#x7B80;&#x4ECB;&#x7684; api &#x5BF9;&#x53EF;&#x9009;&#x9879;&#x3001;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F18;&#x52BF;&#x5C31;&#x662F;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x5E2E;&#x52A9;&#x7684;&#x6587;&#x672C;&#x4FE1;&#x606F;&#x3002;</p>
+<h2 id="&#x5E38;&#x7528;-api"><a name="&#x5E38;&#x7528;-api" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;-api"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x5E38;&#x7528; api</h2>
+<p>commander.js &#x4E2D;&#x547D;&#x4EE4;&#x884C;&#x6709;&#x4E24;&#x79CD;&#x53EF;&#x53D8;&#x6027;&#xFF0C;&#x4E00;&#x4E2A;&#x53EB;&#x505A;<code>option</code>&#xFF0C;&#x610F;&#x4E3A;&#x9009;&#x9879;&#x3002;&#x4E00;&#x4E2A;&#x53EB;&#x505A;<code>command</code>&#xFF0C;&#x610F;&#x4E3A;&#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x770B;&#x4E24;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;</p>
+<pre class="language-"><code class="lang-js">&apos;program
+  <span class="token punctuation">.</span><span class="token function">version</span><span class="token punctuation">(</span><span class="token string">&apos;0.0.1&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">&apos;-C, --chdir &lt;path&gt;&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;change the working directory&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">&apos;-c, --config &lt;path&gt;&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;set config path. defaults to ./deploy.conf&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">&apos;-T, --no-tests&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;ignore test hook&apos;</span><span class="token punctuation">)</span>
+
+program
+  <span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">&apos;setup&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">description</span><span class="token punctuation">(</span><span class="token string">&apos;run remote setup commands&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;setup&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+program
+  <span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">&apos;exec &lt;cmd&gt;&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">description</span><span class="token punctuation">(</span><span class="token string">&apos;run the given remote command&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">cmd</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;exec &quot;%s&quot;&apos;</span><span class="token punctuation">,</span> cmd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+program
+  <span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">&apos;teardown &lt;dir&gt; [otherDirs...]&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">description</span><span class="token punctuation">(</span><span class="token string">&apos;run teardown commands&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">dir<span class="token punctuation">,</span> otherDirs</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;dir &quot;%s&quot;&apos;</span><span class="token punctuation">,</span> dir<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>otherDirs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      otherDirs<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">oDir</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;dir &quot;%s&quot;&apos;</span><span class="token punctuation">,</span> oDir<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+program
+  <span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">&apos;*&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">description</span><span class="token punctuation">(</span><span class="token string">&apos;deploy the given env&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">env</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;deploying &quot;%s&quot;&apos;</span><span class="token punctuation">,</span> env<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+program<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>&#x901A;&#x8FC7;<code>option</code>&#x8BBE;&#x7F6E;&#x7684;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>program.chdir</code>&#x6216;&#x8005;<code>program.noTests</code>&#x6765;&#x8BBF;&#x95EE;&#x3002;</li>
+<li>&#x901A;&#x8FC7;<code>command</code>&#x8BBE;&#x7F6E;&#x7684;&#x547D;&#x4EE4;&#x901A;&#x5E38;&#x5728;<code>action</code>&#x56DE;&#x8C03;&#x4E2D;&#x5904;&#x7406;&#x903B;&#x8F91;&#x3002;</li>
+</ul>
+<h3 id="version"><a name="version" class="anchor-navigation-ex-anchor" href="#version"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.1. version</h3>
+<p>&#x7528;&#x6CD5;&#xFF1A; <code>.version(&apos;x.y.z&apos;)</code></p>
+<p>&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x547D;&#x4EE4;&#x7A0B;&#x5E8F;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;</p>
+<h3 id="option"><a name="option" class="anchor-navigation-ex-anchor" href="#option"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.2. option</h3>
+<p>&#x7528;&#x6237;&#xFF1A;<code>.option(&apos;-n, --name <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>&apos;, &apos;your name&apos;, &apos;GK&apos;)</code></p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x9009;&#x9879;&#x5B9A;&#x4E49;&#xFF0C;&#x5206;&#x4E3A;&#x77ED;&#x5B9A;&#x4E49;&#x548C;&#x957F;&#x5B9A;&#x4E49;&#x3002;&#x7528;<code>|</code>&#xFF0C;<code>,</code>&#xFF0C;&#x8FDE;&#x63A5;&#x3002;</li>
+<li><p>&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x7528;<code>&lt;&gt;</code>&#x6216;&#x8005;<code>[]</code>&#x4FEE;&#x9970;&#xFF0C;&#x524D;&#x8005;&#x610F;&#x4E3A;&#x5FC5;&#x987B;&#x53C2;&#x6570;&#xFF0C;&#x540E;&#x8005;&#x610F;&#x4E3A;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x3002;</p>
+</li>
+<li><p>&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x9009;&#x9879;&#x63CF;&#x8FF0;</p>
+</li>
+<li>&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x9009;&#x9879;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x53EF;&#x9009;&#x3002;</li>
+</ul>
+<h3 id="command"><a name="command" class="anchor-navigation-ex-anchor" href="#command"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.3. command</h3>
+<p>&#x7528;&#x6CD5;&#xFF1A;<code>.command(&apos;init <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>path</span><span class="token punctuation">&gt;</span></span>&apos;, &apos;description&apos;)</code></p>
+<ul>
+<li><code>command</code>&#x7684;&#x7528;&#x6CD5;&#x7A0D;&#x5FAE;&#x590D;&#x6742;&#xFF0C;&#x539F;&#x5219;&#x4E0A;&#x4ED6;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x4E3A;&#x547D;&#x4EE4;&#x5B9A;&#x4E49;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x547D;&#x4EE4;&#x63CF;&#x8FF0;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x4E3A;&#x547D;&#x4EE4;&#x8F85;&#x52A9;&#x4FEE;&#x9970;&#x5BF9;&#x8C61;&#x3002;</li>
+<li>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>&lt;&gt;</code>&#x6216;&#x8005;<code>[]</code>&#x4FEE;&#x9970;&#x547D;&#x4EE4;&#x53C2;&#x6570;</li>
+<li>&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x53EF;&#x9009;&#x3002;</li>
+<li>&#x5F53;&#x6CA1;&#x6709;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;commander.js &#x5C06;&#x8FD4;&#x56DE;<code>Command</code>&#x5BF9;&#x8C61;&#xFF0C;&#x82E5;&#x6709;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#x3002;</li>
+<li>&#x5F53;&#x5E26;&#x6709;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x6CA1;&#x6709;&#x663E;&#x793A;&#x8C03;&#x7528;<code>action(fn)</code>&#x65F6;&#xFF0C;&#x5219;&#x5C06;&#x4F1A;&#x4F7F;&#x7528;&#x5B50;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x3002;</li>
+<li><p>&#x6240;&#x8C13;&#x5B50;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x5373;&#xFF0C;<code>./pm</code>&#xFF0C;<code>./pm-install</code>&#xFF0C;<code>./pm-search</code>&#x7B49;&#x3002;&#x8FD9;&#x4E9B;&#x5B50;&#x547D;&#x4EE4;&#x8DDF;&#x4E3B;&#x547D;&#x4EE4;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+</li>
+<li><p>&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E00;&#x822C;&#x4E0D;&#x7528;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x663E;&#x793A;&#x7684;&#x4F7F;&#x7528;&#x5B50;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x3002;</p>
+</li>
+</ul>
+<h3 id="descriptiondescription"><a name="descriptiondescription" class="anchor-navigation-ex-anchor" href="#descriptiondescription"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.4. #descriptiondescription</h3>
+<p>&#x7528;&#x6CD5;&#xFF1A;<code>.description(&apos;command description&apos;)</code></p>
+<p>&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x547D;&#x4EE4;&#x7684;&#x63CF;&#x8FF0;</p>
+<h3 id="action"><a name="action" class="anchor-navigation-ex-anchor" href="#action"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.5. action</h3>
+<p>&#x7528;&#x6CD5;&#xFF1A;<code>.action(fn)</code></p>
+<p>&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x7684;&#x76F8;&#x5173;&#x56DE;&#x8C03;&#x3002;<code>fn</code>&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x547D;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x4E3A;&#x51FD;&#x6570;&#x5F62;&#x53C2;&#xFF0C;&#x987A;&#x5E8F;&#x4E0E;<code>command()</code>&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x987A;&#x5E8F;&#x4E00;&#x81F4;&#x3002;</p>
+<h3 id="parseparse"><a name="parseparse" class="anchor-navigation-ex-anchor" href="#parseparse"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.6. #parseparse</h3>
+<p>&#x7528;&#x6CD5;&#xFF1A;<code>program.parse(process.argv)</code></p>
+<p>&#x6B64; api &#x4E00;&#x822C;&#x662F;&#x6700;&#x540E;&#x8C03;&#x7528;&#xFF0C;&#x7528;&#x4E8E;&#x89E3;&#x6790;<code>process.argv</code>&#x3002;</p>
+<h3 id="outputhelpoutputhelp"><a name="outputhelpoutputhelp" class="anchor-navigation-ex-anchor" href="#outputhelpoutputhelp"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.7. #outputHelpoutputHelp</h3>
+<p>&#x7528;&#x6CD5;&#xFF1A;<code>program.outputHelp()</code></p>
+<p>&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x672A;&#x5F55;&#x5165;&#x53C2;&#x6570;&#x65F6;&#x81EA;&#x52A8;&#x6253;&#x5370;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  program<span class="token punctuation">.</span><span class="token function">outputHelp</span><span class="token punctuation">(</span>make_red<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">make_red</span><span class="token punctuation">(</span><span class="token parameter">txt</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> colors<span class="token punctuation">.</span><span class="token function">red</span><span class="token punctuation">(</span>txt<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//display the help text in red on the console</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="&#x5B9E;&#x8DF5;"><a name="&#x5B9E;&#x8DF5;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x8DF5;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5B9E;&#x8DF5;</h1>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x6765;&#x505A;&#x4E00;&#x4E2A;&#x5C0F;&#x5DE5;&#x5177;&#xFF0C;&#x5B9E;&#x8DF5;&#x4E00;&#x4E0B; commander.js &#x7684;&#x5F3A;&#x5927;&#x4E4B;&#x5904;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x53EB;&#x505A;<a href="https://github.com/gejiawen/npmrc-local" target="_blank">npmrc-local</a>&#xFF0C;&#x4F5C;&#x7528;&#x662F;&#x5728;&#x6267;&#x884C;&#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;&#x4E00;&#x4E2A;<code>.npmrc</code>&#x6587;&#x4EF6;&#xFF0C;&#x7528;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684; registry&#x3001;disturl&#x3001;loglevel &#x914D;&#x7F6E;&#xFF08;&#x6307;&#x5411;&#x7684;&#x662F; npm.taobao.org&#xFF09;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x5F97;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;</p>
+<pre class="language-"><code class="lang-js">    $ mkdir npmrc<span class="token operator">-</span>local
+    $ git init
+    $ npm init
+    $ touch <span class="token punctuation">.</span>gitignore
+    $ touch bin<span class="token operator">/</span>npmrc<span class="token punctuation">.</span>js
+    $ touch lib<span class="token operator">/</span>index<span class="token punctuation">.</span>js
+</code></pre>
+<p>&#x4FEE;&#x6539;<code>package.json</code>&#x6587;&#x4EF6;&#xFF0C;&#x6DFB;&#x52A0;<code>bin</code>&#x5B57;&#x6BB5;&#xFF0C;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;bin&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;npmrc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./bin/npm.js&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4FEE;&#x6539;<code>bin/npmrc.js</code>,</p>
+<pre class="language-"><code class="lang-js">#<span class="token operator">!</span><span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>env node
+
+<span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;../lib/index&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4FEE;&#x6539;<code>lib/index.js</code>,</p>
+<pre class="language-"><code class="lang-js">#<span class="token operator">!</span><span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>env node
+
+<span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;fs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;path&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> readline <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;readline&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> program <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;commander&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> rc <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;../rc&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> exit_bak <span class="token operator">=</span> process<span class="token punctuation">.</span>exit<span class="token punctuation">;</span>
+
+program
+  <span class="token punctuation">.</span><span class="token function">version</span><span class="token punctuation">(</span><span class="token string">&quot;0.0.1&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">allowUnknownOption</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">&quot;-r, --registry &lt;registry&gt;&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;use custom registry&quot;</span><span class="token punctuation">,</span> rc<span class="token punctuation">.</span>registry<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">&quot;-d, --dist-url &lt;disturl&gt;&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;use custom dist url&quot;</span><span class="token punctuation">,</span> rc<span class="token punctuation">.</span>disturl<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">&quot;-l, --log-level &lt;loglevel&gt;&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;use custom log level&quot;</span><span class="token punctuation">,</span> rc<span class="token punctuation">.</span>loglevel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+program<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+program<span class="token punctuation">.</span>registry <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>rc<span class="token punctuation">.</span>registry <span class="token operator">=</span> program<span class="token punctuation">.</span>registry<span class="token punctuation">)</span><span class="token punctuation">;</span>
+program<span class="token punctuation">.</span>distUrl <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>rc<span class="token punctuation">.</span>disturl <span class="token operator">=</span> program<span class="token punctuation">.</span>distUrl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+program<span class="token punctuation">.</span>logLevel <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>rc<span class="token punctuation">.</span>loglevel <span class="token operator">=</span> program<span class="token punctuation">.</span>logLevel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>_exit<span class="token punctuation">.</span>exited<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">_main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Graceful exit for async STDIO</span>
+<span class="token keyword">function</span> <span class="token function">_exit</span><span class="token punctuation">(</span><span class="token parameter">code</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> draining <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> streams <span class="token operator">=</span> <span class="token punctuation">[</span>process<span class="token punctuation">.</span>stdout<span class="token punctuation">,</span> process<span class="token punctuation">.</span>stderr<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>draining<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">exit_bak</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  _exit<span class="token punctuation">.</span>exited <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+  streams<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">stream</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    draining <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    stream<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">_confirm</span><span class="token punctuation">(</span><span class="token parameter">msg<span class="token punctuation">,</span> cb</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> rl <span class="token operator">=</span> readline<span class="token punctuation">.</span><span class="token function">createInterface</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    input<span class="token operator">:</span> process<span class="token punctuation">.</span>stdin<span class="token punctuation">,</span>
+    output<span class="token operator">:</span> process<span class="token punctuation">.</span>stdout
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  rl<span class="token punctuation">.</span><span class="token function">question</span><span class="token punctuation">(</span>msg<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">input</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    rl<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">cb</span><span class="token punctuation">(</span><span class="token regex">/^y|yes|ok|true$/i</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">_write</span><span class="token punctuation">(</span><span class="token parameter">path<span class="token punctuation">,</span> content<span class="token punctuation">,</span> mode</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> content<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    mode<span class="token operator">:</span> mode <span class="token operator">||</span> <span class="token number">0o666</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;success!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">_generateFile</span><span class="token punctuation">(</span><span class="token parameter">filePath</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> content <span class="token operator">=</span> <span class="token string">&quot;registry={registry}\ndisturl={disturl}\nloglevel={loglevel}\n&quot;</span><span class="token punctuation">;</span>
+
+  content <span class="token operator">=</span> content<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/\{(\w+)\}/gi</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> rc<span class="token punctuation">[</span>b<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">_write</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">_overwrite</span><span class="token punctuation">(</span><span class="token parameter">filePath</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">_generateFile</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">_existNpmRC</span><span class="token punctuation">(</span><span class="token parameter">filePath</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  fs<span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">exists</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>exists<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">_confirm</span><span class="token punctuation">(</span><span class="token string">&quot;ATTENTION: .npmrc is exist, over write? [y/N] &quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">ans</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ans <span class="token operator">?</span> <span class="token function">_overwrite</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span> <span class="token operator">:</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;bye!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">_generateFile</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">_main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> filePath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span><span class="token function">cwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;.npmrc&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;writing path: &quot;</span> <span class="token operator">+</span> filePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">_existNpmRC</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6240;&#x6709;&#x7684;&#x4EE3;&#x7801;&#x5DE5;&#x4F5C;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;&#xFF0C;&#x4FEE;&#x6539;<code>package.json</code>&#x4E2D; version &#x5B57;&#x6BB5;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;<code>npm adduser</code>&amp;<code>npm publish</code>&#xFF0C;&#x5C06;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x5305;&#x63A8;&#x9001; npmjs.org &#x4F9B;&#x6240;&#x6709;&#x4EBA;&#x4F7F;&#x7528;&#x4E86;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x6211;&#x5DF2;&#x7ECF;&#x5F88;&#x957F;&#x65F6;&#x95F4;&#x6CA1;&#x66F4;&#x65B0;&#x535A;&#x5BA2;&#xFF0C;&#x6CA1;&#x6709;&#x5F80; npm &#x4ED3;&#x5E93;&#x4E0A;&#x63A8;&#x9001; package &#x4E86;&#xFF0C;&#x8FD9;&#x6B21;&#x53C8;&#x8E29;&#x4E86;&#x4E00;&#x6B21;&#x4E4B;&#x524D;&#x9047;&#x5230;&#x7684;&#x5751;&#xFF0C;&#x6CEA;&#x5D29;&#x3002;&#x8BE6;&#x89C1;<a href="http://blog.gejiawen.com/2015/08/05/npm-adduser-refuse/" target="_blank">npm adduser &#x7684;&#x5751;</a>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5BF9;&#x5982;&#x4F55;&#x4E0A;&#x4F20;&#x81EA;&#x5DF1;&#x7684;&#x5DE5;&#x5177;&#x5305;&#x5230; npm &#x8FD8;&#x4E0D;&#x662F;&#x5F88;&#x6E05;&#x695A;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="http://www.cnblogs.com/pingfan1990/p/4824658.html" target="_blank">&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;</a>&#x3002;</p>
+<ul>
+<li>commander.js</li>
+<li><a href="https://www.npmjs.com/package/chalk" target="_blank">chalk</a>&#x548C;</li>
+<li><a href="https://www.npmjs.com/package/progress" target="_blank">process</a></li>
+</ul>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="node工具之pm2.html" class="navigation navigation-prev " aria-label="Previous page: node 工具之 pm2">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../Java基础/" class="navigation navigation-next " aria-label="Next page: java 基础">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"node 工具之 commander","level":"1.7.5","depth":2,"next":{"title":"java 基础","level":"2.1","depth":1,"path":"Java基础/README.md","ref":"Java基础/README.md","articles":[{"title":"变量的类型","level":"2.1.1","depth":2,"path":"Java基础/变量的类型.md","ref":"Java基础/变量的类型.md","articles":[]},{"title":"基本数据类型","level":"2.1.2","depth":2,"path":"Java基础/基本数据类型.md","ref":"Java基础/基本数据类型.md","articles":[]},{"title":"修饰符","level":"2.1.3","depth":2,"path":"Java基础/修饰符.md","ref":"Java基础/修饰符.md","articles":[]},{"title":"运算符","level":"2.1.4","depth":2,"path":"Java基础/运算符.md","ref":"Java基础/运算符.md","articles":[]},{"title":"条件语句","level":"2.1.5","depth":2,"path":"Java基础/条件语句.md","ref":"Java基础/条件语句.md","articles":[]},{"title":"循环结构","level":"2.1.6","depth":2,"path":"Java基础/循环结构.md","ref":"Java基础/循环结构.md","articles":[]},{"title":"switch 语句","level":"2.1.7","depth":2,"path":"Java基础/switch语句.md","ref":"Java基础/switch语句.md","articles":[]},{"title":"数组","level":"2.1.8","depth":2,"path":"Java基础/数组.md","ref":"Java基础/数组.md","articles":[]},{"title":"字符串","level":"2.1.9","depth":2,"path":"Java基础/字符串.md","ref":"Java基础/字符串.md","articles":[]},{"title":"Character 类","level":"2.1.10","depth":2,"path":"Java基础/Character类.md","ref":"Java基础/Character类.md","articles":[]},{"title":"正则表达式","level":"2.1.11","depth":2,"path":"Java基础/正则表达式.md","ref":"Java基础/正则表达式.md","articles":[]},{"title":"流,文件和 IO","level":"2.1.12","depth":2,"path":"Java基础/流,文件和IO.md","ref":"Java基础/流,文件和IO.md","articles":[]},{"title":"StringBuffer 和 StringBuilder 类","level":"2.1.13","depth":2,"path":"Java基础/StringBuffer和StringBuilder类.md","ref":"Java基础/StringBuffer和StringBuilder类.md","articles":[]},{"title":"Collection","level":"2.1.14","depth":2,"path":"Java基础/Collection.md","ref":"Java基础/Collection.md","articles":[]},{"title":"Map","level":"2.1.15","depth":2,"path":"Java基础/map.md","ref":"Java基础/map.md","articles":[]},{"title":"List","level":"2.1.16","depth":2,"path":"Java基础/list.md","ref":"Java基础/list.md","articles":[]},{"title":"多线程编程","level":"2.1.17","depth":2,"path":"Java基础/多线程编程.md","ref":"Java基础/多线程编程.md","articles":[]},{"title":"泛型","level":"2.1.18","depth":2,"path":"Java基础/泛型.md","ref":"Java基础/泛型.md","articles":[]}]},"previous":{"title":"node 工具之 pm2","level":"1.7.4","depth":2,"path":"nodejs/工具/node工具之pm2.md","ref":"nodejs/工具/node工具之pm2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"nodejs/工具/node工具之commander.md","mtime":"2020-01-28T03:12:17.597Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-28T03:13:02.270Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

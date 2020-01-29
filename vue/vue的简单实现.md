@@ -295,6 +295,7 @@ class Vue {
     ops.data && _this.initData();
     ops.methods && _this.initMethods();
     ops.computed && _this.initComputed();
+    this.initLifecycle(_this);
   }
   initData() {
     const _this = this;
@@ -323,6 +324,13 @@ class Vue {
       Object.defineProperty(_this, key, def);
     }
   }
+  initLifecycle(vm) {
+    callHook(vm, "beforeCreate");
+    callHook(vm, "created");
+    callHook(vm, "beforeMount");
+    vm._isMounted = true;
+    callHook(vm, "mounted");
+  }
   $watch(key, cb, options) {
     new Watcher(this, key, cb);
   }
@@ -342,7 +350,7 @@ class Vue {
 }
 
 function makeComputedGetter(getter, owner) {
-  var watcher = new Watcher(owner, getter, function() {});
+  const watcher = new Watcher(owner, getter, function() {});
   return function computedGetter() {
     if (Dep.target) {
       watcher.depend();
@@ -350,6 +358,105 @@ function makeComputedGetter(getter, owner) {
     return watcher.value;
   };
 }
+
+function callHook(vm, hook) {
+  const handlers = vm.options[hook];
+  handlers && handlers.call(vm);
+}
+```
+
+## 使用
+
+```html
+<div id="mvvm-app">
+  <input type="text" v-model="someStr" />
+  <input type="text" v-model="child.someStr" />
+  <p v-class="className" class="abc">
+    {{ someStr }}
+    <span v-text="child.someStr"></span>
+  </p>
+  <p>计算属性:{{ getHelloWord }}</p>
+  <p v-html="htmlStr"></p>
+  <button v-on:click="clickBtn">变更显示内容</button>
+  <ul v-if="showNode">
+    <li>{{ number }}</li>
+    <li>{{ number1 }}</li>
+    <li>{{ number2 }}</li>
+  </ul>
+  <button v-on:click="showNodeEvent">kaiguan</button>
+  <pre><code>{{ code }}</code></pre>
+</div>
+
+<!-- <script src="http://cdn.bootcss.com/vue/1.0.24/vue.js"></script> -->
+<script src="./js/dep.js"></script>
+<script src="./js/observer.js"></script>
+<script src="./js/watcher.js"></script>
+<script src="./js/compile.js"></script>
+<script src="./js/vue.js"></script>
+<script>
+  var vm = new Vue({
+    el: "#mvvm-app",
+    data: {
+      someStr: "待到秋来九月八 ",
+      className: "btn",
+      htmlStr: '<span style="color: #f00;">red</span>',
+      child: {
+        someStr: "满城尽带黄金甲 !"
+      },
+      message: "this is test",
+      number: 5,
+      number1: 1,
+      number2: 2,
+      showNode: false,
+      innerObj: {
+        text: "内部对象文本"
+      },
+      code: "const a = 'hello world'; function alertA() {console.log(a)}"
+    },
+    computed: {
+      getHelloWord: function() {
+        return "计算属性getHelloWord => " + this.someStr + this.child.someStr;
+      }
+    },
+    beforeCreate() {
+      console.log("beforeCreate :");
+    },
+    created() {
+      console.log("created :");
+    },
+    beforeMount() {
+      console.log("beforeMount :");
+    },
+    mounted() {
+      console.log("mounted :");
+      this.child.someStr = "我花开后百花杀";
+    },
+    methods: {
+      clickBtn(e) {
+        var randomStrArr = ["李白", "杜甫", "辛弃疾"];
+        this.child.someStr = randomStrArr[parseInt(Math.random() * 3)];
+        this.add();
+        this.code = "hello world";
+      },
+      add() {
+        this.number++;
+        this.number1++;
+        this.number2--;
+      },
+      show() {
+        this.showNode = !this.showNode;
+      },
+      showNodeEvent() {
+        this.showNode = true;
+      }
+    },
+    watch: {}
+  });
+
+  vm.$watch("child.someStr", function() {
+    console.log(arguments);
+  });
+</script>
 ```
 
 ## 文档

@@ -10,7 +10,7 @@
 - 脏值检查（angular.js）
 - 数据劫持（vue.js）
 
-发布者-订阅者模式: 一般通过 sub, pub 的方式实现数据和视图的绑定监听,更新数据方式通常做法是 vm.set('property', value),这里有篇文章讲的比较详细,有兴趣可点这里
+发布者-订阅者模式: 一般通过 sub, pub 的方式实现数据和视图的绑定监听,更新数据方式通常做法是 vm.set('property', value)
 
 这种方式现在毕竟太 low 了,我们更希望通过 vm.property = value 这种方式更新数据,同时自动更新视图,于是有了下面两种方式
 
@@ -29,7 +29,7 @@
 - Observer 数据监听器,对数据的所有属性进行监听,数据变动时拿到变动值并且通知订阅者
 - Compiler 指令解析器,对每个元素节点的指令进行扫描和解析,根据指令模板替换数据,并绑定相应的更新函数
 - Watcher 链接 Observer 和 Compiler,能够订阅并且收到每个属性变动的通知,执行指令绑定的回调函数
-- vue 入门函数
+- vue 入口函数
 
 ![](https://raw.githubusercontent.com/easterCat/img-package/master/img/2.png)
 
@@ -163,55 +163,59 @@ Watcher 订阅者作为 Observer 和 Compile 之间通信的桥梁
 - 属性变动也就是 setter 触发时,能调用自身的 update()方法,并触发 Compile 中绑定的回调。
 
 ```js
-function Watcher(vm, expOrFn, cb) {
-  this.vm = vm;
-  this.expOrFn = expOrFn;
-  this.cb = cb;
-  this.depIds = {};
-  if (typeof expOrFn === "function") {
-    this.getter = expOrFn;
-  } else {
-    this.getter = this.parseGetter(expOrFn.trim());
-  }
-  this.value = this.get();
-}
-
-Watcher.prototype.update = function() {
-  let value = this.get();
-  let oldValue = this.value;
-  if (value !== oldValue) {
-    this.value = value;
-    this.cb.call(this.vm, value, oldValue);
-  }
-};
-
-Watcher.prototype.addDep = function(dep) {
-  if (!this.depIds.hasOwnProperty(dep.id)) {
-    dep.addSub(this);
-    this.depIds[dep.id] = dep;
-  }
-};
-
-Watcher.prototype.get = function() {
-  Dep.target = this;
-  const value = this.getter.call(this.vm, this.vm);
-  Dep.target = null;
-  return value;
-};
-
-Watcher.prototype.parseGetter = function(exp) {
-  if (/[^\w.$]/.test(exp)) return;
-
-  var exps = exp.split(".");
-
-  return function(obj) {
-    for (var i = 0, len = exps.length; i < len; i++) {
-      if (!obj) return;
-      obj = obj[exps[i]];
+class Watcher {
+  constructor(vm, expOrFn, cb) {
+    this.vm = vm;
+    this.expOrFn = expOrFn;
+    this.cb = cb;
+    this.depIds = {};
+    this.deps = [];
+    if (typeof expOrFn === "function") {
+      this.getter = expOrFn;
+    } else {
+      this.getter = this.parseGetter(expOrFn.trim());
     }
-    return obj;
-  };
-};
+    this.value = this.get();
+  }
+  update() {
+    let value = this.get();
+    let oldValue = this.value;
+    if (value !== oldValue) {
+      this.value = value;
+      this.cb.call(this.vm, value, oldValue);
+    }
+  }
+  addDep(dep) {
+    if (!this.depIds.hasOwnProperty(dep.id)) {
+      dep.addSub(this);
+      this.depIds[dep.id] = dep;
+      this.deps.push(dep);
+    }
+  }
+  get() {
+    Dep.target = this;
+    const value = this.getter.call(this.vm, this.vm);
+    Dep.target = null;
+    return value;
+  }
+  depend() {
+    let i = this.deps.length;
+    while (i--) {
+      this.deps[i].depend();
+    }
+  }
+  parseGetter(exp) {
+    if (/[^\w.$]/.test(exp)) return;
+    var exps = exp.split(".");
+    return function(obj) {
+      for (var i = 0, len = exps.length; i < len; i++) {
+        if (!obj) return;
+        obj = obj[exps[i]];
+      }
+      return obj;
+    };
+  }
+}
 ```
 
 ## 依赖收集 Dep
@@ -262,6 +266,7 @@ Dep.target = null;
 
 - Object.defineProperty - get ,用于 依赖收集
 - Object.defineProperty - set,用于 依赖更新
+- Dep.target 是变化的,根据当前解析流程,不停地指向不同的 watcher,在 getter 中 watcher 正在使用数据,数据要收集这个 watcher
 - 每个 data 声明的属性,都拥有一个的专属依赖收集器 subs
 - 依赖收集器 subs 保存的依赖是 watcher
 - watcher 可用于 进行视图更新
@@ -272,59 +277,79 @@ Dep.target = null;
 - 通过 Observer 来监听自己的 model 数据变动
 - 通过 Compile 来解析编译模板指令
 - 利用 Watcher 搭起 Observer 和 Compile 之间的通信桥梁
-- 数据变化 -> 视图更新
+- 数据变化(setter) -> 视图更新(dep.notify)
 - 视图交互变化(input) -> 数据 model 变更的双向绑定
 
 ```js
-function Vue(options) {
-  this.options = options || {};
-  this.data = options.data;
-  this.el = options.el || "body";
-  this.initState();
-  observer(this.data);
-  this.$compile = new Compile(this.el, this);
+class Vue {
+  constructor(options) {
+    this.options = options || {};
+    this.data = options.data;
+    this.el = options.el || "body";
+    this.initState();
+    this.$compile = new Compile(this.el, this);
+  }
+  initState() {
+    const _this = this;
+    const ops = _this.options;
+    ops.data && _this.initData();
+    ops.methods && _this.initMethods();
+    ops.computed && _this.initComputed();
+  }
+  initData() {
+    const _this = this;
+    const data = _this.options.data;
+    // 通过Object.defineProperty 实现 vm.xxx -> vm._data.xxx
+    Object.keys(data).forEach(function(key) {
+      _this._proxyData(key);
+    });
+    observer(this.data);
+  }
+  initMethods() {
+    const _this = this;
+    const methods = _this.options.methods;
+    for (let key in methods) {
+      _this[key] = methods[key].bind(_this);
+    }
+  }
+  initComputed() {
+    const _this = this;
+    const computed = _this.options.computed;
+    for (let key in computed) {
+      const userDef = computed[key];
+      const def = { enumerable: true, configurable: true };
+      def.get = makeComputedGetter(userDef, _this);
+      def.set = function() {};
+      Object.defineProperty(_this, key, def);
+    }
+  }
+  $watch(key, cb, options) {
+    new Watcher(this, key, cb);
+  }
+  _proxyData(key) {
+    const _this = this;
+    Object.defineProperty(_this, key, {
+      configurable: false,
+      enumerable: true,
+      get: function() {
+        return _this.data[key];
+      },
+      set: function(newVal) {
+        _this.data[key] = newVal;
+      }
+    });
+  }
 }
 
-Vue.prototype.initState = function() {
-  const _this = this;
-  _this.initData();
-  _this.initMethods();
-};
-
-Vue.prototype.initData = function() {
-  const _this = this;
-  const data = _this.options.data;
-  // 通过Object.defineProperty 实现 vm.xxx -> vm._data.xxx
-  Object.keys(data).forEach(function(key) {
-    _this._proxyData(key);
-  });
-};
-
-Vue.prototype.initMethods = function() {
-  const _this = this;
-  const methods = _this.options.methods;
-  for (let key in methods) {
-    _this[key] = methods[key].bind(_this);
-  }
-};
-
-Vue.prototype.$watch = function(key, cb, options) {
-  new Watcher(this, key, cb);
-};
-
-Vue.prototype._proxyData = function(key) {
-  const _this = this;
-  Object.defineProperty(_this, key, {
-    configurable: false,
-    enumerable: true,
-    get: function() {
-      return _this.data[key];
-    },
-    set: function(newVal) {
-      _this.data[key] = newVal;
+function makeComputedGetter(getter, owner) {
+  var watcher = new Watcher(owner, getter, function() {});
+  return function computedGetter() {
+    if (Dep.target) {
+      watcher.depend();
     }
-  });
-};
+    return watcher.value;
+  };
+}
 ```
 
 ## 文档

@@ -22,7 +22,7 @@
   - [js 事件机制](js基础/js事件机制/readme.md)
 - [ES6](js基础/ES6/Map和Set.md)
   - [Map 和 Set](js基础/ES6/Map和Set.md)
-- [vue](vue/vue路由与keep-alive.md)
+- [VUEJS](vue/vue路由与keep-alive.md)
   - [vue 的路由与 keep-alive](vue/vue的路由与keep-alive.md)
   - [vue 的 use 方法使用](vue/vue的use方法使用.md)
   - [vue 的指令,插件,混合](vue/vue的指令,插件,混合.md)

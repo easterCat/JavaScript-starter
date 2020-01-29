@@ -1,3 +1,5 @@
+# Vue
+
 ## 几种实现双向绑定的做法
 
 目前几种主流的 mvc(vm)框架都实现了单向数据绑定，而我所理解的双向数据绑定无非就是在单向绑定的基础上给可输入元素（input、textare 等）添加了 change(input)事件，来动态修改 model 和 view，并没有多高深。所以无需太过介怀是实现的单向或双向绑定。
@@ -52,21 +54,31 @@ function Observer(data) {
 
 Observer.prototype.walk = function(data) {
   Object.entries(data).forEach(([key, value], index) => {
-    this.defineReactive(data, key, value);
+    this.convert(key, value);
   });
 };
 
+Observer.prototype.convert = function(key, val) {
+  this.defineReactive(this.data, key, val);
+};
+
 Observer.prototype.defineReactive = function(data, key, value) {
+  const dep = new Dep({ key });
+  observer(value);
   Object.defineProperty(data, key, {
     enumerable: true,
     configurable: true,
     get: function() {
+      if (Dep.target) {
+        dep.depend();
+      }
       return value;
     },
     set: function(newValue) {
       if (value === newValue) return;
       value = newValue;
       observer(newValue);
+      dep.notify();
     }
   });
 };
@@ -204,12 +216,14 @@ Watcher.prototype.parseGetter = function(exp) {
 
 ## 依赖收集 Dep
 
+data 中每个声明的属性，都会有一个 专属的依赖收集器 subs，保存着 谁依赖（使用）了 它.当页面使用到 某个属性时，页面的 watcher 就会被放到依赖收集器 subs 中
+
 - 首先 observer => walk => defineReactive
 - 响应式的 getter => dep.depend
 - 订阅者 watcher.addDep(new Dep()) => watcher.newDeps.push(dep)
 - 最后搜集到 Dep 中 dep.addSub(new Watcher()) => dep.subs.push(watcher)
 
-最终 watcher.newDeps 数组中存放 dep 列表，dep.subs 数组中存放 watcher 列表。
+最终 watcher.newDeps 数组中存放 dep 列表，dep.subs 数组中存放 watcher 列表。而 Vue 在数据改变时，通知通知那些存在 依赖收集器中的 视图(watcher)进行更新
 
 ```js
 let depid = 0;
@@ -246,6 +260,12 @@ Dep.prototype.notify = function() {
 Dep.target = null;
 ```
 
+- Object.defineProperty - get ，用于 依赖收集
+- Object.defineProperty - set，用于 依赖更新
+- 每个 data 声明的属性，都拥有一个的专属依赖收集器 subs
+- 依赖收集器 subs 保存的依赖是 watcher
+- watcher 可用于 进行视图更新
+
 ## mvvm 双向绑定
 
 - 数据绑定的入口,整合 Observer、Compile 和 Watcher 三者
@@ -257,27 +277,43 @@ Dep.target = null;
 
 ```js
 function Vue(options) {
-  let _this = this;
   this.options = options || {};
   this.data = options.data;
   this.el = options.el || "body";
-  // 通过Object.defineProperty 实现 vm.xxx -> vm._data.xxx
-  Object.keys(this.data).forEach(function(key) {
-    _this._proxyData(key);
-  });
-
+  this.initState();
   observer(this.data);
   this.$compile = new Compile(this.el, this);
 }
 
-Vue.prototype.initState = function() {};
+Vue.prototype.initState = function() {
+  const _this = this;
+  _this.initData();
+  _this.initMethods();
+};
+
+Vue.prototype.initData = function() {
+  const _this = this;
+  const data = _this.options.data;
+  // 通过Object.defineProperty 实现 vm.xxx -> vm._data.xxx
+  Object.keys(data).forEach(function(key) {
+    _this._proxyData(key);
+  });
+};
+
+Vue.prototype.initMethods = function() {
+  const _this = this;
+  const methods = _this.options.methods;
+  for (let key in methods) {
+    _this[key] = methods[key].bind(_this);
+  }
+};
 
 Vue.prototype.$watch = function(key, cb, options) {
   new Watcher(this, key, cb);
 };
 
 Vue.prototype._proxyData = function(key) {
-  let _this = this;
+  const _this = this;
   Object.defineProperty(_this, key, {
     configurable: false,
     enumerable: true,
@@ -298,7 +334,7 @@ Vue.prototype._proxyData = function(key) {
 - [Vue.js 源码（1）：Hello World 的背后](https://segmentfault.com/a/1190000006866881)
 - [Vue.js 官方工程](https://github.com/DMQ/mvvm)
 - [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
-- [【Vue 原理】白话版](https://juejin.im/user/5a6fdcfc51882522b5529eb0/posts)
+- [Vue 原理 白话版](https://juejin.im/user/5a6fdcfc51882522b5529eb0/posts)
 - [一个 Vue 框架的简单实现](https://github.com/fwing1987/MyVue)
 - [深入解析 vue 1 实现原理，并仿 vue 生成简单的双向数据绑定模型](https://github.com/pf12345/vue-imitate)
 - [vue.js 源码 - 剖析 observer,dep,watch 三者关系 如何具体的实现数据双向绑定](https://github.com/wangweianger/myblog)

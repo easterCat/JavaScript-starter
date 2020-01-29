@@ -12,6 +12,7 @@
     "copy-code-button",
     "anchor-navigation-ex",
     "prism",
+    "prism-themes",
     "pageview-count",
     "-highlight"
   ],
@@ -21,7 +22,7 @@
       "label": "编辑此页面"
     },
     "prism": {
-      "css": ["prismjs/themes/prism-tomorrow.css"]
+      "css": ["prism-themes/themes/prism-material-dark.css"]
     }
   },
   "styles": {

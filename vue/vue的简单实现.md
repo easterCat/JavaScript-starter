@@ -471,3 +471,4 @@ function callHook(vm, hook) {
 - [深入解析 vue 1 实现原理,并仿 vue 生成简单的双向数据绑定模型](https://github.com/pf12345/vue-imitate)
 - [vue.js 源码 - 剖析 observer,dep,watch 三者关系 如何具体的实现数据双向绑定](https://github.com/wangweianger/myblog)
 - [用一张思维导图总结了 Vue | Vue-Router | Vuex 源码与架构要点](https://github.com/biaochenxuying/vue-family-mindmap)
+- [Vue.js 双向绑定的实现原理](https://www.cnblogs.com/kidney/p/6052935.html)

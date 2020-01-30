@@ -27,6 +27,7 @@
   - [vue 的 use 方法使用](vue/vue的use方法使用.md)
   - [vue 的指令,插件,混合](vue/vue的指令,插件,混合.md)
   - [vue 的简单实现](vue/vue的简单实现.md)
+  - [vue 的 VNODE 节点](vue/vue的VNODE节点.md)
   - [vue 的基础](vue/vue的基础.md)
   - [vue 的基础 2](vue/vue的基础2.md)
   - [vue 的基础 3](vue/vue的基础3.md)

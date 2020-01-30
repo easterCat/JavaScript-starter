@@ -494,7 +494,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="../vue/vue的基础.html">
+        <li class="chapter " data-level="1.5.5" data-path="../vue/vue的VNODE节点.html">
+            
+                <a href="../vue/vue的VNODE节点.html">
+            
+                    
+                    vue 的 VNODE 节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../vue/vue的基础.html">
             
                 <a href="../vue/vue的基础.html">
             
@@ -507,7 +520,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="../vue/vue的基础2.html">
+        <li class="chapter " data-level="1.5.7" data-path="../vue/vue的基础2.html">
             
                 <a href="../vue/vue的基础2.html">
             
@@ -520,7 +533,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" data-path="../vue/vue的基础3.html">
+        <li class="chapter " data-level="1.5.8" data-path="../vue/vue的基础3.html">
             
                 <a href="../vue/vue的基础3.html">
             
@@ -533,7 +546,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" data-path="../vue/vue的基础4.html">
+        <li class="chapter " data-level="1.5.9" data-path="../vue/vue的基础4.html">
             
                 <a href="../vue/vue的基础4.html">
             
@@ -1408,78 +1421,78 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>
-    function ListNode(val) {
-      this.val = val;
-      this.next = null;
-    }
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">function</span> <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>val <span class="token operator">=</span> val<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    let l1 = {
-      val: 2,
-      next: {
-        val: 4,
-        next: {
-          val: 3,
-          next: null
-        }
-      }
-    };
+    <span class="token keyword">let</span> l1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+      val<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      next<span class="token operator">:</span> <span class="token punctuation">{</span>
+        val<span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+        next<span class="token operator">:</span> <span class="token punctuation">{</span>
+          val<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+          next<span class="token operator">:</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-    let l2 = {
-      val: 5,
-      next: {
-        val: 6,
-        next: {
-          val: 4,
-          next: null
-        }
-      }
-    };
+    <span class="token keyword">let</span> l2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+      val<span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+      next<span class="token operator">:</span> <span class="token punctuation">{</span>
+        val<span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+        next<span class="token operator">:</span> <span class="token punctuation">{</span>
+          val<span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+          next<span class="token operator">:</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-    console.log(&quot;result&quot;, addTwoNumbers(l1, l2));
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;result&quot;</span><span class="token punctuation">,</span> <span class="token function">addTwoNumbers</span><span class="token punctuation">(</span>l1<span class="token punctuation">,</span> l2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    function addTwoNumbers(l1, l2) {
-      let prev = l1;
-      let next = l2;
-      let curr = new ListNode(0);
-      let center = curr;
-      let carry = 0;
+    <span class="token keyword">function</span> <span class="token function">addTwoNumbers</span><span class="token punctuation">(</span><span class="token parameter">l1<span class="token punctuation">,</span> l2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> prev <span class="token operator">=</span> l1<span class="token punctuation">;</span>
+      <span class="token keyword">let</span> next <span class="token operator">=</span> l2<span class="token punctuation">;</span>
+      <span class="token keyword">let</span> curr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">let</span> center <span class="token operator">=</span> curr<span class="token punctuation">;</span>
+      <span class="token keyword">let</span> carry <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-      while (prev || next) {
-        let x = 0;
-        let y = 0;
-        if (prev) {
-          x = prev.val;
-        }
-        if (next) {
-          y = next.val;
-        }
-        let total = carry + x + y;
-        if (total &gt; 9) {
-          center.next = new ListNode(total % 10);
-          carry = 1;
-        } else {
-          center.next = new ListNode(total);
-          carry = 0;
-        }
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>prev <span class="token operator">||</span> next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>prev<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          x <span class="token operator">=</span> prev<span class="token punctuation">.</span>val<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          y <span class="token operator">=</span> next<span class="token punctuation">.</span>val<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">let</span> total <span class="token operator">=</span> carry <span class="token operator">+</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>total <span class="token operator">&gt;</span> <span class="token number">9</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          center<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span>total <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          carry <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          center<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span>total<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          carry <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-        center = center.next;
+        center <span class="token operator">=</span> center<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
 
-        if (prev) {
-          prev = prev.next;
-        }
-        if (next) {
-          next = next.next;
-        }
-      }
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>prev<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          prev <span class="token operator">=</span> prev<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          next <span class="token operator">=</span> next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
 
-      if (carry &gt; 0) {
-        center.next = new ListNode(1);
-      }
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>carry <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        center<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
 
-      return curr.next;
-    }
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+      <span class="token keyword">return</span> curr<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
 </code></pre></body></html>
                                 
@@ -1524,7 +1537,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"leetcode","level":"3.3","depth":1,"next":{"title":"2.两数相加","level":"3.3.1","depth":2,"path":"leetcode/2.两数相加.md","ref":"leetcode/2.两数相加.md","articles":[]},"previous":{"title":"公约数和公倍数","level":"3.2.2","depth":2,"path":"Java练习题/公约数和公倍数.md","ref":"Java练习题/公约数和公倍数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","prism-themes","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-material-dark.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"leetcode/2.两数相加.md","mtime":"2020-01-09T13:20:09.324Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-30T06:39:50.023Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"leetcode","level":"3.3","depth":1,"next":{"title":"2.两数相加","level":"3.3.1","depth":2,"path":"leetcode/2.两数相加.md","ref":"leetcode/2.两数相加.md","articles":[]},"previous":{"title":"公约数和公倍数","level":"3.2.2","depth":2,"path":"Java练习题/公约数和公倍数.md","ref":"Java练习题/公约数和公倍数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","prism-themes","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-material-dark.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"leetcode/2.两数相加.md","mtime":"2020-01-09T13:20:09.324Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-30T06:57:50.521Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

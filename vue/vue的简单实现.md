@@ -473,3 +473,4 @@ function callHook(vm, hook) {
 - [用一张思维导图总结了 Vue | Vue-Router | Vuex 源码与架构要点](https://github.com/biaochenxuying/vue-family-mindmap)
 - [Vue.js 双向绑定的实现原理](https://www.cnblogs.com/kidney/p/6052935.html)
 - [读懂源码：一步一步实现一个 Vue](https://www.cnblogs.com/kidney/p/8018226.html)
+- [深入剖析：Vue 核心之虚拟 DOM](https://github.com/fengshi123/blog/issues/10#)

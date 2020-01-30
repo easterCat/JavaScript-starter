@@ -460,6 +460,7 @@ function callHook(vm, hook) {
 
 ## 文档
 
+- [嗨，让我带你逐行剖析 Vue.js 源码](https://nlrx-wjc.github.io/Learn-Vue-Source-Code/start/#_1-%E5%89%8D%E8%A8%80)
 - [剖析 Vue 实现原理 - 如何实现双向绑定 mvvm](https://github.com/DMQ/mvvm)
 - [Vue.js 源码解析](https://github.com/answershuto/learnVue)
 - [Vue.js 源码（1）：Hello World 的背后](https://segmentfault.com/a/1190000006866881)

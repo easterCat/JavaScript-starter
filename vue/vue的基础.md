@@ -36,7 +36,7 @@ export default {
 <Children v-model="lovingVue"/>
 ```
 
-## 2.vue 事件中传入\$event，使用 e.target 和 e.currentTarget 有什么区别？
+## 2.vue 事件中传入`$event`，使用 e.target 和 e.currentTarget 有什么区别？
 
 在 vue 中绑定事件
 

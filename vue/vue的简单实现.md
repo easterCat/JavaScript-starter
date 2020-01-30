@@ -366,7 +366,7 @@ function callHook(vm, hook) {
 
 ## 使用
 
-```html
+```js
 <div id="mvvm-app">
   <input type="text" v-model="someStr" />
   <input type="text" v-model="child.someStr" />
@@ -472,3 +472,4 @@ function callHook(vm, hook) {
 - [vue.js 源码 - 剖析 observer,dep,watch 三者关系 如何具体的实现数据双向绑定](https://github.com/wangweianger/myblog)
 - [用一张思维导图总结了 Vue | Vue-Router | Vuex 源码与架构要点](https://github.com/biaochenxuying/vue-family-mindmap)
 - [Vue.js 双向绑定的实现原理](https://www.cnblogs.com/kidney/p/6052935.html)
+- [读懂源码：一步一步实现一个 Vue](https://www.cnblogs.com/kidney/p/8018226.html)

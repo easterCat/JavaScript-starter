@@ -12,7 +12,7 @@
 
 发布者-订阅者模式: 一般通过 sub, pub 的方式实现数据和视图的绑定监听,更新数据方式通常做法是 vm.set('property', value)
 
-这种方式现在毕竟太 low 了,我们更希望通过 vm.property = value 这种方式更新数据,同时自动更新视图,于是有了下面两种方式
+现在更希望通过 vm.property = value 这种方式更新数据,同时自动更新视图,于是有了下面两种方式
 
 脏值检查: angular.js 是通过脏值检测的方式比对数据是否有变更,来决定是否更新视图,最简单的方式就是通过 setInterval() 定时轮询检测数据变动,当然 Google 不会这么 low,angular 只有在指定的事件触发时进入脏值检测,大致如下：
 
@@ -287,14 +287,19 @@ class Vue {
     this.data = options.data;
     this.el = options.el || "body";
     this.initState();
+    callHook(vm, "beforeMount");
+    this._isMounted = true;
     this.$compile = new Compile(this.el, this);
+    callHook(vm, "mounted");
   }
   initState() {
     const _this = this;
     const ops = _this.options;
+    callHook(vm, "beforeCreate");
     ops.data && _this.initData();
     ops.methods && _this.initMethods();
     ops.computed && _this.initComputed();
+    callHook(vm, "created");
     this.initLifecycle(_this);
   }
   initData() {
@@ -324,13 +329,7 @@ class Vue {
       Object.defineProperty(_this, key, def);
     }
   }
-  initLifecycle(vm) {
-    callHook(vm, "beforeCreate");
-    callHook(vm, "created");
-    callHook(vm, "beforeMount");
-    vm._isMounted = true;
-    callHook(vm, "mounted");
-  }
+  initLifecycle(vm) {}
   $watch(key, cb, options) {
     new Watcher(this, key, cb);
   }

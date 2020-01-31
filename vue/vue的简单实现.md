@@ -1,8 +1,8 @@
 # Vue
 
-## 几种实现双向绑定的做法
+## 什么是双向数据绑定
 
-目前几种主流的 mvc(vm)框架都实现了单向数据绑定,而我所理解的双向数据绑定无非就是在单向绑定的基础上给可输入元素（input、textare 等）添加了 change(input)事件,来动态修改 model 和 view,并没有多高深。所以无需太过介怀是实现的单向或双向绑定。
+Vue 是一个 MVVM 框架,双向数据绑定简单来说,就是当数据发生变化时,相应的视图会进行更新,当视图更新时,数据也会跟着变化.给操作的元素添加了 update 方法,操作元素的时候动态修改 view.
 
 实现数据绑定的做法有大致如下几种：
 
@@ -10,19 +10,23 @@
 - 脏值检查（angular.js）
 - 数据劫持（vue.js）
 
-发布者-订阅者模式: 一般通过 sub, pub 的方式实现数据和视图的绑定监听,更新数据方式通常做法是 vm.set('property', value)
+#### 发布者-订阅者模式
 
-现在更希望通过 vm.property = value 这种方式更新数据,同时自动更新视图,于是有了下面两种方式
+一般通过 sub, pub 的方式实现数据和视图的绑定监听,更新数据方式通常做法是 vm.set('property', value).之后 vm.property = value 这种通过数据推动视图变动的方式更加流行.
 
-脏值检查: angular.js 是通过脏值检测的方式比对数据是否有变更,来决定是否更新视图,最简单的方式就是通过 setInterval() 定时轮询检测数据变动,当然 Google 不会这么 low,angular 只有在指定的事件触发时进入脏值检测,大致如下：
+#### 脏值检查
 
-- DOM 事件,譬如用户输入文本,点击按钮等。( ng-click )
+angular.js 是通过脏值检测的方式比对数据是否有变更,来决定是否更新视图,最简单的方式就是通过 setInterval() 定时轮询检测数据变动,当然 Google 不会这么 low,angular 只有在指定的事件触发时进入脏值检测,大致如下：
+
+- DOM 事件,譬如用户输入文本,点击按钮等.( ng-click )
 - XHR 响应事件 ( \$http )
 - 浏览器 Location 变更事件 ( \$location )
 - Timer 事件( $timeout , $interval )
 - 执行 $digest() 或 $apply()
 
-数据劫持: vue.js 则是采用数据劫持结合发布者-订阅者模式的方式,通过 Object.defineProperty()来劫持各个属性的 setter,getter,在数据变动时发布消息给订阅者,触发相应的监听回调。
+#### 数据劫持
+
+vue.js 则是采用数据劫持结合发布者-订阅者模式的方式,通过 Object.defineProperty()来劫持各个属性的 setter,getter,在数据变动时发布消息给订阅者,触发相应的监听回调.
 
 ## vue 基本构成
 
@@ -41,7 +45,7 @@
 
 ```js
 function observer(data) {
-  if (data !== null && typeof data === "object") {
+  if (data !== null && typeof data === 'object') {
     return new Observer(data);
   }
   return;
@@ -137,9 +141,9 @@ Compile.prototype.compileElement = function(element) {
     let attrName = attr.name;
     let attrValue = attr.value;
     // 如 <span v-text="content"></span> 中指令为 v-text
-    if (attrName.indexOf("v-") === 0) {
+    if (attrName.indexOf('v-') === 0) {
       let dir = attrName.substring(2);
-      if (dir.indexOf("on") === 0) {
+      if (dir.indexOf('on') === 0) {
         compileUtil.eventHandler(element, _this.$vm, attrValue, dir);
       } else {
         compileUtil[dir] && compileUtil[dir](element, _this.$vm, attrValue);
@@ -160,7 +164,7 @@ Watcher 订阅者作为 Observer 和 Compile 之间通信的桥梁
 
 - 自身实例化时往属性订阅器(dep)里面添加自己
 - 自身必须有一个 update()方法
-- 属性变动也就是 setter 触发时,能调用自身的 update()方法,并触发 Compile 中绑定的回调。
+- 属性变动也就是 setter 触发时,能调用自身的 update()方法,并触发 Compile 中绑定的回调.
 
 ```js
 class Watcher {
@@ -170,7 +174,7 @@ class Watcher {
     this.cb = cb;
     this.depIds = {};
     this.deps = [];
-    if (typeof expOrFn === "function") {
+    if (typeof expOrFn === 'function') {
       this.getter = expOrFn;
     } else {
       this.getter = this.parseGetter(expOrFn.trim());
@@ -206,7 +210,7 @@ class Watcher {
   }
   parseGetter(exp) {
     if (/[^\w.$]/.test(exp)) return;
-    var exps = exp.split(".");
+    var exps = exp.split('.');
     return function(obj) {
       for (var i = 0, len = exps.length; i < len; i++) {
         if (!obj) return;
@@ -227,14 +231,14 @@ data 中每个声明的属性,都会有一个 专属的依赖收集器 subs,保�
 - 订阅者 watcher.addDep(new Dep()) => watcher.newDeps.push(dep)
 - 最后搜集到 Dep 中 dep.addSub(new Watcher()) => dep.subs.push(watcher)
 
-最终 watcher.newDeps 数组中存放 dep 列表,dep.subs 数组中存放 watcher 列表。而 Vue 在数据改变时,通知通知那些存在 依赖收集器中的 视图(watcher)进行更新
+最终 watcher.newDeps 数组中存放 dep 列表,dep.subs 数组中存放 watcher 列表.而 Vue 在数据改变时,通知通知那些存在 依赖收集器中的 视图(watcher)进行更新
 
 ```js
 let depid = 0;
 
 function Dep(options) {
   this.id = depid++;
-  this.key = options.key ? options.key : "";
+  this.key = options.key ? options.key : '';
   this.subs = [];
 }
 
@@ -285,21 +289,21 @@ class Vue {
   constructor(options) {
     this.options = options || {};
     this.data = options.data;
-    this.el = options.el || "body";
+    this.el = options.el || 'body';
     this.initState();
-    callHook(vm, "beforeMount");
+    callHook(vm, 'beforeMount');
     this._isMounted = true;
     this.$compile = new Compile(this.el, this);
-    callHook(vm, "mounted");
+    callHook(vm, 'mounted');
   }
   initState() {
     const _this = this;
     const ops = _this.options;
-    callHook(vm, "beforeCreate");
+    callHook(vm, 'beforeCreate');
     ops.data && _this.initData();
     ops.methods && _this.initMethods();
     ops.computed && _this.initComputed();
-    callHook(vm, "created");
+    callHook(vm, 'created');
     this.initLifecycle(_this);
   }
   initData() {
@@ -460,7 +464,7 @@ function callHook(vm, hook) {
 
 ## 文档
 
-- [嗨，让我带你逐行剖析 Vue.js 源码](https://nlrx-wjc.github.io/Learn-Vue-Source-Code/start/#_1-%E5%89%8D%E8%A8%80)
+- [嗨,让我带你逐行剖析 Vue.js 源码](https://nlrx-wjc.github.io/Learn-Vue-Source-Code/start/#_1-%E5%89%8D%E8%A8%80)
 - [剖析 Vue 实现原理 - 如何实现双向绑定 mvvm](https://github.com/DMQ/mvvm)
 - [Vue.js 源码解析](https://github.com/answershuto/learnVue)
 - [Vue.js 源码（1）：Hello World 的背后](https://segmentfault.com/a/1190000006866881)

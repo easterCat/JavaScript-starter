@@ -166,7 +166,7 @@ isOnce: 是否有 v-once 指令
 /*创建一个空VNode节点*/
 export const createEmptyVNode = () => {
   const node = new VNode();
-  node.text = "";
+  node.text = '';
   node.isComment = true;
   return node;
 };
@@ -321,11 +321,10 @@ export function _createElement(
     那么创建一个空节点
   */
   if (isDef(data) && isDef((data: any).__ob__)) {
-    process.env.NODE_ENV !== "production" &&
+    process.env.NODE_ENV !== 'production' &&
       warn(
-        `Avoid using observed data object as vnode data: ${JSON.stringify(
-          data
-        )}\n` + "Always create fresh vnode data objects in each render!",
+        `Avoid using observed data object as vnode data: ${JSON.stringify(data)}\n` +
+          'Always create fresh vnode data objects in each render!',
         context
       );
     return createEmptyVNode();
@@ -337,7 +336,7 @@ export function _createElement(
   }
   // support single function children as default scoped slot
   /*默认默认作用域插槽*/
-  if (Array.isArray(children) && typeof children[0] === "function") {
+  if (Array.isArray(children) && typeof children[0] === 'function') {
     data = data || {};
     data.scopedSlots = { default: children[0] };
     children.length = 0;
@@ -348,7 +347,7 @@ export function _createElement(
     children = simpleNormalizeChildren(children);
   }
   let vnode, ns;
-  if (typeof tag === "string") {
+  if (typeof tag === 'string') {
     let Ctor;
     /*获取tag的名字空间*/
     ns = config.getTagNamespace(tag);
@@ -356,17 +355,8 @@ export function _createElement(
     if (config.isReservedTag(tag)) {
       // platform built-in elements
       /*如果是保留的标签则创建一个相应节点*/
-      vnode = new VNode(
-        config.parsePlatformTagName(tag),
-        data,
-        children,
-        undefined,
-        undefined,
-        context
-      );
-    } else if (
-      isDef((Ctor = resolveAsset(context.$options, "components", tag)))
-    ) {
+      vnode = new VNode(config.parsePlatformTagName(tag), data, children, undefined, undefined, context);
+    } else if (isDef((Ctor = resolveAsset(context.$options, 'components', tag)))) {
       // component
       /*从vm实例的option的components中寻找该tag，存在则就是一个组件，创建相应节点，Ctor为组件的构造类*/
       vnode = createComponent(Ctor, data, context, children, tag);

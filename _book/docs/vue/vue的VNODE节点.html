@@ -77,7 +77,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="vue的基础.html" />
+    <link rel="next" href="vue的template模板解析.html" />
     
     
     <link rel="prev" href="vue的简单实现.html" />
@@ -488,7 +488,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="vue的基础.html">
+        <li class="chapter " data-level="1.4.6" data-path="vue的template模板解析.html">
+            
+                <a href="vue的template模板解析.html">
+            
+                    
+                    vue 的 template 模板解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="vue的基础.html">
             
                 <a href="vue的基础.html">
             
@@ -501,7 +514,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="vue的基础2.html">
+        <li class="chapter " data-level="1.4.8" data-path="vue的基础2.html">
             
                 <a href="vue的基础2.html">
             
@@ -514,7 +527,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="vue的基础3.html">
+        <li class="chapter " data-level="1.4.9" data-path="vue的基础3.html">
             
                 <a href="vue的基础3.html">
             
@@ -527,7 +540,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.9" data-path="vue的基础4.html">
+        <li class="chapter " data-level="1.4.10" data-path="vue的基础4.html">
             
                 <a href="vue的基础4.html">
             
@@ -1554,7 +1567,7 @@
 <pre class="language-"><code class="lang-javascript"><span class="token comment">/*&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;VNode&#x8282;&#x70B9;*/</span>
 <span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">createEmptyVNode</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> node <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  node<span class="token punctuation">.</span>text <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  node<span class="token punctuation">.</span>text <span class="token operator">=</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">;</span>
   node<span class="token punctuation">.</span>isComment <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> node<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -1696,11 +1709,10 @@
     &#x90A3;&#x4E48;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x8282;&#x70B9;
   */</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isDef</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">isDef</span><span class="token punctuation">(</span><span class="token punctuation">(</span>data<span class="token operator">:</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span>__ob__<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">&quot;production&quot;</span> <span class="token operator">&amp;&amp;</span>
+    process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">&apos;production&apos;</span> <span class="token operator">&amp;&amp;</span>
       <span class="token function">warn</span><span class="token punctuation">(</span>
-        <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Avoid using observed data object as vnode data: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>
-          data
-        <span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">\n</span><span class="token template-punctuation string">`</span></span> <span class="token operator">+</span> <span class="token string">&quot;Always create fresh vnode data objects in each render!&quot;</span><span class="token punctuation">,</span>
+        <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Avoid using observed data object as vnode data: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">\n</span><span class="token template-punctuation string">`</span></span> <span class="token operator">+</span>
+          <span class="token string">&apos;Always create fresh vnode data objects in each render!&apos;</span><span class="token punctuation">,</span>
         context
       <span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token function">createEmptyVNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1712,7 +1724,7 @@
   <span class="token punctuation">}</span>
   <span class="token comment">// support single function children as default scoped slot</span>
   <span class="token comment">/*&#x9ED8;&#x8BA4;&#x9ED8;&#x8BA4;&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;*/</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>children<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> children<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">&quot;function&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>children<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> children<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">&apos;function&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     data <span class="token operator">=</span> data <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
     data<span class="token punctuation">.</span>scopedSlots <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token keyword">default</span><span class="token operator">:</span> children<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
     children<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -1723,7 +1735,7 @@
     children <span class="token operator">=</span> <span class="token function">simpleNormalizeChildren</span><span class="token punctuation">(</span>children<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
   <span class="token keyword">let</span> vnode<span class="token punctuation">,</span> ns<span class="token punctuation">;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> tag <span class="token operator">===</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> tag <span class="token operator">===</span> <span class="token string">&apos;string&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">let</span> Ctor<span class="token punctuation">;</span>
     <span class="token comment">/*&#x83B7;&#x53D6;tag&#x7684;&#x540D;&#x5B57;&#x7A7A;&#x95F4;*/</span>
     ns <span class="token operator">=</span> config<span class="token punctuation">.</span><span class="token function">getTagNamespace</span><span class="token punctuation">(</span>tag<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1731,17 +1743,8 @@
     <span class="token keyword">if</span> <span class="token punctuation">(</span>config<span class="token punctuation">.</span><span class="token function">isReservedTag</span><span class="token punctuation">(</span>tag<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token comment">// platform built-in elements</span>
       <span class="token comment">/*&#x5982;&#x679C;&#x662F;&#x4FDD;&#x7559;&#x7684;&#x6807;&#x7B7E;&#x5219;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x76F8;&#x5E94;&#x8282;&#x70B9;*/</span>
-      vnode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VNode</span><span class="token punctuation">(</span>
-        config<span class="token punctuation">.</span><span class="token function">parsePlatformTagName</span><span class="token punctuation">(</span>tag<span class="token punctuation">)</span><span class="token punctuation">,</span>
-        data<span class="token punctuation">,</span>
-        children<span class="token punctuation">,</span>
-        <span class="token keyword">undefined</span><span class="token punctuation">,</span>
-        <span class="token keyword">undefined</span><span class="token punctuation">,</span>
-        context
-      <span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>
-      <span class="token function">isDef</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Ctor <span class="token operator">=</span> <span class="token function">resolveAsset</span><span class="token punctuation">(</span>context<span class="token punctuation">.</span>$options<span class="token punctuation">,</span> <span class="token string">&quot;components&quot;</span><span class="token punctuation">,</span> tag<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      vnode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VNode</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span><span class="token function">parsePlatformTagName</span><span class="token punctuation">(</span>tag<span class="token punctuation">)</span><span class="token punctuation">,</span> data<span class="token punctuation">,</span> children<span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isDef</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Ctor <span class="token operator">=</span> <span class="token function">resolveAsset</span><span class="token punctuation">(</span>context<span class="token punctuation">.</span>$options<span class="token punctuation">,</span> <span class="token string">&apos;components&apos;</span><span class="token punctuation">,</span> tag<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token comment">// component</span>
       <span class="token comment">/*&#x4ECE;vm&#x5B9E;&#x4F8B;&#x7684;option&#x7684;components&#x4E2D;&#x5BFB;&#x627E;&#x8BE5;tag&#xFF0C;&#x5B58;&#x5728;&#x5219;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x521B;&#x5EFA;&#x76F8;&#x5E94;&#x8282;&#x70B9;&#xFF0C;Ctor&#x4E3A;&#x7EC4;&#x4EF6;&#x7684;&#x6784;&#x9020;&#x7C7B;*/</span>
       vnode <span class="token operator">=</span> <span class="token function">createComponent</span><span class="token punctuation">(</span>Ctor<span class="token punctuation">,</span> data<span class="token punctuation">,</span> context<span class="token punctuation">,</span> children<span class="token punctuation">,</span> tag<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1805,7 +1808,7 @@
                 </a>
                 
                 
-                <a href="vue的基础.html" class="navigation navigation-next " aria-label="Next page: vue 的基础">
+                <a href="vue的template模板解析.html" class="navigation navigation-next " aria-label="Next page: vue 的 template 模板解析">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1816,7 +1819,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vue 的 VNODE 节点","level":"1.4.5","depth":2,"next":{"title":"vue 的基础","level":"1.4.6","depth":2,"path":"vue/vue的基础.md","ref":"vue/vue的基础.md","articles":[]},"previous":{"title":"vue 的简单实现","level":"1.4.4","depth":2,"path":"vue/vue的简单实现.md","ref":"vue/vue的简单实现.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","prism-themes","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-material-dark.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"vue/vue的VNODE节点.md","mtime":"2020-01-30T06:54:51.293Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-31T13:31:29.831Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vue 的 VNODE 节点","level":"1.4.5","depth":2,"next":{"title":"vue 的 template 模板解析","level":"1.4.6","depth":2,"path":"vue/vue的template模板解析.md","ref":"vue/vue的template模板解析.md","articles":[]},"previous":{"title":"vue 的简单实现","level":"1.4.4","depth":2,"path":"vue/vue的简单实现.md","ref":"vue/vue的简单实现.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","prism-themes","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-material-dark.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"vue/vue的VNODE节点.md","mtime":"2020-01-31T13:40:41.869Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-01T02:18:57.373Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

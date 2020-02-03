@@ -16,7 +16,11 @@
   - [vscode 超人气代码格式化工具 prettier](前端/超人气代码格式化工具prettier.md)
   - [gitbook 的使用](前端/gitbook的使用.md)
   - [前端性能优化最佳实践](前端/前端性能优化最佳实践.md)
+
+## js 基础
+
 - [js 基础](js基础/词法作用域/readme.md)
+
   - [词法作用域](js基础/词法作用域/readme.md)
   - [内存分配](js基础/内存分配/readme.md)
   - [浏览器工作原理](js基础/浏览器工作原理/readme.md)
@@ -24,19 +28,14 @@
   - [继承的方式](js基础/类和对象/继承的方式.md)
   - [数据类型](js基础/数据类型/readme.md)
   - [js 事件机制](js基础/js事件机制/readme.md)
-- [vuejs](vue/vue路由与keep-alive.md)
-  - [vue 的路由与 keep-alive](vue/vue的路由与keep-alive.md)
-  - [vue 的 use 方法使用](vue/vue的use方法使用.md)
-  - [vue 的指令,插件,混合](vue/vue的指令,插件,混合.md)
-  - [vue 的简单实现](vue/vue的简单实现.md)
-  - [vue 的 VNODE 节点](vue/vue的VNODE节点.md)
-  - [vue 的 template 模板解析](vue/vue的template模板解析.md)
-  - [vue 的基础](vue/vue的基础.md)
-  - [vue 的基础 2](vue/vue的基础2.md)
-  - [vue 的基础 3](vue/vue的基础3.md)
-  - [vue 的基础 4](vue/vue的基础4.md)
+
+## ES6
+
 - [ES6](js基础/ES6/Map和Set.md)
   - [Map 和 Set](js基础/ES6/Map和Set.md)
+
+## nodejs
+
 - [nodejs](nodejs/node写个helloworld.md)
   - [reids 安装配置](nodejs/环境/reids安装配置.md)
   - [mysql 安装配置](nodejs/环境/mysql安装配置.md)
@@ -50,12 +49,29 @@
   - [node 中的 query,params,body](nodejs/node中的query,params,body.md)
   - [node 常用 post 提交方式](nodejs/node常用post提交方式.md)
   - [node 的进程和线程](nodejs/node的进程和线程.md)
+
+## node 工具
+
 - [node 工具](nodejs/工具/node工具之http-proxy-middleware.md)
   - [node 工具之 http-proxy-middleware](nodejs/工具/node工具之http-proxy-middleware.md)
   - [node 工具之 node-ip](nodejs/工具/node工具之node-ip.md)
   - [node 工具之 nodemon](nodejs/工具/node工具之nodemon.md)
   - [node 工具之 pm2](nodejs/工具/node工具之pm2.md)
   - [node 工具之 commander](nodejs/工具/node工具之commander.md)
+
+## vuejs
+
+- [vuejs](vue/vue路由与keep-alive.md)
+  - [vue 的路由与 keep-alive](vue/vue的路由与keep-alive.md)
+  - [vue 的 use 方法使用](vue/vue的use方法使用.md)
+  - [vue 的指令,插件,混合](vue/vue的指令,插件,混合.md)
+  - [vue 的简单实现](vue/vue的简单实现.md)
+  - [vue 的 VNODE 节点](vue/vue的VNODE节点.md)
+  - [vue 的 template 模板解析](vue/vue的template模板解析.md)
+  - [vue 的基础](vue/vue的基础.md)
+  - [vue 的基础 2](vue/vue的基础2.md)
+  - [vue 的基础 3](vue/vue的基础3.md)
+  - [vue 的基础 4](vue/vue的基础4.md)
 
 ## java 基础
 
@@ -78,6 +94,9 @@
   - [List](Java基础/list.md)
   - [多线程编程](Java基础/多线程编程.md)
   - [泛型](Java基础/泛型.md)
+
+## spring
+
 - [spring](spring/maven安装配置.md)
   - [maven 安装配置](spring/maven安装配置.md)
   - [tomcat 安装配置](spring/tomcat安装配置.md)

@@ -15,6 +15,7 @@
   - [vscode 配置 eslint](前端/vscode配置eslint.md)
   - [vscode 超人气代码格式化工具 prettier](前端/超人气代码格式化工具prettier.md)
   - [gitbook 的使用](前端/gitbook的使用.md)
+  - [前端性能优化最佳实践](前端/前端性能优化最佳实践.md)
 - [js 基础](js基础/词法作用域/readme.md)
   - [词法作用域](js基础/词法作用域/readme.md)
   - [内存分配](js基础/内存分配/readme.md)

@@ -1,0 +1,1995 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>前端性能优化最佳实践 · javascript-starter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="qingcheng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-material-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../js基础/词法作用域/readme.html" />
+    
+    
+    <link rel="prev" href="gitbook的使用.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="获取屏幕宽度.html">
+            
+                <a href="获取屏幕宽度.html">
+            
+                    
+                    前端基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="获取屏幕宽度.html">
+            
+                <a href="获取屏幕宽度.html">
+            
+                    
+                    获取屏幕宽度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="学会使用JavaScript访问和修改CSS样式.html">
+            
+                <a href="学会使用JavaScript访问和修改CSS样式.html">
+            
+                    
+                    学会使用 JavaScript 访问和修改 CSS 样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="解决canvas在高清屏中模糊.html">
+            
+                <a href="解决canvas在高清屏中模糊.html">
+            
+                    
+                    解决 canvas 在高清屏中模糊
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="js二进制数据互转.html">
+            
+                <a href="js二进制数据互转.html">
+            
+                    
+                    js 二进制数据互转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="单元测试/readme.html">
+            
+                <a href="单元测试/readme.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="网络/http响应码.html">
+            
+                <a href="网络/http响应码.html">
+            
+                    
+                    http 响应码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="网络/http预览导图.html">
+            
+                <a href="网络/http预览导图.html">
+            
+                    
+                    http 预览导图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="npm安装github包的方式.html">
+            
+                <a href="npm安装github包的方式.html">
+            
+                    
+                    npm 安装 github 包的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="浏览器渲染进程Renderer.html">
+            
+                <a href="浏览器渲染进程Renderer.html">
+            
+                    
+                    浏览器渲染进程 Renderer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="移动端的踩坑问题.html">
+            
+                <a href="移动端的踩坑问题.html">
+            
+                    
+                    移动端的踩坑问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="常用正则.html">
+            
+                <a href="常用正则.html">
+            
+                    
+                    常用正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="vscode配置eslint.html">
+            
+                <a href="vscode配置eslint.html">
+            
+                    
+                    vscode 配置 eslint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="超人气代码格式化工具prettier.html">
+            
+                <a href="超人气代码格式化工具prettier.html">
+            
+                    
+                    vscode 超人气代码格式化工具 prettier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="gitbook的使用.html">
+            
+                <a href="gitbook的使用.html">
+            
+                    
+                    gitbook 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.15" data-path="前端性能优化最佳实践.html">
+            
+                <a href="前端性能优化最佳实践.html">
+            
+                    
+                    前端性能优化最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    js 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../js基础/词法作用域/readme.html">
+            
+                <a href="../js基础/词法作用域/readme.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../js基础/内存分配/readme.html">
+            
+                <a href="../js基础/内存分配/readme.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../js基础/浏览器工作原理/readme.html">
+            
+                <a href="../js基础/浏览器工作原理/readme.html">
+            
+                    
+                    浏览器工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../js基础/类和对象/readme.html">
+            
+                <a href="../js基础/类和对象/readme.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../js基础/数据类型/readme.html">
+            
+                <a href="../js基础/数据类型/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../js基础/js事件机制/readme.html">
+            
+                <a href="../js基础/js事件机制/readme.html">
+            
+                    
+                    js 事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../vue/vue路由与keep-alive.md">
+            
+                <span>
+            
+                    
+                    vuejs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue/vue的路由与keep-alive.html">
+            
+                <a href="../vue/vue的路由与keep-alive.html">
+            
+                    
+                    vue 的路由与 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../vue/vue的use方法使用.html">
+            
+                <a href="../vue/vue的use方法使用.html">
+            
+                    
+                    vue 的 use 方法使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../vue/vue的指令,插件,混合.html">
+            
+                <a href="../vue/vue的指令,插件,混合.html">
+            
+                    
+                    vue 的指令,插件,混合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../vue/vue的简单实现.html">
+            
+                <a href="../vue/vue的简单实现.html">
+            
+                    
+                    vue 的简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../vue/vue的VNODE节点.html">
+            
+                <a href="../vue/vue的VNODE节点.html">
+            
+                    
+                    vue 的 VNODE 节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../vue/vue的template模板解析.html">
+            
+                <a href="../vue/vue的template模板解析.html">
+            
+                    
+                    vue 的 template 模板解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../vue/vue的基础.html">
+            
+                <a href="../vue/vue的基础.html">
+            
+                    
+                    vue 的基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../vue/vue的基础2.html">
+            
+                <a href="../vue/vue的基础2.html">
+            
+                    
+                    vue 的基础 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../vue/vue的基础3.html">
+            
+                <a href="../vue/vue的基础3.html">
+            
+                    
+                    vue 的基础 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../vue/vue的基础4.html">
+            
+                <a href="../vue/vue的基础4.html">
+            
+                    
+                    vue 的基础 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../js基础/ES6/Map和Set.html">
+            
+                <a href="../js基础/ES6/Map和Set.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../js基础/ES6/Map和Set.html">
+            
+                <a href="../js基础/ES6/Map和Set.html">
+            
+                    
+                    Map 和 Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../nodejs/node写个helloworld.html">
+            
+                <a href="../nodejs/node写个helloworld.html">
+            
+                    
+                    nodejs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../nodejs/环境/reids安装配置.html">
+            
+                <a href="../nodejs/环境/reids安装配置.html">
+            
+                    
+                    reids 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../nodejs/环境/mysql安装配置.html">
+            
+                <a href="../nodejs/环境/mysql安装配置.html">
+            
+                    
+                    mysql 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../nodejs/环境/Elasticsearch安装配置.html">
+            
+                <a href="../nodejs/环境/Elasticsearch安装配置.html">
+            
+                    
+                    Elasticsearch 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../nodejs/node写个helloworld.html">
+            
+                <a href="../nodejs/node写个helloworld.html">
+            
+                    
+                    node 写个 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../nodejs/node的fs模块.html">
+            
+                <a href="../nodejs/node的fs模块.html">
+            
+                    
+                    node 的 fs 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../nodejs/用node写个爬虫.html">
+            
+                <a href="../nodejs/用node写个爬虫.html">
+            
+                    
+                    用 node 写个爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../nodejs/node实现静态文件服务器.html">
+            
+                <a href="../nodejs/node实现静态文件服务器.html">
+            
+                    
+                    node 实现静态文件服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../nodejs/nodejs文件路径.html">
+            
+                <a href="../nodejs/nodejs文件路径.html">
+            
+                    
+                    nodejs 文件路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../nodejs/node发起http请求.html">
+            
+                <a href="../nodejs/node发起http请求.html">
+            
+                    
+                    node 发起 http 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../nodejs/node中的query,params,body.html">
+            
+                <a href="../nodejs/node中的query,params,body.html">
+            
+                    
+                    node 中的 query,params,body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../nodejs/node常用post提交方式.html">
+            
+                <a href="../nodejs/node常用post提交方式.html">
+            
+                    
+                    node 常用 post 提交方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../nodejs/node的进程和线程.html">
+            
+                <a href="../nodejs/node的进程和线程.html">
+            
+                    
+                    node 的进程和线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                <a href="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                <a href="../nodejs/工具/node工具之http-proxy-middleware.html">
+            
+                    
+                    node 工具之 http-proxy-middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../nodejs/工具/node工具之node-ip.html">
+            
+                <a href="../nodejs/工具/node工具之node-ip.html">
+            
+                    
+                    node 工具之 node-ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../nodejs/工具/node工具之nodemon.html">
+            
+                <a href="../nodejs/工具/node工具之nodemon.html">
+            
+                    
+                    node 工具之 nodemon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../nodejs/工具/node工具之pm2.html">
+            
+                <a href="../nodejs/工具/node工具之pm2.html">
+            
+                    
+                    node 工具之 pm2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../nodejs/工具/node工具之commander.html">
+            
+                <a href="../nodejs/工具/node工具之commander.html">
+            
+                    
+                    node 工具之 commander
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">java 基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Java基础/">
+            
+                <a href="../Java基础/">
+            
+                    
+                    java 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Java基础/变量的类型.html">
+            
+                <a href="../Java基础/变量的类型.html">
+            
+                    
+                    变量的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Java基础/基本数据类型.html">
+            
+                <a href="../Java基础/基本数据类型.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Java基础/修饰符.html">
+            
+                <a href="../Java基础/修饰符.html">
+            
+                    
+                    修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Java基础/运算符.html">
+            
+                <a href="../Java基础/运算符.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Java基础/条件语句.html">
+            
+                <a href="../Java基础/条件语句.html">
+            
+                    
+                    条件语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Java基础/循环结构.html">
+            
+                <a href="../Java基础/循环结构.html">
+            
+                    
+                    循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Java基础/switch语句.html">
+            
+                <a href="../Java基础/switch语句.html">
+            
+                    
+                    switch 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Java基础/数组.html">
+            
+                <a href="../Java基础/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../Java基础/字符串.html">
+            
+                <a href="../Java基础/字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../Java基础/Character类.html">
+            
+                <a href="../Java基础/Character类.html">
+            
+                    
+                    Character 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../Java基础/正则表达式.html">
+            
+                <a href="../Java基础/正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../Java基础/流,文件和IO.html">
+            
+                <a href="../Java基础/流,文件和IO.html">
+            
+                    
+                    流,文件和 IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                <a href="../Java基础/StringBuffer和StringBuilder类.html">
+            
+                    
+                    StringBuffer 和 StringBuilder 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="../Java基础/Collection.html">
+            
+                <a href="../Java基础/Collection.html">
+            
+                    
+                    Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.15" data-path="../Java基础/map.html">
+            
+                <a href="../Java基础/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="../Java基础/list.html">
+            
+                <a href="../Java基础/list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" data-path="../Java基础/多线程编程.html">
+            
+                <a href="../Java基础/多线程编程.html">
+            
+                    
+                    多线程编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.18" data-path="../Java基础/泛型.html">
+            
+                <a href="../Java基础/泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../spring/maven安装配置.html">
+            
+                <a href="../spring/maven安装配置.html">
+            
+                    
+                    maven 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../spring/tomcat安装配置.html">
+            
+                <a href="../spring/tomcat安装配置.html">
+            
+                    
+                    tomcat 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../spring/intellij安装配置.html">
+            
+                <a href="../spring/intellij安装配置.html">
+            
+                    
+                    intellij 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../spring/spring创建helloworld.html">
+            
+                <a href="../spring/spring创建helloworld.html">
+            
+                    
+                    spring 创建 helloworld
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构与算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../数据结构与算法/">
+            
+                <a href="../数据结构与算法/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../数据结构与算法/线性表.html">
+            
+                <a href="../数据结构与算法/线性表.html">
+            
+                    
+                    线性表(数组,队列,栈,链表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../数据结构与算法/Java排序算法.html">
+            
+                <a href="../数据结构与算法/Java排序算法.html">
+            
+                    
+                    Java 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Java练习题/">
+            
+                <a href="../Java练习题/">
+            
+                    
+                    Java 练习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../Java练习题/指定范围包含的素数.html">
+            
+                <a href="../Java练习题/指定范围包含的素数.html">
+            
+                    
+                    指定范围包含的素数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../Java练习题/公约数和公倍数.html">
+            
+                <a href="../Java练习题/公约数和公倍数.html">
+            
+                    
+                    公约数和公倍数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    leetcode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../leetcode/2.两数相加.html">
+            
+                <a href="../leetcode/2.两数相加.html">
+            
+                    
+                    2.两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../leetcode/146.LRU缓存机制.html">
+            
+                <a href="../leetcode/146.LRU缓存机制.html">
+            
+                    
+                    146.LRU 缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../leetcode/242.有效的字符异位数.html">
+            
+                <a href="../leetcode/242.有效的字符异位数.html">
+            
+                    
+                    242.有效的字符异位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    scripto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../scripto/简单的模板引擎.html">
+            
+                <a href="../scripto/简单的模板引擎.html">
+            
+                    
+                    简单的模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../scripto/中间件模式.html">
+            
+                <a href="../scripto/中间件模式.html">
+            
+                    
+                    中间件模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../scripto/m长度的都是n的数组.html">
+            
+                <a href="../scripto/m长度的都是n的数组.html">
+            
+                    
+                    m 长度的都是 n 的数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >前端性能优化最佳实践</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9875;&#x9762;&#x5185;&#x5BB9;"><b>1.1. </b>&#x9875;&#x9762;&#x5185;&#x5BB9;</a></li><ul><li><span class="title-icon "></span><a href="#&#x51CF;&#x5C11;-http-&#x8BF7;&#x6C42;&#x6570;"><b>1.1.1. </b>&#x51CF;&#x5C11; HTTP &#x8BF7;&#x6C42;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x51CF;&#x5C11;-dns-&#x67E5;&#x8BE2;"><b>1.1.2. </b>&#x51CF;&#x5C11; DNS &#x67E5;&#x8BE2;</a></li><li><span class="title-icon "></span><a href="#&#x907F;&#x514D;&#x91CD;&#x5B9A;&#x5411;"><b>1.1.3. </b>&#x907F;&#x514D;&#x91CD;&#x5B9A;&#x5411;</a></li><li><span class="title-icon "></span><a href="#&#x7F13;&#x5B58;-ajax-&#x8BF7;&#x6C42;"><b>1.1.4. </b>&#x7F13;&#x5B58; Ajax &#x8BF7;&#x6C42;</a></li><li><span class="title-icon "></span><a href="#&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;"><b>1.1.5. </b>&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#&#x9884;&#x5148;&#x52A0;&#x8F7D;"><b>1.1.6. </b>&#x9884;&#x5148;&#x52A0;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#&#x51CF;&#x5C11;-dom-&#x5143;&#x7D20;&#x6570;&#x91CF;"><b>1.1.7. </b>&#x51CF;&#x5C11; DOM &#x5143;&#x7D20;&#x6570;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#&#x5212;&#x5206;&#x5185;&#x5BB9;&#x5230;&#x4E0D;&#x540C;&#x57DF;&#x540D;"><b>1.1.8. </b>&#x5212;&#x5206;&#x5185;&#x5BB9;&#x5230;&#x4E0D;&#x540C;&#x57DF;&#x540D;</a></li><li><span class="title-icon "></span><a href="#&#x5C3D;&#x91CF;&#x51CF;&#x5C11;-iframe-&#x4F7F;&#x7528;"><b>1.1.9. </b>&#x5C3D;&#x91CF;&#x51CF;&#x5C11; iframe &#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x907F;&#x514D;-404-&#x9519;&#x8BEF;"><b>1.1.10. </b>&#x907F;&#x514D; 404 &#x9519;&#x8BEF;</a></li><li><span class="title-icon "></span><a href="#&#x8865;&#x5145;&#x89C4;&#x5219;&#xFF1A;"><b>1.1.11. </b>&#x8865;&#x5145;&#x89C4;&#x5219;&#xFF1A;</a></li></ul><li><span class="title-icon "></span><a href="#&#x670D;&#x52A1;&#x5668;"><b>1.2. </b>&#x670D;&#x52A1;&#x5668;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;-cdn"><b>1.2.1. </b>&#x4F7F;&#x7528; CDN</a></li><li><span class="title-icon "></span><a href="#&#x6DFB;&#x52A0;-expires-&#x6216;-cache-control-&#x54CD;&#x5E94;&#x5934;"><b>1.2.2. </b>&#x6DFB;&#x52A0; Expires &#x6216; Cache-Control &#x54CD;&#x5E94;&#x5934;</a></li><li><span class="title-icon "></span><a href="#&#x542F;&#x7528;-gzip"><b>1.2.3. </b>&#x542F;&#x7528; Gzip</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;-etag"><b>1.2.4. </b>&#x914D;&#x7F6E; Etag</a></li><li><span class="title-icon "></span><a href="#&#x5C3D;&#x65E9;&#x8F93;&#x51FA;&#xFF08;flush&#xFF09;&#x7F13;&#x51B2;"><b>1.2.5. </b>&#x5C3D;&#x65E9;&#x8F93;&#x51FA;&#xFF08;flush&#xFF09;&#x7F13;&#x51B2;</a></li><li><span class="title-icon "></span><a href="#ajax-&#x8BF7;&#x6C42;&#x4F7F;&#x7528;-get-&#x65B9;&#x6CD5;"><b>1.2.6. </b>Ajax &#x8BF7;&#x6C42;&#x4F7F;&#x7528; GET &#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x907F;&#x514D;&#x56FE;&#x7247;-src-&#x4E3A;&#x7A7A;"><b>1.2.7. </b>&#x907F;&#x514D;&#x56FE;&#x7247; src &#x4E3A;&#x7A7A;</a></li></ul><li><span class="title-icon "></span><a href="#cookie"><b>1.3. </b>Cookie</a></li><ul><li><span class="title-icon "></span><a href="#&#x51CF;&#x5C11;-cookie-&#x5927;&#x5C0F;"><b>1.3.1. </b>&#x51CF;&#x5C11; Cookie &#x5927;&#x5C0F;</a></li><li><span class="title-icon "></span><a href="#&#x9759;&#x6001;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x65E0;-cookie-&#x57DF;&#x540D;"><b>1.3.2. </b>&#x9759;&#x6001;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x65E0; Cookie &#x57DF;&#x540D;</a></li></ul><li><span class="title-icon "></span><a href="#css"><b>1.4. </b>CSS</a></li><ul><li><span class="title-icon "></span><a href="#&#x628A;&#x6837;&#x5F0F;&#x8868;&#x653E;&#x5728;-head-&#x4E2D;"><b>1.4.1. </b>&#x628A;&#x6837;&#x5F0F;&#x8868;&#x653E;&#x5728;  &#x4E2D;</a></li><li><span class="title-icon "></span><a href="#&#x4E0D;&#x8981;&#x4F7F;&#x7528;-css-&#x8868;&#x8FBE;&#x5F0F;"><b>1.4.2. </b>&#x4E0D;&#x8981;&#x4F7F;&#x7528; CSS &#x8868;&#x8FBE;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;-link-&#x66FF;&#x4EE3;-import"><b>1.4.3. </b>&#x4F7F;&#x7528; <link> &#x66FF;&#x4EE3; @import</a></li><li><span class="title-icon "></span><a href="#&#x4E0D;&#x8981;&#x4F7F;&#x7528;-filter"><b>1.4.4. </b>&#x4E0D;&#x8981;&#x4F7F;&#x7528; filter</a></li></ul><li><span class="title-icon "></span><a href="#javascript"><b>1.5. </b>JavaScript</a></li><ul><li><span class="title-icon "></span><a href="#&#x628A;&#x811A;&#x672C;&#x653E;&#x5728;&#x9875;&#x9762;&#x5E95;&#x90E8;"><b>1.5.1. </b>&#x628A;&#x811A;&#x672C;&#x653E;&#x5728;&#x9875;&#x9762;&#x5E95;&#x90E8;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x5916;&#x90E8;-javascript-&#x548C;-css"><b>1.5.2. </b>&#x4F7F;&#x7528;&#x5916;&#x90E8; JavaScript &#x548C; CSS</a></li><li><span class="title-icon "></span><a href="#&#x538B;&#x7F29;-javascript-&#x548C;-css"><b>1.5.3. </b>&#x538B;&#x7F29; JavaScript &#x548C; CSS</a></li><li><span class="title-icon "></span><a href="#&#x79FB;&#x9664;&#x91CD;&#x590D;&#x811A;&#x672C;"><b>1.5.4. </b>&#x79FB;&#x9664;&#x91CD;&#x590D;&#x811A;&#x672C;</a></li><li><span class="title-icon "></span><a href="#&#x51CF;&#x5C11;-dom-&#x64CD;&#x4F5C;"><b>1.5.5. </b>&#x51CF;&#x5C11; DOM &#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x9AD8;&#x6548;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;"><b>1.5.6. </b>&#x4F7F;&#x7528;&#x9AD8;&#x6548;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;</a></li></ul><li><span class="title-icon "></span><a href="#&#x56FE;&#x7247;"><b>1.6. </b>&#x56FE;&#x7247;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;&#x56FE;&#x7247;"><b>1.6.1. </b>&#x4F18;&#x5316;&#x56FE;&#x7247;</a></li><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;-css-sprite"><b>1.6.2. </b>&#x4F18;&#x5316; CSS Sprite</a></li><li><span class="title-icon "></span><a href="#&#x4E0D;&#x8981;&#x5728;-html-&#x4E2D;&#x7F29;&#x653E;&#x56FE;&#x7247;"><b>1.6.3. </b>&#x4E0D;&#x8981;&#x5728; HTML &#x4E2D;&#x7F29;&#x653E;&#x56FE;&#x7247;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x4F53;&#x79EF;&#x5C0F;&#x3001;&#x53EF;&#x7F13;&#x5B58;&#x7684;-faviconico"><b>1.6.4. </b>&#x4F7F;&#x7528;&#x4F53;&#x79EF;&#x5C0F;&#x3001;&#x53EF;&#x7F13;&#x5B58;&#x7684; favicon.ico</a></li><li><span class="title-icon "></span><a href="#&#x56FE;&#x7247;&#x76F8;&#x5173;&#x8865;&#x5145;"><b>1.6.5. </b>&#x56FE;&#x7247;&#x76F8;&#x5173;&#x8865;&#x5145;</a></li></ul><li><span class="title-icon "></span><a href="#&#x79FB;&#x52A8;&#x7AEF;"><b>1.7. </b>&#x79FB;&#x52A8;&#x7AEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4FDD;&#x6301;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x5C0F;&#x4E8E;-25-kb"><b>1.7.1. </b>&#x4FDD;&#x6301;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x5C0F;&#x4E8E; 25 KB</a></li><li><span class="title-icon "></span><a href="#&#x6253;&#x5305;&#x5185;&#x5BB9;&#x4E3A;&#x5206;&#x6BB5;&#xFF08;multipart&#xFF09;&#x6587;&#x6863;"><b>1.7.2. </b>&#x6253;&#x5305;&#x5185;&#x5BB9;&#x4E3A;&#x5206;&#x6BB5;&#xFF08;multipart&#xFF09;&#x6587;&#x6863;</a></li></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;&#x94FE;&#x63A5;"><b>1.8. </b>&#x53C2;&#x8003;&#x94FE;&#x63A5;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p>&#x672C;&#x6587;&#x4E3B;&#x8981;&#x8003;&#x91CF;&#x5BA2;&#x6237;&#x7AEF;&#x6027;&#x80FD;&#x3001;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x548C;&#x7F51;&#x7EDC;&#x6027;&#x80FD;&#xFF0C;&#x5185;&#x5BB9;&#x6846;&#x67B6;&#x6765;&#x81EA; <a href="https://developer.yahoo.com/performance/rules.html" target="_blank">Yahoo Developer Network</a>&#xFF0C;&#x5305;&#x542B; 7 &#x4E2A;&#x7C7B;&#x522B;&#x5171; 35 &#x6761;&#x524D;&#x7AEF;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#xFF0C;&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E0A;&#x8865;&#x5145;&#x4E86;&#x4E00;&#x4E9B;&#x76F8;&#x5173;&#x6216;&#x8005;&#x66F4;&#x7B26;&#x5408;&#x4E3B;&#x6D41;&#x6280;&#x672F;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x5EFA;&#x8BAE;&#x5173;&#x6CE8;&#x53CA;&#x65F6;&#x66F4;&#x65B0;&#x7684; <a href="https://developers.google.com/web/fundamentals/performance/?hl=en" target="_blank">Google &#x6027;&#x80FD;&#x4F18;&#x5316;&#x6307;&#x5357;</a>&#x3002;</p>
+<p><strong>&#x76EE;&#x5F55;&#xFF1A;</strong></p>
+<ul>
+<li><a href="#content">&#x9875;&#x9762;&#x5185;&#x5BB9;</a></li>
+<li><a href="#content-http">&#x51CF;&#x5C11; HTTP &#x8BF7;&#x6C42;&#x6570;</a></li>
+<li><a href="#content-dns">&#x51CF;&#x5C11; DNS &#x67E5;&#x8BE2;</a></li>
+<li><a href="#content-redirect">&#x907F;&#x514D;&#x91CD;&#x5B9A;&#x5411;</a></li>
+<li><a href="#content-ajax-cache">&#x7F13;&#x5B58; Ajax &#x8BF7;&#x6C42;</a></li>
+<li><a href="#content-postload">&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;</a></li>
+<li><a href="#content-preload">&#x9884;&#x5148;&#x52A0;&#x8F7D;</a></li>
+<li><a href="#content-dom">&#x51CF;&#x5C11; DOM &#x5143;&#x7D20;&#x6570;&#x91CF;</a></li>
+<li><a href="#content-domains">&#x5212;&#x5206;&#x5185;&#x5BB9;&#x5230;&#x4E0D;&#x540C;&#x57DF;&#x540D;</a></li>
+<li><a href="#content-iframe">&#x5C3D;&#x91CF;&#x51CF;&#x5C11; iframe &#x4F7F;&#x7528;</a></li>
+<li><p><a href="#content-404">&#x907F;&#x514D; 404 &#x9519;&#x8BEF;</a></p>
+</li>
+<li><p><a href="#server">&#x670D;&#x52A1;&#x5668;</a></p>
+</li>
+<li><a href="#server-cdn">&#x4F7F;&#x7528; CDN</a></li>
+<li><a href="#server-cache">&#x6DFB;&#x52A0; Expires &#x6216; Cache-Control &#x54CD;&#x5E94;&#x5934;</a></li>
+<li><a href="#server-gzip">&#x542F;&#x7528; Gzip</a></li>
+<li><a href="#server-etag">&#x914D;&#x7F6E; Etag</a></li>
+<li><a href="#server-flush">&#x5C3D;&#x65E9;&#x8F93;&#x51FA;&#x7F13;&#x51B2;</a></li>
+<li><a href="#server-ajax-get">Ajax &#x8BF7;&#x6C42;&#x4F7F;&#x7528; GET &#x65B9;&#x6CD5;</a></li>
+<li><p><a href="#server-src">&#x907F;&#x514D;&#x56FE;&#x7247; src &#x4E3A;&#x7A7A;</a></p>
+</li>
+<li><p><a href="#cookie">Cookie</a></p>
+</li>
+<li><a href="#cookie-size">&#x51CF;&#x5C11; Cookie &#x5927;&#x5C0F;</a></li>
+<li><p><a href="#cookie-free">&#x9759;&#x6001;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x65E0; Cookie &#x57DF;&#x540D;</a></p>
+</li>
+<li><p><a href="#css">CSS</a></p>
+</li>
+<li><a href="#css-head">&#x628A;&#x6837;&#x5F0F;&#x8868;&#x653E;&#x5728; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span></code> &#x4E2D;</a></li>
+<li><a href="#css-expression">&#x4E0D;&#x8981;&#x4F7F;&#x7528; CSS &#x8868;&#x8FBE;&#x5F0F;</a></li>
+<li><a href="#css-link">&#x4F7F;&#x7528; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span><span class="token punctuation">&gt;</span></span></code> &#x66FF;&#x4EE3; <code>@import</code></a></li>
+<li><p><a href="#css-filter">&#x4E0D;&#x8981;&#x4F7F;&#x7528; filter</a></p>
+</li>
+<li><p><a href="#javascript">JavaScript</a></p>
+</li>
+<li><a href="#javascript-bottom">&#x628A;&#x811A;&#x672C;&#x653E;&#x5728;&#x9875;&#x9762;&#x5E95;&#x90E8;</a></li>
+<li><a href="#javascript-extenal">&#x4F7F;&#x7528;&#x5916;&#x90E8; JavaScript &#x548C; CSS</a></li>
+<li><a href="#javascript-minify">&#x538B;&#x7F29; JavaScript &#x548C; CSS</a></li>
+<li><a href="#javascript-duplicate">&#x79FB;&#x9664;&#x91CD;&#x590D;&#x811A;&#x672C;</a></li>
+<li><a href="#javascript-dom">&#x51CF;&#x5C11; DOM &#x64CD;&#x4F5C;</a></li>
+<li><p><a href="#javascript-event">&#x4F7F;&#x7528;&#x9AD8;&#x6548;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;</a></p>
+</li>
+<li><p><a href="#image">&#x56FE;&#x7247;</a></p>
+</li>
+<li><a href="#image-optimize">&#x4F18;&#x5316;&#x56FE;&#x7247;</a></li>
+<li><a href="#image-sprite">&#x4F18;&#x5316; CSS Sprite</a></li>
+<li><a href="#image-scale">&#x4E0D;&#x8981;&#x5728; HTML &#x4E2D;&#x7F29;&#x653E;&#x56FE;&#x7247;</a></li>
+<li><p><a href="#image-favicon">&#x4F7F;&#x7528;&#x4F53;&#x79EF;&#x5C0F;&#x3001;&#x53EF;&#x7F13;&#x5B58;&#x7684; favicon.ico</a></p>
+</li>
+<li><p><a href="#mobile">&#x79FB;&#x52A8;&#x7AEF;</a></p>
+</li>
+<li><a href="#mobile-25kb">&#x4FDD;&#x6301;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x5C0F;&#x4E8E; 25 KB</a></li>
+<li><a href="#mobile-multipart">&#x6253;&#x5305;&#x5185;&#x5BB9;&#x4E3A;&#x5206;&#x6BB5;&#xFF08;multipart&#xFF09;&#x6587;&#x6863;</a></li>
+</ul>
+<p>&#x524D;&#x7AEF;&#x6027;&#x80FD;&#x7684;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x6307;&#x6807;&#x662F;<strong>&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x65F6;&#x95F4;</strong>&#xFF0C;&#x4E0D;&#x4EC5;&#x4E8B;&#x5173;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x4E5F;&#x662F;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x6392;&#x540D;&#x8003;&#x8651;&#x7684;&#x4E00;&#x4E2A;&#x56E0;&#x7D20;&#x3002;</p>
+<blockquote>
+<ul>
+<li>&#x6765;&#x81EA; Google &#x7684;&#x6570;&#x636E;&#x8868;&#x660E;&#xFF0C;&#x4E00;&#x4E2A;&#x6709; 10 &#x6761;&#x6570;&#x636E; 0.4 &#x79D2;&#x80FD;&#x52A0;&#x8F7D;&#x5B8C;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x53D8;&#x6210; 30 &#x6761;&#x6570;&#x636E; 0.9 &#x79D2;&#x52A0;&#x8F7D;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x6D41;&#x91CF;&#x548C;&#x5E7F;&#x544A;&#x6536;&#x5165;&#x4E0B;&#x964D; 90%&#x3002;</li>
+<li>Google Map &#x9996;&#x9875;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x4ECE; 100KB &#x51CF;&#x5C0F;&#x5230; 70-80KB &#x540E;&#xFF0C;&#x6D41;&#x91CF;&#x5728;&#x7B2C;&#x4E00;&#x5468;&#x6DA8;&#x4E86; 10%&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x4E09;&#x5468;&#x6DA8;&#x4E86; 25%&#x3002;</li>
+<li>&#x4E9A;&#x9A6C;&#x900A;&#x7684;&#x6570;&#x636E;&#x8868;&#x660E;&#xFF1A;&#x52A0;&#x8F7D;&#x65F6;&#x95F4;&#x589E;&#x52A0; 100 &#x6BEB;&#x79D2;&#xFF0C;&#x9500;&#x91CF;&#x5C31;&#x4E0B;&#x964D; 1%&#x3002;</li>
+</ul>
+</blockquote>
+<p>&#x4EE5;&#x4E0A;&#x6570;&#x636E;&#x66F4;&#x8BF4;&#x660E;&#x300C;&#x52A0;&#x8F7D;&#x65F6;&#x95F4;&#x5C31;&#x662F;&#x91D1;&#x94B1;&#x300D;&#xFF0C;&#x524D;&#x7AEF;&#x4F18;&#x5316;&#x4E3B;&#x8981;&#x56F4;&#x7ED5;&#x63D0;&#x9AD8;&#x52A0;&#x8F7D;&#x901F;&#x5EA6;&#x8FDB;&#x884C;&#x3002;</p>
+<h2 id="&#x9875;&#x9762;&#x5185;&#x5BB9;"><a name="&#x9875;&#x9762;&#x5185;&#x5BB9;" class="anchor-navigation-ex-anchor" href="#&#x9875;&#x9762;&#x5185;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x9875;&#x9762;&#x5185;&#x5BB9;</h2>
+<h3 id="&#x51CF;&#x5C11;-http-&#x8BF7;&#x6C42;&#x6570;"><a name="&#x51CF;&#x5C11;-http-&#x8BF7;&#x6C42;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x51CF;&#x5C11;-http-&#x8BF7;&#x6C42;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x51CF;&#x5C11; HTTP &#x8BF7;&#x6C42;&#x6570;</h3>
+<p>Web &#x524D;&#x7AEF; 80% &#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x82B1;&#x5728;&#x56FE;&#x7247;&#x3001;&#x6837;&#x5F0F;&#x3001;&#x811A;&#x672C;&#x7B49;&#x8D44;&#x6E90;&#x4E0B;&#x8F7D;&#x4E0A;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x6BCF;&#x4E2A;&#x57DF;&#x540D;&#x7684;&#x8FDE;&#x63A5;&#x6570;&#x662F;&#x6709;&#x9650;&#x5236;&#x7684;&#xFF0C;&#x51CF;&#x5C11;&#x8BF7;&#x6C42;&#x6B21;&#x6570;&#x662F;&#x7F29;&#x77ED;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x7684;&#x5173;&#x952E;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x7B80;&#x6D01;&#x7684;&#x8BBE;&#x8BA1;&#x51CF;&#x5C11;&#x9875;&#x9762;&#x6240;&#x9700;&#x8D44;&#x6E90;&#xFF0C;&#x8FDB;&#x800C;&#x51CF;&#x5C11; HTTP &#x8BF7;&#x6C42;&#xFF0C;&#x8FD9;&#x662F;&#x6700;&#x76F4;&#x63A5;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x524D;&#x63D0;&#x662F;&#x4F60;&#x7684; Boss&#x3001;&#x8BBE;&#x8BA1;&#x5E08;&#x540C;&#x4E8B;&#x4E0D;&#x6253;&#x6B7B;&#x4F60;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x8FD8;&#x662F;&#x53E6;&#x8F9F;&#x8E4A;&#x5F84;&#x5427;&#xFF1A;</p>
+<p>-</p>
+<p>&#x5408;&#x5E76; JavaScript&#x3001;CSS &#x7B49;&#x6587;&#x4EF6;&#xFF1B;</p>
+<ul>
+<li>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#xFF08;CDN&#xFF09;&#x81EA;&#x52A8;&#x5408;&#x5E76;</li>
+<li>&#x57FA;&#x4E8E; Node.js &#x7684;&#x6587;&#x4EF6;&#x5408;&#x5E76;&#x5DE5;&#x5177;&#x4E00;&#x6293;&#x4E00;&#x5927;&#x628A;</li>
+</ul>
+<p>-</p>
+<p>&#x4F7F;&#x7528;<a href="http://alistapart.com/articles/sprites" target="_blank">CSS Sprite</a>&#xFF1A;&#x5C06;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x901A;&#x8FC7;<code>background-image</code> &#x548C; <code>background-position</code> &#x63A7;&#x5236;&#x663E;&#x793A;&#xFF1B;</p>
+<ul>
+<li><a href="http://www.spritecow.com/" target="_blank">Sprite Cow</a></li>
+<li><a href="http://www.spritebox.net/" target="_blank">Spritebox</a></li>
+</ul>
+<blockquote>
+<p>&#x9010;&#x6B65;&#x88AB; Icon Font &#x548C; SVG Sprite &#x53D6;&#x4EE3;&#x3002;</p>
+</blockquote>
+<p>-</p>
+<p><a href="http://www.w3.org/TR/html401/struct/objects.html#h-13.6" target="_blank">Image Map</a>&#xFF1A;&#x5408;&#x5E76;&#x56FE;&#x7247;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x5750;&#x6807;&#x6620;&#x5C04;&#x4E0D;&#x540C;&#x7684;&#x533A;&#x57DF;&#xFF08;<a href="https://en.wikipedia.org/wiki/The_Club_(dining_club" target="_blank">&#x6F14;&#x793A;</a>&gt;)&#xFF09;&#x3002;</p>
+<blockquote>
+<p>&#x7F3A;&#x70B9;&#xFF1A;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x76F8;&#x8FDE;&#x7684;&#x56FE;&#x7247;&#xFF1B;&#x8BBE;&#x7F6E;&#x5750;&#x6807;&#x8FC7;&#x7A0B;&#x4E4F;&#x5473;&#x4E14;&#x6613;&#x51FA;&#x9519;&#xFF1B;&#x53EF;&#x8BBF;&#x6027;&#x95EE;&#x9898;&#x3002;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x8FC7;&#x65F6;&#x7684;&#x6280;&#x672F;&#x3002;</p>
+</blockquote>
+<p>-</p>
+<p>Inline Assets&#xFF1A;&#x4F7F;&#x7528; <a href="https://en.wikipedia.org/wiki/Data_URI_scheme" target="_blank">Data URI scheme</a> &#x5C06;&#x56FE;&#x7247;&#x5D4C;&#x5165; HTML &#x6216;&#x8005; CSS &#x4E2D;&#xFF1B;&#x6216;&#x8005;&#x5C06; CSS&#x3001;JS&#x3001;&#x56FE;&#x7247;&#x76F4;&#x63A5;&#x5D4C;&#x5165; HTML &#x4E2D;&#x3002;</p>
+<blockquote>
+<p>&#x4F1A;&#x589E;&#x52A0;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x4EA7;&#x751F;&#x6D4F;&#x89C8;&#x5668;&#x517C;&#x5BB9;&#x53CA;&#x5176;&#x4ED6;&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF08;&#x6709;&#x5F85;&#x6574;&#x7406;&#x8865;&#x5145;&#xFF09;&#x3002;</p>
+</blockquote>
+<p><strong>&#x672A;&#x6765;&#x7684;&#x8D8B;&#x52BF;&#x662F;&#x4F7F;&#x7528;&#x5185;&#x5D4C; SVG&#x3002;</strong></p>
+<p>-</p>
+<p><a href="#content-domains">&#x5185;&#x5BB9;&#x5206;&#x7247;</a>&#xFF0C;&#x5C06;&#x8BF7;&#x6C42;&#x5212;&#x5206;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x57DF;&#x540D;&#x4E0A;&#x3002;</p>
+<blockquote>
+<p>HTTP/2 &#x901A;&#x8FC7;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x5927;&#x5E45;&#x964D;&#x4F4E;&#x4E86;&#x591A;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x5F00;&#x9500;&#x3002;&#x901A;&#x8FC7;&#x6570;&#x636E;&#x5206;&#x5E27;&#x5C42;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x53EA;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A; TCP &#x8FDE;&#x63A5;&#xFF0C;&#x5373;&#x53EF;&#x540C;&#x65F6;&#x6536;&#x53D1;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E14;&#xFF0C;&#x8BE5;&#x8FDE;&#x63A5;&#x5728;&#x76F8;&#x5F53;&#x957F;&#x7684;&#x65F6;&#x95F4;&#x5468;&#x671F;&#x5185;&#x4FDD;&#x6301;&#x6253;&#x5F00;&#xFF08;&#x6301;&#x4E45;&#x5316;&#xFF09;&#xFF0C;&#x4EE5;&#x4FBF;&#x590D;&#x7528;&#x3002;</p>
+<p>HTTP/2 &#x7684;&#x65B0;&#x7279;&#x6027;&#x610F;&#x5473;&#x7740;&#x4E0A;&#x8FF0;&#x4F18;&#x5316;&#x5B9E;&#x8DF5;&#x4E0D;&#x518D;&#x9002;&#x7528;&#xFF0C;&#x4F46;&#x8003;&#x8651;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x5BF9; HTTP/2 &#x7684;&#x652F;&#x6301;&#x8986;&#x76D6;&#x7A0B;&#x5EA6;&#xFF0C;&#x8FD8;&#x9700;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x6570;&#x636E;&#x6743;&#x8861;&#x3002;</p>
+</blockquote>
+<h3 id="&#x51CF;&#x5C11;-dns-&#x67E5;&#x8BE2;"><a name="&#x51CF;&#x5C11;-dns-&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x51CF;&#x5C11;-dns-&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x51CF;&#x5C11; DNS &#x67E5;&#x8BE2;</h3>
+<p>&#x7528;&#x6237;&#x8F93;&#x5165; URL &#x4EE5;&#x540E;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x9996;&#x5148;&#x8981;&#x67E5;&#x8BE2;&#x57DF;&#x540D;&#xFF08;hostname&#xFF09;&#x5BF9;&#x5E94;&#x670D;&#x52A1;&#x5668;&#x7684; IP &#x5730;&#x5740;&#xFF0C;&#x4E00;&#x822C;&#x9700;&#x8981;&#x8017;&#x8D39; <strong>20-120 &#x6BEB;&#x79D2;</strong> &#x65F6;&#x95F4;&#x3002;DNS &#x67E5;&#x8BE2;&#x5B8C;&#x6210;&#x4E4B;&#x524D;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x65E0;&#x6CD5;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4E0B;&#x8F7D;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x57FA;&#x4E8E;&#x6027;&#x80FD;&#x8003;&#x8651;&#xFF0C;ISP&#x3001;&#x5C40;&#x57DF;&#x7F51;&#x3001;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x3001;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x4F1A;&#x6709;&#x76F8;&#x5E94;&#x7684; DNS &#x7F13;&#x5B58;&#x673A;&#x5236;&#x3002;</p>
+<ul>
+<li>IE &#x7F13;&#x5B58; 30 &#x5206;&#x949F;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6CE8;&#x518C;&#x8868;&#x4E2D; <code>DnsCacheTimeout</code> &#x9879;&#x8BBE;&#x7F6E;&#xFF1B;</li>
+<li>Firefox &#x6DF7;&#x5B58; 1 &#x5206;&#x949F;&#xFF0C;&#x901A;&#x8FC7; <code>network.dnsCacheExpiration</code> &#x914D;&#x7F6E;&#xFF1B;</li>
+<li>&#xFF08;TODO&#xFF1A;&#x8865;&#x5145;&#x5176;&#x4ED6;&#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;&#x4FE1;&#x606F;&#xFF09;</li>
+</ul>
+<p>&#x9996;&#x6B21;&#x8BBF;&#x95EE;&#x3001;&#x6CA1;&#x6709;&#x76F8;&#x5E94;&#x7684; DNS &#x7F13;&#x5B58;&#x65F6;&#xFF0C;&#x57DF;&#x540D;&#x8D8A;&#x591A;&#xFF0C;&#x67E5;&#x8BE2;&#x65F6;&#x95F4;&#x8D8A;&#x957F;&#x3002;&#x6240;&#x4EE5;&#x5E94;&#x5C3D;&#x91CF;&#x51CF;&#x5C11;&#x57DF;&#x540D;&#x6570;&#x91CF;&#x3002;&#x4F46;&#x57FA;&#x4E8E;&#x5E76;&#x884C;&#x4E0B;&#x8F7D;&#x8003;&#x8651;&#xFF0C;<strong>&#x628A;&#x8D44;&#x6E90;&#x5206;&#x5E03;&#x5230; 2 &#x4E2A;&#x57DF;&#x540D;&#x4E0A;&#xFF08;&#x6700;&#x591A;&#x4E0D;&#x8D85;&#x8FC7; 4 &#x4E2A;&#xFF09;</strong>&#x3002;&#x8FD9;&#x662F;&#x51CF;&#x5C11; DNS &#x67E5;&#x8BE2;&#x540C;&#x65F6;&#x4FDD;&#x8BC1;&#x5E76;&#x884C;&#x4E0B;&#x8F7D;&#x7684;&#x6298;&#x8877;&#x65B9;&#x6848;&#x3002;</p>
+<h3 id="&#x907F;&#x514D;&#x91CD;&#x5B9A;&#x5411;"><a name="&#x907F;&#x514D;&#x91CD;&#x5B9A;&#x5411;" class="anchor-navigation-ex-anchor" href="#&#x907F;&#x514D;&#x91CD;&#x5B9A;&#x5411;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. &#x907F;&#x514D;&#x91CD;&#x5B9A;&#x5411;</h3>
+<p>HTTP &#x91CD;&#x5B9A;&#x5411;&#x901A;&#x8FC7; <code>301</code>/<code>302</code> &#x72B6;&#x6001;&#x7801;&#x5B9E;&#x73B0;&#x3002;</p>
+<pre class="language-"><code>HTTP/1.1 301 Moved Permanently
+Location: http://example.com/newuri
+Content-Type: text/html
+</code></pre><p>&#x5BA2;&#x6237;&#x7AEF;&#x6536;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;&#x91CD;&#x5B9A;&#x5411;&#x54CD;&#x5E94;&#x540E;&#xFF0C;&#x4F1A;&#x6839;&#x636E;&#x54CD;&#x5E94;&#x5934;&#x4E2D; <code>Location</code> &#x7684;&#x5730;&#x5740;&#x518D;&#x6B21;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x3002;&#x91CD;&#x5B9A;&#x5411;&#x4F1A;&#x5F71;&#x54CD;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x591A;&#x6B21;&#x91CD;&#x5B9A;&#x5411;&#x65F6;&#xFF0C;&#x7528;&#x6237;&#x5728;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#x770B;&#x4E0D;&#x5230;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;&#xFF0C;&#x53EA;&#x770B;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x8FDB;&#x5EA6;&#x6761;&#x4E00;&#x76F4;&#x5728;&#x5237;&#x65B0;&#x3002;</p>
+<p>&#x6709;&#x65F6;&#x91CD;&#x5B9A;&#x5411;&#x65E0;&#x6CD5;&#x907F;&#x514D;&#xFF0C;&#x5728;&#x7CDF;&#x7CD5;&#x4E5F;&#x6BD4;&#x629B;&#x51FA; 404 &#x597D;&#x3002;&#x867D;&#x7136;&#x901A;&#x8FC7; <a href="https://en.wikipedia.org/wiki/Meta_refresh" target="_blank">HTML meta refresh</a> &#x548C; JavaScript &#x4E5F;&#x80FD;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x9996;&#x9009; HTTP <code>3xx</code> &#x8DF3;&#x8F6C;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x6D4F;&#x89C8;&#x5668;&#x300C;&#x540E;&#x9000;&#x300D;&#x529F;&#x80FD;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#xFF08;&#x4E5F;&#x5229;&#x4E8E; SEO&#xFF09;&#x3002;</p>
+<ul>
+<li>&#x6700;&#x6D6A;&#x8D39;&#x7684;&#x91CD;&#x5B9A;&#x5411;&#x7ECF;&#x5E38;&#x53D1;&#x751F;&#x3001;&#x800C;&#x4E14;&#x5F88;&#x5BB9;&#x6613;&#x88AB;&#x5FFD;&#x7565;&#xFF1A;URL &#x672B;&#x5C3E;&#x5E94;&#x8BE5;&#x6DFB;&#x52A0; <code>/</code> &#x4F46;&#x672A;&#x6DFB;&#x52A0;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x8BBF;&#x95EE; <code>http://astrology.yahoo.com/astrology</code> &#x5C06;&#x88AB; 301 &#x91CD;&#x5B9A;&#x5411;&#x5230; <code>http://astrology.yahoo.com/astrology/</code>&#xFF08;&#x6CE8;&#x610F;&#x672B;&#x5C3E;&#x7684; <code>/</code>&#xFF09;&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528; Apache&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>Alias</code> &#x6216; <code>mod_rewrite</code> &#x6216; <code>DirectorySlash</code> &#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</li>
+<li>&#x7F51;&#x7AD9;&#x57DF;&#x540D;&#x53D8;&#x66F4;&#xFF1A;CNAME &#x7ED3;&#x5408; <code>Alias</code> &#x6216; <code>mod_rewrite</code> &#x6216;&#x8005;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x5668;&#x7C7B;&#x4F3C;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#x8DF3;&#x8F6C;&#x3002;</li>
+</ul>
+<h3 id="&#x7F13;&#x5B58;-ajax-&#x8BF7;&#x6C42;"><a name="&#x7F13;&#x5B58;-ajax-&#x8BF7;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x7F13;&#x5B58;-ajax-&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. &#x7F13;&#x5B58; Ajax &#x8BF7;&#x6C42;</h3>
+<p>Ajax &#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x3002;&#x4F46;&#x300C;&#x5F02;&#x6B65;&#x300D;&#x4E0D;&#x610F;&#x5473;&#x7740;&#x300C;&#x53CA;&#x65F6;&#x300D;&#xFF0C;&#x4F18;&#x5316; Ajax &#x54CD;&#x5E94;&#x901F;&#x5EA6;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#x4ECD;&#x662F;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x7684;&#x4E3B;&#x9898;&#x3002;</p>
+<p>&#x6700;&#x91CD;&#x8981;&#x7684;&#x7684;&#x4F18;&#x5316;&#x65B9;&#x5F0F;&#x662F;<strong>&#x7F13;&#x5B58;&#x54CD;&#x5E94;&#x7ED3;&#x679C;</strong>&#xFF0C;&#x8BE6;&#x89C1; <a href="#server-cache">&#x6DFB;&#x52A0; Expires &#x6216; Cache-Control &#x54CD;&#x5E94;&#x5934;</a>&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x89C4;&#x5219;&#x4E5F;&#x5173;&#x4E4E; Ajax &#x54CD;&#x5E94;&#x901F;&#x5EA6;&#xFF1A;</p>
+<ul>
+<li><a href="#server-gzip">&#x542F;&#x7528; Gzip</a></li>
+<li><a href="#content-dns">&#x51CF;&#x5C11; DNS &#x67E5;&#x8BE2;</a></li>
+<li><a href="#javascript-minify">&#x538B;&#x7F29; JavaScript &#x548C; CSS</a></li>
+<li><a href="#content-redirect">&#x907F;&#x514D;&#x91CD;&#x5B9A;&#x5411;</a></li>
+<li><a href="#server-etag">&#x914D;&#x7F6E; Etag</a></li>
+</ul>
+<h3 id="&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;"><a name="&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. &#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;</h3>
+<p><strong>&#x9875;&#x9762;&#x521D;&#x59CB;&#x52A0;&#x8F7D;&#x65F6;&#x54EA;&#x4E9B;&#x5185;&#x5BB9;&#x662F;&#x7EDD;&#x5BF9;&#x5FC5;&#x9700;&#x7684;</strong>&#xFF1F;&#x4E0D;&#x5728;&#x7B54;&#x6848;&#x4E4B;&#x5217;&#x7684;&#x8D44;&#x6E90;&#x90FD;&#x53EF;&#x4EE5;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x3002;&#x6BD4;&#x5982;&#xFF1A;</p>
+<ul>
+<li>&#x975E;&#x9996;&#x5C4F;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x3001;&#x6837;&#x5F0F;&#x3001;&#x811A;&#x672C;&#x3001;&#x56FE;&#x7247;&#x7B49;&#xFF1B;</li>
+<li>&#x7528;&#x6237;&#x4EA4;&#x4E92;&#x65F6;&#x624D;&#x4F1A;&#x663E;&#x793A;&#x7684;&#x5185;&#x5BB9;&#x3002;</li>
+</ul>
+<p>&#x9075;&#x5FAA;&#x300C;&#x6E10;&#x8FDB;&#x589E;&#x5F3A;&#x300D;&#x7406;&#x5FF5;&#x5F00;&#x53D1;&#x7684;&#x7F51;&#x7AD9;&#xFF1A;JavaScript &#x7528;&#x4E8E;&#x589E;&#x5F3A;&#x7528;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x4F46;&#x6CA1;&#x6709;&#xFF08;&#x4E0D;&#x652F;&#x6301;&#xFF09; JavaScript &#x4E5F;&#x80FD;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#xFF0C;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D; JavaScript&#x3002;</p>
+<blockquote>
+<p><strong>&#x5EF6;&#x8FDF;&#x6E32;&#x67D3;</strong></p>
+<p>&#x5C06;&#x9996;&#x5C4F;&#x4EE5;&#x5916;&#x7684; HTML &#x653E;&#x5728;&#x4E0D;&#x6E32;&#x67D3;&#x7684;&#x5143;&#x7D20;&#x4E2D;&#xFF0C;&#x5982;&#x9690;&#x85CF;&#x7684; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span><span class="token punctuation">&gt;</span></span></code>&#xFF0C;&#x6216;&#x8005; <code>type</code> &#x5C5E;&#x6027;&#x4E3A;&#x975E;&#x6267;&#x884C;&#x811A;&#x672C;&#x7684; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span></code> &#x6807;&#x7B7E;&#x4E2D;&#xFF0C;&#x51CF;&#x5C11;&#x521D;&#x59CB;&#x6E32;&#x67D3;&#x7684; DOM &#x5143;&#x7D20;&#x6570;&#x91CF;&#xFF0C;&#x63D0;&#x9AD8;&#x901F;&#x5EA6;&#x3002;&#x7B49;&#x9996;&#x5C4F;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x6216;&#x8005;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x518D;&#x53BB;&#x6E32;&#x67D3;&#x5269;&#x4F59;&#x7684;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x3002;</p>
+</blockquote>
+<h3 id="&#x9884;&#x5148;&#x52A0;&#x8F7D;"><a name="&#x9884;&#x5148;&#x52A0;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#&#x9884;&#x5148;&#x52A0;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.6. &#x9884;&#x5148;&#x52A0;&#x8F7D;</h3>
+<p>&#x9884;&#x5148;&#x52A0;&#x8F7D;&#x5229;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x7A7A;&#x95F2;&#x65F6;&#x95F4;&#x8BF7;&#x6C42;&#x5C06;&#x6765;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x4EE5;&#x4FBF;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x4E0B;&#x4E00;&#x9875;&#x9762;&#x65F6;&#x66F4;&#x5FEB;&#x5730;&#x54CD;&#x5E94;&#x3002;</p>
+<p>-</p>
+<p><strong>&#x65E0;&#x6761;&#x4EF6;&#x9884;&#x5148;&#x52A0;&#x8F7D;</strong>&#xFF1A;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#xFF08;<code>load</code>&#xFF09;&#x540E;&#xFF0C;&#x9A6C;&#x4E0A;&#x83B7;&#x53D6;&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x3002;&#x4EE5; google.com &#x4E3A;&#x4F8B;&#xFF0C;&#x9996;&#x9875;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#x4F1A;&#x7ACB;&#x5373;&#x4E0B;&#x8F7D;&#x4E00;&#x4E2A; Sprite &#x56FE;&#x7247;&#xFF0C;&#x6B64;&#x56FE;&#x9996;&#x9875;&#x4E0D;&#x9700;&#x8981;&#xFF0C;&#x4F46;&#x662F;&#x641C;&#x7D22;&#x7ED3;&#x679C;&#x9875;&#x8981;&#x7528;&#x5230;&#x3002;</p>
+<p>-</p>
+<p><strong>&#x6709;&#x6761;&#x4EF6;&#x9884;&#x5148;&#x52A0;&#x8F7D;</strong>&#xFF1A;&#x6839;&#x636E;&#x7528;&#x6237;&#x884C;&#x4E3A;&#x9884;&#x5224;&#x7528;&#x6237;&#x53BB;&#x5411;&#xFF0C;&#x9884;&#x8F7D;&#x76F8;&#x5173;&#x8D44;&#x6E90;&#x3002;&#x6BD4;&#x5982; search.yahoo.com &#x5F00;&#x59CB;&#x8F93;&#x5165;&#x65F6;&#x4F1A;&#x6709;&#x989D;&#x5916;&#x7684;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x3002;</p>
+<blockquote>
+<p>Chrome &#x7B49;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5730;&#x5740;&#x680F;&#x4E5F;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x673A;&#x5236;&#x3002;</p>
+</blockquote>
+<p>-</p>
+<p><strong>&#x6709;&#x300C;&#x9634;&#x8C0B;&#x300D;&#x7684;&#x9884;&#x5148;&#x52A0;&#x8F7D;</strong>&#xFF1A;&#x9875;&#x9762;&#x5373;&#x5C06;&#x4E0A;&#x7EBF;&#x65B0;&#x7248;&#x524D;&#x9884;&#x5148;&#x52A0;&#x8F7D;&#x65B0;&#x7248;&#x5185;&#x5BB9;&#x3002;&#x7F51;&#x7AD9;&#x6539;&#x7248;&#x540E;&#x7531;&#x4E8E;&#x7F13;&#x5B58;&#x3001;&#x4F7F;&#x7528;&#x4E60;&#x60EF;&#x7B49;&#x539F;&#x56E0;&#xFF0C;&#x4F1A;&#x6709;&#x65E7;&#x7248;&#x7684;&#x7F51;&#x7AD9;&#x66F4;&#x5FEB;&#x66F4;&#x6D41;&#x7545;&#x7684;&#x53CD;&#x9988;&#x3002;&#x4E3A;&#x7F13;&#x89E3;&#x8FD9;&#x4E00;&#x95EE;&#x9898;&#xFF0C;&#x5728;&#x65B0;&#x7248;&#x4E0A;&#x7EBF;&#x4E4B;&#x524D;&#xFF0C;&#x65E7;&#x7248;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x7A7A;&#x95F2;&#x63D0;&#x524D;&#x52A0;&#x8F7D;&#x4E00;&#x4E9B;&#x65B0;&#x7248;&#x7684;&#x8D44;&#x6E90;&#x7F13;&#x5B58;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x4EE5;&#x4FBF;&#x65B0;&#x7248;&#x6B63;&#x5F0F;&#x4E0A;&#x7EBF;&#x540E;&#x66F4;&#x5FEB;&#x7684;&#x8F7D;&#x5165;&#xFF08;&#x597D;&#x4E00;&#x4E2A;&#x300C;&#x5FC3;&#x673A;&#x733F;&#x300D;:scream:&#xFF09;&#x3002;</p>
+<blockquote>
+<p>&#x300C;&#x53CC;&#x5341;&#x4E00;&#x300D;&#x3001;&#x300C;&#x9ED1;&#x4E94;&#x300D;&#x8FD9;&#x7C7B;&#x4FC3;&#x9500;&#x65E5;&#x6765;&#x4E34;&#x4E4B;&#x524D;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x9884;&#x5148;&#x4E0B;&#x8F7D;&#x4E00;&#x4E9B;&#x76F8;&#x5173;&#x8D44;&#x6E90;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#xFF08;&#x6D4F;&#x89C8;&#x5668;&#x3001;App &#x7B49;&#xFF09;&#xFF0C;&#x6709;&#x6548;&#x5229;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;&#x548C;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;&#x964D;&#x4F4E;&#x6D3B;&#x52A8;&#x5F53;&#x65E5;&#x8BF7;&#x6C42;&#x538B;&#x529B;&#xFF0C;&#x63D0;&#x9AD8;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x3002;</p>
+<p>TODO: Prefetch &#x76F8;&#x5173;&#x7EC6;&#x8282;</p>
+</blockquote>
+<ul>
+<li><a href="https://www.w3.org/TR/resource-hints/" target="_blank">Resource Hints Spec</a></li>
+</ul>
+<h3 id="&#x51CF;&#x5C11;-dom-&#x5143;&#x7D20;&#x6570;&#x91CF;"><a name="&#x51CF;&#x5C11;-dom-&#x5143;&#x7D20;&#x6570;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x51CF;&#x5C11;-dom-&#x5143;&#x7D20;&#x6570;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.7. &#x51CF;&#x5C11; DOM &#x5143;&#x7D20;&#x6570;&#x91CF;</h3>
+<p>&#x590D;&#x6742;&#x7684;&#x9875;&#x9762;&#x4E0D;&#x4EC5;&#x4E0B;&#x8F7D;&#x7684;&#x5B57;&#x8282;&#x66F4;&#x591A;&#xFF0C;JavaScript DOM &#x64CD;&#x4F5C;&#x4E5F;&#x66F4;&#x6162;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x540C;&#x662F;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x5668;&#xFF0C;500 &#x4E2A;&#x5143;&#x7D20;&#x548C; 5000 &#x4E2A;&#x5143;&#x7D20;&#x7684;&#x9875;&#x9762;&#x901F;&#x5EA6;&#x4E0A;&#x4F1A;&#x6709;&#x5F88;&#x5927;&#x533A;&#x522B;&#x3002;</p>
+<p>&#x4ECE;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x89D2;&#x5EA6;&#x8003;&#x8651;&#x79FB;&#x9664;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x6807;&#x8BB0;&#xFF1A;</p>
+<ul>
+<li>&#x662F;&#x5426;&#x8FD8;&#x5728;&#x4F7F;&#x7528;&#x8868;&#x683C;&#x5E03;&#x5C40;&#xFF1F;</li>
+<li>&#x585E;&#x8FDB;&#x53BB;&#x66F4;&#x591A;&#x7684; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span></code> &#x4EC5;&#x4E3A;&#x4E86;&#x5904;&#x7406;&#x5E03;&#x5C40;&#x95EE;&#x9898;&#xFF1F;&#x4E5F;&#x8BB8;&#x6709;&#x66F4;&#x597D;&#x3001;&#x66F4;&#x8BED;&#x4E49;&#x5316;&#x7684;&#x6807;&#x8BB0;&#x3002;</li>
+<li>&#x80FD;&#x901A;&#x8FC7;&#x4F2A;&#x5143;&#x7D20;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5C31;&#x6CA1;&#x5FC5;&#x8981;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x6E05;&#x9664;&#x6D6E;&#x52A8;&#x3002;</li>
+</ul>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x51FA;&#x9875;&#x9762;&#x4E2D;&#x6709;&#x591A;&#x5C11; DOM &#x5143;&#x7D20;&#xFF1A;</p>
+<pre class="language-"><code>document.getElementsByTagName(&apos;*&apos;).length;
+</code></pre><p>&#x5BF9;&#x6BD4;&#x6807;&#x8BB0;&#x826F;&#x597D;&#x7684;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x770B;&#x770B;&#x5DEE;&#x8DDD;&#x662F;&#x591A;&#x5C11;&#x3002;</p>
+<blockquote>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x4F7F;&#x7528;&#x8868;&#x683C;&#x5E03;&#x5C40;&#xFF1F;</p>
+<ul>
+<li>&#x66F4;&#x591A;&#x7684;&#x6807;&#x7B7E;&#xFF0C;&#x589E;&#x52A0;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF1B;</li>
+<li>&#x4E0D;&#x6613;&#x7EF4;&#x62A4;&#xFF0C;&#x65E0;&#x6CD5;&#x9002;&#x5E94;&#x54CD;&#x5E94;&#x5F0F;&#x8BBE;&#x8BA1;&#xFF1B;</li>
+<li><strong>&#x6027;&#x80FD;&#x8003;&#x91CF;</strong>&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x8868;&#x683C;&#x5E03;&#x5C40;&#x7B97;&#x6CD5;&#x4F1A;&#x4EA7;&#x751F;&#x5927;&#x91CF;&#x91CD;&#x7ED8;&#xFF08;&#x53C2;&#x89C1;<a href="https://csspod.com/table-width-algorithms/" target="_blank">&#x8868;&#x683C;&#x5E03;&#x5C40;&#x7B97;&#x6CD5;</a>&#xFF09;&#x3002;</li>
+</ul>
+</blockquote>
+<h3 id="&#x5212;&#x5206;&#x5185;&#x5BB9;&#x5230;&#x4E0D;&#x540C;&#x57DF;&#x540D;"><a name="&#x5212;&#x5206;&#x5185;&#x5BB9;&#x5230;&#x4E0D;&#x540C;&#x57DF;&#x540D;" class="anchor-navigation-ex-anchor" href="#&#x5212;&#x5206;&#x5185;&#x5BB9;&#x5230;&#x4E0D;&#x540C;&#x57DF;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.8. &#x5212;&#x5206;&#x5185;&#x5BB9;&#x5230;&#x4E0D;&#x540C;&#x57DF;&#x540D;</h3>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x4E00;&#x822C;&#x4F1A;&#x9650;&#x5236;&#x6BCF;&#x4E2A;&#x57DF;&#x7684;&#x5E76;&#x884C;&#x7EBF;&#x7A0B;&#xFF08;&#x4E00;&#x822C;&#x4E3A; 6 &#x4E2A;&#xFF0C;&#x751A;&#x81F3;&#x66F4;&#x5C11;&#xFF09;&#xFF0C;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x57DF;&#x540D;&#x53EF;&#x4EE5;&#x6700;&#x5927;&#x5316;&#x4E0B;&#x8F7D;&#x7EBF;&#x7A0B;&#xFF0C;&#x4F46;&#x6CE8;&#x610F;&#x4FDD;&#x6301;&#x5728; 2-4 &#x4E2A;&#x57DF;&#x540D;&#x5185;&#xFF0C;&#x4EE5;&#x907F;&#x514D; DNS &#x67E5;&#x8BE2;&#x635F;&#x8017;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x52A8;&#x6001;&#x5185;&#x5BB9;&#x653E;&#x5728; <code>csspod.com</code> &#x4E0A;&#xFF0C;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x653E;&#x5728; <code>static.csspod.com</code> &#x4E0A;&#x3002;&#x8FD9;&#x6837;&#x8FD8;&#x53EF;&#x4EE5;&#x7981;&#x7528;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x57DF;&#x4E0B;&#x7684; Cookie&#xFF0C;&#x51CF;&#x5C11;&#x6570;&#x636E;&#x4F20;&#x8F93;&#xFF0C;&#x8BE6;&#x89C1; <a href="#cookie-free">Cookie &#x4F18;&#x5316;</a>&#x3002;</p>
+<p>&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x53C2;&#x8003; <a href="http://yuiblog.com/blog/2007/04/11/performance-research-part-4/" target="_blank">Maximizing Parallel Downloads in the Carpool Lane</a></p>
+<h3 id="&#x5C3D;&#x91CF;&#x51CF;&#x5C11;-iframe-&#x4F7F;&#x7528;"><a name="&#x5C3D;&#x91CF;&#x51CF;&#x5C11;-iframe-&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5C3D;&#x91CF;&#x51CF;&#x5C11;-iframe-&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.9. &#x5C3D;&#x91CF;&#x51CF;&#x5C11; iframe &#x4F7F;&#x7528;</h3>
+<p>&#x4F7F;&#x7528; iframe &#x53EF;&#x4EE5;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x5D4C;&#x5165; HTML &#x6587;&#x6863;&#xFF0C;&#x4F46;&#x6709;&#x5229;&#x6709;&#x5F0A;&#x3002;</p>
+<p><strong><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span><span class="token punctuation">&gt;</span></span></code> &#x4F18;&#x70B9;</strong>&#xFF1A;</p>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x52A0;&#x8F7D;&#x901F;&#x5EA6;&#x8F83;&#x6162;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#xFF0C;&#x5982;&#x5E7F;&#x544A;&#x3001;&#x5FBD;&#x7AE0;&#xFF1B;</li>
+<li>&#x53EF;&#x7528;&#x4F5C;<a href="http://www.html5rocks.com/en/tutorials/security/sandboxed-iframes/" target="_blank">&#x5B89;&#x5168;&#x6C99;&#x7BB1;</a>&#xFF1B;</li>
+<li>&#x53EF;&#x4EE5;&#x5E76;&#x884C;&#x4E0B;&#x8F7D;&#x811A;&#x672C;&#x3002;</li>
+</ul>
+<p><strong><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span><span class="token punctuation">&gt;</span></span> &#x7F3A;&#x70B9;</code></strong>&#xFF1A;</p>
+<p>-</p>
+<p>&#x52A0;&#x8F7D;&#x4EE3;&#x4EF7;&#x6602;&#x8D35;&#xFF0C;&#x5373;&#x4F7F;&#x662F;&#x7A7A;&#x7684;&#x9875;&#x9762;&#xFF1B;</p>
+<p>-</p>
+<p>&#x963B;&#x585E;&#x9875;&#x9762; <code>load</code> &#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#xFF1B;</p>
+<blockquote>
+<p>Iframe &#x5B8C;&#x5168;&#x52A0;&#x8F7D;&#x4EE5;&#x540E;&#xFF0C;&#x7236;&#x9875;&#x9762;&#x624D;&#x4F1A;&#x89E6;&#x53D1; <code>load</code> &#x4E8B;&#x4EF6;&#x3002; Safari&#x3001;Chrome &#x4E2D;&#x901A;&#x8FC7; JavaScript &#x52A8;&#x6001;&#x8BBE;&#x7F6E; iframe <code>src</code> &#x53EF;&#x4EE5;&#x907F;&#x514D;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+</blockquote>
+<p>-</p>
+<p>&#x7F3A;&#x4E4F;&#x8BED;&#x4E49;&#x3002;</p>
+<h3 id="&#x907F;&#x514D;-404-&#x9519;&#x8BEF;"><a name="&#x907F;&#x514D;-404-&#x9519;&#x8BEF;" class="anchor-navigation-ex-anchor" href="#&#x907F;&#x514D;-404-&#x9519;&#x8BEF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.10. &#x907F;&#x514D; 404 &#x9519;&#x8BEF;</h3>
+<p>HTTP &#x8BF7;&#x6C42;&#x5F88;&#x6602;&#x8D35;&#xFF0C;&#x8FD4;&#x56DE;&#x65E0;&#x6548;&#x7684;&#x54CD;&#x5E94;&#xFF08;&#x5982; 404 &#x672A;&#x627E;&#x5230;&#xFF09;&#x5B8C;&#x5168;&#x6CA1;&#x5FC5;&#x8981;&#xFF0C;&#x964D;&#x4F4E;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x800C;&#x4E14;&#x6BEB;&#x65E0;&#x76CA;&#x5904;&#x3002;</p>
+<p>&#x4E00;&#x4E9B;&#x7F51;&#x7AD9;&#x8BBE;&#x8BA1;&#x5F88;&#x9177;&#x70AB;&#x3001;&#x6709;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#x7684; 404 &#x9875;&#x9762;&#xFF0C;&#x6709;&#x52A9;&#x4E8E;&#x63D0;&#x9AD8;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x4F46;&#x8FD8;&#x662F;&#x6D6A;&#x8D39;&#x670D;&#x52A1;&#x5668;&#x8D44;&#x6E90;&#x3002;&#x5C24;&#x5176;&#x7CDF;&#x7CD5;&#x7684;&#x662F;&#x5916;&#x90E8;&#x811A;&#x672C;&#x8FD4;&#x56DE; 404&#xFF0C;&#x4E0D;&#x4EC5;&#x963B;&#x585E;&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x4E0B;&#x8F7D;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x8FD8;&#x4F1A;&#x5C1D;&#x8BD5;&#x628A; 404 &#x9875;&#x9762;&#x5185;&#x5BB9;&#x5F53;&#x4F5C; JavaScript &#x89E3;&#x6790;&#xFF0C;&#x6D88;&#x8017;&#x66F4;&#x591A;&#x8D44;&#x6E90;&#x3002;</p>
+<h3 id="&#x8865;&#x5145;&#x89C4;&#x5219;&#xFF1A;"><a name="&#x8865;&#x5145;&#x89C4;&#x5219;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x8865;&#x5145;&#x89C4;&#x5219;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.11. &#x8865;&#x5145;&#x89C4;&#x5219;&#xFF1A;</h3>
+<ul>
+<li><strong>&#x5B9A;&#x4E49;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x5E76;&#x653E;&#x5728; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span></code> &#x9876;&#x90E8;</strong>&#x3002;&#x5927;&#x591A;&#x6570;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x6682;&#x505C;&#x9875;&#x9762;&#x6E32;&#x67D3;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x5B57;&#x7B26;&#x96C6;&#x5B9A;&#x4E49;&#x3002;</li>
+</ul>
+<h2 id="&#x670D;&#x52A1;&#x5668;"><a name="&#x670D;&#x52A1;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x670D;&#x52A1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x670D;&#x52A1;&#x5668;</h2>
+<p>&#x670D;&#x52A1;&#x5668;&#x76F8;&#x5173;&#x4F18;&#x5316;&#x8BBE;&#x7F6E;&#x53EF;&#x53C2;&#x8003; H5BP &#x76F8;&#x5173;&#x9879;&#x76EE;&#xFF1A;</p>
+<ul>
+<li><a href="https://github.com/h5bp/server-configs-nginx" target="_blank">Nginx HTTP server boilerplate configs</a></li>
+<li><a href="https://github.com/h5bp/server-configs-apache" target="_blank">Apache HTTP server boilerplate configs</a></li>
+<li><a href="https://github.com/h5bp/server-configs-iis" target="_blank">IIS Web.Config Boilerplates</a></li>
+</ul>
+<h3 id="&#x4F7F;&#x7528;-cdn"><a name="&#x4F7F;&#x7528;-cdn" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;-cdn"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x4F7F;&#x7528; CDN</h3>
+<p>&#x7F51;&#x7AD9; 80-90% &#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x6D88;&#x8017;&#x5728;&#x8D44;&#x6E90;&#x4E0B;&#x8F7D;&#x4E0A;&#xFF0C;<strong>&#x51CF;&#x5C11;&#x8D44;&#x6E90;&#x4E0B;&#x8F7D;&#x65F6;&#x95F4;&#x662F;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x7684;&#x9EC4;&#x91D1;&#x53D1;&#x5219;</strong>&#x3002;</p>
+<p>&#x76F8;&#x6BD4;&#x5206;&#x5E03;&#x5F0F;&#x67B6;&#x6784;&#x7684;&#x590D;&#x6742;&#x548C;&#x5DE8;&#x5927;&#x6295;&#x5165;&#xFF0C;&#x9759;&#x6001;&#x5185;&#x5BB9;&#x5206;&#x53D1;&#x7F51;&#x7EDC;&#xFF08;CDN&#xFF09;&#x53EF;&#x4EE5;&#x4EE5;&#x8F83;&#x4F4E;&#x7684;&#x6295;&#x5165;&#xFF0C;&#x83B7;&#x5F97;&#x52A0;&#x8F7D;&#x901F;&#x5EA6;&#x6709;&#x6548;&#x63D0;&#x5347;&#x3002;</p>
+<h3 id="&#x6DFB;&#x52A0;-expires-&#x6216;-cache-control-&#x54CD;&#x5E94;&#x5934;"><a name="&#x6DFB;&#x52A0;-expires-&#x6216;-cache-control-&#x54CD;&#x5E94;&#x5934;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;-expires-&#x6216;-cache-control-&#x54CD;&#x5E94;&#x5934;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. &#x6DFB;&#x52A0; Expires &#x6216; Cache-Control &#x54CD;&#x5E94;&#x5934;</h3>
+<ul>
+<li><strong>&#x9759;&#x6001;&#x5185;&#x5BB9;</strong>&#xFF1A;&#x5C06; <code>Expires</code> &#x54CD;&#x5E94;&#x5934;&#x8BBE;&#x7F6E;&#x4E3A;&#x5C06;&#x6765;&#x5F88;&#x8FDC;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5B9E;&#x73B0;&#x300C;&#x6C38;&#x4E0D;&#x8FC7;&#x671F;&#x300D;&#x7B56;&#x7565;&#xFF1B;</li>
+<li><strong>&#x52A8;&#x6001;&#x5185;&#x5BB9;</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x5408;&#x9002;&#x7684; <code>Cache-Control</code> &#x54CD;&#x5E94;&#x5934;&#xFF0C;&#x8BA9;&#x6D4F;&#x89C8;&#x5668;&#x6709;&#x6761;&#x4EF6;&#x5730;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#x3002;</li>
+</ul>
+<blockquote>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control" target="_blank">Cache-Control</a> &#x5934;&#x5728; HTTP/1.1 &#x89C4;&#x8303;&#x4E2D;&#x5B9A;&#x4E49;&#xFF0C;&#x53D6;&#x4EE3;&#x4E86;&#x4E4B;&#x524D;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x54CD;&#x5E94;&#x7F13;&#x5B58;&#x7B56;&#x7565;&#x7684;&#x5934;&#xFF08;&#x4F8B;&#x5982; Expires&#x3001;Pragma&#xFF09;&#x3002;&#x5F53;&#x524D;&#x7684;&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x652F;&#x6301; Cache-Control&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x4F7F;&#x7528;&#x5B83;&#x5C31;&#x591F;&#x4E86;&#x3002;</p>
+<p>&#x9274;&#x4E8E;&#x9759;&#x6001;&#x5185;&#x5BB9;&#x548C;&#x52A8;&#x6001;&#x5185;&#x5BB9;&#x4E0D;&#x540C;&#x7684;&#x7F13;&#x5B58;&#x7B56;&#x7565;&#xFF0C;&#x5B9E;&#x8DF5;&#x4E2D;&#x4E00;&#x822C;&#x4F1A;&#x628A;&#x4E8C;&#x8005;&#x90E8;&#x7F72;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF08;&#x57DF;&#x540D;&#xFF09;&#x4EE5;&#x65B9;&#x4FBF;&#x7BA1;&#x7406;&#x3002;</p>
+</blockquote>
+<p>&#x53C2;&#x8003;&#x94FE;&#x63A5;&#xFF1A;</p>
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn" target="_blank">HTTP &#x7F13;&#x5B58; | Web Fundamentals - Google Developers</a></li>
+<li><a href="https://github.com/h5bp/server-configs" target="_blank">H5BP - Server Configs</a></li>
+</ul>
+<h3 id="&#x542F;&#x7528;-gzip"><a name="&#x542F;&#x7528;-gzip" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x7528;-gzip"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. &#x542F;&#x7528; Gzip</h3>
+<p>Gzip &#x538B;&#x7F29;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x51CF;&#x5C11; 70% &#x7684;&#x54CD;&#x5E94;&#x5927;&#x5C0F;&#xFF0C;&#x5BF9;&#x67D0;&#x4E9B;&#x6587;&#x4EF6;&#x66F4;&#x53EF;&#x80FD;&#x9AD8;&#x8FBE; 90%&#xFF0C;&#x6BD4; Deflate &#x66F4;&#x9AD8;&#x6548;&#x3002;&#x4E3B;&#x6D41; Web &#x670D;&#x52A1;&#x5668;&#x90FD;&#x6709;&#x76F8;&#x5E94;&#x6A21;&#x5757;&#xFF0C;&#x800C;&#x4E14;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x6D4F;&#x89C8;&#x5668;&#x652F;&#x6301; gzip &#x89E3;&#x7801;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5E94;&#x8BE5;&#x5BF9; HTML&#x3001;CSS&#x3001;JS&#x3001;XML&#x3001;JSON &#x7B49;&#x6587;&#x672C;&#x7C7B;&#x578B;&#x7684;&#x5185;&#x5BB9;&#x542F;&#x7528;&#x538B;&#x7F29;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF0C;&#x56FE;&#x7247;&#x548C; PDF &#x6587;&#x4EF6;&#x4E0D;&#x8981;&#x4F7F;&#x7528; gzip&#x3002;&#x5B83;&#x4EEC;&#x672C;&#x8EAB;&#x5DF2;&#x7ECF;&#x538B;&#x7F29;&#x8FC7;&#xFF0C;&#x518D;&#x4F7F;&#x7528; gzip &#x538B;&#x7F29;&#x4E0D;&#x4EC5;&#x6D6A;&#x8D39; CPU &#x8D44;&#x6E90;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x53EF;&#x80FD;&#x589E;&#x52A0;&#x6587;&#x4EF6;&#x4F53;&#x79EF;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4E0D;&#x652F;&#x6301;&#x7684; Gzip &#x7684;&#x7528;&#x6237;&#x4EE3;&#x7406;&#xFF0C;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E; Vary &#x54CD;&#x5E94;&#x5934;&#xFF0C;&#x8FD4;&#x56DE;&#x4E3A;&#x672A;&#x538B;&#x7F29;&#x7684;&#x6570;&#x636E;&#xFF1A;</p>
+<pre class="language-"><code>Vary: *
+</code></pre><h3 id="&#x914D;&#x7F6E;-etag"><a name="&#x914D;&#x7F6E;-etag" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;-etag"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.4. &#x914D;&#x7F6E; Etag</h3>
+<p>Etag &#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x7248;&#x672C;&#x6807;&#x8BC6;&#xFF0C;&#x65B9;&#x4FBF;&#x670D;&#x52A1;&#x5668;&#x5224;&#x65AD;&#x8BF7;&#x6C42;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5426;&#x6709;&#x66F4;&#x65B0;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5C31;&#x54CD;&#x5E94; <code>304</code>&#xFF0C;&#x907F;&#x514D;&#x91CD;&#x65B0;&#x4E0B;&#x8F7D;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x542F;&#x7528; Etag &#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x5176;&#x4ED6;&#x95EE;&#x9898;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x6839;&#x636E;&#x5177;&#x4F53;&#x60C5;&#x51B5;&#x505A;&#x5224;&#x65AD;&#x3002;&#xFF08;TODO&#xFF1A;&#x8865;&#x5145;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#xFF09;</p>
+<h3 id="&#x5C3D;&#x65E9;&#x8F93;&#x51FA;&#xFF08;flush&#xFF09;&#x7F13;&#x51B2;"><a name="&#x5C3D;&#x65E9;&#x8F93;&#x51FA;&#xFF08;flush&#xFF09;&#x7F13;&#x51B2;" class="anchor-navigation-ex-anchor" href="#&#x5C3D;&#x65E9;&#x8F93;&#x51FA;&#xFF08;flush&#xFF09;&#x7F13;&#x51B2;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.5. &#x5C3D;&#x65E9;&#x8F93;&#x51FA;&#xFF08;flush&#xFF09;&#x7F13;&#x51B2;</h3>
+<p>&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x901A;&#x5E38;&#x9700;&#x8981;&#x82B1;&#x8D39; 200 ~ 500 &#x6BEB;&#x79D2;&#x6765;&#x7EC4;&#x5408; HTML &#x9875;&#x9762;&#x3002;&#x5728;&#x6B64;&#x671F;&#x95F4;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x5904;&#x4E8E;&#x7A7A;&#x95F2;&#x3001;&#x7B49;&#x5F85;&#x6570;&#x636E;&#x72B6;&#x6001;&#x3002;&#x4F7F;&#x7528; PHP &#x4E2D;&#x7684; <a href="http://php.net/flush" target="_blank">flush()</a> &#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x90E8;&#x5206;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x597D;&#x7684; HTML &#x5230;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x4EE5;&#x4FBF;&#x670D;&#x52A1;&#x5668;&#x8FD8;&#x5728;&#x5FD9;&#x4E8E;&#x5904;&#x7406;&#x5269;&#x4F59;&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x4EE5;&#x63D0;&#x524D;&#x5F00;&#x59CB;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x5728; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span></code> &#x4E4B;&#x540E;&#x8F93;&#x51FA;&#x4E00;&#x6B21;&#x7F13;&#x51B2;&#xFF0C;HTML head &#x4E00;&#x822C;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x751F;&#x6210;&#xFF0C;&#x5148;&#x53D1;&#x9001;&#x4EE5;&#x4FBF;&#x6D4F;&#x89C8;&#x5668;&#x5F00;&#x59CB;&#x83B7;&#x53D6; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span></code> &#x91CC;&#x5F15;&#x7528;&#x7684; CSS &#x7B49;&#x8D44;&#x6E90;&#x3002;</p>
+<p>Example:</p>
+<pre class="language-"><code><span class="token comment">&lt;!-- css, js --&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span><span class="token prolog">&lt;?php flush(); ?&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span><span class="token comment">&lt;!-- content --&gt;</span>
+</code></pre><h3 id="ajax-&#x8BF7;&#x6C42;&#x4F7F;&#x7528;-get-&#x65B9;&#x6CD5;"><a name="ajax-&#x8BF7;&#x6C42;&#x4F7F;&#x7528;-get-&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#ajax-&#x8BF7;&#x6C42;&#x4F7F;&#x7528;-get-&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.6. Ajax &#x8BF7;&#x6C42;&#x4F7F;&#x7528; GET &#x65B9;&#x6CD5;</h3>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x6267;&#x884C; XMLHttpRequest POST &#x8BF7;&#x6C42;&#x65F6;&#x5206;&#x6210;&#x4E24;&#x6B65;&#xFF0C;&#x5148;&#x53D1;&#x9001; Header&#xFF0C;&#x518D;&#x53D1;&#x9001;&#x6570;&#x636E;&#x3002;&#x800C; GET &#x53EA;&#x4F7F;&#x7528;&#x4E00;&#x4E2A; TCP &#x6570;&#x636E;&#x5305;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5;&#x9996;&#x9009; GET &#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x6839;&#x636E; <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html" target="_blank">HTTP &#x89C4;&#x8303;</a>&#xFF0C;GET &#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;POST &#x5219;&#x7528;&#x4E8E;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5; Ajax &#x8BF7;&#x6C42;&#x6570;&#x636E;&#x65F6;&#x4F7F;&#x7528; GET &#x66F4;&#x7B26;&#x5408;&#x89C4;&#x8303;&#xFF08;<a href="http://www.w3schools.com/tags/ref_httpmethods.asp" target="_blank">GET &#x548C; POST &#x5BF9;&#x6BD4;</a>&#xFF09;&#x3002;</p>
+<p>IE &#x4E2D;&#x6700;&#x5927; URL &#x957F;&#x5EA6;&#x4E3A; 2K&#xFF0C;&#x5982;&#x679C;&#x8D85;&#x51FA; 2K&#xFF0C;&#x5219;&#x9700;&#x8981;&#x8003;&#x8651;&#x4F7F;&#x7528; POST &#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="&#x907F;&#x514D;&#x56FE;&#x7247;-src-&#x4E3A;&#x7A7A;"><a name="&#x907F;&#x514D;&#x56FE;&#x7247;-src-&#x4E3A;&#x7A7A;" class="anchor-navigation-ex-anchor" href="#&#x907F;&#x514D;&#x56FE;&#x7247;-src-&#x4E3A;&#x7A7A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.7. &#x907F;&#x514D;&#x56FE;&#x7247; src &#x4E3A;&#x7A7A;</h3>
+<p>&#x56FE;&#x7247; <code>src</code> &#x5C5E;&#x6027;&#x503C;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x53EF;&#x80FD;&#x4EE5;&#x4E0B;&#x9762;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;&#x51FA;&#x73B0;&#xFF1A;</p>
+<p>HTML:</p>
+<pre class="language-"><code>&lt;imgsrc=&quot;&quot;/&gt;
+</code></pre><p>JavaScript&#xFF1A;</p>
+<pre class="language-"><code>var img =newImage();
+img.src =&quot;&quot;;
+</code></pre><p>&#x867D;&#x7136; <code>src</code> &#x5C5E;&#x6027;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4F46;&#x6D4F;&#x89C8;&#x5668;&#x4ECD;&#x7136;&#x4F1A;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x8D77;&#x4E00;&#x4E2A; HTTP &#x8BF7;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>IE &#x5411;&#x9875;&#x9762;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#xFF1B;</li>
+<li>Safari&#x3001;Chrome&#x3001;Firefox &#x5411;&#x9875;&#x9762;&#x672C;&#x8EAB;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#xFF1B;</li>
+<li>Opera &#x4E0D;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x4EE5;&#x4E0A;&#x6570;&#x636E;&#x8F83;&#x8001;&#xFF0C;&#x5F53;&#x4E0B;&#x4E3B;&#x6D41;&#x7248;&#x672C;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x6539;&#x53D8;&#x3002;</p>
+</blockquote>
+<p>&#x7A7A; <code>src</code> &#x4EA7;&#x751F;&#x8BF7;&#x6C42;&#x7684;&#x540E;&#x679C;&#x4E0D;&#x5BB9;&#x5C0F;&#x89D1;&#xFF1A;</p>
+<ul>
+<li>&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x9020;&#x6210;&#x610F;&#x5916;&#x7684;&#x6D41;&#x91CF;&#x8D1F;&#x62C5;&#xFF0C;&#x5C24;&#x5176;&#x65F6;&#x65E5; PV &#x8F83;&#x5927;&#x65F6;&#xFF1B;</li>
+<li>&#x6D6A;&#x8D39;&#x670D;&#x52A1;&#x5668;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#xFF1B;</li>
+<li>&#x53EF;&#x80FD;&#x4EA7;&#x751F;&#x62A5;&#x9519;&#x3002;</li>
+</ul>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x5982;&#x6B64;&#x5B9E;&#x73B0;&#x4E5F;&#x662F;&#x6839;&#x636E; <a href="https://www.ietf.org/rfc/rfc3986.txt" target="_blank">RFC 3986 - Uniform Resource Identifiers</a>&#xFF0C;&#x5F53;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A; URI &#x51FA;&#x73B0;&#x65F6;&#xFF0C;&#x88AB;&#x5F53;&#x6210;&#x76F8;&#x5BF9; URI&#xFF0C;&#x5177;&#x4F53;&#x7B97;&#x6CD5;&#x53C2;&#x89C1;&#x89C4;&#x8303; 5.2 &#x8282;&#x3002;</p>
+<p><strong>&#x53C2;&#x8003;&#x94FE;&#x63A5;</strong>&#xFF1A;</p>
+<ul>
+<li><a href="https://www.nczonline.net/blog/2009/11/30/empty-image-src-can-destroy-your-site/" target="_blank">Empty image src can destroy your site</a></li>
+</ul>
+<blockquote>
+<p>&#x7A7A;&#x7684; <code>href</code> &#x5C5E;&#x6027;&#x4E5F;&#x5B58;&#x5728;&#x7C7B;&#x4F3C;&#x95EE;&#x9898;&#x3002;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x7A7A;&#x94FE;&#x63A5;&#x65F6;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4E5F;&#x4F1A;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001; HTTP &#x8BF7;&#x6C42;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; JavaScript &#x963B;&#x6B62;&#x7A7A;&#x94FE;&#x63A5;&#x7684;&#x9ED8;&#x8BA4;&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+</blockquote>
+<h2 id="cookie"><a name="cookie" class="anchor-navigation-ex-anchor" href="#cookie"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. Cookie</h2>
+<h3 id="&#x51CF;&#x5C11;-cookie-&#x5927;&#x5C0F;"><a name="&#x51CF;&#x5C11;-cookie-&#x5927;&#x5C0F;" class="anchor-navigation-ex-anchor" href="#&#x51CF;&#x5C11;-cookie-&#x5927;&#x5C0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x51CF;&#x5C11; Cookie &#x5927;&#x5C0F;</h3>
+<p>Cookie &#x88AB;&#x7528;&#x4E8E;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#x3001;&#x4E2A;&#x6027;&#x5316;&#x8BBE;&#x7F6E;&#x7B49;&#x8BF8;&#x591A;&#x7528;&#x9014;&#x3002;Cookie &#x901A;&#x8FC7; HTTP &#x5934;&#x5728;&#x670D;&#x52A1;&#x5668;&#x548C;&#x6D4F;&#x89C8;&#x5668;&#x95F4;&#x6765;&#x56DE;&#x4F20;&#x9001;&#xFF0C;&#x51CF;&#x5C11; Cookie &#x5927;&#x5C0F;&#x53EF;&#x4EE5;&#x964D;&#x4F4E;&#x5176;&#x5BF9;&#x54CD;&#x5E94;&#x901F;&#x5EA6;&#x7684;&#x5F71;&#x54CD;&#x3002;</p>
+<ul>
+<li>&#x53BB;&#x9664;&#x4E0D;&#x5FC5;&#x8981;&#x7684; Cookie&#xFF1B;</li>
+<li>&#x5C3D;&#x91CF;&#x538B;&#x7F29; Cookie &#x5927;&#x5C0F;&#xFF1B;</li>
+<li>&#x6CE8;&#x610F;&#x8BBE;&#x7F6E; Cookie &#x7684; domain &#x7EA7;&#x522B;&#xFF0C;&#x5982;&#x65E0;&#x5FC5;&#x8981;&#xFF0C;&#x4E0D;&#x8981;&#x5F71;&#x54CD;&#x5230; sub-domain&#xFF1B;</li>
+<li>&#x8BBE;&#x7F6E;&#x5408;&#x9002;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x3002;</li>
+</ul>
+<p>&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x53C2;&#x8003; <a href="http://yuiblog.com/blog/2007/03/01/performance-research-part-3/" target="_blank">When the Cookie Crumbles</a>&#x3002;</p>
+<blockquote>
+<p>HTTP/2 &#x9996;&#x90E8;&#x538B;&#x7F29;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x4F7F;&#x7528;&#x300C;&#x9996;&#x90E8;&#x8868;&#x300D;&#x6765;&#x8DDF;&#x8E2A;&#x548C;&#x5B58;&#x50A8;&#x4E4B;&#x524D;&#x53D1;&#x9001;&#x7684;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x5BF9;&#x4E8E;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x518D;&#x968F;&#x6BCF;&#x6B21;&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;&#x53D1;&#x9001;&#x3002;</p>
+</blockquote>
+<h3 id="&#x9759;&#x6001;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x65E0;-cookie-&#x57DF;&#x540D;"><a name="&#x9759;&#x6001;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x65E0;-cookie-&#x57DF;&#x540D;" class="anchor-navigation-ex-anchor" href="#&#x9759;&#x6001;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x65E0;-cookie-&#x57DF;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. &#x9759;&#x6001;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x65E0; Cookie &#x57DF;&#x540D;</h3>
+<p>&#x9759;&#x6001;&#x8D44;&#x6E90;&#x4E00;&#x822C;&#x65E0;&#x9700;&#x4F7F;&#x7528; Cookie&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x4EEC;&#x653E;&#x5728;&#x4F7F;&#x7528;&#x4E8C;&#x7EA7;&#x57DF;&#x540D;&#x6216;&#x8005;&#x4E13;&#x95E8;&#x57DF;&#x540D;&#x7684;&#x65E0; Cookie &#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x964D;&#x4F4E; Cookie &#x4F20;&#x9001;&#x7684;&#x9020;&#x6210;&#x7684;&#x6D41;&#x91CF;&#x6D6A;&#x8D39;&#xFF0C;&#x63D0;&#x9AD8;&#x54CD;&#x5E94;&#x901F;&#x5EA6;&#x3002;</p>
+<h2 id="css"><a name="css" class="anchor-navigation-ex-anchor" href="#css"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. CSS</h2>
+<h3 id="&#x628A;&#x6837;&#x5F0F;&#x8868;&#x653E;&#x5728;-head-&#x4E2D;"><a name="&#x628A;&#x6837;&#x5F0F;&#x8868;&#x653E;&#x5728;-head-&#x4E2D;" class="anchor-navigation-ex-anchor" href="#&#x628A;&#x6837;&#x5F0F;&#x8868;&#x653E;&#x5728;-head-&#x4E2D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. &#x628A;&#x6837;&#x5F0F;&#x8868;&#x653E;&#x5728; &lt;head&gt; &#x4E2D;</h3>
+<p>&#x628A;&#x6837;&#x5F0F;&#x8868;&#x653E;&#x5728; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span></code> &#x4E2D;&#x53EF;&#x4EE5;&#x8BA9;&#x9875;&#x9762;&#x6E10;&#x8FDB;&#x6E32;&#x67D3;&#xFF0C;&#x5C3D;&#x65E9;&#x5448;&#x73B0;&#x89C6;&#x89C9;&#x53CD;&#x9988;&#xFF0C;&#x7ED9;&#x7528;&#x6237;&#x52A0;&#x8F7D;&#x901F;&#x5EA6;&#x5F88;&#x5FEB;&#x7684;&#x611F;&#x89C9;&#x3002;</p>
+<p>&#x8FD9;&#x5BF9;&#x5185;&#x5BB9;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x9875;&#x9762;&#x5C24;&#x4E3A;&#x91CD;&#x8981;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5148;&#x67E5;&#x770B;&#x5DF2;&#x7ECF;&#x4E0B;&#x8F7D;&#x6E32;&#x67D3;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76EF;&#x7740;&#x767D;&#x5C4F;&#x7B49;&#x5F85;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x628A;&#x6837;&#x5F0F;&#x8868;&#x653E;&#x5728;&#x9875;&#x9762;&#x5E95;&#x90E8;&#xFF0C;&#x4E00;&#x4E9B;&#x6D4F;&#x89C8;&#x5668;&#x4E3A;&#x51CF;&#x5C11;&#x91CD;&#x7ED8;&#xFF0C;&#x4F1A;&#x5728; CSS &#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#x624D;&#x6E32;&#x67D3;&#x9875;&#x9762;&#xFF0C;&#x7528;&#x6237;&#x53EA;&#x80FD;&#x5BF9;&#x7740;&#x767D;&#x5C4F;&#x5E72;&#x77AA;&#x773C;&#xFF0C;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x6781;&#x5DEE;&#x3002;</p>
+<h3 id="&#x4E0D;&#x8981;&#x4F7F;&#x7528;-css-&#x8868;&#x8FBE;&#x5F0F;"><a name="&#x4E0D;&#x8981;&#x4F7F;&#x7528;-css-&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x4E0D;&#x8981;&#x4F7F;&#x7528;-css-&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. &#x4E0D;&#x8981;&#x4F7F;&#x7528; CSS &#x8868;&#x8FBE;&#x5F0F;</h3>
+<p>CSS &#x8868;&#x8FBE;&#x5F0F;&#x53EF;&#x4EE5;&#x5728; CSS &#x91CC;&#x6267;&#x884C; JavaScript&#xFF0C;&#x4EC5; IE5-IE7 &#x652F;&#x6301;&#xFF0C;IE8 &#x6807;&#x51C6;&#x6A21;&#x5F0F;&#x5DF2;&#x7ECF;&#x5E9F;&#x5F03;&#x3002;</p>
+<p>CSS &#x8868;&#x8FBE;&#x5F0F;&#x8D85;&#x51FA;&#x9884;&#x671F;&#x7684;&#x9891;&#x7E41;&#x6267;&#x884C;&#xFF0C;&#x9875;&#x9762;&#x6EDA;&#x52A8;&#x3001;&#x9F20;&#x6807;&#x79FB;&#x52A8;&#x65F6;&#x90FD;&#x4F1A;&#x4E0D;&#x65AD;&#x6267;&#x884C;&#xFF0C;&#x5E26;&#x6765;&#x5F88;&#x5927;&#x7684;&#x6027;&#x80FD;&#x635F;&#x8017;&#x3002;</p>
+<blockquote>
+<p>IE7 &#x53CA;&#x66F4;&#x4F4E;&#x7248;&#x672C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x5DF2;&#x7ECF;&#x9010;&#x6E10;&#x6210;&#x4E3A;&#x5386;&#x53F2;&#xFF0C;&#x5FD8;&#x8BB0;&#x5B83;&#x5427;&#x3002;</p>
+</blockquote>
+<h3 id="&#x4F7F;&#x7528;-link-&#x66FF;&#x4EE3;-import"><a name="&#x4F7F;&#x7528;-link-&#x66FF;&#x4EE3;-import" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;-link-&#x66FF;&#x4EE3;-import"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.3. &#x4F7F;&#x7528; &lt;link&gt; &#x66FF;&#x4EE3; @import</h3>
+<p>&#x5BF9;&#x4E8E; IE &#x67D0;&#x4E9B;&#x7248;&#x672C;&#xFF0C;<code>@import</code> &#x7684;&#x884C;&#x4E3A;&#x548C; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span><span class="token punctuation">&gt;</span></span></code> &#x653E;&#x5728;&#x9875;&#x9762;&#x5E95;&#x90E8;&#x4E00;&#x6837;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4E0D;&#x8981;&#x7528;&#x5B83;&#x3002;</p>
+<h3 id="&#x4E0D;&#x8981;&#x4F7F;&#x7528;-filter"><a name="&#x4E0D;&#x8981;&#x4F7F;&#x7528;-filter" class="anchor-navigation-ex-anchor" href="#&#x4E0D;&#x8981;&#x4F7F;&#x7528;-filter"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.4. &#x4E0D;&#x8981;&#x4F7F;&#x7528; filter</h3>
+<p><code>AlphaImageLoader</code> &#x4E3A; IE5.5-IE8 &#x4E13;&#x6709;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x548C; CSS &#x8868;&#x8FBE;&#x5F0F;&#x4E00;&#x6837;&#xFF0C;&#x653E;&#x8FDB;&#x535A;&#x7269;&#x9986;&#x5427;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<p>&#x8FD9;&#x91CC;&#x6240;&#x8BF4;&#x7684;&#x4E0D;&#x662F; <a href="https://www.w3.org/TR/filter-effects-1/" target="_blank">CSS3 Filter</a>&#xFF0C;&#x53C2;&#x8003;&#x6587;&#x7AE0; <a href="http://www.html5rocks.com/en/tutorials/filters/understanding-css/" target="_blank">Understanding CSS Filter Effects</a></p>
+</blockquote>
+<h2 id="javascript"><a name="javascript" class="anchor-navigation-ex-anchor" href="#javascript"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. JavaScript</h2>
+<h3 id="&#x628A;&#x811A;&#x672C;&#x653E;&#x5728;&#x9875;&#x9762;&#x5E95;&#x90E8;"><a name="&#x628A;&#x811A;&#x672C;&#x653E;&#x5728;&#x9875;&#x9762;&#x5E95;&#x90E8;" class="anchor-navigation-ex-anchor" href="#&#x628A;&#x811A;&#x672C;&#x653E;&#x5728;&#x9875;&#x9762;&#x5E95;&#x90E8;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.1. &#x628A;&#x811A;&#x672C;&#x653E;&#x5728;&#x9875;&#x9762;&#x5E95;&#x90E8;</h3>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x4E0B;&#x8F7D;&#x811A;&#x672C;&#x65F6;&#xFF0C;&#x4F1A;&#x963B;&#x585E;&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x5E76;&#x884C;&#x4E0B;&#x8F7D;&#xFF0C;&#x5373;&#x4F7F;&#x662F;&#x6765;&#x81EA;&#x4E0D;&#x540C;&#x57DF;&#x540D;&#x7684;&#x8D44;&#x6E90;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6700;&#x597D;&#x5C06;&#x811A;&#x672C;&#x653E;&#x5728;&#x5E95;&#x90E8;&#xFF0C;&#x4EE5;&#x63D0;&#x9AD8;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x901F;&#x5EA6;&#x3002;</p>
+<p>&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x573A;&#x666F;&#x65E0;&#x6CD5;&#x5C06;&#x811A;&#x672C;&#x653E;&#x5230;&#x9875;&#x9762;&#x5E95;&#x90E8;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span></code> &#x7684;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#xFF1A;</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement#defer_property" target="_blank"><code>defer</code> &#x5C5E;&#x6027;</a>&#xFF1B;</li>
+<li>HTML5 &#x65B0;&#x589E;&#x7684; <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement#async_property" target="_blank"><code>async</code> &#x5C5E;&#x6027;</a>&#x3002;</li>
+</ul>
+<h3 id="&#x4F7F;&#x7528;&#x5916;&#x90E8;-javascript-&#x548C;-css"><a name="&#x4F7F;&#x7528;&#x5916;&#x90E8;-javascript-&#x548C;-css" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x5916;&#x90E8;-javascript-&#x548C;-css"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.2. &#x4F7F;&#x7528;&#x5916;&#x90E8; JavaScript &#x548C; CSS</h3>
+<p>&#x5916;&#x90E8; JavaScript &#x548C; CSS &#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x88AB;&#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;&#xFF0C;&#x5728;&#x4E0D;&#x540C;&#x9875;&#x9762;&#x95F4;&#x91CD;&#x7528;&#xFF0C;&#x4E5F;&#x80FD;&#x964D;&#x4F4E;&#x9875;&#x9762;&#x5927;&#x5C0F;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x5B9E;&#x9645;&#x4E2D;&#x4E5F;&#x9700;&#x8981;&#x8003;&#x8651;&#x4EE3;&#x7801;&#x7684;&#x91CD;&#x7528;&#x7A0B;&#x5EA6;&#x3002;&#x5982;&#x679C;&#x4EC5;&#x4EC5;&#x662F;&#x67D0;&#x4E2A;&#x9875;&#x9762;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x5185;&#x5D4C;&#x5728;&#x9875;&#x9762;&#x4E2D;&#xFF0C;&#x51CF;&#x5C11; HTTP &#x8BF7;&#x6C42;&#x6570;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x9996;&#x9875;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#xFF0C;&#x9884;&#x5148;&#x52A0;&#x8F7D;&#x5B50;&#x9875;&#x9762;&#x7684;&#x8D44;&#x6E90;&#x3002;</p>
+<h3 id="&#x538B;&#x7F29;-javascript-&#x548C;-css"><a name="&#x538B;&#x7F29;-javascript-&#x548C;-css" class="anchor-navigation-ex-anchor" href="#&#x538B;&#x7F29;-javascript-&#x548C;-css"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.3. &#x538B;&#x7F29; JavaScript &#x548C; CSS</h3>
+<p>&#x538B;&#x7F29;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x79FB;&#x9664;&#x975E;&#x529F;&#x80FD;&#x6027;&#x7684;&#x5B57;&#x7B26;&#xFF08;&#x6CE8;&#x91CA;&#x3001;&#x7A7A;&#x683C;&#x3001;&#x7A7A;&#x884C;&#x7B49;&#xFF09;&#xFF0C;&#x51CF;&#x5C11;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x63D0;&#x9AD8;&#x8F7D;&#x5165;&#x901F;&#x5EA6;&#x3002;</p>
+<blockquote>
+<p>&#x5F97;&#x76CA;&#x4E8E; Node.js &#x7684;&#x6D41;&#x884C;&#xFF0C;&#x5F00;&#x6E90;&#x793E;&#x533A;&#x6D8C;&#x73B0;&#x51FA;&#x8BB8;&#x591A;&#x9AD8;&#x6548;&#x3001;&#x6613;&#x7528;&#x7684;&#x524D;&#x7AEF;&#x4F18;&#x5316;&#x5DE5;&#x5177;&#xFF0C;JavaScript &#x548C; CSS &#x538B;&#x7F29;&#x7C7B;&#x7684;&#xFF0C;&#x4E0D;&#x6562;&#x8BF4;&#x591A;&#x5982;&#x725B;&#x6BDB;&#xFF0C;&#x591A;&#x5165;&#x9E21;&#x6BDB;&#x5012;&#x662F;&#x4E00;&#x70B9;&#x4E0D;&#x5938;&#x5F20;&#xFF0C;&#x5982; <a href="[https:/github.com/mishoo/UglifyJS2](https:/github.com/mishoo/UglifyJS2">UglifyJS 2</a>&gt;)&#x3001;<a href="https://www.npmjs.com/package/csso" target="_blank">csso</a>&#x3001;<a href="https://www.npmjs.com/package/cssnano" target="_blank">cssnano</a> &#x7B49;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5185;&#x5D4C;&#x7684; CSS &#x548C; JavaScript&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="https://www.npmjs.com/package/htmlmin" target="_blank">htmlmin</a> &#x7B49;&#x5DE5;&#x5177;&#x538B;&#x7F29;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x9879;&#x76EE;&#x90FD;&#x6709; Gulp&#x3001;Webpack &#x7B49;&#x6D41;&#x884C;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#x7684;&#x914D;&#x5957;&#x7248;&#x672C;&#x3002;</p>
+</blockquote>
+<h3 id="&#x79FB;&#x9664;&#x91CD;&#x590D;&#x811A;&#x672C;"><a name="&#x79FB;&#x9664;&#x91CD;&#x590D;&#x811A;&#x672C;" class="anchor-navigation-ex-anchor" href="#&#x79FB;&#x9664;&#x91CD;&#x590D;&#x811A;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.4. &#x79FB;&#x9664;&#x91CD;&#x590D;&#x811A;&#x672C;</h3>
+<p>&#x91CD;&#x590D;&#x7684;&#x811A;&#x672C;&#x4E0D;&#x4EC5;&#x4EA7;&#x751F;&#x4E0D;&#x5FC5;&#x8981;&#x7684; HTTP &#x8BF7;&#x6C42;&#xFF0C;&#x800C;&#x4E14;&#x91CD;&#x590D;&#x89E3;&#x6790;&#x6267;&#x884C;&#x6D6A;&#x8D39;&#x65F6;&#x95F4;&#x548C;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#x3002;</p>
+<h3 id="&#x51CF;&#x5C11;-dom-&#x64CD;&#x4F5C;"><a name="&#x51CF;&#x5C11;-dom-&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x51CF;&#x5C11;-dom-&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.5. &#x51CF;&#x5C11; DOM &#x64CD;&#x4F5C;</h3>
+<p>JavaScript &#x64CD;&#x4F5C; DOM &#x5F88;&#x6162;&#xFF0C;&#x5C24;&#x5176;&#x662F; DOM &#x8282;&#x70B9;&#x5F88;&#x591A;&#x65F6;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x65F6;&#x5E94;&#x8BE5;&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x7F13;&#x5B58;&#x5DF2;&#x7ECF;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x5143;&#x7D20;&#xFF1B;</li>
+<li>&#x4F7F;&#x7528; <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment" target="_blank">DocumentFragment</a> &#x6682;&#x5B58; DOM&#xFF0C;&#x6574;&#x7406;&#x597D;&#x4EE5;&#x540E;&#x518D;&#x63D2;&#x5165; DOM &#x6811;&#xFF1B;</li>
+<li>&#x64CD;&#x4F5C; className&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x591A;&#x6B21;&#x8BFB;&#x5199; <code>style</code>&#xFF1B;</li>
+<li>&#x907F;&#x514D;&#x4F7F;&#x7528; JavaScript &#x4FEE;&#x590D;&#x5E03;&#x5C40;&#x3002;</li>
+</ul>
+<h3 id="&#x4F7F;&#x7528;&#x9AD8;&#x6548;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;"><a name="&#x4F7F;&#x7528;&#x9AD8;&#x6548;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x9AD8;&#x6548;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.6. &#x4F7F;&#x7528;&#x9AD8;&#x6548;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;</h3>
+<ul>
+<li>&#x51CF;&#x5C11;&#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x5982;&#x901A;&#x8FC7;&#x4E8B;&#x4EF6;&#x59D4;&#x6258;&#xFF1B;</li>
+<li>&#x5C3D;&#x65E9;&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#xFF0C;&#x5728; <code>DOMContentLoaded</code> &#x5373;&#x53EF;&#x8FDB;&#x884C;&#xFF0C;&#x4E0D;&#x7528;&#x7B49;&#x5230; <code>load</code> &#x4EE5;&#x540E;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x5BF9;&#x4E8E; <code>resize</code>&#x3001;<code>scroll</code> &#x7B49;&#x89E6;&#x53D1;&#x9891;&#x7387;&#x6781;&#x9AD8;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x5E94;&#x8BE5;&#x901A;&#x8FC7; debounce &#x7B49;&#x673A;&#x5236;&#x964D;&#x4F4E;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x9891;&#x7387;&#x3002;</p>
+<p>TODO: &#x8865;&#x5145;&#x76F8;&#x5173;&#x5185;&#x5BB9; <a href="http://demo.nimius.net/debounce_throttle/" target="_blank">http://demo.nimius.net/debounce_throttle/</a></p>
+</blockquote>
+<h2 id="&#x56FE;&#x7247;"><a name="&#x56FE;&#x7247;" class="anchor-navigation-ex-anchor" href="#&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x56FE;&#x7247;</h2>
+<h3 id="&#x4F18;&#x5316;&#x56FE;&#x7247;"><a name="&#x4F18;&#x5316;&#x56FE;&#x7247;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1. &#x4F18;&#x5316;&#x56FE;&#x7247;</h3>
+<blockquote>
+<p>YDN <a href="https://developer.yahoo.com/performance/rules.html#opt_images" target="_blank">&#x5217;&#x51FA;&#x7684;&#x76F8;&#x5173;&#x5DE5;&#x5177;</a> &#x7F3A;&#x4E4F;&#x6613;&#x7528;&#x6027;&#xFF0C;&#x5EFA;&#x8BAE;&#x53C2;&#x8003;&#x4EE5;&#x4E0B;&#x5DE5;&#x5177;&#x3002;</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/imagemin/imagemin" target="_blank">imagemin</a></li>
+<li><a href="https://imageoptim.com/mac" target="_blank">ImageOptim</a></li>
+</ul>
+<blockquote>
+<p>TODO:</p>
+<ul>
+<li>PNG &#x7EC8;&#x6781;&#x4F18;&#x5316;&#xFF1B;</li>
+<li>Webp &#x76F8;&#x5173;&#x5185;&#x5BB9;&#xFF1B;</li>
+<li>SVG &#x76F8;&#x5173;&#x5185;&#x5BB9;&#x3002;</li>
+</ul>
+</blockquote>
+<p><strong>PNG &#x7EC8;&#x6781;&#x4F18;&#x5316;&#xFF1A;</strong></p>
+<ul>
+<li><a href="http://www.queness.com/post/2507/most-effective-method-to-reduce-and-optimize-png-images" target="_blank">Most Effective Method to Reduce and Optimize PNG Images</a></li>
+<li><a href="https://www.smashingmagazine.com/2009/07/clever-png-optimization-techniques/" target="_blank">Clever PNG Optimization Techniques</a></li>
+</ul>
+<h3 id="&#x4F18;&#x5316;-css-sprite"><a name="&#x4F18;&#x5316;-css-sprite" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;-css-sprite"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.2. &#x4F18;&#x5316; CSS Sprite</h3>
+<ul>
+<li>&#x6C34;&#x5E73;&#x6392;&#x5217; Sprite &#x4E2D;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x5782;&#x76F4;&#x6392;&#x5217;&#x4F1A;&#x589E;&#x52A0;&#x56FE;&#x7247;&#x5927;&#x5C0F;&#xFF1B;</li>
+<li>Spirite &#x4E2D;&#x628A;&#x989C;&#x8272;&#x8F83;&#x8FD1;&#x7684;&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x53EF;&#x4EE5;&#x964D;&#x4F4E;&#x989C;&#x8272;&#x6570;&#xFF0C;&#x7406;&#x60F3;&#x72B6;&#x51B5;&#x662F;&#x4F4E;&#x4E8E; 256 &#x8272;&#x4EE5;&#x9002;&#x7528; PNG8 &#x683C;&#x5F0F;&#xFF1B;</li>
+<li>&#x4E0D;&#x8981;&#x5728; Spirite &#x7684;&#x56FE;&#x50CF;&#x4E2D;&#x95F4;&#x7559;&#x6709;&#x8F83;&#x5927;&#x7A7A;&#x9699;&#x3002;&#x51CF;&#x5C11;&#x7A7A;&#x9699;&#x867D;&#x7136;&#x4E0D;&#x592A;&#x5F71;&#x54CD;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x964D;&#x4F4E;&#x7528;&#x6237;&#x4EE3;&#x7406;&#x628A;&#x56FE;&#x7247;&#x89E3;&#x538B;&#x4E3A;&#x50CF;&#x7D20;&#x56FE;&#x7684;&#x5185;&#x5B58;&#x6D88;&#x8017;&#xFF0C;&#x5BF9;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x66F4;&#x53CB;&#x597D;&#x3002;</li>
+</ul>
+<h3 id="&#x4E0D;&#x8981;&#x5728;-html-&#x4E2D;&#x7F29;&#x653E;&#x56FE;&#x7247;"><a name="&#x4E0D;&#x8981;&#x5728;-html-&#x4E2D;&#x7F29;&#x653E;&#x56FE;&#x7247;" class="anchor-navigation-ex-anchor" href="#&#x4E0D;&#x8981;&#x5728;-html-&#x4E2D;&#x7F29;&#x653E;&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.3. &#x4E0D;&#x8981;&#x5728; HTML &#x4E2D;&#x7F29;&#x653E;&#x56FE;&#x7247;</h3>
+<p>&#x4E0D;&#x8981;&#x4F7F;&#x7528; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span><span class="token punctuation">&gt;</span></span></code> &#x7684; <code>width</code>&#x3001;<code>height</code> &#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x5230;&#x5C0F;&#x56FE;&#x7247;&#xFF0C;&#x5C31;&#x4F7F;&#x7528;&#x76F8;&#x5E94;&#x5927;&#x5C0F;&#x7684;&#x56FE;&#x7247;&#x3002;</p>
+<blockquote>
+<p>&#x5F88;&#x591A; CMS &#x548C; CDN &#x90FD;&#x63D0;&#x4F9B;&#x56FE;&#x7247;&#x88C1;&#x5207;&#x529F;&#x80FD;&#x3002;</p>
+</blockquote>
+<h3 id="&#x4F7F;&#x7528;&#x4F53;&#x79EF;&#x5C0F;&#x3001;&#x53EF;&#x7F13;&#x5B58;&#x7684;-faviconico"><a name="&#x4F7F;&#x7528;&#x4F53;&#x79EF;&#x5C0F;&#x3001;&#x53EF;&#x7F13;&#x5B58;&#x7684;-faviconico" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x4F53;&#x79EF;&#x5C0F;&#x3001;&#x53EF;&#x7F13;&#x5B58;&#x7684;-faviconico"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.4. &#x4F7F;&#x7528;&#x4F53;&#x79EF;&#x5C0F;&#x3001;&#x53EF;&#x7F13;&#x5B58;&#x7684; favicon.ico</h3>
+<p>Favicon.ico &#x4E00;&#x822C;&#x5B58;&#x653E;&#x5728;&#x7F51;&#x7AD9;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x8BBE;&#x7F6E;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x4F1A;&#x5C1D;&#x8BD5;&#x8BF7;&#x6C42;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x786E;&#x4FDD;&#x8FD9;&#x4E2A;&#x56FE;&#x6807;&#xFF1A;</p>
+<ul>
+<li>&#x5B58;&#x5728;&#xFF08;&#x907F;&#x514D; 404&#xFF09;&#xFF1B;</li>
+<li>&#x5C3D;&#x91CF;&#x5C0F;&#xFF0C;&#x6700;&#x597D;&#x5C0F;&#x4E8E; 1K&#xFF1B;</li>
+<li>&#x8BBE;&#x7F6E;&#x8F83;&#x957F;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x5BF9;&#x4E8E;&#x8F83;&#x65B0;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; PNG &#x683C;&#x5F0F;&#x7684; favicon&#x3002;</p>
+</blockquote>
+<p><strong>&#x53C2;&#x8003;&#x94FE;&#x63A5;&#xFF1A;</strong></p>
+<ul>
+<li><a href="https://css-tricks.com/favicon-quiz/" target="_blank">Favicons, Touch Icons, Tile Icons, etc. Which Do You Need?</a></li>
+</ul>
+<h3 id="&#x56FE;&#x7247;&#x76F8;&#x5173;&#x8865;&#x5145;"><a name="&#x56FE;&#x7247;&#x76F8;&#x5173;&#x8865;&#x5145;" class="anchor-navigation-ex-anchor" href="#&#x56FE;&#x7247;&#x76F8;&#x5173;&#x8865;&#x5145;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.5. &#x56FE;&#x7247;&#x76F8;&#x5173;&#x8865;&#x5145;</h3>
+<blockquote>
+<p>&#x8BBE;&#x7F6E;&#x56FE;&#x7247;&#x7684;&#x5BBD;&#x548C;&#x9AD8;&#xFF0C;&#x4EE5;&#x514D;&#x6D4F;&#x89C8;&#x5668;&#x6309;&#x7167;&#x300C;&#x731C;&#x300D;&#x7684;&#x5BBD;&#x9AD8;&#x7ED9;&#x56FE;&#x7247;&#x4FDD;&#x7559;&#x7684;&#x533A;&#x57DF;&#x548C;&#x5B9E;&#x9645;&#x5BBD;&#x9AD8;&#x5DEE;&#x5F02;&#xFF0C;&#x4EA7;&#x751F;&#x91CD;&#x7ED8;&#x3002;</p>
+</blockquote>
+<h2 id="&#x79FB;&#x52A8;&#x7AEF;"><a name="&#x79FB;&#x52A8;&#x7AEF;" class="anchor-navigation-ex-anchor" href="#&#x79FB;&#x52A8;&#x7AEF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x79FB;&#x52A8;&#x7AEF;</h2>
+<blockquote>
+<p>&#x79FB;&#x52A8;&#x7AEF;&#x4F18;&#x5316;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#x6709;&#x5F85;&#x8FDB;&#x4E00;&#x6B65;&#x6574;&#x7406;&#x8865;&#x5145;&#x3002;</p>
+</blockquote>
+<h3 id="&#x4FDD;&#x6301;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x5C0F;&#x4E8E;-25-kb"><a name="&#x4FDD;&#x6301;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x5C0F;&#x4E8E;-25-kb" class="anchor-navigation-ex-anchor" href="#&#x4FDD;&#x6301;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x5C0F;&#x4E8E;-25-kb"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1. &#x4FDD;&#x6301;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x5C0F;&#x4E8E; 25 KB</h3>
+<h3 id="&#x6253;&#x5305;&#x5185;&#x5BB9;&#x4E3A;&#x5206;&#x6BB5;&#xFF08;multipart&#xFF09;&#x6587;&#x6863;"><a name="&#x6253;&#x5305;&#x5185;&#x5BB9;&#x4E3A;&#x5206;&#x6BB5;&#xFF08;multipart&#xFF09;&#x6587;&#x6863;" class="anchor-navigation-ex-anchor" href="#&#x6253;&#x5305;&#x5185;&#x5BB9;&#x4E3A;&#x5206;&#x6BB5;&#xFF08;multipart&#xFF09;&#x6587;&#x6863;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.2. &#x6253;&#x5305;&#x5185;&#x5BB9;&#x4E3A;&#x5206;&#x6BB5;&#xFF08;multipart&#xFF09;&#x6587;&#x6863;</h3>
+<h2 id="&#x53C2;&#x8003;&#x94FE;&#x63A5;"><a name="&#x53C2;&#x8003;&#x94FE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;&#x94FE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. &#x53C2;&#x8003;&#x94FE;&#x63A5;</h2>
+<ul>
+<li><a href="http://www.websiteoptimization.com/speed/tweak/psychology-web-performance/" target="_blank">The Psychology of Web Performance</a></li>
+</ul>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="gitbook的使用.html" class="navigation navigation-prev " aria-label="Previous page: gitbook 的使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../js基础/词法作用域/readme.html" class="navigation navigation-next " aria-label="Next page: js 基础">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"前端性能优化最佳实践","level":"1.2.15","depth":2,"next":{"title":"js 基础","level":"1.3","depth":1,"path":"js基础/词法作用域/readme.md","ref":"js基础/词法作用域/readme.md","articles":[{"title":"词法作用域","level":"1.3.1","depth":2,"path":"js基础/词法作用域/readme.md","ref":"js基础/词法作用域/readme.md","articles":[]},{"title":"内存分配","level":"1.3.2","depth":2,"path":"js基础/内存分配/readme.md","ref":"js基础/内存分配/readme.md","articles":[]},{"title":"浏览器工作原理","level":"1.3.3","depth":2,"path":"js基础/浏览器工作原理/readme.md","ref":"js基础/浏览器工作原理/readme.md","articles":[]},{"title":"类和对象","level":"1.3.4","depth":2,"path":"js基础/类和对象/readme.md","ref":"js基础/类和对象/readme.md","articles":[]},{"title":"数据类型","level":"1.3.5","depth":2,"path":"js基础/数据类型/readme.md","ref":"js基础/数据类型/readme.md","articles":[]},{"title":"js 事件机制","level":"1.3.6","depth":2,"path":"js基础/js事件机制/readme.md","ref":"js基础/js事件机制/readme.md","articles":[]}]},"previous":{"title":"gitbook 的使用","level":"1.2.14","depth":2,"path":"前端/gitbook的使用.md","ref":"前端/gitbook的使用.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","prism-themes","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-material-dark.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"前端/前端性能优化最佳实践.md","mtime":"2020-02-03T05:58:07.394Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T05:58:35.968Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

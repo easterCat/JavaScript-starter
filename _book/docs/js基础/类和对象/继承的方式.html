@@ -1519,7 +1519,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;"><b>1.1. </b>&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;"><a name="&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;</h2>
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;"><b>1.1. </b>&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b>1.2. </b>&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;"><a name="&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;</h2>
 <p>&#x6211;&#x4EEC;&#x5148;&#x5199;&#x4E2A;&#x7236;&#x7C7B;&#x548C;&#x5B50;&#x7C7B;</p>
 <pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">Parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">&apos;jicheng&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -1529,7 +1529,7 @@
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token keyword">function</span> <span class="token function">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 </code></pre>
-<h4 id="&#x4E00;&#x3001;&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;"><a name="&#x4E00;&#x3001;&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;</h4>
+<h4 id="&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;"><a name="&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;</h4>
 <p>&#x6838;&#x5FC3;&#xFF1A;&#x628A;&#x7236;&#x7C7B;&#x79C1;&#x6709;+&#x516C;&#x6709;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x90FD;&#x4F5C;&#x4E3A;&#x5B50;&#x7C7B;&#x516C;&#x6709;</p>
 <pre class="language-"><code class="lang-js"><span class="token class-name">Child</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x4F5C;&#x4E3A;&#x5B50;&#x7C7B;&#x7684;&#x539F;&#x578B;</span>
 <span class="token class-name">Child</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> Child<span class="token punctuation">;</span> <span class="token comment">//&#x624B;&#x52A8;&#x6307;&#x5B9A;constructor&#x6307;&#x5411;</span>
@@ -1543,9 +1543,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>&#x7B80;&#x5355;&#x3001;&#x6613;&#x5B9E;&#x73B0;</li>
 <li>&#x5B9E;&#x4F8B;&#x65E2;&#x662F;&#x5B50;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x4E5F;&#x662F;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;</li>
 <li>&#x7236;&#x7C7B;&#x7684;&#x516C;&#x79C1;&#x5C5E;&#x6027;&#x90FD;&#x80FD;&#x62FF;&#x5230;&#x3002;</li>
-<li>&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x591A;&#x7EE7;&#x627F;&#xFF0C;&#x4E0D;&#x80FD;&#x5411;&#x7236;&#x7C7B;&#x4F20;&#x53C2;</li>
+<li>&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x591A;&#x7EE7;&#x627F;&#xFF0C;&#x5B50;&#x7C7B;&#x6784;&#x5EFA;&#x5B9E;&#x4F8B;&#x65F6;&#x4E0D;&#x80FD;&#x5411;&#x7236;&#x7C7B;&#x4F20;&#x53C2;</li>
+<li>&#x7236;&#x7C7B;&#x7684;&#x5F15;&#x7528;&#x5C5E;&#x6027;&#x4F1A;&#x88AB;&#x6240;&#x6709;&#x5B50;&#x7C7B;&#x5B9E;&#x4F8B;&#x5171;&#x4EAB;</li>
 </ul>
-<h4 id="&#x4E8C;&#x3001;call-&#x7EE7;&#x627F;-&#xFF08;&#x6784;&#x9020;&#x7EE7;&#x627F;&#xFF09;"><a name="&#x4E8C;&#x3001;call-&#x7EE7;&#x627F;-&#xFF08;&#x6784;&#x9020;&#x7EE7;&#x627F;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x3001;call-&#x7EE7;&#x627F;-&#xFF08;&#x6784;&#x9020;&#x7EE7;&#x627F;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;call &#x7EE7;&#x627F; &#xFF08;&#x6784;&#x9020;&#x7EE7;&#x627F;&#xFF09;</h4>
+<h4 id="call-&#x7EE7;&#x627F;-&#xFF08;&#x6784;&#x9020;&#x7EE7;&#x627F;&#xFF09;"><a name="call-&#x7EE7;&#x627F;-&#xFF08;&#x6784;&#x9020;&#x7EE7;&#x627F;&#xFF09;" class="anchor-navigation-ex-anchor" href="#call-&#x7EE7;&#x627F;-&#xFF08;&#x6784;&#x9020;&#x7EE7;&#x627F;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>call &#x7EE7;&#x627F; &#xFF08;&#x6784;&#x9020;&#x7EE7;&#x627F;&#xFF09;</h4>
 <p>&#x6838;&#x5FC3;&#xFF1A;&#x628A;&#x7236;&#x7C7B;&#x79C1;&#x6709;&#x4F5C;&#x4E3A;&#x5B50;&#x7C7B;&#x79C1;&#x6709;</p>
 <p>&#x901A;&#x8FC7;&#x4F7F;&#x7528; call&#x3001;apply &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5728;&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x4E0A;&#x6267;&#x884C;&#x6784;&#x9020;&#x51FD;&#x6570;,&#x7528;&#x7236;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6765;&#x589E;&#x52A0;&#x5B50;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x7B49;&#x4E8E;&#x662F;&#x590D;&#x5236;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x7ED9;&#x5B50;&#x7C7B;&#xFF08;&#x6CA1;&#x7528;&#x5230;&#x539F;&#x578B;&#xFF09;</p>
 <pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1556,11 +1557,12 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <ul>
 <li>&#x7B80;&#x5355;&#x660E;&#x4E86;</li>
 <li>&#x5B9E;&#x4F8B;&#x53EA;&#x662F;&#x5B50;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;</li>
-<li>&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x7EE7;&#x627F;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x53C2;</li>
+<li>&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x7EE7;&#x627F;&#xFF0C;&#x5B50;&#x7C7B;&#x6784;&#x5EFA;&#x5B9E;&#x4F8B;&#x65F6;&#x53EF;&#x4EE5;&#x4F20;&#x53C2;</li>
+<li>&#x7236;&#x7C7B;&#x7684;&#x5F15;&#x7528;&#x5C5E;&#x6027;&#x4E0D;&#x4F1A;&#x88AB;&#x5171;&#x4EAB;</li>
 <li>&#x4E0D;&#x80FD;&#x7EE7;&#x627F;&#x539F;&#x578B;&#x4E0A;&#x7684;&#x5C5E;&#x6027;</li>
 <li>&#x6BCF;&#x4E2A;&#x5B50;&#x7C7B;&#x90FD;&#x6709;&#x7236;&#x7C7B;&#x51FD;&#x6570;&#x7684;&#x526F;&#x672C;&#xFF0C;&#x5F71;&#x54CD;&#x6027;&#x80FD;</li>
 </ul>
-<h4 id="&#x4E09;&#x3001;&#x5B9E;&#x4F8B;&#x7EE7;&#x627F;"><a name="&#x4E09;&#x3001;&#x5B9E;&#x4F8B;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x3001;&#x5B9E;&#x4F8B;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x5B9E;&#x4F8B;&#x7EE7;&#x627F;</h4>
+<h4 id="&#x5B9E;&#x4F8B;&#x7EE7;&#x627F;"><a name="&#x5B9E;&#x4F8B;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x4F8B;&#x7EE7;&#x627F;</h4>
 <p>&#x6838;&#x5FC3;&#xFF1A;&#x628A;&#x7236;&#x7C7B;&#x516C;&#x6709;&#x548C;&#x79C1;&#x6709;&#x5C5E;&#x6027;&#x4F5C;&#x4E3A;&#x5B50;&#x7C7B;&#x79C1;&#x6709;
 &#x5728;&#x5B50;&#x7C7B;&#x4E2D;&#x8FD4;&#x56DE;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;</p>
 <pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">Child</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1573,7 +1575,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>&#x5B9E;&#x4F8B;&#x662F;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x4E0D;&#x662F;&#x5B50;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;</li>
 <li>&#x4E0D;&#x652F;&#x6301;&#x591A;&#x7EE7;&#x627F;</li>
 </ul>
-<h4 id="&#x56DB;&#x3001;&#x62F7;&#x8D1D;&#x7EE7;&#x627F;"><a name="&#x56DB;&#x3001;&#x62F7;&#x8D1D;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x56DB;&#x3001;&#x62F7;&#x8D1D;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x3001;&#x62F7;&#x8D1D;&#x7EE7;&#x627F;</h4>
+<h4 id="&#x62F7;&#x8D1D;&#x7EE7;&#x627F;"><a name="&#x62F7;&#x8D1D;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x62F7;&#x8D1D;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x62F7;&#x8D1D;&#x7EE7;&#x627F;</h4>
 <p>&#x6838;&#x5FC3;&#xFF1A;&#x628A;&#x7236;&#x7C7B;&#x516C;&#x6709;&#x548C;&#x79C1;&#x6709;&#x5C5E;&#x6027;&#x4F5C;&#x4E3A;&#x5B50;&#x7C7B;&#x516C;&#x6709;</p>
 <p>&#x5728;&#x5B50;&#x7C7B;&#x4E2D;&#x904D;&#x5386;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x7136;&#x540E;&#x5206;&#x522B;&#x8D4B;&#x503C;&#x7ED9;&#x5B50;&#x7C7B; prototype</p>
 <pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">Child</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1590,7 +1592,82 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x7EE7;&#x627F;</li>
 <li>&#x65E0;&#x6CD5;&#x7EE7;&#x627F;&#x7236;&#x7C7B;&#x4E0D;&#x53EF;&#x679A;&#x4E3E;&#x7684;&#x65B9;&#x6CD5;&#xFF08;for in&#xFF09;</li>
 </ul>
-<h4 id="&#x4E94;&#x3001;&#x7EC4;&#x5408;&#x7EE7;&#x627F;"><a name="&#x4E94;&#x3001;&#x7EC4;&#x5408;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x4E94;&#x3001;&#x7EC4;&#x5408;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E94;&#x3001;&#x7EC4;&#x5408;&#x7EE7;&#x627F;</h4>
+<h4 id="&#x539F;&#x578B;&#x5F0F;&#x7EE7;&#x627F;"><a name="&#x539F;&#x578B;&#x5F0F;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x578B;&#x5F0F;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x539F;&#x578B;&#x5F0F;&#x7EE7;&#x627F;</h4>
+<p>&#x6838;&#x5FC3;&#xFF1A;&#x539F;&#x578B;&#x5F0F;&#x7EE7;&#x627F;&#x7684; object &#x65B9;&#x6CD5;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x5BF9;&#x53C2;&#x6570;&#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x4E2A;&#x6D45;&#x590D;&#x5236;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> ob <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">&apos;&#x5C0F;&#x660E;&apos;</span><span class="token punctuation">,</span> friends<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&apos;&#x5C0F;&#x82B1;&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5C0F;&#x767D;&apos;</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x5229;&#x7528;&#x4E00;&#x4E2A;&#x7A7A;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x4E2D;&#x4ECB;&#xFF0C;&#x5C06;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x76F4;&#x63A5;&#x8D4B;&#x503C;&#x7ED9;&#x7A7A;&#x5BF9;&#x8C61;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x539F;&#x578B;&#x3002;</span>
+<span class="token keyword">function</span> <span class="token function">object</span><span class="token punctuation">(</span><span class="token parameter">o</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token constant">F</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">//&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;F</span>
+  <span class="token class-name">F</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> o<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">F</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//&#x4E0A;&#x9762;&#x518D;ECMAScript5 &#x6709;&#x4E86;&#x4E00;&#x65B0;&#x7684;&#x89C4;&#x8303;&#x5199;&#x6CD5;&#xFF0C;Object.create(ob) &#x6548;&#x679C;&#x662F;&#x4E00;&#x6837;&#x7684;</span>
+
+<span class="token keyword">function</span> <span class="token function">createOb</span><span class="token punctuation">(</span><span class="token parameter">o</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> newob <span class="token operator">=</span> <span class="token function">object</span><span class="token punctuation">(</span>o<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x521B;&#x5EFA;&#x5BF9;&#x8C61;</span>
+  newob<span class="token punctuation">.</span><span class="token function-variable function">sayname</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//&#x589E;&#x5F3A;&#x5BF9;&#x8C61;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> newob<span class="token punctuation">;</span> <span class="token comment">//&#x6307;&#x5B9A;&#x5BF9;&#x8C61;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> ob1 <span class="token operator">=</span> <span class="token function">createOb</span><span class="token punctuation">(</span>ob<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ob1<span class="token punctuation">.</span><span class="token function">sayname</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x5C0F;&#x660E;</span>
+</code></pre>
+<p>&#x7279;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x590D;&#x7528;</li>
+<li>&#x7236;&#x7C7B;&#x7684;&#x5F15;&#x7528;&#x5C5E;&#x6027;&#x4F1A;&#x88AB;&#x6240;&#x6709;&#x5B50;&#x7C7B;&#x5B9E;&#x4F8B;&#x5171;&#x4EAB;</li>
+<li>&#x5B50;&#x7C7B;&#x6784;&#x5EFA;&#x5B9E;&#x4F8B;&#x65F6;&#x4E0D;&#x80FD;&#x5411;&#x7236;&#x7C7B;&#x4F20;&#x9012;&#x53C2;&#x6570;</li>
+</ul>
+<h4 id="&#x5BC4;&#x751F;&#x5F0F;&#x7EE7;&#x627F;"><a name="&#x5BC4;&#x751F;&#x5F0F;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x5BC4;&#x751F;&#x5F0F;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BC4;&#x751F;&#x5F0F;&#x7EE7;&#x627F;</h4>
+<p>&#x6838;&#x5FC3;&#xFF1A;&#x4F7F;&#x7528;&#x539F;&#x578B;&#x5F0F;&#x7EE7;&#x627F;&#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x7684;&#x6D45;&#x590D;&#x5236;&#xFF0C;&#x7136;&#x540E;&#x589E;&#x5F3A;&#x8FD9;&#x4E2A;&#x6D45;&#x590D;&#x5236;&#x7684;&#x80FD;&#x529B;&#x3002;
+&#x4F18;&#x7F3A;&#x70B9;&#xFF1A;&#x4EC5;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x601D;&#x8DEF;&#xFF0C;&#x6CA1;&#x4EC0;&#x4E48;&#x4F18;&#x70B9;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">createAnother</span><span class="token punctuation">(</span><span class="token parameter">original</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> clone <span class="token operator">=</span> <span class="token function">object</span><span class="token punctuation">(</span>original<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;</span>
+  clone<span class="token punctuation">.</span><span class="token function-variable function">sayHi</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//&#x4EE5;&#x67D0;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x589E;&#x5F3A;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&apos;hi&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> clone<span class="token punctuation">;</span> <span class="token comment">//&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&apos;Nicholas&apos;</span><span class="token punctuation">,</span>
+  friends<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&apos;Shelby&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Court&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Van&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> anotherPerson <span class="token operator">=</span> <span class="token function">createAnother</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span><span class="token punctuation">;</span>
+anotherPerson<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&quot;hi&quot;</span>
+</code></pre>
+<p>&#x7F3A;&#x70B9;&#xFF08;&#x540C;&#x539F;&#x578B;&#x5F0F;&#x7EE7;&#x627F;&#xFF09;&#xFF1A;</p>
+<ul>
+<li>&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;&#x7684;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x5C5E;&#x6027;&#x6307;&#x5411;&#x76F8;&#x540C;&#xFF0C;&#x5B58;&#x5728;&#x7BE1;&#x6539;&#x7684;&#x53EF;&#x80FD;&#x3002;</li>
+<li>&#x65E0;&#x6CD5;&#x4F20;&#x9012;&#x53C2;&#x6570;</li>
+</ul>
+<h4 id="&#x6DF7;&#x5165;&#x65B9;&#x5F0F;&#x7EE7;&#x627F;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;"><a name="&#x6DF7;&#x5165;&#x65B9;&#x5F0F;&#x7EE7;&#x627F;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#&#x6DF7;&#x5165;&#x65B9;&#x5F0F;&#x7EE7;&#x627F;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6DF7;&#x5165;&#x65B9;&#x5F0F;&#x7EE7;&#x627F;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;</h4>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">MyClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">SuperClass</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">OtherSuperClass</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// &#x7EE7;&#x627F;&#x4E00;&#x4E2A;&#x7C7B;</span>
+<span class="token class-name">MyClass</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token class-name">SuperClass</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x6DF7;&#x5408;&#x5176;&#x5B83;</span>
+Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token class-name">MyClass</span><span class="token punctuation">.</span>prototype<span class="token punctuation">,</span> <span class="token class-name">OtherSuperClass</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x91CD;&#x65B0;&#x6307;&#x5B9A;constructor</span>
+<span class="token class-name">MyClass</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> MyClass<span class="token punctuation">;</span>
+
+<span class="token class-name">MyClass</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">myMethod</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// do something</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x590D;&#x5236;&#x4EE3;&#x7801; Object.assign &#x4F1A;&#x628A; OtherSuperClass &#x539F;&#x578B;&#x4E0A;&#x7684;&#x51FD;&#x6570;&#x62F7;&#x8D1D;&#x5230; MyClass &#x539F;&#x578B;&#x4E0A;&#xFF0C;&#x4F7F; MyClass &#x7684;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x90FD;&#x53EF;&#x7528; OtherSuperClass &#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<h4 id="&#x7EC4;&#x5408;&#x7EE7;&#x627F;"><a name="&#x7EC4;&#x5408;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x5408;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x5408;&#x7EE7;&#x627F;</h4>
 <p>&#x6838;&#x5FC3;&#xFF1A;&#x539F;&#x578B;&#x7EE7;&#x627F;+&#x6784;&#x9020;&#x7EE7;&#x627F;&#xFF0C;&#x628A;&#x7236;&#x7C7B;&#x79C1;&#x6709;&#x4F5C;&#x4E3A;&#x5B50;&#x7C7B;&#x79C1;&#x6709;&#xFF0C;&#x7236;&#x7C7B;&#x516C;&#x6709;&#x4F5C;&#x4E3A;&#x5B50;&#x7C7B;&#x516C;&#x6709;</p>
 <p>&#x5728;&#x5B50;&#x7C7B;&#x4E2D;&#x6DFB;&#x52A0;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5E76;&#x6539;&#x53D8; this &#x6307;&#x5411;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x8D4B;&#x503C;&#x7ED9;&#x5B50;&#x7C7B;&#x7684;&#x539F;&#x578B;
 &#x6CE8;&#x610F;&#x6062;&#x590D;&#x5B50;&#x7C7B; Child &#x7684;&#x539F;&#x578B; prototype &#x7684; constructor &#x6307;&#x5411;</p>
@@ -1608,7 +1685,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>&#x53EF;&#x4F20;&#x53C2; &#x51FD;&#x6570;&#x53EF;&#x590D;&#x7528;</li>
 <li>&#x8C03;&#x7528;&#x4E86;&#x4E24;&#x6B21;&#x7236;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x751F;&#x6210;&#x4E86;&#x4E24;&#x4EFD;&#x5B9E;&#x4F8B;&#xFF08;&#x5B50;&#x7C7B;&#x5B9E;&#x4F8B;&#x5C06;&#x5B50;&#x7C7B;&#x539F;&#x578B;&#x4E0A;&#x7684;&#x90A3;&#x4EFD;&#x5C4F;&#x853D;&#x4E86;&#xFF09;</li>
 </ul>
-<h4 id="&#x516D;&#x3001;&#x5BC4;&#x751F;&#x7EC4;&#x5408;&#x7EE7;&#x627F;"><a name="&#x516D;&#x3001;&#x5BC4;&#x751F;&#x7EC4;&#x5408;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x516D;&#x3001;&#x5BC4;&#x751F;&#x7EC4;&#x5408;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516D;&#x3001;&#x5BC4;&#x751F;&#x7EC4;&#x5408;&#x7EE7;&#x627F;</h4>
+<h4 id="&#x5BC4;&#x751F;&#x7EC4;&#x5408;&#x7EE7;&#x627F;"><a name="&#x5BC4;&#x751F;&#x7EC4;&#x5408;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x5BC4;&#x751F;&#x7EC4;&#x5408;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BC4;&#x751F;&#x7EC4;&#x5408;&#x7EE7;&#x627F;</h4>
 <p>&#x6838;&#x5FC3;&#xFF1A;&#x628A;&#x7236;&#x7C7B;&#x79C1;&#x6709;&#x4F5C;&#x4E3A;&#x5B50;&#x7C7B;&#x79C1;&#x6709;&#xFF0C;&#x7236;&#x7C7B;&#x516C;&#x6709;&#x4F5C;&#x4E3A;&#x5B50;&#x7C7B;&#x516C;&#x6709;</p>
 <p>&#x5728;&#x5B50;&#x7C7B;&#x4E2D;&#x6DFB;&#x52A0;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5E76;&#x6539;&#x53D8; this &#x6307;&#x5411;</p>
 <pre class="language-"><code class="lang-js"><span class="token comment">//&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;</span>
@@ -1622,13 +1699,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token class-name">Child</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">M</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token class-name">Child</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> Child<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
 &#x5176;&#x5B9E;&#x4E0A;&#x8FF0;&#x5171;&#x6709;&#x5C5E;&#x6027;&#x7684;&#x7EE7;&#x627F;&#x65B9;&#x5F0F;&#x4E5F;&#x5C31;&#x662F;&#x6A21;&#x4EFF;Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span>&#x7684;&#x539F;&#x7406;
 &#x6240;&#x4EE5;&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x6210;&#xFF1A;
 <span class="token class-name">Child</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token class-name">Parent</span><span class="token punctuation">.</span>prototype<span class="token punctuation">,</span><span class="token punctuation">{</span>constructor<span class="token operator">:</span><span class="token punctuation">{</span>value<span class="token operator">:</span>Child<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
 <p>&#x7279;&#x70B9;&#xFF1A;&#x5B8C;&#x7F8E;</p>
-<h4 id="&#x4E03;&#x3001;&#x7C7B;&#x7684;&#x7EE7;&#x627F;"><a name="&#x4E03;&#x3001;&#x7C7B;&#x7684;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x4E03;&#x3001;&#x7C7B;&#x7684;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E03;&#x3001;&#x7C7B;&#x7684;&#x7EE7;&#x627F;</h4>
-<p>&#x6838;&#x5FC3;&#xFF1A;&#x7236;&#x7C7B;&#x516C;&#x6709;&#x4F5C;&#x4E3A;&#x5B50;&#x7C7B;&#x516C;&#x6709;&#xFF0C;&#x7236;&#x7C7B;&#x79C1;&#x6709;&#x4F5C;&#x4E3A;&#x5B50;&#x7C7B;&#x79C1;&#x6709;</p>
+<h4 id="&#x7C7B;&#x7684;&#x7EE7;&#x627F;-extends"><a name="&#x7C7B;&#x7684;&#x7EE7;&#x627F;-extends" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x7684;&#x7EE7;&#x627F;-extends"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x7684;&#x7EE7;&#x627F; extends</h4>
+<p>&#x6838;&#x5FC3;&#xFF1A;ES6 &#x7EE7;&#x627F;&#x7684;&#x7ED3;&#x679C;&#x548C;&#x5BC4;&#x751F;&#x7EC4;&#x5408;&#x7EE7;&#x627F;&#x76F8;&#x4F3C;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#xFF0C;ES6 &#x7EE7;&#x627F;&#x662F;&#x4E00;&#x79CD;&#x8BED;&#x6CD5;&#x7CD6;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5BC4;&#x751F;&#x7EC4;&#x5408;&#x7EE7;&#x627F;&#x662F;&#x5148;&#x521B;&#x5EFA;&#x5B50;&#x7C7B;&#x5B9E;&#x4F8B; this &#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5BF9;&#x5176;&#x589E;&#x5F3A;&#xFF1B;&#x800C; ES6 &#x5148;&#x5C06;&#x7236;&#x7C7B;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x52A0;&#x5230; this &#x4E0A;&#x9762;&#xFF08;&#x6240;&#x4EE5;&#x5FC5;&#x987B;&#x5148;&#x8C03;&#x7528; super &#x65B9;&#x6CD5;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x7528;&#x5B50;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4FEE;&#x6539; this&#x3002;</p>
 <p>es6 &#x65B9;&#x6CD5; extends&#xFF0C;&#x4EE5;&#x53CA;&#x5C5E;&#x6027; constructor super &#x7B49;</p>
 <pre class="language-"><code class="lang-js"><span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token keyword">extends</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1644,6 +1722,25 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>&#x5916;&#x90E8; extends &#x76F8;&#x5F53;&#x4E8E; Object.create(Child.prototype,Parent.prototype,{constructor:{value:Child}})</li>
 <li>&#x53EF;&#x4EE5;&#x4F20;&#x53C2;</li>
 </ul>
+<p>extends &#x7EE7;&#x627F;&#x7684;&#x6838;&#x5FC3;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF0C;&#x5176;&#x5B9E;&#x73B0;&#x548C;&#x4E0A;&#x8FF0;&#x7684;&#x5BC4;&#x751F;&#x7EC4;&#x5408;&#x5F0F;&#x7EE7;&#x627F;&#x65B9;&#x5F0F;&#x4E00;&#x6837;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">_inherits</span><span class="token punctuation">(</span><span class="token parameter">subType<span class="token punctuation">,</span> superType</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// &#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#xFF0C;&#x521B;&#x5EFA;&#x7236;&#x7C7B;&#x539F;&#x578B;&#x7684;&#x4E00;&#x4E2A;&#x526F;&#x672C;</span>
+  <span class="token comment">// &#x589E;&#x5F3A;&#x5BF9;&#x8C61;&#xFF0C;&#x5F25;&#x8865;&#x56E0;&#x91CD;&#x5199;&#x539F;&#x578B;&#x800C;&#x5931;&#x53BB;&#x7684;&#x9ED8;&#x8BA4;&#x7684;constructor &#x5C5E;&#x6027;</span>
+  <span class="token comment">// &#x6307;&#x5B9A;&#x5BF9;&#x8C61;&#xFF0C;&#x5C06;&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x8D4B;&#x503C;&#x7ED9;&#x5B50;&#x7C7B;&#x7684;&#x539F;&#x578B;</span>
+  subType<span class="token punctuation">.</span>prototype <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>superType <span class="token operator">&amp;&amp;</span> superType<span class="token punctuation">.</span>prototype<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    constructor<span class="token operator">:</span> <span class="token punctuation">{</span>
+      value<span class="token operator">:</span> subType<span class="token punctuation">,</span>
+      enumerable<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      writable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      configurable<span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>superType<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Object<span class="token punctuation">.</span>setPrototypeOf <span class="token operator">?</span> Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>subType<span class="token punctuation">,</span> superType<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span>subType<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> superType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <blockquote>
 <p><strong>prpto</strong>&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x5185;&#x90E8;&#x5C5E;&#x6027;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x6B63;&#x5F0F;&#x7684;&#x5BF9;&#x5916;&#x7684; API&#xFF0C;&#x76EE;&#x524D;&#xFF0C;&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#xFF08;&#x5305;&#x62EC; IE11 &#xFF09;&#x90FD;&#x90E8;&#x7F72;&#x4E86;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;.Child.prototype=Object.create(Parent.prototype,{constructor:{value:Child}})&#x662F; es5 &#x65B9;&#x6CD5;&#xFF0C;&#x539F;&#x7406;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8D85;&#x7C7B;&#x63A5;&#x6536;&#x7236;&#x7C7B;&#x539F;&#x578B;&#x4E0A;&#x7684;&#x5C5E;&#x6027;&#x65B9;&#x6CD5;&#xFF0C;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x5B9E;&#x4F8B;&#xFF0C;&#x6CE8;&#x610F;&#x5728;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x63CF;&#x8FF0;&#x5668;&#x4E2D;&#x8BBE;&#x7F6E; constructor &#x6307;&#x5411; Object.setPrototypeOf(Child.prototype, Parent.prototype) &#x662F; ES6 &#x6B63;&#x5F0F;&#x63A8;&#x8350;&#x7684;&#x8BBE;&#x7F6E;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
 </blockquote>
@@ -1669,6 +1766,11 @@ Child.prototype.constructor = Child</p>
 <p>&#x7EC4;&#x5408;&#x7EE7;&#x627F; &#x6784;&#x9020;+&#x539F;&#x578B;
 &#x5BC4;&#x751F;&#x7EC4;&#x5408;&#x7EE7;&#x627F; &#x6784;&#x9020;+Object.create
 &#x7C7B;&#x7684;&#x7EE7;&#x627F; extends + super</p>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x53C2;&#x8003;</h2>
+<ul>
+<li><a href="https://juejin.im/post/5bcb2e295188255c55472db0" target="_blank">JavaScript &#x5E38;&#x7528;&#x516B;&#x79CD;&#x7EE7;&#x627F;&#x65B9;&#x6848;</a></li>
+<li><a href="https://segmentfault.com/a/1190000015727237" target="_blank">&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x7406;&#x89E3; JS &#x7EE7;&#x627F;&#x2014;&#x2014;&#x539F;&#x578B;&#x94FE;/&#x6784;&#x9020;&#x51FD;&#x6570;/&#x7EC4;&#x5408;/&#x539F;&#x578B;&#x5F0F;/&#x5BC4;&#x751F;&#x5F0F;/&#x5BC4;&#x751F;&#x7EC4;&#x5408;/Class extends</a></li>
+</ul>
 </body></html>
                                 
                                 </section>
@@ -1712,7 +1814,7 @@ Child.prototype.constructor = Child</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"继承的方式","level":"2.1.5","depth":2,"next":{"title":"数据类型","level":"2.1.6","depth":2,"path":"js基础/数据类型/readme.md","ref":"js基础/数据类型/readme.md","articles":[]},"previous":{"title":"类和对象","level":"2.1.4","depth":2,"path":"js基础/类和对象/类与对象.md","ref":"js基础/类和对象/类与对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","prism-themes","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-material-dark.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"js基础/类和对象/继承的方式.md","mtime":"2020-02-03T12:16:59.125Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T12:23:14.781Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"继承的方式","level":"2.1.5","depth":2,"next":{"title":"数据类型","level":"2.1.6","depth":2,"path":"js基础/数据类型/readme.md","ref":"js基础/数据类型/readme.md","articles":[]},"previous":{"title":"类和对象","level":"2.1.4","depth":2,"path":"js基础/类和对象/类与对象.md","ref":"js基础/类和对象/类与对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","toggle-chapters","expandable-chapters","chapter-fold","edit-link","lightbox","copy-code-button","anchor-navigation-ex","prism","prism-themes","pageview-count","-highlight"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-material-dark.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"prism-themes":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑此页面","base":"https://github.com/easterCat/javascript-starter/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","author":"qingcheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"javascript-starter","language":"zh-hans","gitbook":"*"},"file":{"path":"js基础/类和对象/继承的方式.md","mtime":"2020-02-03T13:41:00.868Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T13:41:20.746Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

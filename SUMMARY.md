@@ -40,6 +40,7 @@
   - [reids 安装配置](nodejs/环境/reids安装配置.md)
   - [mysql 安装配置](nodejs/环境/mysql安装配置.md)
   - [Elasticsearch 安装配置](nodejs/环境/Elasticsearch安装配置.md)
+  - [host 文件的作用](nodejs/环境/host文件的作用.md)
   - [node 写个 helloworld](nodejs/node写个helloworld.md)
   - [node 的 fs 模块](nodejs/node的fs模块.md)
   - [用 node 写个爬虫](nodejs/用node写个爬虫.md)

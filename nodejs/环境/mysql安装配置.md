@@ -24,7 +24,7 @@ Homebrew 会将软件包安装到独立目录,并将其文件软链接至 /usr/l
 
 安装命令,粘贴到终端
 
-```
+```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
@@ -43,7 +43,7 @@ brew info mysql
 
 ##### 终端命令启动或关闭：
 
-```
+```bash
 // 启动：
 sudo /usr/local/mysql/support-files/mysql.server start
 
@@ -53,7 +53,7 @@ sudo /usr/local/mysql/support-files/mysql.server stop
 
 ##### 进入或退出 mysql
 
-```
+```bash
 // 进入mysql（要求输入mysql登录密码）
 mysql -u root -p
 // 退出mysql
@@ -62,19 +62,19 @@ exit
 
 设置密码需先启动 mysql 服务
 
-```
+```bash
 mysql_secure_installation
 ```
 
 设置完之后测试一下
 
-```
+```bash
 mysql -u root -p 123456
 ```
 
 ### 配置自启动
 
-```
+```bash
 mkdir -p ~/Library/LaunchAgents
 
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
@@ -95,14 +95,14 @@ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 
 当前在 etc 下是存在一个 my.cnf 文件
 
-```
+```bash
 cd /etc
 vim my.cnf
 ```
 
 配置文件如下(略)
 
-```
+```bash
 ......
 [client]
 default-character-set=utf8
@@ -189,6 +189,64 @@ update user set host = '%' where user = 'root';
 ```
 
 这样在远端就可以通过 root 用户访问 Mysql.
+
+## Mac 开放 3306 端口，允许外网访问
+
+- 检查是否打开
+
+```bash
+mysql -h [ip address] -u root -p
+```
+
+- 打开/usr/local/etc/my.cnf, 修改 bind-address = 0.0.0.0
+
+```bash
+sudo vim /usr/local/etc/my.cnf
+
+mysql.server stop
+mysql.server start
+```
+
+- 把用户权限分配各远程用户, MySQL 默认 root 账户不带%而是 127.0.0.1，因此需要修改。
+
+```bash
+mysql -u root -p
+use mysql;
+update user set host = '%' where user = 'root';
+
+mysql.server stop
+mysql.server start
+```
+
+- 验证
+
+```bash
+brew install telnet
+telnet [ip address] 3306
+```
+
+## Mysql 8.0 修改密码
+
+- 查看当前安全变量值
+
+```bash
+SHOW VARIABLES LIKE 'validate_password%';
+```
+
+- 修改变量
+
+```bash
+set global validate_password.policy=0;
+set global validate_password.length=4;
+```
+
+```bash
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '你的密码';
+```
+
+- mysql_secure_installation
+
+重置 root 密码可以设置为 123456 了
 
 ## 数据库简单操作
 

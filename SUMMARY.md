@@ -16,6 +16,7 @@
   - [vscode 超人气代码格式化工具 prettier](前端/超人气代码格式化工具prettier.md)
   - [gitbook 的使用](前端/gitbook的使用.md)
   - [前端性能优化最佳实践](前端/前端性能优化最佳实践.md)
+  - [js 获取当前页面 url](前端/js获取当前页面url.md)
 
 ## js 基础
 

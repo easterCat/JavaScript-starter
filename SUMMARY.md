@@ -17,6 +17,8 @@
   - [gitbook 的使用](前端/gitbook的使用.md)
   - [前端性能优化最佳实践](前端/前端性能优化最佳实践.md)
   - [js 获取当前页面 url](前端/js获取当前页面url.md)
+  - [Git常用命令速查表](前端/Git 常用命令速查表.md)
+  - [浏览器缓存相关内容](前端/金x银y/浏览器缓存相关内容.md)
 
 ## js 基础
 
@@ -69,10 +71,11 @@
 - [vue 的简单实现](vue/vue的简单实现.md)
 - [vue 的 VNODE 节点](vue/vue的VNODE节点.md)
 - [vue 的 template 模板解析](vue/vue的template模板解析.md)
-- [vue 的基础](vue/vue的基础.md)
-- [vue 的基础 2](vue/vue的基础2.md)
-- [vue 的基础 3](vue/vue的基础3.md)
-- [vue 的基础 4](vue/vue的基础4.md)
+- [vue 的面试](vue/vue的面试.md)
+- [vue 的面试 2](vue/vue的面试2.md)
+- [vue 的面试 3](vue/vue的面试3.md)
+- [vue 的面试 4](vue/vue的面试4.md)
+- [vue 的面试 5](vue/vue的面试5.md)
 
 ## java 基础
 

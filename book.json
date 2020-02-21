@@ -1,31 +1,31 @@
 {
-  "title": "javascript-starter",
-  "author": "qingcheng",
-  "language": "zh-hans",
-  "plugins": [
-    "theme-comscore",
-    "toggle-chapters",
-    "expandable-chapters",
-    "chapter-fold",
-    "edit-link",
-    "lightbox",
-    "copy-code-button",
-    "anchor-navigation-ex",
-    "prism",
-    "prism-themes",
-    "pageview-count",
-    "-highlight"
-  ],
-  "pluginsConfig": {
-    "edit-link": {
-      "base": "https://github.com/easterCat/javascript-starter/edit/master/",
-      "label": "编辑此页面"
+    "title": "javascript-starter",
+    "author": "qingcheng",
+    "language": "zh-hans",
+    "plugins": [
+        "theme-comscore",
+        "toggle-chapters",
+        "expandable-chapters",
+        "chapter-fold",
+        "edit-link",
+        "lightbox",
+        "copy-code-button",
+        "anchor-navigation-ex",
+        "prism",
+        "prism-themes",
+        "pageview-count",
+        "-highlight"
+    ],
+    "pluginsConfig": {
+        "edit-link": {
+            "base": "https://github.com/easterCat/javascript-starter/edit/master/",
+            "label": "编辑此页面"
+        },
+        "prism": {
+            "css": ["prism-themes/themes/prism-material-dark.css"]
+        }
     },
-    "prism": {
-      "css": ["prism-themes/themes/prism-material-dark.css"]
+    "styles": {
+        "website": "styles/website.css"
     }
-  },
-  "styles": {
-    "website": "styles/website.css"
-  }
 }
